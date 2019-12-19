@@ -1,0 +1,71 @@
+:root {
+  --primary: #3e40db;
+  --light-primary: #5659ff;
+  --primary-light: #e2e3fa;
+  --primary-lighter: #6869d3;
+  --primary-lightest: #7880ff;
+  --secondary: #0062a5;
+  --light-secondary: #4576ff;
+  --secondary-lighter: #3297d2;
+  --success: #3edb8b;
+  --success-light: #d8f8e8;
+  --warning: #ffa544;
+  --warning-light: #ffedda;
+  --danger: #db3e8e;
+  --danger-light: #f8d8e8;
+  --light: #caccd7;
+  --lighter: #e3e5f0;
+  --lightest: #f6f8fb;
+  --dark: #687196;
+  --white: #ffffff;
+  --text-primary: #030929;
+  --text-secondary: #47484c;
+  --text-primary-light: #2f3059;
+  --text-primary-lighter: #4e4f84;
+  --text-muted: #a3a9c0;
+  --border-primary: #e9eef9;
+  --border-lightest: #f7f9fc;
+  --border-light: #c8cfe9;
+  --border-fill: #dde1e3;
+  --grey-blue: #687196;
+  --light-bg: #f8f9fa;
+}
+
+$indigo: #3e40db;
+$green: #00b257;
+$secondary: #0062a5;
+$text-primary-light: #2f3059;
+$subtitle-black: #030929;
+$shadow: #d8dceb;
+
+$blue: #1e70cd !default;
+// $indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #d9534f !default;
+$orange: #FEB744 !default;
+$yellow: #ffa544 !default;
+$danger: #db3e8e !default;
+$green: #3edb8b !default;
+$teal: #20c997 !default;
+$cyan: #28c3d7 !default;
+
+$theme-colors: (
+"primary": $indigo,
+  "secondary": #8897AA,
+  "success": $green,
+  "info": $cyan,
+  "warning": $yellow,
+  "danger": $danger,
+  //   "dark":      $gray-900
+) !default;
+
+$font-weight-lighter: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-bolder: 900;
+
+// for testing
+// $btn-focus-width: 10px;

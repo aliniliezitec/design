@@ -1,0 +1,80 @@
+
+.sidenav {
+  height: 100%;
+  width: 285px;
+  position: fixed;
+  text-align: left;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f6f8fb;
+  overflow-x: hidden;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #47484c;
+
+  .sidenav-wrapper {
+    position: relative;
+    padding: 10px 0 60px 37px;
+  }
+
+  li {
+    margin-top: 19px;
+    margin-bottom: 19px;
+    list-style-type: none;
+
+    .menu-icon {
+      width: 16px;
+      margin-right: 15px
+    }
+
+    a {
+      color: var(--charcoal-grey);
+
+      &:hover {
+        color: var(--charcoal-grey);
+        text-decoration: none;
+      }
+    }
+  }
+
+  ul {
+    overflow: hidden;
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.inner {
+  height: 0px;
+  overflow: hidden;
+}
+
+.nao-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.nao-icon-envelope {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 64 64' class='hidden'%3E%3Ctitle%3EEnvelope%3C/title%3E%3Cdesc%3EA solid styled icon from Orion Icon Library.%3C/desc%3E%3Cpath data-name='layer2' fill='%2347484c' d='M59.1 12H5l27 24.7L59.1 12z' style='fill:var(--layer1, %2347484c)'%3E%3C/path%3E%3Cpath data-name='layer1' fill='%2347484c' d='M32 42.1L2 14.7V52h60V14.7L32 42.1z' style='fill:var(--layer1, %2347484c)'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.nao-icon-settings {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 64 64' class='hidden'%3E%3Ctitle%3ESettings%3C/title%3E%3Cdesc%3EA solid styled icon from Orion Icon Library.%3C/desc%3E%3Cpath data-name='layer2' d='M63.946 11.455l-7.438 4.7a1.391 1.391 0 0 1-1.634-.107l-3.067-2.556a1.391 1.391 0 0 1-.447-.687L50.386 9.4a1.391 1.391 0 0 1 .646-1.59l8.5-4.867a12.52 12.52 0 0 0-20.479 11.119 4.278 4.278 0 0 1-1.174 3.587L17.647 37.881a4.245 4.245 0 0 1-3.562 1.175 12.311 12.311 0 0 0-1.564-.1A12.436 12.436 0 0 0 .157 53.365L8.6 48.027a1.391 1.391 0 0 1 1.634.107l3.067 2.556a1.391 1.391 0 0 1 .447.687l.974 3.409a1.391 1.391 0 0 1-.646 1.59l-9 5.155a12.449 12.449 0 0 0 8.246 2.444 12.516 12.516 0 0 0 11.611-14.151 4.208 4.208 0 0 1 1.15-3.56L46.243 26.1a4.229 4.229 0 0 1 3.572-1.172A12.52 12.52 0 0 0 64 12.522c0-.36-.024-.715-.054-1.067z' fill='%2347484c' style='fill:var(--layer1, %2347484c)'%3E%3C/path%3E%3Cpath data-name='layer1' d='M53.34 39.094a12.574 12.574 0 0 0-3.517-.028 4.208 4.208 0 0 1-3.56-1.15l-4.5-4.5-8.41 8.41 4.529 4.529a4.245 4.245 0 0 1 1.175 3.562 12.315 12.315 0 0 0-.1 1.564 12.435 12.435 0 0 0 14.408 12.362L48.027 55.4a1.391 1.391 0 0 1 .107-1.634l2.556-3.067a1.391 1.391 0 0 1 .687-.447l3.409-.974a1.391 1.391 0 0 1 1.59.646l5.155 9a12.449 12.449 0 0 0 2.444-8.246A12.591 12.591 0 0 0 53.34 39.094zM26.1 17.757a4.229 4.229 0 0 1-1.172-3.572A12.52 12.52 0 0 0 12.522 0c-.36 0-.714.024-1.067.054l4.7 7.438a1.391 1.391 0 0 1-.107 1.634l-2.556 3.067a1.391 1.391 0 0 1-.687.447l-3.405.974a1.391 1.391 0 0 1-1.59-.646l-4.867-8.5a12.512 12.512 0 0 0 6.823 20.265 12.366 12.366 0 0 0 4.3.214 4.279 4.279 0 0 1 3.587 1.174l4.465 4.465 8.41-8.41z' fill='%2347484c' style='fill:var(--layer1, %2347484c)'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.made-with {
+  font-size: pixelToRem(12px);
+  position: absolute;
+  bottom: 24px;
+  color: #a3a9c0;
+}
+
+.nao-logo {
+  margin-bottom: 36px;
+}

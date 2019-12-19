@@ -1,0 +1,78 @@
+.top-menu-docs {
+  height: 35px;
+  width: 100%;
+  padding-right: 30px;
+
+  .top-menu-item {
+    padding: 0 13px;
+    font-weight: $font-weight-semibold;
+    font-size: pixelToRem(12px);
+    color: var(--text-primary);
+
+    &:hover {
+      font-size: pixelToRem(12px);
+    }
+  }
+}
+
+.btn-crm-mobile {
+  padding: 2.5px 11px;
+  min-width: 30px;
+}
+
+.nao-top-menu {
+
+  .sm-absolute-top {
+    @include media-breakpoint-down(sm) {
+      background: var(--white);
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1030;
+      border-bottom: solid 2px var(--primary);
+
+      &.b-0 {
+        border: 0;
+      }
+
+      .dropdown-toggle::after {
+        display: none;
+      }
+
+    }
+  }
+
+  .nao-navbar-collapse {
+    .nav-item {
+      background-color: var(--lightest);
+
+      ul {
+        overflow: hidden;
+        list-style-type: none;
+      }
+    }
+
+    .nav-item-label {
+      font-weight: $font-weight-bold;
+      height: 60px;
+      font-size: pixelToRem(18px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--white);
+    }
+  }
+}
+
+.nao-icon-arrow {
+  width: 13px;
+  height: 13px;
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='13px' height='13px' viewBox='0 0 306 306' style='enable-background:new 0 0 306 306;' xml:space='preserve'%3E%3Cg%3E%3Cg id='chevron-right'%3E%3Cpolygon points='94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153 '/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A");
+  transition: transform 0.35s ease-in-out;
+}
+
+.nao-icon-arrow-active {
+  transform: rotate(90deg);
+}

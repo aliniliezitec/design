@@ -1,0 +1,70 @@
+<div class="d-none d-sm-flex justify-content-end align-items-center top-menu-docs">
+  <a href="javascript:void(0)" class="top-menu-item">
+    Home
+  </a>
+  <a href="javascript:void(0)" class="top-menu-item">
+    Documentation
+  </a>
+  <a href="javascript:void(0)" class="top-menu-item">
+    CRM Login
+  </a>
+</div>
+
+<div class="nao-top-menu bg-white pb-1 d-block d-sm-none">
+  <div class="content-wrapper d-flex justify-content-between px-md-4">
+    <nav class="navbar navbar-expand-md navbar-light sm-absolute-top" [ngClass]="{'b-0' : !isCollapsed}"
+      style="margin-bottom: -18px;">
+      <a class="navbar-brand logo d-md-none mr-0" href="javascript:void(0)" [routerLink]="['/']"
+        (click)="isCollapsed = true"><img src="https://d326ktrzuzy7hz.cloudfront.net/images/logos/logo-support.png"
+          width="80px" alt="Naologic"></a>
+      <div class="d-md-none">
+        <a class="btn nao-btn bg-primary text-white btn-crm-mobile" href="javascript:void(0)"
+          [routerLink]="['/', 'business-app', 'apps']">CRM Login</a>
+      </div>
+      <button class="navbar-toggler hidden-sm-up custom-toggler border-0" type="button" data-toggle="collapse"
+        data-target="#nao-navbar" aria-expanded="false" aria-label="Toggle navigation"
+        (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="nao-navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nao-navbar-collapse" id="nao-navbar" [ngbCollapse]="isCollapsed">
+        <ul class="navbar-nav border-bottom-0">
+
+          <li class="nav-item" (click)="isCollapsed=true">
+            <a href="javascript:void(0)" class="nav-link" [routerLink]="['/']">Home</a>
+          </li>
+          <li class="nav-item" (click)="isCollapsed=true">
+            <a class="nav-link" href="javascript:void(0)" [routerLink]="['/']">Documentation</a>
+          </li>
+
+          <li class="nav-item" (click)="isCollapsed=true">
+            <a href="javascript:void(0)" class="nav-link" [routerLink]="['/']">CRM Login</a>
+          </li>
+
+          <li *ngFor="let elem of menuItems; let i = index" class="nav-item">
+            <div *ngIf="elem.type ==='items'">
+              <a href="javascript:void(0)" (click)="toggleMenu(i)"
+                class="nav-link d-flex align-items-center justify-content-between">
+                <div>{{ elem.text }}</div>
+                <i class="nao-icon-arrow" [ngClass]="{'nao-icon-arrow-active': elem.isOpen}"></i>
+              </a>
+
+              <ul class="m-0" [@expandCollapse]='elem.isOpen' *ngIf="elem.isOpen">
+                <li *ngFor="let item of elem.items" class="nav-item">
+                  <a href="javascript:void(0)" [routerLink]="item.route"
+                    class="nav-link pl-0">{{item.text}}</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+    </nav>
+    <div class="d-none d-sm-inline">
+      <a class="btn nao-btn bg-primary" href="javascript:void(0)" [routerLink]="['/', 'business-app', 'apps']">CRM
+        Login</a>
+    </div>
+  </div>
+
+</div>

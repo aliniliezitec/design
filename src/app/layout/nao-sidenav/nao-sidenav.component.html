@@ -1,0 +1,37 @@
+<div class="sidenav d-none d-sm-block">
+  <div class="sidenav-wrapper min-vh-100">
+    <img class="nao-logo" src="https://d326ktrzuzy7hz.cloudfront.net/images/logos/logo-support.png">
+
+    <li *ngFor="let elem of menuItems; let i = index">
+      <div [ngSwitch]="elem.type">
+        <div *ngSwitchCase="'items'">
+          <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center justify-content-center menu-icon">
+              <img class="" [src]="elem.icon">
+            </div>
+            <a href="javascript:void(0)" (click)="toggleMenu(i)" class="sidenav-menu-text">{{ elem.text }}</a>
+          </div>
+          <ul class="m-0" [@expandCollapse]='elem.isOpen' *ngIf="elem.isOpen">
+            <li *ngFor="let item of elem.items">
+              <a href="javascript:void(0)" [routerLink]="item.route">{{item.text}}</a>
+            </li>
+          </ul>
+        </div>
+
+        <div *ngSwitchCase="'homeLink'">
+          <div class="d-flex align-items-center mt-5">
+            <div class="d-flex align-items-center justify-content-center menu-icon">
+              <img class="" [src]="elem.icon">
+            </div>
+            <a href="javascript:void(0)" [routerLink]="elem.route" class="sidenav-menu-text">{{ elem.text }}</a>
+          </div>
+
+        </div>
+      </div>
+    </li>
+
+    <div class="made-with">
+      Made with 🤖 by Naologic
+    </div>
+  </div>
+</div>

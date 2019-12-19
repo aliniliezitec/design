@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="14px" viewBox="0 0 9 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>Icons/ion-ios-person</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Help-Center" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Support/FAQ" transform="translate(-39.000000, -414.000000)" fill="#47484C">
+            <g id="Icons/ion-md-document" transform="translate(37.000000, 413.000000)">
+                <path d="M7.5,1.5 L10.8333333,5.5 L10.8333333,13.25 C10.8333333,13.583335 10.7291677,13.8749987 10.5208333,14.125 C10.312499,14.3750013 10.0694458,14.5 9.79166667,14.5 L3.54166667,14.5 C3.2638875,14.5 3.02083437,14.3750013 2.8125,14.125 C2.60416562,13.8749987 2.5,13.583335 2.5,13.25 L2.5,2.75 C2.5,2.416665 2.60416562,2.12500125 2.8125,1.875 C3.02083437,1.62499875 3.2638875,1.5 3.54166667,1.5 L7.5,1.5 Z M7.08333333,6 L10,6 L7.08333333,2.5 L7.08333333,6 Z" id="↳-🎨-Fill"></path>
+            </g>
+        </g>
+    </g>
+</svg>

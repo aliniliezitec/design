@@ -1,2 +1,140 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./styles/naologic-crm-theme.scss";
 @import "./styles/bootstrap.scss";
+@import "./styles/pages/nao-navbar.scss";
+@import "./styles/pages/nao-sidenav.scss";
+
+// todo: fix the menu for the mobile devices
+
+.docs-container {
+  margin-left: 285px;
+
+  @media only screen and (max-width: 576px) {
+    margin-left: 0;
+  }
+}
+
+.nao-docs-wrapper {
+  padding: 72px 40px 0 40px;
+
+  @include media-breakpoint-down(sm) {
+    padding: 72px 20px 0 20px;
+  }
+
+  .elements-container {
+    min-height: calc(100vh - 379px);
+
+    .title {
+      width: 80%;
+      font-weight: $font-weight-lighter;
+      color: var(--text-primary);
+    }
+
+    .description {
+      width: 80%;
+      font-size: pixelToRem(18px);
+      font-weight: $font-weight-lighter;
+    }
+  }
+
+  .elem-container {
+    padding: 30px 0;
+
+    .title {
+      max-width: 80%;
+      font-weight: $font-weight-semibold;
+    }
+
+    p {
+      max-width: 80%;
+    }
+
+    .nao-bd-example {
+      padding: pixelToRem(24px);
+      margin-right: 0;
+      margin-left: 0;
+      border: pixelToRem(5px) solid var(--light-bg);
+
+      .btn {
+        margin-right: pixelToRem(5px);
+        margin-bottom: pixelToRem(5px);
+      }
+
+      .form-control {
+        margin-bottom: pixelToRem(5px) !important;
+      }
+    }
+
+    .nao-bd-clipboard {
+      position: relative;
+      float: right;
+
+      .btn-clipboard {
+        position: absolute;
+        top: pixelToRem(8px);
+        right: pixelToRem(8px);
+        z-index: 10;
+        display: block;
+        padding: pixelToRem(4px) pixelToRem(8px);
+        font-size: 75%;
+        color: var(--text-muted);
+        background-color: transparent;
+        border: 0;
+        border-radius: .25rem;
+        outline: none;
+
+        &:hover {
+          color: var(--white);
+          background-color: var(--primary);
+        }
+      }
+    }
+
+    .nao-example-highlight {
+      margin-bottom: pixelToRem(16px);
+      padding-bottom: pixelToRem(24px);
+      background-color: var(--light-bg);
+
+      pre {
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        background-color: transparent;
+        border: 0;
+
+        .nt {
+          color: #2f6f9f;
+        }
+
+        .na {
+          color: #4f9fcf;
+        }
+
+        .s {
+          color: var(--danger);
+        }
+      }
+    }
+
+    .table-container {
+      overflow: auto;
+
+      .table {
+
+        th,
+        td {
+          border: 1px solid #dee2e6;
+        }
+      }
+    }
+
+  }
+}
+
+.highlighter-warning {
+  color: var(--danger);
+}
+
+.nao-copy-tooltip .tooltip-inner {
+  white-space: nowrap;
+  max-width: none;
+}
