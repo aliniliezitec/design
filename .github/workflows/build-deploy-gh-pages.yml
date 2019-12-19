@@ -33,7 +33,7 @@ jobs:
         npm i -g @angular/cli angular-cli-ghpages
     - name: Build angular
       run: |
-        ng build --prod --base-href "design"
+        ng build --prod
         ls -d dist/* -l      
     - name: Ghpages dry
       run: |
