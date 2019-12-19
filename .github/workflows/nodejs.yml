@@ -28,3 +28,4 @@ jobs:
     - name: build ghpages
       run: |
         ngh --dir=docs
+    
