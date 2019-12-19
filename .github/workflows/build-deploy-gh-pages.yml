@@ -33,14 +33,14 @@ jobs:
         npm i -g @angular/cli angular-cli-ghpages
     - name: Build angular
       run: |
-        ng build --prod
+        ng build --prod --base-href https://naologic.github.io/design/
         ls -d dist/* -l      
     - name: Ghpages dry
       run: |
         ngh --dry-run
     - name: Build ghpages
       run: |
-        ngh
+        ngh --dir=dist/design
         ls -l
         ls -d dist/* -l
     - name: Deploy Pages
