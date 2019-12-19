@@ -1,16 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { ColorsCodeBlocks, HtmlCodeBlock } from './colors.interface';
 import * as Prism from 'prismjs';
 
 @Component({
-  selector: 'app-forms',
-  templateUrl: './forms.component.html',
+  selector: 'app-colors',
+  templateUrl: './colors.component.html',
 })
-export class FormsComponent implements OnInit {
+export class ColorsComponent implements OnInit {
+  public data: HtmlCodeBlock[] = [];
 
   constructor() { }
 
   ngOnInit() {
-
+    ColorsCodeBlocks.forEach(el => {
+      // -->Set: Code and the syntax Highlighter
+      const codeBlock: HtmlCodeBlock = {
+        code: el.htmlCode,
+        syntaxHighlighter: Prism.highlight(el.htmlCode, Prism.languages.html, 'html')
+      };
+      this.data.push(codeBlock);
+    });
   }
 
   /**
