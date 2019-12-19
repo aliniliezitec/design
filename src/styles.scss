@@ -1,7 +1,10 @@
 @import "./styles/naologic-crm-theme.scss";
 @import "./styles/bootstrap.scss";
-@import "./styles/pages/nao-navbar.scss";
-@import "./styles/pages/nao-sidenav.scss";
+@import "./styles/components/form";
+@import "./styles/pages/nao-navbar";
+@import "./styles/pages/nao-sidenav";
+
+@import "~@ng-select/ng-select/scss/default.theme.scss";
 
 // todo: fix the menu for the mobile devices
 

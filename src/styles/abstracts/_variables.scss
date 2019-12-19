@@ -1,6 +1,30 @@
-$base-font-size: 16px;
+// Buttons
+$btn-active-box-shadow: none;
+$btn-focus-box-shadow: none;
+$btn-focus-width: 0;
+$input-btn-padding-y: pixelToRem(6px);
+$input-btn-padding-x: pixelToRem(20px);
+$input-btn-font-size: .95rem;
+$border-radius: .25rem;
+$btn-font-weight: $font-weight-semibold;
+// todo: sm / lg buttons
 
-// Remove buttons box-shadow
-$btn-active-box-shadow: none !default;
-$btn-focus-box-shadow: none !default;
-$btn-focus-width: 0 !default;
+// Inputs
+$input-padding-y: pixelToRem(8px);
+$input-padding-x: pixelToRem(5px);
+$input-color: var(--text-secondary);
+$input-font-size: 1rem;
+$input-border-color: var(--border-primary);
+$input-box-shadow: $nao-input-box-shadow;
+$input-focus-width: 0;
+$input-focus-box-shadow: 0 0 10px var(--border-light);
+$input-focus-border-color: transparent;
+$input-placeholder-color: var(--border-light);
+// todo: sm / lg
+
+// Checkbox
+$enable-shadows: true;
+$custom-control-indicator-size: 1.125rem;
+$custom-control-indicator-border-color: var(--grey-blue);
+$custom-control-indicator-box-shadow: 0 1px 6px 0 #c8cfe9;
+

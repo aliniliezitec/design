@@ -1,68 +1,71 @@
-export const FormsCodeBlocks = {
-    code1: `
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-light">Light</button>
-    <button type="button" class="btn btn-dark">Dark</button>
+export interface HtmlCodeBlock {
+    code: string;
+    syntaxHighlighter: string;
+}
 
-    <button type="button" class="btn btn-link">Link</button>`,
-    code2: `
-    <a class="btn btn-primary" href="#" role="button">Link</a>
-    <button class="btn btn-primary" type="submit">Button</button>
-    <input class="btn btn-primary" type="button" value="Input">
-    <input class="btn btn-primary" type="submit" value="Submit">
-    <input class="btn btn-primary" type="reset" value="Reset">`,
-    code3: `
-    <button type="button" class="btn btn-outline-primary">Primary</button>
-    <button type="button" class="btn btn-outline-secondary">Secondary</button>
-    <button type="button" class="btn btn-outline-success">Success</button>
-    <button type="button" class="btn btn-outline-danger">Danger</button>
-    <button type="button" class="btn btn-outline-warning">Warning</button>
-    <button type="button" class="btn btn-outline-info">Info</button>
-    <button type="button" class="btn btn-outline-light">Light</button>
-    <button type="button" class="btn btn-outline-dark">Dark</button>`,
-    code4: `
-    <button type="button" class="btn btn-primary btn-lg">Large button</button>
-    <button type="button" class="btn btn-secondary btn-lg">Large button</button>`,
-    code5: `
-    <button type="button" class="btn btn-primary btn-sm">Small button</button>
-    <button type="button" class="btn btn-secondary btn-sm">Small button</button>`,
-    code6: `
-    <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-    <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>`,
-    code7: `
-    <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
-    <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>`,
-    code8: `
-    <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
-    <button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>`,
-    code9: `
-    <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
-    <a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">Link</a>`,
-    code10: `
-    <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-        Single toggle
-    </button>`,
-    code11: `
-    <div class="btn-group-toggle" data-toggle="buttons">
-        <label class="btn btn-secondary active">
-            <input type="checkbox" checked autocomplete="off"> Checked
-        </label>
-    </div>`,
-    code12: `
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-    <label class="btn btn-secondary active">
-        <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
-    </label>
-    <label class="btn btn-secondary">
-        <input type="radio" name="options" id="option2" autocomplete="off"> Radio
-    </label>
-    <label class="btn btn-secondary">
-        <input type="radio" name="options" id="option3" autocomplete="off"> Radio
-    </label>
-    </div>`,
-};
+export const FormsCodeBlocks = [
+    {
+        htmlCode: `
+        <form>
+            <div class="form-group">
+                <label class="nao-form-label-above" for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label class="nao-form-label-above" for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="d-flex custom-control custom-checkbox mb-3">
+                <input class="custom-control-input" type="checkbox" name="checkbox" id="exampleCheck1">
+                <label class="custom-control-label align-self-center" for="exampleCheck1">Check
+                    me</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>`},
+    {
+        htmlCode: `
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Example select</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect2">Example multiple select</label>
+                <select multiple class="form-control" id="exampleFormControlSelect2">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+        </form>`},
+    {
+        htmlCode: `
+        <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
+        <input class="form-control" type="text" placeholder="Default input">
+        <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">`},
+    {
+        htmlCode: `
+        <ng-select>
+            <ng-option>1</ng-option>
+            <ng-option>2</ng-option>
+            <ng-option>3</ng-option>
+        </ng-select>`}
+];
