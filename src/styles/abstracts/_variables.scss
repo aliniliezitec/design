@@ -1,6 +1,11 @@
-$base-font-size: 16px;
 
-// Remove buttons box-shadow
+// Edit button
 $btn-active-box-shadow: none !default;
 $btn-focus-box-shadow: none !default;
 $btn-focus-width: 0 !default;
+$input-btn-padding-y: pixelToRem(6px) !default;
+$input-btn-padding-x: pixelToRem(20px) !default;
+$input-btn-font-size: .95rem !default;
+$border-radius: .25rem !default;
+$btn-font-weight: $font-weight-bold !default;
+// todo: sm / lg buttons
