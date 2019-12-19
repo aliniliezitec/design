@@ -4,6 +4,7 @@ import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedService } from './shared.service';
 import { PrismHtml } from './pipes/prism-html.pipe';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   providers: [
@@ -17,13 +18,15 @@ import { PrismHtml } from './pipes/prism-html.pipe';
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    NgSelectModule
   ],
   exports: [
     CommonModule,
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    PrismHtml
+    PrismHtml,
+    NgSelectModule
   ],
   entryComponents: [
   ]

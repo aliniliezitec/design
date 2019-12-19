@@ -67,5 +67,20 @@ $font-weight-bold: 700;
 $font-weight-extra-bold: 800;
 $font-weight-bolder: 900;
 
-// for testing
-// $btn-focus-width: 10px;
+// * Nao Variables
+$nao-box-shadow: 0 2px 4px 3px var(--shadow-light);
+$nao-input-box-shadow: 0 2px 4px 0 rgba(231, 231, 231, 0.5); // is used
+$nao-border-radius: 8px;
+$font-weight-extra-bold: 800 !default;
+$font-size-xxl: 1.4rem;
+$font-weight-black: 900 !default;
+
+// // <ng-select>
+$ng-select-value-font-size: .95rem;
+$ng-select-border: #e9eef9;
+$ng-select-highlight: #e9eef9;
+$ng-select-height: 42px;
+$ng-select-box-shadow: $nao-input-box-shadow;
+$ng-select-selected: #e3e5f0;
+$ng-select-marked: #e9eaf0;
+$ng-select-primary-text: #030929;

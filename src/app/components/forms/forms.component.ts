@@ -1,17 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import * as Prism from 'prismjs';
+import { FormsCodeBlocks, HtmlCodeBlock } from './forms.interface';
 
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
 })
 export class FormsComponent implements OnInit {
+  public data: HtmlCodeBlock[] = [];
 
   constructor() { }
 
   ngOnInit() {
-
+    FormsCodeBlocks.forEach(el => {
+      // -->Set: Code and the syntax Highlighter
+      const codeBlock: HtmlCodeBlock = {
+        code: el.htmlCode,
+        syntaxHighlighter: Prism.highlight(el.htmlCode, Prism.languages.html, 'html')
+      };
+      this.data.push(codeBlock);
+    });
   }
+
 
   /**
    * Copy to clipboard
