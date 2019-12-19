@@ -31,9 +31,16 @@ jobs:
     - name: Add angular, ghpages
       run: |
         npm i -g @angular/cli angular-cli-ghpages
+    - name: Build angular
+      run: |
+        ng build --prod --base-href "design"      
+    - name: Ghpages dry
+      run: |
+        ngh --dry-run
     - name: Build ghpages
       run: |
-        ngh --dir=build
+        ngh
+        ls -l
     - name: Deploy Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
