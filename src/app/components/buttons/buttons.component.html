@@ -30,11 +30,9 @@
       </div>
 
       <div class="nao-example-highlight">
-        <!-- todo -->
-        <!-- <div> {{ codeSamples.code1 | prismHtml }}</div> (edited)  -->
-        <pre><code [innerHtml]='data[0].syntaxHighlighter'></code></pre>
+        <pre><div [innerHTML]="data[0].syntaxHighlighter | prismHtml"></div></pre>
       </div>
-      
+
       <!-- todo -->
       <!-- Render2 -->
     </div>
@@ -65,12 +63,9 @@
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><code [innerHtml]='data[1].syntaxHighlighter'></code></pre>
+        <pre><div [innerHTML]="data[1].syntaxHighlighter | prismHtml"></div></pre>
       </div>
     </div>
-
-
-
 
     <div class="elem-container">
       <h2 class="title">Outline buttons</h2>
@@ -94,7 +89,7 @@
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><code [innerHtml]='data[2].syntaxHighlighter'></code></pre>
+        <pre><div [innerHTML]="data[2].syntaxHighlighter | prismHtml"></div></pre>
       </div>
     </div>
 
@@ -114,7 +109,7 @@
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><code [innerHtml]='data[3].syntaxHighlighter'></code></pre>
+        <pre><div [innerHTML]="data[3].syntaxHighlighter | prismHtml"></div></pre>
       </div>
       <div class="nao-bd-example">
         <button type="button" class="btn btn-primary btn-sm">Small button</button>
@@ -125,7 +120,7 @@
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><code [innerHtml]='data[4].syntaxHighlighter'></code></pre>
+        <pre><div [innerHTML]="data[4].syntaxHighlighter | prismHtml"></div></pre>
       </div>
       <p>Create block level buttons—those that span the full width of a parent—by adding <span
           class="highlighter-warning">.btn-block</span>.</p>
@@ -138,7 +133,7 @@
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><code [innerHtml]='data[5].syntaxHighlighter'></code></pre>
+        <pre><div [innerHTML]="data[5].syntaxHighlighter | prismHtml"></div></pre>
       </div>
     </div>
 
@@ -160,7 +155,7 @@
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><code [innerHtml]='data[6].syntaxHighlighter'></code></pre>
+        <pre><div [innerHTML]="data[6].syntaxHighlighter | prismHtml"></div></pre>
       </div>
 
 
@@ -178,7 +173,7 @@
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><code [innerHtml]='data[7].syntaxHighlighter'></code></pre>
+        <pre><div [innerHTML]="data[7].syntaxHighlighter | prismHtml"></div></pre>
       </div>
       <p>Disabled buttons using the <span class="highlighter-warning">&lt;a&gt;</span> element behave a bit different:
       </p>
@@ -210,11 +205,11 @@
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><code [innerHtml]='data[8].syntaxHighlighter'></code></pre>
+        <pre><div [innerHTML]="data[8].syntaxHighlighter | prismHtml"></div></pre>
       </div>
     </div>
 
-    <div class="elem-container">
+    <!-- <div class="elem-container">
       <h2 class="title">Button plugin</h2>
       <p>Do more with buttons. Control button states or create groups of buttons for more components like toolbars.
       </p>
@@ -234,7 +229,7 @@
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><code [innerHtml]='data[9].syntaxHighlighter'></code></pre>
+        <pre><div [innerHTML]="data[9].syntaxHighlighter | prismHtml"></div></pre>
       </div>
     </div>
 
@@ -261,7 +256,7 @@
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><code [innerHtml]='data[10].syntaxHighlighter'></code></pre>
+        <pre><div [innerHTML]="data[10].syntaxHighlighter | prismHtml"></div></pre>
       </div>
       <div class="nao-bd-example">
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -281,8 +276,8 @@
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><code [innerHtml]='data[11].syntaxHighlighter'></code></pre>
+        <pre><div [innerHTML]="data[11].syntaxHighlighter | prismHtml"></div></pre>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
