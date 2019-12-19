@@ -27,4 +27,4 @@ jobs:
         npm i -g @angular/cli angular-cli-ghpages
     - name: build ghpages
       run: |
-        ngh --dir=dist/docs
+        ngh --dir=docs
