@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { FormsComponent } from './forms/forms.component';
+import { CardsComponent } from './cards/cards.component';
+import { ModalComponent } from './modal/modal.component';
 
 const routes: Routes = [
   {
@@ -19,10 +21,24 @@ const routes: Routes = [
         }
       },
       {
+        path: 'card',
+        component: CardsComponent,
+        data: {
+          title: 'Cards - Naologic',
+        }
+      },
+      {
         path: 'forms',
         component: FormsComponent,
         data: {
           title: 'Forms - Naologic',
+        }
+      },
+      {
+        path: 'modal',
+        component: ModalComponent,
+        data: {
+          title: 'Modals - Naologic',
         }
       },
     ]

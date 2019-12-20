@@ -30,107 +30,54 @@
     <div class="elem-container">
       <h2 class="title">Overview</h2>
 
-      <div class="nao-bd-example">
-        <form>
-          <div class="form-group">
-            <label class="nao-form-label-above" for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-              placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <label class="nao-form-label-above" for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <div class="d-flex custom-control custom-checkbox mb-3">
-            <input class="custom-control-input" type="checkbox" name="checkbox" id="exampleCheck1">
-            <label class="custom-control-label align-self-center" for="exampleCheck1">Check
-              me</label>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
+      <div class="nao-bd-example" [innerHTML]="data[0].code | sanitizeHtml"> </div>
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].code)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
 
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[0].syntaxHighlighter | prismHtml"></div></pre>
+        <pre><div [innerHTML]="data[0].syntaxHighlighter | sanitizeHtml"></div></pre>
       </div>
     </div>
   </div>
 
   <div class="elem-container">
     <h2 class="title">Form controls</h2>
-    <div class="nao-bd-example">
-      <form>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Example select</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect2">Example multiple select</label>
-          <select multiple class="form-control" id="exampleFormControlSelect2">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Example textarea</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-      </form>
-    </div>
+    <div class="nao-bd-example" [innerHTML]="data[1].code | sanitizeHtml"></div>
     <div class="nao-bd-clipboard">
       <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].code)" placement="top"
         ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
     </div>
 
     <div class="nao-example-highlight">
-      <pre><div [innerHTML]="data[1].syntaxHighlighter | prismHtml"></div></pre>
+      <pre><div [innerHTML]="data[1].syntaxHighlighter | sanitizeHtml"></div></pre>
     </div>
   </div>
   <div class="elem-container">
     <h2 class="title">Sizing</h2>
-    <div class='nao-bd-example'>
-      <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
-      <input class="form-control" type="text" placeholder="Default input">
-      <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
-    </div>
+    <div class='nao-bd-example' [innerHTML]="data[2].code | sanitizeHtml"></div>
     <div class="nao-bd-clipboard">
       <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].code)" placement="top"
         ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
     </div>
 
     <div class="nao-example-highlight">
-      <pre><div [innerHTML]="data[2].syntaxHighlighter | prismHtml"></div></pre>
+      <pre><div [innerHTML]="data[2].syntaxHighlighter | sanitizeHtml"></div></pre>
     </div>
   </div>
   <div class="elem-container">
     <h2 class="title">ng-select</h2>
-    todo: change the arrow
-    todo: change the x
-    todo: add box-shadow
-    <div class='nao-bd-example'> 
+    todo: change the arrow ?
+    todo: change the x ?
+    todo: add box-shadow ?
+    todo: change this to dropdowns
+    <div class='nao-bd-example'>
       <ng-select>
         <ng-option>1</ng-option>
         <ng-option>2</ng-option>
         <ng-option>3</ng-option>
-      </ng-select>
+    </ng-select>
     </div>
     <div class="nao-bd-clipboard">
       <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[3].code)" placement="top"
@@ -138,7 +85,7 @@
     </div>
 
     <div class="nao-example-highlight">
-      <pre><div [innerHTML]="data[3].syntaxHighlighter | prismHtml"></div></pre>
+      <pre><div [innerHTML]="data[3].syntaxHighlighter | sanitizeHtml"></div></pre>
     </div>
   </div>
 </div>

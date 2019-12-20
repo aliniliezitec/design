@@ -1,6 +1,10 @@
 @import "./styles/naologic-crm-theme.scss";
 @import "./styles/bootstrap.scss";
+
+@import "./styles/components/buttons";
+@import "./styles/components/cards";
 @import "./styles/components/form";
+@import "./styles/components/modal";
 @import "./styles/pages/nao-navbar";
 @import "./styles/pages/nao-sidenav";
 
@@ -51,19 +55,37 @@
       max-width: 80%;
     }
 
+    .nao-modal-example {
+      background-color: rgba(233, 238, 249, 0.4)
+    }
+    
+    .nao-btn-example {
+      .btn {
+        margin-right: pixelToRem(5px);
+        margin-bottom: pixelToRem(5px);
+      }
+    }
+
     .nao-bd-example {
+      position: relative;
       padding: pixelToRem(24px);
       margin-right: 0;
       margin-left: 0;
       border: pixelToRem(5px) solid var(--light-bg);
 
-      .btn {
-        margin-right: pixelToRem(5px);
-        margin-bottom: pixelToRem(5px);
-      }
 
       .form-control {
         margin-bottom: pixelToRem(5px) !important;
+      }
+
+      .modal {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        z-index: 1;
+        display: block;
       }
     }
 

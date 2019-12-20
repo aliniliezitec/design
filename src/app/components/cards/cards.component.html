@@ -1,17 +1,19 @@
+<!-- todo: Add plugin  -->
+<!-- todo: all the border radius arethe same -->
+<!-- todo: change the secondary color -->
+
 <div class="nao-docs-wrapper">
   <div class="elements-container">
-    <h1 class="title">Colors</h1>
+    <h1 class="title">Cards</h1>
     <p class="description">
-      Convey meaning through color with a handful of color utility classes. Includes support for styling links with
-      hover states, too.
+      Cards description
     </p>
 
     <div class="elem-container">
-      <h2 class="title">Background color</h2>
-      <p>Similar to the contextual text color classes, easily set the background of an element to any contextual class.
-        Anchor components will darken on hover, just like the text classes. Background utilities <strong>do not set
-          <span class="highlighter-warning">color</span></strong>, so in some cases you’ll want to use <span
-          class="highlighter-warning">.text-*</span> utilities.</p>
+      <h2 class="title">Example</h2>
+      <p>
+        Header and/or footer within a card
+      </p>
 
       <div class="nao-bd-example" [innerHTML]="data[0].code | sanitizeHtml"></div>
 
@@ -23,10 +25,15 @@
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[0].syntaxHighlighter | sanitizeHtml"></div></pre>
       </div>
-
     </div>
     <div class="elem-container">
-      <h2 class="title">Color</h2>
+      <h2 class="title">Nao card 1</h2>
+      <p>
+        Custom card
+        <!-- todo: add subtitle/descripition -->
+      <br>todo: add the h1-h6 before finishing the header/footer
+      </p>
+
       <div class="nao-bd-example" [innerHTML]="data[1].code | sanitizeHtml"></div>
 
       <div class="nao-bd-clipboard">
@@ -37,7 +44,6 @@
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[1].syntaxHighlighter | sanitizeHtml"></div></pre>
       </div>
-
     </div>
   </div>
 </div>

@@ -1,13 +1,26 @@
+// Body
+$body-color: var(--text-primary);
+
 // Buttons
+$border-radius: .25rem;
+$border-radius-sm: .25rem;
+$border-radius-lg: .25rem;
+
+$btn-focus-width: 0;
 $btn-active-box-shadow: none;
 $btn-focus-box-shadow: none;
-$btn-focus-width: 0;
-$input-btn-padding-y: pixelToRem(6px);
-$input-btn-padding-x: pixelToRem(20px);
-$input-btn-font-size: .95rem;
-$border-radius: .25rem;
 $btn-font-weight: $font-weight-semibold;
-// todo: sm / lg buttons
+$btn-padding-y: pixelToRem(6px);
+$btn-padding-x: pixelToRem(20px);
+$input-btn-font-size: .95rem;
+
+$btn-padding-y-sm: pixelToRem(3px);
+$btn-padding-x-sm: pixelToRem(15px);
+$btn-font-size-sm: .75rem;
+
+$btn-padding-y-lg: pixelToRem(9px);
+$btn-padding-x-lg: pixelToRem(20px);
+$btn-font-size-lg:  1rem;
 
 // Inputs
 $input-padding-y: pixelToRem(8px);
@@ -28,3 +41,18 @@ $custom-control-indicator-size: 1.125rem;
 $custom-control-indicator-border-color: var(--grey-blue);
 $custom-control-indicator-box-shadow: 0 1px 6px 0 #c8cfe9;
 
+// Cards
+$card-cap-bg: var(--white);
+$card-border-radius: pixelToRem(8px);
+$card-spacer-y: pixelToRem(15px);
+$card-spacer-x: pixelToRem(42px);
+$card-border-width: 0;
+
+// Modals
+// todo change modal sizes
+$modal-content-border-radius: pixelToRem(8px);
+$modal-header-padding-y: pixelToRem(18px);
+
+$modal-content-box-shadow-xs: 0 2px 4px 3px #d8dceb;  
+$modal-content-box-shadow-sm-up:0 2px 4px 3px #d8dceb;
+$modal-content-border-width: 0;

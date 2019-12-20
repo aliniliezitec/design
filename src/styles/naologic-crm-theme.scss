@@ -31,33 +31,47 @@
   --light-bg: #f8f9fa;
 }
 
-$indigo: #3e40db;
-$green: #00b257;
+
 $secondary: #0062a5;
 $text-primary-light: #2f3059;
 $subtitle-black: #030929;
 $shadow: #d8dceb;
 
-$blue: #1e70cd !default;
-// $indigo: #6610f2 !default;
-$purple: #6f42c1 !default;
-$pink: #e83e8c !default;
-$red: #d9534f !default;
-$orange: #FEB744 !default;
-$yellow: #ffa544 !default;
-$danger: #db3e8e !default;
-$green: #3edb8b !default;
-$teal: #20c997 !default;
-$cyan: #28c3d7 !default;
+$blue: #1e70cd;
+$indigo: #3e40db;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #d9534f;
+$orange: #FEB744;
+$yellow: #ffa544;
+$danger: #db3e8e;
+$green: #3edb8b;
+$teal: #20c997;
+$cyan: #28c3d7;
+
+$primary-light: #5659ff;
+$primary-lighter: #6869d3;
+$secondary-light: #4576ff;
+$secondary-lighter: #3297d2;
+$success-light: #d8f8e8;
+$warning-light: #ffedda;
+$danger-light: #f8d8e8;
 
 $theme-colors: (
-"primary": $indigo,
+  "primary": $indigo,
+  "primary-light": $primary-light,
+  "primary-lighter": $primary-lighter,
   "secondary": #8897AA,
+  "secondary-light": $secondary-light,
+  "secondary-lighter": $secondary-lighter,
   "success": $green,
+  "success-light": $success-light,
   "info": $cyan,
   "warning": $yellow,
+  "warning-light": $warning-light,
   "danger": $danger,
-  //   "dark":      $gray-900
+  "danger-light": $danger-light,
+  "dark-blue": #2f3059
 ) !default;
 
 $font-weight-lighter: 300;
@@ -67,15 +81,11 @@ $font-weight-bold: 700;
 $font-weight-extra-bold: 800;
 $font-weight-bolder: 900;
 
-// * Nao Variables
-$nao-box-shadow: 0 2px 4px 3px var(--shadow-light);
+// Nao Variables
+$nao-card-box-shadow: 0 2px 4px 3px #d8dceb;
 $nao-input-box-shadow: 0 2px 4px 0 rgba(231, 231, 231, 0.5); // is used
-$nao-border-radius: 8px;
-$font-weight-extra-bold: 800 !default;
-$font-size-xxl: 1.4rem;
-$font-weight-black: 900 !default;
 
-// // <ng-select>
+// <ng-select>
 $ng-select-value-font-size: .95rem;
 $ng-select-border: #e9eef9;
 $ng-select-highlight: #e9eef9;

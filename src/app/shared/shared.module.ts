@@ -3,15 +3,15 @@ import { CommonModule } from '@angular/common';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedService } from './shared.service';
-import { PrismHtml } from './pipes/prism-html.pipe';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { SanitizeHtml } from './pipes/sanitize-html.pipe';
 
 @NgModule({
   providers: [
     SharedService,
   ],
   declarations: [
-    PrismHtml
+    SanitizeHtml
   ],
   imports: [
     CommonModule,
@@ -25,7 +25,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    PrismHtml,
+    SanitizeHtml,
     NgSelectModule
   ],
   entryComponents: [

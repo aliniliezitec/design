@@ -3,7 +3,7 @@ export interface HtmlCodeBlock {
     syntaxHighlighter: string;
 }
 
-export const ColorsCodeBlocks = [
+export const TypographyCodeBlocks = [
     {
         htmlCode: `
         <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
@@ -21,7 +21,6 @@ export const ColorsCodeBlocks = [
         <div class="p-3 mb-2 bg-info text-white">.bg-info</div>
         <div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
         <div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
-        <div class="p-3 mb-2 bg-dark-blue text-white">.bg-dark-blue</div>
         <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>`},
     {
         htmlCode: `
@@ -41,7 +40,6 @@ export const ColorsCodeBlocks = [
         <p class="text-light bg-dark">.text-light</p>
         <p class="text-dark">.text-dark</p>
         <p class="text-muted">.text-muted</p>
-        <p class="text-text-primary-light">.text-muted</p>
         <p class="text-white bg-dark">.text-white</p>
         `}
 ];

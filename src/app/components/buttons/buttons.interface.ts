@@ -7,12 +7,20 @@ export const ButtonsCodeBlocks = [
     {
         htmlCode: `
     <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-primary-light">Primary-light</button>
+    <button type="button" class="btn btn-primary-lighter">Primary-lighter</button>
     <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-secondary-light">Secondary-light</button>
+    <button type="button" class="btn btn-secondary-lighter">Secondary-lighter</button>
     <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-success-light">Success-light</button>
     <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-danger-light">Danger-light</button>
     <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-warning-light">Warning-light</button>
     <button type="button" class="btn btn-info">Info</button>
     <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark-blue">Dark-blue</button>
     <button type="button" class="btn btn-dark">Dark</button>
 
     <button type="button" class="btn btn-link">Link</button>`},
@@ -26,13 +34,25 @@ export const ButtonsCodeBlocks = [
     {
         htmlCode: `
     <button type="button" class="btn btn-outline-primary">Primary</button>
+    <button type="button" class="btn btn-outline-primary-light">Primary-light</button>
+    <button type="button" class="btn btn-outline-primary-lighter">Primary-lighter</button>
     <button type="button" class="btn btn-outline-secondary">Secondary</button>
+    <button type="button" class="btn btn-outline-secondary-light">Secondary-light</button>
+    <button type="button" class="btn btn-outline-secondary-lighter">Secondary-lighter</button>
     <button type="button" class="btn btn-outline-success">Success</button>
+    <button type="button" class="btn btn-outline-success-light">Success-light</button>
     <button type="button" class="btn btn-outline-danger">Danger</button>
+    <button type="button" class="btn btn-outline-danger-light">Danger-light</button>
     <button type="button" class="btn btn-outline-warning">Warning</button>
+    <button type="button" class="btn btn-outline-warning-light">Warning-light</button>
     <button type="button" class="btn btn-outline-info">Info</button>
     <button type="button" class="btn btn-outline-light">Light</button>
+    <button type="button" class="btn btn-outline-dark-blue">Dark-blue</button>
     <button type="button" class="btn btn-outline-dark">Dark</button>`},
+    {
+        htmlCode: `
+    <button type="button" class="btn btn-primary btn-xl">Extra Large button</button>
+    <button type="button" class="btn btn-secondary btn-xl">Extra Large button</button>`},
     {
         htmlCode: `
     <button type="button" class="btn btn-primary btn-lg">Large button</button>

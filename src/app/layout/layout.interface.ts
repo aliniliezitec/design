@@ -24,6 +24,7 @@ export const MenuItems = [
             { type: 'item', route: '/components/card', text: 'Card' },
             { type: 'item', route: '/components/dropdowns', text: 'Dropdowns' },
             { type: 'item', route: '/components/forms', text: 'Forms' },
+            { type: 'item', route: '/components/modal', text: 'Modal' },
             { type: 'item', route: '/components/input-group', text: 'Input group' },
             // { type: 'item', route: '/components/modal', text: 'Modal' },
             // { type: 'item', route: '/components/navs', text: 'Navs' },
@@ -36,6 +37,7 @@ export const MenuItems = [
         type: 'items', text: 'Utilities', route: '/utilities', icon: '../../../assets/images/icons/settings.svg', isOpen: false,
         items: [
             { type: 'item', route: '/utilities/colors', text: 'Colors' },
+            { type: 'item', route: '/utilities/typography', text: 'Typography' },
             // { type: 'item', route: '/layout/grid', text: 'Grid' },
             // { type: 'item', route: '/layout/utilities', text: 'Utilities for Layout' },
         ]
