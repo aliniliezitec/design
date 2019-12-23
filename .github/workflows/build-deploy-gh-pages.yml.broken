@@ -37,25 +37,19 @@ jobs:
     - name: List the root dir
       run: |
         ls -l
-    - name: List the dist dir
+    - name: Working dir
       run: |
-        ls -d dist/* -l
+        pwd
     - name: Ghpages dry
       run: |
         ngh --dry-run
-    - name: Build ghpages2
-      run: |
-        pwd
-        ngh --dir=dist/
     - name: Build ghpages
-      run: |
-        pwd
-        ngh --dir=dist/design
+      run: ngh --dir=dist/design
     - name: Deploy Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BASE_BRANCH: master # The branch the action should deploy from.
         BRANCH: gh-pages # The branch the action should deploy to.
-        #FOLDER: dist # The folder the action should deploy.
+        FOLDER: dist # The folder the action should deploy.
     
