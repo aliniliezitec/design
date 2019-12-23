@@ -43,10 +43,6 @@ jobs:
     - name: Ghpages dry
       run: |
         ngh --dry-run
-    - name: Build ghpages2
-      run: |
-        pwd
-        ngh --dir=dist/
     - name: Build ghpages
       run: |
         pwd
