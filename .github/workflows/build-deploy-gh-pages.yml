@@ -34,13 +34,18 @@ jobs:
     - name: Build angular
       run: |
         ng build --prod --base-href https://naologic.github.io/design/
-        ls -d dist/* -l      
+    - name: List the root dir
+      run: |
+        ls -l
+    - name: List the dist dir
+      run: |
+        ls -d dist/* -l   
     - name: Ghpages dry
       run: |
         ngh --dry-run
     - name: Build ghpages
       run: |
-        ngh --dir=dist
+        ngh --dir=dist/design
         ls -l
         ls -d dist/* -l
     - name: Deploy Pages
