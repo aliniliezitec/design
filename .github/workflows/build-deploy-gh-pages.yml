@@ -39,7 +39,13 @@ jobs:
         ls -l
     - name: List the dist dir
       run: |
-        ls -d dist/* -l
+        cd dist && ls -l
+    - name: List the dist dir
+      run: |
+        cd design && ls -l
+    - name: back 2
+      run: |
+        cd ..
     - name: Ghpages dry
       run: |
         ngh --dry-run
