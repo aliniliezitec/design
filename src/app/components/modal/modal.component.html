@@ -5,14 +5,33 @@
 
     <div class="elem-container">
       <h2 class="title">Simple modal</h2>
-      <div class="nao-bd-example nao-modal-example" [innerHTML]="data[0].code | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-modal-example" [innerHTML]="data[0].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
 
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[0].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+      <p><strong>Example of modal usage and passing data:</strong></p>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].ts1)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[0].ts1 | typescriptPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].ts2)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[0].ts2 | typescriptPrismPipe | sanitizeHtml"></div></pre>
       </div>
       <p>Comes in diffrent sizes</p>
       <ul>
@@ -33,16 +52,17 @@
 
     <div class="elem-container">
       <h2 class="title">Nao modal 1</h2>
-      <div class="nao-bd-example nao-modal-example" [innerHTML]="data[1].code | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-modal-example" [innerHTML]="data[1].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
 
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[1].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[1].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
-      <p>You can change the header background by using a <span class="highlighter-warning">.bg-*</span> color class, here are a few examples:</p>
+      <p>You can change the header background by using a <span class="highlighter-warning">.bg-*</span> color class,
+        here are a few examples:</p>
       <ul>
         <li>
           <span class="highlighter-warning">.bg-primary</span>
@@ -64,16 +84,17 @@
 
     <div class="elem-container">
       <h2 class="title">Nao modal 2</h2>
-      <div class="nao-bd-example nao-modal-example" [innerHTML]="data[2].code | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-modal-example" [innerHTML]="data[2].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
 
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[2].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[2].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
-      <p>You can change the header background by using a <span class="highlighter-warning">.bg-*</span> color class, here are a few examples:</p>
+      <p>You can change the header background by using a <span class="highlighter-warning">.bg-*</span> color class,
+        here are a few examples:</p>
       <ul>
         <li>
           <span class="highlighter-warning">.bg-primary</span>
@@ -95,6 +116,3 @@
     </div>
   </div>
 </div>
-
-
-

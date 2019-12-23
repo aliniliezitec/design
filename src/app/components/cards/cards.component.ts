@@ -1,25 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { CardsCodeBlocks, HtmlCodeBlock } from './cards.interface';
-import * as Prism from 'prismjs';
+import { CardsCodeBlocks } from './cards.interface';
 
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
 })
 export class CardsComponent implements OnInit {
-  public data: HtmlCodeBlock[] = [];
+  public data = CardsCodeBlocks;
 
   constructor() { }
 
   ngOnInit() {
-    CardsCodeBlocks.forEach(el => {
-      // -->Set: Code and the syntax Highlighter
-      const codeBlock: HtmlCodeBlock = {
-        code: el.htmlCode,
-        syntaxHighlighter: Prism.highlight(el.htmlCode, Prism.languages.html, 'html')
-      };
-      this.data.push(codeBlock);
-    });
   }
 
   /**

@@ -1,11 +1,11 @@
-export interface HtmlCodeBlock {
-    code: string;
-    syntaxHighlighter: string;
-}
+// export interface htmlBlock {
+//     code: string;
+//     // syntaxHighlighter: string;
+// }
 
 export const ModalCodeBlocks = [
     {
-        htmlCode: `
+        html: `
         <div class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
@@ -24,9 +24,33 @@ export const ModalCodeBlocks = [
                     </div>
                 </div>
             </div>
-        </div>`},
+        </div>`,
+        ts1: `
+            constructor(private readonly modalService: NgbModal) {}
+        `,
+        ts2: `
+            // -->Open: the modal
+            const modalRef = this.modalService.open(ModalComponent, {
+                centered: true, windowClass: 'nao-modal-window-class', backdropClass: 'nao-modal-backdrop', size: 'lg',
+            });
+            // -->Set: data
+            modalRef.componentInstance.data = data || {};
+            modalRef.componentInstance.mode = 'id';
+            // -->Await: result
+            modalRef.result
+            .then(modalRes => {
+                if (modalRes && modalRes.ok) {
+                // -->Refresh
+                this.refresh();
+                }
+            })
+            .catch(err => {
+                this.status.error();
+                this.contactsService.sharedService.swalApiError(err);
+            });`
+    },
     {
-        htmlCode: `
+        html: `
         <div class="modal nao-modal-1" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
@@ -42,9 +66,10 @@ export const ModalCodeBlocks = [
                     </div>
                 </div>
             </div>
-        </div>`},
+        </div>`
+    },
     {
-        htmlCode: `
+        html: `
         <div class="modal nao-modal-2" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -61,5 +86,6 @@ export const ModalCodeBlocks = [
                     </div>
                 </div>
             </div>
-        </div>`},
+        </div>`
+    },
 ];

@@ -1,11 +1,6 @@
-export interface HtmlCodeBlock {
-  code: string;
-  syntaxHighlighter: string;
-}
-
 export const TableCodeBlocks = [
   {
-    htmlCode: `
+    html: `
         <div class="nao-simple-table">
             <table class="table mb-0">
                 <thead class="table-header">
@@ -67,9 +62,10 @@ export const TableCodeBlocks = [
                     </tr>
                 </tbody>
             </table>
-        </div>`},
+        </div>`
+  },
   {
-    htmlCode: `
+    html: `
         <div class="nao-simple-table nao-table-scroll-example">
             <table class="table mb-0">
                 <thead class="table-header nao-sticky-thead">
@@ -181,152 +177,168 @@ export const TableCodeBlocks = [
                     </tr>
                 </tbody>
             </table>
-        </div>`},
+        </div>`
+  },
   {
-    htmlCode: `
-        <ng-template #rowOverlay let-item let-i="i">
-          <div class="d-flex justify-content-end align-items-center nao-row-overlay h-100">
-            <div>
-              <button class="btn btn-text-only text-uppercase-first">
-                Edit
-              </button>
-              <button class="btn btn-text-only text-uppercase-first">
-                Delete
-              </button>
-            </div>
-          </div>
-        </ng-template>
-        <div class="card nao-card-table-1 mb-5">
-          <div class="d-flex flex-row card-header selected align-items-center" *ngIf="noSelectedRows() > 0">
-            <div class="pt-2 pr-3">
-              <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
-            </div>
-            <div class="pl-3 mr-3">
-              <div class="card-header-title text-lowercase">
-                {{ noSelectedRows() }}
-              </div>
-            </div>
-            <div class="pt-2">
-              <button class="btn btn-text-only text-uppercase-first">
-                Delete multiple
-              </button>
-            </div>
-            <div class="p-2 flex-grow-1">
-            </div>
-            <div class="p-2 flex-grow-1">
-            </div>
-          </div>
-          <div class="d-flex flex-row card-header align-items-center" *ngIf="noSelectedRows() === 0">
-            <div class="pl-3 mr-3">
-              <div class="card-header-title">
-                Contact&nbsp;&nbsp;|
-              </div>
-            </div>
-            <div class="pt-2 pr-3">
-              <span class="smallx">
-                {{ paging.totalRows }}
-              </span>
-            </div>
-            <div class="pt-2">
-              <button class="btn btn-text-only text-uppercase-first">
-                Add new contact
-              </button>
-              <button class="btn btn-text-only text-uppercase-first">
-                Import contacts
-              </button>
-            </div>
-          </div>
-          <div class="d-flex card-search align-middle justify-content-end">
-            <div class="col-7 align-middle pt-3 pl-4">
-              <ng-select bindValue="query" class="nao-select-transparent" [multiple]="true"
-                placeholder="Add filter" [clearable]="false" clearAllText="Clear">
-                <ng-template ng-label-tmp let-item="item" let-clear="clear">
-                  <span class="ng-value-label">
-                    {{ item.fieldName }}: <strong>'{{ item.term }}'</strong>
-                  </span>
-                  <span class="ng-value-icon right" aria-hidden="true">×</span>
-                </ng-template>
-                <ng-option *ngFor="let item of searchFor; trackBy" [value]="item">{{ item.value }}
-                </ng-option>
-              </ng-select>
-            </div>
-            <div class="col pt-3">
-              <button type="button" class="btn nao-btn btn-transparent text-uppercase pull-right"
-                (click)="searchFormGroup.empty()">
-                Clear filter
-              </button>
-            </div>
-          </div>
+    html: `
+    <ng-template #rowOverlay let-item let-i="i">
+      <div class="d-flex justify-content-end align-items-center nao-row-overlay h-100">
+        <div>
+          <button class="btn btn-text-only">
+            Edit
+          </button>
+          <button class="btn btn-text-only">
+            Delete
+          </button>
+        </div>
+      </div>
+    </ng-template>
 
-          <div class="card-body p-0 table-responsive">
-            <table class="table mb-0 table-borderless">
-              <thead class="table-header">
-                <tr>
-                  <th scope="col" style="width: 60px;">
-                    <label class="custom-control custom-checkbox px-2 m-0" style="margin-left: 22px !important;">
-                      <input type="checkbox" class="custom-control-input" (ngModelChange)="selectAllChange()"
-                        [(ngModel)]="paging.selectAll">
-                      <span class="custom-control-label"></span>
-                    </label>
-                  </th>
-                  <th scope="col" class="pl-3" style="width: 20%">Name</th>
-                  <th scope="col" class="pl-3" style="width: 20%">Email</th>
-                  <th scope="col" class="pl-3" style="width: 20%">Company</th>
-                  <th scope="col" class="pl-3"></th>
-                </tr>
-              </thead>
-              <tbody class="table-body">
-                <tr *ngFor="let item of dataTable; let i = index; let last = last"
-                  [ngClass]="{'selected': item.selected}">
-                  <td class="align-middle p-3">
-                    <label class="custom-control custom-checkbox px-2 m-0 ml-3">
-                      <input type="checkbox" class="custom-control-input" (ngModelChange)="selectChange($event, i)"
-                        [(ngModel)]="item.selected">
-                      <span class="custom-control-label"></span>
-                    </label>
-                  </td>
-                  <td class="align-middle p-3">
-                    <div class="d-flex align-items-center">
-                      <div class="cell-multiline-header">{{ item.name }}</div>
-                    </div>
-                  </td>
-                  <td class="align-middle p-3">
-                    <div class="d-flex align-items-center">
-                      <div class="cell-multiline-header">{{ item.email }}</div>
-                    </div>
-                  </td>
-                  <td class="align-middle p-3">
-                    <div class="d-flex align-items-center">
-                      <div class="cell-multiline-header">{{ item.company }}</div>
-                    </div>
-                  </td>
-                  <td class="py-0" style="position: relative;">
-                    <div class="nao-row-overlay-container show-on-hover mr-4" *ngIf="noSelectedRows() === 0">
-                      <ng-template *ngTemplateOutlet="rowOverlay; context: { $implicit: item, i: i }"></ng-template>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+    <div class="card nao-card-table-1 mb-5">
+      <div class="d-flex flex-row card-header selected align-items-center" *ngIf="noSelectedRows() > 0">
+        <div class="pt-2 pr-3">
+          <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
+        </div>
+        <div class="pl-3 mr-3">
+          <div class="card-header-title text-lowercase">
+            {{ noSelectedRows() }} {{ (noSelectedRows() === 1 ? 'selected contact' : 'selected contacts') }}
           </div>
-          <div class="d-flex flex-row align-items-center card-footer pt-4 pb-4 pr-5">
-            <div class="pl-3">
-              Per page
-              <select (change)="paging.perPage$.next($event.target.value)"
-                [value]="paging.perPage$.getValue()" class="custom-select custom-select-sm d-inline-block w-auto">
-                <option *ngFor="let limit of [5, 10, 20, 50, 100]" [value]="limit">{{ limit }}</option>
-              </select>
-            </div>
-            <div class="flex-grow-1 align-content-end">
-              <ngb-pagination class="pull-right" [collectionSize]="paging.totalRows"
-                [pageSize]="paging.perPage$.getValue()" [(page)]="paging.currentPage" [maxSize]="paging.maxSize"
-                [directionLinks]="true" [boundaryLinks]="true">
-                <ng-template ngbPaginationPrevious>Previous</ng-template>
-                <ng-template ngbPaginationNext>Next</ng-template>
-                <ng-template ngbPaginationEllipsis>...</ng-template>
-                <ng-template ngbPaginationNumber let-page>{{ page }}</ng-template>
-              </ngb-pagination>
-            </div>
+        </div>
+        <div class="pt-2">
+          <button class="btn btn-text-only">
+            Delete multiple
+          </button>
+        </div>
+      </div>
+      <div class="d-flex flex-row card-header align-items-center" *ngIf="noSelectedRows() === 0">
+        <div class="mr-3">
+          <div class="card-header-title">
+            Contacts&nbsp;&nbsp;|
           </div>
-`}
+        </div>
+        <div class="pt-2 pr-3">
+          <span class="smallx">
+            3 contacts
+          </span>
+        </div>
+        <div class="pt-2">
+          <button class="btn btn-text-only">
+            Add new contact
+          </button>
+          <button class="btn btn-text-only">
+            Import contacts
+          </button>
+        </div>
+      </div>
+      <div class="card-search d-flex align-items-center justify-content-between">
+        <div class="col-7 align-middle">
+          <ng-select bindValue="query" [multiple]="true" placeholder="Add filter" [clearable]="false"
+            clearAllText="Clear">
+            <ng-template ng-label-tmp let-item="item" let-clear="clear">
+              <span class="ng-value-label">
+                {{ item.fieldName }}: <strong>'{{ item.term }}'</strong>
+              </span>
+              <span class="ng-value-icon right" aria-hidden="true">×</span>
+            </ng-template>
+            <ng-option *ngFor="let item of searchFor" [value]="item">{{ item.value }}
+            </ng-option>
+          </ng-select>
+        </div>
+        <div>
+          <button type="button" class="btn btn-transparent text-dark-blue" (click)="searchFormGroup.empty()">
+            Clear filter
+          </button>
+        </div>
+      </div>
+
+      <div class="card-body p-0 table-responsive">
+        <table class="table mb-0 table-borderless">
+          <thead class="table-header">
+            <tr>
+              <th scope="col" style="width: 60px;">
+                <label class="custom-control custom-checkbox m-0">
+                  <input type="checkbox" class="custom-control-input" (ngModelChange)="selectAllChange()"
+                    [(ngModel)]="paging.selectAll">
+                  <span class="custom-control-label"></span>
+                </label>
+              </th>
+              <th scope="col" class="pl-3" style="width: 20%">Name</th>
+              <th scope="col" class="pl-3" style="width: 20%">Email</th>
+              <th scope="col" class="pl-3" style="width: 20%">Company</th>
+              <th scope="col" class="pl-3"></th>
+            </tr>
+          </thead>
+          <tbody class="table-body">
+            <tr *ngFor="let item of dataTable; let i = index; let last = last"
+              [ngClass]="{'selected': item.selected}">
+              <td class="align-middle p-3">
+                <label class="custom-control custom-checkbox m-0">
+                  <input type="checkbox" class="custom-control-input" (ngModelChange)="selectChange($event, i)"
+                    [(ngModel)]="item.selected">
+                  <span class="custom-control-label"></span>
+                </label>
+              </td>
+              <td class="align-middle p-3">
+                <div class="d-flex align-items-center">
+                  <div class="cell-multiline-header">{{ item.name }}</div>
+                </div>
+              </td>
+              <td class="align-middle p-3">
+                <div class="d-flex align-items-center">
+                  <div class="cell-multiline-header">{{ item.email }}</div>
+                </div>
+              </td>
+              <td class="align-middle p-3">
+                <div class="d-flex align-items-center">
+                  <div class="cell-multiline-header">{{ item.company }}</div>
+                </div>
+              </td>
+              <td class="py-0" style="position: relative;">
+                <div class="nao-row-overlay-container show-on-hover mr-4" *ngIf="noSelectedRows() === 0">
+                  <ng-template *ngTemplateOutlet="rowOverlay; context: { $implicit: item, i: i }"></ng-template>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer d-flex flex-row align-items-center justify-content-between pt-4 pb-4">
+        <div>
+          Per page
+          <select (change)="paging.perPage$.next($event.target.value)" [value]="paging.perPage$.getValue()"
+            class="custom-select custom-select-sm d-inline-block w-auto">
+            <option *ngFor="let limit of [5, 10, 20, 50, 100]" [value]="limit">{{ limit }}</option>
+          </select>
+        </div>
+        <div>
+          <ngb-pagination class="pull-right" [collectionSize]="paging.totalRows"
+            [pageSize]="paging.perPage$.getValue()" [(page)]="paging.currentPage" [maxSize]="paging.maxSize"
+            [directionLinks]="true" [boundaryLinks]="true">
+            <ng-template ngbPaginationPrevious>Previous</ng-template>
+            <ng-template ngbPaginationNext>Next</ng-template>
+            <ng-template ngbPaginationEllipsis>...</ng-template>
+            <ng-template ngbPaginationNumber let-page>{{ page }}</ng-template>
+          </ngb-pagination>
+        </div>
+      </div>`,
+  ts1 : `
+    public paging = {
+      currentPage: 1, totalPages: 1, currentRows: 0, totalRows: 0, maxSize: 5,
+      perPage$: new BehaviorSubject<number>(20), selectAll: false, someSelected: false,
+      viewRelaxed: true
+    };
+    public filter = {
+      search: new BehaviorSubject(''), searchType: new BehaviorSubject<string>('$or'),
+      query: new BehaviorSubject<string>(null), searchFields: ['name'], sub: null
+    };
+    public sort = { lastSort: '', by: new BehaviorSubject(null), reverse: true, sub: null };
+    public subs: { search$: Subscription, sort$: Subscription } = { search$: null, sort$: null };
+    public searchFormGroup;
+    public searchFor = [];
+    public dataTable = [
+      { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
+      { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
+      { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
+    ];`
+    }
 ];

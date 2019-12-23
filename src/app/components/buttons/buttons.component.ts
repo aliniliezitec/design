@@ -1,25 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { ButtonsCodeBlocks, HtmlCodeBlock } from './buttons.interface';
-import * as Prism from 'prismjs';
+import { ButtonsCodeBlocks } from './buttons.interface';
 
 @Component({
   selector: 'app-buttons',
   templateUrl: './buttons.component.html',
 })
 export class ButtonsComponent implements OnInit {
-  public data: HtmlCodeBlock[] = [];
+  public data = ButtonsCodeBlocks;
 
   constructor() { }
 
   ngOnInit() {
-    ButtonsCodeBlocks.forEach(el => {
-      // -->Set: Code and the syntax Highlighter
-      const codeBlock: HtmlCodeBlock = {
-        code: el.htmlCode,
-        syntaxHighlighter: Prism.highlight(el.htmlCode, Prism.languages.html, 'html')
-      };
-      this.data.push(codeBlock);
-    });
   }
 
   /**

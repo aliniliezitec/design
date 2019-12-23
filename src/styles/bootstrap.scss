@@ -42,8 +42,6 @@
 // Syntax highlighting theme
 @import "node_modules/prismjs/themes/prism";
 
-
-
 // Alternate custom buttons
 @each $color,
 $value in $theme-colors {

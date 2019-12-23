@@ -79,7 +79,6 @@
       margin-left: 0;
       border: pixelToRem(5px) solid var(--light-bg);
 
-
       .form-control {
         margin-bottom: pixelToRem(5px) !important;
       }
@@ -102,7 +101,7 @@
       .btn-clipboard {
         position: absolute;
         top: pixelToRem(8px);
-        right: pixelToRem(8px);
+        right: pixelToRem(20px);
         z-index: 10;
         display: block;
         padding: pixelToRem(4px) pixelToRem(8px);
@@ -124,8 +123,11 @@
       margin-bottom: pixelToRem(16px);
       padding-bottom: pixelToRem(24px);
       background-color: var(--light-bg);
+      max-height: 350px;
+      overflow: auto;
 
       pre {
+        overflow: initial;
         padding: 0;
         margin-top: 0;
         margin-bottom: 0;

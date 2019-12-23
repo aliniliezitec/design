@@ -8,6 +8,7 @@
     color: var(--grey-blue);
 
     th {
+      padding: 11px 5px;
       line-height: 1.6;
       background-color: #f7f9fc;
     }
@@ -21,7 +22,6 @@
     }
   }
 
-
   tr {
     height: 31px;
   }
@@ -33,10 +33,6 @@
     color: var(--text-primary);
     vertical-align: middle;
     border-bottom: solid 1px var(--border-fill) !important;
-  }
-
-  th {
-    padding: 11px 5px;
   }
 }
 
@@ -67,7 +63,7 @@
 
   .card-header {
     background-color: var(--lightest);
-    padding-left: 29px;
+    padding-right: 29px;
 
     .card-header-title {
       font-size: pixelToRem(22px);
@@ -195,22 +191,22 @@
       &:last-child {
         border-bottom: 0px;
       }
-    }
 
-    tr:hover {
-      background-color: var(--border-lightest);
-
-      .show-on-hover {
-        opacity: 1;
-      }
-
-      .nao-row-overlay {
+      &:hover {
         background-color: var(--border-lightest);
+  
+        .show-on-hover {
+          opacity: 1;
+        }
+  
+        .nao-row-overlay {
+          background-color: var(--border-lightest);
+        }
       }
-    }
 
-    tr.selected {
-      background-color: var(--light-blue);
+      &.selected {
+        background-color: var(--light-blue);
+      }
     }
 
     .show-on-hover {

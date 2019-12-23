@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TableCodeBlocks, HtmlCodeBlock } from './table.interface';
-import * as Prism from 'prismjs';
+import { TableCodeBlocks } from './table.interface';
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { every, some } from 'lodash';
 
@@ -9,7 +8,7 @@ import { every, some } from 'lodash';
   templateUrl: './table.component.html',
 })
 export class TableComponent implements OnInit {
-  public data: HtmlCodeBlock[] = [];
+  public data = TableCodeBlocks;
   public paging = {
     currentPage: 1, totalPages: 1, currentRows: 0, totalRows: 0, maxSize: 5,
     perPage$: new BehaviorSubject<number>(20), selectAll: false, someSelected: false,
@@ -29,14 +28,10 @@ export class TableComponent implements OnInit {
     { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
   ];
 
-  public dataFields = [{
-    field: 'data.info.firstName',
-    name: 'firstName'
-  },
-  {
-    field: 'data.info.lastName',
-    name: 'lastName'
-  }];
+  constructor() { }
+
+  ngOnInit() {
+  }
 
   /**
    * Has any selected rows
@@ -79,20 +74,6 @@ export class TableComponent implements OnInit {
     // -->Check: some
     this.paging.someSelected = some(this.dataTable.map(d => d.selected));
   }
-
-  constructor() { }
-
-  ngOnInit() {
-    TableCodeBlocks.forEach(el => {
-      // -->Set: Code and the syntax Highlighter
-      const codeBlock: HtmlCodeBlock = {
-        code: el.htmlCode,
-        syntaxHighlighter: Prism.highlight(el.htmlCode, Prism.languages.html, 'html')
-      };
-      this.data.push(codeBlock);
-    });
-  }
-
   /**
    * Copy to clipboard
    */

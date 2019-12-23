@@ -18,15 +18,15 @@
         And we have a text only button using the class <span class="highlighter-warning">.btn-text-only</span>
       </p>
 
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[0].code | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[0].html | sanitizeHtml"></div>
 
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
 
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[0].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 
@@ -44,13 +44,13 @@
         given a role="button" to appropriately convey their purpose to assistive technologies such as screen
         readers.
       </p>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[1].code | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[1].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[1].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[1].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 
@@ -61,13 +61,13 @@
         the <span class="highlighter-warning">.btn-outline-*</span> ones to remove all background images and colors on
         any button.
       </p>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[2].code | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[2].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[2].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[2].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 
@@ -79,13 +79,13 @@
         any button.
         TODO: SHOULD THIS HAVE A HOVER EFFECT?
       </p>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[3].code | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[3].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[3].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[3].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[3].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[3].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 
@@ -96,39 +96,39 @@
       <p>Fancy extra large, larger or smaller buttons? Add <span class="highlighter-warning">.btn-xl</span>, <span class="highlighter-warning">.btn-lg</span> or <span
           class="highlighter-warning">.btn-sm</span> for additional sizes.
       </p>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[4].code | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[4].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[4].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[4].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[4].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[4].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[5].code | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[5].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[5].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[5].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[5].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[5].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[6].code | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[6].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[6].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[6].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[6].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[6].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
       <p>Create block level buttons—those that span the full width of a parent—by adding <span
           class="highlighter-warning">.btn-block</span>.</p>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[7].code | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[7].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[7].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[7].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[7].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[7].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 
@@ -140,13 +140,13 @@
           class="highlighter-warning">.active</span> (and include the <span
           class="highlighter-warning">aria-pressed="true"</span> attribute) should you
         need to replicate the state programmatically.</p>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[8].code | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[8].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[8].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[8].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[8].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[8].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
 
 
@@ -155,13 +155,13 @@
         Make buttons look inactive by adding the disabled boolean attribute to any <span
           class="highlighter-warning">&lt;button&gt;</span> element.
       </p>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[9].code | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[9].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[9].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[9].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[9].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[9].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
       <p>Disabled buttons using the <span class="highlighter-warning">&lt;a&gt;</span> element behave a bit different:
       </p>
@@ -182,17 +182,17 @@
           indicate the state of the element to assistive technologies.
         </li>
       </ul>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[10].code | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[10].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[10].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[10].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[10].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[10].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 
-    <!-- todo: change nao-bd-example nao-btn-example to [innerHTML]="data[1].code | sanitizeHtml" -->
+    <!-- todo: change nao-bd-example nao-btn-example to [innerHTML]="data[1].html | sanitizeHtml" -->
     <!-- todo: change the data[number] -->
     <!-- <div class="elem-container">
       <h2 class="title">Button plugin</h2>
@@ -210,11 +210,11 @@
         </button>
       </div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[10].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[10].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[10].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[10].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 
@@ -237,11 +237,11 @@
         </div>
       </div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[11].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[11].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[11].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[11].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
       <div class="nao-bd-example nao-btn-example">
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -257,11 +257,11 @@
         </div>
       </div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[12].code)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[12].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[12].syntaxHighlighter | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[12].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div> -->
   </div>

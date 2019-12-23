@@ -1,11 +1,6 @@
-export interface HtmlCodeBlock {
-    code: string;
-    syntaxHighlighter: string;
-}
-
 export const FormsCodeBlocks = [
     {
-        htmlCode: `
+        html: `
         <form>
             <div class="form-group">
                 <label class="nao-form-label-above" for="exampleInputEmail1">Email address</label>
@@ -25,7 +20,7 @@ export const FormsCodeBlocks = [
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>`},
     {
-        htmlCode: `
+        html: `
         <form>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Email address</label>
@@ -57,12 +52,12 @@ export const FormsCodeBlocks = [
             </div>
         </form>`},
     {
-        htmlCode: `
+        html: `
         <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
         <input class="form-control" type="text" placeholder="Default input">
         <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">`},
     {
-        htmlCode: `
+        html: `
         <ng-select>
             <ng-option>1</ng-option>
             <ng-option>2</ng-option>

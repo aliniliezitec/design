@@ -1,11 +1,6 @@
-export interface HtmlCodeBlock {
-    code: string;
-    syntaxHighlighter: string;
-}
-
 export const CardsCodeBlocks = [
     {
-        htmlCode: `
+        html: `
         <div class="card">
             <div class="card-header">
                 Header
@@ -20,7 +15,7 @@ export const CardsCodeBlocks = [
             </div>
         </div>`},
     {
-        htmlCode: `
+        html: `
         <div class="card nao-card-1">
             <div class="card-header">
                 <h5 class="title">Nao card 1</h5>

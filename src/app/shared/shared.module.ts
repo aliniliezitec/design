@@ -5,13 +5,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedService } from './shared.service';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { SanitizeHtml } from './pipes/sanitize-html.pipe';
+import { TypescriptPrismPipe } from './pipes/typescript-prism.pipe';
+import { HtmlPrismPipe } from './pipes/html-prism.pipe';
 
 @NgModule({
   providers: [
     SharedService,
   ],
   declarations: [
-    SanitizeHtml
+    SanitizeHtml,
+    HtmlPrismPipe,
+    TypescriptPrismPipe
   ],
   imports: [
     CommonModule,
@@ -26,6 +30,8 @@ import { SanitizeHtml } from './pipes/sanitize-html.pipe';
     FormsModule,
     ReactiveFormsModule,
     SanitizeHtml,
+    HtmlPrismPipe,
+    TypescriptPrismPipe,
     NgSelectModule
   ],
   entryComponents: [
