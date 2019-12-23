@@ -37,15 +37,9 @@ jobs:
     - name: List the root dir
       run: |
         ls -l
-    - name: List the dist dir
+    - name: Working dir
       run: |
-        cd dist && ls -l
-    - name: List the dist dir
-      run: |
-        cd design && ls -l
-    - name: back 2
-      run: |
-        cd ..
+        pwd
     - name: Ghpages dry
       run: |
         ngh --dry-run
