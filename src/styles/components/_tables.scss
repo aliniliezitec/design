@@ -1,0 +1,260 @@
+.nao-simple-table {
+  .table {
+    position: relative;
+  }
+
+  thead {
+    font-size: pixelToRem(14px);
+    color: var(--grey-blue);
+
+    th {
+      line-height: 1.6;
+      background-color: #f7f9fc;
+    }
+  }
+
+  .nao-sticky-thead {
+    th {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+    }
+  }
+
+
+  tr {
+    height: 31px;
+  }
+
+  td {
+    font-weight: $font-weight-regular;
+    padding: 0 0 0 5px;
+    font-size: pixelToRem(14px);
+    color: var(--text-primary);
+    vertical-align: middle;
+    border-bottom: solid 1px var(--border-fill) !important;
+  }
+
+  th {
+    padding: 11px 5px;
+  }
+}
+
+.nao-table-scroll-example {
+  height: 300px;
+  overflow: auto;
+}
+
+.nao-card-table-1 {
+  border-radius: 8px;
+  box-shadow: $nao-card-box-shadow;
+  background-color: var(--white);
+
+  .nao-row-overlay-container {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: intrinsic;
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    width: max-content;
+    display: table;
+  }
+
+  .nao-row-overlay {
+    background-color: var(--white);
+  }
+
+  .card-header {
+    background-color: var(--lightest);
+    padding-left: 29px;
+
+    .card-header-title {
+      font-size: pixelToRem(22px);
+      font-weight: $font-weight-bold;
+      color: var(--text-secondary);
+    }
+
+    .card-header-subtitle {
+      font-size: pixelToRem(16px);
+      font-weight: $font-weight-regular;
+      color: var(--text-secondary);
+    }
+  }
+
+  .card-header.selected {
+    background-color: var(--light-blue);
+  }
+
+  .card-body {
+    background-color: var(--white);
+    border-top: 1px var(--light) solid;
+    border-bottom: 1px var(--light) solid;
+  }
+
+  .card-footer {
+    border-top: 0px;
+    padding-right: 29px;
+
+    .page-link {
+      border: 0;
+      color: var(--text-secondary);
+      font-size: pixelToRem(14px);
+    }
+
+    .page-item.active {
+      .page-link {
+        font-weight: $font-weight-bolder;
+        background-color: transparent;
+        color: var(--text-secondary);
+      }
+    }
+
+    .custom-select {
+      border: 0;
+      color: var(--text-secondary);
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .table-header {
+    background-color: var(--lightest);
+
+    tr {
+      height: 30px;
+
+      th {
+        font-size: pixelToRem(14px);
+        font-weight: $font-weight-regular;
+        color: var(--dark);
+
+        .custom-checkbox {
+          margin-left: 32px !important;
+        }
+      }
+    }
+  }
+
+  .card-search {
+    height: 70px;
+    padding-right: 10px;
+    padding-left: 19px;
+
+    .ng-select-focused {
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+
+    .ng-select-container {
+      border: 0;
+      box-shadow: none !important;
+
+      .ng-arrow-wrapper {
+        display: none;
+      }
+    }
+
+    .ng-placeholder {
+      padding-top: 6px;
+      color: var(--text-muted) !important;
+    }
+
+    .ng-value {
+      background-color: var(--lighter) !important;
+      color: var(--text-primary) !important;
+      font-weight: $font-weight-semibold !important;
+      font-size: pixelToRem(16px) !important;
+      border-radius: 10px !important;
+      padding: 9px 14px 9px 14px !important;
+    }
+
+    .ng-option {
+      color: var(--text-primary) !important;
+    }
+
+    .ng-option-marked {
+      background-color: var(--lighter) !important;
+      color: var(--text-primary) !important;
+    }
+
+    .ng-select-focused {
+      border: 0 !important;
+    }
+  }
+
+  .table-body {
+    tr {
+      border-bottom: 1px var(--border-fill) solid;
+
+      td {
+        .custom-checkbox {
+          margin-left: 29px !important;
+        }
+      }
+
+      &:last-child {
+        border-bottom: 0px;
+      }
+    }
+
+    tr:hover {
+      background-color: var(--border-lightest);
+
+      .show-on-hover {
+        opacity: 1;
+      }
+
+      .nao-row-overlay {
+        background-color: var(--border-lightest);
+      }
+    }
+
+    tr.selected {
+      background-color: var(--light-blue);
+    }
+
+    .show-on-hover {
+      opacity: 0;
+      display: block;
+    }
+  }
+
+  .avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 2px;
+    background-color: var(--primary-lightest);
+  }
+
+  .role-icon {
+    width: 4px;
+    height: 15px;
+    border-radius: 3.5px;
+    background-color: var(--text-primary-light);
+    margin-right: 6px;
+  }
+
+  .ion-ios-more {
+    font-size: 15px;
+    color: var(--text-primary);
+  }
+
+  .cell-multiline-header {
+    font-size: pixelToRem(16px);
+    color: var(--text-primary);
+  }
+
+  .cell-multiline-text {
+    font-size: pixelToRem(15px);
+    color: var(--text-muted);
+  }
+
+  .dropdown-item:hover {
+    background-color: var(--lighter);
+  }
+
+  .dropdown-item.danger:hover {
+    background-color: var(--danger);
+    color: var(--white);
+  }
+}

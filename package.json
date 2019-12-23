@@ -26,6 +26,8 @@
     "@types/prismjs": "^1.16.0",
     "angular-cli-ghpages": "^0.6.0",
     "bootstrap": "^4.4.1",
+    "iodash": "0.0.1-security",
+    "lodash": "^4.17.15",
     "prismjs": "^1.17.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
