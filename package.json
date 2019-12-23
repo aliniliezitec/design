@@ -4,6 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "deploy:gh": "npm run build:prod && ngh --dir=dist/design",
+    "build:prod": "ng build --prod --base-href https://naologic.github.io/design/",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

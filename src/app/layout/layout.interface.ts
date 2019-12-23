@@ -8,7 +8,7 @@ export const MenuItems = [
     //     ]
     // },
     {
-        type: 'items', text: 'Layout', route: '/layout', icon: '../../../assets/images/icons/settings.svg', isOpen: false,
+        type: 'items', text: 'Layout', route: '/layout', icon: 'assets/images/icons/settings.svg', isOpen: false,
         items: [
             { type: 'item', route: '/layout/overview', text: 'Overview' },
             // { type: 'item', route: '/layout/grid', text: 'Grid' },
@@ -16,7 +16,7 @@ export const MenuItems = [
         ]
     },
     {
-        type: 'items', text: 'Components', route: '/components', icon: '../../../assets/images/icons/money-bag.svg', isOpen: false,
+        type: 'items', text: 'Components', route: '/components', icon: 'assets/images/icons/money-bag.svg', isOpen: false,
         items: [
             // { type: 'item', route: '/components/alerts', text: 'Alerts' },
             // { type: 'item', route: '/components/badge', text: 'Badge' },
@@ -34,7 +34,7 @@ export const MenuItems = [
         ]
     },
     {
-        type: 'items', text: 'Utilities', route: '/utilities', icon: '../../../assets/images/icons/settings.svg', isOpen: false,
+        type: 'items', text: 'Utilities', route: '/utilities', icon: 'assets/images/icons/settings.svg', isOpen: false,
         items: [
             { type: 'item', route: '/utilities/colors', text: 'Colors' },
             { type: 'item', route: '/utilities/typography', text: 'Typography' },
