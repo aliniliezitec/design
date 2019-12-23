@@ -6,6 +6,7 @@ import { ComponentsRouting } from './components.routing';
 import { FormsComponent } from './forms/forms.component';
 import { CardsComponent } from './cards/cards.component';
 import { ModalComponent } from './modal/modal.component';
+import { TableComponent } from './tables/table.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ModalComponent } from './modal/modal.component';
     CardsComponent,
     FormsComponent,
     ModalComponent,
+    TableComponent
   ],
   imports: [
     CommonModule,

@@ -1,7 +1,7 @@
 :root {
   --primary: #3e40db;
   --light-primary: #5659ff;
-  --primary-light: #e2e3fa;
+  --light-blue: #e2e3fa;
   --primary-lighter: #6869d3;
   --primary-lightest: #7880ff;
   --secondary: #0062a5;
@@ -13,7 +13,7 @@
   --warning-light: #ffedda;
   --danger: #db3e8e;
   --danger-light: #f8d8e8;
-  --light: #caccd7;
+  // --light: #caccd7 not working
   --lighter: #e3e5f0;
   --lightest: #f6f8fb;
   --dark: #687196;
@@ -25,7 +25,7 @@
   --text-muted: #a3a9c0;
   --border-primary: #e9eef9;
   --border-lightest: #f7f9fc;
-  --border-light: #c8cfe9;
+  --border-light: #caccd7;
   --border-fill: #dde1e3;
   --grey-blue: #687196;
   --light-bg: #f8f9fa;

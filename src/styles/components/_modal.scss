@@ -1,4 +1,4 @@
-// nao-modal-1
+// Nao modal 1
 .nao-modal-1 {
     .modal-header {
         padding: pixelToRem(15px) pixelToRem(52px);
@@ -6,6 +6,23 @@
     }
     .modal-body {
         padding: pixelToRem(20px) pixelToRem(52px) pixelToRem(15px) pixelToRem(52px);
+    }
+    .modal-footer {
+        padding: pixelToRem(15px) pixelToRem(30px);
+    }
+}
+
+// Nao modal 2
+.nao-modal-2 {
+    .modal-header {
+        padding: pixelToRem(15px) pixelToRem(52px);
+        min-height: 75px;
+    }
+    .modal-body {
+        padding: pixelToRem(20px) pixelToRem(52px) pixelToRem(15px) pixelToRem(52px);
+        border-top: solid 1px var(--border-light);
+        border-bottom: solid 1px var(--border-light);
+        background-color: var(--lightest);
     }
     .modal-footer {
         padding: pixelToRem(15px) pixelToRem(30px);

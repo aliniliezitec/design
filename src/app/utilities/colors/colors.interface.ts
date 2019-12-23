@@ -43,5 +43,6 @@ export const ColorsCodeBlocks = [
         <p class="text-muted">.text-muted</p>
         <p class="text-text-primary-light">.text-muted</p>
         <p class="text-white bg-dark">.text-white</p>
+        <p class="text-dark-blue">.text-dark-blue</p>
         `}
 ];
