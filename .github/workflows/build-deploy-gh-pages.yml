@@ -40,7 +40,7 @@ jobs:
         ngh --dry-run
     - name: Build ghpages
       run: |
-        ngh --dir=dist/design
+        ngh --dir=dist
         ls -l
         ls -d dist/* -l
     - name: Deploy Pages
@@ -49,5 +49,5 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BASE_BRANCH: master # The branch the action should deploy from.
         BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: dist/design # The folder the action should deploy.
+        FOLDER: dist # The folder the action should deploy.
     
