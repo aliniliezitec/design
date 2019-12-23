@@ -4,6 +4,7 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { FormsComponent } from './forms/forms.component';
 import { CardsComponent } from './cards/cards.component';
 import { ModalComponent } from './modal/modal.component';
+import { TableComponent } from './tables/table.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,13 @@ const routes: Routes = [
         component: ModalComponent,
         data: {
           title: 'Modals - Naologic',
+        }
+      },
+      {
+        path: 'table',
+        component: TableComponent,
+        data: {
+          title: 'Tables - Naologic',
         }
       },
     ]

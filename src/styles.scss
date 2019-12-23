@@ -5,6 +5,7 @@
 @import "./styles/components/cards";
 @import "./styles/components/form";
 @import "./styles/components/modal";
+@import "./styles/components/tables";
 @import "./styles/pages/nao-navbar";
 @import "./styles/pages/nao-sidenav";
 
@@ -51,14 +52,19 @@
       font-weight: $font-weight-semibold;
     }
 
-    p {
+    &>p {
       max-width: 80%;
     }
 
     .nao-modal-example {
+      .modal-dialog {
+        margin: auto;
+        padding: 20px;
+      }
+
       background-color: rgba(233, 238, 249, 0.4)
     }
-    
+
     .nao-btn-example {
       .btn {
         margin-right: pixelToRem(5px);
