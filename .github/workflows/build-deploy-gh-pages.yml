@@ -45,7 +45,6 @@ jobs:
         ngh --dry-run
     - name: Build ghpages
       run: |
-        pwd
         ngh --dir=dist/design
     - name: Deploy Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
