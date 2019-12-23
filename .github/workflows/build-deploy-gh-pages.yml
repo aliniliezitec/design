@@ -44,13 +44,12 @@ jobs:
       run: |
         ngh --dry-run
     - name: Build ghpages
-      run: |
-        ngh --dir=dist/design
+      run: ngh --dir=dist/design
     - name: Deploy Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BASE_BRANCH: master # The branch the action should deploy from.
         BRANCH: gh-pages # The branch the action should deploy to.
-        #FOLDER: dist # The folder the action should deploy.
+        FOLDER: dist # The folder the action should deploy.
     
