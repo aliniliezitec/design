@@ -1,11 +1,6 @@
-export interface HtmlCodeBlock {
-    code: string;
-    syntaxHighlighter: string;
-}
-
 export const ColorsCodeBlocks = [
     {
-        htmlCode: `
+        html: `
         <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
         <div class="p-3 mb-2 bg-primary-light text-white">.bg-primary-light</div>
         <div class="p-3 mb-2 bg-primary-lighter text-white">.bg-primary-lighter</div>
@@ -24,7 +19,7 @@ export const ColorsCodeBlocks = [
         <div class="p-3 mb-2 bg-dark-blue text-white">.bg-dark-blue</div>
         <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>`},
     {
-        htmlCode: `
+        html: `
         <p class="text-primary">.text-primary</p>
         <p class="text-primary-light">.text-primary-light</p>
         <p class="text-primary-lighter">.text-primary-lighter</p>

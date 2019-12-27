@@ -66,19 +66,11 @@
       <pre><div [innerHTML]="data[2].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
   </div>
+
   <div class="elem-container">
-    <h2 class="title">ng-select</h2>
-    todo: change the arrow ?
-    todo: change the x ?
-    todo: add box-shadow ?
-    todo: change this to dropdowns
-    <div class='nao-bd-example'>
-      <ng-select>
-        <ng-option>1</ng-option>
-        <ng-option>2</ng-option>
-        <ng-option>3</ng-option>
-    </ng-select>
-    </div>
+    <h2 class="title">Max-width</h2>
+    <p>You can add this to textare, dropdowns and other form elements</p>
+    <div class='nao-bd-example' [innerHTML]="data[3].html | sanitizeHtml"></div>
     <div class="nao-bd-clipboard">
       <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[3].html)" placement="top"
         ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>

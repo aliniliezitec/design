@@ -1,0 +1,375 @@
+<div class="nao-docs-wrapper">
+  <div class="elements-container">
+    <h1 class="title">Dropdowns</h1>
+    <p class="description">
+      Dropdowns description
+    </p>
+
+    <div class="elem-container">
+      <h2 class="title">Basic ng-select</h2>
+      todo: change the arrow ?
+      todo: change the x ?
+      todo: add box-shadow ?
+      <p>
+      </p>
+      <div class='nao-bd-example nao-ng-select'>
+        <ng-select class="nao-input-mw-210">
+          <ng-option>1</ng-option>
+          <ng-option>2</ng-option>
+          <ng-option>3</ng-option>
+        </ng-select>
+        <ng-select class="nao-input-mw-210" [clearable]="false" [clearOnBackspace]="false">
+          <ng-option>1</ng-option>
+          <ng-option>2</ng-option>
+          <ng-option>3</ng-option>
+        </ng-select>
+        <ng-select class="nao-input-mw-210" dropdownPosition="top" [multiple]="true">
+          <ng-option>1</ng-option>
+          <ng-option>2</ng-option>
+          <ng-option>3</ng-option>
+        </ng-select>
+        <ng-select class="nao-input-mw-210" loading="true" loadingText="Nao loading">
+          <ng-option>1</ng-option>
+          <ng-option>2</ng-option>
+          <ng-option>3</ng-option>
+        </ng-select>
+        <ng-select class="nao-input-mw-210" searchable="true" notFoundText="Nao has nothing">
+          <ng-option>1</ng-option>
+          <ng-option>2</ng-option>
+          <ng-option>3</ng-option>
+        </ng-select>
+      </div>
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+
+
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">API</h2>
+      <i><a
+          href="https://ng-select.github.io/ng-select#/data-sources">https://ng-select.github.io/ng-select#/data-sources</a></i>
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Input</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Required</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>[addTag]</td>
+              <td><code>boolean | ((term: string) =&gt; any | Promise&lt;any&gt;)</code></td>
+              <td><code>false</code></td>
+              <td>no</td>
+              <td>Allows to create custom options.</td>
+            </tr>
+            <tr>
+              <td>addTagText</td>
+              <td><code>string</code></td>
+              <td><code>Add item</code></td>
+              <td>no</td>
+              <td>Set custom text when using tagging</td>
+            </tr>
+            <tr>
+              <td>appearance</td>
+              <td><code>string</code></td>
+              <td><code>underline</code></td>
+              <td>no</td>
+              <td>Allows to select dropdown appearance. Set to <code>outline</code> to add border instead of underline
+                (applies only to Material theme)</td>
+            </tr>
+            <tr>
+              <td>appendTo</td>
+              <td><code>string</code></td>
+              <td>null</td>
+              <td>no</td>
+              <td>Append dropdown to body or any other element using css selector. For correct positioning
+                <code>body</code> should have <code>position:relative</code></td>
+            </tr>
+            <tr>
+              <td>bindValue</td>
+              <td><code>string</code></td>
+              <td><code>-</code></td>
+              <td>no</td>
+              <td>Object property to use for selected model. By default binds to whole object.</td>
+            </tr>
+            <tr>
+              <td>bindLabel</td>
+              <td><code>string</code></td>
+              <td><code>label</code></td>
+              <td>no</td>
+              <td>Object property to use for label. Default <code>label</code></td>
+            </tr>
+            <tr>
+              <td>[closeOnSelect]</td>
+              <td><code>boolean</code></td>
+              <td>true</td>
+              <td>no</td>
+              <td>Whether to close the menu when a value is selected</td>
+            </tr>
+            <tr>
+              <td>clearAllText</td>
+              <td><code>string</code></td>
+              <td><code>Clear all</code></td>
+              <td>no</td>
+              <td>Set custom text for clear all icon title</td>
+            </tr>
+            <tr>
+              <td>[clearable]</td>
+              <td><code>boolean</code></td>
+              <td><code>true</code></td>
+              <td>no</td>
+              <td>Allow to clear selected value. Default <code>true</code></td>
+            </tr>
+            <tr>
+              <td>[clearOnBackspace]</td>
+              <td><code>boolean</code></td>
+              <td><code>true</code></td>
+              <td>no</td>
+              <td>Clear selected values one by one when clicking backspace. Default <code>true</code></td>
+            </tr>
+            <tr>
+              <td>[compareWith]</td>
+              <td><code>(a: any, b: any) =&gt; boolean</code></td>
+              <td><code>(a, b) =&gt; a === b</code></td>
+              <td>no</td>
+              <td>A function to compare the option values with the selected values. The first argument is a value from
+                an option. The second is a value from the selection(model). A boolean should be returned.</td>
+            </tr>
+            <tr>
+              <td>dropdownPosition</td>
+              <td><code>bottom</code> | <code>top</code> | <code>auto</code></td>
+              <td><code>auto</code></td>
+              <td>no</td>
+              <td>Set the dropdown position on open</td>
+            </tr>
+            <tr>
+              <td>[groupBy]</td>
+              <td><code>string</code> | <code>Function</code></td>
+              <td>null</td>
+              <td>no</td>
+              <td>Allow to group items by key or function expression</td>
+            </tr>
+            <tr>
+              <td>[groupValue]</td>
+              <td><code>(groupKey: string, cildren: any[]) =&gt; Object</code></td>
+              <td>-</td>
+              <td>no</td>
+              <td>Function expression to provide group value</td>
+            </tr>
+            <tr>
+              <td>[selectableGroup]</td>
+              <td><code>boolean</code></td>
+              <td>false</td>
+              <td>no</td>
+              <td>Allow to select group when groupBy is used</td>
+            </tr>
+            <tr>
+              <td>[selectableGroupAsModel]</td>
+              <td><code>boolean</code></td>
+              <td>true</td>
+              <td>no</td>
+              <td>Indicates whether to select all children or group itself</td>
+            </tr>
+            <tr>
+              <td>[items]</td>
+              <td><code>Array&lt;any&gt;</code></td>
+              <td><code>[]</code></td>
+              <td>yes</td>
+              <td>Items array</td>
+            </tr>
+            <tr>
+              <td>[loading]</td>
+              <td><code>boolean</code></td>
+              <td><code>-</code></td>
+              <td>no</td>
+              <td>You can set the loading state from the outside (e.g. async items loading)</td>
+            </tr>
+            <tr>
+              <td>loadingText</td>
+              <td><code>string</code></td>
+              <td><code>Loading...</code></td>
+              <td>no</td>
+              <td>Set custom text when for loading items</td>
+            </tr>
+            <tr>
+              <td>labelForId</td>
+              <td><code>string</code></td>
+              <td><code>-</code></td>
+              <td>no</td>
+              <td>Id to associate control with label.</td>
+            </tr>
+            <tr>
+              <td>[markFirst]</td>
+              <td><code>boolean</code></td>
+              <td><code>true</code></td>
+              <td>no</td>
+              <td>Marks first item as focused when opening/filtering.</td>
+            </tr>
+            <tr>
+              <td>[isOpen]</td>
+              <td><code>boolean</code></td>
+              <td><code>-</code></td>
+              <td>no</td>
+              <td>Allows manual control of dropdown opening and closing. <code>True</code> - won't close.
+                <code>False</code> - won't open.</td>
+            </tr>
+            <tr>
+              <td>maxSelectedItems</td>
+              <td><code>number</code></td>
+              <td>none</td>
+              <td>no</td>
+              <td>When multiple = true, allows to set a limit number of selection.</td>
+            </tr>
+            <tr>
+              <td>[hideSelected]</td>
+              <td><code>boolean</code></td>
+              <td><code>false</code></td>
+              <td>no</td>
+              <td>Allows to hide selected items.</td>
+            </tr>
+            <tr>
+              <td>[multiple]</td>
+              <td><code>boolean</code></td>
+              <td><code>false</code></td>
+              <td>no</td>
+              <td>Allows to select multiple items.</td>
+            </tr>
+            <tr>
+              <td>notFoundText</td>
+              <td><code>string</code></td>
+              <td><code>No items found</code></td>
+              <td>no</td>
+              <td>Set custom text when filter returns empty result</td>
+            </tr>
+            <tr>
+              <td>placeholder</td>
+              <td><code>string</code></td>
+              <td><code>-</code></td>
+              <td>no</td>
+              <td>Placeholder text.</td>
+            </tr>
+            <tr>
+              <td>[searchable]</td>
+              <td><code>boolean</code></td>
+              <td><code>true</code></td>
+              <td>no</td>
+              <td>Allow to search for value. Default <code>true</code></td>
+            </tr>
+            <tr>
+              <td>[readonly]</td>
+              <td><code>boolean</code></td>
+              <td><code>false</code></td>
+              <td>no</td>
+              <td>Set ng-select as readonly. Mostly used with reactive forms.</td>
+            </tr>
+            <tr>
+              <td>[searchFn]</td>
+              <td><code>(term: string, item: any) =&gt; boolean</code></td>
+              <td><code>null</code></td>
+              <td>no</td>
+              <td>Allow to filter by custom search function</td>
+            </tr>
+            <tr>
+              <td>[searchWhileComposing]</td>
+              <td><code>boolean</code></td>
+              <td><code>true</code></td>
+              <td>no</td>
+              <td>Whether items should be filtered while composition started</td>
+            </tr>
+            <tr>
+              <td>[trackByFn]</td>
+              <td><code>(item: any) =&gt; any</code></td>
+              <td><code>null</code></td>
+              <td>no</td>
+              <td>Provide custom trackBy function</td>
+            </tr>
+            <tr>
+              <td>[clearSearchOnAdd]</td>
+              <td><code>boolean</code></td>
+              <td><code>true</code></td>
+              <td>no</td>
+              <td>Clears search input when item is selected. Default <code>true</code>. Default <code>false</code> when
+                <strong>closeOnSelect</strong> is <code>false</code></td>
+            </tr>
+            <tr>
+              <td>[selectOnTab]</td>
+              <td><code>boolean</code></td>
+              <td><code>false</code></td>
+              <td>no</td>
+              <td>Select marked dropdown item using tab. Default <code>false</code></td>
+            </tr>
+            <tr>
+              <td>[openOnEnter]</td>
+              <td><code>boolean</code></td>
+              <td><code>true</code></td>
+              <td>no</td>
+              <td>Open dropdown using enter. Default <code>true</code></td>
+            </tr>
+            <tr>
+              <td>[typeahead]</td>
+              <td><code>Subject</code></td>
+              <td><code>-</code></td>
+              <td>no</td>
+              <td>Custom autocomplete or advanced filter.</td>
+            </tr>
+            <tr>
+              <td>[minTermLength]</td>
+              <td><code>number</code></td>
+              <td><code>0</code></td>
+              <td>no</td>
+              <td>Minimum term length to start a search. Should be used with <code>typeahead</code></td>
+            </tr>
+            <tr>
+              <td>typeToSearchText</td>
+              <td><code>string</code></td>
+              <td><code>Type to search</code></td>
+              <td>no</td>
+              <td>Set custom text when using Typeahead</td>
+            </tr>
+            <tr>
+              <td>[virtualScroll]</td>
+              <td><code>boolean</code></td>
+              <td>false</td>
+              <td>no</td>
+              <td>Enable virtual scroll for better performance when rendering a lot of data</td>
+            </tr>
+            <tr>
+              <td>[inputAttrs]</td>
+              <td><code>&#123; [key: string]: string &#125;</code></td>
+              <td><code>-</code></td>
+              <td>no</td>
+              <td>Pass custom attributes to underlying <code>input</code> element</td>
+            </tr>
+            <tr>
+              <td>[tabIndex]</td>
+              <td><code>number</code></td>
+              <td><code>-</code></td>
+              <td>no</td>
+              <td>Set tabindex on ng-select</td>
+            </tr>
+            <tr>
+              <td>[keyDownFn]</td>
+              <td><code>($event: KeyboardEvent) =&gt; bool</code></td>
+              <td><code>true</code></td>
+              <td>no</td>
+              <td>Provide custom keyDown function. Executed before default handler. Return false to suppress execution
+                of default key down handlers</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>

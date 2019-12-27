@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalCodeBlocks } from './modal.interface';
+import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'app-modal',
@@ -8,7 +9,7 @@ import { ModalCodeBlocks } from './modal.interface';
 export class ModalComponent implements OnInit {
   public data = ModalCodeBlocks;
 
-  constructor() { }
+  constructor(public readonly appService: AppService) { }
 
   ngOnInit() { }
 
@@ -16,16 +17,6 @@ export class ModalComponent implements OnInit {
    * Copy to clipboard
    */
   public copyToClipboard(code): void {
-    const selBox = document.createElement('textarea');
-    selBox.style.position = 'fixed';
-    selBox.style.left = '0';
-    selBox.style.top = '0';
-    selBox.style.opacity = '0';
-    selBox.value = code;
-    document.body.appendChild(selBox);
-    selBox.focus();
-    selBox.select();
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
+    this.appService.copyToClipboard(code);
   }
 }

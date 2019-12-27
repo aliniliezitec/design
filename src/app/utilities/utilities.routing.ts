@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ColorsComponent } from './colors/colors.component';
 import { TypographyComponent } from './typography/typography.component';
+import { SpacingComponent } from './spacing/spacing.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,13 @@ const routes: Routes = [
         component: TypographyComponent,
         data: {
           title: 'Typography - Naologic',
+        }
+      },
+      {
+        path: 'spacing',
+        component: SpacingComponent,
+        data: {
+          title: 'Spacing - Naologic',
         }
       },
     ]

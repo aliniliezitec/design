@@ -22,7 +22,7 @@ export const MenuItems = [
             // { type: 'item', route: '/components/badge', text: 'Badge' },
             { type: 'item', route: '/components/buttons', text: 'Buttons' },
             { type: 'item', route: '/components/card', text: 'Card' },
-            // { type: 'item', route: '/components/dropdowns', text: 'Dropdowns' },
+            { type: 'item', route: '/components/dropdowns', text: 'Dropdowns' },
             { type: 'item', route: '/components/forms', text: 'Forms' },
             { type: 'item', route: '/components/modal', text: 'Modal' },
             { type: 'item', route: '/components/table', text: 'Table' },
@@ -39,8 +39,7 @@ export const MenuItems = [
         items: [
             { type: 'item', route: '/utilities/colors', text: 'Colors' },
             { type: 'item', route: '/utilities/typography', text: 'Typography' },
-            // { type: 'item', route: '/layout/grid', text: 'Grid' },
-            // { type: 'item', route: '/layout/utilities', text: 'Utilities for Layout' },
+            { type: 'item', route: '/utilities/spacing', text: 'Spacing' },
         ]
     },
 ];

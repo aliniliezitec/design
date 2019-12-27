@@ -5,6 +5,7 @@ import { FormsComponent } from './forms/forms.component';
 import { CardsComponent } from './cards/cards.component';
 import { ModalComponent } from './modal/modal.component';
 import { TableComponent } from './tables/table.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,13 @@ const routes: Routes = [
         component: CardsComponent,
         data: {
           title: 'Cards - Naologic',
+        }
+      },
+      {
+        path: 'dropdowns',
+        component: DropdownComponent,
+        data: {
+          title: 'Dropdownss - Naologic',
         }
       },
       {

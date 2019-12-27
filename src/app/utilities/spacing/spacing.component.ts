@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ButtonsCodeBlocks } from './buttons.interface';
+import { SpacingCodeBlocks } from './spacing.interface';
 import { AppService } from 'src/app/app.service';
 
 @Component({
-  selector: 'app-buttons',
-  templateUrl: './buttons.component.html',
+  selector: 'app-spacing',
+  templateUrl: './spacing.component.html',
 })
-export class ButtonsComponent implements OnInit {
-  public data = ButtonsCodeBlocks;
-
+export class SpacingComponent implements OnInit {
+  public data = SpacingCodeBlocks;
   constructor(public readonly appService: AppService) { }
 
   ngOnInit() {
@@ -20,4 +19,5 @@ export class ButtonsComponent implements OnInit {
   public copyToClipboard(code): void {
     this.appService.copyToClipboard(code);
   }
+
 }

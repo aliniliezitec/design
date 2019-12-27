@@ -58,9 +58,16 @@ export const FormsCodeBlocks = [
         <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">`},
     {
         html: `
-        <ng-select>
-            <ng-option>1</ng-option>
-            <ng-option>2</ng-option>
-            <ng-option>3</ng-option>
-        </ng-select>`}
+        <input class="form-control nao-input-mw-140" type="text" placeholder="nao-input-mw-140">
+        <input class="form-control nao-input-mw-150" type="text" placeholder=".nao-input-mw-150">
+        <input class="form-control nao-input-mw-190" type="text" placeholder=".nao-input-mw-190">
+        <input class="form-control nao-input-mw-200" type="text" placeholder=".nao-input-mw-200">
+        <input class="form-control nao-input-mw-210" type="text" placeholder=".nao-input-mw-210">
+        <input class="form-control nao-input-mw-220" type="text" placeholder=".nao-input-mw-220">
+        <input class="form-control nao-input-mw-230" type="text" placeholder=".nao-input-mw-230">
+        <input class="form-control nao-input-mw-290" type="text" placeholder=".nao-input-mw-290">
+        <input class="form-control nao-input-mw-310" type="text" placeholder=".nao-input-mw-310">
+        <input class="form-control nao-input-mw-320" type="text" placeholder=".nao-input-mw-320">
+        <input class="form-control nao-input-mw-380" type="text" placeholder=".nao-input-mw-380">
+        <input class="form-control nao-input-mw-560" type="text" placeholder=".nao-input-mw-560">`},
 ];

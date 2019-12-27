@@ -72,6 +72,12 @@
       }
     }
 
+    .nao-ng-select {
+      .ng-select {
+        margin-bottom: 10px;
+      }
+    }
+
     .nao-bd-example {
       position: relative;
       padding: pixelToRem(24px);

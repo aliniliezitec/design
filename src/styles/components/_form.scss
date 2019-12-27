@@ -1,4 +1,3 @@
-// *********************************
 // Nao form labels
 .nao-form-label-above {
   font-size: 1rem;
@@ -11,16 +10,29 @@
   color: var(--grey-blue);
 }
 
-// *********************************
 // ng select
-.ng-select.nao-select-default {
-
+.ng-option-disabled {
+  color: $ng-select-primary-text !important;
 }
 
-// *********************************
-//
+// Input width
+$input-max-width: (140: 140px,
+  150: 150px,
+  190: 190px,
+  200: 200px,
+  210: 210px,
+  220: 220px,
+  230: 230px,
+  290: 290px,
+  310: 310px,
+  320: 320px,
+  380: 380px,
+  560: 560px);
 
-
-
-// *********************************
-//
+// Generate max width for input
+@each $size,
+$value in $input-max-width {
+  .nao-input-mw-#{$size} {
+    max-width: $value;
+  }
+}

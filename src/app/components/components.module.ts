@@ -7,11 +7,13 @@ import { FormsComponent } from './forms/forms.component';
 import { CardsComponent } from './cards/cards.component';
 import { ModalComponent } from './modal/modal.component';
 import { TableComponent } from './tables/table.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
     ButtonsComponent,
     CardsComponent,
+    DropdownComponent,
     FormsComponent,
     ModalComponent,
     TableComponent

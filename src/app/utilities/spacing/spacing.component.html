@@ -1,0 +1,218 @@
+<div class="nao-docs-wrapper">
+  <div class="elements-container">
+    <h1 class="title">Spacing</h1>
+    <p class="description">
+      Spacing based on a Fibonacci sequence.
+    </p>
+
+    <div class="elem-container">
+      <h2 class="title">Notation</h2>
+      <p>Spacing utilities that apply to all breakpoints, from <code>xs</code> to <code>xl</code>, have no breakpoint abbreviation in them. This
+        is because those classes are applied from <code>min-width: 0</code> and up, and thus are not bound by a media query. The
+        remaining breakpoints, however, do include a breakpoint abbreviation.</p>
+      <p>The classes are named using the format <code>[property][sides]-[size]</code> for <code>xs</code> and <code>[property][sides]-[breakpoint]-[size]</code> for <code>sm</code>, <code>md</code>, <code>lg</code>, and <code>xl</code>.</p>
+      <p>Where property is one of:</p>
+      <ul>
+        <li><code>m</code> - for classes that set margin</li>
+        <li><code>p</code> - for classes that set padding</li>
+      </ul>
+      <p>Where sides is one of:</p>
+      <ul>
+        <li><code>t</code> - for classes that set <code>margin-top</code> or <code>padding-top</code></li>
+        <li><code>b</code> - for classes that set <code>margin-bottom</code> or <code>padding-bottom</code></li>
+        <li><code>l</code> - for classes that set <code>margin-left</code> or <code>padding-left</code></li>
+        <li><code>r</code> - for classes that set <code>margin-right</code> or <code>padding-right</code></li>
+        <li><code>x</code> - for classes that set both <code>*-left</code> and <code>*-right</code></li>
+        <li><code>y</code> - for classes that set both <code>*-top</code> and <code>*-bottom</code></li>
+        <li><code>blank</code> - for classes that set a margin or padding on all 4 sides of the element</li>
+      </ul>
+      <p>Where size is one of:</p>
+      <ul>
+        <li><code>0</code> - for classes that eliminate the margin or padding by setting it to <code>0</code></li>
+        <li><code>1</code> - (by default) for classes that set the margin or padding to <code>5px</code></li>
+        <li><code>2</code> - (by default) for classes that set the margin or padding to <code>10px</code></li>
+        <li><code>3</code> - (by default) for classes that set the margin or padding to <code>15px</code></li>
+        <li><code>4</code> - (by default) for classes that set the margin or padding to <code>25px</code></li>
+        <li><code>5</code> - (by default) for classes that set the margin or padding to <code>40px</code></li>
+        <li><code>6</code> - (by default) for classes that set the margin or padding to <code>65px</code></li>
+        <li><code>7</code> - (by default) for classes that set the margin or padding to <code>105px</code></li>
+      </ul>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Padding</h2>
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+      <div class="table-container">
+        <table class="table text-left">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Padding</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.p-1</code></td>
+              <td>5px</td>
+              <td class="d-flex">
+                <div class='bg-primary p-1'>
+                  <div class="bg-light" style="width: 30px;height: 30px;">
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><code>.p-2</code></td>
+              <td>10px</td>
+              <td class="d-flex">
+                <div class='bg-primary p-2'>
+                  <div class="bg-light" style="width: 30px;height: 30px;">
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><code>.p-3</code></td>
+              <td>15px</td>
+              <td class="d-flex">
+                <div class='bg-primary p-3'>
+                  <div class="bg-light" style="width: 30px;height: 30px;">
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><code>.p-4</code></td>
+              <td>25px</td>
+              <td class="d-flex">
+                <div class='bg-primary p-4'>
+                  <div class="bg-light" style="width: 30px;height: 30px;">
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><code>.p-5</code></td>
+              <td>40px</td>
+              <td class="d-flex">
+                <div class='bg-primary p-5'>
+                  <div class="bg-light" style="width: 30px;height: 30px;">
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><code>.p-6</code></td>
+              <td>65px</td>
+              <td class="d-flex">
+                <div class='bg-primary p-6'>
+                  <div class="bg-light" style="width: 30px;height: 30px;">
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><code>.p-7</code></td>
+              <td>105px</td>
+              <td class="d-flex">
+                <div class='bg-primary p-7'>
+                  <div class="bg-light" style="width: 30px;height: 30px;">
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Margin</h2>
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[1].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+      <div class="table-container">
+        <table class="table text-left">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Margin</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.mr-1</code></td>
+              <td>5px</td>
+              <td class="d-flex">
+                <div class="bg-primary mr-1" style="width: 30px; height: 30px;"></div>
+                <div class="bg-primary" style="width: 30px; height: 30px;"></div>
+              </td>
+            </tr>
+            <tr>
+              <td><code>.mr-2</code></td>
+              <td>10px</td>
+              <td class="d-flex">
+                <div class="bg-primary mr-2" style="width: 30px; height: 30px;"></div>
+                <div class="bg-primary" style="width: 30px; height: 30px;"></div>
+              </td>
+            </tr>
+            <tr>
+              <td><code>.mr-3</code></td>
+              <td>15px</td>
+              <td class="d-flex">
+                <div class="bg-primary mr-3" style="width: 30px; height: 30px;"></div>
+                <div class="bg-primary" style="width: 30px; height: 30px;"></div>
+              </td>
+            </tr>
+            <tr>
+              <td><code>.mr-4</code></td>
+              <td>25px</td>
+              <td class="d-flex">
+                <div class="bg-primary mr-4" style="width: 30px; height: 30px;"></div>
+                <div class="bg-primary" style="width: 30px; height: 30px;"></div>
+              </td>
+            </tr>
+            <tr>
+              <td><code>.mr-5</code></td>
+              <td>40px</td>
+              <td class="d-flex">
+                <div class="bg-primary mr-5" style="width: 30px; height: 30px;"></div>
+                <div class="bg-primary" style="width: 30px; height: 30px;"></div>
+              </td>
+            </tr>
+            <tr>
+              <td><code>.mr-6</code></td>
+              <td>65px</td>
+              <td class="d-flex">
+                <div class="bg-primary mr-6" style="width: 30px; height: 30px;"></div>
+                <div class="bg-primary" style="width: 30px; height: 30px;"></div>
+              </td>
+            </tr>
+            <tr>
+              <td><code>.mr-7</code></td>
+              <td>105px</td>
+              <td class="d-flex">
+                <div class="bg-primary mr-7" style="width: 30px; height: 30px;"></div>
+                <div class="bg-primary" style="width: 30px; height: 30px;"></div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>

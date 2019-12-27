@@ -94,3 +94,16 @@ $ng-select-box-shadow: $nao-input-box-shadow;
 $ng-select-selected: #e3e5f0;
 $ng-select-marked: #e9eaf0;
 $ng-select-primary-text: #030929;
+
+// spacers
+
+$spacers: (
+  0: 0,
+  1: 5px,
+  2: 10px,
+  3: 15px,
+  4: 25px,
+  5: 40px,
+  6: 65px,
+  7: 105px
+)

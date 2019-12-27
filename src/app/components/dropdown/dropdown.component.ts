@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ButtonsCodeBlocks } from './buttons.interface';
+import { DropdownCodeBlocks } from './dropdown.interface';
 import { AppService } from 'src/app/app.service';
 
 @Component({
-  selector: 'app-buttons',
-  templateUrl: './buttons.component.html',
+  selector: 'app-dropdown',
+  templateUrl: './dropdown.component.html',
 })
-export class ButtonsComponent implements OnInit {
-  public data = ButtonsCodeBlocks;
+export class DropdownComponent implements OnInit {
+  public data = DropdownCodeBlocks;
 
   constructor(public readonly appService: AppService) { }
 

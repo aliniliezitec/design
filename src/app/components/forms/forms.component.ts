@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsCodeBlocks } from './forms.interface';
+import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'app-forms',
@@ -8,7 +9,7 @@ import { FormsCodeBlocks } from './forms.interface';
 export class FormsComponent implements OnInit {
   public data = FormsCodeBlocks;
 
-  constructor() { }
+  constructor(public readonly appService: AppService) { }
 
   ngOnInit() {
   }
@@ -18,16 +19,6 @@ export class FormsComponent implements OnInit {
    * Copy to clipboard
    */
   public copyToClipboard(code): void {
-    const selBox = document.createElement('textarea');
-    selBox.style.position = 'fixed';
-    selBox.style.left = '0';
-    selBox.style.top = '0';
-    selBox.style.opacity = '0';
-    selBox.value = code;
-    document.body.appendChild(selBox);
-    selBox.focus();
-    selBox.select();
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
+    this.appService.copyToClipboard(code);
   }
 }

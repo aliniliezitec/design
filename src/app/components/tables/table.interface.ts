@@ -321,7 +321,7 @@ export const TableCodeBlocks = [
           </ngb-pagination>
         </div>
       </div>`,
-  ts1 : `
+    ts1: `
     public paging = {
       currentPage: 1, totalPages: 1, currentRows: 0, totalRows: 0, maxSize: 5,
       perPage$: new BehaviorSubject<number>(20), selectAll: false, someSelected: false,
@@ -339,6 +339,228 @@ export const TableCodeBlocks = [
       { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
       { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
       { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
-    ];`
+    ];`,
+    ts2: `
+    /**
+     * Has any selected rows
+     */
+    public noSelectedRows(): number {
+      // -->Cut: the results to new size
+      return this.dataTable.filter(r => r.selected).length;
     }
+    /**
+     * De-Select all
+     */
+    public deselectAll() {
+      // -->Cut: the results to new size
+      this.dataTable.map(d => {
+        d.selected = false;
+        return d;
+      });
+      this.paging.selectAll = false;
+    }
+
+    /**
+     * Select all
+     */
+    public selectAllChange() {
+      // -->Cut: the results to new size
+      this.dataTable.map(d => {
+        d.selected = !this.paging.selectAll;
+        return d;
+      });
+    }
+
+    /**
+     * Select any other
+     */
+    public selectChange($ev, i) {
+      // -->Set: the selected
+      this.dataTable[i].selected = $ev;
+      // -->Cut: the results to new size
+      this.paging.selectAll = every(this.dataTable.map(d => d.selected));
+      // -->Check: some
+      this.paging.someSelected = some(this.dataTable.map(d => d.selected));
+    }`
+  },
+  {
+    html: `
+    <ng-template #rowOverlay let-item let-i="i">
+      <div class="d-flex justify-content-end align-items-center nao-row-overlay h-100">
+        <div>
+          <button class="btn btn-text-only">
+            Edit
+          </button>
+          <button class="btn btn-text-only">
+            Delete
+          </button>
+        </div>
+      </div>
+    </ng-template>
+
+    <div class="card nao-card-table-1 mb-5">
+      <div class="d-flex flex-row card-header selected align-items-center" *ngIf="noSelectedRows() > 0">
+        <div class="pt-2 pr-3">
+          <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
+        </div>
+        <div class="pl-3 mr-3">
+          <div class="card-header-title text-lowercase">
+            {{ noSelectedRows() }} {{ (noSelectedRows() === 1 ? 'selected contact' : 'selected contacts') }}
+          </div>
+        </div>
+        <div class="pt-2">
+          <button class="btn btn-text-only">
+            Delete multiple
+          </button>
+        </div>
+      </div>
+      <div class="d-flex flex-row card-header align-items-center" *ngIf="noSelectedRows() === 0">
+        <div class="mr-3">
+          <div class="card-header-title">
+            Contacts&nbsp;&nbsp;|
+          </div>
+        </div>
+        <div class="pt-2 pr-3">
+          <span class="smallx">
+            3 contacts
+          </span>
+        </div>
+        <div class="pt-2">
+          <button class="btn btn-text-only">
+            Add new contact
+          </button>
+          <button class="btn btn-text-only">
+            Import contacts
+          </button>
+        </div>
+      </div>
+
+      <div class="card-body p-0 table-responsive">
+        <table class="table mb-0 table-borderless">
+          <thead class="table-header">
+            <tr>
+              <th scope="col" style="width: 60px;">
+                <label class="custom-control custom-checkbox m-0">
+                  <input type="checkbox" class="custom-control-input" (ngModelChange)="selectAllChange()"
+                    [(ngModel)]="paging.selectAll">
+                  <span class="custom-control-label"></span>
+                </label>
+              </th>
+              <th scope="col" class="pl-3" style="width: 20%">Name</th>
+              <th scope="col" class="pl-3" style="width: 20%">Email</th>
+              <th scope="col" class="pl-3" style="width: 20%">Company</th>
+              <th scope="col" class="pl-3"></th>
+            </tr>
+          </thead>
+          <tbody class="table-body">
+            <tr *ngFor="let item of dataTable; let i = index; let last = last"
+              [ngClass]="{'selected': item.selected}">
+              <td class="align-middle p-3">
+                <label class="custom-control custom-checkbox m-0">
+                  <input type="checkbox" class="custom-control-input" (ngModelChange)="selectChange($event, i)"
+                    [(ngModel)]="item.selected">
+                  <span class="custom-control-label"></span>
+                </label>
+              </td>
+              <td class="align-middle p-3">
+                <div class="d-flex align-items-center">
+                  <div class="cell-multiline-header">{{ item.name }}</div>
+                </div>
+              </td>
+              <td class="align-middle p-3">
+                <div class="d-flex align-items-center">
+                  <div class="cell-multiline-header">{{ item.email }}</div>
+                </div>
+              </td>
+              <td class="align-middle p-3">
+                <div class="d-flex align-items-center">
+                  <div class="cell-multiline-header">{{ item.company }}</div>
+                </div>
+              </td>
+              <td class="py-0" style="position: relative;">
+                <div class="nao-row-overlay-container show-on-hover mr-4" *ngIf="noSelectedRows() === 0">
+                  <ng-template *ngTemplateOutlet="rowOverlay; context: { $implicit: item, i: i }"></ng-template>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer d-flex flex-row align-items-center justify-content-between pt-4 pb-4">
+        <div>
+          Per page
+          <select (change)="paging.perPage$.next($event.target.value)" [value]="paging.perPage$.getValue()"
+            class="custom-select custom-select-sm d-inline-block w-auto">
+            <option *ngFor="let limit of [5, 10, 20, 50, 100]" [value]="limit">{{ limit }}</option>
+          </select>
+        </div>
+        <div>
+          <ngb-pagination class="pull-right" [collectionSize]="paging.totalRows"
+            [pageSize]="paging.perPage$.getValue()" [(page)]="paging.currentPage" [maxSize]="paging.maxSize"
+            [directionLinks]="true" [boundaryLinks]="true">
+            <ng-template ngbPaginationPrevious>Previous</ng-template>
+            <ng-template ngbPaginationNext>Next</ng-template>
+            <ng-template ngbPaginationEllipsis>...</ng-template>
+            <ng-template ngbPaginationNumber let-page>{{ page }}</ng-template>
+          </ngb-pagination>
+        </div>
+      </div>`,
+    ts1: `
+    public paging = {
+      currentPage: 1, totalPages: 1, currentRows: 0, totalRows: 0, maxSize: 5,
+      perPage$: new BehaviorSubject<number>(20), selectAll: false, someSelected: false,
+      viewRelaxed: true
+    };
+    public sort = { lastSort: '', by: new BehaviorSubject(null), reverse: true, sub: null };
+    public subs: { search$: Subscription, sort$: Subscription } = { search$: null, sort$: null };
+    public searchFormGroup;
+    public searchFor = [];
+    public dataTable = [
+      { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
+      { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
+      { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
+    ];`,
+    ts2: `
+    /**
+     * Has any selected rows
+     */
+    public noSelectedRows(): number {
+      // -->Cut: the results to new size
+      return this.dataTable.filter(r => r.selected).length;
+    }
+    /**
+     * De-Select all
+     */
+    public deselectAll() {
+      // -->Cut: the results to new size
+      this.dataTable.map(d => {
+        d.selected = false;
+        return d;
+      });
+      this.paging.selectAll = false;
+    }
+
+    /**
+     * Select all
+     */
+    public selectAllChange() {
+      // -->Cut: the results to new size
+      this.dataTable.map(d => {
+        d.selected = !this.paging.selectAll;
+        return d;
+      });
+    }
+
+    /**
+     * Select any other
+     */
+    public selectChange($ev, i) {
+      // -->Set: the selected
+      this.dataTable[i].selected = $ev;
+      // -->Cut: the results to new size
+      this.paging.selectAll = every(this.dataTable.map(d => d.selected));
+      // -->Check: some
+      this.paging.someSelected = some(this.dataTable.map(d => d.selected));
+    }`
+  }
 ];

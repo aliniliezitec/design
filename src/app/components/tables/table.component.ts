@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TableCodeBlocks } from './table.interface';
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { every, some } from 'lodash';
+import { AppService } from '../../app.service';
 
 @Component({
   selector: 'app-table',
@@ -28,7 +29,7 @@ export class TableComponent implements OnInit {
     { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
   ];
 
-  constructor() { }
+  constructor(public readonly appService: AppService) { }
 
   ngOnInit() {
   }
@@ -74,45 +75,11 @@ export class TableComponent implements OnInit {
     // -->Check: some
     this.paging.someSelected = some(this.dataTable.map(d => d.selected));
   }
+
   /**
    * Copy to clipboard
    */
   public copyToClipboard(code): void {
-    const selBox = document.createElement('textarea');
-    selBox.style.position = 'fixed';
-    selBox.style.left = '0';
-    selBox.style.top = '0';
-    selBox.style.opacity = '0';
-    selBox.value = code;
-    document.body.appendChild(selBox);
-    selBox.focus();
-    selBox.select();
-    document.execCommand('copy');
-    document.body.removeChild(selBox);
+    this.appService.copyToClipboard(code);
   }
 }
-
-
-// public customizeAccess(data?): void {
-//   // NOTICE: this opens a modal and returns the data here! It doesn't submit it by itself!!!!
-//   // NOTICE: this opens a modal and returns the data here! It doesn't submit it by itself!!!!
-//   // NOTICE: this opens a modal and returns the data here! It doesn't submit it by itself!!!!
-//   // -->Open: the modal-ish
-//   const modalRef = this.modalService.open(CustomizeUserAccessLevelModalComponent, {
-//     centered: true, windowClass: 'nao-modal', backdropClass: 'nao-modal-backdrop', size: 'lg',
-//   });
-//   // -->Set: data
-//   modalRef.componentInstance.data = data;
-//   // -->Await: result
-//   modalRef.result
-//     .then(modalRes => {
-//       if (modalRes && modalRes.ok) {
-//         // -->Refresh: and add new shit
-//         this.refresh();
-//       }
-//     })
-//     .catch(err => {
-//       // this.status.error();
-//       // this.contactsService.sharedService.swalApiError(err);
-//     });
-// }
