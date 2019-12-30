@@ -2,8 +2,18 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class AppService {
-
+    public isRTL = false;
     constructor() { }
+
+    public toggleRTL() {
+        this.isRTL = !this.isRTL;
+    }
+
+    public getRTL() {
+        console.log("get rtl", this.isRTL)
+        return this.isRTL;
+    }
+
     /**
      * Copy to clipboard
      * @param text to be copied

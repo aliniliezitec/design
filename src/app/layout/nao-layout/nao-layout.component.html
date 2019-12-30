@@ -1,4 +1,4 @@
-<main>
+<main  [ngClass]="{'nao-rtl': appService.getRTL()}">
   <app-nao-sidenav></app-nao-sidenav>
   <div class="docs-container">
     <app-nao-navbar></app-nao-navbar>

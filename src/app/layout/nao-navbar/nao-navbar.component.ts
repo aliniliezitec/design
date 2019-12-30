@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { MenuItems } from '../layout.interface';
+import { AppService } from 'src/app/app.service';
 
 @Component({
   selector: 'app-nao-navbar',
@@ -23,11 +24,9 @@ export class NaoNavbarComponent implements OnInit {
   public menuItems = MenuItems;
   public isCollapsed = true;
 
-  constructor() {
-  }
+  constructor(public readonly appService: AppService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   /**
    * Toggle a menu item
@@ -44,6 +43,13 @@ export class NaoNavbarComponent implements OnInit {
       }
       this.menuItems[index].isOpen = !this.menuItems[index].isOpen;
     }
+  }
+
+  /**
+   * Toggle RTL
+   */
+  public toggleRTL(){
+    this.appService.toggleRTL();
   }
 
 }

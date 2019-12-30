@@ -1,0 +1,38 @@
+.nao-rtl {
+  direction: rtl;
+
+  .sidenav {
+    left: unset;
+    right: 0;
+
+    .sidenav-wrapper {
+      padding: 10px 37px 60px 010px;
+    }
+
+    .menu-icon {
+      margin-right: unset;
+      margin-left: 15px;
+    }
+
+    .nao-logo {
+      margin-left: 58px;
+    }
+
+    li {
+      text-align: right;
+    }
+  }
+
+  .docs-container {
+    margin-left: unset;
+    margin-right: 285px;
+
+    @media only screen and (max-width: 576px) {
+      margin-right: 0;
+    }
+  }
+
+  p {
+    text-align: right !important;
+  }
+}
