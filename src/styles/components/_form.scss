@@ -15,11 +15,6 @@
   color: var(--text-primary);
 }
 
-// ng select
-.ng-option-disabled {
-  color: $ng-select-primary-text !important;
-}
-
 // Input width
 $input-max-width: (140: 140px,
   150: 150px,

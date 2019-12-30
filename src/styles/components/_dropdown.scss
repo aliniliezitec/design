@@ -16,7 +16,7 @@
   }
 }
 
-.nao-dropdown-dashboard-1 {
+.nao-dropdown-2 {
   min-width: 60px;
   font-size: pixelToRem(12px);
   top: 0px !important;
@@ -26,4 +26,59 @@
   .dropdown-item {
     padding: pixelToRem(2.2px) pixelToRem(19.2px);
   }
+}
+
+.dropdown-remove-arrow {
+  .dropdown-toggle::after {
+    display: none;
+  }
+}
+
+.nao-dropdown-profile {
+  height: 60px;
+  padding: 7px 20px;
+  font-size: pixelToRem(12px);
+  min-width: 190px;
+  color: var(--text-secondary);
+
+  .nao-dropdown-small-text {
+    font-size: pixelToRem(10px);
+  }
+}
+
+.nao-dropdown-avatar {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.nao-dropdown-3 {
+  .dropdown-item-header {
+    background-color: var(--lighter);
+    font-weight: $font-weight-semibold;
+  }
+
+  .dropdown-item {
+    padding: 6px 9px;
+    font-size: pixelToRem(14px);
+    color: var(--text-secondary);
+  }
+
+  .disabled {
+    color: #d1d2d3 !important;
+  }
+}
+
+.nao-ng-select-sm {
+  font-size: pixelToRem(11px);
+
+  .ng-select-container {
+    min-height: 31px !important;
+    height: 31px !important;
+  }
+}
+
+// ng select
+.ng-option-disabled {
+  color: $ng-select-primary-text !important;
 }

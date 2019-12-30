@@ -69,7 +69,7 @@ export const CardsCodeBlocks = [
             <div class="ticket-header">
             Ticket name
                 <div class="kanban-board-actions btn-group float-right ml-2" ngbDropdown container="body">
-                    <button type="button" class="btn btn-default btn-xs rounded-pill icon-btn borderless md-btn-flat hide-arrow" ngbDropdownToggle>
+                    <button type="button" class="btn" ngbDropdownToggle>
                         <i class="ion-md-arrow-dropdown"></i>
                     </button>
                         <div ngbDropdownMenu class="nao-dropdown-1">
@@ -87,7 +87,7 @@ export const CardsCodeBlocks = [
             <div class="ticket-header">
             Ticket name
                 <div class="kanban-board-actions btn-group float-right ml-2" ngbDropdown container="body">
-                    <button type="button" class="btn btn-default btn-xs rounded-pill icon-btn borderless md-btn-flat hide-arrow" ngbDropdownToggle>
+                    <button type="button" class="btn" ngbDropdownToggle>
                         <i class="ion-md-arrow-dropdown"></i>
                     </button>
                         <div ngbDropdownMenu class="nao-dropdown-1">
