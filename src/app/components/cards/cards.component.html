@@ -26,12 +26,13 @@
         <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
+
     <div class="elem-container">
       <h2 class="title">Nao card 1</h2>
       <p>
         Custom card
         <!-- todo: add subtitle/descripition -->
-      <br>todo: add the h1-h6 before finishing the header/footer
+        <br>todo: add the h1-h6 before finishing the header/footer
       </p>
 
       <div class="nao-bd-example" [innerHTML]="data[1].html | sanitizeHtml"></div>
@@ -45,5 +46,185 @@
         <pre><div [innerHTML]="data[1].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
+
+    <div class="elem-container">
+      <h2 class="title">Nao card small for dashboard</h2>
+      <p>Custom small card mainly used in dashboards.</p>
+
+      <div class="nao-bd-example" [innerHTML]="data[2].html | sanitizeHtml"></div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[2].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Nao card large for dashboard</h2>
+      <p>Custom large card mainly used in dashboards.</p>
+
+      <div class="nao-bd-example">
+        <div class="nao-dashboard-lg-card bg-white">
+          <div class="d-flex justify-content-between align-items-center title-container">
+            <div class="nao-card-title">Closed deals</div>
+            <div class="btn-group" ngbDropdown>
+              <button class="btn nao-btn-dropdown-menu-1" ngbDropdownToggle>Currency<i
+                  class="ion-md-arrow-dropdown ml-1"></i>
+              </button>
+              <div ngbDropdownMenu class="nao-dropdown-dashboard-1">
+                <a class="dropdown-item" href="javascript:void(0)">Currency</a>
+                <a class="dropdown-item" href="javascript:void(0)">Percentage</a>
+              </div>
+            </div>
+          </div>
+          <div class="nao-dashboard-card-body">
+            Card body
+          </div>
+        </div>
+      </div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[3].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[3].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Board card</h2>
+      <p>Description.</p>
+
+      <div class="nao-bd-example" [innerHTML]="data[4].html | sanitizeHtml"></div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[4].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[4].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Ticket without badges</h2>
+      <p>Description.</p>
+
+      <div class="nao-bd-example bg-light">
+
+        <div class="nao-kanban-ticket p-3">
+          <div class="ticket-header">
+            Ticket name
+            <div class="kanban-board-actions btn-group float-right ml-2" ngbDropdown container="body">
+              <button type="button"
+                class="btn btn-default btn-xs rounded-pill icon-btn borderless md-btn-flat hide-arrow"
+                ngbDropdownToggle>
+                <i class="ion-md-arrow-dropdown"></i>
+              </button>
+              <div ngbDropdownMenu class="nao-dropdown-1">
+                <a class="dropdown-item" href="javascript:void(0)">Delete</a>
+              </div>
+            </div>
+          </div>
+          <div class="ticket-body">
+            Ticket body
+          </div>
+        </div>
+
+      </div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[5].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[5].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Ticket with badges</h2>
+      <p>todo: MISSING ICONS</p>
+
+      <div class="nao-bd-example bg-light">
+
+        <div class="nao-kanban-ticket p-3">
+          <div class="ticket-header">
+            Ticket name
+            <div class="kanban-board-actions btn-group float-right ml-2" ngbDropdown container="body">
+              <button type="button"
+                class="btn btn-default btn-xs rounded-pill icon-btn borderless md-btn-flat hide-arrow"
+                ngbDropdownToggle>
+                <i class="ion-md-arrow-dropdown"></i>
+              </button>
+              <div ngbDropdownMenu class="nao-dropdown-1">
+                <a class="dropdown-item" href="javascript:void(0)">Delete</a>
+              </div>
+            </div>
+          </div>
+          <div class="ticket-body">
+            <div class="ticket-field">
+              <div>
+                <label class="propLabel mb-1">
+                  <!-- <i [class]="field.icon"></i> -->
+                  <span>Field name</span>
+                </label>
+              </div>
+              <div>
+                <span class="initial-avatar">
+                  J
+                </span>
+                <span class="badge badge-grey">
+                  Jon Doe
+                </span>
+              </div>
+              <span class="nao-pill-lg text-white">Won</span>
+              <span class="nao-pill-lg text-white">high</span>
+              <span class="nao-badge-text">1000$</span>
+              <span class="badge badge-grey">Jon doe</span>
+              <span class="badge badge-grey">Jon doe company</span>
+              <div class="nao-badge-text">12/12/2020</div>
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[6].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[6].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Nao card form</h2>
+      <p>With added button below the card</p>
+
+      <div class="nao-bd-example d-flex justify-content-center" [innerHTML]="data[7].html | sanitizeHtml"></div>
+      <!-- <div class="nao-bd-example" -->
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[7].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[7].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
   </div>
 </div>

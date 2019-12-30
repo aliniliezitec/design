@@ -1,13 +1,18 @@
 @import "./styles/naologic-crm-theme.scss";
 @import "./styles/bootstrap.scss";
 
+@import "./styles/base/global";
+
 @import "./styles/components/buttons";
 @import "./styles/components/cards";
+@import "./styles/components/dropdown";
 @import "./styles/components/form";
 @import "./styles/components/modal";
 @import "./styles/components/tables";
+
 @import "./styles/pages/nao-navbar";
 @import "./styles/pages/nao-sidenav";
+@import "./styles/pages/layout";
 
 @import "~@ng-select/ng-select/scss/default.theme.scss";
 
@@ -72,7 +77,7 @@
       }
     }
 
-    .nao-ng-select {
+    .nao-ng-select-example {
       .ng-select {
         margin-bottom: 10px;
       }
@@ -176,4 +181,37 @@
 .nao-copy-tooltip .tooltip-inner {
   white-space: nowrap;
   max-width: none;
+}
+
+.nao-colors-showcase {
+  border-radius: 4px;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.24);
+  background-color: var(--white);
+
+  .color-box {
+    width: 200px;
+    height: 200px;
+  }
+
+  .color-ids {
+    padding: 13px 12px;
+
+    .name {
+      font-weight: $font-weight-bold;
+      font-size: pixelToRem(16px);
+      color: #000;
+    }
+
+    .hexa {
+      font-style: oblique;
+      font-size: pixelToRem(13px);
+      color: #444444;
+    }
+
+    .rgb {
+      font-style: oblique;
+      font-size: pixelToRem(13px);
+      color: #444444;
+    }
+  }
 }

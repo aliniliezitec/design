@@ -13,7 +13,7 @@
           <span class="highlighter-warning">color</span></strong>, so in some cases you’ll want to use <span
           class="highlighter-warning">.text-*</span> utilities.</p>
 
-      <div class="nao-bd-example" [innerHTML]="data[0].html | sanitizeHtml"></div>
+      <div class="nao-bd-example d-flex flex-wrap" [innerHTML]="data[0].html | sanitizeHtml"></div>
 
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"

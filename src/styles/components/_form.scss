@@ -10,6 +10,11 @@
   color: var(--grey-blue);
 }
 
+.nao-sm-form-label {
+  font-size: pixelToRem(13px);
+  color: var(--text-primary);
+}
+
 // ng select
 .ng-option-disabled {
   color: $ng-select-primary-text !important;

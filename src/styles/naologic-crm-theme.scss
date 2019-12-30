@@ -13,7 +13,6 @@
   --warning-light: #ffedda;
   --danger: #db3e8e;
   --danger-light: #f8d8e8;
-  // --light: #caccd7 not working
   --lighter: #e3e5f0;
   --lightest: #f6f8fb;
   --dark: #687196;
@@ -32,47 +31,54 @@
 }
 
 
-$secondary: #0062a5;
 $text-primary-light: #2f3059;
 $subtitle-black: #030929;
 $shadow: #d8dceb;
 
-$blue: #1e70cd;
-$indigo: #3e40db;
-$purple: #6f42c1;
-$pink: #e83e8c;
-$red: #d9534f;
-$orange: #FEB744;
-$yellow: #ffa544;
-$danger: #db3e8e;
-$green: #3edb8b;
-$teal: #20c997;
-$cyan: #28c3d7;
+$info: #28c3d7;
 
+$primary: #3e40db;
 $primary-light: #5659ff;
 $primary-lighter: #6869d3;
+$primary-lightest: #7880FF;
+
+$secondary: #0062A5;
 $secondary-light: #4576ff;
 $secondary-lighter: #3297d2;
+
+$tertiary: #9013FE;
+$tertiary-light: #9747D7;
+
+$green: #3edb8b;
 $success-light: #d8f8e8;
+
+$yellow: #ffa544;
 $warning-light: #ffedda;
+
+$danger: #db3e8e;
 $danger-light: #f8d8e8;
 
+$dark-blue: #2f3059;
+
 $theme-colors: (
-  "primary": $indigo,
+  "primary": $primary,
   "primary-light": $primary-light,
   "primary-lighter": $primary-lighter,
-  "secondary": #8897AA,
+  "primary-lightest": $primary-lightest,
+  "secondary": $secondary,
   "secondary-light": $secondary-light,
   "secondary-lighter": $secondary-lighter,
+  "tertiary": $tertiary,
+  "tertiary-light": $tertiary-light,
   "success": $green,
   "success-light": $success-light,
-  "info": $cyan,
+  "info": $info,
   "warning": $yellow,
   "warning-light": $warning-light,
   "danger": $danger,
   "danger-light": $danger-light,
-  "dark-blue": #2f3059
-) !default;
+  "dark-blue": $dark-blue
+);
 
 $font-weight-lighter: 300;
 $font-weight-regular: 400;
@@ -82,8 +88,9 @@ $font-weight-extra-bold: 800;
 $font-weight-bolder: 900;
 
 // Nao Variables
-$nao-card-box-shadow: 0 2px 4px 3px #d8dceb;
+$nao-card-box-shadow: 0 2px 4px 3px $shadow;
 $nao-input-box-shadow: 0 2px 4px 0 rgba(231, 231, 231, 0.5); // is used
+$nao-card-border-radius: 0.5rem;
 
 // <ng-select>
 $ng-select-value-font-size: .95rem;
@@ -96,7 +103,6 @@ $ng-select-marked: #e9eaf0;
 $ng-select-primary-text: #030929;
 
 // spacers
-
 $spacers: (
   0: 0,
   1: 5px,

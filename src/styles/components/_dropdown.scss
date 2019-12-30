@@ -1,0 +1,29 @@
+.nao-btn-dropdown-menu-1 {
+  padding: 0;
+  font-size: pixelToRem(12px);
+  font-weight: $font-weight-bold;
+  line-height: 1.8;
+  color: var(--text-primary-lighter);
+}
+
+.nao-dropdown-1 {
+  width: fit-content;
+  padding: 5px 0;
+
+  .dropdown-item {
+    padding: .438rem 1.25rem !important;
+    font-size: pixelToRem(13px) !important;
+  }
+}
+
+.nao-dropdown-dashboard-1 {
+  min-width: 60px;
+  font-size: pixelToRem(12px);
+  top: 0px !important;
+  left: auto !important;
+  right: -20px;
+
+  .dropdown-item {
+    padding: pixelToRem(2.2px) pixelToRem(19.2px);
+  }
+}

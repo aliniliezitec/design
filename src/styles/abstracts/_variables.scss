@@ -38,7 +38,7 @@ $input-placeholder-color: var(--border-light);
 // Checkbox
 $enable-shadows: true;
 $custom-control-indicator-size: 1.125rem;
-$custom-control-indicator-border-color: var(--grey-blue);
+$custom-control-indicator-border-color: #687196;
 $custom-control-indicator-box-shadow: 0 1px 6px 0 #c8cfe9;
 
 // Cards
@@ -57,4 +57,13 @@ $modal-content-box-shadow-xs: 0 2px 4px 3px #d8dceb;
 $modal-content-box-shadow-sm-up:0 2px 4px 3px #d8dceb;
 $modal-content-border-width: 0;
 
-// Tables
+// Dropdowns
+$dropdown-box-shadow: 0 1px 6px rgba(0,0,0,.09);;
+$dropdown-link-hover-color: #4e5155;
+$dropdown-link-hover-bg: #e3e5f0;
+
+$dropdown-link-active-color:#4e5155;
+$dropdown-link-active-bg: #e3e5f0;
+
+$dropdown-item-padding-y: .125rem;
+$dropdown-item-padding-x: 0;
