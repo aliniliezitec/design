@@ -8,14 +8,13 @@
 
     <div class="elem-container">
       <h2 class="title">Nao ngbDropdown 1</h2>
-      <p>Add <code>nao-dropdown-1</code> class to <code>ngbDropdownMenu</code> because there is a chance you could use
-        another
-        container <code>container="body"</code>.</p>
-
+      <p>Add <code>nao-dropdown-1</code> class to <code>ngbDropdownMenu</code>.</p>
+      <p>Example of placement for ngbDropdown: <code></code><br>
+      Possible values are <code>"top"</code> , <code>"top-left"</code> , <code>"top-right"</code> , <code>"bottom"</code> , <code>"bottom-left"</code> , <code>"bottom-right"</code> , <code>"left"</code> , <code>"left-top"</code> , <code>"left-bottom"</code> , <code>"right"</code> , <code>"right-top"</code> , <code>"right-bottom"</code> </p>
       <div class="nao-bd-example">
-        <div class="btn-group" ngbDropdown container="body">
+        <div class="btn-group" ngbDropdown container="body" [placement]="appService.getRTL() ? 'bottom-right' : 'bottom-left'">
           <button type="button" class="btn p-0" ngbDropdownToggle>
-            Menu<i class="ion-md-arrow-dropdown"></i>
+            Menu
           </button>
           <div class="nao-dropdown-1" ngbDropdownMenu>
             <a class="dropdown-item" href="javascript:void(0)">Delete</a>
@@ -35,9 +34,9 @@
 
     <div class="elem-container">
       <div class="nao-bd-example">
-        <div class="btn-group" ngbDropdown container="body">
+        <div class="btn-group" ngbDropdown container="body" [placement]="appService.getRTL() ? 'bottom-right' : 'bottom-left'">
           <button type="button" class="btn btn-text-only-2" ngbDropdownToggle>
-            Menu<i class="ion-md-arrow-dropdown"></i>
+            Menu
           </button>
           <div class="nao-dropdown-1" ngbDropdownMenu>
             <a class="dropdown-item" href="javascript:void(0)">Menu item 1</a>
@@ -63,7 +62,7 @@
       <P>Add <code>.dropdown-remove-arrow</code> class if you want to remove the right arrow</P>
       <div class="nao-bd-example">
 
-        <div ngbDropdown class="btn-group dropdown-remove-arrow">
+        <div ngbDropdown class="btn-group dropdown-remove-arrow" [placement]="appService.getRTL() ? 'bottom-right' : 'bottom-left'">
           <a ngbDropdownToggle class="nav" href="javascript:void(0)">
             <span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
               <img class="d-block nao-dropdown-avatar rounded-circle"
@@ -109,9 +108,8 @@
       <h2 class="title">Nao ngbDropdown 2</h2>
       <P>Used in dashboard cards</P>
       <div class="nao-bd-example">
-        <div class="btn-group" ngbDropdown>
-          <button class="btn nao-btn-dropdown-menu-1" ngbDropdownToggle>Currency<i
-              class="ion-md-arrow-dropdown ml-1"></i>
+        <div class="btn-group" ngbDropdown [placement]="appService.getRTL() ? 'bottom-right' : 'bottom-left'">
+          <button class="btn nao-btn-dropdown-menu-1" ngbDropdownToggle>Currency
           </button>
           <div class="nao-dropdown-2" ngbDropdownMenu>
             <a class="dropdown-item" href="javascript:void(0)">Currency</a>
@@ -137,7 +135,7 @@
           menu</code> and <code>disabled</code> menu items.</p>
       <div class="nao-bd-example">
 
-        <div class="dropdown-remove-arrow" ngbDropdown container="body">
+        <div class="dropdown-remove-arrow" ngbDropdown container="body" [placement]="appService.getRTL() ? 'bottom-right' : 'bottom-left'">
           <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>
             Include
           </button>
@@ -169,7 +167,7 @@
       <p>For adding a certain size to dropdown-items, just add a <code>min-width: 240px</code> to them.</p>
       <div class="nao-bd-example">
 
-        <div class="dropdown-remove-arrow" ngbDropdown container="body">
+        <div class="dropdown-remove-arrow" ngbDropdown container="body" [placement]="appService.getRTL() ? 'bottom-right' : 'bottom-left'">
           <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>
             Include
           </button>

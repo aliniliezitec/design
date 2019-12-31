@@ -46,7 +46,7 @@ export const CardsCodeBlocks = [
             <div class="d-flex justify-content-between align-items-center title-container">
                 <div class="nao-card-title">Closed deals</div>
                 <div class="btn-group" ngbDropdown>
-                    <button class="btn nao-btn-dropdown-menu-1" ngbDropdownToggle>Currency<i class="ion-md-arrow-dropdown ml-1"></i>
+                    <button class="btn nao-btn-dropdown-menu-1" ngbDropdownToggle>Currency
                     </button>
                     <div ngbDropdownMenu class="nao-dropdown-dashboard-1">
                         <a class="dropdown-item" href="javascript:void(0)">Currency</a>
@@ -70,7 +70,7 @@ export const CardsCodeBlocks = [
             Ticket name
                 <div class="kanban-board-actions btn-group float-right ml-2" ngbDropdown container="body">
                     <button type="button" class="btn" ngbDropdownToggle>
-                        <i class="ion-md-arrow-dropdown"></i>
+                        
                     </button>
                         <div ngbDropdownMenu class="nao-dropdown-1">
                         <a class="dropdown-item" href="javascript:void(0)" >Delete</a>
@@ -88,7 +88,7 @@ export const CardsCodeBlocks = [
             Ticket name
                 <div class="kanban-board-actions btn-group float-right ml-2" ngbDropdown container="body">
                     <button type="button" class="btn" ngbDropdownToggle>
-                        <i class="ion-md-arrow-dropdown"></i>
+                        
                     </button>
                         <div ngbDropdownMenu class="nao-dropdown-1">
                         <a class="dropdown-item" href="javascript:void(0)" >Delete</a>

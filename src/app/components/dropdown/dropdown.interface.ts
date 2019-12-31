@@ -1,9 +1,9 @@
 export const DropdownCodeBlocks = [
     {
         html: `
-        <div class="btn-group" ngbDropdown container="body">
+        <div class="btn-group" ngbDropdown container="body" [placement]="appService.getRTL() ? 'bottom-right' : 'bottom-left'">
           <button type="button" class="btn p-0" ngbDropdownToggle>
-            Menu<i class="ion-md-arrow-dropdown"></i>
+            Menu
           </button>
           <div class="nao-dropdown-1" ngbDropdownMenu>
             <a class="dropdown-item" href="javascript:void(0)">Delete</a>
@@ -12,9 +12,9 @@ export const DropdownCodeBlocks = [
     },
     {
         html: `
-        <div class="btn-group" ngbDropdown container="body">
+        <div class="btn-group" ngbDropdown container="body" [placement]="appService.getRTL() ? 'bottom-right' : 'bottom-left'">
             <button type="button" class="btn btn-text-only-2" ngbDropdownToggle>
-                Menu<i class="ion-md-arrow-dropdown"></i>
+                Menu
             </button>
             <div class="nao-dropdown-1" ngbDropdownMenu>
                 <a class="dropdown-item" href="javascript:void(0)">Menu item 1</a>
@@ -26,7 +26,7 @@ export const DropdownCodeBlocks = [
     },
     {
         html: `
-        <div ngbDropdown class="btn-group dropdown-remove-arrow">
+        <div ngbDropdown class="btn-group dropdown-remove-arrow" [placement]="appService.getRTL() ? 'bottom-right' : 'bottom-left'">
             <a ngbDropdownToggle class="nav" href="javascript:void(0)">
                 <span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
                 <img class="d-block nao-dropdown-avatar rounded-circle"
@@ -58,9 +58,9 @@ export const DropdownCodeBlocks = [
     },
     {
         html: `
-        <div class="btn-group" ngbDropdown>
+        <div class="btn-group" ngbDropdown [placement]="appService.getRTL() ? 'bottom-right' : 'bottom-left'">
             <button class="btn nao-btn-dropdown-menu-1" ngbDropdownToggle>
-                Currency<i class="ion-md-arrow-dropdown ml-1"></i>
+                Currency
             </button>
             <div class="nao-dropdown-2" ngbDropdownMenu>
                 <a class="dropdown-item" href="javascript:void(0)">Currency</a>
@@ -70,7 +70,7 @@ export const DropdownCodeBlocks = [
     },
     {
         html: `
-        <div class="dropdown-remove-arrow" ngbDropdown container="body">
+        <div class="dropdown-remove-arrow" ngbDropdown container="body" [placement]="appService.getRTL() ? 'bottom-right' : 'bottom-left'">
             <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>
                 Include
             </button>
@@ -86,7 +86,7 @@ export const DropdownCodeBlocks = [
     },
     {
         html: `
-        <div class="dropdown-remove-arrow" ngbDropdown container="body">
+        <div class="dropdown-remove-arrow" ngbDropdown container="body" [placement]="appService.getRTL() ? 'bottom-right' : 'bottom-left'">
             <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>
                 Include
             </button>

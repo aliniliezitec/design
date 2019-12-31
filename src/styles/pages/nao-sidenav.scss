@@ -13,9 +13,17 @@
   line-height: 1.5;
   color: #47484c;
 
+  @include rtl {
+    left: unset;
+    right: 0;
+  }
+
   .sidenav-wrapper {
     position: relative;
     padding: 10px 10px 60px 37px;
+    @include rtl {
+      padding: 10px 37px 60px 10px;
+    }
   }
 
   li {
@@ -23,10 +31,18 @@
     margin-bottom: 19px;
     list-style-type: none;
     font-weight: $font-weight-semibold;
+
+    @include rtl {
+      text-align: right;
+     }
     
     .menu-icon {
       width: 16px;
-      margin-right: 15px
+      margin-right: 15px;
+      @include rtl {
+        margin-right: unset;
+        margin-left: 15px;
+      }
     }
 
     a {
@@ -78,4 +94,8 @@
 
 .nao-logo {
   margin-bottom: 36px;
+
+  @include rtl {
+    margin-left: 58px;
+  }
 }

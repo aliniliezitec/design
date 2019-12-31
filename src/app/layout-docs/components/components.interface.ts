@@ -5,7 +5,7 @@ export const ComponentsCodeBlocks = [
           <div class="sub-navbar-title">
             <span>Subnavbar title</span>&nbsp;
           </div>
-          <div class="mr-auto">
+          <div>
             <div class="btn-group" ngbDropdown container="body">
               <button class="btn sub-navbar-item" ngbDropdownToggle>
                 more icon

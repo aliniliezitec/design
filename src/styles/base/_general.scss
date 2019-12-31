@@ -3,13 +3,3 @@ a {
     text-decoration: none;
   }
 }
-
-
-// RTL
-.rtl-dropdown {
-  direction: rtl;
-
-  .dropdown-item {
-    text-align: right;
-  }
-}

@@ -20,10 +20,31 @@
 
 .docs-container {
   margin-left: 285px;
+  direction: ltr;
+  
+  @include rtl {
+    direction: rtl;
+    text-align: right;
+    margin-left: unset;
+    margin-right: 285px;
+  }
 
   @media only screen and (max-width: 576px) {
     margin-left: 0;
+
+    @include rtl {
+      margin-right: 0;
+    }
   }
+
+  // fix for code syntax highliter
+  pre {
+    @include rtl {
+      direction: ltr;
+      text-align: left;
+    }
+  }
+
 }
 
 .nao-docs-wrapper {

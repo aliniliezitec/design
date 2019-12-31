@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { MenuItems } from '../layout.interface';
 import { AppService } from 'src/app/app.service';
+
+type langDir = 'ltr' | 'rtl';
 
 @Component({
   selector: 'app-nao-navbar',
@@ -23,10 +25,13 @@ import { AppService } from 'src/app/app.service';
 export class NaoNavbarComponent implements OnInit {
   public menuItems = MenuItems;
   public isCollapsed = true;
+  @Input() dir: langDir;
+  @Input() isRTL = false;
+  @Output() dirChange = new EventEmitter<langDir>();
 
-  constructor(public readonly appService: AppService) {}
+  constructor(public readonly appService: AppService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   /**
    * Toggle a menu item
@@ -46,10 +51,13 @@ export class NaoNavbarComponent implements OnInit {
   }
 
   /**
-   * Toggle RTL
+   * Chnage direction RTL | LTR
    */
-  public toggleRTL(){
-    this.appService.toggleRTL();
+  changeDirTo(dir: langDir) {
+    this.dir = dir;
+    this.dirChange.emit(dir);
+    // -->Change: isRTL for componenets like `ngbDropdown`
+    this.appService.changeRTL(dir === 'rtl');
   }
 
 }

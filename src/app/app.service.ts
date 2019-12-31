@@ -1,16 +1,18 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 
 @Injectable()
 export class AppService {
     public isRTL = false;
-    constructor() { }
 
-    public toggleRTL() {
-        this.isRTL = !this.isRTL;
+    constructor() {
+    }
+
+    public changeRTL(value) {
+        this.isRTL = value;
     }
 
     public getRTL() {
-        console.log("get rtl", this.isRTL)
+        console.log("getting RTL", this.isRTL)
         return this.isRTL;
     }
 

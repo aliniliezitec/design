@@ -1,7 +1,7 @@
-<main  [ngClass]="{'nao-rtl': appService.getRTL()}">
+<main [attr.dir]="dir">
   <app-nao-sidenav></app-nao-sidenav>
   <div class="docs-container">
-    <app-nao-navbar></app-nao-navbar>
+    <app-nao-navbar [(dir)]="dir" ></app-nao-navbar>
     <router-outlet></router-outlet>
   </div>
 </main>

@@ -8,7 +8,15 @@
   <a href="javascript:void(0)" class="top-menu-item">
     CRM Login
   </a>
-  <button type="button" class="btn btn-primary" (click)="toggleRTL()">Change RTL</button>
+  <div class="btn-group" ngbDropdown container="body">
+    <button type="button" class="btn btn-primary" ngbDropdownToggle>
+      {{ dir | uppercase }}
+    </button>
+    <div class="nao-dropdown-1" ngbDropdownMenu>
+      <a class="dropdown-item" href="javascript:void(0)" (click)="changeDirTo('rtl')">RTL</a>
+      <a class="dropdown-item" href="javascript:void(0)" (click)="changeDirTo('ltr')">LTR</a>
+    </div>
+  </div>
 </div>
 
 <div class="nao-top-menu bg-white pb-1 d-block d-sm-none">
@@ -16,8 +24,7 @@
     <nav class="navbar navbar-expand-md navbar-light sm-absolute-top" [ngClass]="{'b-0' : !isCollapsed}"
       style="margin-bottom: -18px;">
       <a class="navbar-brand logo d-md-none mr-0" href="javascript:void(0)" [routerLink]="['/']"
-        (click)="isCollapsed = true"><img src="assets/images/logo.svg"
-          width="80px" alt="Naologic"></a>
+        (click)="isCollapsed = true"><img src="assets/images/logo.svg" width="80px" alt="Naologic"></a>
       <div class="d-md-none">
         <a class="btn nao-btn bg-primary text-white btn-crm-mobile" href="javascript:void(0)"
           [routerLink]="['/', 'business-app', 'apps']">CRM Login</a>
@@ -51,8 +58,7 @@
 
               <ul class="m-0" [@expandCollapse]='elem.isOpen' *ngIf="elem.isOpen">
                 <li *ngFor="let item of elem.items" class="nav-item">
-                  <a href="javascript:void(0)" [routerLink]="item.route"
-                    class="nav-link pl-0">{{item.text}}</a>
+                  <a href="javascript:void(0)" [routerLink]="item.route" class="nav-link pl-0">{{item.text}}</a>
                 </li>
               </ul>
             </div>
