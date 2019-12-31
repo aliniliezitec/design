@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DropdownCodeBlocks } from './dropdown.interface';
 import { AppService } from 'src/app/app.service';
+import { ComponentsPublicFlow } from '../components.flowservice';
 
 @Component({
   selector: 'app-dropdown',
@@ -9,7 +10,10 @@ import { AppService } from 'src/app/app.service';
 export class DropdownComponent implements OnInit {
   public data = DropdownCodeBlocks;
 
-  constructor(public readonly appService: AppService) { }
+  constructor(
+    public readonly appService: AppService,
+    public readonly $flow: ComponentsPublicFlow
+    ) { }
 
   ngOnInit() {
   }

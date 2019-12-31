@@ -4,16 +4,10 @@ import { Injectable, OnInit } from '@angular/core';
 export class AppService {
     public isRTL = false;
 
-    constructor() {
-    }
+    constructor() {}
 
     public changeRTL(value) {
         this.isRTL = value;
-    }
-
-    public getRTL() {
-        console.log("getting RTL", this.isRTL)
-        return this.isRTL;
     }
 
     /**

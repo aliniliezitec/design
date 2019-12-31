@@ -14,6 +14,10 @@
     padding: .438rem 1.25rem !important;
     font-size: pixelToRem(13px) !important;
   }
+
+  @include rtl {
+    text-align: right;
+  }
 }
 
 .nao-dropdown-2 {
@@ -25,6 +29,10 @@
 
   .dropdown-item {
     padding: pixelToRem(2.2px) pixelToRem(19.2px);
+  }
+
+  @include rtl {
+    text-align: right;
   }
 }
 
@@ -50,6 +58,12 @@
   width: 30px;
   height: 30px;
   object-fit: cover;
+  margin-right: 10px;
+
+  @include rtl {
+    margin-right: 0;
+    margin-left: 10px;
+  }
 }
 
 .nao-dropdown-3 {
@@ -66,6 +80,10 @@
 
   .disabled {
     color: #d1d2d3 !important;
+  }
+
+  @include rtl {
+    text-align: right;
   }
 }
 

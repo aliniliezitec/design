@@ -8,6 +8,7 @@ import { CardsComponent } from './cards/cards.component';
 import { ModalComponent } from './modal/modal.component';
 import { TableComponent } from './tables/table.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { ComponentsPublicFlow } from './components.flowservice';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,9 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     CommonModule,
     SharedModule,
     ComponentsRouting
-  ]
+  ],
+  providers: [
+    ComponentsPublicFlow,
+  ],
 })
 export class ComponentsModule { }

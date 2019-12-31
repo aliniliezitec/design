@@ -54,8 +54,16 @@ export class NaoNavbarComponent implements OnInit {
    * Chnage direction RTL | LTR
    */
   changeDirTo(dir: langDir) {
+    // We need to see whats solution is better
+    // 1
     this.dir = dir;
     this.dirChange.emit(dir);
+
+    // I changed everything to add the direction on the body element
+    // because there are elements on which the container is body, fx: ngbDropdown
+    const body = document.getElementsByTagName('body')[0];
+    body.dir = dir;
+
     // -->Change: isRTL for componenets like `ngbDropdown`
     this.appService.changeRTL(dir === 'rtl');
   }

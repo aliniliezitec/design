@@ -19,7 +19,7 @@ import { AppService } from './app.service';
     SharedModule
   ],
   providers: [
-    AppService
+    AppService,
   ],
   bootstrap: [AppComponent]
 })
