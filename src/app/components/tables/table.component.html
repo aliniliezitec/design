@@ -61,7 +61,7 @@
       <h2 class="title">Nao table 1</h2>
       <div class="nao-bd-example">
         <ng-template #rowOverlay let-item let-i="i">
-          <div class="d-flex justify-content-end align-items-center nao-row-overlay h-100">
+          <div class="d-flex justify-content-end align-items-center nao-row-overlay">
             <div>
               <button class="btn btn-text-only">
                 Edit
@@ -73,7 +73,7 @@
           </div>
         </ng-template>
 
-        <div class="card nao-card-table-1 mb-5">
+        <div class="card nao-card-table-1 mb-5" [ngClass]="{'nao-condensed-table': paging.tableCondensed$.value}">
           <div class="d-flex flex-row card-header selected align-items-center" *ngIf="noSelectedRows() > 0">
             <div class="pt-2 pr-3">
               <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
@@ -86,7 +86,7 @@
             <div class="pt-2">
               <button class="btn btn-text-only">
                 Delete multiple
-              </button> 
+              </button>
             </div>
           </div>
           <div class="d-flex flex-row card-header align-items-center" *ngIf="noSelectedRows() === 0">
@@ -107,6 +107,14 @@
               <button class="btn btn-text-only">
                 Import contacts
               </button>
+            </div>
+            <div class="nao-condensed-btn-group pt-2">
+              <div class="nao-condensed-btn-group">
+                <button type="button" class="btn btn-flip btn-condensed" [ngClass]="paging.tableCondensed$.value ? 'flipped' : ''"
+                  (click)="paging.tableCondensed$.next(true)">Condensed</button>
+                <button type="button" class="btn btn-flip btn-relaxed" [ngClass]="!paging.tableCondensed$.value ? 'flipped' : ''"
+                  (click)="paging.tableCondensed$.next(false)">Relaxed</button>
+              </div>
             </div>
           </div>
           <div class="card-search d-flex align-items-center justify-content-between">
@@ -150,24 +158,24 @@
               <tbody class="table-body">
                 <tr *ngFor="let item of dataTable; let i = index; let last = last"
                   [ngClass]="{'selected': item.selected}">
-                  <td class="align-middle p-3">
+                  <td class="align-middle">
                     <label class="custom-control custom-checkbox m-0">
                       <input type="checkbox" class="custom-control-input" (ngModelChange)="selectChange($event, i)"
                         [(ngModel)]="item.selected">
                       <span class="custom-control-label"></span>
                     </label>
                   </td>
-                  <td class="align-middle p-3">
+                  <td class="align-middle">
                     <div class="d-flex align-items-center">
                       <div class="cell-multiline-header">{{ item.name }}</div>
                     </div>
                   </td>
-                  <td class="align-middle p-3">
+                  <td class="align-middle">
                     <div class="d-flex align-items-center">
                       <div class="cell-multiline-header">{{ item.email }}</div>
                     </div>
                   </td>
-                  <td class="align-middle p-3">
+                  <td class="align-middle">
                     <div class="d-flex align-items-center">
                       <div class="cell-multiline-header">{{ item.company }}</div>
                     </div>
@@ -201,7 +209,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="nao-bd-clipboard">
           <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].ts1)" placement="top"
             ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -209,7 +217,7 @@
         <div class="nao-example-highlight">
           <pre><div [innerHTML]="data[2].ts1 | typescriptPrismPipe | sanitizeHtml"></div></pre>
         </div>
-        
+
         <div class="nao-bd-clipboard">
           <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].ts2)" placement="top"
             ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -233,7 +241,7 @@
       <h2 class="title">Nao table 1 - Without filter</h2>
       <div class="nao-bd-example">
         <ng-template #rowOverlay let-item let-i="i">
-          <div class="d-flex justify-content-end align-items-center nao-row-overlay h-100">
+          <div class="d-flex justify-content-end align-items-center nao-row-overlay">
             <div>
               <button class="btn btn-text-only">
                 Edit
@@ -245,7 +253,7 @@
           </div>
         </ng-template>
 
-        <div class="card nao-card-table-1 mb-5">
+        <div class="card nao-card-table-1 mb-5" [ngClass]="{'nao-condensed-table': paging.tableCondensed$.value}">
           <div class="d-flex flex-row card-header selected align-items-center" *ngIf="noSelectedRows() > 0">
             <div class="pt-2 pr-3">
               <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
@@ -258,7 +266,7 @@
             <div class="pt-2">
               <button class="btn btn-text-only">
                 Delete multiple
-              </button> 
+              </button>
             </div>
           </div>
           <div class="d-flex flex-row card-header align-items-center" *ngIf="noSelectedRows() === 0">
@@ -279,6 +287,14 @@
               <button class="btn btn-text-only">
                 Import contacts
               </button>
+            </div>
+            <div class="nao-condensed-btn-group pt-2">
+              <div class="nao-condensed-btn-group">
+                <button type="button" class="btn btn-flip btn-condensed" [ngClass]="paging.tableCondensed$.value ? 'flipped' : ''"
+                  (click)="paging.tableCondensed$.next(true)">Condensed</button>
+                <button type="button" class="btn btn-flip btn-relaxed" [ngClass]="!paging.tableCondensed$.value ? 'flipped' : ''"
+                  (click)="paging.tableCondensed$.next(false)">Relaxed</button>
+              </div>
             </div>
           </div>
 
@@ -302,24 +318,24 @@
               <tbody class="table-body">
                 <tr *ngFor="let item of dataTable; let i = index; let last = last"
                   [ngClass]="{'selected': item.selected}">
-                  <td class="align-middle p-3">
+                  <td class="align-middle">
                     <label class="custom-control custom-checkbox m-0">
                       <input type="checkbox" class="custom-control-input" (ngModelChange)="selectChange($event, i)"
                         [(ngModel)]="item.selected">
                       <span class="custom-control-label"></span>
                     </label>
                   </td>
-                  <td class="align-middle p-3">
+                  <td class="align-middle">
                     <div class="d-flex align-items-center">
                       <div class="cell-multiline-header">{{ item.name }}</div>
                     </div>
                   </td>
-                  <td class="align-middle p-3">
+                  <td class="align-middle">
                     <div class="d-flex align-items-center">
                       <div class="cell-multiline-header">{{ item.email }}</div>
                     </div>
                   </td>
-                  <td class="align-middle p-3">
+                  <td class="align-middle">
                     <div class="d-flex align-items-center">
                       <div class="cell-multiline-header">{{ item.company }}</div>
                     </div>
@@ -353,7 +369,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="nao-bd-clipboard">
           <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[3].ts1)" placement="top"
             ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -383,4 +399,4 @@
 
   </div>
 
-<!-- todo: add prism with babel plugin -->
+  <!-- todo: add prism with babel plugin -->

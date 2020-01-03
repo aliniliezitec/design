@@ -194,7 +194,7 @@ export const TableCodeBlocks = [
       </div>
     </ng-template>
 
-    <div class="card nao-card-table-1 mb-5">
+    <div class="card nao-card-table-1 mb-5" [ngClass]="{'nao-condensed-table': paging.tableCondensed$.value}">
       <div class="d-flex flex-row card-header selected align-items-center" *ngIf="noSelectedRows() > 0">
         <div class="pt-2 pr-3">
           <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
@@ -228,6 +228,14 @@ export const TableCodeBlocks = [
           <button class="btn btn-text-only">
             Import contacts
           </button>
+        </div>
+        <div class="nao-condensed-btn-group pt-2">
+          <div class="nao-condensed-btn-group">
+            <button type="button" class="btn btn-flip btn-condensed" [ngClass]="paging.tableCondensed$.value ? 'flipped' : ''"
+            (click)="paging.tableCondensed$.next(true)">Condensed</button>
+            <button type="button" class="btn btn-flip btn-relaxed" [ngClass]="!paging.tableCondensed$.value ? 'flipped' : ''"
+            (click)="paging.tableCondensed$.next(false)">Relaxed</button>
+          </div>
         </div>
       </div>
       <div class="card-search d-flex align-items-center justify-content-between">
@@ -325,7 +333,7 @@ export const TableCodeBlocks = [
     public paging = {
       currentPage: 1, totalPages: 1, currentRows: 0, totalRows: 0, maxSize: 5,
       perPage$: new BehaviorSubject<number>(20), selectAll: false, someSelected: false,
-      viewRelaxed: true
+      tableCondensed$: new BehaviorSubject<boolean>(false)
     };
     public filter = {
       search: new BehaviorSubject(''), searchType: new BehaviorSubject<string>('$or'),
@@ -398,7 +406,7 @@ export const TableCodeBlocks = [
       </div>
     </ng-template>
 
-    <div class="card nao-card-table-1 mb-5">
+    <div class="card nao-card-table-1 mb-5" [ngClass]="{'nao-condensed-table': paging.tableCondensed$.value}">
       <div class="d-flex flex-row card-header selected align-items-center" *ngIf="noSelectedRows() > 0">
         <div class="pt-2 pr-3">
           <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
@@ -432,6 +440,14 @@ export const TableCodeBlocks = [
           <button class="btn btn-text-only">
             Import contacts
           </button>
+        </div>
+        <div class="nao-condensed-btn-group pt-2">
+          <div class="nao-condensed-btn-group">
+            <button type="button" class="btn btn-flip btn-condensed" [ngClass]="paging.tableCondensed$.value ? 'flipped' : ''"
+            (click)="paging.tableCondensed$.next(true)">Condensed</button>
+            <button type="button" class="btn btn-flip btn-relaxed" [ngClass]="!paging.tableCondensed$.value ? 'flipped' : ''"
+            (click)="paging.tableCondensed$.next(false)">Relaxed</button>
+          </div>
         </div>
       </div>
 
@@ -509,7 +525,7 @@ export const TableCodeBlocks = [
     public paging = {
       currentPage: 1, totalPages: 1, currentRows: 0, totalRows: 0, maxSize: 5,
       perPage$: new BehaviorSubject<number>(20), selectAll: false, someSelected: false,
-      viewRelaxed: true
+      tableCondensed$: new BehaviorSubject<boolean>(false)
     };
     public sort = { lastSort: '', by: new BehaviorSubject(null), reverse: true, sub: null };
     public subs: { search$: Subscription, sort$: Subscription } = { search$: null, sort$: null };

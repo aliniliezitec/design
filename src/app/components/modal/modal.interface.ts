@@ -1,8 +1,3 @@
-// export interface htmlBlock {
-//     code: string;
-//     // syntaxHighlighter: string;
-// }
-
 export const ModalCodeBlocks = [
     {
         html: `

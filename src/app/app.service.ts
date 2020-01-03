@@ -1,13 +1,24 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable, OnInit, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Injectable()
 export class AppService {
     public isRTL = false;
 
-    constructor() {}
+    constructor(@Inject(DOCUMENT) private document: Document) { }
 
-    public changeRTL(value) {
-        this.isRTL = value;
+    /**
+     * Chnage direction RTL | LTR
+     */
+    changeDirTo(dir: 'ltr' | 'rtl') {
+        // -->Get: Body
+        const body = this.document.getElementsByTagName('body')[0];
+        // -->Set: dir attribute
+        body.dir = dir;
+        // -->Set: direction style
+        body.style.direction = dir;
+
+        this.isRTL = dir === 'rtl';
     }
 
     /**

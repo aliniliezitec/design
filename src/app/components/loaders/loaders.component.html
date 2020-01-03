@@ -1,0 +1,138 @@
+<div class="nao-docs-wrapper">
+  <div class="elements-container">
+    <h1 class="title">Loaders</h1>
+
+    <div class="elem-container">
+      <h2 class="title">Loader infinity data</h2>
+      <div class="nao-bd-example">
+        <loader-infinity-data></loader-infinity-data>
+      </div>
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Loader table</h2>
+      <div class="nao-bd-example">
+        <loader-table-lottie></loader-table-lottie>
+      </div>
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[1].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Loader progress bar</h2>
+
+      <div class="nao-bd-example">
+        <div class="mb-3">
+          <loader-bar-small progress="60"></loader-bar-small>
+        </div>
+        <div class="mb-3">
+          <loader-bar-small progress="60" type="secondary"></loader-bar-small>
+        </div>
+        <div class="mb-3">
+          <loader-bar-small progress="60" type="success"></loader-bar-small>
+        </div>
+        <div class="mb-3">
+          <loader-bar-small progress="60" type="info"></loader-bar-small>
+        </div>
+        <div class="mb-3">
+          <loader-bar-small progress="60" type="warning"></loader-bar-small>
+        </div>
+        <div class="mb-3">
+          <loader-bar-small progress="60" type="danger"></loader-bar-small>
+        </div>
+        <div class="mb-3">
+          <loader-bar-small progress="60" type="dark"></loader-bar-small>
+        </div>
+      </div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[2].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">API</h2>
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Inputs</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>state</code></td>
+              <td>Unset</td>
+              <td>It's a <code>NaoCrud.State</code>, based on this it starts/stop the loading</td>
+            </tr>
+            <tr>
+              <td><code>progress</code></td>
+              <td><code>0</code></td>
+              <td>The current value for the progress bar. <code>[0, max]</code></td>
+            </tr>
+            <tr>
+              <td><code>type</code></td>
+              <td><code>'primary'</code></td>
+              <td>The color of the progress bar. <code>'primary'</code>|<code>'secondary'</code>|<code>'success'</code>|<code>'info'</code>|<code>'warning'</code>|<code>'danger'</code>|<code>'dark'</code></td>
+            </tr>
+            <tr>
+              <td><code>striped</code></td>
+              <td><code>true</code></td>
+              <td>If <code>true</code>, the progress bar will be displayed as striped.</td>
+            </tr>
+            <tr>
+              <td><code>animated</code></td>
+              <td><code>true</code></td>
+              <td>If <code>true</code>, the progress bar will be animated.</td>
+            </tr>
+            <tr>
+              <td><code>height</code></td>
+              <td><code>4px</code></td>
+              <td>Height of the progress bar</td>
+            </tr>
+            <tr>
+              <td><code>showValue</code></td>
+              <td><code>false</code></td>
+              <td>If <code>true</code>, the current percentage will be shown in the <code>xx%</code> format.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Example:</p>
+      <div class="nao-bd-example">
+          <loader-bar-small progress="60" type="success" height="10px" [showValue]="true"></loader-bar-small>
+      </div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[3].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[3].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+  </div>
+</div>

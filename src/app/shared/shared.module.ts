@@ -7,6 +7,11 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { SanitizeHtml } from './pipes/sanitize-html.pipe';
 import { TypescriptPrismPipe } from './pipes/typescript-prism.pipe';
 import { HtmlPrismPipe } from './pipes/html-prism.pipe';
+import { LoaderInfinityComponent } from './loader-infinity/loader-infinity.component';
+import { LoaderInfinityDataComponent } from './loader-infinity-data/loader-infinity-data.component';
+import { LoaderTableLottieComponent } from './loader-table-lottie/loader-table-lottie.component';
+import { LottieAnimationViewModule } from 'ng-lottie';
+import { LoaderBarSmallComponent } from './loader-bar-small/loader-bar-small.component';
 
 @NgModule({
   providers: [
@@ -15,14 +20,20 @@ import { HtmlPrismPipe } from './pipes/html-prism.pipe';
   declarations: [
     SanitizeHtml,
     HtmlPrismPipe,
-    TypescriptPrismPipe
+    TypescriptPrismPipe,
+    LoaderInfinityComponent,
+    LoaderInfinityDataComponent,
+    LoaderTableLottieComponent,
+    LoaderBarSmallComponent
   ],
   imports: [
     CommonModule,
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    NgSelectModule
+    NgSelectModule,
+    LottieAnimationViewModule
+
   ],
   exports: [
     CommonModule,
@@ -32,7 +43,11 @@ import { HtmlPrismPipe } from './pipes/html-prism.pipe';
     SanitizeHtml,
     HtmlPrismPipe,
     TypescriptPrismPipe,
-    NgSelectModule
+    NgSelectModule,
+    LoaderInfinityComponent,
+    LoaderInfinityDataComponent,
+    LoaderTableLottieComponent,
+    LoaderBarSmallComponent
   ],
   entryComponents: [
   ]

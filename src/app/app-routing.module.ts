@@ -18,6 +18,10 @@ const routes: Routes = [
       {
         path: 'utilities',
         loadChildren: () => import('./utilities/utilities.module').then(m => m.UtilitiesModule),
+      },
+      {
+        path: 'photography',
+        loadChildren: () => import('./photography/photography.module').then(m => m.PhotographyModule),
       }
     ]
   }

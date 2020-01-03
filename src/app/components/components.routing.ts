@@ -6,6 +6,7 @@ import { CardsComponent } from './cards/cards.component';
 import { ModalComponent } from './modal/modal.component';
 import { TableComponent } from './tables/table.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { LoadersComponent } from './loaders/loaders.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,13 @@ const routes: Routes = [
         component: FormsComponent,
         data: {
           title: 'Forms - Naologic',
+        }
+      },
+      {
+        path: 'loaders',
+        component: LoadersComponent,
+        data: {
+          title: 'Loaders - Naologic',
         }
       },
       {

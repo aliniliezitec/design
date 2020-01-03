@@ -6,6 +6,7 @@ import { LayoutModule } from './layout/layout.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { AppService } from './app.service';
+import { LottieAnimationViewModule } from 'ng-lottie';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppService } from './app.service';
     BrowserAnimationsModule,
     AppRoutingModule,
     LayoutModule,
-    SharedModule
+    SharedModule,
+    LottieAnimationViewModule.forRoot(),
   ],
   providers: [
     AppService,

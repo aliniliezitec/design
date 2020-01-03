@@ -21,7 +21,7 @@
 .docs-container {
   margin-left: 285px;
   direction: ltr;
-  
+
   @include rtl {
     direction: rtl;
     text-align: right;
@@ -233,6 +233,71 @@
       font-style: oblique;
       font-size: pixelToRem(13px);
       color: #444444;
+    }
+  }
+}
+
+.photography-container {
+  font-size: pixelToRem(15px);
+  color: var(--text-secondary);
+
+  a {
+    color: var(--text-secondary);
+  }
+
+  .description {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
+  .content {
+    max-width: 826px;
+    min-height: 400px;
+    font-size: pixelToRem(18px);
+    margin-bottom: 55px;
+  }
+
+  .overview-grid {
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 290px 290px;
+    grid-row-gap: 95px;
+    grid-column-gap: 170px;
+
+    @media screen and (max-width: 1090px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 0;
+
+      .element {
+        margin-bottom: 90px;
+      }
+    }
+
+    .text-under-img {
+      max-width: 289px;
+    }
+  }
+
+  .images-grid {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 290px 290px;
+    grid-row-gap: 30px;
+    grid-column-gap: 40px;
+
+    @media screen and (max-width: 960px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-bottom: 0;
+
+      img {
+        margin-bottom: 40px;
+      }
     }
   }
 }

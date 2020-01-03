@@ -13,7 +13,7 @@ export class TableComponent implements OnInit {
   public paging = {
     currentPage: 1, totalPages: 1, currentRows: 0, totalRows: 0, maxSize: 5,
     perPage$: new BehaviorSubject<number>(20), selectAll: false, someSelected: false,
-    viewRelaxed: true
+    tableCondensed$: new BehaviorSubject<boolean>(false)
   };
   public filter = {
     search: new BehaviorSubject(''), searchType: new BehaviorSubject<string>('$or'),

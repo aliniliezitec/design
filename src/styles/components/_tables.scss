@@ -58,6 +58,7 @@
   }
 
   .nao-row-overlay {
+    height: 100%;
     background-color: var(--white);
   }
 
@@ -183,6 +184,8 @@
       border-bottom: 1px var(--border-fill) solid;
 
       td {
+        padding: 16px;
+
         .custom-checkbox {
           margin-left: 29px !important;
         }
@@ -194,11 +197,11 @@
 
       &:hover {
         background-color: var(--border-lightest);
-  
+
         .show-on-hover {
           opacity: 1;
         }
-  
+
         .nao-row-overlay {
           background-color: var(--border-lightest);
         }
@@ -252,5 +255,58 @@
   .dropdown-item.danger:hover {
     background-color: var(--danger);
     color: var(--white);
+  }
+}
+
+// nao table btn group for condensed/relaxed
+.nao-condensed-btn-group {
+  margin-left: auto;
+
+  @include rtl {
+    margin-left: unset;
+    margin-right: auto;
+  }
+
+  .btn-condensed {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .btn-relaxed {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  @include rtl {
+    .btn-condensed {
+      border-radius: 0 $border-radius $border-radius 0;
+    }
+
+    .btn-relaxed {
+      border-radius: $border-radius 0 0 $border-radius;
+    }
+
+  }
+}
+
+.nao-condensed-table {
+  .table-body {
+    td {
+      padding-top: 6px !important;
+      padding-bottom: 6px !important;
+
+      .btn-text-only {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .nao-row-overlay-container {
+    height: unset;
+
+    .nao-row-overlay {
+      height: unset;
+    }
   }
 }

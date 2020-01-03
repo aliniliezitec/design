@@ -9,6 +9,7 @@ import { ModalComponent } from './modal/modal.component';
 import { TableComponent } from './tables/table.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { ComponentsPublicFlow } from './components.flowservice';
+import { LoadersComponent } from './loaders/loaders.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ComponentsPublicFlow } from './components.flowservice';
     DropdownComponent,
     FormsComponent,
     ModalComponent,
+    LoadersComponent,
     TableComponent
   ],
   imports: [

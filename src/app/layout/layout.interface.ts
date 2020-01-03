@@ -24,6 +24,7 @@ export const MenuItems = [
             { type: 'item', route: '/components/card', text: 'Card' },
             { type: 'item', route: '/components/dropdowns', text: 'Dropdowns' },
             { type: 'item', route: '/components/forms', text: 'Forms' },
+            { type: 'item', route: '/components/loaders', text: 'Loaders' },
             { type: 'item', route: '/components/modal', text: 'Modal' },
             { type: 'item', route: '/components/table', text: 'Table' },
             // { type: 'item', route: '/components/input-group', text: 'Input group' },
@@ -40,6 +41,16 @@ export const MenuItems = [
             { type: 'item', route: '/utilities/colors', text: 'Colors' },
             { type: 'item', route: '/utilities/typography', text: 'Typography' },
             { type: 'item', route: '/utilities/spacing', text: 'Spacing' },
+        ]
+    },
+    {
+        type: 'items', text: 'Photography ', route: '/photography', icon: 'assets/images/icons/settings.svg', isOpen: false,
+        items: [
+            { type: 'item', route: '/photography/overview', text: 'Overview' },
+            { type: 'item', route: '/photography/compositions', text: 'Compositions' },
+            { type: 'item', route: '/photography/casting', text: 'Casting' },
+            { type: 'item', route: '/photography/lighting-and-color', text: 'Lighting and color' },
+            { type: 'item', route: '/photography/locations', text: 'Locations' },
         ]
     },
 ];
