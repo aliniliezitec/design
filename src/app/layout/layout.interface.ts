@@ -39,6 +39,7 @@ export const MenuItems = [
         type: 'items', text: 'Utilities', route: '/utilities', icon: 'assets/images/icons/settings.svg', isOpen: false,
         items: [
             { type: 'item', route: '/utilities/colors', text: 'Colors' },
+            { type: 'item', route: '/utilities/icons', text: 'icons' },
             { type: 'item', route: '/utilities/typography', text: 'Typography' },
             { type: 'item', route: '/utilities/spacing', text: 'Spacing' },
         ]

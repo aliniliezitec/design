@@ -5,10 +5,12 @@ import { ColorsComponent } from './colors/colors.component';
 import { UtilitiesRouting } from './utilities.routing';
 import { TypographyComponent } from './typography/typography.component';
 import { SpacingComponent } from './spacing/spacing.component';
+import { IconsComponent } from './icons/icons.component';
 
 @NgModule({
   declarations: [
     ColorsComponent,
+    IconsComponent,
     TypographyComponent,
     SpacingComponent
   ],

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ColorsComponent } from './colors/colors.component';
 import { TypographyComponent } from './typography/typography.component';
 import { SpacingComponent } from './spacing/spacing.component';
+import { IconsComponent } from './icons/icons.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,13 @@ const routes: Routes = [
         component: ColorsComponent,
         data: {
           title: 'Colors - Naologic',
+        }
+      },
+      {
+        path: 'icons',
+        component: IconsComponent,
+        data: {
+          title: 'Icons - Naologic',
         }
       },
       {

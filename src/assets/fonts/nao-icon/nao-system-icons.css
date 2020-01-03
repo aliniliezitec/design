@@ -1,0 +1,180 @@
+/*
+    Icon Font nao-icons generated from orioniconlibrary.com
+  */
+
+  @font-face {
+  font-family: "nao-icons";
+  src: url("./nao-icons.eot");
+  src: url("./nao-icons.eot?#iefix") format("embedded-opentype"),
+       url("./nao-icons.woff2") format("woff2"),
+       url("./nao-icons.woff") format("woff"),
+       url("./nao-icons.ttf") format("truetype"),
+       url("./nao-icons.svg#nao-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "nao-icons";
+    src: url("./nao-icons.svg#nao-icons") format("svg");
+  }
+}
+
+  [data-icon]::before { content: attr(data-icon); }
+
+  [data-icon]::before,
+  .o-360surveys-1::before,
+.o-busapps-1::before,
+.o-calendar-1::before,
+.o-cancel-1::before,
+.o-crm-1::before,
+.o-date-1::before,
+.o-dollar-1::before,
+.o-download-1::before,
+.o-ecommerce-1::before,
+.o-employeesatisfacttion-1::before,
+.o-enterprise-1::before,
+.o-envelopee-1::before,
+.o-facebook-1::before,
+.o-false-1::before,
+.o-file-1::before,
+.o-filing-1::before,
+.o-fill-1::before,
+.o-help-1::before,
+.o-information-1::before,
+.o-ionioscamera-1::before,
+.o-ioniosperson-1::before,
+.o-ionmdarrowback-1::before,
+.o-ionmdarrowdropdown-1::before,
+.o-ionmdarrowdropdowncircle-1::before,
+.o-ionmdcard-1::before,
+.o-ionmdcheckmark-1::before,
+.o-ionmdclose-1::before,
+.o-ionmdlistbox-1::before,
+.o-ionmdnotifications-1::before,
+.o-ionmdsearch-1::before,
+.o-iontimelinef2f-1::before,
+.o-itemslist-1::before,
+.o-kanban-1::before,
+.o-key-1::before,
+.o-leadmanagement-1::before,
+.o-linkedin-1::before,
+.o-multiplechoice-1::before,
+.o-newweprofile-1::before,
+.o-no-1::before,
+.o-number-1::before,
+.o-onlinesurveys-1::before,
+.o-orion_box-1::before,
+.o-orion_moneybagbitcoin-1::before,
+.o-orion_onsalesticker-1::before,
+.o-orion_panoramaimage-1::before,
+.o-orion_privacy-1::before,
+.o-orion_settings-1::before,
+.o-orion_stockboxes-1::before,
+.o-orion_uploadtocloud-1::before,
+.o-palette-1::before,
+.o-pricingbasics-1::before,
+.o-pricingelearning-1::before,
+.o-pricingemails-1::before,
+.o-pricingproducts-1::before,
+.o-pricingpurchasing-1::before,
+.o-pricingsales-1::before,
+.o-profilemale-1::before,
+.o-rating-1::before,
+.o-salesorder-1::before,
+.o-smsmarketing-1::before,
+.o-system-1::before,
+.o-thankyou-1::before,
+.o-thunder-1::before,
+.o-twitter-1::before,
+.o-vendormanagement-1::before,
+.o-warning-1::before,
+.o-warning1-1::before,
+.o-welcome-1::before,
+.o-whatsappmarketing-1::before {
+    display: inline-block;
+  font-family: "nao-icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  }
+
+  .o-360surveys-1::before { content: "\f8b2"; }
+.o-busapps-1::before { content: "\f8b3"; }
+.o-calendar-1::before { content: "\f8b4"; }
+.o-cancel-1::before { content: "\f8b5"; }
+.o-crm-1::before { content: "\f8b6"; }
+.o-date-1::before { content: "\f8b7"; }
+.o-dollar-1::before { content: "\f8b8"; }
+.o-download-1::before { content: "\f8b9"; }
+.o-ecommerce-1::before { content: "\f8ba"; }
+.o-employeesatisfacttion-1::before { content: "\f8bb"; }
+.o-enterprise-1::before { content: "\f8bc"; }
+.o-envelopee-1::before { content: "\f8bd"; }
+.o-facebook-1::before { content: "\f8be"; }
+.o-false-1::before { content: "\f8bf"; }
+.o-file-1::before { content: "\f8c0"; }
+.o-filing-1::before { content: "\f8c1"; }
+.o-fill-1::before { content: "\f8c2"; }
+.o-help-1::before { content: "\f8c3"; }
+.o-information-1::before { content: "\f8c4"; }
+.o-ionioscamera-1::before { content: "\f8c5"; }
+.o-ioniosperson-1::before { content: "\f8c6"; }
+.o-ionmdarrowback-1::before { content: "\f8c7"; }
+.o-ionmdarrowdropdown-1::before { content: "\f8c8"; }
+.o-ionmdarrowdropdowncircle-1::before { content: "\f8c9"; }
+.o-ionmdcard-1::before { content: "\f8ca"; }
+.o-ionmdcheckmark-1::before { content: "\f8cb"; }
+.o-ionmdclose-1::before { content: "\f8cc"; }
+.o-ionmdlistbox-1::before { content: "\f8cd"; }
+.o-ionmdnotifications-1::before { content: "\f8ce"; }
+.o-ionmdsearch-1::before { content: "\f8cf"; }
+.o-iontimelinef2f-1::before { content: "\f8d0"; }
+.o-itemslist-1::before { content: "\f8d1"; }
+.o-kanban-1::before { content: "\f8d2"; }
+.o-key-1::before { content: "\f8d3"; }
+.o-leadmanagement-1::before { content: "\f8d4"; }
+.o-linkedin-1::before { content: "\f8d5"; }
+.o-multiplechoice-1::before { content: "\f8d6"; }
+.o-newweprofile-1::before { content: "\f8d7"; }
+.o-no-1::before { content: "\f8d8"; }
+.o-number-1::before { content: "\f8d9"; }
+.o-onlinesurveys-1::before { content: "\f8da"; }
+.o-orion_box-1::before { content: "\f8db"; }
+.o-orion_moneybagbitcoin-1::before { content: "\f8dc"; }
+.o-orion_onsalesticker-1::before { content: "\f8dd"; }
+.o-orion_panoramaimage-1::before { content: "\f8de"; }
+.o-orion_privacy-1::before { content: "\f8df"; }
+.o-orion_settings-1::before { content: "\f8e0"; }
+.o-orion_stockboxes-1::before { content: "\f8e1"; }
+.o-orion_uploadtocloud-1::before { content: "\f8e2"; }
+.o-palette-1::before { content: "\f8e3"; }
+.o-pricingbasics-1::before { content: "\f8e4"; }
+.o-pricingelearning-1::before { content: "\f8e5"; }
+.o-pricingemails-1::before { content: "\f8e6"; }
+.o-pricingproducts-1::before { content: "\f8e7"; }
+.o-pricingpurchasing-1::before { content: "\f8e8"; }
+.o-pricingsales-1::before { content: "\f8e9"; }
+.o-profilemale-1::before { content: "\f8ea"; }
+.o-rating-1::before { content: "\f8eb"; }
+.o-salesorder-1::before { content: "\f8ec"; }
+.o-smsmarketing-1::before { content: "\f8ed"; }
+.o-system-1::before { content: "\f8ee"; }
+.o-thankyou-1::before { content: "\f8ef"; }
+.o-thunder-1::before { content: "\f8f0"; }
+.o-twitter-1::before { content: "\f8f1"; }
+.o-vendormanagement-1::before { content: "\f8f2"; }
+.o-warning-1::before { content: "\f8f3"; }
+.o-warning1-1::before { content: "\f8f4"; }
+.o-welcome-1::before { content: "\f8f5"; }
+.o-whatsappmarketing-1::before { content: "\f8f6"; }
+
+  

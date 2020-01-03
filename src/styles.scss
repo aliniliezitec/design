@@ -204,26 +204,30 @@
   max-width: none;
 }
 
-.nao-colors-showcase {
+.nao-box-showcase {
   border-radius: 4px;
   box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.24);
   background-color: var(--white);
 
-  .color-box {
+  .nao-content-preview {
     width: 200px;
     height: 200px;
+
+    i {
+      font-size: 62px;
+    }
   }
 
-  .color-ids {
+  .nao-content-usage {
     padding: 13px 12px;
 
-    .name {
+    .first-field {
       font-weight: $font-weight-bold;
       font-size: pixelToRem(16px);
       color: #000;
     }
 
-    .hexa {
+    .second-field {
       font-style: oblique;
       font-size: pixelToRem(13px);
       color: #444444;
@@ -234,6 +238,16 @@
       font-size: pixelToRem(13px);
       color: #444444;
     }
+  }
+}
+
+.nao-icons-showcase {
+  .nao-content-preview {
+    width: 240px;
+  }
+
+  .first-field {
+    font-size: pixelToRem(14px) !important;
   }
 }
 

@@ -1,0 +1,40 @@
+<div class="nao-docs-wrapper">
+  <div class="elements-container">
+    <h1 class="title">Nao icons</h1>
+
+    <div class="elem-container">
+      <h2 class="title">Install our custom icons font.</h2>
+      <p>Place the <code>nao-system-icons.css</code> and five font files in your font directory and include the
+        css in your html.</p>
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Usage</h2>
+      <p>There are two ways to include the icons in the html, using <code>class</code> or <code>data-icon</code> attribute:</p>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[1].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Icons</h2>
+      <div class="nao-bd-example nao-icons-showcase d-flex flex-wrap" [innerHTML]="data[2].html | sanitizeHtml"></div>
+
+    </div>
+
+  </div>
+</div>
