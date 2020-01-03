@@ -3,21 +3,21 @@
   */
 
   @font-face {
-  font-family: "nao-icons";
-  src: url("./nao-icons.eot");
-  src: url("./nao-icons.eot?#iefix") format("embedded-opentype"),
-       url("./nao-icons.woff2") format("woff2"),
-       url("./nao-icons.woff") format("woff"),
-       url("./nao-icons.ttf") format("truetype"),
-       url("./nao-icons.svg#nao-icons") format("svg");
+  font-family: "nao-system-icons";
+  src: url("./nao-system-icons.eot");
+  src: url("./nao-system-icons.eot?#iefix") format("embedded-opentype"),
+       url("./nao-system-icons.woff2") format("woff2"),
+       url("./nao-system-icons.woff") format("woff"),
+       url("./nao-system-icons.ttf") format("truetype"),
+       url("./nao-system-icons.svg#nao-system-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
-    font-family: "nao-icons";
-    src: url("./nao-icons.svg#nao-icons") format("svg");
+    font-family: "nao-system-icons";
+    src: url("./nao-system-icons.svg#nao-system-icons") format("svg");
   }
 }
 
@@ -94,7 +94,7 @@
 .o-welcome-1::before,
 .o-whatsappmarketing-1::before {
     display: inline-block;
-  font-family: "nao-icons";
+  font-family: "nao-system-icons";
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
