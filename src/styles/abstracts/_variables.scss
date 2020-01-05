@@ -1,5 +1,6 @@
 // Body
 $body-color: var(--text-primary);
+$enable-validation-icons: false;
 
 // Buttons
 $border-radius: .25rem;
@@ -33,7 +34,7 @@ $input-focus-width: 0;
 $input-focus-box-shadow: 0 0 10px var(--border-light);
 $input-focus-border-color: transparent;
 $input-placeholder-color: var(--border-light);
-// todo: sm / lg
+
 
 // Checkbox
 $enable-shadows: true;

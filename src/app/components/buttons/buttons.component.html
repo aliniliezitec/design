@@ -75,7 +75,8 @@
       <h2 class="title">Custom outline buttons with transparent bg</h2>
       <p>
         In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with
-        the <span class="highlighter-warning">.btn-outline-only-*</span> ones to remove all background images and colors on
+        the <span class="highlighter-warning">.btn-outline-only-*</span> ones to remove all background images and colors
+        on
         any button.
       </p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[3].html | sanitizeHtml"></div>
@@ -91,8 +92,9 @@
 
     <div class="elem-container">
       <h2 class="title">Sizes</h2>
-      <p>Fancy extra large, larger or smaller buttons? Add <span class="highlighter-warning">.btn-xl</span>, <span class="highlighter-warning">.btn-lg</span> or <span
-          class="highlighter-warning">.btn-sm</span> for additional sizes.
+      <p>Fancy extra large, larger or smaller buttons? Add <span class="highlighter-warning">.btn-xl</span>, <span
+          class="highlighter-warning">.btn-lg</span> or <span class="highlighter-warning">.btn-sm</span> for additional
+        sizes.
       </p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[4].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
@@ -147,7 +149,6 @@
         <pre><div [innerHTML]="data[8].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
 
-
       <h2 class="title">Disabled state</h2>
       <p>
         Make buttons look inactive by adding the disabled boolean attribute to any <span
@@ -187,6 +188,18 @@
       </div>
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[10].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Transition when hovered</h2>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[11].html | sanitizeHtml"></div>
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[11].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[11].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 

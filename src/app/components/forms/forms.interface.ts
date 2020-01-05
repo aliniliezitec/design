@@ -50,4 +50,20 @@ export const FormsCodeBlocks = [
         <input class="form-control nao-input-mw-320" type="text" placeholder=".nao-input-mw-320">
         <input class="form-control nao-input-mw-380" type="text" placeholder=".nao-input-mw-380">
         <input class="form-control nao-input-mw-560" type="text" placeholder=".nao-input-mw-560">`},
+    {
+        html: `
+            <form>
+                <div class="form-group">
+                    <label class="nao-form-label-above" for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control is-valid nao-input-mw-290" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email" value="test@doe.com">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label class="nao-form-label-above" for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control is-invalid nao-input-mw-290" id="exampleInputPassword1" placeholder="Password">
+                    <span class="text-danger">This field is required.</span>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>`},
 ];

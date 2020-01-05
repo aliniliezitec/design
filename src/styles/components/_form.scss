@@ -1,3 +1,7 @@
+.btn {
+  transition: all .2s ease-in-out;
+}
+
 // Nao form labels
 .nao-form-label-above {
   font-size: 1rem;
@@ -5,6 +9,7 @@
 }
 
 .nao-form-label-inline {
+  font-weight: $font-weight-semibold;
   font-size: 1rem;
   padding: 8px 5px;
   color: var(--grey-blue);
@@ -14,6 +19,9 @@
   font-size: pixelToRem(13px);
   color: var(--text-primary);
 }
+
+// todo: sm and large
+// todo: showcase them on the forms page
 
 // Input width
 $input-max-width: (140: 140px,
@@ -35,4 +43,21 @@ $value in $input-max-width {
   .nao-input-mw-#{$size} {
     max-width: $value;
   }
+}
+
+// btn transition
+.nao-btn-transition:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--border-lightest);
+  transform: translateY(-0.1rem);
+}
+
+.nao-btn-transition:disabled {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--border-lightest);
+  transform: none;
+}
+
+.nao-btn-transition:focus,
+.nao-btn-transition.focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--border-lightest);
+  transform: translateY(-0.1rem);
 }

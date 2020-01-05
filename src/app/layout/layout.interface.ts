@@ -1,12 +1,11 @@
 export const MenuItems = [
-    // {
-    //     type: 'items', text: 'Getting Started', route: '/getting-started', icon: 'nao-icon-crm', isOpen: false,
-    //     items: [
-    //         { type: 'item', route: '/getting-started/introduction', text: 'Introduction' },
-    //         { type: 'item', route: '/getting-started/download', text: 'Download' },
-    //         { type: 'item', route: '/getting-started/contents', text: 'Contents' },
-    //     ]
-    // },
+    {
+        type: 'items', text: 'Getting Started', route: '/getting-started', icon: 'nao-icon-help', isOpen: false,
+        items: [
+            { type: 'item', route: '/getting-started/introduction', text: 'Introduction' },
+            // { type: 'item', route: '/getting-started/download', text: 'Download' },
+        ]
+    },
     {
         type: 'items', text: 'Layout', route: '/layout', icon: 'nao-icon-crm', isOpen: false,
         items: [
@@ -47,6 +46,12 @@ export const MenuItems = [
             { type: 'item', route: '/photography/casting', text: 'Casting' },
             { type: 'item', route: '/photography/lighting-and-color', text: 'Lighting and color' },
             { type: 'item', route: '/photography/locations', text: 'Locations' },
+        ]
+    },
+    {
+        type: 'items', text: 'Samples ', route: '/samples', icon: 'nao-icon-multiple-choice', isOpen: false,
+        items: [
+            { type: 'item', route: '/samples/forms', text: 'Forms' },
         ]
     },
 ];

@@ -8,6 +8,10 @@ const routes: Routes = [
     component: NaoLayoutComponent,
     children: [
       {
+        path: 'getting-started',
+        loadChildren: () => import('./getting-started/getting-started.module').then(m => m.GettingStartedModule),
+      },
+      {
         path: 'layout',
         loadChildren: () => import('./layout-docs/layout-docs.module').then(m => m.LayoutDocsModule),
       },
@@ -22,6 +26,10 @@ const routes: Routes = [
       {
         path: 'photography',
         loadChildren: () => import('./photography/photography.module').then(m => m.PhotographyModule),
+      },
+      {
+        path: 'samples',
+        loadChildren: () => import('./samples/samples.module').then(m => m.SamplesModule),
       }
     ]
   }

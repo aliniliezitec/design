@@ -94,27 +94,6 @@ export const ButtonsCodeBlocks = [
     <a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">Link</a>`},
     {
         html: `
-    <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-        Single toggle
-    </button>`},
-    {
-        html: `
-    <div class="btn-group-toggle" data-toggle="buttons">
-        <label class="btn btn-secondary active">
-            <input type="checkbox" checked autocomplete="off"> Checked
-        </label>
-    </div>`},
-    {
-        html: `
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-    <label class="btn btn-secondary active">
-        <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
-    </label>
-    <label class="btn btn-secondary">
-        <input type="radio" name="options" id="option2" autocomplete="off"> Radio
-    </label>
-    <label class="btn btn-secondary">
-        <input type="radio" name="options" id="option3" autocomplete="off"> Radio
-    </label>
-    </div>`},
+    <button type="button" class="btn btn-primary nao-btn-transition">Hover</button>
+    <button type="button" class="btn btn-outline-only-dark-blue nao-btn-transition">Hover</button>`},
 ];
