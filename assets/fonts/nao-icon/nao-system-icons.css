@@ -24,75 +24,75 @@
   [data-icon]::before { content: attr(data-icon); }
 
   [data-icon]::before,
-  .o-360surveys-1::before,
-.o-busapps-1::before,
-.o-calendar-1::before,
-.o-cancel-1::before,
-.o-crm-1::before,
-.o-date-1::before,
-.o-dollar-1::before,
-.o-download-1::before,
-.o-ecommerce-1::before,
-.o-employeesatisfacttion-1::before,
-.o-enterprise-1::before,
-.o-envelopee-1::before,
-.o-facebook-1::before,
-.o-false-1::before,
-.o-file-1::before,
-.o-filing-1::before,
-.o-fill-1::before,
-.o-help-1::before,
-.o-information-1::before,
-.o-ionioscamera-1::before,
-.o-ioniosperson-1::before,
-.o-ionmdarrowback-1::before,
-.o-ionmdarrowdropdown-1::before,
-.o-ionmdarrowdropdowncircle-1::before,
-.o-ionmdcard-1::before,
-.o-ionmdcheckmark-1::before,
-.o-ionmdclose-1::before,
-.o-ionmdlistbox-1::before,
-.o-ionmdnotifications-1::before,
-.o-ionmdsearch-1::before,
-.o-iontimelinef2f-1::before,
-.o-itemslist-1::before,
-.o-kanban-1::before,
-.o-key-1::before,
-.o-leadmanagement-1::before,
-.o-linkedin-1::before,
-.o-multiplechoice-1::before,
-.o-newweprofile-1::before,
-.o-no-1::before,
-.o-number-1::before,
-.o-onlinesurveys-1::before,
-.o-orion_box-1::before,
-.o-orion_moneybagbitcoin-1::before,
-.o-orion_onsalesticker-1::before,
-.o-orion_panoramaimage-1::before,
-.o-orion_privacy-1::before,
-.o-orion_settings-1::before,
-.o-orion_stockboxes-1::before,
-.o-orion_uploadtocloud-1::before,
-.o-palette-1::before,
-.o-pricingbasics-1::before,
-.o-pricingelearning-1::before,
-.o-pricingemails-1::before,
-.o-pricingproducts-1::before,
-.o-pricingpurchasing-1::before,
-.o-pricingsales-1::before,
-.o-profilemale-1::before,
-.o-rating-1::before,
-.o-salesorder-1::before,
-.o-smsmarketing-1::before,
-.o-system-1::before,
-.o-thankyou-1::before,
-.o-thunder-1::before,
-.o-twitter-1::before,
-.o-vendormanagement-1::before,
-.o-warning-1::before,
-.o-warning1-1::before,
-.o-welcome-1::before,
-.o-whatsappmarketing-1::before {
+  .nao-icon-surveys::before,
+.nao-icon-business-apps::before,
+.nao-icon-calendar::before,
+.nao-icon-cancel-filled::before,
+.nao-icon-crm::before,
+.nao-icon-clock::before,
+.nao-icon-dollar::before,
+.nao-icon-download::before,
+.nao-icon-ecommerce::before,
+.nao-icon-employee-satisfaction::before,
+.nao-icon-enterprise-system::before,
+.nao-icon-envelope-2::before,
+.nao-icon-facebook::before,
+.nao-icon-true-false::before,
+.nao-icon-file::before,
+.nao-icon-filing::before,
+.nao-icon-messaging::before,
+.nao-icon-help::before,
+.nao-icon-information::before,
+.nao-icon-camera::before,
+.nao-icon-document::before,
+.nao-icon-arrow-back::before,
+.nao-icon-arrow-dropdown::before,
+.nao-icon-arrow-dropdown-filled::before,
+.nao-icon-card::before,
+.nao-icon-checkmark::before,
+.nao-icon-cancel::before,
+.nao-icon-box-list::before,
+.nao-icon-notifications::before,
+.nao-icon-search::before,
+.nao-icon-location-time::before,
+.nao-icon-item-list::before,
+.nao-icon-kanban-board::before,
+.nao-icon-privacy::before,
+.nao-icon-lead-management::before,
+.nao-icon-linkedin::before,
+.nao-icon-multiple-choice::before,
+.nao-icon-profile-female::before,
+.nao-icon-yes-no::before,
+.nao-icon-number::before,
+.nao-icon-online-surveys::before,
+.nao-icon-box-2::before,
+.nao-icon-billing-money::before,
+.nao-icon-sticker::before,
+.nao-icon-image-placeholder::before,
+.nao-icon-privacy-1::before,
+.nao-icon-settings::before,
+.nao-icon-stock-boxes::before,
+.nao-icon-upload::before,
+.nao-icon-palette::before,
+.nao-icon-desk-basic::before,
+.nao-icon-elearning::before,
+.nao-icon-email::before,
+.nao-icon-box-1::before,
+.nao-icon-purchasing::before,
+.nao-icon-sales::before,
+.nao-icon-profile-male::before,
+.nao-icon-rating::before,
+.nao-icon-sales-order::before,
+.nao-icon-sms-marketing::before,
+.nao-icon-system::before,
+.nao-icon-thank-you::before,
+.nao-icon-thunder::before,
+.nao-icon-twitter::before,
+.nao-icon-vendor-management::before,
+.nao-icon-warning-1::before,
+.nao-icon-warning-2::before,
+.nao-icon-welcome::before,
+.nao-icon-whatsapp-marketing::before {
     display: inline-block;
   font-family: "nao-system-icons";
   font-style: normal;
@@ -107,74 +107,74 @@
   font-smoothing: antialiased;
   }
 
-  .o-360surveys-1::before { content: "\f8b2"; }
-.o-busapps-1::before { content: "\f8b3"; }
-.o-calendar-1::before { content: "\f8b4"; }
-.o-cancel-1::before { content: "\f8b5"; }
-.o-crm-1::before { content: "\f8b6"; }
-.o-date-1::before { content: "\f8b7"; }
-.o-dollar-1::before { content: "\f8b8"; }
-.o-download-1::before { content: "\f8b9"; }
-.o-ecommerce-1::before { content: "\f8ba"; }
-.o-employeesatisfacttion-1::before { content: "\f8bb"; }
-.o-enterprise-1::before { content: "\f8bc"; }
-.o-envelopee-1::before { content: "\f8bd"; }
-.o-facebook-1::before { content: "\f8be"; }
-.o-false-1::before { content: "\f8bf"; }
-.o-file-1::before { content: "\f8c0"; }
-.o-filing-1::before { content: "\f8c1"; }
-.o-fill-1::before { content: "\f8c2"; }
-.o-help-1::before { content: "\f8c3"; }
-.o-information-1::before { content: "\f8c4"; }
-.o-ionioscamera-1::before { content: "\f8c5"; }
-.o-ioniosperson-1::before { content: "\f8c6"; }
-.o-ionmdarrowback-1::before { content: "\f8c7"; }
-.o-ionmdarrowdropdown-1::before { content: "\f8c8"; }
-.o-ionmdarrowdropdowncircle-1::before { content: "\f8c9"; }
-.o-ionmdcard-1::before { content: "\f8ca"; }
-.o-ionmdcheckmark-1::before { content: "\f8cb"; }
-.o-ionmdclose-1::before { content: "\f8cc"; }
-.o-ionmdlistbox-1::before { content: "\f8cd"; }
-.o-ionmdnotifications-1::before { content: "\f8ce"; }
-.o-ionmdsearch-1::before { content: "\f8cf"; }
-.o-iontimelinef2f-1::before { content: "\f8d0"; }
-.o-itemslist-1::before { content: "\f8d1"; }
-.o-kanban-1::before { content: "\f8d2"; }
-.o-key-1::before { content: "\f8d3"; }
-.o-leadmanagement-1::before { content: "\f8d4"; }
-.o-linkedin-1::before { content: "\f8d5"; }
-.o-multiplechoice-1::before { content: "\f8d6"; }
-.o-newweprofile-1::before { content: "\f8d7"; }
-.o-no-1::before { content: "\f8d8"; }
-.o-number-1::before { content: "\f8d9"; }
-.o-onlinesurveys-1::before { content: "\f8da"; }
-.o-orion_box-1::before { content: "\f8db"; }
-.o-orion_moneybagbitcoin-1::before { content: "\f8dc"; }
-.o-orion_onsalesticker-1::before { content: "\f8dd"; }
-.o-orion_panoramaimage-1::before { content: "\f8de"; }
-.o-orion_privacy-1::before { content: "\f8df"; }
-.o-orion_settings-1::before { content: "\f8e0"; }
-.o-orion_stockboxes-1::before { content: "\f8e1"; }
-.o-orion_uploadtocloud-1::before { content: "\f8e2"; }
-.o-palette-1::before { content: "\f8e3"; }
-.o-pricingbasics-1::before { content: "\f8e4"; }
-.o-pricingelearning-1::before { content: "\f8e5"; }
-.o-pricingemails-1::before { content: "\f8e6"; }
-.o-pricingproducts-1::before { content: "\f8e7"; }
-.o-pricingpurchasing-1::before { content: "\f8e8"; }
-.o-pricingsales-1::before { content: "\f8e9"; }
-.o-profilemale-1::before { content: "\f8ea"; }
-.o-rating-1::before { content: "\f8eb"; }
-.o-salesorder-1::before { content: "\f8ec"; }
-.o-smsmarketing-1::before { content: "\f8ed"; }
-.o-system-1::before { content: "\f8ee"; }
-.o-thankyou-1::before { content: "\f8ef"; }
-.o-thunder-1::before { content: "\f8f0"; }
-.o-twitter-1::before { content: "\f8f1"; }
-.o-vendormanagement-1::before { content: "\f8f2"; }
-.o-warning-1::before { content: "\f8f3"; }
-.o-warning1-1::before { content: "\f8f4"; }
-.o-welcome-1::before { content: "\f8f5"; }
-.o-whatsappmarketing-1::before { content: "\f8f6"; }
+  .nao-icon-surveys::before { content: "\f8b2"; }
+.nao-icon-business-apps::before { content: "\f8b3"; }
+.nao-icon-calendar::before { content: "\f8b4"; }
+.nao-icon-cancel-filled::before { content: "\f8b5"; }
+.nao-icon-crm::before { content: "\f8b6"; }
+.nao-icon-clock::before { content: "\f8b7"; }
+.nao-icon-dollar::before { content: "\f8b8"; }
+.nao-icon-download::before { content: "\f8b9"; }
+.nao-icon-ecommerce::before { content: "\f8ba"; }
+.nao-icon-employee-satisfaction::before { content: "\f8bb"; }
+.nao-icon-enterprise-system::before { content: "\f8bc"; }
+.nao-icon-envelope-2::before { content: "\f8bd"; }
+.nao-icon-facebook::before { content: "\f8be"; }
+.nao-icon-true-false::before { content: "\f8bf"; }
+.nao-icon-file::before { content: "\f8c0"; }
+.nao-icon-filing::before { content: "\f8c1"; }
+.nao-icon-messaging::before { content: "\f8c2"; }
+.nao-icon-help::before { content: "\f8c3"; }
+.nao-icon-information::before { content: "\f8c4"; }
+.nao-icon-camera::before { content: "\f8c5"; }
+.nao-icon-document::before { content: "\f8c6"; }
+.nao-icon-arrow-back::before { content: "\f8c7"; }
+.nao-icon-arrow-dropdown::before { content: "\f8c8"; }
+.nao-icon-arrow-dropdown-filled::before { content: "\f8c9"; }
+.nao-icon-card::before { content: "\f8ca"; }
+.nao-icon-checkmark::before { content: "\f8cb"; }
+.nao-icon-cancel::before { content: "\f8cc"; }
+.nao-icon-box-list::before { content: "\f8cd"; }
+.nao-icon-notifications::before { content: "\f8ce"; }
+.nao-icon-search::before { content: "\f8cf"; }
+.nao-icon-location-time::before { content: "\f8d0"; }
+.nao-icon-item-list::before { content: "\f8d1"; }
+.nao-icon-kanban-board::before { content: "\f8d2"; }
+.nao-icon-privacy::before { content: "\f8d3"; }
+.nao-icon-lead-management::before { content: "\f8d4"; }
+.nao-icon-linkedin::before { content: "\f8d5"; }
+.nao-icon-multiple-choice::before { content: "\f8d6"; }
+.nao-icon-profile-female::before { content: "\f8d7"; }
+.nao-icon-yes-no::before { content: "\f8d8"; }
+.nao-icon-number::before { content: "\f8d9"; }
+.nao-icon-online-surveys::before { content: "\f8da"; }
+.nao-icon-box-2::before { content: "\f8db"; }
+.nao-icon-billing-money::before { content: "\f8dc"; }
+.nao-icon-sticker::before { content: "\f8dd"; }
+.nao-icon-image-placeholder::before { content: "\f8de"; }
+.nao-icon-privacy-1::before { content: "\f8df"; }
+.nao-icon-settings::before { content: "\f8e0"; }
+.nao-icon-stock-boxes::before { content: "\f8e1"; }
+.nao-icon-upload::before { content: "\f8e2"; }
+.nao-icon-palette::before { content: "\f8e3"; }
+.nao-icon-desk-basic::before { content: "\f8e4"; }
+.nao-icon-elearning::before { content: "\f8e5"; }
+.nao-icon-email::before { content: "\f8e6"; }
+.nao-icon-box-1::before { content: "\f8e7"; }
+.nao-icon-purchasing::before { content: "\f8e8"; }
+.nao-icon-sales::before { content: "\f8e9"; }
+.nao-icon-profile-male::before { content: "\f8ea"; }
+.nao-icon-rating::before { content: "\f8eb"; }
+.nao-icon-sales-order::before { content: "\f8ec"; }
+.nao-icon-sms-marketing::before { content: "\f8ed"; }
+.nao-icon-system::before { content: "\f8ee"; }
+.nao-icon-thank-you::before { content: "\f8ef"; }
+.nao-icon-thunder::before { content: "\f8f0"; }
+.nao-icon-twitter::before { content: "\f8f1"; }
+.nao-icon-vendor-management::before { content: "\f8f2"; }
+.nao-icon-warning-1::before { content: "\f8f3"; }
+.nao-icon-warning-2::before { content: "\f8f4"; }
+.nao-icon-welcome::before { content: "\f8f5"; }
+.nao-icon-whatsapp-marketing::before { content: "\f8f6"; }
 
   
