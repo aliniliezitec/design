@@ -13,7 +13,7 @@ export const DropdownCodeBlocks = [
     {
         html: `
         <div class="btn-group" ngbDropdown container="body" [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
-            <button type="button" class="btn btn-text-only-2" ngbDropdownToggle>
+            <button type="button" class="btn btn-text-only" ngbDropdownToggle>
                 Menu
             </button>
             <div class="nao-dropdown-1" ngbDropdownMenu>

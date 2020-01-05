@@ -6,11 +6,13 @@ import { UtilitiesRouting } from './utilities.routing';
 import { TypographyComponent } from './typography/typography.component';
 import { SpacingComponent } from './spacing/spacing.component';
 import { IconsComponent } from './icons/icons.component';
+import { IllustrationComponent } from './illustration/illustration.component';
 
 @NgModule({
   declarations: [
     ColorsComponent,
     IconsComponent,
+    IllustrationComponent,
     TypographyComponent,
     SpacingComponent
   ],

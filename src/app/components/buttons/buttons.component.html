@@ -77,7 +77,6 @@
         In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with
         the <span class="highlighter-warning">.btn-outline-only-*</span> ones to remove all background images and colors on
         any button.
-        TODO: SHOULD THIS HAVE A HOVER EFFECT?
       </p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[3].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
@@ -91,8 +90,10 @@
 
 
     <div class="elem-container">
-      <h2 class="title">Button text 2</h2>
-      <p>A button mainly used on <code>dropdowns</code> that is similar to `text only` but has a hover/active effect</p>
+      <h2 class="title">Sizes</h2>
+      <p>Fancy extra large, larger or smaller buttons? Add <span class="highlighter-warning">.btn-xl</span>, <span class="highlighter-warning">.btn-lg</span> or <span
+          class="highlighter-warning">.btn-sm</span> for additional sizes.
+      </p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[4].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[4].html)" placement="top"
@@ -101,15 +102,6 @@
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[4].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
-    </div>
-
-
-
-    <div class="elem-container">
-      <h2 class="title">Sizes</h2>
-      <p>Fancy extra large, larger or smaller buttons? Add <span class="highlighter-warning">.btn-xl</span>, <span class="highlighter-warning">.btn-lg</span> or <span
-          class="highlighter-warning">.btn-sm</span> for additional sizes.
-      </p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[5].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[5].html)" placement="top"
@@ -126,6 +118,8 @@
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[6].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
+      <p>Create block level buttons—those that span the full width of a parent—by adding <span
+          class="highlighter-warning">.btn-block</span>.</p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[7].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[7].html)" placement="top"
@@ -133,16 +127,6 @@
       </div>
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[7].html | htmlPrismPipe | sanitizeHtml"></div></pre>
-      </div>
-      <p>Create block level buttons—those that span the full width of a parent—by adding <span
-          class="highlighter-warning">.btn-block</span>.</p>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[8].html | sanitizeHtml"></div>
-      <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[8].html)" placement="top"
-          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
-      </div>
-      <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[8].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 
@@ -154,13 +138,13 @@
           class="highlighter-warning">.active</span> (and include the <span
           class="highlighter-warning">aria-pressed="true"</span> attribute) should you
         need to replicate the state programmatically.</p>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[9].html | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[8].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[9].html)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[8].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[9].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[8].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
 
 
@@ -169,13 +153,13 @@
         Make buttons look inactive by adding the disabled boolean attribute to any <span
           class="highlighter-warning">&lt;button&gt;</span> element.
       </p>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[10].html | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[9].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[10].html)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[9].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[10].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[9].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
       <p>Disabled buttons using the <span class="highlighter-warning">&lt;a&gt;</span> element behave a bit different:
       </p>
@@ -196,33 +180,7 @@
           indicate the state of the element to assistive technologies.
         </li>
       </ul>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[11].html | sanitizeHtml"></div>
-      <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[11].html)" placement="top"
-          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
-      </div>
-      <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[11].html | htmlPrismPipe | sanitizeHtml"></div></pre>
-      </div>
-    </div>
-
-    <!-- todo: change nao-bd-example nao-btn-example to [innerHTML]="data[1].html | sanitizeHtml" -->
-    <!-- todo: change the data[number] -->
-    <!-- <div class="elem-container">
-      <h2 class="title">Button plugin</h2>
-      <p>Do more with buttons. Control button states or create groups of buttons for more components like toolbars.
-      </p>
-      <h2 class="title">Toggle states</h2>
-      <p>Add <span class="highlighter-warning">data-toggle="button"</span> to toggle a button’s <span
-          class="highlighter-warning">active</span> state. If you’re pre-toggling a button, you must manually add the
-        <span class="highlighter-warning">.active</span> class <strong>and</strong> <span
-          class="highlighter-warning">aria-pressed="true"</span> to the <span
-          class="highlighter-warning">&lt;button&gt;</span>.</p>
-      <div class="nao-bd-example nao-btn-example">
-        <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-          Single toggle
-        </button>
-      </div>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[10].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[10].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -232,51 +190,5 @@
       </div>
     </div>
 
-    <div class="elem-container">
-      <h2 class="title">Checkbox and radio buttons</h2>
-      <p>
-        Bootstrap’s <span class="highlighter-warning">.button</span> styles can be applied to other elements, such as
-        <span class="highlighter-warning">&lt;label&gt;</span>s, to provide checkbox or radio style button toggling. Add
-        <span class="highlighter-warning">data-toggle="buttons"</span> to a <span
-          class="highlighter-warning">.btn-group</span> containing those modified buttons to enable their toggling
-        behavior via JavaScript and add <span class="highlighter-warning">.btn-group-toggle</span> to style the <span
-          class="highlighter-warning">&lt;input&gt;</span>s within your buttons. <strong>Note that you can create single
-          input-powered buttons or groups of them.</strong>
-      </p>
-      <div class="nao-bd-example nao-btn-example">
-        <div class="btn-group-toggle" data-toggle="buttons">
-          <label class="btn btn-secondary active">
-            <input type="checkbox" checked autocomplete="off"> Checked
-          </label>
-        </div>
-      </div>
-      <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[11].html)" placement="top"
-          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
-      </div>
-      <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[11].html | htmlPrismPipe | sanitizeHtml"></div></pre>
-      </div>
-      <div class="nao-bd-example nao-btn-example">
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <label class="btn btn-secondary active">
-            <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
-          </label>
-          <label class="btn btn-secondary">
-            <input type="radio" name="options" id="option2" autocomplete="off"> Radio
-          </label>
-          <label class="btn btn-secondary">
-            <input type="radio" name="options" id="option3" autocomplete="off"> Radio
-          </label>
-        </div>
-      </div>
-      <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[12].html)" placement="top"
-          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
-      </div>
-      <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[12].html | htmlPrismPipe | sanitizeHtml"></div></pre>
-      </div>
-    </div> -->
   </div>
 </div>

@@ -66,9 +66,6 @@ export const ButtonsCodeBlocks = [
     <button type="button" class="btn btn-outline-only-dark">Dark</button>`},
     {
         html: `
-    <button type="button" class="btn btn-text-only-2">Btn text 2`},
-    {
-        html: `
     <button type="button" class="btn btn-primary btn-xl">Extra Large button</button>
     <button type="button" class="btn btn-secondary btn-xl">Extra Large button</button>`},
     {

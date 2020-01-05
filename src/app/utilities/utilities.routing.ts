@@ -4,6 +4,7 @@ import { ColorsComponent } from './colors/colors.component';
 import { TypographyComponent } from './typography/typography.component';
 import { SpacingComponent } from './spacing/spacing.component';
 import { IconsComponent } from './icons/icons.component';
+import { IllustrationComponent } from './illustration/illustration.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,13 @@ const routes: Routes = [
         component: IconsComponent,
         data: {
           title: 'Icons - Naologic',
+        }
+      },
+      {
+        path: 'illustration',
+        component: IllustrationComponent,
+        data: {
+          title: 'Illustration - Naologic',
         }
       },
       {

@@ -6,702 +6,696 @@ export const IconsCodeBlocks = [
     },
     {
         html: `
-        <span class="o-360surveys-1"></span>
+        <span class="nao-icon-surveys"></span>
         <!-- or -->
         <span data-icon="&#xf8b2;"></span>
 
-        <span class="o-busapps-1"></span>
+        <span class="nao-icon-business-apps"></span>
         <!-- or -->
         <span data-icon="&#xf8b3;"></span>
+        `},
+    {
+        html: `
+        <span class="nao-icon-elearning mb-2" style="font-size: 45px;line-height: 42px;"></span>
         `},
    {
        html: `
        <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-360surveys-1" class="o-360surveys-1 icon-preview"></i>
+            <i id="nao-icon-surveys" class="nao-icon-surveys icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-360surveys-1</span>
+            <span class="first-field">nao-icon-surveys</span>
             <span class="second-field">&amp;#xf8b2;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-busapps-1" class="o-busapps-1 icon-preview"></i>
+            <i id="nao-icon-business-apps" class="nao-icon-business-apps icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-busapps-1</span>
+            <span class="first-field">nao-icon-business-apps</span>
             <span class="second-field">&amp;#xf8b3;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-calendar-1" class="o-calendar-1 icon-preview"></i>
+            <i id="nao-icon-calendar" class="nao-icon-calendar icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-calendar-1</span>
+            <span class="first-field">nao-icon-calendar</span>
             <span class="second-field">&amp;#xf8b4;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-cancel-1" class="o-cancel-1 icon-preview"></i>
+            <i id="nao-icon-cancel-filled" class="nao-icon-cancel-filled icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-cancel-1</span>
+            <span class="first-field">nao-icon-cancel-filled</span>
             <span class="second-field">&amp;#xf8b5;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-crm-1" class="o-crm-1 icon-preview"></i>
+            <i id="nao-icon-crm" class="nao-icon-crm icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-crm-1</span>
+            <span class="first-field">nao-icon-crm</span>
             <span class="second-field">&amp;#xf8b6;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-date-1" class="o-date-1 icon-preview"></i>
+            <i id="nao-icon-clock" class="nao-icon-clock icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-date-1</span>
+            <span class="first-field">nao-icon-clock</span>
             <span class="second-field">&amp;#xf8b7;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-dollar-1" class="o-dollar-1 icon-preview"></i>
+            <i id="nao-icon-dollar" class="nao-icon-dollar icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-dollar-1</span>
+            <span class="first-field">nao-icon-dollar</span>
             <span class="second-field">&amp;#xf8b8;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-download-1" class="o-download-1 icon-preview"></i>
+            <i id="nao-icon-download" class="nao-icon-download icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-download-1</span>
+            <span class="first-field">nao-icon-download</span>
             <span class="second-field">&amp;#xf8b9;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-ecommerce-1" class="o-ecommerce-1 icon-preview"></i>
+            <i id="nao-icon-ecommerce" class="nao-icon-ecommerce icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-ecommerce-1</span>
+            <span class="first-field">nao-icon-ecommerce</span>
             <span class="second-field">&amp;#xf8ba;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-employeesatisfacttion-1" class="o-employeesatisfacttion-1 icon-preview"></i>
+            <i id="nao-icon-employee-satisfaction" class="nao-icon-employee-satisfaction icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-employeesatisfacttion-1</span>
+            <span class="first-field">nao-icon-employee-satisfaction</span>
             <span class="second-field">&amp;#xf8bb;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-enterprise-1" class="o-enterprise-1 icon-preview"></i>
+            <i id="nao-icon-enterprise-system" class="nao-icon-enterprise-system icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-enterprise-1</span>
+            <span class="first-field">nao-icon-enterprise-system</span>
             <span class="second-field">&amp;#xf8bc;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-envelopee-1" class="o-envelopee-1 icon-preview"></i>
+            <i id="nao-icon-envelope-2" class="nao-icon-envelope-2 icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-envelopee-1</span>
+            <span class="first-field">nao-icon-envelope-2</span>
             <span class="second-field">&amp;#xf8bd;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-facebook-1" class="o-facebook-1 icon-preview"></i>
+            <i id="nao-icon-facebook" class="nao-icon-facebook icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-facebook-1</span>
+            <span class="first-field">nao-icon-facebook</span>
             <span class="second-field">&amp;#xf8be;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-false-1" class="o-false-1 icon-preview"></i>
+            <i id="nao-icon-true-false" class="nao-icon-true-false icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-false-1</span>
+            <span class="first-field">nao-icon-true-false</span>
             <span class="second-field">&amp;#xf8bf;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-file-1" class="o-file-1 icon-preview"></i>
+            <i id="nao-icon-file" class="nao-icon-file icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-file-1</span>
+            <span class="first-field">nao-icon-file</span>
             <span class="second-field">&amp;#xf8c0;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-filing-1" class="o-filing-1 icon-preview"></i>
+            <i id="nao-icon-filing" class="nao-icon-filing icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-filing-1</span>
+            <span class="first-field">nao-icon-filing</span>
             <span class="second-field">&amp;#xf8c1;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-fill-1" class="o-fill-1 icon-preview"></i>
+            <i id="nao-icon-messaging" class="nao-icon-messaging icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-fill-1</span>
+            <span class="first-field">nao-icon-messaging</span>
             <span class="second-field">&amp;#xf8c2;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-help-1" class="o-help-1 icon-preview"></i>
+            <i id="nao-icon-help" class="nao-icon-help icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-help-1</span>
+            <span class="first-field">nao-icon-help</span>
             <span class="second-field">&amp;#xf8c3;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-information-1" class="o-information-1 icon-preview"></i>
+            <i id="nao-icon-information" class="nao-icon-information icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-information-1</span>
+            <span class="first-field">nao-icon-information</span>
             <span class="second-field">&amp;#xf8c4;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-ionioscamera-1" class="o-ionioscamera-1 icon-preview"></i>
+            <i id="nao-icon-camera" class="nao-icon-camera icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-ionioscamera-1</span>
+            <span class="first-field">nao-icon-camera</span>
             <span class="second-field">&amp;#xf8c5;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-ioniosperson-1" class="o-ioniosperson-1 icon-preview"></i>
+            <i id="nao-icon-document" class="nao-icon-document icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-ioniosperson-1</span>
+            <span class="first-field">nao-icon-document</span>
             <span class="second-field">&amp;#xf8c6;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-ionmdarrowback-1" class="o-ionmdarrowback-1 icon-preview"></i>
+            <i id="nao-icon-arrow-back" class="nao-icon-arrow-back icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-ionmdarrowback-1</span>
+            <span class="first-field">nao-icon-arrow-back</span>
             <span class="second-field">&amp;#xf8c7;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-ionmdarrowdropdown-1" class="o-ionmdarrowdropdown-1 icon-preview"></i>
+            <i id="nao-icon-arrow-dropdown" class="nao-icon-arrow-dropdown icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-ionmdarrowdropdown-1</span>
+            <span class="first-field">nao-icon-arrow-dropdown</span>
             <span class="second-field">&amp;#xf8c8;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-ionmdarrowdropdowncircle-1" class="o-ionmdarrowdropdowncircle-1 icon-preview"></i>
+            <i id="nao-icon-arrow-dropdown-filled" class="nao-icon-arrow-dropdown-filled icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-ionmdarrowdropdowncircle-1</span>
+            <span class="first-field">nao-icon-arrow-dropdown-filled</span>
             <span class="second-field">&amp;#xf8c9;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-ionmdcard-1" class="o-ionmdcard-1 icon-preview"></i>
+            <i id="nao-icon-card" class="nao-icon-card icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-ionmdcard-1</span>
+            <span class="first-field">nao-icon-card</span>
             <span class="second-field">&amp;#xf8ca;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-ionmdcheckmark-1" class="o-ionmdcheckmark-1 icon-preview"></i>
+            <i id="nao-icon-checkmark" class="nao-icon-checkmark icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-ionmdcheckmark-1</span>
+            <span class="first-field">nao-icon-checkmark</span>
             <span class="second-field">&amp;#xf8cb;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-ionmdclose-1" class="o-ionmdclose-1 icon-preview"></i>
+            <i id="nao-icon-cancel" class="nao-icon-cancel icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-ionmdclose-1</span>
+            <span class="first-field">nao-icon-cancel</span>
             <span class="second-field">&amp;#xf8cc;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-ionmdlistbox-1" class="o-ionmdlistbox-1 icon-preview"></i>
+            <i id="nao-icon-box-list" class="nao-icon-box-list icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-ionmdlistbox-1</span>
+            <span class="first-field">nao-icon-box-list</span>
             <span class="second-field">&amp;#xf8cd;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-ionmdnotifications-1" class="o-ionmdnotifications-1 icon-preview"></i>
+            <i id="nao-icon-notifications" class="nao-icon-notifications icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-ionmdnotifications-1</span>
+            <span class="first-field">nao-icon-notifications</span>
             <span class="second-field">&amp;#xf8ce;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-ionmdsearch-1" class="o-ionmdsearch-1 icon-preview"></i>
+            <i id="nao-icon-search" class="nao-icon-search icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-ionmdsearch-1</span>
+            <span class="first-field">nao-icon-search</span>
             <span class="second-field">&amp;#xf8cf;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-iontimelinef2f-1" class="o-iontimelinef2f-1 icon-preview"></i>
+            <i id="nao-icon-location-time" class="nao-icon-location-time icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-iontimelinef2f-1</span>
+            <span class="first-field">nao-icon-location-time</span>
             <span class="second-field">&amp;#xf8d0;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-itemslist-1" class="o-itemslist-1 icon-preview"></i>
+            <i id="nao-icon-item-list" class="nao-icon-item-list icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-itemslist-1</span>
+            <span class="first-field">nao-icon-item-list</span>
             <span class="second-field">&amp;#xf8d1;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-kanban-1" class="o-kanban-1 icon-preview"></i>
+            <i id="nao-icon-kanban-board" class="nao-icon-kanban-board icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-kanban-1</span>
+            <span class="first-field">nao-icon-kanban-board</span>
             <span class="second-field">&amp;#xf8d2;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-key-1" class="o-key-1 icon-preview"></i>
+            <i id="nao-icon-privacy" class="nao-icon-privacy icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-key-1</span>
+            <span class="first-field">nao-icon-privacy</span>
             <span class="second-field">&amp;#xf8d3;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-leadmanagement-1" class="o-leadmanagement-1 icon-preview"></i>
+            <i id="nao-icon-lead-management" class="nao-icon-lead-management icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-leadmanagement-1</span>
+            <span class="first-field">nao-icon-lead-management</span>
             <span class="second-field">&amp;#xf8d4;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-linkedin-1" class="o-linkedin-1 icon-preview"></i>
+            <i id="nao-icon-linkedin" class="nao-icon-linkedin icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-linkedin-1</span>
+            <span class="first-field">nao-icon-linkedin</span>
             <span class="second-field">&amp;#xf8d5;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-multiplechoice-1" class="o-multiplechoice-1 icon-preview"></i>
+            <i id="nao-icon-multiple-choice" class="nao-icon-multiple-choice icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-multiplechoice-1</span>
+            <span class="first-field">nao-icon-multiple-choice</span>
             <span class="second-field">&amp;#xf8d6;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-newweprofile-1" class="o-newweprofile-1 icon-preview"></i>
+            <i id="nao-icon-profile-female" class="nao-icon-profile-female icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-newweprofile-1</span>
+            <span class="first-field">nao-icon-profile-female</span>
             <span class="second-field">&amp;#xf8d7;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-no-1" class="o-no-1 icon-preview"></i>
+            <i id="nao-icon-yes-no" class="nao-icon-yes-no icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-no-1</span>
+            <span class="first-field">nao-icon-yes-no</span>
             <span class="second-field">&amp;#xf8d8;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-number-1" class="o-number-1 icon-preview"></i>
+            <i id="nao-icon-number" class="nao-icon-number icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-number-1</span>
+            <span class="first-field">nao-icon-number</span>
             <span class="second-field">&amp;#xf8d9;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-onlinesurveys-1" class="o-onlinesurveys-1 icon-preview"></i>
+            <i id="nao-icon-online-surveys" class="nao-icon-online-surveys icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-onlinesurveys-1</span>
+            <span class="first-field">nao-icon-online-surveys</span>
             <span class="second-field">&amp;#xf8da;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-orion_box-1" class="o-orion_box-1 icon-preview"></i>
+            <i id="nao-icon-box-2" class="nao-icon-box-2 icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-orion_box-1</span>
+            <span class="first-field">nao-icon-box-2</span>
             <span class="second-field">&amp;#xf8db;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-orion_moneybagbitcoin-1" class="o-orion_moneybagbitcoin-1 icon-preview"></i>
+            <i id="nao-icon-billing-money" class="nao-icon-billing-money icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-orion_moneybagbitcoin-1</span>
+            <span class="first-field">nao-icon-billing-money</span>
             <span class="second-field">&amp;#xf8dc;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-orion_onsalesticker-1" class="o-orion_onsalesticker-1 icon-preview"></i>
+            <i id="nao-icon-sticker" class="nao-icon-sticker icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-orion_onsalesticker-1</span>
+            <span class="first-field">nao-icon-sticker</span>
             <span class="second-field">&amp;#xf8dd;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-orion_panoramaimage-1" class="o-orion_panoramaimage-1 icon-preview"></i>
+            <i id="nao-icon-image-placeholder" class="nao-icon-image-placeholder icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-orion_panoramaimage-1</span>
+            <span class="first-field">nao-icon-image-placeholder</span>
             <span class="second-field">&amp;#xf8de;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-orion_privacy-1" class="o-orion_privacy-1 icon-preview"></i>
+            <i id="nao-icon-settings" class="nao-icon-settings icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-orion_privacy-1</span>
-            <span class="second-field">&amp;#xf8df;</span>
-        </div>
-        </div>
-
-        <div class="nao-box-showcase mr-6 mb-5">
-        <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-orion_settings-1" class="o-orion_settings-1 icon-preview"></i>
-        </div>
-        <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-orion_settings-1</span>
+            <span class="first-field">nao-icon-settings</span>
             <span class="second-field">&amp;#xf8e0;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-orion_stockboxes-1" class="o-orion_stockboxes-1 icon-preview"></i>
+            <i id="nao-icon-stock-boxes" class="nao-icon-stock-boxes icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-orion_stockboxes-1</span>
+            <span class="first-field">nao-icon-stock-boxes</span>
             <span class="second-field">&amp;#xf8e1;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-orion_uploadtocloud-1" class="o-orion_uploadtocloud-1 icon-preview"></i>
+            <i id="nao-icon-upload" class="nao-icon-upload icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-orion_uploadtocloud-1</span>
+            <span class="first-field">nao-icon-upload</span>
             <span class="second-field">&amp;#xf8e2;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-palette-1" class="o-palette-1 icon-preview"></i>
+            <i id="nao-icon-palette" class="nao-icon-palette icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-palette-1</span>
+            <span class="first-field">nao-icon-palette</span>
             <span class="second-field">&amp;#xf8e3;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-pricingbasics-1" class="o-pricingbasics-1 icon-preview"></i>
+            <i id="nao-icon-desk-basic" class="nao-icon-desk-basic icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-pricingbasics-1</span>
+            <span class="first-field">nao-icon-desk-basic</span>
             <span class="second-field">&amp;#xf8e4;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-pricingelearning-1" class="o-pricingelearning-1 icon-preview"></i>
+            <i id="nao-icon-elearning" class="nao-icon-elearning icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-pricingelearning-1</span>
+            <span class="first-field">nao-icon-elearning</span>
             <span class="second-field">&amp;#xf8e5;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-pricingemails-1" class="o-pricingemails-1 icon-preview"></i>
+            <i id="nao-icon-email" class="nao-icon-email icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-pricingemails-1</span>
+            <span class="first-field">nao-icon-email</span>
             <span class="second-field">&amp;#xf8e6;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-pricingproducts-1" class="o-pricingproducts-1 icon-preview"></i>
+            <i id="nao-icon-box-1" class="nao-icon-box-1 icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-pricingproducts-1</span>
+            <span class="first-field">nao-icon-box-1</span>
             <span class="second-field">&amp;#xf8e7;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-pricingpurchasing-1" class="o-pricingpurchasing-1 icon-preview"></i>
+            <i id="nao-icon-purchasing" class="nao-icon-purchasing icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-pricingpurchasing-1</span>
+            <span class="first-field">nao-icon-purchasing</span>
             <span class="second-field">&amp;#xf8e8;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-pricingsales-1" class="o-pricingsales-1 icon-preview"></i>
+            <i id="nao-icon-sales" class="nao-icon-sales icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-pricingsales-1</span>
+            <span class="first-field">nao-icon-sales</span>
             <span class="second-field">&amp;#xf8e9;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-profilemale-1" class="o-profilemale-1 icon-preview"></i>
+            <i id="nao-icon-profile-male" class="nao-icon-profile-male icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-profilemale-1</span>
+            <span class="first-field">nao-icon-profile-male</span>
             <span class="second-field">&amp;#xf8ea;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-rating-1" class="o-rating-1 icon-preview"></i>
+            <i id="nao-icon-rating" class="nao-icon-rating icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-rating-1</span>
+            <span class="first-field">nao-icon-rating</span>
             <span class="second-field">&amp;#xf8eb;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-salesorder-1" class="o-salesorder-1 icon-preview"></i>
+            <i id="nao-icon-sales-order" class="nao-icon-sales-order icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-salesorder-1</span>
+            <span class="first-field">nao-icon-sales-order</span>
             <span class="second-field">&amp;#xf8ec;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-smsmarketing-1" class="o-smsmarketing-1 icon-preview"></i>
+            <i id="nao-icon-sms-marketing" class="nao-icon-sms-marketing icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-smsmarketing-1</span>
+            <span class="first-field">nao-icon-sms-marketing</span>
             <span class="second-field">&amp;#xf8ed;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-system-1" class="o-system-1 icon-preview"></i>
+            <i id="nao-icon-system" class="nao-icon-system icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-system-1</span>
+            <span class="first-field">nao-icon-system</span>
             <span class="second-field">&amp;#xf8ee;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-thankyou-1" class="o-thankyou-1 icon-preview"></i>
+            <i id="nao-icon-thank-you" class="nao-icon-thank-you icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-thankyou-1</span>
+            <span class="first-field">nao-icon-thank-you</span>
             <span class="second-field">&amp;#xf8ef;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-thunder-1" class="o-thunder-1 icon-preview"></i>
+            <i id="nao-icon-thunder" class="nao-icon-thunder icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-thunder-1</span>
+            <span class="first-field">nao-icon-thunder</span>
             <span class="second-field">&amp;#xf8f0;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-twitter-1" class="o-twitter-1 icon-preview"></i>
+            <i id="nao-icon-twitter" class="nao-icon-twitter icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-twitter-1</span>
+            <span class="first-field">nao-icon-twitter</span>
             <span class="second-field">&amp;#xf8f1;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-vendormanagement-1" class="o-vendormanagement-1 icon-preview"></i>
+            <i id="nao-icon-vendor-management" class="nao-icon-vendor-management icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-vendormanagement-1</span>
+            <span class="first-field">nao-icon-vendor-management</span>
             <span class="second-field">&amp;#xf8f2;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-warning-1" class="o-warning-1 icon-preview"></i>
+            <i id="nao-icon-warning-1" class="nao-icon-warning-1 icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-warning-1</span>
+            <span class="first-field">nao-icon-warning-1</span>
             <span class="second-field">&amp;#xf8f3;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-warning1-1" class="o-warning1-1 icon-preview"></i>
+            <i id="nao-icon-warning-2" class="nao-icon-warning-2 icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-warning1-1</span>
+            <span class="first-field">nao-icon-warning-2</span>
             <span class="second-field">&amp;#xf8f4;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-welcome-1" class="o-welcome-1 icon-preview"></i>
+            <i id="nao-icon-welcome" class="nao-icon-welcome icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-welcome-1</span>
+            <span class="first-field">nao-icon-welcome</span>
             <span class="second-field">&amp;#xf8f5;</span>
         </div>
         </div>
 
         <div class="nao-box-showcase mr-6 mb-5">
         <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="o-whatsappmarketing-1" class="o-whatsappmarketing-1 icon-preview"></i>
+            <i id="nao-icon-whatsapp-marketing" class="nao-icon-whatsapp-marketing icon-preview"></i>
         </div>
         <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">o-whatsappmarketing-1</span>
+            <span class="first-field">nao-icon-whatsapp-marketing</span>
             <span class="second-field">&amp;#xf8f6;</span>
         </div>
         </div>

@@ -7,7 +7,7 @@
         <div *ngSwitchCase="'items'">
           <div class="d-flex align-items-center">
             <div class="d-flex align-items-center justify-content-center menu-icon">
-              <img class="" [src]="elem.icon">
+              <i [class]="elem.icon"></i>
             </div>
             <a href="javascript:void(0)" (click)="toggleMenu(i)" class="sidenav-menu-text">{{ elem.text }}</a>
           </div>
@@ -16,15 +16,6 @@
               <a href="javascript:void(0)" [routerLink]="item.route">{{item.text}}</a>
             </li>
           </ul>
-        </div>
-
-        <div *ngSwitchCase="'homeLink'">
-          <div class="d-flex align-items-center mt-5">
-            <div class="d-flex align-items-center justify-content-center menu-icon">
-              <img class="" [src]="elem.icon">
-            </div>
-            <a href="javascript:void(0)" [routerLink]="elem.route" class="sidenav-menu-text">{{ elem.text }}</a>
-          </div>
 
         </div>
       </div>

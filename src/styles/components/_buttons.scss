@@ -103,45 +103,6 @@ $value in $theme-colors {
   }
 }
 
-// Button text 2
-.btn-text-only-2 {
-  color: var(--primary);
-  background-color: transparent;
-  border-color: transparent;
-  font-size: pixelToRem(16px);
-  font-weight: $font-weight-semibold;
-  padding: pixelToRem(7px) pixelToRem(12px);
-
-  &:hover {
-    color: var(--primary);
-    background-color: var(--light-blue);
-  }
-
-  &.focus,
-  &:focus {
-    box-shadow: none;
-    border-color: transparent;
-    outline: none;
-  }
-
-  &.disabled,
-  &:disabled {
-    color: var(--text-muted);
-    background-color: transparent;
-  }
-
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active,
-  .show>&.dropdown-toggle {
-    background-color: #a0a5ff;
-  }
-
-  &:not(:disabled):not(.disabled):active:focus,
-  &:not(:disabled):not(.disabled).active:focus,
-  .show>&.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.2rem #a0a5ff;
-  }
-}
 
 // btn flip for condensed/relaxed
 .btn-flip {

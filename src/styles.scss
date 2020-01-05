@@ -59,7 +59,6 @@
 
     .title {
       width: 80%;
-      font-weight: $font-weight-lighter;
       color: var(--text-primary);
     }
 
@@ -157,6 +156,7 @@
       background-color: var(--light-bg);
       max-height: 350px;
       overflow: auto;
+      padding-top: 15px;
 
       pre {
         overflow: initial;
@@ -313,5 +313,54 @@
         margin-bottom: 40px;
       }
     }
+  }
+}
+
+.icon-construction-sm {
+  font-size: pixelToRem(11px);
+}
+
+.icon-container-round {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  background-color: var(--text-primary);
+
+  .nao-icon-elearning {
+    font-size: 21px;
+    line-height: 19px;
+    color: var(--white);
+  }
+}
+
+.icon-container-squared {
+  border-radius: 16px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--text-primary);
+
+  .nao-icon-elearning {
+    font-size: 21px;
+    line-height: 19px;
+    color: var(--white);
+  }
+}
+
+.nao-illustration-type {
+  width: 243px;
+  font-size: pixelToRem(12px);
+  color: var(--text-secondary);
+
+  .img-container {
+    width: 243px;
+    height: 186px;
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0;
+    width: 243px;
+    object-fit: contain;
   }
 }
