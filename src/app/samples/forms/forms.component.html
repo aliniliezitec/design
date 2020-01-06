@@ -467,7 +467,7 @@
                       
                       <!-- todo -->
                       <div class="nao-add-item-margin-fix" formArrayName="items">
-                        <div class="pb-3" *ngFor="let item of formGroup2.controls.items.controls; let i = index; let last = last" [formGroupName]="i">
+                        <div class="pb-3" *ngFor="let item of formGroup2.controls.items['controls']; let i = index; let last = last" [formGroupName]="i">
                           <div class="d-flex flex-row py-3">
                             <label class="nao-form-label pr-2">
                               Product
