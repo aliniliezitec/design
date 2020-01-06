@@ -216,3 +216,28 @@
     margin-left: 10px;
   }
 }
+
+// todo: add this to the cards section
+.nao-blue-rounded-box {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 var(--border-light);
+  background-color: var(--lightest);
+  margin: 0 10px 20px 10px;
+  min-height: 28px;
+
+  .box-header {
+    padding: 5px 32px;
+    font-size: pixelToRem(13px);
+    font-weight: $font-weight-bold;
+    color: var(--text-secondary);
+
+    // checkbox position fix
+    .custom-control-label {
+      padding-top: 2px;
+    }
+  }
+
+  .box-container {
+    padding: 25px 32px;
+  }
+}

@@ -105,11 +105,11 @@ export const CardsCodeBlocks = [
             <div class="nao-card-form-1">
             <form>
                 <div class="form-group">
-                    <label class="nao-sm-form-label">Email</label>
+                    <label class="nao-label-sm-3">Email</label>
                     <input name="email" type="text" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label class="nao-sm-form-label">Password</label>
+                    <label class="nao-label-sm-3">Password</label>
                     <input name="password" type="password" class="form-control">
                 </div>
                 <div class="mb-3">
@@ -119,7 +119,7 @@ export const CardsCodeBlocks = [
                 </div>
                     <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" name="rememberMe" id="rememberMe">
-                    <label class="custom-control-label nao-sm-form-label align-self-center" for="rememberMe">Remember me</label>
+                    <label class="custom-control-label nao-label-sm-3 align-self-center" for="rememberMe">Remember me</label>
                     </label>
                 <hr />
                 <a href="javascript:void(0)" class="forgot-pass">

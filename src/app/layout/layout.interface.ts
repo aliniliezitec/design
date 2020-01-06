@@ -9,7 +9,7 @@ export const MenuItems = [
     {
         type: 'items', text: 'Layout', route: '/layout', icon: 'nao-icon-crm', isOpen: false,
         items: [
-            { type: 'item', route: '/layout/overview', text: 'Overview' },
+            { type: 'item', route: '/layout/grid', text: 'Grid' },
             { type: 'item', route: '/layout/components', text: 'Components' },
             // { type: 'item', route: '/layout/utilities', text: 'Utilities for Layout' },
         ]
@@ -36,6 +36,7 @@ export const MenuItems = [
             { type: 'item', route: '/utilities/illustration', text: 'Illustration' },
             { type: 'item', route: '/utilities/typography', text: 'Typography' },
             { type: 'item', route: '/utilities/spacing', text: 'Spacing' },
+            { type: 'item', route: '/utilities/sizing', text: 'Sizing' },
         ]
     },
     {

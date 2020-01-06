@@ -1,0 +1,41 @@
+<div class="nao-docs-wrapper">
+  <div class="elements-container">
+    <h1 class="title">Grid</h1>
+
+    <div class="elem-container">
+      <h2 class="title">No gutters</h2>
+      <p>
+        The gutters between columns in our predefined grid classes can be removed with <code>.no-gutters-[size]</code>. This removes the negative margins from <code>.row</code> and the horizontal padding from all immediate children columns.
+      </p>
+      <ul>
+        <li><code>.no-gutters</code> - removing the gutters for all devices.</li>
+        <li><code>.no-gutters-xs</code> - removing the gutters for <code>xs</code> devices only.</li>
+        <li><code>.no-gutters-sm</code> - removing the gutters for <code>sm</code> devices and down.</li>
+        <li><code>.no-gutters-md</code> - removing the gutters for <code>md</code> devices and down.</li>
+        <li><code>.no-gutters-lg</code> - removing the gutters for <code>lg</code> devices and down.</li>
+        <li><code>.no-gutters-xl</code> - removing the gutters for <code>xl</code> devices and down.</li>
+      </ul>
+      <div class="nao-bd-example" [innerHTML]="data[0].html | sanitizeHtml"></div>
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+      <p>Display flex example:</p>
+      <div class="nao-bd-example" [innerHTML]="data[1].html | sanitizeHtml"></div>
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[1].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+
+    </div>
+  </div>
+
+</div>

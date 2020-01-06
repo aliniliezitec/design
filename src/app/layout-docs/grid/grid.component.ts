@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/app/app.service';
+import { GridCodeBlocks } from './grid.interface';
 
 @Component({
-  selector: 'app-overview',
-  templateUrl: './overview.component.html',
+  selector: 'app-grid',
+  templateUrl: './grid.component.html',
 })
-export class OverviewComponent implements OnInit {
+export class GridComponent implements OnInit {
+  public data = GridCodeBlocks;
   constructor(public readonly appService: AppService) { }
 
   ngOnInit() {

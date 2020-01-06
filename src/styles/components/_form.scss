@@ -1,63 +1,60 @@
-.btn {
-  transition: all .2s ease-in-out;
-}
-
 // Nao form labels
-.nao-form-label-above {
-  font-size: 1rem;
+.nao-label-1 {
+  font-size: pixelToRem(16px);
   color: var(--grey-blue);
 }
 
-.nao-form-label-inline {
+.nao-label-2 {
   font-weight: $font-weight-semibold;
-  font-size: 1rem;
-  padding: 8px 5px;
+  font-size: pixelToRem(16px);
   color: var(--grey-blue);
 }
 
-.nao-sm-form-label {
+.nao-label-sm-2 {
+  font-weight: $font-weight-semibold;
+  font-size: pixelToRem(13px);
+  color: var(--grey-blue);
+}
+
+.nao-label-3 {
+  font-size: pixelToRem(16px);
+  color: var(--text-primary);
+}
+
+.nao-label-sm-3 {
   font-size: pixelToRem(13px);
   color: var(--text-primary);
 }
 
-// todo: sm and large
-// todo: showcase them on the forms page
-
-// Input width
-$input-max-width: (140: 140px,
-  150: 150px,
-  190: 190px,
-  200: 200px,
-  210: 210px,
-  220: 220px,
-  230: 230px,
-  290: 290px,
-  310: 310px,
-  320: 320px,
-  380: 380px,
-  560: 560px);
-
-// Generate max width for input
-@each $size,
-$value in $input-max-width {
-  .nao-input-mw-#{$size} {
-    max-width: $value;
-  }
+// buttons
+.btn {
+  transition: all .2s ease-in-out;
 }
 
 // btn transition
 .nao-btn-transition:hover {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--border-lightest);
+  box-shadow: 0 0.5rem 0.5rem -0.4rem var(--border-lightest);
   transform: translateY(-0.1rem);
 }
 
 .nao-btn-transition:disabled {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--border-lightest);
+  box-shadow: 0 0.5rem 0.5rem -0.4rem var(--border-lightest);
   transform: none;
 }
 
 .nao-btn-transition:focus,
 .nao-btn-transition.focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--border-lightest);
+  box-shadow: 0 0.5rem 0.5rem -0.4rem var(--border-lightest);
   transform: translateY(-0.1rem);
+}
+
+// textare fields
+.nao-textarea {
+  resize: none;
+  height: 75px;
+}
+
+.nao-textarea-lg {
+  resize: none;
+  height: 150px;
 }

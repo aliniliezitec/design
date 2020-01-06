@@ -14,6 +14,9 @@
 @import "./styles/pages/nao-sidenav";
 @import "./styles/pages/layout";
 
+@import "./styles/utilities/grid";
+@import "./styles/utilities/sizing";
+
 @import "~@ng-select/ng-select/scss/default.theme.scss";
 
 // todo: fix the menu for the mobile devices
@@ -29,7 +32,7 @@
     margin-right: 285px;
   }
 
-  @media only screen and (max-width: 576px) {
+  @include media-breakpoint-down(sm) {
     margin-left: 0;
 
     @include rtl {
@@ -60,12 +63,20 @@
     .title {
       width: 80%;
       color: var(--text-primary);
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
     }
 
     .description {
       width: 80%;
       font-size: pixelToRem(18px);
       font-weight: $font-weight-lighter;
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
     }
   }
 
@@ -75,16 +86,28 @@
     .title {
       max-width: 80%;
       font-weight: $font-weight-semibold;
+
+      @include media-breakpoint-down(sm) {
+        max-width: 100%;
+      }
     }
 
     &>p {
       max-width: 80%;
+
+      @include media-breakpoint-down(sm) {
+        max-width: 100%;
+      }
     }
 
     .nao-modal-example {
       .modal-dialog {
         margin: auto;
         padding: 20px;
+
+        @include media-breakpoint-down(sm) {
+          padding: 20px 5px;
+        }
       }
 
       background-color: rgba(233, 238, 249, 0.4)
@@ -109,6 +132,10 @@
       margin-right: 0;
       margin-left: 0;
       border: pixelToRem(5px) solid var(--light-bg);
+
+      @include media-breakpoint-down(sm) {
+        padding: pixelToRem(24px) pixelToRem(15px);
+      }
 
       .form-control {
         margin-bottom: pixelToRem(5px) !important;

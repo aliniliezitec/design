@@ -101,32 +101,32 @@ export const DropdownCodeBlocks = [
     },
     {
         html: `
-        <label class="nao-form-label-above">Simple ng-select</label>
-        <ng-select class="nao-input-mw-210" placeholder="Select a value">
+        <label class="nao-label-1">Simple ng-select</label>
+        <ng-select class="nao-mw-210" placeholder="Select a value">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
         </ng-select>
-        <label class="nao-form-label-above">Ng-select where you can't clear the selected value.</label>
-        <ng-select class="nao-input-mw-210" placeholder="Select a value" [clearable]="false" [clearOnBackspace]="false">
+        <label class="nao-label-1">Ng-select where you can't clear the selected value.</label>
+        <ng-select class="nao-mw-210" placeholder="Select a value" [clearable]="false" [clearOnBackspace]="false">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
         </ng-select>
-        <label class="nao-form-label-above">Ng-select that has the dropdown position above and you could select multiple values.</label>
-        <ng-select class="nao-input-mw-210" placeholder="Select a value" dropdownPosition="top" [multiple]="true">
+        <label class="nao-label-1">Ng-select that has the dropdown position above and you could select multiple values.</label>
+        <ng-select class="nao-mw-210" placeholder="Select a value" dropdownPosition="top" [multiple]="true">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
         </ng-select>
-        <label class="nao-form-label-above">Ng-select that is loading</label>
-        <ng-select class="nao-input-mw-210" placeholder="Select a value" loading="true" loadingText="Nao loading">
+        <label class="nao-label-1">Ng-select that is loading</label>
+        <ng-select class="nao-mw-210" placeholder="Select a value" loading="true" loadingText="Nao loading">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
         </ng-select>
-        <label class="nao-form-label-above">Ng-select with custom <code>not found</code> search message</label>
-        <ng-select class="nao-input-mw-210" placeholder="Select a value" searchable="true" notFoundText="Nao has nothing">
+        <label class="nao-label-1">Ng-select with custom <code>not found</code> search message</label>
+        <ng-select class="nao-mw-210" placeholder="Select a value" searchable="true" notFoundText="Nao has nothing">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
@@ -134,14 +134,14 @@ export const DropdownCodeBlocks = [
     },
     {
         html: `
-        <label class="nao-form-label-above">Default ng-select</label>
-        <ng-select class="nao-input-mw-210" placeholder="Default">
+        <label class="nao-label-1">Default ng-select</label>
+        <ng-select class="nao-mw-210" placeholder="Default">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
         </ng-select>
-        <label class="nao-form-label-above">Small ng-select</label>
-        <ng-select class="nao-ng-select-sm nao-input-mw-210" placeholder="Small">
+        <label class="nao-label-1">Small ng-select</label>
+        <ng-select class="nao-ng-select-sm nao-mw-210" placeholder="Small">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>

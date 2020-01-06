@@ -1,30 +1,58 @@
 // Nao modal 1
 .nao-modal-1 {
-    .modal-header {
-        padding: pixelToRem(15px) pixelToRem(52px);
-        min-height: 75px;
+  .modal-header {
+    padding: pixelToRem(15px) pixelToRem(52px);
+    min-height: 75px;
+
+    @include media-breakpoint-down(xs) {
+      padding: pixelToRem(15px) pixelToRem(20px);
     }
-    .modal-body {
-        padding: pixelToRem(20px) pixelToRem(52px) pixelToRem(15px) pixelToRem(52px);
+  }
+
+  .modal-body {
+    padding: pixelToRem(20px) pixelToRem(52px) pixelToRem(15px) pixelToRem(52px);
+
+    @include media-breakpoint-down(xs) {
+      padding: pixelToRem(20px) pixelToRem(20px) pixelToRem(15px) pixelToRem(20px);
     }
-    .modal-footer {
-        padding: pixelToRem(15px) pixelToRem(30px);
+  }
+
+  .modal-footer {
+    padding: pixelToRem(15px) pixelToRem(30px);
+
+    @include media-breakpoint-down(xs) {
+      padding: pixelToRem(15px) pixelToRem(20px);
     }
+  }
 }
 
 // Nao modal 2
 .nao-modal-2 {
-    .modal-header {
-        padding: pixelToRem(15px) pixelToRem(52px);
-        min-height: 75px;
+  .modal-header {
+    padding: pixelToRem(15px) pixelToRem(52px);
+    min-height: 75px;
+
+    @include media-breakpoint-down(xs) {
+      padding: pixelToRem(15px) pixelToRem(20px);
     }
-    .modal-body {
-        padding: pixelToRem(20px) pixelToRem(52px) pixelToRem(15px) pixelToRem(52px);
-        border-top: solid 1px var(--border-light);
-        border-bottom: solid 1px var(--border-light);
-        background-color: var(--lightest);
+  }
+
+  .modal-body {
+    padding: pixelToRem(20px) pixelToRem(52px) pixelToRem(15px) pixelToRem(52px);
+    border-top: solid 1px var(--border-light);
+    border-bottom: solid 1px var(--border-light);
+    background-color: var(--lightest);
+
+    @include media-breakpoint-down(xs) {
+      padding: pixelToRem(20px) pixelToRem(20px) pixelToRem(15px) pixelToRem(20px);
     }
-    .modal-footer {
-        padding: pixelToRem(15px) pixelToRem(30px);
+  }
+
+  .modal-footer {
+    padding: pixelToRem(15px) pixelToRem(30px);
+
+    @include media-breakpoint-down(xs) {
+      padding: pixelToRem(15px) pixelToRem(20px);
     }
+  }
 }

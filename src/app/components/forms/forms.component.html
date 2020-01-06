@@ -82,8 +82,8 @@
   </div>
 
   <div class="elem-container">
-    <h2 class="title">Validation</h2>
-    <p>We recommend using client side validation, but in case you require server side, you can indicate invalid and valid form fields with <code>.is-invalid</code> and <code>.is-valid</code>. And for showing a validation message, you could use a <code>span</code> with a class of <code>.text-danger</code></p>
+    <h2 class="title">Textarea fields</h2>
+    <p>This classes remove the resize handle and adds a fixed height.</p>
     <div class='nao-bd-example' [innerHTML]="data[4].html | sanitizeHtml"></div>
     <div class="nao-bd-clipboard">
       <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[4].html)" placement="top"
@@ -92,6 +92,36 @@
 
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[4].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+  </div>
+
+  <div class="elem-container">
+    <h2 class="title">Labels</h2>
+    <div class='nao-bd-example d-flex flex-column' [innerHTML]="data[5].html | sanitizeHtml"></div>
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[5].html)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[5].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+  </div>
+
+  
+
+
+  <div class="elem-container">
+    <h2 class="title">Validation</h2>
+    <p>We recommend using client side validation, but in case you require server side, you can indicate invalid and valid form fields with <code>.is-invalid</code> and <code>.is-valid</code>. And for showing a validation message, you could use a <code>span</code> with a class of <code>.text-danger</code></p>
+    <div class='nao-bd-example' [innerHTML]="data[6].html | sanitizeHtml"></div>
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[6].html)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[6].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
   </div>
 </div>

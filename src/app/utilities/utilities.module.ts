@@ -7,6 +7,7 @@ import { TypographyComponent } from './typography/typography.component';
 import { SpacingComponent } from './spacing/spacing.component';
 import { IconsComponent } from './icons/icons.component';
 import { IllustrationComponent } from './illustration/illustration.component';
+import { SizingComponent } from './sizing/sizing.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { IllustrationComponent } from './illustration/illustration.component';
     IconsComponent,
     IllustrationComponent,
     TypographyComponent,
-    SpacingComponent
+    SpacingComponent,
+    SizingComponent
   ],
   imports: [
     CommonModule,

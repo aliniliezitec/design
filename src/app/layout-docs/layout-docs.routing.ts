@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { OverviewComponent } from './overview/overview.component';
+import { GridComponent } from './grid/grid.component';
 import { ComponentsComponent } from './components/components.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'overview',
+    redirectTo: 'grid',
   },
   {
     path: '',
     children: [
       {
-        path: 'overview',
-        component: OverviewComponent,
+        path: 'grid',
+        component: GridComponent,
         data: {
-          title: 'Overview - Naologic',
+          title: 'grid - Naologic',
         }
       },
       {

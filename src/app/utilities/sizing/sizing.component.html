@@ -1,0 +1,51 @@
+<div class="nao-docs-wrapper">
+  <div class="elements-container">
+    <h1 class="title">Sizing</h1>
+    <p class="description">
+      Sizing
+    </p>
+
+    <div class="elem-container">
+      <h2 class="title">Notation</h2>
+      <p>Sizing utilities that apply to all breakpoints, from <code>xs</code> to <code>xl</code>, have no breakpoint abbreviation in them. This
+        is because those classes are applied from <code>min-width: 0</code> and up, and thus are not bound by a media query. The
+        remaining breakpoints, however, do include a breakpoint abbreviation.</p>
+      <p>The classes are named using the format <code>nao-[property]-[size]</code> for <code>xs</code> and <code>[property]-[breakpoint]-[size]</code> for <code>sm</code>, <code>md</code>, <code>lg</code>, and <code>xl</code>.</p>
+      <p>Where property is one of:</p>
+      <ul>
+        <li><code>mw</code> - for classes that set <code>max-width</code>.</li>
+      </ul>
+      <p>Where size is one of:</p>
+      <ul>
+        <li><code>0</code> - for classes that set the <code>max-width</code> to <code>unset</code>.</li>
+        <li><code>140</code> - (by default) for classes that set the <code>max-width</code> to <code>140px</code>.</li>
+        <li><code>150</code> - (by default) for classes that set the <code>max-width</code> to <code>150px</code>.</li>
+        <li><code>190</code> - (by default) for classes that set the <code>max-width</code> to <code>190px</code>.</li>
+        <li><code>200</code> - (by default) for classes that set the <code>max-width</code> to <code>200px</code>.</li>
+        <li><code>210</code> - (by default) for classes that set the <code>max-width</code> to <code>210px</code>.</li>
+        <li><code>220</code> - (by default) for classes that set the <code>max-width</code> to <code>220px</code>.</li>
+        <li><code>230</code> - (by default) for classes that set the <code>max-width</code> to <code>230px</code>.</li>
+        <li><code>290</code> - (by default) for classes that set the <code>max-width</code> to <code>290px</code>.</li>
+        <li><code>300</code> - (by default) for classes that set the <code>max-width</code> to <code>300px</code>.</li>
+        <li><code>310</code> - (by default) for classes that set the <code>max-width</code> to <code>310px</code>.</li>
+        <li><code>320</code> - (by default) for classes that set the <code>max-width</code> to <code>320px</code>.</li>
+        <li><code>380</code> - (by default) for classes that set the <code>max-width</code> to <code>380px</code>.</li>
+        <li><code>560</code> - (by default) for classes that set the <code>max-width</code> to <code>560px</code>.</li>
+      </ul>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Max-width:</h2>
+      <p>You can use this class on all components.</p>
+      <div class="nao-bd-example" [innerHTML]="data[0].html | sanitizeHtml"></div>
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+  </div>
+</div>
