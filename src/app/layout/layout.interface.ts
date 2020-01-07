@@ -18,11 +18,11 @@ export const MenuItems = [
         type: 'items', text: 'Components', route: '/components', icon: 'nao-icon-surveys', isOpen: false,
         items: [
             // { type: 'item', route: '/components/alerts', text: 'Alerts' },
-            // { type: 'item', route: '/components/badge', text: 'Badge' },
             { type: 'item', route: '/components/buttons', text: 'Buttons' },
             { type: 'item', route: '/components/card', text: 'Card' },
             { type: 'item', route: '/components/dropdowns', text: 'Dropdowns' },
             { type: 'item', route: '/components/forms', text: 'Forms' },
+            { type: 'item', route: '/components/input-group', text: 'Input group' },
             { type: 'item', route: '/components/loaders', text: 'Loaders' },
             { type: 'item', route: '/components/modal', text: 'Modal' },
             { type: 'item', route: '/components/table', text: 'Table' },

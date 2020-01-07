@@ -1,4 +1,5 @@
-// Nao form labels
+// *************************************************
+// Nao Form labels
 .nao-label-1 {
   font-size: pixelToRem(16px);
   color: var(--grey-blue);
@@ -26,7 +27,15 @@
   color: var(--text-primary);
 }
 
-// buttons
+// *************************************************
+// Nao Form errors
+.nao-error-sm {
+  font-size: pixelToRem(13px);
+}
+
+
+// *************************************************
+// Buttons
 .btn {
   transition: all .2s ease-in-out;
 }
@@ -48,7 +57,8 @@
   transform: translateY(-0.1rem);
 }
 
-// textare fields
+// *************************************************
+// Nao Textare fields
 .nao-textarea {
   resize: none;
   height: 75px;
@@ -57,4 +67,25 @@
 .nao-textarea-lg {
   resize: none;
   height: 150px;
+}
+
+
+// *************************************************
+// Hide Arrows From Input Number
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+
+// todo: add this to the docs
+.nao-input-danger {
+  border: 1px var(--danger) solid;
 }

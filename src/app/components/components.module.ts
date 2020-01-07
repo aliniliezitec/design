@@ -10,6 +10,7 @@ import { TableComponent } from './tables/table.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { ComponentsPublicFlow } from './components.flowservice';
 import { LoadersComponent } from './loaders/loaders.component';
+import { InputGroupComponent } from './input-group/input-group.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoadersComponent } from './loaders/loaders.component';
     FormsComponent,
     ModalComponent,
     LoadersComponent,
-    TableComponent
+    TableComponent,
+    InputGroupComponent
   ],
   imports: [
     CommonModule,

@@ -1,7 +1,9 @@
+// *************************************************
 // Body
 $body-color: var(--text-primary);
 $enable-validation-icons: false;
 
+// *************************************************
 // Buttons
 $border-radius: .25rem;
 $border-radius-sm: .25rem;
@@ -23,6 +25,7 @@ $btn-padding-y-lg: pixelToRem(9px);
 $btn-padding-x-lg: pixelToRem(20px);
 $btn-font-size-lg:  1rem;
 
+// *************************************************
 // Inputs
 $input-padding-y: pixelToRem(8px);
 $input-padding-x: pixelToRem(5px);
@@ -37,12 +40,14 @@ $input-placeholder-color: var(--border-light);
 // sm
 $input-height-sm: pixelToRem(32px);
 
+// *************************************************
 // Checkbox
 $enable-shadows: true;
 $custom-control-indicator-size: 1.125rem;
 $custom-control-indicator-border-color: #687196;
 $custom-control-indicator-box-shadow: 0 1px 6px 0 #c8cfe9;
 
+// *************************************************
 // Cards
 $card-cap-bg: var(--white);
 $card-border-radius: pixelToRem(8px);
@@ -50,6 +55,7 @@ $card-spacer-y: pixelToRem(15px);
 $card-spacer-x: pixelToRem(42px);
 $card-border-width: 0;
 
+// *************************************************
 // Modals
 // todo change modal sizes
 $modal-content-border-radius: pixelToRem(8px);
@@ -59,6 +65,7 @@ $modal-content-box-shadow-xs: 0 2px 4px 3px #d8dceb;
 $modal-content-box-shadow-sm-up:0 2px 4px 3px #d8dceb;
 $modal-content-border-width: 0;
 
+// *************************************************
 // Dropdowns
 $dropdown-box-shadow: 0 1px 6px rgba(0,0,0,.09);;
 $dropdown-link-hover-color: #4e5155;

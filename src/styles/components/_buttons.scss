@@ -1,3 +1,4 @@
+// *************************************************
 // XL button
 .btn-xl {
   padding: pixelToRem(20px) pixelToRem(65px);
@@ -5,13 +6,15 @@
   font-weight: $font-weight-bold;
 }
 
-// close button for modals
+// *************************************************
+// Close button for modals
 .close {
   &:focus {
     outline: none;
   }
 }
 
+// *************************************************
 // btn text only
 .btn-text-only {
   color: var(--primary);
@@ -52,11 +55,12 @@
   }
 }
 
+// *************************************************
 // Custom button-outline no bg color on hover
 @mixin button-outline-only-variant($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
   color: $color;
   border-color: $color;
-
+  // todo: add hvoer effect
   //   @include hover() {
   //     color: $color-hover;
   //     background-color: $active-background;
@@ -103,7 +107,7 @@ $value in $theme-colors {
   }
 }
 
-
+// *************************************************
 // btn flip for condensed/relaxed
 .btn-flip {
   min-width: 60px;

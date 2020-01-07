@@ -10,7 +10,10 @@
       <h2 class="title">Nao ngbDropdown 1</h2>
       <p>Add <code>nao-dropdown-1</code> class to <code>ngbDropdownMenu</code>.</p>
       <p>Example of placement for ngbDropdown: <code></code><br>
-      Possible values are <code>"top"</code>, <code>"top-left"</code>, <code>"top-right"</code>, <code>"bottom"</code>, <code>"bottom-left"</code>, <code>"bottom-right"</code>, <code>"left"</code>, <code>"left-top"</code>, <code>"left-bottom"</code>, <code>"right"</code>, <code>"right-top"</code>, <code>"right-bottom"</code> </p>
+        Possible values are <code>"top"</code>, <code>"top-left"</code>, <code>"top-right"</code>,
+        <code>"bottom"</code>, <code>"bottom-left"</code>, <code>"bottom-right"</code>, <code>"left"</code>,
+        <code>"left-top"</code>, <code>"left-bottom"</code>, <code>"right"</code>, <code>"right-top"</code>,
+        <code>"right-bottom"</code> </p>
       <div class="nao-bd-example">
         <div class="btn-group" ngbDropdown [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
           <button type="button" class="btn p-0" ngbDropdownToggle>
@@ -34,7 +37,8 @@
 
     <div class="elem-container">
       <div class="nao-bd-example">
-        <div class="btn-group" ngbDropdown container="body" [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
+        <div class="btn-group" ngbDropdown container="body"
+          [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
           <button type="button" class="btn btn-text-only" ngbDropdownToggle>
             Menu
           </button>
@@ -62,7 +66,8 @@
       <P>Add <code>.dropdown-remove-arrow</code> class if you want to remove the right arrow</P>
       <div class="nao-bd-example">
 
-        <div ngbDropdown class="btn-group dropdown-remove-arrow" [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
+        <div ngbDropdown class="btn-group dropdown-remove-arrow"
+          [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
           <a ngbDropdownToggle class="nav" href="javascript:void(0)">
             <span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
               <img class="d-block nao-dropdown-avatar rounded-circle"
@@ -137,7 +142,8 @@
           menu</code> and <code>disabled</code> menu items.</p>
       <div class="nao-bd-example">
 
-        <div class="dropdown-remove-arrow" ngbDropdown container="body" [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
+        <div class="dropdown-remove-arrow" ngbDropdown container="body"
+          [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
           <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>
             Include
           </button>
@@ -169,7 +175,8 @@
       <p>For adding a certain size to dropdown-items, just add a <code>min-width: 240px</code> to them.</p>
       <div class="nao-bd-example">
 
-        <div class="dropdown-remove-arrow" ngbDropdown container="body" [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
+        <div class="dropdown-remove-arrow" ngbDropdown container="body"
+          [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
           <button type="button" class="btn btn-outline-primary" ngbDropdownToggle>
             Include
           </button>
@@ -202,37 +209,39 @@
 
     <div class="elem-container">
       <h2 class="title">Basic ng-select</h2>
-      todo: change the arrow ?
-      todo: change the x ?
-      todo: add box-shadow ?
-      Move this to the form?
+      <p>If you need to remove the blinking cursor when you selected an option, just use <code>#ngSelect1
+          (change)="ngSelect1.blur()"</code>.</p>
       <div class='nao-bd-example nao-ng-select-example'>
         <label class="nao-label-1">Simple ng-select</label>
-        <ng-select class="nao-mw-210" placeholder="Select a value">
+        <ng-select class="nao-mw-210" placeholder="Select a value" [searchable]="false">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
         </ng-select>
         <label class="nao-label-1">Ng-select where you can't clear the selected value.</label>
-        <ng-select class="nao-mw-210" placeholder="Select a value" [clearable]="false" [clearOnBackspace]="false">
+        <ng-select class="nao-mw-210" placeholder="Select a value" [clearable]="false" [clearOnBackspace]="false"
+          #ngSelect1 (change)="ngSelect1.blur()">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
         </ng-select>
-        <label class="nao-label-1">Ng-select that has the dropdown position above and you could select multiple values.</label>
+        <label class="nao-label-1">Ng-select that has the dropdown position above and you could select multiple
+          values.</label>
         <ng-select class="nao-mw-210" placeholder="Select a value" dropdownPosition="top" [multiple]="true">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
         </ng-select>
         <label class="nao-label-1">Ng-select that is loading</label>
-        <ng-select class="nao-mw-210" placeholder="Select a value" loading="true" loadingText="Nao loading">
+        <ng-select class="nao-mw-210" placeholder="Select a value" loading="true" loadingText="Nao loading" #ngSelect2
+          (change)="ngSelect2.blur()">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
         </ng-select>
         <label class="nao-label-1">Ng-select with custom <code>not found</code> search message</label>
-        <ng-select class="nao-mw-210" placeholder="Select a value" searchable="true" notFoundText="Nao has nothing">
+        <ng-select class="nao-mw-210" placeholder="Select a value" searchable="true"
+          notFoundText="Sorry no matching options" #ngSelect3 (change)="ngSelect3.blur()">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
@@ -271,6 +280,27 @@
       </div>
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[7].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Nao ng-select 2</h2>
+      <p>Mainly used in input groups</p>
+      <div class='nao-bd-example nao-ng-select-example'>
+        <label class="nao-label-1">Nao ng-select 2</label>
+        <ng-select class="nao-ng-select-sm-2 nao-mw-230" [clearable]="false" placeholder="Choose type of measurement">
+          <ng-option value="cm">
+            Cm</ng-option>
+          <ng-option value="in">
+            In</ng-option>
+        </ng-select>
+      </div>
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[8].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[8].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 

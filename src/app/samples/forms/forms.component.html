@@ -377,17 +377,19 @@
                         </label>
                       </div>
                     </div>
+
                     <div class="box-container" [hidden]="!formGroup2.get('shipping.hasShipping').value">
                       <div class="d-flex justify-content-center mb-3">
-                        <div class="input-group nao-custom-input-dropdown mr-3">
-                          <label>
+
+                        <div class="input-group nao-input-dropdown-group-1 mr-3">
+                          <label class="nao-label-sm-2">
                             Weight
                           </label>
                           <div class="d-flex flex-column">
-                            <div class="input-group-append nao-custom-select-group">
+                            <div class="input-group-append">
                               <input type="number" class="form-control form-control-sm" formControlName="weight"
-                                placeholder="'words.weight' | flowTranslate" />
-                              <ng-select class="nao-ng-select-6" [clearable]="false" formControlName="weightUnit"
+                                placeholder="Weight" />
+                              <ng-select class="nao-ng-select-sm-2 nao-shippable-ng-select" [clearable]="false" formControlName="weightUnit"
                                 [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.weightUnit').disabled && formGroup2.get('shipping.weightUnit').invalid }">
                                 <ng-option value="kg">
                                   Kg </ng-option>
@@ -397,15 +399,15 @@
                             </div>
                           </div>
                         </div>
-                        <div class="input-group nao-custom-input-dropdown mr-3">
-                          <label>
+                        <div class="input-group nao-input-dropdown-group-1 mr-3">
+                          <label class="nao-label-sm-2">
                             Height
                           </label>
                           <div class="d-flex flex-column">
-                            <div class="input-group-append nao-custom-select-group">
+                            <div class="input-group-append">
                               <input type="number" class="form-control form-control-sm" formControlName="height"
-                                placeholder="'words.height' | flowTranslate" />
-                              <ng-select class="nao-ng-select-6" [clearable]="false" formControlName="heightUnit"
+                                placeholder="height" />
+                              <ng-select class="nao-ng-select-sm-2 nao-shippable-ng-select" [clearable]="false" formControlName="heightUnit"
                                 [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.heightUnit').disabled && formGroup2.get('shipping.heightUnit').invalid }">
                                 <ng-option value="cm">
                                   Cm</ng-option>
@@ -417,15 +419,15 @@
                         </div>
                       </div>
                       <div class="d-flex justify-content-center mb-3">
-                        <div class="input-group nao-custom-input-dropdown mr-3">
-                          <label>
+                        <div class="input-group nao-input-dropdown-group-1 mr-3">
+                          <label class="nao-label-sm-2">
                             Length
                           </label>
                           <div class="d-flex flex-column">
-                            <div class="input-group-append nao-custom-select-group">
+                            <div class="input-group-append">
                               <input type="number" class="form-control form-control-sm" formControlName="length"
-                                placeholder="'words.length' | flowTranslate" />
-                              <ng-select class="nao-ng-select-6" [clearable]="false" formControlName="lengthUnit"
+                                placeholder="Length" />
+                              <ng-select class="nao-ng-select-sm-2 nao-shippable-ng-select" [clearable]="false" formControlName="lengthUnit"
                                 [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.lengthUnit').disabled && formGroup2.get('shipping.lengthUnit').invalid }">
                                 <ng-option value="cm">
                                   Cm</ng-option>
@@ -435,15 +437,15 @@
                             </div>
                           </div>
                         </div>
-                        <div class="input-group nao-custom-input-dropdown mr-3">
-                          <label>
+                        <div class="input-group nao-input-dropdown-group-1 mr-3">
+                          <label class="nao-label-sm-2">
                             Width
                           </label>
                           <div class="d-flex flex-column">
-                            <div class="input-group-append nao-custom-select-group">
+                            <div class="input-group-append">
                               <input type="number" class="form-control form-control-sm" formControlName="width"
-                                placeholder="'words.width' | flowTranslate" />
-                              <ng-select class="nao-ng-select-6" [clearable]="false" formControlName="widthUnit"
+                                placeholder="Width" />
+                              <ng-select class="nao-ng-select-sm-2 nao-shippable-ng-select" [clearable]="false" formControlName="widthUnit"
                                 [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.widthUnit').disabled && formGroup2.get('shipping.widthUnit').invalid }">
                                 <ng-option value="cm">
                                   Cm</ng-option>
@@ -455,6 +457,8 @@
                         </div>
                       </div>
                     </div>
+
+
                   </div>
 
                   <div class="nao-blue-rounded-box">
@@ -473,7 +477,7 @@
                               Product
                             </label>
                             <div class="pb-2">
-                              <ng-select class="nao-ng-select-3 nao-form-input-sm" [searchable]="true" bindLabel="name" bindValue="value"
+                              <ng-select class="nao-ng-select-sm nao-mw-200" [searchable]="true" bindLabel="name" bindValue="value"
                                 [multiple]="false">
                                 <ng-option value="pecans">
                                   Pecans
@@ -493,19 +497,19 @@
                               <label class="nao-form-label">
                                 Ordered quantity
                               </label>
-                              <input type="number" autocomplete="off" class="nao-form-input nao-modal-form-input nao-input-s" formControlName="quantity" [max]="1000" />
+                              <input type="number" autocomplete="off" class="form-control form-control-sm nao-mw-100" formControlName="quantity" [max]="1000" />
                             </div>
                             <div class="d-flex flex-column pr-2">
                               <label class="nao-form-label">
                                 Unit price
                               </label>
-                              <input type="text" autocomplete="off" class="nao-form-input nao-modal-form-input nao-input-s" formControlName="priceSales" />
+                              <input type="text" autocomplete="off" class="form-control form-control-sm nao-mw-100" formControlName="priceSales" />
                             </div>
                             <div class="d-flex flex-column pr-2">
                               <label class="nao-form-label">
                                 Taxes
                               </label>
-                              <input type="text" autocomplete="off" class="nao-form-input nao-modal-form-input nao-input-s" formControlName="salesTax" />
+                              <input type="text" autocomplete="off" class="form-control form-control-sm nao-mw-100" formControlName="salesTax" />
                             </div>
                             <div class="d-flex flex-column mr-auto">
                               <label class="nao-form-label">

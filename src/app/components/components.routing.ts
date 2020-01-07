@@ -7,6 +7,7 @@ import { ModalComponent } from './modal/modal.component';
 import { TableComponent } from './tables/table.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { LoadersComponent } from './loaders/loaders.component';
+import { InputGroupComponent } from './input-group/input-group.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,13 @@ const routes: Routes = [
         component: FormsComponent,
         data: {
           title: 'Forms - Naologic',
+        }
+      },
+      {
+        path: 'input-group',
+        component: InputGroupComponent,
+        data: {
+          title: 'Input group - Naologic',
         }
       },
       {

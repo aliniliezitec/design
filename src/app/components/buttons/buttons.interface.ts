@@ -2,9 +2,6 @@ export const ButtonsCodeBlocks = [
     {
         html: `
     <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-warning">Warning</button>
     <button type="button" class="btn btn-dark-blue">Dark-blue</button>
     <br>
     <button class="btn btn-text-only">Button text only</button>`},
@@ -42,7 +39,6 @@ export const ButtonsCodeBlocks = [
     <button type="button" class="btn btn-outline-primary">Primary</button>
     <button type="button" class="btn btn-outline-success">Success</button>
     <button type="button" class="btn btn-outline-danger">Danger</button>
-    <button type="button" class="btn btn-outline-warning">Warning</button>
     <button type="button" class="btn btn-outline-dark-blue">Dark-blue</button>
     `},
     // {
@@ -68,7 +64,6 @@ export const ButtonsCodeBlocks = [
     <button type="button" class="btn btn-outline-only-primary">Primary</button>
     <button type="button" class="btn btn-outline-only-success">Success</button>
     <button type="button" class="btn btn-outline-only-danger">Danger</button>
-    <button type="button" class="btn btn-outline-only-warning">Warning</button>
     <button type="button" class="btn btn-outline-only-dark-blue">Dark-blue</button>
     `},
     // {

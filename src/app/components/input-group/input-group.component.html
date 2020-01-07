@@ -1,0 +1,52 @@
+<div class="nao-docs-wrapper">
+  <div class="elements-container">
+    <h1 class="title">Input Group</h1>
+    <p class="description"></p>
+
+    <div class="elem-container">
+      <h2 class="title">Small Input + small nao-ng-select-2</h2>
+      <p>For a different size <code>ng-select</code> you need to change the <code>min-width</code></p>
+      <p>For a different size <code>input</code> you need to change the <code>max-width</code>/<code>min-width</code></p>
+      <!-- todo: check the size problem for input field -->
+      <div class="nao-bd-example">
+
+        <div class="input-group nao-input-dropdown-group-1" [formGroup]="formGroupHeight">
+          <label class="nao-label-sm-2">
+            Height
+          </label>
+          <div class="d-flex flex-column">
+            <div class="input-group-append">
+              <input type="number" class="form-control form-control-sm nao-mw-140" placeholder="Height" formControlName="height" />
+              <ng-select class="nao-ng-select-sm-2" style="min-width: 70px;" [clearable]="false" formControlName="heightUnit">
+                <ng-option value="cm"> 
+                  Cm</ng-option>
+                <ng-option value="in">
+                  In</ng-option>
+              </ng-select>
+            </div>
+            <span class="text-danger nao-error-sm nao-mw-210">This field is required.</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].ts1)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[0].ts1 | typescriptPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+
+    </div>
+
+  </div>
+</div>

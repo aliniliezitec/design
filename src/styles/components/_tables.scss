@@ -1,3 +1,5 @@
+// *************************************************
+// Nao simple table
 .nao-simple-table {
   .table {
     position: relative;
@@ -41,6 +43,8 @@
   overflow: auto;
 }
 
+// *************************************************
+// Nao card table 1
 .nao-card-table-1 {
   border-radius: 8px;
   box-shadow: $nao-card-box-shadow;
@@ -258,7 +262,8 @@
   }
 }
 
-// nao table btn group for condensed/relaxed
+// *************************************************
+// Nao Table btn group for condensed/relaxed
 .nao-condensed-btn-group {
   margin-left: auto;
 
@@ -289,6 +294,8 @@
   }
 }
 
+// *************************************************
+// Nao condensed table
 .nao-condensed-table {
   .table-body {
     td {

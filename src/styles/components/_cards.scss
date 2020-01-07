@@ -1,9 +1,11 @@
-// card
+// *************************************************
+// Default Card 
 .card {
   box-shadow: $nao-card-box-shadow;
 }
 
-// nao-card-1
+// *************************************************
+// Nao card 1
 .nao-card-1 {
   .card-body {
     background-color: var(--lightest);
@@ -12,7 +14,8 @@
   }
 }
 
-// nao card small for dashboard
+// *************************************************
+// Nao card small for dashboard
 .nao-card-sm-dashboard {
   width: 276px;
   height: 110px;
@@ -40,7 +43,8 @@
   }
 }
 
-// nao card large for dashboard
+// *************************************************
+// Nao card large for dashboard
 .nao-dashboard-lg-card {
   width: 576px;
   height: 420px;
@@ -75,6 +79,7 @@
   }
 }
 
+// *************************************************
 // Nao card for boards
 .nao-card-board {
   width: 325px;
@@ -94,6 +99,8 @@
   }
 }
 
+// *************************************************
+// todo: finish after icons
 // Nao card for tickets
 .nao-kanban-ticket {
   width: 248px;
@@ -239,5 +246,11 @@
 
   .box-container {
     padding: 25px 32px;
+
+
+  }
+
+  .nao-shippable-ng-select {
+    min-width: 55px;
   }
 }
