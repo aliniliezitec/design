@@ -145,13 +145,13 @@
                       <ng-select class="nao-mw-0 nao-mw-sm-210" [searchable]="true" bindLabel="name" bindValue="value"
                         [multiple]="false" clearAllText="Clear" notFoundText="Not found" [clearable]="false"
                         formControlName="countryId">
-                        <ng-option value="1">
+                        <ng-option value="usa">
                           USA
                         </ng-option>
-                        <ng-option value="2">
+                        <ng-option value=de>
                           Germany
                         </ng-option>
-                        <ng-option value="3">
+                        <ng-option value="fr">
                           France
                         </ng-option>
                       </ng-select>
@@ -384,6 +384,7 @@
 
                     <div class="box-container" [hidden]="!formGroup2.get('shipping.hasShipping').value">
                       <div class="d-flex justify-content-center">
+                        
                         <div class="nao-grid-4-input-dropdown">
                           <div class="input-group nao-input-dropdown-group-1 nao-shippable-input-group">
                             <label class="nao-label-sm-2 mr-auto">
@@ -598,6 +599,124 @@
     <h2 class="title">Sign up now to start your free trial</h2>
 
     <div class="nao-bd-example">
+<!-- todo -->
+      <div class="nao-crm-free-trial-form bg-white" style="max-width: 450px;">
+        <form [formGroup]="formGroup3">
+          <div class="form-intro">
+            Sign up now to start your free trial!
+          </div>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label for="firstName">First name</label>
+              <input class="form-control nao-form-input nao-input-size-small mb-1" autocomplete="false" type="text"
+                formControlName="firstName" placeholder="Meg" id="firstName">
+              <span [hidden]="formGroup3.get('firstName').pristine || formGroup3.get('firstName').valid"
+                class="text-danger">
+                First name is required
+              </span>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="lastName">Last name</label>
+              <input class="form-control nao-form-input nao-input-size-small mb-1" autocomplete="false" type="text"
+                formControlName="lastName" placeholder="Griffin" id="lastName" />
+              <span [hidden]="formGroup3.get('lastName').pristine || formGroup3.get('lastName').valid"
+                class="text-danger">
+                Last name is required
+              </span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control nao-form-input mb-1" autocomplete="false" type="text" formControlName="email"
+              placeholder="elon@musk.com" id="email" />
+            <span [hidden]="formGroup3.get('email').pristine || formGroup3.get('email').valid" class="text-danger">
+              Email is required
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="companyName">Company</label>
+            <input class="form-control nao-form-input mb-1" autocomplete="false" type="text"
+              formControlName="companyName" placeholder="SpaceX Inc" id="companyName" />
+            <span [hidden]="formGroup3.get('companyName').pristine || formGroup3.get('companyName').valid"
+              class="text-danger">
+              Company is required
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label>Employees</label>
+            <br />
+            <ng-select class="nao-ng-select-3 nao-ng-select-fix" [searchable]="false" formControlName="employees"
+              [ngClass]="{'nao-input-danger': !formGroup3.get('employees').disabled && formGroup3.get('employees').invalid }">
+              <ng-option [value]="10">
+                10
+              </ng-option>
+              <ng-option [value]="50">
+                50
+              </ng-option>
+              <ng-option [value]="10">
+                100
+              </ng-option>
+            </ng-select>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control nao-form-input mb-1" autocomplete="false" type="password"
+              formControlName="password" placeholder="SpaceX Inc" id="password" />
+            <span [hidden]="formGroup3.get('password').pristine || formGroup3.get('password').valid" class="text-danger">
+              Password field is required
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm password</label>
+            <input class="form-control nao-form-input mb-1" autocomplete="false" type="password"
+              formControlName="confirmPassword" placeholder="SpaceX Inc" id="confirmPassword" />
+            <span [hidden]="formGroup3.get('confirmPassword').pristine || formGroup3.get('confirmPassword').valid"
+              class="text-danger">
+              Password field is required
+            </span>
+          </div>
+          <div class="form-group">
+            <label>Country</label>
+
+            <ng-select class="nao-ng-select-3 nao-ng-select-fix" bindLabel="name" bindValue="value" [multiple]="false"
+              formControlName="countryId">
+              <ng-option value="usa">
+                USA
+              </ng-option>
+              <ng-option value=de>
+                Germany
+              </ng-option>
+              <ng-option value="fr">
+                France
+              </ng-option>
+            </ng-select>
+          </div>
+          <label class="custom-control custom-checkbox mb-3 mt-3">
+            <input class="custom-control-input" type="checkbox" formControlName="agreeToNewsletters">
+            <span class="custom-control-label">
+              I want naologic to send me email updates about new products and services
+            </span>
+          </label>
+          <button type="button" data-style="expand-right" class="btn btn-primary btn-block btn-lg "
+            [disabled]="formGroup3.pristine || !formGroup3.valid">Register</button>
+
+
+          <div class="nao-terms-fix mt-2">
+            By signing up, you agree to our <a href="https://naologic.com/legal/terms-and-conditions"
+              target="_blank">Terms of Service</a> and
+            <a href="https://naologic.com/legal/privacy-policy" target="_blank">Privacy Notice</a>
+          </div>
+          <div class="nao-separator"></div>
+          <div class="d-flex align-items-center nao-free-crm-back-login pl-4 pl-sm-0">
+            <div>Already have a user? <a [routerLink]="['/', 'login']">Sign in</a></div>
+          </div>
+        </form>
+      </div>
+
 
     </div>
 

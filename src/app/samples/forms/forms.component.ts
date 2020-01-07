@@ -64,6 +64,18 @@ export class FormsComponent {
     }),
   });
 
+  public formGroup3 = new FormGroup({
+    firstName: new FormControl('', { validators: [Validators.required] }),
+    lastName: new FormControl('', { validators: [Validators.required] }),
+    email: new FormControl('', { validators: [Validators.required, Validators.email] }),
+    employees: new FormControl(''),
+    password: new FormControl('', { validators: [Validators.required] }),
+    confirmPassword: new FormControl('', { validators: [Validators.required] }),
+    countryId: new FormControl(''),
+    companyName: new FormControl(''),
+    agreeToNewsletters: new FormControl(true),
+  });
+
   constructor(public readonly appService: AppService) { }
 
   /**

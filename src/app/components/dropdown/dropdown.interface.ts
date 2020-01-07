@@ -108,8 +108,7 @@ export const DropdownCodeBlocks = [
           <ng-option>Option 3</ng-option>
         </ng-select>
         <label class="nao-label-1">Ng-select where you can't clear the selected value.</label>
-        <ng-select class="nao-mw-210" placeholder="Select a value" [clearable]="false" [clearOnBackspace]="false"
-        #ngSelect1 (change)="ngSelect1.blur()">
+        <ng-select class="nao-mw-210" placeholder="Select a value" [clearable]="false" [clearOnBackspace]="false">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
@@ -121,15 +120,13 @@ export const DropdownCodeBlocks = [
           <ng-option>Option 3</ng-option>
         </ng-select>
         <label class="nao-label-1">Ng-select that is loading</label>
-        <ng-select class="nao-mw-210" placeholder="Select a value" loading="true" loadingText="Nao loading"
-        #ngSelect2 (change)="ngSelect2.blur()">
+        <ng-select class="nao-mw-210" placeholder="Select a value" loading="true" loadingText="Nao loading">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
         </ng-select>
         <label class="nao-label-1">Ng-select with custom <code>not found</code> search message</label>
-        <ng-select class="nao-mw-210" placeholder="Select a value" searchable="true" notFoundText="Sorry no matching options"
-        #ngSelect3 (change)="ngSelect3.blur()">
+        <ng-select class="nao-mw-210" placeholder="Select a value" searchable="true" notFoundText="Sorry no matching options">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>

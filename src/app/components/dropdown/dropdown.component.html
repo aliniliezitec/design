@@ -209,8 +209,6 @@
 
     <div class="elem-container">
       <h2 class="title">Basic ng-select</h2>
-      <p>If you need to remove the blinking cursor when you selected an option, just use <code>#ngSelect1
-          (change)="ngSelect1.blur()"</code>.</p>
       <div class='nao-bd-example nao-ng-select-example'>
         <label class="nao-label-1">Simple ng-select</label>
         <ng-select class="nao-mw-210" placeholder="Select a value" [searchable]="false">
@@ -219,8 +217,7 @@
           <ng-option>Option 3</ng-option>
         </ng-select>
         <label class="nao-label-1">Ng-select where you can't clear the selected value.</label>
-        <ng-select class="nao-mw-210" placeholder="Select a value" [clearable]="false" [clearOnBackspace]="false"
-          #ngSelect1 (change)="ngSelect1.blur()">
+        <ng-select class="nao-mw-210" placeholder="Select a value" [clearable]="false" [clearOnBackspace]="false">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
@@ -233,15 +230,14 @@
           <ng-option>Option 3</ng-option>
         </ng-select>
         <label class="nao-label-1">Ng-select that is loading</label>
-        <ng-select class="nao-mw-210" placeholder="Select a value" loading="true" loadingText="Nao loading" #ngSelect2
-          (change)="ngSelect2.blur()">
+        <ng-select class="nao-mw-210" placeholder="Select a value" loading="true" loadingText="Nao loading">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
         </ng-select>
         <label class="nao-label-1">Ng-select with custom <code>not found</code> search message</label>
         <ng-select class="nao-mw-210" placeholder="Select a value" searchable="true"
-          notFoundText="Sorry no matching options" #ngSelect3 (change)="ngSelect3.blur()">
+          notFoundText="Sorry no matching options">
           <ng-option>Option 1</ng-option>
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
