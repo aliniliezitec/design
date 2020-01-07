@@ -6,6 +6,7 @@
     <div class="elem-container">
       <h2 class="title">Simple table</h2>
       <div class="nao-bd-example" [innerHTML]="data[0].html | sanitizeHtml"></div>
+    
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -48,6 +49,7 @@
       </ul>
 
       <div class="nao-bd-example" [innerHTML]="data[1].html | sanitizeHtml"></div>
+   
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>

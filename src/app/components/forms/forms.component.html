@@ -31,6 +31,7 @@
       <h2 class="title">Overview</h2>
 
       <div class="nao-bd-example" [innerHTML]="data[0].html | sanitizeHtml"> </div>
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -45,11 +46,11 @@
   <div class="elem-container">
     <h2 class="title">Form controls</h2>
     <div class="nao-bd-example" [innerHTML]="data[1].html | sanitizeHtml"></div>
+
     <div class="nao-bd-clipboard">
       <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].html)" placement="top"
         ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
     </div>
-
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[1].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
@@ -57,11 +58,11 @@
   <div class="elem-container">
     <h2 class="title">Sizing</h2>
     <div class='nao-bd-example' [innerHTML]="data[2].html | sanitizeHtml"></div>
+
     <div class="nao-bd-clipboard">
       <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].html)" placement="top"
         ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
     </div>
-
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[2].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
@@ -71,11 +72,11 @@
     <h2 class="title">Max-width</h2>
     <p>You can add this to textare, dropdowns and other form elements</p>
     <div class='nao-bd-example' [innerHTML]="data[3].html | sanitizeHtml"></div>
+
     <div class="nao-bd-clipboard">
       <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[3].html)" placement="top"
         ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
     </div>
-
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[3].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
@@ -85,11 +86,11 @@
     <h2 class="title">Textarea fields</h2>
     <p>This classes remove the resize handle and adds a fixed height.</p>
     <div class='nao-bd-example' [innerHTML]="data[4].html | sanitizeHtml"></div>
+
     <div class="nao-bd-clipboard">
       <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[4].html)" placement="top"
         ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
     </div>
-
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[4].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
@@ -166,11 +167,11 @@
     </div>
 
     <div class='nao-bd-example d-flex flex-column' [innerHTML]="data[5].html | sanitizeHtml"></div>
+
     <div class="nao-bd-clipboard">
       <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[5].html)" placement="top"
         ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
     </div>
-
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[5].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
@@ -185,11 +186,11 @@
       valid form fields with <code>.is-invalid</code> and <code>.is-valid</code>. And for showing a validation message,
       you could use a <code>span</code> with a class of <code>.text-danger</code></p>
     <div class='nao-bd-example' [innerHTML]="data[6].html | sanitizeHtml"></div>
+    
     <div class="nao-bd-clipboard">
       <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[6].html)" placement="top"
         ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
     </div>
-
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[6].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
