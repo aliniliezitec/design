@@ -246,11 +246,11 @@ export const FormsCodeBlocks = [
         twitter: new FormControl(''),
         website: new FormControl(''),
       });`},
-      {
-        html:`
-        tsss`,
-        // todo: add name required
-        ts1: `
+  {
+    html: `
+    tsss`,
+    // todo: add name required
+    ts1: `
         public formGroup2 = new FormGroup({
           categoryId: new FormControl(''),
           description: new FormControl(''),
@@ -276,5 +276,8 @@ export const FormsCodeBlocks = [
             widthUnit: new FormControl('cm'),
           }),
         });`
-      }
+  },
+  {
+    html: `
+  ` }
 ];

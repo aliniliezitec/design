@@ -260,7 +260,7 @@
 
 
             <div class="modal-header default pb-3 pt-4">
-              <h6 class="modal-title pl-4 mr-3">
+              <h6 class="modal-title pl-4 ml-2">
                 Add new product
               </h6>
             </div>
@@ -280,7 +280,8 @@
                           </label>
                         </div>
                         <div class="col">
-                          <input type="text" autocomplete="off" class="form-control form-control-sm nao-mw-210" formControlName="name"
+                          <input type="text" autocomplete="off"
+                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="name"
                             placeholder="Name" />
                         </div>
                       </div>
@@ -291,8 +292,8 @@
                           </label>
                         </div>
                         <div class="col">
-                          <textarea class="form-control form-control-sm nao-textarea nao-mw-300" formControlName="description"
-                            placeholder="Description"></textarea>
+                          <textarea class="form-control form-control-sm nao-textarea nao-mw-0 nao-mw-sm-300"
+                            formControlName="description" placeholder="Description"></textarea>
                         </div>
                       </div>
                     </div>
@@ -310,7 +311,8 @@
                           </label>
                         </div>
                         <div class="col">
-                          <input type="number" autocomplete="off" class="form-control form-control-sm nao-mw-210" formControlName="priceSales"
+                          <input type="number" autocomplete="off"
+                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="priceSales"
                             placeholder="Price" />
                         </div>
                       </div>
@@ -321,7 +323,8 @@
                           </label>
                         </div>
                         <div class="col">
-                          <input type="number" autocomplete="off" class="form-control form-control-sm nao-mw-210" formControlName="priceCost"
+                          <input type="number" autocomplete="off"
+                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="priceCost"
                             placeholder="Cost" />
                         </div>
                       </div>
@@ -339,7 +342,8 @@
                           </label>
                         </div>
                         <div class="col">
-                          <input type="text" autocomplete="off" class="form-control form-control-sm nao-mw-210" formControlName="sku"
+                          <input type="text" autocomplete="off"
+                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="sku"
                             placeholder="Sku" />
                         </div>
                       </div>
@@ -350,7 +354,8 @@
                           </label>
                         </div>
                         <div class="col">
-                          <input type="text" autocomplete="off" class="form-control form-control-sm nao-mw-210" formControlName="barcode"
+                          <input type="text" autocomplete="off"
+                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="barcode"
                             placeholder="Barcode" />
                         </div>
                       </div>
@@ -361,7 +366,8 @@
                           </label>
                         </div>
                         <div class="col">
-                          <input type="number" autocomplete="off" class="form-control form-control-sm nao-mw-210" formControlName="quantity"
+                          <input type="number" autocomplete="off"
+                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="quantity"
                             placeholder="Quantity" />
                         </div>
                       </div>
@@ -372,88 +378,91 @@
                       <div class="custom-control custom-checkbox">
                         <input class="custom-control-input" type="checkbox" name="checkbox" id="shipping" value="false"
                           formControlName="hasShipping" />
-                        <label class="custom-control-label" for="shipping">
+                        <label class="custom-control-label pt-1" for="shipping">
                           Shippable
                         </label>
                       </div>
                     </div>
 
                     <div class="box-container" [hidden]="!formGroup2.get('shipping.hasShipping').value">
-                      <div class="d-flex justify-content-center mb-3">
+                      <div class="d-flex justify-content-center">
+                        <div class="nao-grid-4-input-dropdown">
+                          <div class="input-group nao-input-dropdown-group-1 nao-shippable-input-group">
+                            <label class="nao-label-sm-2 mr-auto">
+                              Weight
+                            </label>
+                            <div class="d-flex flex-column">
+                              <div class="input-group-append">
+                                <input type="number" class="form-control form-control-sm" formControlName="weight"
+                                  placeholder="Weight" />
+                                <ng-select class="nao-ng-select-sm-2" [clearable]="false" formControlName="weightUnit"
+                                  [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.weightUnit').disabled && formGroup2.get('shipping.weightUnit').invalid }">
+                                  <ng-option value="kg">
+                                    Kg </ng-option>
+                                  <ng-option value="lbs">
+                                    Lbs </ng-option>
+                                </ng-select>
+                              </div>
+                            </div>
+                          </div>
 
-                        <div class="input-group nao-input-dropdown-group-1 mr-3">
-                          <label class="nao-label-sm-2">
-                            Weight
-                          </label>
-                          <div class="d-flex flex-column">
-                            <div class="input-group-append">
-                              <input type="number" class="form-control form-control-sm" formControlName="weight"
-                                placeholder="Weight" />
-                              <ng-select class="nao-ng-select-sm-2 nao-shippable-ng-select" [clearable]="false" formControlName="weightUnit"
-                                [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.weightUnit').disabled && formGroup2.get('shipping.weightUnit').invalid }">
-                                <ng-option value="kg">
-                                  Kg </ng-option>
-                                <ng-option value="lbs">
-                                  Lbs </ng-option>
-                              </ng-select>
+                          <div class="input-group nao-input-dropdown-group-1 nao-shippable-input-group">
+                            <label class="nao-label-sm-2 mr-auto">
+                              Height
+                            </label>
+                            <div class="d-flex flex-column">
+                              <div class="input-group-append">
+                                <input type="number" class="form-control form-control-sm" formControlName="height"
+                                  placeholder="height" />
+                                <ng-select class="nao-ng-select-sm-2" [clearable]="false" formControlName="heightUnit"
+                                  [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.heightUnit').disabled && formGroup2.get('shipping.heightUnit').invalid }">
+                                  <ng-option value="cm">
+                                    Cm</ng-option>
+                                  <ng-option value="in">
+                                    In</ng-option>
+                                </ng-select>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="input-group nao-input-dropdown-group-1 mr-3">
-                          <label class="nao-label-sm-2">
-                            Height
-                          </label>
-                          <div class="d-flex flex-column">
-                            <div class="input-group-append">
-                              <input type="number" class="form-control form-control-sm" formControlName="height"
-                                placeholder="height" />
-                              <ng-select class="nao-ng-select-sm-2 nao-shippable-ng-select" [clearable]="false" formControlName="heightUnit"
-                                [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.heightUnit').disabled && formGroup2.get('shipping.heightUnit').invalid }">
-                                <ng-option value="cm">
-                                  Cm</ng-option>
-                                <ng-option value="in">
-                                  In</ng-option>
-                              </ng-select>
+
+                          <div class="input-group nao-input-dropdown-group-1 nao-shippable-input-group">
+                            <label class="nao-label-sm-2 mr-auto">
+                              Length
+                            </label>
+                            <div class="d-flex flex-column">
+                              <div class="input-group-append">
+                                <input type="number" class="form-control form-control-sm" formControlName="length"
+                                  placeholder="Length" />
+                                <ng-select class="nao-ng-select-sm-2" [clearable]="false" formControlName="lengthUnit"
+                                  [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.lengthUnit').disabled && formGroup2.get('shipping.lengthUnit').invalid }">
+                                  <ng-option value="cm">
+                                    Cm</ng-option>
+                                  <ng-option value="in">
+                                    In</ng-option>
+                                </ng-select>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="d-flex justify-content-center mb-3">
-                        <div class="input-group nao-input-dropdown-group-1 mr-3">
-                          <label class="nao-label-sm-2">
-                            Length
-                          </label>
-                          <div class="d-flex flex-column">
-                            <div class="input-group-append">
-                              <input type="number" class="form-control form-control-sm" formControlName="length"
-                                placeholder="Length" />
-                              <ng-select class="nao-ng-select-sm-2 nao-shippable-ng-select" [clearable]="false" formControlName="lengthUnit"
-                                [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.lengthUnit').disabled && formGroup2.get('shipping.lengthUnit').invalid }">
-                                <ng-option value="cm">
-                                  Cm</ng-option>
-                                <ng-option value="in">
-                                  In</ng-option>
-                              </ng-select>
+
+                          <div class="input-group nao-input-dropdown-group-1 nao-shippable-input-group">
+                            <label class="nao-label-sm-2 mr-auto">
+                              Width
+                            </label>
+                            <div class="d-flex flex-column">
+                              <div class="input-group-append">
+                                <input type="number" class="form-control form-control-sm" formControlName="width"
+                                  placeholder="Width" />
+                                <ng-select class="nao-ng-select-sm-2" [clearable]="false" formControlName="widthUnit"
+                                  [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.widthUnit').disabled && formGroup2.get('shipping.widthUnit').invalid }">
+                                  <ng-option value="cm">
+                                    Cm</ng-option>
+                                  <ng-option value="in">
+                                    In</ng-option>
+                                </ng-select>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="input-group nao-input-dropdown-group-1 mr-3">
-                          <label class="nao-label-sm-2">
-                            Width
-                          </label>
-                          <div class="d-flex flex-column">
-                            <div class="input-group-append">
-                              <input type="number" class="form-control form-control-sm" formControlName="width"
-                                placeholder="Width" />
-                              <ng-select class="nao-ng-select-sm-2 nao-shippable-ng-select" [clearable]="false" formControlName="widthUnit"
-                                [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.widthUnit').disabled && formGroup2.get('shipping.widthUnit').invalid }">
-                                <ng-option value="cm">
-                                  Cm</ng-option>
-                                <ng-option value="in">
-                                  In</ng-option>
-                              </ng-select>
-                            </div>
-                          </div>
+
                         </div>
                       </div>
                     </div>
@@ -463,79 +472,87 @@
 
                   <div class="nao-blue-rounded-box">
                     <div class="box-header border-bottom">
-                     Add items
+                      Add items
                     </div>
                     <div class="box-container">
                       <!-- todo -->
-                      <div class="nao-box-description">Add the items you want to be included in the sales order</div>
-                      
+                      <p>Add the items you want to be included in the sales order</p>
+
                       <!-- todo -->
-                      <div class="nao-add-item-margin-fix" formArrayName="items">
-                        <div class="pb-3" *ngFor="let item of formGroup2.controls.items['controls']; let i = index; let last = last" [formGroupName]="i">
-                          <div class="d-flex flex-row py-3">
+                      <div class="nao-add-items-container ml-auto" formArrayName="items">
+                        <div class="pb-3"
+                          *ngFor="let item of formGroup2.controls.items['controls']; let i = index; let last = last"
+                          [formGroupName]="i">
+                          <div class="d-flex flex-column flex-md-row align-items-md-center py-3 pr-2">
                             <label class="nao-form-label pr-2">
                               Product
                             </label>
-                            <div class="pb-2">
-                              <ng-select class="nao-ng-select-sm nao-mw-200" [searchable]="true" bindLabel="name" bindValue="value"
-                                [multiple]="false">
-                                <ng-option value="pecans">
-                                  Pecans
-                                </ng-option>
-                                <ng-option value="almonds">
-                                  Almonds
-                                </ng-option>
-                                <ng-option value="peanuts">
-                                  Peanuts
-                                </ng-option>
-                              </ng-select>
-                            </div>
+                            <ng-select class="nao-ng-select-sm nao-mw-0 nao-mw-md-200 flex-grow-1" [searchable]="true"
+                              bindLabel="name" bindValue="value" [multiple]="false">
+                              <ng-option value="pecans">
+                                Pecans
+                              </ng-option>
+                              <ng-option value="almonds">
+                                Almonds
+                              </ng-option>
+                              <ng-option value="peanuts">
+                                Peanuts
+                              </ng-option>
+                            </ng-select>
                           </div>
-            
-                          <div class="d-flex flex-nowrap">
-                            <div class="d-flex flex-column pr-2">
-                              <label class="nao-form-label">
+
+                          <div class="d-flex flex-column flex-md-row">
+                            <div class="d-flex flex-column pr-2 mb-2">
+                              <label class="nao-label-sm-2">
                                 Ordered quantity
                               </label>
-                              <input type="number" autocomplete="off" class="form-control form-control-sm nao-mw-100" formControlName="quantity" [max]="1000" />
+                              <input type="number" autocomplete="off"
+                                class="form-control form-control-sm nao-mw-0 nao-mw-md-100 mt-auto"
+                                formControlName="quantity" [max]="1000" />
                             </div>
-                            <div class="d-flex flex-column pr-2">
-                              <label class="nao-form-label">
+
+                            <div class="d-flex flex-column pr-2 mb-2">
+                              <label class="nao-label-sm-2">
                                 Unit price
                               </label>
-                              <input type="text" autocomplete="off" class="form-control form-control-sm nao-mw-100" formControlName="priceSales" />
+                              <input type="text" autocomplete="off"
+                                class="form-control form-control-sm nao-mw-0 nao-mw-md-100 mt-auto"
+                                formControlName="priceSales" />
                             </div>
-                            <div class="d-flex flex-column pr-2">
-                              <label class="nao-form-label">
+
+                            <div class="d-flex flex-column pr-2 mb-2">
+                              <label class="nao-label-sm-2">
                                 Taxes
                               </label>
-                              <input type="text" autocomplete="off" class="form-control form-control-sm nao-mw-100" formControlName="salesTax" />
+                              <input type="text" autocomplete="off"
+                                class="form-control form-control-sm nao-mw-0 nao-mw-md-100 mt-auto"
+                                formControlName="salesTax" />
                             </div>
-                            <div class="d-flex flex-column mr-auto">
-                              <label class="nao-form-label">
+
+                            <div class="d-flex flex-column pr-2 item-mb-fix">
+                              <label class="nao-label-sm-2">
                                 Subtotal
                               </label>
-                              <label class="nao-form-label">
-                                todo: total
-                                <!-- {{ item.value.quantity * item.value.priceSales | priceWithTax:item.value.salesTax }} -->
+                              <label class="nao-label-sm-2 mt-auto mb-0">
+                                160$
                               </label>
                             </div>
-                            <div class="mr-auto">
+
+                            <div class="mt-auto item-mb-fix">
+                              <!-- todo: -->
                               <div class="nao-delete-text">
-                                <a href="javascript:void(0)" >Delete</a>
-                                <!-- <a href="javascript:void(0)" *ngIf="i > 0" (click)="removeProduct(i)">Delete</a> -->
+                                <a href="javascript:void(0)">Delete</a>
                               </div>
                             </div>
                           </div>
-            
                         </div>
-                        <button type="button" class="add-button add-button-middle btn-text-only d-flex align-items-center">
-                        <!-- <button type="button" class="add-button add-button-middle btn-text-only d-flex align-items-center" (click)="addProduct()"> -->
+                        <!-- todo: -->
+                        <button type="button" class="btn-sm btn-text-only d-flex align-items-center">
                           <i class="ion-md-add-circle"></i>
                           <span class="add-input">Add another</span>
                         </button>
                       </div>
-            
+
                     </div>
                   </div>
 

@@ -20,9 +20,7 @@
   color: var(--primary);
   background-color: transparent;
   border-color: transparent;
-  font-size: pixelToRem(16px);
-  font-weight: $font-weight-regular;
-  padding: pixelToRem(7px) pixelToRem(12px);
+  font-weight: $font-weight-semibold;
 
   &:hover {
     color: var(--primary);
@@ -60,7 +58,7 @@
 @mixin button-outline-only-variant($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
   color: $color;
   border-color: $color;
-  // todo: add hvoer effect
+  // todo: add hover effect
   //   @include hover() {
   //     color: $color-hover;
   //     background-color: $active-background;
@@ -128,4 +126,28 @@ $value in $theme-colors {
   color: #fff;
   background-color: var(--text-muted);
   border-color: var(--text-muted);
+}
+
+
+// *************************************************
+// Buttons
+.btn {
+  transition: all .2s ease-in-out;
+}
+
+// btn transition
+.nao-btn-transition:hover {
+  box-shadow: 0 0.5rem 0.5rem -0.4rem var(--border-lightest);
+  transform: translateY(-0.1rem);
+}
+
+.nao-btn-transition:disabled {
+  box-shadow: 0 0.5rem 0.5rem -0.4rem var(--border-lightest);
+  transform: none;
+}
+
+.nao-btn-transition:focus,
+.nao-btn-transition.focus {
+  box-shadow: 0 0.5rem 0.5rem -0.4rem var(--border-lightest);
+  transform: translateY(-0.1rem);
 }

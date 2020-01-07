@@ -97,6 +97,74 @@
 
   <div class="elem-container">
     <h2 class="title">Labels</h2>
+    <p>You can use <code>sup</code> for required fields. </p>
+    <div class="nao-bd-example">
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Example</th>
+              <th>font-weight</th>
+              <th>font-size</th>
+              <th>color</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.nao-label-1</code></td>
+              <td>
+                <label class="nao-label-1">
+                  Nao label 1
+                  <sup class="text-danger">*</sup>
+                </label>
+              </td>
+              <td><code>400</code></td>
+              <td><code>16px</code></td>
+              <td>#687196</td>
+            </tr>
+            <tr>
+              <td><code>.nao-label-2</code></td>
+              <td>
+                <label class="nao-label-2">
+                  Nao label 2
+                  <sup class="text-danger">*</sup>
+                </label>
+              </td>
+              <td><code>600</code></td>
+              <td><code>16px</code></td>
+              <td>#687196</td>
+            </tr>
+            <tr>
+              <td><code>.nao-label-sm-2</code></td>
+              <td>
+                <label class="nao-label-sm-2">
+                  Nao label sm 2
+                  <sup class="text-danger">*</sup>
+                </label>
+              </td>
+              <td><code>600</code></td>
+              <td><code>13px</code></td>
+              <td>#687196</td>
+            </tr>
+            <tr>
+              <td><code>.nao-label-sm-3</code></td>
+              <td>
+                <label class="nao-label-sm-3">
+                  Nao label sm 3
+                  <sup class="text-danger">*</sup>
+                </label>
+              </td>
+              <td><code>400</code></td>
+              <td><code>13px</code></td>
+              <td>#030929</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
     <div class='nao-bd-example d-flex flex-column' [innerHTML]="data[5].html | sanitizeHtml"></div>
     <div class="nao-bd-clipboard">
       <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[5].html)" placement="top"
@@ -108,12 +176,14 @@
     </div>
   </div>
 
-  
+
 
 
   <div class="elem-container">
     <h2 class="title">Validation</h2>
-    <p>We recommend using client side validation, but in case you require server side, you can indicate invalid and valid form fields with <code>.is-invalid</code> and <code>.is-valid</code>. And for showing a validation message, you could use a <code>span</code> with a class of <code>.text-danger</code></p>
+    <p>We recommend using client side validation, but in case you require server side, you can indicate invalid and
+      valid form fields with <code>.is-invalid</code> and <code>.is-valid</code>. And for showing a validation message,
+      you could use a <code>span</code> with a class of <code>.text-danger</code></p>
     <div class='nao-bd-example' [innerHTML]="data[6].html | sanitizeHtml"></div>
     <div class="nao-bd-clipboard">
       <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[6].html)" placement="top"

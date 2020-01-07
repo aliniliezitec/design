@@ -153,7 +153,7 @@ export const DropdownCodeBlocks = [
     {
         html: `
         <label class="nao-label-1">Nao ng-select 2</label>
-        <ng-select class="nao-ng-select-sm-2" [clearable]="false">
+        <ng-select class="nao-ng-select-sm-2" [clearable]="false" [searchable]="false" placeholder="Choose type of measurement">
           <ng-option value="cm">
             Cm</ng-option>
           <ng-option value="in">

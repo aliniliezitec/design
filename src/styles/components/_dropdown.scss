@@ -101,8 +101,8 @@
   font-size: pixelToRem(11px);
 
   .ng-select-container {
-    min-height: 32px !important;
-    height: 32px !important;
+    min-height: pixelToRem(32px) !important;
+    height: pixelToRem(32px) !important;
   }
 }
 

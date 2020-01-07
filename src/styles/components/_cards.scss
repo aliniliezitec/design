@@ -237,20 +237,43 @@
     font-size: pixelToRem(13px);
     font-weight: $font-weight-bold;
     color: var(--text-secondary);
-
-    // checkbox position fix
-    .custom-control-label {
-      padding-top: 2px;
-    }
   }
 
   .box-container {
     padding: 25px 32px;
+    font-size: pixelToRem(13px);
+    color: var(--grey-blue);
+    font-weight: $font-weight-semibold;
 
+    // Responsive grid for 4 input groups with ng-select
+    .nao-grid-4-input-dropdown {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-column-gap: 15px;
+      grid-row-gap: 20px;
 
+      @include media-breakpoint-down(md) {
+        grid-template-columns: auto;
+      }
+    }
+
+    .nao-add-items-container {
+      max-width: 500px;
+
+      .item-mb-fix {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.nao-shippable-input-group {
+  .nao-label-sm-2 {
+    min-width: 58px;
   }
 
-  .nao-shippable-ng-select {
-    min-width: 55px;
+  .ng-select {
+    min-width: 58px;
+    max-width: 285px;
   }
 }

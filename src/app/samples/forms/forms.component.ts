@@ -42,6 +42,11 @@ export class FormsComponent {
         quantity: new FormControl(''),
         priceSales: new FormControl(''),
         salesTax: new FormControl(''),
+      }),
+      new FormGroup({
+        quantity: new FormControl(''),
+        priceSales: new FormControl(''),
+        salesTax: new FormControl(''),
       })
     ]),
     priceCost: new FormControl(0),

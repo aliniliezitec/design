@@ -5,7 +5,7 @@
 
   .top-menu-item {
     padding: 0 13px;
-    font-weight: $font-weight-semibold;
+    font-weight: $font-weight-bold;
     font-size: pixelToRem(12px);
     color: var(--text-primary);
 
@@ -47,7 +47,7 @@
     .nav-item {
       background-color: var(--lightest);
       padding: 0 10px;
-      font-weight: $font-weight-semibold;
+      font-weight: $font-weight-bold;
       ul {
         overflow: hidden;
         list-style-type: none;

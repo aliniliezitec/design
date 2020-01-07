@@ -3,7 +3,6 @@ export const ButtonsCodeBlocks = [
         html: `
     <button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-dark-blue">Dark-blue</button>
-    <br>
     <button class="btn btn-text-only">Button text only</button>`},
     // {
     //     html: `

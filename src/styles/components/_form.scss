@@ -33,30 +33,6 @@
   font-size: pixelToRem(13px);
 }
 
-
-// *************************************************
-// Buttons
-.btn {
-  transition: all .2s ease-in-out;
-}
-
-// btn transition
-.nao-btn-transition:hover {
-  box-shadow: 0 0.5rem 0.5rem -0.4rem var(--border-lightest);
-  transform: translateY(-0.1rem);
-}
-
-.nao-btn-transition:disabled {
-  box-shadow: 0 0.5rem 0.5rem -0.4rem var(--border-lightest);
-  transform: none;
-}
-
-.nao-btn-transition:focus,
-.nao-btn-transition.focus {
-  box-shadow: 0 0.5rem 0.5rem -0.4rem var(--border-lightest);
-  transform: translateY(-0.1rem);
-}
-
 // *************************************************
 // Nao Textare fields
 .nao-textarea {
