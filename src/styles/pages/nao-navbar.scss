@@ -20,7 +20,7 @@
   min-width: 30px;
 }
 
-.nao-top-menu {
+.nao-top-menu-2 {
 
   .sm-absolute-top {
     @include media-breakpoint-down(sm) {
@@ -29,7 +29,7 @@
       top: 0;
       right: 0;
       left: 0;
-      z-index: 1030;
+      z-index: 1050;
       border-bottom: solid 2px var(--primary);
 
       &.b-0 {

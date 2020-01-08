@@ -1,0 +1,60 @@
+// *************************************************
+// Fixing the .mr-* .ml-* .pl-* .pr-* classes for RTL
+.body-rtl {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      @each $prop,
+      $abbrev in (margin: m, padding: p) {
+        // $abbrev in (margin: m) {
+        //   todo:
+        //   todo:
+        //   todo: test to see if we really need this for paddings classes
+        //   todo: add .skip-rtl class 
+        //   todo:
+
+        @each $size,
+        $length in $spacers {
+          .#{$abbrev}r#{$infix}-#{$size} {
+            #{$prop}-left: $length !important;
+            #{$prop}-right: unset !important;
+          }
+
+          .#{$abbrev}l#{$infix}-#{$size} {
+            #{$prop}-right: $length !important;
+            #{$prop}-left: unset !important;
+          }
+        }
+      }
+
+      // Negative margins (e.g., where `.mr-n1` is negative version of `.mr-1`)
+      @each $size,
+      $length in $spacers {
+        @if $size !=0 {
+
+          .mr#{$infix}-n#{$size} {
+            margin-left: -$length !important;
+            margin-right: unset !important;
+          }
+
+          .ml#{$infix}-n#{$size} {
+            margin-right: -$length !important;
+            margin-left: unset !important;
+          }
+        }
+      }
+
+      // Some special margin utils
+      .mr#{$infix}-auto {
+        margin-left: auto !important;
+        margin-right: unset !important;
+      }
+
+      .ml#{$infix}-auto {
+        margin-right: auto !important;
+        margin-left: unset !important;
+      }
+    }
+  }
+}

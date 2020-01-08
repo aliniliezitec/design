@@ -1,0 +1,187 @@
+<div class="nao-docs-wrapper">
+  <div class="elements-container">
+    <h1 class="title">Navbar</h1>
+
+    <div class="elem-container">
+      <h2 class="title">Logo + User</h2>
+      <p>
+
+        <i>Normally you would remove this on sm devices</i>
+      </p>
+      <!-- <div class="nao-bd-example" [innerHTML]="data[0].html | sanitizeHtml"></div> -->
+
+
+      <div class="nao-bd-example bg-light">
+
+        <nav class="navbar navbar-expand bg-white py-0 pl-3 pr-0">
+          <a href="javascript:void(0)" class="navbar-brand py-0 mr-4">
+            <img src="https://d326ktrzuzy7hz.cloudfront.net/images/logos/logo.svg" alt="Naologic" height="30">
+          </a>
+          <div class="navbar-collapse collapse" [ngbCollapse]="!isExpanded">
+            <!-- Divider -->
+            <hr class="d-lg-none w-100">
+            <div class="navbar-nav align-items-lg-center ml-auto">
+              <!-- Show help -->
+              <div class="navbar-text mr-2">
+                <a class="d-flex align-items-center" href="javascript:void(0)">
+                  <span class="text-dark font-weight-bold mr-1 ml-4">HELP</span>
+                  <i class="nao-icon-help nao-help ml-1"></i>
+                </a>
+              </div>
+
+              <div ngbDropdown display="dynamic" [placement]="$flow.isRTL() ? 'bottom-left' : 'bottom-right'"
+                class="btn-group dropdown-remove-arrow">
+                <a ngbDropdownToggle class="nav" href="javascript:void(0)">
+                  <span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
+                    <img class="d-block nao-dropdown-avatar rounded-circle"
+                      src="https://d326ktrzuzy7hz.cloudfront.net/images/placeholder/default-avatar.png" />
+                  </span>
+                </a>
+                <div ngbDropdownMenu class="nao-dropdown-1">
+                  <div class="nao-dropdown-profile">
+                    <div class="d-flex">
+                      <img class="d-block nao-dropdown-avatar rounded-circle mr-2"
+                        src="https://d326ktrzuzy7hz.cloudfront.net/images/placeholder/default-avatar.png" />
+                      <div class="d-flex flex-column">
+                        <span class="font-weight-bold">Jon Doe</span>
+                        <span class="nao-dropdown-small-text">jon@naologic.com</span>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="javascript:void(0)" class="dropdown-item">
+                    Your account
+                  </a>
+                  <a href="javascript:void(0)" class="dropdown-item">
+                    Invite People
+                  </a>
+                  <a href="javascript:void(0)" class="dropdown-item">
+                    Log Out
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Navigation</h2>
+      <p>this class is for example only <code>.sm-absolute-contaier</code> and <code>sm-fixed-top</code> is for live
+      </p>
+      <div class="nao-bd-example bg-light" style="position: relative;">
+
+        <!-- This is from website -->
+
+
+
+        <div class="nao-top-menu bg-white pb-1">
+          <div class="content-wrapper d-flex justify-content-between px-md-4">
+            <!-- todo: change this into sm-fixed-top -->
+            <!-- todo: add the discconnected button -->
+            <nav class="navbar navbar-expand-md sm-absolute-contaier" [ngClass]="{'b-0' : !isCollapsed}"
+              style="margin-bottom: -18px;">
+
+              <a class="navbar-brand d-md-none" href="javascript:void(0)" (click)="isCollapsed = true">
+
+                <img src="https://d326ktrzuzy7hz.cloudfront.net/images/logos/logo.svg" alt="Naologic" height="30">
+              </a>
+
+              <div class="align-items-center ml-auto d-md-none">
+
+                <div ngbDropdown display="dynamic" [placement]="$flow.isRTL() ? 'bottom-left' : 'bottom-right'"
+                  class="btn-group dropdown-remove-arrow">
+                  <a ngbDropdownToggle class="nav" href="javascript:void(0)" (click)="isCollapsed=true">
+                    <span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
+                      <img class="d-block nao-dropdown-avatar rounded-circle"
+                        src="https://d326ktrzuzy7hz.cloudfront.net/images/placeholder/default-avatar.png" />
+                    </span>
+                  </a>
+                  <div ngbDropdownMenu class="nao-dropdown-1">
+                    <div class="nao-dropdown-profile">
+                      <div class="d-flex">
+                        <img class="d-block nao-dropdown-avatar rounded-circle mr-2"
+                          src="https://d326ktrzuzy7hz.cloudfront.net/images/placeholder/default-avatar.png" />
+                        <div class="d-flex flex-column">
+                          <span class="font-weight-bold">Jon Doe</span>
+                          <span class="nao-dropdown-small-text">jon@naologic.com</span>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="javascript:void(0)" class="dropdown-item">
+                      Your account
+                    </a>
+                    <a href="javascript:void(0)" class="dropdown-item">
+                      Invite People
+                    </a>
+                    <a href="javascript:void(0)" class="dropdown-item">
+                      Log Out
+                    </a>
+                  </div>
+                </div>
+
+                <button class="navbar-toggler custom-toggler border-0" type="button" data-toggle="collapse"
+                  data-target="#naoNavbar" aria-expanded="false" aria-label="Toggle navigation"
+                  (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+                  aria-controls="naoNavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+
+
+              <div class="collapse navbar-collapse nao-navbar-collapse" id="naoNavbar"
+                [ngbCollapse]="isCollapsed">
+                <ul class="navbar-nav border-bottom-0">
+                  <li class="nav-item" (click)="isCollapsed=true">
+                    <a href="javascript:void(0)" class="nav-link">CRM</a>
+                  </li>
+                  <li class="nav-item" (click)="isCollapsed=true">
+                    <a class="nav-link" href="javascript:void(0)">Business Apps</a>
+                  </li>
+                  <li class="nav-item" (click)="isCollapsed=true">
+                    <a href="javascript:void(0)" class="nav-link active">Enterprise</a>
+                  </li>
+                  <li class="nav-item" (click)="isCollapsed=true">
+                    <a href="javascript:void(0)" class="nav-link">Pricing</a>
+                  </li>
+                  <li class="nav-item" (click)="isCollapsed=true">
+                    <a href="javascript:void(0)" class="nav-link">Blog</a>
+                  </li>
+                  <li class="nav-item" (click)="isCollapsed=true">
+                    <a class="nav-link" href="javascript:void(0)">Contact</a>
+                  </li>
+                </ul>
+              </div>
+
+            </nav>
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- todo: i18n ?? -->
+
+
+
+
+
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+
+    </div>
+  </div>
+
+</div>

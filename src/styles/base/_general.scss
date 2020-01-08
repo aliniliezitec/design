@@ -2,6 +2,13 @@ body {
   direction: ltr;
 }
 
+// Class for RTL fixing
+.body-rtl {
+}
+
+// Class for skipping .mr-* .ml-* .pr=* .pl-*
+.skip-rtl {}
+
 a {
   &:hover {
     text-decoration: none;

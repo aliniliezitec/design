@@ -11,7 +11,7 @@ export const MenuItems = [
         items: [
             { type: 'item', route: '/layout/grid', text: 'Grid' },
             { type: 'item', route: '/layout/components', text: 'Components' },
-            // { type: 'item', route: '/layout/utilities', text: 'Utilities for Layout' },
+            { type: 'item', route: '/layout/navbar', text: 'Navbar' },
         ]
     },
     {

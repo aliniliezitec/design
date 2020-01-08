@@ -52,6 +52,7 @@ export class NaoNavbarComponent implements OnInit {
    * Chnage direction RTL | LTR
    */
   changeDirTo(dir: langDir) {
+    this.dir = dir;
     this.appService.changeDirTo(dir);
   }
 

@@ -1,0 +1,104 @@
+.navbar {
+  hr {
+    border-color: rgba(78, 81, 85, .075)
+  }
+
+  .nao-help {
+    font-size: 20px;
+    line-height: 10px;
+    color: var(--text-primary);
+  }
+}
+
+
+// todo: rename everything
+// todo: check if there are problems with that z-index
+
+.nao-top-menu {
+
+  .navbar {
+    margin-bottom: -12px !important;
+  }
+
+  .nao-navbar-collapse {
+    @include media-breakpoint-down(sm) {
+      background-color: #f6f8fb;
+
+      .nav-item a {
+        padding: 1rem 1.7rem 1rem 1.4rem;
+        text-align: left;
+        border-bottom: 1px solid #e9eef9;
+        font-size: 1.125rem;
+        font-weight: $font-weight-regular;
+      }
+    }
+
+    a {
+      color: var(--text-primary) !important;
+      font-size: 1rem;
+
+      &:hover {
+        background-color: rgba(62, 64, 219, 0.1);
+      }
+    }
+  }
+
+  border-bottom: solid 2px #3e40db;
+
+  z-index: 1030;
+
+  .sm-fixed-top {
+    @include media-breakpoint-down(sm) {
+      background: var(--white);
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1030;
+      border-bottom: solid 2px var(--primary);
+
+      &.b-0 {
+        border: 0;
+      }
+
+      .dropdown-toggle::after {
+        display: none;
+      }
+    }
+  }
+
+  .sm-absolute-contaier {
+    @include media-breakpoint-down(sm) {
+      background: var(--white);
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1030;
+      border-bottom: solid 2px var(--primary);
+
+      &.b-0 {
+        border: 0;
+      }
+
+      .dropdown-toggle::after {
+        display: none;
+      }
+    }
+  }
+
+  .custom-toggler {
+    &:focus {
+      outline: none;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(62,64,219, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+  }
+
+  .active {
+    border-top: 2px var(--primary) solid;
+    background-color: var(--light-blue) !important;
+  }
+}

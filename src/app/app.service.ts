@@ -18,6 +18,15 @@ export class AppService {
         // -->Set: direction style
         body.style.direction = dir;
 
+        if (dir === 'rtl') {
+            // -->Set: class to revert all the classes
+            body.classList.add('body-rtl');
+        } else if (body.classList.contains('body-rtl')) {
+            // -->Remove: class to revert all the classes
+            body.classList.remove('body-rtl');
+
+        }
+
         this.isRTL = dir === 'rtl';
     }
 

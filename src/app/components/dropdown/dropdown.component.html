@@ -64,6 +64,12 @@
     <div class="elem-container">
       <h2 class="title">Nao dropdown 1 with icon</h2>
       <P>Add <code>.dropdown-remove-arrow</code> class if you want to remove the right arrow</P>
+      <p>When dropdown is used inside the Bootstrap's <code>navbar</code>, it will not be positioned (to match Bootstrap
+        behaviour and work fine on mobile). You can override it by using the <code>display</code> input.
+        <br>
+        Dropdown menu will be positioned dynamically, even if inside navbar
+        <code>ngbDropdown display="dynamic"</code>.
+      </p>
       <div class="nao-bd-example">
 
         <div ngbDropdown class="btn-group dropdown-remove-arrow"
@@ -243,7 +249,7 @@
           <ng-option>Option 3</ng-option>
         </ng-select>
       </div>
-      
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[6].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -271,7 +277,7 @@
           <ng-option>Option 3</ng-option>
         </ng-select>
       </div>
-     
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[7].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -286,14 +292,15 @@
       <p>Mainly used in input groups</p>
       <div class='nao-bd-example nao-ng-select-example'>
         <label class="nao-label-1">Nao ng-select-sm-2</label>
-        <ng-select class="nao-ng-select-sm-2 nao-mw-230" [clearable]="false" [searchable]="false" placeholder="Choose type of measurement">
+        <ng-select class="nao-ng-select-sm-2 nao-mw-230" [clearable]="false" [searchable]="false"
+          placeholder="Choose type of measurement">
           <ng-option value="cm">
             Cm</ng-option>
           <ng-option value="in">
             In</ng-option>
         </ng-select>
       </div>
-     
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[8].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
