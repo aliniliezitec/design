@@ -77,7 +77,8 @@
       <div class="nao-bd-example bg-light">
 
         <div class="nao-navbar bg-white">
-          <div class="content-wrapper d-flex justify-content-between justify-content-md-start px-md-4">
+          <div
+            class="content-wrapper d-flex flex-row-reverse-rtl-only justify-content-between justify-content-md-start px-md-4">
             <div class="d-none d-md-block align-self-end" [ngClass]="{'hide-navbar-scroll-buttons': !showPrevBtn}">
               <a class="navbar-horizontal-prev" (click)="scrollPrev()">
               </a>
@@ -135,44 +136,49 @@
                 <div class="collapse navbar-collapse nao-navbar-collapse" id="naoNavbar" [ngbCollapse]="isCollapsed">
 
                   <ul class="navbar-nav border-bottom-0">
-                    <li class="nav-item" (click)="isCollapsed=true">
-                      <a href="javascript:void(0)" class="nav-link">CRM</a>
-                    </li>
-                    <li class="nav-item" (click)="isCollapsed=true">
-                      <a class="nav-link" href="javascript:void(0)">Business Apps</a>
-                    </li>
-                    <li class="nav-item" (click)="isCollapsed=true">
-                      <a href="javascript:void(0)" class="nav-link active">Enterprise</a>
-                    </li>
-                    <li class="nav-item" (click)="isCollapsed=true">
-                      <a href="javascript:void(0)" class="nav-link">Pricing</a>
-                    </li>
-                    <li class="nav-item" (click)="isCollapsed=true">
-                      <a href="javascript:void(0)" class="nav-link">Blog</a>
-                    </li>
-                    <li class="nav-item" (click)="isCollapsed=true">
-                      <a class="nav-link" href="javascript:void(0)">Dashboard</a>
-                    </li>
-                    <li class="nav-item dropdown" ngbDropdown container="body" display="dynamic"
-                      [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
-                      <a class="nav-link dropdown-toggle" href="javascript:void(0)" ngbDropdownToggle>
-                        Dropdown
-                      </a>
-                      <div class="nao-dropdown-navbar" ngbDropdownMenu>
-                        <a class="dropdown-item" href="javascript:void(0)">Sub item 1</a>
-                        <a class="dropdown-item" href="javascript:void(0)">Sub item 2</a>
-                        <a class="dropdown-item active" href="javascript:void(0)">Sub item 3</a>
+
+                    <li *ngFor="let elem of menuItems; let i = index" class="nav-item">
+
+                      <div *ngIf="elem.type ==='items'">
+
+                        <div class="d-block d-md-none">
+                          <a href="javascript:void(0)" (click)="toggleMenu(i)"
+                            class="nav-link d-flex align-items-center justify-content-between flex-row-reverse-rtl-only">
+                            {{ elem.text }}
+                            <i class="nao-icon-arrow" [ngClass]="{'nao-icon-arrow-active': elem.isOpen}"></i>
+                          </a>
+
+                          <ul class="m-0" [@expandCollapse]='elem.isOpen' *ngIf="elem.isOpen">
+                            <li *ngFor="let subitem of elem.items" class="nav-item">
+                              <a href="javascript:void(0)" class="nav-link"
+                                [ngClass]="{'active': subitem.active}">{{ subitem.text }}</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="d-none d-md-block">
+                          <div class="dropdown" ngbDropdown container="body" display="dynamic"
+                            [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)"
+                              [ngClass]="{'active': elem.active}" ngbDropdownToggle>
+                              {{ elem.text }}
+                            </a>
+                            <div class="nao-dropdown-navbar" ngbDropdownMenu>
+                              <a class="dropdown-item" href="javascript:void(0)" [ngClass]="{'active': subitem.active}"
+                                *ngFor="let subitem of elem.items">
+                                {{ subitem.text }}
+                              </a>
+                            </div>
+                          </div>
+                        </div>
                       </div>
+
+                      <div *ngIf="elem.type === 'item'" (click)="isCollapsed=true">
+                        <a class="nav-link" href="javascript:void(0)"
+                          [ngClass]="{'active': elem.active}">{{ elem.text }}</a>
+                      </div>
+
                     </li>
-                    <li class="nav-item" (click)="isCollapsed=true">
-                      <a class="nav-link" href="javascript:void(0)">Sales</a>
-                    </li>
-                    <li class="nav-item" (click)="isCollapsed=true">
-                      <a class="nav-link" href="javascript:void(0)">Leads</a>
-                    </li>
-                    <li class="nav-item" (click)="isCollapsed=true">
-                      <a class="nav-link" href="javascript:void(0)">Contact</a>
-                    </li>
+
                   </ul>
                 </div>
 
@@ -202,6 +208,22 @@
       </div>
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[1].ts1 | typescriptPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].ts2)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[1].ts2 | typescriptPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].ts3)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[1].ts3 | typescriptPrismPipe | sanitizeHtml"></div></pre>
       </div>
 
     </div>

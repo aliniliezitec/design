@@ -16,6 +16,7 @@
   overflow: hidden;
   white-space: nowrap;
 }
+
 .nao-navbar {
   border-bottom: solid 2px var(--primary);
   z-index: 1030;
@@ -31,6 +32,22 @@
   .nav-item {
     @include media-breakpoint-up(md) {
       align-self: flex-end;
+    }
+
+    ul {
+      padding-left: 0;
+      overflow: hidden;
+      list-style-type: none;
+
+      .nav-link {
+        padding-left: 45px !important;
+      }
+    }
+  }
+
+  @include rtl {
+    .navbar-nav {
+      padding-right: 0 !important;
     }
   }
 
@@ -111,16 +128,7 @@
     border-top: 2px var(--primary) solid !important;
     background-color: var(--light-blue) !important;
   }
-}
 
-.hide-navbar-scroll-buttons {
-  height: 42px;
-  min-width: 36px;
-
-  .navbar-horizontal-prev,
-  .navbar-horizontal-next {
-    display: none !important;
-  }
 }
 
 .navbar-horizontal-prev,
@@ -153,20 +161,41 @@
   }
 }
 
+// *************************************************
+// utilities for navigation
+.flex-row-reverse-rtl-only {
+  @include rtl {
+    flex-direction: row-reverse;
+  }
+}
+
+.hide-navbar-scroll-buttons {
+  height: 42px;
+  min-width: 36px;
+
+  .navbar-horizontal-prev,
+  .navbar-horizontal-next {
+    display: none !important;
+  }
+}
+
 .navbar-horizontal-prev::after {
   border-right: 0;
   transform: translate(-50%, -50%) rotate(45deg);
-
-  @include rtl {
-    transform: translate(-50%, -50%) rotate(-135deg);
-  }
 }
 
 .navbar-horizontal-next::after {
   border-left: 0;
   transform: translate(-50%, -50%) rotate(-45deg);
+}
 
-  @include rtl {
-    transform: translate(-50%, -50%) rotate(135deg);
-  }
+.nao-icon-arrow {
+  width: 13px;
+  height: 13px;
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='13px' height='13px' viewBox='0 0 306 306' style='enable-background:new 0 0 306 306;' xml:space='preserve'%3E%3Cg%3E%3Cg id='chevron-right'%3E%3Cpolygon points='94.35,0 58.65,35.7 175.95,153 58.65,270.3 94.35,306 247.35,153 '/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A");
+  transition: transform 0.35s ease-in-out;
+}
+
+.nao-icon-arrow-active {
+  transform: rotate(90deg);
 }
