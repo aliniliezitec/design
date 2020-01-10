@@ -183,17 +183,19 @@ export const NavbarCodeBlocks = [
                 .subscribe(() => {
                   // -->Refresh: scroll buttons
                   setTimeout(() => {
-                    this.refreshScrollPrevBtn();
-                    this.refreshScrollNextBtn();
+                    this.refreshScrollPrevBtn(true);
+                    this.refreshScrollNextBtn(true);
                   });
                 })
             );
           }
 
-          public refreshScrollPrevBtn(): void {
+          public refreshScrollPrevBtn(isResized: boolean = false): void {
             const scrollLeft = this.navbarContent.nativeElement.scrollLeft;
+            // -->Set: the scroll value
+            const scrollingValue = isResized ? 0 : this.scrollValue;
 
-            if (scrollLeft > this.scrollValue) {
+            if (scrollLeft > scrollingValue) {
               // -->Show: Prev button
               this.showPrevBtn = true;
             } else {
@@ -201,12 +203,14 @@ export const NavbarCodeBlocks = [
               this.showPrevBtn = false;
             }
           }
-          public refreshScrollNextBtn(): void {
+          public refreshScrollNextBtn(isResized: boolean = false): void {
             const scrollLeft = this.navbarContent.nativeElement.scrollLeft;
             const offsetWidth = this.navbarContent.nativeElement.offsetWidth;
             const scrollWidth = this.navbarContent.nativeElement.scrollWidth;
+            // -->Set: the scroll value
+            const scrollingValue = isResized ? 0 : this.scrollValue;
 
-            if (scrollLeft + offsetWidth < scrollWidth - this.scrollValue) {
+            if (scrollLeft + offsetWidth < scrollWidth - scrollingValue) {
               // -->Show: next button
               this.showNextBtn = true;
             } else {
