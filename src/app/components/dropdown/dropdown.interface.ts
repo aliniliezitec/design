@@ -26,34 +26,36 @@ export const DropdownCodeBlocks = [
     },
     {
         html: `
-        <div ngbDropdown class="btn-group dropdown-remove-arrow" [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
-            <a ngbDropdownToggle class="nav" href="javascript:void(0)">
-                <span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
-                <img class="d-block nao-dropdown-avatar rounded-circle"
+        <div ngbDropdown class="btn-group dropdown-remove-arrow"
+          [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
+          <a ngbDropdownToggle href="javascript:void(0)">
+            <span class="d-inline-flex align-items-center nao-dropdown-avatar-container">
+              <img class="d-block nao-dropdown-avatar rounded-circle"
                 src="https://d326ktrzuzy7hz.cloudfront.net/images/placeholder/default-avatar.png" />
-                </span>
-            </a>
-            <div ngbDropdownMenu class="nao-dropdown-1">
-                <div class="nao-dropdown-profile">
-                    <div class="d-flex">
-                    <img class="d-block nao-dropdown-avatar rounded-circle mr-2"
-                        src="https://d326ktrzuzy7hz.cloudfront.net/images/placeholder/default-avatar.png" />
-                    <div class="d-flex flex-column">
-                        <span class="font-weight-bold">Jon Doe</span>
-                        <span class="nao-dropdown-small-text">jon@naologic.com</span>
-                    </div>
+                <span class="dot" [ngClass]="{ 'dot_disconnected': false, 'dot_connected': true }"></span>
+            </span>
+          </a>
+          <div ngbDropdownMenu class="nao-dropdown-1">
+            <div class="nao-dropdown-profile">
+              <div class="d-flex">
+                <img class="d-block nao-dropdown-avatar rounded-circle mr-2"
+                  src="https://d326ktrzuzy7hz.cloudfront.net/images/placeholder/default-avatar.png" />
+                <div class="d-flex flex-column">
+                  <span class="font-weight-bold">Jon Doe</span>
+                  <span class="nao-dropdown-small-text">jon@naologic.com</span>
                 </div>
+              </div>
             </div>
             <a href="javascript:void(0)" class="dropdown-item">
-                Your account
+              Your account
             </a>
             <a href="javascript:void(0)" class="dropdown-item">
-                Invite People
+              Invite People
             </a>
             <a href="javascript:void(0)" class="dropdown-item">
-                Log Out
+              Log Out
             </a>
-            </div>
+          </div>
         </div>`
     },
     {

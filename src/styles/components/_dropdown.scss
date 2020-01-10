@@ -72,6 +72,41 @@
   }
 }
 
+.nao-dropdown-avatar-container {
+  position: relative;
+
+  .dot {
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    border: 2px var(--white) solid;
+    display: inline-block;
+
+    @include rtl {
+      right: unset;
+      left: 8px;
+    }
+  }
+
+  .dot_disconnected {
+    background-color: var(--danger);
+  }
+
+  .dot_connected {
+    background-color: var(--success);
+  }
+
+  .dot_idle {
+    background-color: #bbb;
+  }
+}
+
+
+
 // *************************************************
 // nao dropdown 3
 .nao-dropdown-3 {
@@ -180,4 +215,30 @@
   }
 }
 
-// nao ng select shippable 
+// *************************************************
+// nao dropdown for navigation bar
+.nao-dropdown-navbar {
+  min-width: 200px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  .dropdown-item {
+    padding: .625rem 0.5rem !important;
+    font-size: pixelToRem(16px) !important;
+
+    &:hover {
+      background-color: var(--light-blue) !important;
+    }
+  }
+
+  .dropdown-item.active,
+  .dropdown-item:active {
+    background-color: var(--light-blue) !important;
+  }
+
+  @include rtl {
+    text-align: right;
+  }
+}

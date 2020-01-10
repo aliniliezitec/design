@@ -67,17 +67,18 @@
       <p>When dropdown is used inside the Bootstrap's <code>navbar</code>, it will not be positioned (to match Bootstrap
         behaviour and work fine on mobile). You can override it by using the <code>display</code> input.
         <br>
-        Dropdown menu will be positioned dynamically, even if inside navbar
+        Dropdown menu will be positioned dynamically, even if inside navbar:
         <code>ngbDropdown display="dynamic"</code>.
       </p>
       <div class="nao-bd-example">
 
         <div ngbDropdown class="btn-group dropdown-remove-arrow"
           [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
-          <a ngbDropdownToggle class="nav" href="javascript:void(0)">
-            <span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
+          <a ngbDropdownToggle href="javascript:void(0)">
+            <span class="d-inline-flex align-items-center nao-dropdown-avatar-container">
               <img class="d-block nao-dropdown-avatar rounded-circle"
                 src="https://d326ktrzuzy7hz.cloudfront.net/images/placeholder/default-avatar.png" />
+                <span class="dot" [ngClass]="{ 'dot_disconnected': false, 'dot_connected': true }"></span>
             </span>
           </a>
           <div ngbDropdownMenu class="nao-dropdown-1">

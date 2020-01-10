@@ -21,10 +21,9 @@
 
 @import "~@ng-select/ng-select/scss/default.theme.scss";
 
-// todo: fix the menu for the mobile devices
-
 .docs-container {
   margin-left: 285px;
+  // todo: check this
   direction: ltr;
 
   @include rtl {

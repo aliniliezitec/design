@@ -20,7 +20,9 @@
   min-width: 30px;
 }
 
-.nao-top-menu-2 {
+// @deprecated in favor of nao-navbar
+// todo: merge this with .nao-navbar
+.nao-navbar-2 {
 
   .sm-absolute-top {
     @include media-breakpoint-down(sm) {
