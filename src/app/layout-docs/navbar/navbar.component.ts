@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
   public scrollValue = 150; // How much do you want to scroll
 
   @ViewChild('navbarContent', { static: false }) public navbarContent: ElementRef<any>;
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize')
   onResize() {
     // -->Refresh: scroll buttons on size change
     this.sizeChanged$.next(true);
