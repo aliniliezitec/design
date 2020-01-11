@@ -10,7 +10,7 @@
     .content {
       width: 100%;
       max-width: 1084px;
-      height: 866px;
+      height: 870px;
       border-top-left-radius: pixelToRem(4px);
       border-top-right-radius: pixelToRem(4px);
       background-color: var(--white);
@@ -25,7 +25,7 @@
 
     }
 
-    @media screen and (max-width: 1320px) {
+    @include media-breakpoint-down(lg) {
       max-height: 780px;
 
       .content {
@@ -37,28 +37,28 @@
       }
     }
 
-    @media screen and (max-width: 1160px) {
+    @media screen and (max-width: 885px) {
       padding: 100px 80px 0 80px;
       max-height: 780px;
 
       .description {
-        font-size: pixelToRem(45px);
+        font-size: pixelToRem(50px);
       }
     }
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
       max-height: 500px;
 
       .content {
         padding: 80px 50px 0 50px;
 
         .description {
-          font-size: pixelToRem(36px);
+          font-size: pixelToRem(38px);
         }
       }
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(xs) {
       padding: 130px 40px 0 40px;
       max-height: 340px;
 
@@ -66,7 +66,7 @@
         padding: 20px;
 
         .description {
-          font-size: pixelToRem(26px);
+          font-size: pixelToRem(28px);
         }
       }
     }
@@ -94,12 +94,26 @@
     padding: 150px 40px 100px 40px;
 
     .content {
-      max-width: 745px;
       color: var(--text-primary);
       padding-right: 60px;
 
+
       @include media-breakpoint-down(md) {
         padding-right: 0;
+      }
+    }
+
+    img {
+      height: 100%;
+    }
+
+    @media screen and (max-width: 1440px) {
+      .wrapper {
+        max-width: 970px;
+      }
+
+      .content {
+        max-width: 745px;
       }
     }
 
@@ -135,23 +149,21 @@
         }
       }
 
-      @media screen and (max-width: 1450px) {
+      @include media-breakpoint-down(lg) {
         grid-template-columns: 295px 295px;
       }
 
-      @media screen and (max-width: 1050px) {
+      @include media-breakpoint-down(sm) {
         grid-template-columns: 295px;
         grid-row-gap: 35px;
       }
 
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(xs) {
         margin-top: 40px;
         grid-row-gap: 25px;
         grid-template-columns: auto;
 
         .element {
-          width: unset;
-
           .title {
             margin-bottom: 15px;
           }
@@ -171,7 +183,11 @@
     @include media-breakpoint-down(sm) {
       padding: 100px 20px 150px 20px;
     }
+  }
 
+  .nao-icon-arrow-back {
+    transform: rotate(180deg);
+    display: inline-block;
   }
 
 }
