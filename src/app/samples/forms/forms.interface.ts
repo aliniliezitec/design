@@ -77,7 +77,6 @@ export const FormsCodeBlocks = [
                         </ng-option>
                       </ng-select>
                       <div class="pt-2">
-                        <!-- todo: add this bullet -->
                         <a href="javascript:void(0)" class="text-primary"><i class="fas fa-plus-circle"></i>Create</a>
                       </div>
                     </div>
@@ -248,8 +247,320 @@ export const FormsCodeBlocks = [
       });`},
   {
     html: `
-    tsss`,
-    // todo: add name required
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+
+
+            <div class="modal-header default pb-3 pt-4">
+              <h6 class="modal-title pl-4 ml-2">
+                Add new product
+              </h6>
+            </div>
+            <div class="modal-body px-2 py-0">
+              <form>
+                <div [formGroup]="formGroup2">
+                  <div class="nao-blue-rounded-box">
+                    <div class="box-header border-bottom">
+                      Product
+                    </div>
+                    <div class="box-container">
+                      <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
+                        <div class="col-12 col-sm-5 text-left text-sm-right">
+                          <label class="nao-label-sm-2">
+                            Name
+                            <sup class="text-danger">*</sup>
+                          </label>
+                        </div>
+                        <div class="col">
+                          <input type="text" autocomplete="off"
+                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="name"
+                            placeholder="Name" />
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column flex-sm-row mb-3 no-gutters-xs">
+                        <div class="col-12 col-sm-5 text-left text-sm-right">
+                          <label class="nao-label-sm-2 pt-1">
+                            Description
+                          </label>
+                        </div>
+                        <div class="col">
+                          <textarea class="form-control form-control-sm nao-textarea nao-mw-0 nao-mw-sm-300"
+                            formControlName="description" placeholder="Description"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nao-blue-rounded-box">
+                    <div class="box-header border-bottom">
+                      Pricing
+                    </div>
+                    <div class="box-container">
+                      <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
+                        <div class="col-12 col-sm-5 text-left text-sm-right">
+                          <label class="nao-label-sm-2">
+                            Price
+                            <sup class="text-danger">*</sup>
+                          </label>
+                        </div>
+                        <div class="col">
+                          <input type="number" autocomplete="off"
+                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="priceSales"
+                            placeholder="Price" />
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
+                        <div class="col-12 col-sm-5 text-left text-sm-right">
+                          <label class="nao-label-sm-2">
+                            Cost
+                          </label>
+                        </div>
+                        <div class="col">
+                          <input type="number" autocomplete="off"
+                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="priceCost"
+                            placeholder="Cost" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nao-blue-rounded-box" formGroupName="inventory">
+                    <div class="box-header border-bottom">
+                      Inventory
+                    </div>
+                    <div class="box-container">
+                      <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
+                        <div class="col-12 col-sm-5 text-left text-sm-right">
+                          <label class="nao-label-sm-2">
+                            SKU
+                          </label>
+                        </div>
+                        <div class="col">
+                          <input type="text" autocomplete="off"
+                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="sku"
+                            placeholder="Sku" />
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
+                        <div class="col-12 col-sm-5 text-left text-sm-right">
+                          <label class="nao-label-sm-2">
+                            Barcode
+                          </label>
+                        </div>
+                        <div class="col">
+                          <input type="text" autocomplete="off"
+                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="barcode"
+                            placeholder="Barcode" />
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
+                        <div class="col-12 col-sm-5 text-left text-sm-right">
+                          <label class="nao-label-sm-2">
+                            Quantity
+                          </label>
+                        </div>
+                        <div class="col">
+                          <input type="number" autocomplete="off"
+                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="quantity"
+                            placeholder="Quantity" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nao-blue-rounded-box" formGroupName="shipping">
+                    <div class="box-header border-bottom">
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" type="checkbox" name="checkbox" id="shipping" value="false"
+                          formControlName="hasShipping" />
+                        <label class="custom-control-label pt-1" for="shipping">
+                          Shippable
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="box-container" [hidden]="!formGroup2.get('shipping.hasShipping').value">
+                      <div class="d-flex justify-content-center">
+
+                        <div class="nao-grid-4-input-dropdown">
+                          <div class="input-group nao-input-dropdown-group-1 nao-shippable-input-group">
+                            <label class="nao-label-sm-2 mr-auto">
+                              Weight
+                            </label>
+                            <div class="d-flex flex-column">
+                              <div class="input-group-append">
+                                <input type="number" class="form-control form-control-sm" formControlName="weight"
+                                  placeholder="Weight" />
+                                <ng-select class="nao-ng-select-sm-2" [clearable]="false" formControlName="weightUnit"
+                                  [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.weightUnit').disabled && formGroup2.get('shipping.weightUnit').invalid }">
+                                  <ng-option value="kg">
+                                    Kg </ng-option>
+                                  <ng-option value="lbs">
+                                    Lbs </ng-option>
+                                </ng-select>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="input-group nao-input-dropdown-group-1 nao-shippable-input-group">
+                            <label class="nao-label-sm-2 mr-auto">
+                              Height
+                            </label>
+                            <div class="d-flex flex-column">
+                              <div class="input-group-append">
+                                <input type="number" class="form-control form-control-sm" formControlName="height"
+                                  placeholder="height" />
+                                <ng-select class="nao-ng-select-sm-2" [clearable]="false" formControlName="heightUnit"
+                                  [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.heightUnit').disabled && formGroup2.get('shipping.heightUnit').invalid }">
+                                  <ng-option value="cm">
+                                    Cm</ng-option>
+                                  <ng-option value="in">
+                                    In</ng-option>
+                                </ng-select>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="input-group nao-input-dropdown-group-1 nao-shippable-input-group">
+                            <label class="nao-label-sm-2 mr-auto">
+                              Length
+                            </label>
+                            <div class="d-flex flex-column">
+                              <div class="input-group-append">
+                                <input type="number" class="form-control form-control-sm" formControlName="length"
+                                  placeholder="Length" />
+                                <ng-select class="nao-ng-select-sm-2" [clearable]="false" formControlName="lengthUnit"
+                                  [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.lengthUnit').disabled && formGroup2.get('shipping.lengthUnit').invalid }">
+                                  <ng-option value="cm">
+                                    Cm</ng-option>
+                                  <ng-option value="in">
+                                    In</ng-option>
+                                </ng-select>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="input-group nao-input-dropdown-group-1 nao-shippable-input-group">
+                            <label class="nao-label-sm-2 mr-auto">
+                              Width
+                            </label>
+                            <div class="d-flex flex-column">
+                              <div class="input-group-append">
+                                <input type="number" class="form-control form-control-sm" formControlName="width"
+                                  placeholder="Width" />
+                                <ng-select class="nao-ng-select-sm-2" [clearable]="false" formControlName="widthUnit"
+                                  [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.widthUnit').disabled && formGroup2.get('shipping.widthUnit').invalid }">
+                                  <ng-option value="cm">
+                                    Cm</ng-option>
+                                  <ng-option value="in">
+                                    In</ng-option>
+                                </ng-select>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+
+                  <div class="nao-blue-rounded-box">
+                    <div class="box-header border-bottom">
+                      Add items
+                    </div>
+                    <div class="box-container">
+                      <p>Add the items you want to be included in the sales order</p>
+
+                      <div class="nao-add-items-container ml-auto" formArrayName="items">
+                        <div class="pb-3"
+                          *ngFor="let item of formGroup2.controls.items['controls']; let i = index; let last = last"
+                          [formGroupName]="i">
+                          <div class="d-flex flex-column flex-md-row align-items-md-center py-3 pr-2">
+                            <label class="nao-form-label pr-2">
+                              Product
+                            </label>
+                            <ng-select class="nao-ng-select-sm nao-mw-0 nao-mw-md-200 flex-grow-1" [searchable]="true"
+                              bindLabel="name" bindValue="value" [multiple]="false">
+                              <ng-option value="pecans">
+                                Pecans
+                              </ng-option>
+                              <ng-option value="almonds">
+                                Almonds
+                              </ng-option>
+                              <ng-option value="peanuts">
+                                Peanuts
+                              </ng-option>
+                            </ng-select>
+                          </div>
+
+                          <div class="d-flex flex-column flex-md-row">
+                            <div class="d-flex flex-column pr-2 mb-2">
+                              <label class="nao-label-sm-2">
+                                Ordered quantity
+                              </label>
+                              <input type="number" autocomplete="off"
+                                class="form-control form-control-sm nao-mw-0 nao-mw-md-100 mt-auto"
+                                formControlName="quantity" [max]="1000" />
+                            </div>
+
+                            <div class="d-flex flex-column pr-2 mb-2">
+                              <label class="nao-label-sm-2">
+                                Unit price
+                              </label>
+                              <input type="text" autocomplete="off"
+                                class="form-control form-control-sm nao-mw-0 nao-mw-md-100 mt-auto"
+                                formControlName="priceSales" />
+                            </div>
+
+                            <div class="d-flex flex-column pr-2 mb-2">
+                              <label class="nao-label-sm-2">
+                                Taxes
+                              </label>
+                              <input type="text" autocomplete="off"
+                                class="form-control form-control-sm nao-mw-0 nao-mw-md-100 mt-auto"
+                                formControlName="salesTax" />
+                            </div>
+
+                            <div class="d-flex flex-column pr-2 item-mb-fix">
+                              <label class="nao-label-sm-2">
+                                Subtotal
+                              </label>
+                              <label class="nao-label-sm-2 mt-auto mb-0">
+                                160$
+                              </label>
+                            </div>
+
+                            <div class="mt-auto item-mb-fix">
+                              <div class="nao-delete-text">
+                                <a href="javascript:void(0)">Delete</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button type="button" class="btn-sm btn-text-only d-flex align-items-center">
+                          <i class="ion-md-add-circle"></i>
+                          <span class="add-input">Add another</span>
+                        </button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-only-dark-blue nao-btn-transition">
+                Cancel
+              </button>
+              <button type="button" data-style="expand-right" class="btn btn-primary nao-btn-transition ml-2"
+                [disabled]="formGroup2.pristine || !formGroup2.valid">
+                Create
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>`,
     ts1: `
         public formGroup2 = new FormGroup({
           categoryId: new FormControl(''),
@@ -261,7 +572,7 @@ export const FormsCodeBlocks = [
             quantity: new FormControl(0),
             sku: new FormControl(''),
           }),
-          name: new FormControl(''),
+          name: new FormControl('', { validators: [Validators.required] }),
           priceCost: new FormControl(0),
           priceSales: new FormControl(0),
           shipping: new FormGroup({

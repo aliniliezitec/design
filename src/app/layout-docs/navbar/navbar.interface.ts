@@ -1,4 +1,4 @@
-export interface MenuItemsInterface {
+export interface MenuInterface {
     type: string;
     text: string;
     route: string;
@@ -199,7 +199,7 @@ export const NavbarCodeBlocks = [
             })
 
             ...
-            public menuItems: MenuItemsInterface[] = [
+            public menuItems: MenuInterface[] = [
                 {
                   type: 'item', text: 'CRM', route: '/', active: false,
                 },
@@ -346,7 +346,7 @@ export const NavbarCodeBlocks = [
             this.subs.unsubscribe();
         }`,
         ts3: `
-        export interface MenuItemsInterface {
+        export interface MenuInterface {
             type: string;
             text: string;
             route: string;

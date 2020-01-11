@@ -276,6 +276,9 @@
                             Name
                             <sup class="text-danger">*</sup>
                           </label>
+                          <span *ngIf="formGroup2.get('name').errors" class="text-danger">
+                            Name is required.
+                          </span>
                         </div>
                         <div class="col">
                           <input type="text" autocomplete="off"
@@ -567,14 +570,9 @@
                 Create
               </button>
             </div>
-
-
           </div>
         </div>
       </div>
-
-
-
 
     </div>
 
@@ -595,11 +593,10 @@
     </div>
   </div>
 
-  <div class="elem-container">
+  <!-- <div class="elem-container">
     <h2 class="title">Sign up now to start your free trial</h2>
 
     <div class="nao-bd-example">
-<!-- todo -->
       <div class="nao-crm-free-trial-form bg-white" style="max-width: 450px;">
         <form [formGroup]="formGroup3">
           <div class="form-intro">
@@ -727,6 +724,6 @@
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[1].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
-  </div>
+  </div> -->
 
 </div>

@@ -8,11 +8,6 @@ const routes: Routes = [
     component: NaoLayoutComponent,
     children: [
       {
-        path: '',
-        redirectTo: '/getting-started/landing-page',
-        pathMatch: 'full'
-      },
-      {
         path: 'getting-started',
         loadChildren: () => import('./getting-started/getting-started.module').then(m => m.GettingStartedModule),
       },
@@ -40,8 +35,28 @@ const routes: Routes = [
   }
 ];
 
+const landingPageRoutes: Routes = [
+  {
+    path: '',
+    children: [
+      {
+        path: '',
+        redirectTo: '/landing-page',
+        pathMatch: 'full'
+      },
+      {
+        path: 'landing-page',
+        loadChildren: () => import('./landing-page/landing-page.module').then(m => m.LandingPageModule),
+      },
+    ]
+  }
+];
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot([
+    ...landingPageRoutes,
+    ...routes,
+  ])],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

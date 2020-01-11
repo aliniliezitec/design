@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit, HostListener, OnDestroy } from '@angular/core';
 import { AppService } from 'src/app/app.service';
-import { NavbarCodeBlocks, MenuItemsInterface } from './navbar.interface';
+import { NavbarCodeBlocks, MenuInterface } from './navbar.interface';
 import { LayoutDocsPublicFlow } from '../layout-docs.flowservice';
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { trigger, state, style, transition, animate } from '@angular/animations';
@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
   public data = NavbarCodeBlocks;
   private subs = new Subscription();
 
-  public menuItems: MenuItemsInterface[] = [
+  public menuItems: MenuInterface[] = [
     {
       type: 'item', text: 'CRM', route: '/', active: false,
     },

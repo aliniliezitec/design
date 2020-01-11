@@ -1,11 +1,11 @@
 export const MenuItems = [
-    {
-        type: 'items', text: 'Getting Started', route: '/getting-started', icon: 'nao-icon-help', isOpen: false,
-        items: [
-            { type: 'item', route: '/getting-started/landing-page', text: 'Landing page' },
-            // { type: 'item', route: '/getting-started/introduction', text: 'Introduction' },
-        ]
-    },
+    // {
+    //     type: 'items', text: 'Getting Started', route: '/getting-started', icon: 'nao-icon-help', isOpen: false,
+    //     items: [
+    //         { type: 'item', route: '/getting-started/landing-page', text: 'Landing page' },
+    //         { type: 'item', route: '/getting-started/introduction', text: 'Introduction' },
+    //     ]
+    // },
     {
         type: 'items', text: 'Layout', route: '/layout', icon: 'nao-icon-crm', isOpen: false,
         items: [

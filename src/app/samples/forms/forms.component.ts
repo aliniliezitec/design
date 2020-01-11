@@ -36,7 +36,7 @@ export class FormsComponent {
       quantity: new FormControl(0),
       sku: new FormControl(''),
     }),
-    name: new FormControl(''),
+    name: new FormControl('', { validators: [Validators.required] }),
     items: new FormArray([
       new FormGroup({
         quantity: new FormControl(''),
