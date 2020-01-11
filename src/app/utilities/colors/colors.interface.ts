@@ -162,9 +162,95 @@ export const ColorsCodeBlocks = [
                 <span class="second-field">#f6f8fb</span>
             </div>
         </div>
+        <div class="nao-box-showcase mr-6 mb-5">
+            <div class="nao-content-preview bg-shadow-1"></div>
+            <div class="nao-content-usage d-flex flex-column">
+                <span class="first-field">.bg-shadow-1</span>
+                <span class="second-field">#d8dceb</span>
+            </div>
+        </div>
         `},
     {
-        html: `
+        html1: `
+        <div class="nao-box-showcase mr-6 mb-5">
+            <div class="nao-content-preview" style="background-color:#030929"></div>
+            <div class="nao-content-usage d-flex flex-column">
+                <span class="first-field">.text-1</span>
+                <span class="second-field">#030929</span>
+            </div>
+        </div>
+        <div class="nao-box-showcase mr-6 mb-5">
+            <div class="nao-content-preview" style="background-color:#2F3059"></div>
+            <div class="nao-content-usage d-flex flex-column">
+                <span class="first-field">.text-2</span>
+                <span class="second-field">#2F3059</span>
+            </div>
+        </div>
+        <div class="nao-box-showcase mr-6 mb-5">
+            <div class="nao-content-preview" style="background-color:#4e4f84"></div>
+            <div class="nao-content-usage d-flex flex-column">
+                <span class="first-field">.text-3</span>
+                <span class="second-field">#4e4f84</span>
+            </div>
+        </div>
+        <div class="nao-box-showcase mr-6 mb-5">
+            <div class="nao-content-preview" style="background-color:#687196"></div>
+            <div class="nao-content-usage d-flex flex-column">
+                <span class="first-field">.text-4</span>
+                <span class="second-field">#687196</span>
+            </div>
+        </div>
+        <div class="nao-box-showcase mr-6 mb-5">
+            <div class="nao-content-preview" style="background-color:#323338"></div>
+            <div class="nao-content-usage d-flex flex-column">
+                <span class="first-field">.text-5</span>
+                <span class="second-field">#323338</span>
+            </div>
+        </div>
+        <div class="nao-box-showcase mr-6 mb-5">
+            <div class="nao-content-preview" style="background-color:#a3a9c0"></div>
+            <div class="nao-content-usage d-flex flex-column">
+                <span class="first-field">.text-6</span>
+                <span class="second-field">#a3a9c0</span>
+            </div>
+        </div>
+        <div class="nao-box-showcase mr-6 mb-5">
+            <div class="nao-content-preview" style="background-color:#c8cfe9"></div>
+            <div class="nao-content-usage d-flex flex-column">
+                <span class="first-field">.text-7</span>
+                <span class="second-field">#c8cfe9</span>
+            </div>
+        </div>
+        <div class="nao-box-showcase mr-6 mb-5">
+            <div class="nao-content-preview bg-success"></div>
+            <div class="nao-content-usage d-flex flex-column">
+                <span class="first-field">.text-success</span>
+                <span class="second-field">#3edb8b</span>
+            </div>
+        </div>
+        <div class="nao-box-showcase mr-6 mb-5">
+            <div class="nao-content-preview bg-danger"></div>
+            <div class="nao-content-usage d-flex flex-column">
+                <span class="first-field">.text-danger</span>
+                <span class="second-field">#f8d8e8</span>
+            </div>
+        </div>
+        <div class="nao-box-showcase mr-6 mb-5">
+            <div class="nao-content-preview bg-warning"></div>
+            <div class="nao-content-usage d-flex flex-column">
+                <span class="first-field">.text-warning</span>
+                <span class="second-field">#ffa544</span>
+            </div>
+        </div>
+        <div class="nao-box-showcase mr-6 mb-5">
+            <div class="nao-content-preview bg-white"></div>
+            <div class="nao-content-usage d-flex flex-column">
+                <span class="first-field">.text-white</span>
+                <span class="second-field">#ffffff</span>
+            </div>
+        </div>
+        `,
+        html2: `
         <p class="text-1">.text-1</p>
         <p class="text-2">.text-2</p>
         <p class="text-3">.text-3</p>
@@ -172,25 +258,9 @@ export const ColorsCodeBlocks = [
         <p class="text-5">.text-5</p>
         <p class="text-6">.text-6</p>
         <p class="text-7">.text-7</p>
-        <p class="text-primary">.text-primary</p>
-        <p class="text-primary-light">.text-primary-light</p>
-        <p class="text-primary-lighter">.text-primary-lighter</p>
-        <p class="text-secondary">.text-secondary</p>
-        <p class="text-secondary-light">.text-secondary-light</p>
-        <p class="text-secondary-lighter">.text-secondary-lighter</p>
-        <p class="text-tertiary">.text-tertiary</p>
-        <p class="text-tertiary-light">.text-tertiary-light</p>
         <p class="text-success">.text-success</p>
-        <p class="text-success-light">.text-success-light</p>
         <p class="text-danger">.text-danger</p>
-        <p class="text-danger-light">.text-danger-light</p>
         <p class="text-warning">.text-warning</p>
-        <p class="text-warning-light">.text-warning-light</p>
-        <p class="text-info">.text-info</p>
-        <p class="text-light bg-dark">.text-light</p>
-        <p class="text-dark">.text-dark</p>
-        <p class="text-muted">.text-muted</p>
         <p class="text-white bg-dark">.text-white</p>
-        <p class="text-dark-blue">.text-dark-blue</p>
         `}
 ];

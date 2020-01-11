@@ -23,6 +23,7 @@
 // @deprecated in favor of nao-navbar
 // todo: merge this with .nao-navbar
 .nao-navbar-2 {
+  color: var(--text-primary);
 
   .sm-fixed-top {
     @include media-breakpoint-down(sm) {
@@ -49,7 +50,7 @@
     .nav-item {
       background-color: var(--lightest);
       padding: 0 10px;
-      font-weight: $font-weight-bold;
+      font-weight: $font-weight-semibold;
 
       ul {
         overflow: hidden;

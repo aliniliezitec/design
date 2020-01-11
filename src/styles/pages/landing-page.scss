@@ -154,12 +154,12 @@
       }
 
       @include media-breakpoint-down(sm) {
+        margin-top: 40px;
         grid-template-columns: 295px;
         grid-row-gap: 35px;
       }
 
       @include media-breakpoint-down(xs) {
-        margin-top: 40px;
         grid-row-gap: 25px;
         grid-template-columns: auto;
 
@@ -169,7 +169,10 @@
           }
         }
       }
+    }
 
+    .nao-icon-arrow-back {
+      font-size: pixelToRem(20px);
     }
   }
 
