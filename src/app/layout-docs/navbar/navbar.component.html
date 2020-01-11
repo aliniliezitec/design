@@ -141,6 +141,7 @@
 
                       <div *ngIf="elem.type ==='items'">
 
+                        <!-- Mobile -->
                         <div class="d-block d-md-none">
                           <a href="javascript:void(0)" (click)="toggleMenu(i)"
                             class="nav-link d-flex align-items-center justify-content-between flex-row-reverse-rtl-only">
@@ -149,12 +150,15 @@
                           </a>
 
                           <ul class="m-0" [@expandCollapse]='elem.isOpen' *ngIf="elem.isOpen">
-                            <li *ngFor="let subitem of elem.items" class="nav-item">
-                              <a href="javascript:void(0)" class="nav-link"
-                                [ngClass]="{'active': subitem.active}">{{ subitem.text }}</a>
+                            <li *ngFor="let subItem of elem.items" class="nav-item">
+                              <a href="javascript:void(0)" class="nav-link" (click)="isCollapsed=true; elem.isOpen=false"
+                                [ngClass]="{'active': subItem.active}">
+                                {{ subItem.text }}
+                              </a>
                             </li>
                           </ul>
                         </div>
+
                         <div class="d-none d-md-block">
                           <div class="dropdown" ngbDropdown container="body" display="dynamic"
                             [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
@@ -163,9 +167,9 @@
                               {{ elem.text }}
                             </a>
                             <div class="nao-dropdown-navbar" ngbDropdownMenu>
-                              <a class="dropdown-item" href="javascript:void(0)" [ngClass]="{'active': subitem.active}"
-                                *ngFor="let subitem of elem.items">
-                                {{ subitem.text }}
+                              <a class="dropdown-item" href="javascript:void(0)" [ngClass]="{'active': subItem.active}"
+                                *ngFor="let subItem of elem.items">
+                                {{ subItem.text }}
                               </a>
                             </div>
                           </div>

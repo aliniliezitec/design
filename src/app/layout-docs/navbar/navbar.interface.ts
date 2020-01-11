@@ -141,7 +141,9 @@ export const NavbarCodeBlocks = [
                                 <ul class="m-0" [@expandCollapse]='elem.isOpen' *ngIf="elem.isOpen">
                                     <li *ngFor="let subitem of elem.items" class="nav-item">
                                     <a href="javascript:void(0)" [routerLink]="subitem.route" class="nav-link"
-                                        [ngClass]="{'active': subitem.active}">{{ subitem.text }}</a>
+                                        (click)="isCollapsed=true; elem.isOpen=false" [ngClass]="{'active': subitem.active}">
+                                        {{ subitem.text }}
+                                        </a>
                                     </li>
                                 </ul>
                                 </div>

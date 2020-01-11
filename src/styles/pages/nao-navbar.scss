@@ -24,10 +24,10 @@
 // todo: merge this with .nao-navbar
 .nao-navbar-2 {
 
-  .sm-absolute-top {
+  .sm-fixed-top {
     @include media-breakpoint-down(sm) {
       background: var(--white);
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       left: 0;

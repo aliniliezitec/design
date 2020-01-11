@@ -1,6 +1,8 @@
 <div class="sidenav d-none d-md-block">
   <div class="sidenav-wrapper min-vh-100">
-    <img class="nao-logo" src="assets/images/logo.svg" width="180">
+    <a href="javascript:void(0)" [routerLink]="['/']">
+      <img class="nao-logo" src="assets/images/logo.svg" width="180">
+    </a>
 
     <li *ngFor="let elem of menuItems; let i = index">
       <div [ngSwitch]="elem.type">

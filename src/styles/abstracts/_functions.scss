@@ -1,6 +1,4 @@
 // Convert pixels to REM
-$base-font-size: 16px;
-
 @function pixelToRem($target, $context: $base-font-size) {
   @return ($target / $context) * 1rem;
 } 

@@ -141,9 +141,37 @@ export const ColorsCodeBlocks = [
                 <span class="second-field">#fff</span>
             </div>
         </div>
+        <div class="nao-box-showcase mr-6 mb-5">
+            <div class="nao-content-preview bg-1"></div>
+            <div class="nao-content-usage d-flex flex-column">
+                <span class="first-field">.bg-1</span>
+                <span class="second-field">#e3e5f0</span>
+            </div>
+        </div>
+        <div class="nao-box-showcase mr-6 mb-5">
+            <div class="nao-content-preview bg-2"></div>
+            <div class="nao-content-usage d-flex flex-column">
+                <span class="first-field">.bg-2</span>
+                <span class="second-field">#e6ebf0</span>
+            </div>
+        </div>
+        <div class="nao-box-showcase mr-6 mb-5">
+            <div class="nao-content-preview bg-3"></div>
+            <div class="nao-content-usage d-flex flex-column">
+                <span class="first-field">.bg-3</span>
+                <span class="second-field">#f6f8fb</span>
+            </div>
+        </div>
         `},
     {
         html: `
+        <p class="text-1">.text-1</p>
+        <p class="text-2">.text-2</p>
+        <p class="text-3">.text-3</p>
+        <p class="text-4">.text-4</p>
+        <p class="text-5">.text-5</p>
+        <p class="text-6">.text-6</p>
+        <p class="text-7">.text-7</p>
         <p class="text-primary">.text-primary</p>
         <p class="text-primary-light">.text-primary-light</p>
         <p class="text-primary-lighter">.text-primary-lighter</p>
@@ -162,7 +190,6 @@ export const ColorsCodeBlocks = [
         <p class="text-light bg-dark">.text-light</p>
         <p class="text-dark">.text-dark</p>
         <p class="text-muted">.text-muted</p>
-        <p class="text-text-primary-light">.text-muted</p>
         <p class="text-white bg-dark">.text-white</p>
         <p class="text-dark-blue">.text-dark-blue</p>
         `}
