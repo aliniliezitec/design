@@ -59,7 +59,7 @@
         padding: 1rem 1.7rem 1rem 1.4rem;
         text-align: left;
         border-bottom: 1px solid var(--border-primary);
-        font-size: 1.125rem;
+        font-size: pixelToRem(16px);
         font-weight: $font-weight-regular;
       }
     }

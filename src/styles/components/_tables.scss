@@ -71,7 +71,8 @@
     padding-right: 29px;
 
     .card-header-title {
-      font-size: pixelToRem(22px);
+      padding-top: 6px;
+      font-size: pixelToRem(20px);
       font-weight: $font-weight-bold;
       color: var(--text-secondary);
     }

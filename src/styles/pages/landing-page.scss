@@ -75,7 +75,7 @@
 
   .title {
     font-size: pixelToRem(36px);
-    font-weight: 800;
+    font-weight: $font-weight-extra-bold;
   }
 
   .description {
@@ -90,7 +90,7 @@
       color: var(--text-primary);
       padding-right: 60px;
 
-      @include media-breakpoint-down(md) { 
+      @include media-breakpoint-down(md) {
         padding-right: 0;
       }
     }

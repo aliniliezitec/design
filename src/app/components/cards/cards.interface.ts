@@ -6,7 +6,7 @@ export const CardsCodeBlocks = [
                 Header
             </div>
             <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
+                <h6 class="card-title">Special title treatment</h6>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
@@ -88,7 +88,6 @@ export const CardsCodeBlocks = [
             Ticket name
                 <div class="kanban-board-actions btn-group float-right ml-2" ngbDropdown container="body">
                     <button type="button" class="btn" ngbDropdownToggle>
-                        
                     </button>
                         <div ngbDropdownMenu class="nao-dropdown-1">
                         <a class="dropdown-item" href="javascript:void(0)" >Delete</a>
@@ -119,7 +118,7 @@ export const CardsCodeBlocks = [
                 </div>
                     <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" name="rememberMe" id="rememberMe">
-                    <label class="custom-control-label nao-label-sm-3 align-self-center" for="rememberMe">Remember me</label>
+                    <label class="custom-control-label nao-label-sm-3 pt-1" for="rememberMe">Remember me</label>
                     </label>
                 <hr />
                 <a href="javascript:void(0)" class="forgot-pass">

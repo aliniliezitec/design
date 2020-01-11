@@ -8,6 +8,11 @@ const routes: Routes = [
     component: NaoLayoutComponent,
     children: [
       {
+        path: '',
+        redirectTo: '/getting-started/landing-page',
+        pathMatch: 'full'
+      },
+      {
         path: 'getting-started',
         loadChildren: () => import('./getting-started/getting-started.module').then(m => m.GettingStartedModule),
       },

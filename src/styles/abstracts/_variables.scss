@@ -4,6 +4,15 @@ $body-color: var(--text-primary);
 $enable-validation-icons: false;
 
 // *************************************************
+// Typography
+$h1-font-size: pixelToRem(40px);
+$h2-font-size: pixelToRem(32px);
+$h3-font-size: pixelToRem(30px);
+$h4-font-size: pixelToRem(24px);
+$h5-font-size: pixelToRem(20px);
+$h6-font-size: pixelToRem(16px);
+
+// *************************************************
 // Buttons
 $border-radius: .25rem;
 $border-radius-sm: .25rem;
