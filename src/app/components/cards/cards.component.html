@@ -1,7 +1,3 @@
-<!-- todo: Add plugin  -->
-<!-- todo: all the border radius arethe same -->
-<!-- todo: change the secondary color -->
-
 <div class="nao-docs-wrapper">
   <div class="elements-container">
     <h1 class="title">Cards</h1>
@@ -32,7 +28,7 @@
       <p>
         Custom card
         <!-- todo: add subtitle/descripition -->
-        <br>todo: add the h1-h6 before finishing the header/footer
+        <!-- <br>todo: add the h1-h6 before finishing the header/footer -->
       </p>
 
       <div class="nao-bd-example" [innerHTML]="data[1].html | sanitizeHtml"></div>
@@ -98,7 +94,6 @@
 
     <div class="elem-container">
       <h2 class="title">Board card</h2>
-      <!-- <p>Description.</p> -->
 
       <div class="nao-bd-example" [innerHTML]="data[4].html | sanitizeHtml"></div>
 
@@ -114,7 +109,6 @@
 
     <div class="elem-container">
       <h2 class="title">Ticket without badges</h2>
-      <!-- <p>Description.</p> -->
 
       <div class="nao-bd-example bg-light">
 
@@ -122,10 +116,8 @@
           <div class="ticket-header">
             Ticket name
             <div class="kanban-board-actions btn-group float-right ml-2" ngbDropdown container="body">
-              <button type="button"
-                class="btn"
-                ngbDropdownToggle>
-                
+              <button type="button" class="btn" ngbDropdownToggle>
+
               </button>
               <div ngbDropdownMenu class="nao-dropdown-1">
                 <a class="dropdown-item" href="javascript:void(0)">Delete</a>
@@ -151,7 +143,6 @@
 
     <div class="elem-container">
       <h2 class="title">Ticket with badges</h2>
-      <!-- <p>todo: MISSING ICONS</p> -->
 
       <div class="nao-bd-example bg-light">
 
@@ -159,10 +150,8 @@
           <div class="ticket-header">
             Ticket name
             <div class="kanban-board-actions btn-group float-right ml-2" ngbDropdown container="body">
-              <button type="button"
-                class="btn"
-                ngbDropdownToggle>
-                
+              <button type="button" class="btn" ngbDropdownToggle>
+
               </button>
               <div ngbDropdownMenu class="nao-dropdown-1">
                 <a class="dropdown-item" href="javascript:void(0)">Delete</a>
@@ -171,29 +160,91 @@
           </div>
           <div class="ticket-body">
             <div class="ticket-field">
-              <div>
-                <label class="propLabel mb-1">
-                  <!-- <i [class]="field.icon"></i> -->
-                  <span>Field name</span>
-                </label>
+              <div class="ticket-label">
+                <i class="nao-icon-arrow-dropdown-filled"></i>
+                STATUS
               </div>
-              <div>
-                <span class="initial-avatar">
-                  J
-                </span>
-                <span class="badge badge-grey">
-                  Jon Doe
-                </span>
-              </div>
-              <span class="nao-pill-lg text-white">Won</span>
-              <span class="nao-pill-lg text-white">high</span>
-              <span class="nao-badge-text">1000$</span>
-              <span class="badge badge-grey">Jon doe</span>
-              <span class="badge badge-grey">Jon doe company</span>
-              <div class="nao-badge-text">12/12/2020</div>
-
-
+              <span class="nao-pill-lg bg-warning text-white">Evaluation</span>
             </div>
+
+            <div class="ticket-field">
+              <div class="ticket-label">
+                <i class="nao-icon-arrow-dropdown-filled"></i>
+                PRIORITY
+              </div>
+              <span class="nao-pill-lg bg-danger text-white">High</span>
+            </div>
+
+            <div class="ticket-field">
+              <div class="ticket-label">
+                <i class="nao-icon-dollar"></i>
+                ESTIMATED VALUE
+              </div>
+              <span class="ticket-text">$12,102</span>
+            </div>
+
+            <div class="ticket-field">
+              <div class="ticket-label">
+                <i class="nao-icon-item-list"></i>
+                ACCOUNT
+              </div>
+              <span class="badge badge-grey">Enviromerica</span>
+            </div>
+
+            <div class="ticket-field">
+              <div class="ticket-label">
+                <i class="nao-icon-item-list"></i>
+                PRIMARY CONTACT
+              </div>
+              <span class="badge badge-grey">Julian Goduci</span>
+            </div>
+
+            <div class="ticket-field">
+              <div class="ticket-label">
+                <i class="nao-icon-item-list"></i>
+                INTERACTIONS
+              </div>
+              <span class="badge badge-grey">Touch One - Proposal Stage</span>
+            </div>
+
+            <div class="ticket-field">
+              <div class="ticket-label">
+                <i class="nao-icon-item-list"></i>
+                KEY DECISION MAKER
+              </div>
+              <span class="badge badge-grey">Tom Joyce</span>
+            </div>
+
+            <div class="ticket-field">
+              <div class="ticket-label">
+                <i class="nao-icon-calendar"></i>
+                EXPECTED CLOSE DATE
+              </div>
+              <span class="ticket-text">21/12/2019</span>
+            </div>
+
+            <div class="ticket-field">
+              <div class="ticket-label">
+                <i class="nao-icon-envelope-2"></i>
+                LAST CONTACT
+              </div>
+              <span class="ticket-text">12/6/2019</span>
+            </div>
+
+            <div class="ticket-field">
+              <div class="ticket-label">
+                <i class="nao-icon-profile-male"></i>
+                Owner
+              </div>
+              <div class="ticket-avatar-icon">
+                <span class="badge badge-avatar">
+                  Tom Joyce</span>
+                <span class="initial-avatar">
+                  T
+                </span>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -208,13 +259,13 @@
         <pre><div [innerHTML]="data[6].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
-
+<!-- 
     <div class="elem-container">
-      <h2 class="title">Nao card form</h2>
-      <p>With added button below the card</p>
+      <h2 class="title">Nao Lane for tickets</h2>
 
-      <div class="nao-bd-example d-flex justify-content-center" [innerHTML]="data[7].html | sanitizeHtml"></div>
-      <!-- <div class="nao-bd-example" -->
+      <div class="nao-bd-example">
+
+      </div>
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[7].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -222,6 +273,22 @@
 
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[7].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div> -->
+
+    <div class="elem-container">
+      <h2 class="title">Nao card form</h2>
+      <p>With added button below the card</p>
+
+      <div class="nao-bd-example d-flex justify-content-center" [innerHTML]="data[8].html | sanitizeHtml"></div>
+      <!-- <div class="nao-bd-example" -->
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[8].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[8].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 

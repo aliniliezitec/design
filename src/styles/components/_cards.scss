@@ -100,7 +100,6 @@
 }
 
 // *************************************************
-// todo: finish after icons
 // Nao card for tickets
 .nao-kanban-ticket {
   width: 248px;
@@ -108,6 +107,7 @@
   border-radius: 8px;
   cursor: pointer;
   background-color: var(--white);
+  border: solid 2px #c8cfe9;
 
   .dropdown-item {
     font-size: pixelToRem(12px);
@@ -126,7 +126,6 @@
   }
 
   .ticket-body {
-    text-align: start;
     font-size: pixelToRem(13px);
     font-weight: $font-weight-regular;
     line-height: 1.5;
@@ -140,45 +139,62 @@
     }
 
     .ticket-field {
-      margin-bottom: 10px;
-    }
+      margin-bottom: 15px;
 
-    .badge-grey {
-      font-size: pixelToRem(14px);
-    }
+      .ticket-label {
+        margin-bottom: 3px;
+        font-size: pixelToRem(12px);
+        font-weight: $font-weight-semibold;
 
-    .priority-high {
-      background-color: var(--danger);
-    }
+        i {
+          color: var(--border-light);
+        }
+      }
 
-    .priority-low {
-      background-color: var(--success-light);
-    }
+      .ticket-text {
+        font-weight: $font-weight-bold;
+        margin-left: 16px;
+        font-size: pixelToRem(12px);
+      }
 
-    .propLabel {
-      color: var(--text-primary-light);
-      font-size: pixelToRem(10px);
-      font-weight: $font-weight-bold;
-      display: flex;
-      align-items: center;
+      .badge-grey {
+        font-size: pixelToRem(12px);
+        font-weight: $font-weight-bold;
+        border-radius: 4px;
+        background-color: #e9eef9;
+        padding-left: 14px;
+        padding-right: 14px;
+      }
 
-      i {
-        font-size: 13px;
-        color: var(--light);
-        margin-right: 5px;
-        margin-bottom: 5px;
+      .ticket-avatar-icon {
+        position: relative;
+        font-size: pixelToRem(12px);
+
+        .initial-avatar {
+          position: absolute;
+          left: 0;
+          color: var(--white);
+          border-radius: 50%;
+          border: 2px solid var(--white);
+          background-color: var(--success);
+          padding: 2px 0px 0px 3px;
+          line-height: 10px;
+          width: 18px;
+          height: 18px;
+        }
+
+        .badge-avatar {
+          font-size: pixelToRem(12px);
+          margin-left: 5px;
+          border-radius: 4px;
+          background-color: #e9eef9;
+          padding-left: 18px;
+          padding-right: 26px;
+        }
+
       }
     }
-  }
 
-  .initial-avatar {
-    color: var(--white);
-    font-size: 12px;
-    border-radius: 50%;
-    background-color: var(--success);
-    padding: 3px 5px 3px 5px;
-    width: 30px;
-    height: 30px;
   }
 
   .ticket-footer {

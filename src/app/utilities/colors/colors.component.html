@@ -26,17 +26,33 @@
 
     </div>
     <div class="elem-container">
-      <h2 class="title">Color</h2>
+      <h2 class="title">Text colors</h2>
       <div class="nao-bd-example d-flex flex-wrap" [innerHTML]="data[1].html1 | sanitizeHtml"></div>
-
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].html2)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
 
       <div class="nao-example-highlight">
+        <h3 class="title ml-2">Example of usage</h3>
+
         <pre><div [innerHTML]="data[1].html2 | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
+
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Labels, backgrounds, shadows</h2>
+      <div class="nao-bd-example d-flex flex-wrap" [innerHTML]="data[3].html | sanitizeHtml"></div>
+<!-- 
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[3].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[3].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div> -->
 
     </div>
   </div>

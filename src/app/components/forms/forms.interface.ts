@@ -75,6 +75,10 @@ export const FormsCodeBlocks = [
             Nao label sm 3
             <sup class="text-danger">*</sup>
         </label>
+        <label class="nao-label-sm-4">
+            Nao label sm 4
+            <sup class="text-danger">*</sup>
+        </label>
       ` },
     {
         html: `

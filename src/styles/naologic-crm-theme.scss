@@ -119,11 +119,11 @@ $spacers: (
 
 // Custom bg colors
 $custom-text-colors: (
-  1: #030929, // text-primary
-  2: #2F3059, // text-primary-light
-  3: #4e4f84, // text-primary-lighter
-  4: #687196, // grey-blue
-  5: #323338, // text-secondary
+  primary: #030929, 
+  primary-light: #2F3059, 
+  primary-lighter: #4e4f84, 
+  primary-lightest: #687196, // grey-blue
+  secondary: #323338,
   6: #a3a9c0, // text-muted
   7: #c8cfe9, 
 );
@@ -133,7 +133,7 @@ $custom-bg-colors: (
   1: #e3e5f0,
   2: #e6ebf0,
   3: #f6f8fb,
-  shadow-1: #D8DCEB
+  shadow: #D8DCEB
 );
 
 //  Font

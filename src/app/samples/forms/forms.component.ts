@@ -68,10 +68,10 @@ export class FormsComponent {
     firstName: new FormControl('', { validators: [Validators.required] }),
     lastName: new FormControl('', { validators: [Validators.required] }),
     email: new FormControl('', { validators: [Validators.required, Validators.email] }),
-    employees: new FormControl(''),
+    employees: new FormControl('10'),
     password: new FormControl('', { validators: [Validators.required] }),
     confirmPassword: new FormControl('', { validators: [Validators.required] }),
-    countryId: new FormControl(''),
+    countryId: new FormControl('usa'),
     companyName: new FormControl(''),
     agreeToNewsletters: new FormControl(true),
   });

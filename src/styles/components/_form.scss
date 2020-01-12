@@ -27,6 +27,11 @@
   color: var(--text-primary);
 }
 
+.nao-label-sm-4 {
+  font-size: pixelToRem(13px);
+  color: var(--text-muted);
+}
+
 // *************************************************
 // Nao Form errors
 .nao-error-sm {
@@ -57,11 +62,58 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance:textfield;
+  -moz-appearance: textfield;
 }
 
 
 // todo: add this to the docs
 .nao-input-danger {
   border: 1px var(--danger) solid;
+}
+
+// *************************************************
+// Nao crm free trial form
+.nao-crm-free-trial-form {
+  border-radius: 8px;
+  box-shadow: $nao-card-box-shadow;
+  padding: 30px 60px 20px;
+
+  @include media-breakpoint-down(sm) {
+    padding: 25px 25px;
+  }
+
+  .form-intro {
+    font-weight: $font-weight-bold;
+    color: var(--text-primary-lighter);
+    margin-bottom: 20px;
+  }
+
+  .custom-control-label {
+    font-size: pixelToRem(13px);
+    color: var(--text-muted);
+  }
+
+  .nao-terms {
+    color: var(--text-muted);
+    margin-bottom: 5px;
+    font-size: pixelToRem(10px);
+  }
+
+  .nao-separator {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-top: 1px solid #e6ebf0;
+  }
+
+  .nao-crm-back-login {
+    font-size: pixelToRem(12px);
+    color: var(--text-primary);
+    font-weight: $font-weight-bold;
+
+    a {
+      color: var(--text-primary);
+      text-decoration: underline;
+    }
+  }
 }
