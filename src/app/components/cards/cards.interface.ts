@@ -68,8 +68,8 @@ export const CardsCodeBlocks = [
         <div class="nao-kanban-ticket p-3">
             <div class="ticket-header">
             Ticket name
-                <div class="kanban-board-actions btn-group float-right ml-2" ngbDropdown container="body">
-                    <button type="button" class="btn" ngbDropdownToggle>
+                <div class="btn-group float-right ml-2" ngbDropdown container="body">
+                    <button type="button" class="btn ticket-btn" ngbDropdownToggle>
                     </button>
                         <div ngbDropdownMenu class="nao-dropdown-1">
                         <a class="dropdown-item" href="javascript:void(0)" >Delete</a>
@@ -85,8 +85,8 @@ export const CardsCodeBlocks = [
         <div class="nao-kanban-ticket p-3">
           <div class="ticket-header">
             Ticket name
-            <div class="kanban-board-actions btn-group float-right ml-2" ngbDropdown container="body">
-              <button type="button" class="btn" ngbDropdownToggle>
+            <div class="btn-group float-right ml-2" ngbDropdown container="body">
+              <button type="button" class="btn ticket-btn" ngbDropdownToggle>
 
               </button>
               <div ngbDropdownMenu class="nao-dropdown-1">
@@ -185,7 +185,144 @@ export const CardsCodeBlocks = [
         </div>`},
         {
             html: `
-            <div class="nao-lane-body">`
+            <div class="nao-kanban-lane">
+                <div class="nao-lane-header">
+                    In progress
+                    <div class="btn-group float-right ml-2" ngbDropdown container="body">
+                        <button type="button" class="btn ticket-btn" ngbDropdownToggle>
+                        </button>
+                        <div ngbDropdownMenu class="nao-dropdown-1">
+                        <a class="dropdown-item" href="javascript:void(0)">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nao-lane-footer">
+                    <span class="number-cards">0 cards</span>
+                    <span class="nao-icon-arrow-dropdown-filled"></span>
+                </div>
+            </div>`
+        },
+        {
+            html: `
+            <div class="nao-kanban-lane">
+                <div class="nao-lane-header">
+                        In progress
+                        <div class="btn-group float-right ml-2" ngbDropdown container="body">
+                            <button type="button" class="btn ticket-btn" ngbDropdownToggle>
+                            </button>
+                            <div ngbDropdownMenu class="nao-dropdown-1">
+                                <a class="dropdown-item" href="javascript:void(0)">Delete</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="nao-kanban-ticket p-3">
+                    <div class="ticket-header">
+                        Ticket name
+                        <div class="btn-group float-right ml-2" ngbDropdown container="body">
+                            <button type="button" class="btn ticket-btn" ngbDropdownToggle>
+                            </button>
+                            <div ngbDropdownMenu class="nao-dropdown-1">
+                                <a class="dropdown-item" href="javascript:void(0)">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ticket-body">
+                        <div class="ticket-field">
+                            <div class="ticket-label">
+                                <i class="nao-icon-arrow-dropdown-filled"></i>
+                                STATUS
+                            </div>
+                            <span class="nao-pill-lg bg-warning text-white">Evaluation</span>
+                        </div>
+
+                        <div class="ticket-field">
+                            <div class="ticket-label">
+                                <i class="nao-icon-arrow-dropdown-filled"></i>
+                                PRIORITY
+                            </div>
+                            <span class="nao-pill-lg bg-danger text-white">High</span>
+                        </div>
+
+                        <div class="ticket-field">
+                            <div class="ticket-label">
+                                <i class="nao-icon-dollar"></i>
+                                ESTIMATED VALUE
+                            </div>
+                            <span class="ticket-text">$12,102</span>
+                        </div>
+
+                        <div class="ticket-field">
+                            <div class="ticket-label">
+                                <i class="nao-icon-item-list"></i>
+                                ACCOUNT
+                            </div>
+                            <span class="badge badge-grey">Enviromerica</span>
+                        </div>
+
+                        <div class="ticket-field">
+                            <div class="ticket-label">
+                                <i class="nao-icon-item-list"></i>
+                                PRIMARY CONTACT
+                            </div>
+                            <span class="badge badge-grey">Julian Goduci</span>
+                        </div>
+
+                        <div class="ticket-field">
+                            <div class="ticket-label">
+                                <i class="nao-icon-item-list"></i>
+                                INTERACTIONS
+                            </div>
+                            <span class="badge badge-grey">Touch One - Proposal Stage</span>
+                        </div>
+
+                        <div class="ticket-field">
+                            <div class="ticket-label">
+                                <i class="nao-icon-item-list"></i>
+                                KEY DECISION MAKER
+                            </div>
+                            <span class="badge badge-grey">Tom Joyce</span>
+                        </div>
+
+                        <div class="ticket-field">
+                            <div class="ticket-label">
+                                <i class="nao-icon-calendar"></i>
+                                EXPECTED CLOSE DATE
+                            </div>
+                            <span class="ticket-text">21/12/2019</span>
+                        </div>
+
+                        <div class="ticket-field">
+                            <div class="ticket-label">
+                                <i class="nao-icon-envelope-2"></i>
+                                LAST CONTACT
+                            </div>
+                            <span class="ticket-text">12/6/2019</span>
+                        </div>
+
+                        <div class="ticket-field">
+                            <div class="ticket-label">
+                                <i class="nao-icon-profile-male"></i>
+                                Owner
+                            </div>
+                            <div class="ticket-avatar-icon">
+                                <span class="badge badge-avatar">
+                                Tom Joyce</span>
+                                <span class="initial-avatar">
+                                T
+                                </span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="nao-lane-footer">
+                        <span class="number-cards">1 cards</span>
+                        <span class="nao-icon-arrow-dropdown-filled"></span>
+                    </div>
+                </div>`
         },
     {
         html: `

@@ -105,7 +105,6 @@
   width: 248px;
   margin: 0 16px 10px 16px;
   border-radius: 8px;
-  cursor: pointer;
   background-color: var(--white);
   border: solid 2px #c8cfe9;
 
@@ -199,6 +198,48 @@
 
   .ticket-footer {
     align-content: center;
+  }
+}
+
+.ticket-btn {
+  padding: 3px;
+}
+
+//  Nao lane card
+.nao-kanban-lane {
+  background-color: #f7f9fc;
+  border-radius: 8px;
+  width: 280px;
+
+  .nao-lane-header {
+    padding: 17px 27px 20px 22px;
+    font-size: pixelToRem(14px);
+    font-weight: $font-weight-bold;
+    color: var(--grey-blue);
+  }
+
+  .nao-lane-footer {
+    position: relative;
+    height: 80px;
+    width: 100%;
+
+    .number-cards {
+      position: absolute;
+      bottom: 13px;
+      left: 17px;
+      font-size: pixelToRem(14px);
+      color: var(--grey-blue);
+    }
+
+    .nao-icon-arrow-dropdown-filled {
+      color: var(--primary);
+      font-size: 35px;
+      position: absolute;
+      bottom: 9px;
+      left: 50%;
+      line-height: 30px;
+      transform: translateX(-50%);
+    }
   }
 }
 
