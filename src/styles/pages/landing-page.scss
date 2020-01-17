@@ -3,14 +3,14 @@
 
   .hero {
     padding-top: 100px;
-    padding: 100px 150px 0 150px;
+    padding: 100px 150px 100px 150px;
     background-image: url("https://d326ktrzuzy7hz.cloudfront.net/images/design/landing-page/heroimage.png");
     background-size: cover;
 
     .content {
       width: 100%;
       max-width: 1084px;
-      height: 870px;
+      height: 770px;
       border-top-left-radius: pixelToRem(4px);
       border-top-right-radius: pixelToRem(4px);
       background-color: var(--white);
@@ -29,7 +29,8 @@
       max-height: 780px;
 
       .content {
-        padding: 150px 50px 0 50px;
+        height: 580px;
+        padding: 150px 50px 150px 50px;
 
         .description {
           font-size: pixelToRem(70px);
@@ -38,7 +39,7 @@
     }
 
     @media screen and (max-width: 885px) {
-      padding: 100px 80px 0 80px;
+      padding: 100px 80px 100px 80px;
       max-height: 780px;
 
       .description {
@@ -50,7 +51,8 @@
       max-height: 500px;
 
       .content {
-        padding: 80px 50px 0 50px;
+        height: unset;
+        padding: 80px 50px 80px 50px;
 
         .description {
           font-size: pixelToRem(38px);
@@ -59,11 +61,11 @@
     }
 
     @include media-breakpoint-down(xs) {
-      padding: 130px 40px 0 40px;
+      padding: 70px 40px 100px 40px;
       max-height: 340px;
 
       .content {
-        padding: 20px;
+        padding: 40px 20px;
 
         .description {
           font-size: pixelToRem(28px);
