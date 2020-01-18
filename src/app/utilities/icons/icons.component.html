@@ -32,31 +32,9 @@
     </div>
 
     <div class="elem-container">
-      <h2 class="title">Size</h2>
-      <p>The size of the icons is controlled by the <code>font-size</code> and for controlling the height you should use a <code>line-height</code> smaller then the font-size.</p>
-      <div class="nao-bd-example d-flex flex-column" [innerHTML]="data[2].html | sanitizeHtml"></div>
-     
-      <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].html)" placement="top"
-          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
-      </div>
-
-      <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[2].html | htmlPrismPipe | sanitizeHtml"></div></pre>
-      </div>
-    </div>
-
-    <div class="elem-container">
-      <h2 class="title">System Icons</h2>
-      <p>Our icon system is inspired by big organization iconography. It aims to be bold, communicative, and hard
-        working. Filled versions work well at small sizes in product
-        while the outlined version works better in signage and marketing.</p>
-      <div class="nao-bd-example nao-icons-showcase d-flex flex-wrap" [innerHTML]="data[3].html | sanitizeHtml"></div>
-    </div>
-
-    <div class="elem-container">
       <h2 class="title">Icon construction</h2>
-      <p class="mb-4">All icons should be drawn on a 24x24px (3px stroke width for outlines), 16x16px (2px stroke width for outlines)
+      <p class="mb-4">All icons should be drawn on a 24x24px (3px stroke width for outlines), 16x16px (2px stroke width
+        for outlines)
         or a 48x48px grid frame (6px stroke width for outlines). Each frame includes keylines and a one pixel padding on
         all sides as guidance.</p>
       <div class="d-flex flex-wrap">
@@ -77,23 +55,48 @@
 
     <div class="elem-container">
       <h2 class="title">Containers</h2>
-      <p class="mb-4">In cases where the icon is contained inside a circle, the diameter of the circle can be determined by doubling the width of the icon. Icons should be
+      <p class="mb-4">In cases where the icon is contained inside a circle, the diameter of the circle can be determined
+        by doubling the width of the icon. Icons should be
         optically centered within the container.</p>
-        <div class="d-flex flex-wrap">
-          <div class="d-flex flex-column align-items-center mr-4">
-            <span class="icon-construction-sm mb-1">Circular container</span>
-            <div class="icon-container-round d-flex align-items-center justify-content-center">
-              <span class="nao-icon-elearning"></span>
-            </div>
+      <div class="d-flex flex-wrap">
+        <div class="d-flex flex-column align-items-center mr-4">
+          <span class="icon-construction-sm mb-1">Circular container</span>
+          <div class="icon-container-round d-flex align-items-center justify-content-center">
+            <span class="nao-icon-elearning"></span>
           </div>
-          <div class="d-flex flex-column align-items-center mr-4">
-            <span class="icon-construction-sm mb-1">Squared container</span>
-            <div class="icon-container-squared d-flex align-items-center justify-content-center">
-              <span class="nao-icon-elearning"></span>
-            </div>
-          </div>
-
         </div>
+        <div class="d-flex flex-column align-items-center mr-4">
+          <span class="icon-construction-sm mb-1">Squared container</span>
+          <div class="icon-container-squared d-flex align-items-center justify-content-center">
+            <span class="nao-icon-elearning"></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Size</h2>
+      <p>The size of the icons is controlled by the <code>font-size</code> and for controlling the height you should use
+        a <code>line-height</code> smaller then the font-size.</p>
+      <div class="nao-bd-example d-flex flex-column" [innerHTML]="data[2].html | sanitizeHtml"></div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[2].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">System Icons</h2>
+      <p>Our icon system is inspired by big organization iconography. It aims to be bold, communicative, and hard
+        working. Filled versions work well at small sizes in product
+        while the outlined version works better in signage and marketing.</p>
+      <div class="nao-bd-example nao-icons-showcase d-flex flex-wrap" [innerHTML]="data[3].html | sanitizeHtml"></div>
     </div>
 
   </div>

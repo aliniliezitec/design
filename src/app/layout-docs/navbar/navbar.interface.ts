@@ -14,12 +14,21 @@ export interface MenuItemInterface {
     active: boolean;
 }
 
+export interface SideMenuInterface {
+  type: string;
+  text: string;
+  route: string;
+  icon: string;
+  isOpen: boolean;
+  items?: MenuItemInterface[];
+}
+
 export const NavbarCodeBlocks = [
     {
         html: `
         <nav class="navbar navbar-expand bg-white py-0 pl-3 pr-0">
           <a href="javascript:void(0)" class="navbar-brand py-0 mr-4">
-            <img src="https://d326ktrzuzy7hz.cloudfront.net/images/logos/logo.svg" alt="Naologic" height="30">
+            <img src="assets/images/crm-assets/logo-crm.svg" alt="Naologic" height="30">
           </a>
           <div class="navbar-collapse">
             <!-- Divider -->
@@ -38,7 +47,7 @@ export const NavbarCodeBlocks = [
                 <a ngbDropdownToggle href="javascript:void(0)">
                   <span class="d-inline-flex align-items-center nao-dropdown-avatar-container">
                     <img class="d-block nao-dropdown-avatar mt-1 rounded-circle"
-                      src="https://d326ktrzuzy7hz.cloudfront.net/images/placeholder/default-avatar.png" />
+                      src="assets/images/placeholder/default-avatar.png" />
                     <span class="dot" [ngClass]="{ 'dot_disconnected': false, 'dot_connected': true }"></span>
                   </span>
                 </a>
@@ -46,7 +55,7 @@ export const NavbarCodeBlocks = [
                   <div class="nao-dropdown-profile">
                     <div class="d-flex">
                       <img class="d-block nao-dropdown-avatar rounded-circle mr-2"
-                        src="https://d326ktrzuzy7hz.cloudfront.net/images/placeholder/default-avatar.png" />
+                        src="assets/images/placeholder/default-avatar.png" />
                       <div class="d-flex flex-column">
                         <span class="font-weight-bold">Jon Doe</span>
                         <span class="nao-dropdown-small-text">jon@naologic.com</span>
@@ -80,7 +89,7 @@ export const NavbarCodeBlocks = [
                     <nav class="navbar navbar-expand-md sm-fixed-top px-3 px-md-0"
                         [ngClass]="{'b-0' : !isCollapsed}">
                         <a class="navbar-brand d-md-none" href="javascript:void(0)" (click)="isCollapsed = true">
-                        <img src="https://d326ktrzuzy7hz.cloudfront.net/images/logos/logo.svg" alt="Naologic" height="30">
+                        <img src="assets/images/crm-assets/logo-crm.svg" alt="Naologic" height="30">
                         </a>
 
                         <div class="align-items-center ml-auto d-md-none">
@@ -89,7 +98,7 @@ export const NavbarCodeBlocks = [
                             <a ngbDropdownToggle href="javascript:void(0)">
                             <span class="d-inline-flex align-items-center nao-dropdown-avatar-container">
                                 <img class="d-block nao-dropdown-avatar mt-1 rounded-circle"
-                                src="https://d326ktrzuzy7hz.cloudfront.net/images/placeholder/default-avatar.png" />
+                                src="assets/images/placeholder/default-avatar.png" />
                                 <span class="dot" [ngClass]="{ 'dot_disconnected': false, 'dot_connected': true }"></span>
                             </span>
                             </a>
@@ -97,7 +106,7 @@ export const NavbarCodeBlocks = [
                                 <div class="nao-dropdown-profile">
                                     <div class="d-flex">
                                         <img class="d-block nao-dropdown-avatar rounded-circle mr-2"
-                                            src="https://d326ktrzuzy7hz.cloudfront.net/images/placeholder/default-avatar.png" />
+                                            src="assets/images/placeholder/default-avatar.png" />
                                         <div class="d-flex flex-column">
                                             <span class="font-weight-bold">Jon Doe</span>
                                             <span class="nao-dropdown-small-text">jon@naologic.com</span>
@@ -361,6 +370,122 @@ export const NavbarCodeBlocks = [
             route: string;
             active: boolean;
         }`
+    },
+    {
+      html: `
+      <div class="sidenav d-none d-sm-block">
+      <div class="sidenav-wrapper min-vh-100">
+        <a href="javascript:void(0)" [routerLink]="['/']">
+          <img class="nao-logo" src="assets/images/logo/logo.png" width="180">
+        </a>
+
+        <li *ngFor="let elem of sideMenuItems; let i = index">
+          <div [ngSwitch]="elem.type">
+            <div *ngSwitchCase="'items'">
+              <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center justify-content-center menu-icon">
+                  <i [class]="elem.icon"></i>
+                </div>
+                <a href="javascript:void(0)" (click)="toggleSideMenuItems(i)" class="sidenav-menu-text">{{ elem.text }}</a>
+              </div>
+              <ul class="m-0" [@expandCollapse]='elem.isOpen' *ngIf="elem.isOpen">
+                <li *ngFor="let item of elem.items">
+                  <a href="javascript:void(0)" [routerLink]="item.route">{{item.text}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <div class="made-with">
+          Made with 🤖 by Naologic
+        </div>
+
+      </div>
+    </div>`,
+    ts1: `
+    public sideMenuItems: SideMenuInterface[] = [
+      {
+          type: 'items', text: 'Layout', route: '', icon: 'nao-icon-crm', isOpen: false,
+          items: [
+              { type: 'item', route: '', text: 'Grid', active: false },
+              { type: 'item', route: '', text: 'Components', active: false },
+              { type: 'item', route: '', text: 'Navigation', active: false },
+          ]
+      },
+      {
+          type: 'items', text: 'Components', route: '', icon: 'nao-icon-surveys', isOpen: false,
+          items: [
+              { type: 'item', route: '', text: 'Buttons', active: false },
+              { type: 'item', route: '', text: 'Cards', active: false },
+              { type: 'item', route: '', text: 'Dropdowns', active: false },
+              { type: 'item', route: '', text: 'Forms', active: false },
+              { type: 'item', route: '', text: 'Input groups', active: false },
+              { type: 'item', route: '', text: 'Loaders', active: false },
+              { type: 'item', route: '', text: 'Modals', active: false },
+              { type: 'item', route: '', text: 'Tables', active: false },
+          ]
+      },
+      {
+          type: 'items', text: 'Utilities', route: '', icon: 'nao-icon-settings', isOpen: false,
+          items: [
+              { type: 'item', route: '', text: 'Colors', active: false },
+              { type: 'item', route: '', text: 'Iconography', active: false },
+              { type: 'item', route: '', text: 'Illustration', active: false },
+              { type: 'item', route: '', text: 'Typography', active: false },
+              { type: 'item', route: '', text: 'Spacing', active: false },
+              { type: 'item', route: '', text: 'Sizing', active: false },
+          ]
+      },
+      {
+          type: 'items', text: 'Photography ', route: '', icon: 'nao-icon-image-placeholder', isOpen: false,
+          items: [
+              { type: 'item', route: '', text: 'Overview', active: false },
+              { type: 'item', route: '', text: 'Compositions', active: false },
+              { type: 'item', route: '', text: 'Casting', active: false },
+              { type: 'item', route: '', text: 'Lighting and color', active: false },
+              { type: 'item', route: '', text: 'Locations', active: false },
+          ]
+      },
+      {
+          type: 'items', text: 'Samples ', route: '', icon: 'nao-icon-multiple-choice', isOpen: false,
+          items: [
+              { type: 'item', route: '', text: 'Forms', active: false },
+          ]
+      },
+  ];
+
+    /**
+     * Toggle a sidemenu item
+     */
+    public toggleSideMenuItems(index): void {
+      if (index >= 0) {
+        // If the current menu item is closed, close other items
+        if (!this.sideMenuItems[index].isOpen) {
+          this.sideMenuItems.map((el, i) => {
+            if (i !== index) {
+              el.isOpen = false;
+            }
+          });
+        }
+        this.sideMenuItems[index].isOpen = !this.sideMenuItems[index].isOpen;
+      }
+    }`,
+    ts2: `
+    export interface MenuItemInterface {
+      type: string;
+      text: string;
+      route: string;
+      active: boolean;
+    }
+    export interface SideMenuInterface {
+      type: string;
+      text: string;
+      route: string;
+      icon: string;
+      isOpen: boolean;
+      items?: MenuItemInterface[];
+    }`
     }
 
 ];

@@ -134,7 +134,7 @@ export const ColorsCodeBlocks = [
                 <div class="nao-content-preview bg-danger"></div>
                 <div class="nao-content-usage d-flex flex-column">
                     <span class="first-field">.text-danger</span>
-                    <span class="second-field">#f8d8e8</span>
+                    <span class="second-field">#db3e8e</span>
                 </div>
             </div>
             <div class="nao-box-showcase mb-5">

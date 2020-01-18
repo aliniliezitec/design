@@ -23,10 +23,10 @@ const routes: Routes = [
         }
       },
       {
-        path: 'icons',
+        path: 'iconography',
         component: IconsComponent,
         data: {
-          title: 'Icons - Naologic',
+          title: 'Iconography - Naologic',
         }
       },
       {

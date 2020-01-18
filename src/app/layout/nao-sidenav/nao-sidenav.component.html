@@ -1,19 +1,19 @@
 <div class="sidenav d-none d-md-block">
   <div class="sidenav-wrapper min-vh-100">
     <a href="javascript:void(0)" [routerLink]="['/']">
-      <img class="nao-logo" src="assets/images/logo.svg" width="180">
+      <img class="nao-logo" src="assets/images/logo/logo.png" width="180">
     </a>
 
-    <li *ngFor="let elem of menuItems; let i = index">
+    <li *ngFor="let elem of sideMenuItems; let i = index">
       <div [ngSwitch]="elem.type">
         <div *ngSwitchCase="'items'">
           <div class="d-flex align-items-center">
             <div class="d-flex align-items-center justify-content-center menu-icon">
               <i [class]="elem.icon"></i>
             </div>
-            <a href="javascript:void(0)" (click)="toggleMenu(i)" class="sidenav-menu-text">{{ elem.text }}</a>
+            <a href="javascript:void(0)" (click)="toggleSideMenuItems(i)" class="sidenav-menu-text">{{ elem.text }}</a>
           </div>
-          <ul class="m-0" [@expandCollapse]='elem.isOpen' *ngIf="elem.isOpen">
+          <ul class="m-0" [@expandCollapseSidenav]='elem.isOpen' *ngIf="elem.isOpen">
             <li *ngFor="let item of elem.items">
               <a href="javascript:void(0)" [routerLink]="item.route">{{item.text}}</a>
             </li>

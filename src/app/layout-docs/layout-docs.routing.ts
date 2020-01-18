@@ -27,10 +27,10 @@ const routes: Routes = [
         }
       },
       {
-        path: 'navbar',
+        path: 'navigation',
         component: NavbarComponent,
         data: {
-          title: 'Navbar - Naologic',
+          title: 'Navigation - Naologic',
         }
       },
     ]

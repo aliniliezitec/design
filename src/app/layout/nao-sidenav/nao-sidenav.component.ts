@@ -6,7 +6,7 @@ import { MenuItems } from '../layout.interface';
   selector: 'app-nao-sidenav',
   templateUrl: './nao-sidenav.component.html',
   animations: [
-    trigger('expandCollapse', [
+    trigger('expandCollapseSidenav', [
       state('expandCollapseState', style({ height: '*' })),
       transition('* => void', [
         style({ height: '*' }),
@@ -21,7 +21,7 @@ import { MenuItems } from '../layout.interface';
 })
 
 export class NaoSidenavComponent implements OnInit {
-  public menuItems = MenuItems;
+  public sideMenuItems = MenuItems;
 
   constructor() {
   }
@@ -32,17 +32,17 @@ export class NaoSidenavComponent implements OnInit {
   /**
    * Toggle a menu item
    */
-  public toggleMenu(index): void {
+  public toggleSideMenuItems(index): void {
     if (index >= 0) {
       // If the current menu item is closed, close other items
-      if (!this.menuItems[index].isOpen) {
-        this.menuItems.map((el, i) => {
+      if (!this.sideMenuItems[index].isOpen) {
+        this.sideMenuItems.map((el, i) => {
           if (i !== index) {
             el.isOpen = false;
           }
         });
       }
-      this.menuItems[index].isOpen = !this.menuItems[index].isOpen;
+      this.sideMenuItems[index].isOpen = !this.sideMenuItems[index].isOpen;
     }
   }
 

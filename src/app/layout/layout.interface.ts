@@ -11,7 +11,7 @@ export const MenuItems = [
         items: [
             { type: 'item', route: '/layout/grid', text: 'Grid' },
             { type: 'item', route: '/layout/components', text: 'Components' },
-            { type: 'item', route: '/layout/navbar', text: 'Navbar' },
+            { type: 'item', route: '/layout/navigation', text: 'Navigation' },
         ]
     },
     {
@@ -19,20 +19,20 @@ export const MenuItems = [
         items: [
             // { type: 'item', route: '/components/alerts', text: 'Alerts' },
             { type: 'item', route: '/components/buttons', text: 'Buttons' },
-            { type: 'item', route: '/components/card', text: 'Card' },
+            { type: 'item', route: '/components/cards', text: 'Cards' },
             { type: 'item', route: '/components/dropdowns', text: 'Dropdowns' },
             { type: 'item', route: '/components/forms', text: 'Forms' },
-            { type: 'item', route: '/components/input-group', text: 'Input group' },
+            { type: 'item', route: '/components/input-groups', text: 'Input groups' },
             { type: 'item', route: '/components/loaders', text: 'Loaders' },
-            { type: 'item', route: '/components/modal', text: 'Modal' },
-            { type: 'item', route: '/components/table', text: 'Table' },
+            { type: 'item', route: '/components/modals', text: 'Modals' },
+            { type: 'item', route: '/components/tables', text: 'Tables' },
         ]
     },
     {
         type: 'items', text: 'Utilities', route: '/utilities', icon: 'nao-icon-settings', isOpen: false,
         items: [
             { type: 'item', route: '/utilities/colors', text: 'Colors' },
-            { type: 'item', route: '/utilities/icons', text: 'Icons' },
+            { type: 'item', route: '/utilities/iconography', text: 'Iconography' },
             { type: 'item', route: '/utilities/illustration', text: 'Illustration' },
             { type: 'item', route: '/utilities/typography', text: 'Typography' },
             { type: 'item', route: '/utilities/spacing', text: 'Spacing' },

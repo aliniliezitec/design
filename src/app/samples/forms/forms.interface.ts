@@ -250,8 +250,6 @@ export const FormsCodeBlocks = [
     <div class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
-
-
             <div class="modal-header default pb-3 pt-4">
               <h6 class="modal-title pl-4 ml-2">
                 Add new product
@@ -276,6 +274,9 @@ export const FormsCodeBlocks = [
                           <input type="text" autocomplete="off"
                             class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="name"
                             placeholder="Name" />
+                            <span *ngIf="formGroup2.get('name').errors" class="text-danger">
+                              Name is required.
+                            </span>
                         </div>
                       </div>
                       <div class="d-flex flex-column flex-sm-row mb-3 no-gutters-xs">
@@ -379,7 +380,7 @@ export const FormsCodeBlocks = [
 
                     <div class="box-container" [hidden]="!formGroup2.get('shipping.hasShipping').value">
                       <div class="d-flex justify-content-center">
-
+                        
                         <div class="nao-grid-4-input-dropdown">
                           <div class="input-group nao-input-dropdown-group-1 nao-shippable-input-group">
                             <label class="nao-label-sm-2 mr-auto">

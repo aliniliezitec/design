@@ -25,7 +25,7 @@ const routes: Routes = [
         }
       },
       {
-        path: 'card',
+        path: 'cards',
         component: CardsComponent,
         data: {
           title: 'Cards - Naologic',
@@ -46,7 +46,7 @@ const routes: Routes = [
         }
       },
       {
-        path: 'input-group',
+        path: 'input-groups',
         component: InputGroupComponent,
         data: {
           title: 'Input group - Naologic',
@@ -60,14 +60,14 @@ const routes: Routes = [
         }
       },
       {
-        path: 'modal',
+        path: 'modals',
         component: ModalComponent,
         data: {
           title: 'Modals - Naologic',
         }
       },
       {
-        path: 'table',
+        path: 'tables',
         component: TableComponent,
         data: {
           title: 'Tables - Naologic',

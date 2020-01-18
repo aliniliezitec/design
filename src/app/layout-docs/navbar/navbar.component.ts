@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit, HostListener, OnDestroy } from '@angular/core';
 import { AppService } from 'src/app/app.service';
-import { NavbarCodeBlocks, MenuInterface } from './navbar.interface';
+import { NavbarCodeBlocks, MenuInterface, SideMenuInterface } from './navbar.interface';
 import { LayoutDocsPublicFlow } from '../layout-docs.flowservice';
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { trigger, state, style, transition, animate } from '@angular/animations';
@@ -72,6 +72,58 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
     },
   ];
 
+  public sideMenuItems: SideMenuInterface[] = [
+    {
+        type: 'items', text: 'Layout', route: '', icon: 'nao-icon-crm', isOpen: false,
+        items: [
+            { type: 'item', route: '', text: 'Grid', active: false },
+            { type: 'item', route: '', text: 'Components', active: false },
+            { type: 'item', route: '', text: 'Navigation', active: false },
+        ]
+    },
+    {
+        type: 'items', text: 'Components', route: '', icon: 'nao-icon-surveys', isOpen: false,
+        items: [
+            { type: 'item', route: '', text: 'Buttons', active: false },
+            { type: 'item', route: '', text: 'Cards', active: false },
+            { type: 'item', route: '', text: 'Dropdowns', active: false },
+            { type: 'item', route: '', text: 'Forms', active: false },
+            { type: 'item', route: '', text: 'Input groups', active: false },
+            { type: 'item', route: '', text: 'Loaders', active: false },
+            { type: 'item', route: '', text: 'Modals', active: false },
+            { type: 'item', route: '', text: 'Tables', active: false },
+        ]
+    },
+    {
+        type: 'items', text: 'Utilities', route: '', icon: 'nao-icon-settings', isOpen: false,
+        items: [
+            { type: 'item', route: '', text: 'Colors', active: false },
+            { type: 'item', route: '', text: 'Iconography', active: false },
+            { type: 'item', route: '', text: 'Illustration', active: false },
+            { type: 'item', route: '', text: 'Typography', active: false },
+            { type: 'item', route: '', text: 'Spacing', active: false },
+            { type: 'item', route: '', text: 'Sizing', active: false },
+        ]
+    },
+    {
+        type: 'items', text: 'Photography ', route: '', icon: 'nao-icon-image-placeholder', isOpen: false,
+        items: [
+            { type: 'item', route: '', text: 'Overview', active: false },
+            { type: 'item', route: '', text: 'Compositions', active: false },
+            { type: 'item', route: '', text: 'Casting', active: false },
+            { type: 'item', route: '', text: 'Lighting and color', active: false },
+            { type: 'item', route: '', text: 'Locations', active: false },
+        ]
+    },
+    {
+        type: 'items', text: 'Samples ', route: '', icon: 'nao-icon-multiple-choice', isOpen: false,
+        items: [
+            { type: 'item', route: '', text: 'Forms', active: false },
+        ]
+    },
+];
+
+
 
   public isCollapsed = true;
   public sizeChanged$ = new BehaviorSubject<boolean>(null);
@@ -121,6 +173,7 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
       this.showPrevBtn = false;
     }
   }
+
   public refreshScrollNextBtn(isResized: boolean = false): void {
     const scrollLeft = this.navbarContent.nativeElement.scrollLeft;
     const offsetWidth = this.navbarContent.nativeElement.offsetWidth;
@@ -172,6 +225,23 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
         });
       }
       this.menuItems[index].isOpen = !this.menuItems[index].isOpen;
+    }
+  }
+
+  /**
+   * Toggle a sidemenu item
+   */
+  public toggleSideMenuItems(index): void {
+    if (index >= 0) {
+      // If the current menu item is closed, close other items
+      if (!this.sideMenuItems[index].isOpen) {
+        this.sideMenuItems.map((el, i) => {
+          if (i !== index) {
+            el.isOpen = false;
+          }
+        });
+      }
+      this.sideMenuItems[index].isOpen = !this.sideMenuItems[index].isOpen;
     }
   }
 

@@ -4,7 +4,7 @@
   .hero {
     padding-top: 100px;
     padding: 100px 150px 100px 150px;
-    background-image: url("https://d326ktrzuzy7hz.cloudfront.net/images/design/landing-page/heroimage.png");
+    background-image: url("assets/images/landing-page/heroimage.png");
     background-size: cover;
 
     .content {
@@ -20,9 +20,8 @@
         max-width: 780px;
         font-size: pixelToRem(85px);
         font-weight: $font-weight-bold;
-        color: #4a4a4a;
+        color: var(--text-primary);;
       }
-
     }
 
     @include media-breakpoint-down(lg) {
