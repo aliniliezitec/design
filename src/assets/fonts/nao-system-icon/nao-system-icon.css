@@ -50,7 +50,7 @@
 .nao-icon-email-reminder::before,
 .nao-icon-employee-satisfaction::before,
 .nao-icon-enterprise-system::before,
-.nao-envelope-1::before,
+.nao-icon-envelope-1::before,
 .nao-icon-envelope-2::before,
 .nao-icon-facebook::before,
 .nao-icon-file::before,
@@ -140,7 +140,7 @@
 .nao-icon-email-reminder::before { content: "\f8f1"; }
 .nao-icon-employee-satisfaction::before { content: "\f8f2"; }
 .nao-icon-enterprise-system::before { content: "\f8f3"; }
-.nao-envelope-1::before { content: "\f8f4"; }
+.nao-icon-envelope-1::before { content: "\f8f4"; }
 .nao-icon-envelope-2::before { content: "\f8f5"; }
 .nao-icon-facebook::before { content: "\f8f6"; }
 .nao-icon-file::before { content: "\f8f7"; }

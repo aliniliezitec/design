@@ -113,9 +113,14 @@
   }
 
   .ticket-header {
+    display: flex;
     font-size: pixelToRem(16px);
     margin-bottom: 5px;
-    text-align: start;
+    justify-content: space-between;
+
+    .ticket-options-btn {
+      align-self: baseline;
+    }
   }
 
   .nao-pill-lg {
@@ -202,7 +207,7 @@
 }
 
 .ticket-btn {
-  padding: 3px;
+  padding: 0 3px 3px 3px;
 }
 
 //  Nao lane card
@@ -231,13 +236,22 @@
       color: var(--grey-blue);
     }
 
-    .nao-icon-arrow-dropdown-filled {
-      color: var(--primary);
-      font-size: 35px;
+    .circle-icon {
+      background-color: var(--primary);
+      display: inline-block;
+      border-radius: 50%;
+      padding: 9px;
+      height: 32px;
+      width: 32px;
+    }
+
+    .nao-icon-add {
+      color: var(--white);
+      font-size: 14px;
       position: absolute;
       bottom: 9px;
       left: 50%;
-      line-height: 30px;
+      line-height: 14px;
       transform: translateX(-50%);
     }
   }

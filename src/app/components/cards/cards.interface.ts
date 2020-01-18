@@ -68,7 +68,7 @@ export const CardsCodeBlocks = [
         <div class="nao-kanban-ticket p-3">
             <div class="ticket-header">
             Ticket name
-                <div class="btn-group float-right ml-2" ngbDropdown container="body">
+                <div class="btn-group ticket-options-btn ml-2" ngbDropdown container="body">
                     <button type="button" class="btn ticket-btn" ngbDropdownToggle>
                     </button>
                         <div ngbDropdownMenu class="nao-dropdown-1">
@@ -85,7 +85,7 @@ export const CardsCodeBlocks = [
         <div class="nao-kanban-ticket p-3">
           <div class="ticket-header">
             Ticket name
-            <div class="btn-group float-right ml-2" ngbDropdown container="body">
+            <div class="btn-group ticket-options-btn ml-2" ngbDropdown container="body">
               <button type="button" class="btn ticket-btn" ngbDropdownToggle>
 
               </button>
@@ -198,7 +198,7 @@ export const CardsCodeBlocks = [
                 </div>
                 <div class="nao-lane-footer">
                     <span class="number-cards">0 cards</span>
-                    <span class="nao-icon-arrow-dropdown-filled"></span>
+                    <span class="circle-icon nao-icon-add"></span>
                 </div>
             </div>`
         },
@@ -220,7 +220,7 @@ export const CardsCodeBlocks = [
                     <div class="nao-kanban-ticket p-3">
                     <div class="ticket-header">
                         Ticket name
-                        <div class="btn-group float-right ml-2" ngbDropdown container="body">
+                        <div class="btn-group ticket-options-btn ml-2" ngbDropdown container="body">
                             <button type="button" class="btn ticket-btn" ngbDropdownToggle>
                             </button>
                             <div ngbDropdownMenu class="nao-dropdown-1">
@@ -319,8 +319,8 @@ export const CardsCodeBlocks = [
                     </div>
 
                     <div class="nao-lane-footer">
-                        <span class="number-cards">1 cards</span>
-                        <span class="nao-icon-arrow-dropdown-filled"></span>
+                        <span class="number-cards">1 card</span>
+                        <span class="circle-icon nao-icon-add"></span>
                     </div>
                 </div>`
         },

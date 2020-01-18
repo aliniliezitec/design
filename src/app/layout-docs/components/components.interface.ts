@@ -6,9 +6,9 @@ export const ComponentsCodeBlocks = [
             <span>Subnavbar title</span>&nbsp;
           </div>
           <div>
-            <div class="btn-group" ngbDropdown container="body">
+            <div class="btn-group dropdown-remove-arrow" ngbDropdown container="body">
               <button class="btn sub-navbar-item" ngbDropdownToggle>
-                more icon
+                <i class="nao-icon-additional-options"></i>
               </button>
               <div ngbDropdownMenu class="nao-dropdown-1">
                 <a class="dropdown-item" href="javascript:void(0)">Archive</a>
