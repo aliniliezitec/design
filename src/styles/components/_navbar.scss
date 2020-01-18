@@ -199,3 +199,96 @@
 .nao-icon-arrow-active {
   transform: rotate(90deg);
 }
+
+
+// *************************************************
+// Side bar menu navigation
+.sidenav {
+  height: 100%;
+  width: 285px;
+  position: fixed;
+  text-align: left;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f6f8fb;
+  overflow-x: hidden;
+  font-size: pixelToRem(12px);
+  line-height: 1.5;
+  color: #47484c;
+
+  .nao-logo {
+    margin-bottom: 36px;
+  
+    @include rtl {
+      margin-left: 58px;
+    }
+  }
+  
+
+  @include rtl {
+    left: unset;
+    right: 0;
+  }
+
+  .sidenav-wrapper {
+    position: relative;
+    padding: 10px 10px 60px 37px;
+
+    @include rtl {
+      padding: 10px 37px 60px 10px;
+    }
+  }
+
+  li {
+    margin-top: 19px;
+    margin-bottom: 19px;
+    list-style-type: none;
+    font-weight: $font-weight-bold;
+
+    @include rtl {
+      text-align: right;
+    }
+
+    .menu-icon {
+      width: 16px;
+      font-size: 16px;
+      line-height: 14px;
+      margin-right: 15px;
+
+      @include rtl {
+        margin-right: unset;
+        margin-left: 15px;
+      }
+    }
+
+    a {
+      color: var(--charcoal-grey);
+
+      &:hover {
+        color: var(--charcoal-grey);
+        text-decoration: none;
+      }
+    }
+  }
+
+  ul {
+    overflow: hidden;
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .inner {
+    height: 0px;
+    overflow: hidden;
+  }
+  
+  .made-with {
+    font-size: pixelToRem(12px);
+    position: absolute;
+    bottom: 24px;
+    color: #a3a9c0;
+  }
+}
+

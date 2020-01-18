@@ -51,6 +51,11 @@
   border-radius: $nao-card-border-radius;
   box-shadow: $nao-card-box-shadow;
 
+  @include media-breakpoint-down(sm) {
+    max-width: 576px;
+    width: 100%;
+  }
+
   .nao-dashboard-card-body {
     padding: 0 20px;
   }
@@ -237,6 +242,7 @@
     }
 
     .circle-icon {
+      cursor: pointer;
       background-color: var(--primary);
       display: inline-block;
       border-radius: 50%;
@@ -333,6 +339,15 @@
 
       .item-mb-fix {
         margin-bottom: 20px;
+      }
+    }
+
+    .add-another-btn {
+      padding-left: 0 !important;
+      
+      i {
+        font-size: 17px;
+        line-height: 13px;
       }
     }
   }
