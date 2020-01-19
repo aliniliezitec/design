@@ -41,7 +41,7 @@
         readers.
       </p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[1].html | sanitizeHtml"></div>
-      
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -59,7 +59,7 @@
         any button.
       </p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[2].html | sanitizeHtml"></div>
-      
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -78,7 +78,7 @@
         any button.
       </p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[3].html | sanitizeHtml"></div>
-      
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[3].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -96,7 +96,7 @@
         sizes.
       </p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[4].html | sanitizeHtml"></div>
-      
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[4].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -105,7 +105,7 @@
         <pre><div [innerHTML]="data[4].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[5].html | sanitizeHtml"></div>
-      
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[5].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -114,7 +114,7 @@
         <pre><div [innerHTML]="data[5].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[6].html | sanitizeHtml"></div>
-      
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[6].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -125,7 +125,7 @@
       <p>Create block level buttons—those that span the full width of a parent—by adding <span
           class="highlighter-warning">.btn-block</span>.</p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[7].html | sanitizeHtml"></div>
-      
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[7].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -144,7 +144,7 @@
           class="highlighter-warning">aria-pressed="true"</span> attribute) should you
         need to replicate the state programmatically.</p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[8].html | sanitizeHtml"></div>
-     
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[8].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -159,7 +159,7 @@
           class="highlighter-warning">&lt;button&gt;</span> element.
       </p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[9].html | sanitizeHtml"></div>
-      
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[9].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -187,7 +187,7 @@
         </li>
       </ul>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[10].html | sanitizeHtml"></div>
-      
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[10].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -215,14 +215,18 @@
         </li>
       </ul>
 
-      <div class="nao-bd-example nao-btn-spacing d-flex justify-content-between flex-wrap" [innerHTML]="data[11].html | sanitizeHtml"></div>
-      
+      <div class="nao-bd-example">
+        <div class="nao-btn-spacing d-flex justify-content-between flex-wrap"
+          [innerHTML]="data[11].html | sanitizeHtml"></div>
+      </div>
+
+
     </div>
 
     <div class="elem-container">
       <h2 class="title">Transition when hovered</h2>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[12].html | sanitizeHtml"></div>
-      
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[12].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>

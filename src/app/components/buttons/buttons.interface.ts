@@ -127,7 +127,7 @@ export const ButtonsCodeBlocks = [
                 <button type="button" class="btn btn-primary btn-xl">EXTRA-LARGE BUTTON</button>
             </div>
         </div>
-        <div class="d-flex flex-column">
+        <div class="d-flex flex-column second-column">
             <div class="spacing-rectangle rectangle-sm">
                 <button type="button" class="btn btn-outline-primary btn-sm">SMALL BUTTON</button>
             </div>

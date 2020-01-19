@@ -391,9 +391,20 @@
 }
 
 .nao-btn-spacing {
+  max-width: 990px;
+  
   .first-column {
     min-width: 360px;
     max-width: 428px;
+  }
+
+  .second-column {
+    margin-right: 150px;
+
+    @include rtl {
+      margin-right: 0;
+      margin-left: 150px;
+    }
   }
 
   .spacing-rectangle {
@@ -402,6 +413,11 @@
     margin-bottom: 25PX;
     display: inline-block;
     margin-right: auto;
+
+    @include rtl {
+      margin-right: unset;
+      margin-left: auto;
+    }
   }
 
   .rectangle-sm {
