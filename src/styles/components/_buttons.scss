@@ -201,6 +201,7 @@ $value in $theme-colors {
 // *************************************************
 // Buttons
 .btn {
+  text-transform: uppercase;
   transition: all .2s ease-in-out;
 }
 
