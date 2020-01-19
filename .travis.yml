@@ -1,9 +1,10 @@
 dist: trusty
-sudo: false
+
+sudo: required
 
 language: node_js
 node_js:
-  - '12'
+  - 12.14.0
 
 addons:
   apt:
