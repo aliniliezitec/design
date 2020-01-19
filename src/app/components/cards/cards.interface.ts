@@ -43,20 +43,20 @@ export const CardsCodeBlocks = [
     {
         html: `
         <div class="nao-dashboard-lg-card bg-white">
-            <div class="d-flex justify-content-between align-items-center title-container">
-                <div class="nao-card-title">Closed deals</div>
-                <div class="btn-group" ngbDropdown>
-                    <button class="btn nao-btn-dropdown-menu-1" ngbDropdownToggle>Currency
-                    </button>
-                    <div ngbDropdownMenu class="nao-dropdown-dashboard-1">
-                        <a class="dropdown-item" href="javascript:void(0)">Currency</a>
-                        <a class="dropdown-item" href="javascript:void(0)">Percentage</a>
-                    </div>
-                </div>
+          <div class="d-flex justify-content-between align-items-center title-container">
+            <div class="nao-card-title">Closed deals</div>
+            <div class="btn-group" ngbDropdown [placement]="$flow.isRTL() ? 'bottom-left' : 'bottom-right'">
+              <button class="btn nao-btn-dropdown-menu-1" ngbDropdownToggle>Currency
+              </button>
+              <div class="nao-dropdown-2" ngbDropdownMenu>
+                <a class="dropdown-item" href="javascript:void(0)">Currency</a>
+                <a class="dropdown-item" href="javascript:void(0)">Percentage</a>
+              </div>
             </div>
-            <div class="nao-dashboard-card-body">
-                Card body
-            </div>
+          </div>
+          <div class="nao-dashboard-card-body">
+            Card body
+          </div>
         </div>`},
     {
         html: `
@@ -355,6 +355,17 @@ export const CardsCodeBlocks = [
             <div class="d-flex align-items-center nao-under-card-message">
                 <div>Don’t have an account yet?</div>
                 <a class="btn btn-outline-only-primary px-0 py-1">Try for free</a>
+            </div>
+        </div>`
+    },
+    {
+        html: `
+        <div class="nao-blue-rounded-box" style="max-width: 687px; width: 100%; height: 200px">
+            <div class="box-header border-bottom">
+            Add items
+            </div>
+            <div class="box-container">
+                <p>Add the items you want to be included in the sales order</p>
             </div>
         </div>`
     }

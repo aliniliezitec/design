@@ -86,7 +86,7 @@ export const NavbarCodeBlocks = [
                 </div>
 
                 <div #navbarContent class="nao-navbar-container">
-                    <nav class="navbar navbar-expand-md sm-fixed-top px-3 px-md-0"
+                    <nav class="navbar navbar-expand-md navbar-sm-fixed-top px-3 px-md-0"
                         [ngClass]="{'b-0' : !isCollapsed}">
                         <a class="navbar-brand d-md-none" href="javascript:void(0)" (click)="isCollapsed = true">
                         <img src="assets/images/crm-assets/logo-crm.svg" alt="Naologic" height="30">

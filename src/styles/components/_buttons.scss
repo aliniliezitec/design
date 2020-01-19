@@ -58,7 +58,6 @@
 @mixin button-outline-only-variant($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
   color: $color;
   border-color: $color;
-  // todo: add hover effect
   //   @include hover() {
   //     color: $color-hover;
   //     background-color: $active-background;

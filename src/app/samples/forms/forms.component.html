@@ -1,6 +1,5 @@
 <div class="nao-docs-wrapper">
   <h1 class="title">Forms</h1>
-  <!-- todo: add nao-field-error ? -->
 
   <div class="elem-container">
     <h2 class="title">Add new contact form (modal)</h2>
@@ -468,8 +467,6 @@
                         </div>
                       </div>
                     </div>
-
-
                   </div>
 
                   <div class="nao-blue-rounded-box">
@@ -477,10 +474,8 @@
                       Add items
                     </div>
                     <div class="box-container">
-                      <!-- todo -->
                       <p>Add the items you want to be included in the sales order</p>
 
-                      <!-- todo -->
                       <div class="nao-add-items-container ml-auto" formArrayName="items">
                         <div class="pb-3"
                           *ngFor="let item of formGroup2.controls.items['controls']; let i = index; let last = last"
@@ -548,7 +543,7 @@
                             </div>
                           </div>
                         </div>
-                        <!-- todo: -->
+
                         <button type="button" class="btn-sm btn-text-only d-flex align-items-center add-another-btn">
                           <i class="nao-icon-add-filled mr-1"></i>
                           <span>Add another</span>

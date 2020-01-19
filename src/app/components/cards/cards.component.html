@@ -67,7 +67,7 @@
         <div class="nao-dashboard-lg-card bg-white">
           <div class="d-flex justify-content-between align-items-center title-container">
             <div class="nao-card-title">Closed deals</div>
-            <div class="btn-group" ngbDropdown>
+            <div class="btn-group" ngbDropdown [placement]="$flow.isRTL() ? 'bottom-left' : 'bottom-right'">
               <button class="btn nao-btn-dropdown-menu-1" ngbDropdownToggle>Currency
               </button>
               <div class="nao-dropdown-2" ngbDropdownMenu>
@@ -445,6 +445,20 @@
 
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[9].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Nao blue rounded box</h2>
+
+      <div class="nao-bd-example d-flex justify-content-center" [innerHTML]="data[10].html | sanitizeHtml"></div>
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[10].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[10].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 

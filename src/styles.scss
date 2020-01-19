@@ -24,12 +24,8 @@
 
 .docs-container {
   margin-left: 285px;
-  // todo: check this
-  direction: ltr;
 
   @include rtl {
-    direction: rtl;
-    text-align: right;
     margin-left: unset;
     margin-right: 285px;
   }

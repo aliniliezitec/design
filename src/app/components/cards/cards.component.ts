@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardsCodeBlocks } from './cards.interface';
 import { AppService } from 'src/app/app.service';
+import { ComponentsPublicFlow } from '../components.flowservice';
 
 @Component({
   selector: 'app-cards',
@@ -9,7 +10,10 @@ import { AppService } from 'src/app/app.service';
 export class CardsComponent implements OnInit {
   public data = CardsCodeBlocks;
 
-  constructor(public readonly appService: AppService) { }
+  constructor(
+    public readonly appService: AppService,
+    public readonly $flow: ComponentsPublicFlow
+    ) { }
 
   ngOnInit() {
   }

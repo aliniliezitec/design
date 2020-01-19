@@ -7,11 +7,7 @@
 
       @each $prop,
       $abbrev in (margin: m, padding: p) {
-        // $abbrev in (margin: m) {
-        //   todo:
-        //   todo:
         //   todo: add .skip-rtl class 
-        //   todo:
 
         @each $size,
         $length in $spacers {

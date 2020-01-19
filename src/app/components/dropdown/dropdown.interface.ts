@@ -60,14 +60,14 @@ export const DropdownCodeBlocks = [
     },
     {
         html: `
-        <div class="btn-group" ngbDropdown [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
-            <button class="btn nao-btn-dropdown-menu-1" ngbDropdownToggle>
-                Currency
-            </button>
-            <div class="nao-dropdown-2" ngbDropdownMenu>
-                <a class="dropdown-item" href="javascript:void(0)">Currency</a>
-                <a class="dropdown-item" href="javascript:void(0)">Percentage</a>
-            </div>
+        <div class="btn-group" ngbDropdown [placement]="$flow.isRTL() ? 'bottom-left' : 'bottom-right'">
+          <button class="btn nao-btn-dropdown-menu-1" ngbDropdownToggle>
+            Currency
+          </button>
+          <div class="nao-dropdown-2" ngbDropdownMenu>
+            <a class="dropdown-item" href="javascript:void(0)">Currency</a>
+            <a class="dropdown-item" href="javascript:void(0)">Percentage</a>
+          </div>
         </div>`
     },
     {

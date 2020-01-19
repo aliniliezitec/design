@@ -17,6 +17,8 @@ export class AppService {
         body.dir = dir;
         // -->Set: direction style
         body.style.direction = dir;
+        // -->Set: text-align style
+        body.style.textAlign = dir === 'rtl' ? 'right' : 'left';
 
         if (dir === 'rtl') {
             // -->Set: class to revert all the classes
