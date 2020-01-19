@@ -1,12 +1,12 @@
 {
   "name": "@naologic/design",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "deploy:gh": "npm run build:prod && ngh --dir=dist/design",
     "build:prod": "ng build --prod --base-href https://naologic.github.io/design/",
-    "publish": "npm pack && npm publish naologic-design-1.0.3.tgz --access public",
+    "publish": "npm pack && npm publish naologic-design-1.0.4.tgz --access public",
     "pack": "npm pack",
     "build": "ng build",
     "test": "ng test",
