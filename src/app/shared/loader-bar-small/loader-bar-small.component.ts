@@ -26,6 +26,13 @@ export class LoaderBarSmallComponent implements OnInit, OnChanges {
   @Input() public hide = false;
   public previousState: NaoCrud.State;
   private interval;
+  // todo: remove lottie
+  // todo: remove lottie
+  // todo: remove lottie
+  // todo: remove lottie
+  // todo: remove lottie
+  // todo: remove lottie
+  // todo: remove lottie
 
   constructor() { }
 

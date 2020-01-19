@@ -86,31 +86,31 @@ export const ButtonsCodeBlocks = [
     {
         html: `
     <button type="button" class="btn btn-primary btn-xl">Extra Large button</button>
-    <button type="button" class="btn btn-secondary btn-xl">Extra Large button</button>`},
+    <button type="button" class="btn btn-outline-primary btn-xl">Extra Large button</button>`},
     {
         html: `
     <button type="button" class="btn btn-primary btn-lg">Large button</button>
-    <button type="button" class="btn btn-secondary btn-lg">Large button</button>`},
+    <button type="button" class="btn btn-outline-primary btn-lg">Large button</button>`},
     {
         html: `
     <button type="button" class="btn btn-primary btn-sm">Small button</button>
-    <button type="button" class="btn btn-secondary btn-sm">Small button</button>`},
+    <button type="button" class="btn btn-outline-primary btn-sm">Small button</button>`},
     {
         html: `
     <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-    <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>`},
+    <button type="button" class="btn btn-outline-primary btn-lg btn-block">Block level button</button>`},
     {
         html: `
     <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
-    <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>`},
+    <a href="#" class="btn btn-outline-primary btn-lg active" role="button" aria-pressed="true">Link</a>`},
     {
         html: `
     <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
-    <button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>`},
+    <button type="button" class="btn btn-outline-primary btn-lg" disabled>Button</button>`},
     {
         html: `
     <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
-    <a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">Link</a>`},
+    <a href="#" class="btn btn-outline-primary btn-lg disabled" role="button" aria-disabled="true">Link</a>`},
     {
         html: `
     <button type="button" class="btn btn-primary nao-btn-transition">Hover</button>

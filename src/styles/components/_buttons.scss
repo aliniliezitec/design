@@ -1,9 +1,10 @@
 // *************************************************
 // XL button
 .btn-xl {
-  padding: pixelToRem(20px) pixelToRem(65px);
+  padding: pixelToRem(15px) pixelToRem(20px);
   font-size: 1.2rem;
   font-weight: $font-weight-bold;
+  border-radius: pixelToRem(7px);
 }
 
 // *************************************************
