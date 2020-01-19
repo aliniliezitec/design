@@ -198,8 +198,24 @@
     </div>
 
     <div class="elem-container">
-      <h2 class="title">Transition when hovered</h2>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[11].html | sanitizeHtml"></div>
+      <h2 class="title">Spacing between around the buttons</h2>
+      <p>Standard spacing between buttons and other html elements</p>
+      <ul>
+        <li>
+          <code>Small buttons</code> should have 7.5px;
+        </li>
+        <li>
+          <code>Default buttons</code> should have 10px;
+        </li>
+        <li>
+          <code>Larger buttons</code> should have 15px;
+        </li>
+        <li>
+          <code>Extra-larger buttons</code> should have 20px;
+        </li>
+      </ul>
+
+      <div class="nao-bd-example nao-btn-spacing d-flex justify-content-between flex-wrap" [innerHTML]="data[11].html | sanitizeHtml"></div>
       
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[11].html)" placement="top"
@@ -207,6 +223,19 @@
       </div>
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[11].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Transition when hovered</h2>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[12].html | sanitizeHtml"></div>
+      
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[12].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[12].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 

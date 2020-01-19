@@ -389,3 +389,38 @@
     object-fit: contain;
   }
 }
+
+.nao-btn-spacing {
+  .first-column {
+    min-width: 360px;
+    max-width: 428px;
+  }
+
+  .spacing-rectangle {
+    box-shadow: 0 1px 3px 0 #c8cfe9;
+    background-color: rgb(62, 64, 219, 0.25);
+    margin-bottom: 25PX;
+    display: inline-block;
+    margin-right: auto;
+  }
+
+  .rectangle-sm {
+    padding: 7.5px;
+    border-radius: 3px;
+  }
+
+  .rectangle-default {
+    padding: 10px;
+    border-radius: 4.2px;
+  }
+
+  .rectangle-lg {
+    padding: 15px;
+    border-radius: 5.1px;
+  }
+
+  .rectangle-xl {
+    padding: 20px;
+    border-radius: 7px;
+  }
+}

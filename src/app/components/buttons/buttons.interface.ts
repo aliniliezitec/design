@@ -113,6 +113,38 @@ export const ButtonsCodeBlocks = [
     <a href="#" class="btn btn-outline-primary btn-lg disabled" role="button" aria-disabled="true">Link</a>`},
     {
         html: `
+        <div class="d-flex flex-column first-column">
+            <div class="spacing-rectangle rectangle-sm">
+                <button type="button" class="btn btn-primary btn-sm">SMALL BUTTON</button>
+            </div>
+            <div class="spacing-rectangle rectangle-default">
+                <button type="button" class="btn btn-primary">DEFAULT BUTTON</button>
+            </div>
+            <div class="spacing-rectangle rectangle-lg">
+                <button type="button" class="btn btn-primary btn-lg">LARGER BUTTON</button>
+            </div>
+            <div class="spacing-rectangle rectangle-xl">
+                <button type="button" class="btn btn-primary btn-xl">EXTRA-LARGE BUTTON</button>
+            </div>
+        </div>
+        <div class="d-flex flex-column">
+            <div class="spacing-rectangle rectangle-sm">
+                <button type="button" class="btn btn-outline-primary btn-sm">SMALL BUTTON</button>
+            </div>
+            <div class="spacing-rectangle rectangle-default">
+                <button type="button" class="btn btn-outline-primary">DEFAULT BUTTON</button>
+            </div>
+            <div class="spacing-rectangle rectangle-lg">
+                <button type="button" class="btn btn-outline-primary btn-lg">LARGER BUTTON</button>
+            </div>
+            <div class="spacing-rectangle rectangle-xl">
+                <button type="button" class="btn btn-outline-primary btn-xl">EXTRA-LARGE BUTTON</button>
+            </div>
+        </div>
+        `
+    },
+    {
+        html: `
     <button type="button" class="btn btn-primary nao-btn-transition">Hover</button>
     <button type="button" class="btn btn-outline-only-dark-blue nao-btn-transition">Hover</button>`},
 ];
