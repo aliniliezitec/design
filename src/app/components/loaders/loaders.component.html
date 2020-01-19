@@ -19,6 +19,7 @@
     </div>
 
     <div class="elem-container">
+      <!-- todo: change this to css only -->
       <h2 class="title">Loader table</h2>
       <div class="nao-bd-example">
         <loader-table-lottie></loader-table-lottie>
@@ -36,28 +37,9 @@
 
     <div class="elem-container">
       <h2 class="title">Loader progress bar</h2>
-
       <div class="nao-bd-example">
         <div class="mb-3">
           <loader-bar-small progress="60"></loader-bar-small>
-        </div>
-        <div class="mb-3">
-          <loader-bar-small progress="60" type="secondary"></loader-bar-small>
-        </div>
-        <div class="mb-3">
-          <loader-bar-small progress="60" type="success"></loader-bar-small>
-        </div>
-        <div class="mb-3">
-          <loader-bar-small progress="60" type="info"></loader-bar-small>
-        </div>
-        <div class="mb-3">
-          <loader-bar-small progress="60" type="warning"></loader-bar-small>
-        </div>
-        <div class="mb-3">
-          <loader-bar-small progress="60" type="danger"></loader-bar-small>
-        </div>
-        <div class="mb-3">
-          <loader-bar-small progress="60" type="dark"></loader-bar-small>
         </div>
       </div>
 
@@ -121,9 +103,9 @@
           </tbody>
         </table>
       </div>
-      <p>Example:</p>
+      <p class="h3">Example:</p>
       <div class="nao-bd-example">
-          <loader-bar-small progress="60" type="success" height="10px" [showValue]="true"></loader-bar-small>
+          <loader-bar-small progress="60" type="primary" height="10px" [showValue]="true"></loader-bar-small>
       </div>
 
       <div class="nao-bd-clipboard">
@@ -138,3 +120,4 @@
 
   </div>
 </div>
++
