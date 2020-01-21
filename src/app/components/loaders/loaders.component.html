@@ -19,9 +19,9 @@
     </div>
 
     <div class="elem-container">
-      <h2 class="title">Loader table</h2>
+      <h2 class="title">Skeleton loader for relaxed tables</h2>
       <div class="nao-bd-example px-0">
-        <loader-table></loader-table>
+        <loader-table checkbox="true" icon="true"></loader-table>
       </div>
       
       <div class="nao-bd-clipboard">
@@ -35,6 +35,57 @@
     </div>
 
     <div class="elem-container">
+      <h2 class="title">Skeleton loader for condensed tables</h2>
+      <div class="nao-bd-example px-0">
+        <loader-table condensed="true" checkbox="true" numberOfRows="-5"></loader-table>
+      </div>
+      
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[2].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+
+      <h2 class="title">API for skeleton table loader</h2>
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Inputs</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>condensed</code></td>
+              <td><code>false</code></td>
+              <td>Show the loading animation for a condensed table</td>
+            </tr>
+            <tr>
+              <td><code>numberOfRows</code></td>
+              <td><code>15</code></td>
+              <td>You can modify the number of rows from the animation</td>
+            </tr>
+            <tr>
+              <td><code>checkbox</code></td>
+              <td><code>false</code></td>
+              <td>Show the checbox placeholder</td>
+            </tr>
+            <tr>
+              <td><code>icon</code></td>
+              <td><code>false</code></td>
+              <td>Show the icon placeholder</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="elem-container">
       <h2 class="title">Loader progress bar</h2>
       <div class="nao-bd-example">
         <div class="mb-3">
@@ -43,12 +94,12 @@
       </div>
 
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].html)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[3].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
 
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[2].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[3].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 
@@ -108,12 +159,12 @@
       </div>
 
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[3].html)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[4].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
 
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[3].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[4].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 

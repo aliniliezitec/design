@@ -6,7 +6,12 @@ export const LoadersCodeBlocks = [
     },
     {
         html: `
-        <loader-table></loader-table>
+        <loader-table checkbox="true" icon="true"></loader-table>
+        `
+    },
+    {
+        html: `
+        <loader-table condensed="true" checkbox="true" numberOfRows="5"></loader-table>
         `
     },
     {

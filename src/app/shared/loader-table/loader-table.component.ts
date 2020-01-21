@@ -1,27 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { range } from 'lodash';
 
 @Component({
   selector: 'loader-table',
-  template: `
-    <div class="loader-table">
-      <div class="row-loading">
-        <div class="icon-loading"></div>
-        <div class="content-loading"></div>
-      </div>
-      <div class="row-loading">
-        <div class="icon-loading"></div>
-        <div class="content-loading"></div>
-      </div>
-      <div class="row-loading">
-        <div class="icon-loading"></div>
-        <div class="content-loading"></div>
-      </div>
-      <div class="row-loading">
-        <div class="icon-loading"></div>
-        <div class="content-loading"></div>
-      </div>
-    </div>
-  `,
+  templateUrl: './loader-table.component.html',
   styles: [`
     .loader-table {
       animation: fadeIn 1s infinite alternate;
@@ -29,8 +11,13 @@ import { Component, OnInit } from '@angular/core';
     }
 
     .row-loading {
-      padding: 14px 0;
+      height: 56px;
+      align-items: center;
       display: flex;
+    }
+
+    .row-loading-condensed {
+      height: 36px;
     }
 
     .icon-loading {
@@ -39,7 +26,16 @@ import { Component, OnInit } from '@angular/core';
       min-height: 28px;
       border-radius: 14px;
       margin-right: 10px;
-      margin-left: 30px;
+      margin-left: 12px;
+    }
+
+    .checkbox-loading {
+      background-color: var(--lighter);
+      min-width: 18px;
+      min-height: 18px;
+      border-radius: 3px;
+      margin-right: 22px;
+      margin-left: 42px;
     }
 
     .content-loading {
@@ -58,6 +54,17 @@ import { Component, OnInit } from '@angular/core';
   `]
 })
 export class LoaderTableComponent implements OnInit {
+  @Input() public condensed = false;
+  @Input() public numberOfRows = 15;
+  @Input() public checkbox = false;
+  @Input() public icon = false;
+  public rowsRange = [];
+
+  constructor() {
+
+  }
+
   ngOnInit() {
+    this.rowsRange = range(this.numberOfRows);
   }
 }
