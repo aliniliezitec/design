@@ -9,9 +9,9 @@ import { TypescriptPrismPipe } from './pipes/typescript-prism.pipe';
 import { HtmlPrismPipe } from './pipes/html-prism.pipe';
 import { LoaderInfinityComponent } from './loader-infinity/loader-infinity.component';
 import { LoaderInfinityDataComponent } from './loader-infinity-data/loader-infinity-data.component';
-import { LoaderTableLottieComponent } from './loader-table-lottie/loader-table-lottie.component';
-import { LottieAnimationViewModule } from 'ng-lottie';
+// import { LottieAnimationViewModule } from 'ng-lottie';
 import { LoaderBarSmallComponent } from './loader-bar-small/loader-bar-small.component';
+import { LoaderTableComponent } from './loader-table/loader-table.component';
 
 @NgModule({
   providers: [
@@ -23,7 +23,7 @@ import { LoaderBarSmallComponent } from './loader-bar-small/loader-bar-small.com
     TypescriptPrismPipe,
     LoaderInfinityComponent,
     LoaderInfinityDataComponent,
-    LoaderTableLottieComponent,
+    LoaderTableComponent,
     LoaderBarSmallComponent
   ],
   imports: [
@@ -32,7 +32,7 @@ import { LoaderBarSmallComponent } from './loader-bar-small/loader-bar-small.com
     FormsModule,
     ReactiveFormsModule,
     NgSelectModule,
-    LottieAnimationViewModule
+    // LottieAnimationViewModule
 
   ],
   exports: [
@@ -46,7 +46,7 @@ import { LoaderBarSmallComponent } from './loader-bar-small/loader-bar-small.com
     NgSelectModule,
     LoaderInfinityComponent,
     LoaderInfinityDataComponent,
-    LoaderTableLottieComponent,
+    LoaderTableComponent,
     LoaderBarSmallComponent
   ],
   entryComponents: [

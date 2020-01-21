@@ -26,13 +26,6 @@ export class LoaderBarSmallComponent implements OnInit, OnChanges {
   @Input() public hide = false;
   public previousState: NaoCrud.State;
   private interval;
-  // todo: remove lottie
-  // todo: remove lottie
-  // todo: remove lottie
-  // todo: remove lottie
-  // todo: remove lottie
-  // todo: remove lottie
-  // todo: remove lottie
 
   constructor() { }
 
@@ -40,7 +33,7 @@ export class LoaderBarSmallComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes['state']) {
+    if (changes.state) {
       // -->Set: previous
       this.previousState = changes.state.previousValue;
 
@@ -61,7 +54,7 @@ export class LoaderBarSmallComponent implements OnInit, OnChanges {
       }
     }
 
-    if (changes['disabled']) {
+    if (changes.disabled) {
       this.updateDisabled();
     }
   }

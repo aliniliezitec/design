@@ -28,7 +28,7 @@ export const ButtonsCodeBlocks = [
     // <button class="btn btn-text-only">Button text only</button>`},
     {
         html: `
-    <a class="btn btn-primary" href="#" role="button">Link</a>
+    <a class="btn btn-primary" href="javascript:void(0)" role="button">Link</a>
     <button class="btn btn-primary" type="submit">Button</button>
     <input class="btn btn-primary" type="button" value="Input">
     <input class="btn btn-primary" type="submit" value="Submit">
@@ -93,6 +93,10 @@ export const ButtonsCodeBlocks = [
     <button type="button" class="btn btn-outline-primary btn-lg">Large button</button>`},
     {
         html: `
+    <button type="button" class="btn btn-primary">Default button</button>
+    <button type="button" class="btn btn-outline-primary">Default button</button>`},
+    {
+        html: `
     <button type="button" class="btn btn-primary btn-sm">Small button</button>
     <button type="button" class="btn btn-outline-primary btn-sm">Small button</button>`},
     {
@@ -101,44 +105,44 @@ export const ButtonsCodeBlocks = [
     <button type="button" class="btn btn-outline-primary btn-lg btn-block">Block level button</button>`},
     {
         html: `
-    <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
-    <a href="#" class="btn btn-outline-primary btn-lg active" role="button" aria-pressed="true">Link</a>`},
+    <a href="javascript:void(0)" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
+    <a href="javascript:void(0)" class="btn btn-outline-primary btn-lg active" role="button" aria-pressed="true">Link</a>`},
     {
         html: `
     <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
     <button type="button" class="btn btn-outline-primary btn-lg" disabled>Button</button>`},
     {
         html: `
-    <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
-    <a href="#" class="btn btn-outline-primary btn-lg disabled" role="button" aria-disabled="true">Link</a>`},
+    <a href="javascript:void(0)" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
+    <a href="javascript:void(0)" class="btn btn-outline-primary btn-lg disabled" role="button" aria-disabled="true">Link</a>`},
     {
         html: `
         <div class="d-flex flex-column first-column">
             <div class="spacing-rectangle rectangle-sm">
-                <button type="button" class="btn btn-primary btn-sm">SMALL BUTTON</button>
+                <button type="button" class="btn btn-primary btn-sm">Small button</button>
             </div>
             <div class="spacing-rectangle rectangle-default">
-                <button type="button" class="btn btn-primary">DEFAULT BUTTON</button>
+                <button type="button" class="btn btn-primary">Default button</button>
             </div>
             <div class="spacing-rectangle rectangle-lg">
-                <button type="button" class="btn btn-primary btn-lg">LARGER BUTTON</button>
+                <button type="button" class="btn btn-primary btn-lg">Large button</button>
             </div>
             <div class="spacing-rectangle rectangle-xl">
-                <button type="button" class="btn btn-primary btn-xl">EXTRA-LARGE BUTTON</button>
+                <button type="button" class="btn btn-primary btn-xl">Extra-large button</button>
             </div>
         </div>
         <div class="d-flex flex-column second-column">
             <div class="spacing-rectangle rectangle-sm">
-                <button type="button" class="btn btn-outline-primary btn-sm">SMALL BUTTON</button>
+                <button type="button" class="btn btn-outline-primary btn-sm">Small button</button>
             </div>
             <div class="spacing-rectangle rectangle-default">
-                <button type="button" class="btn btn-outline-primary">DEFAULT BUTTON</button>
+                <button type="button" class="btn btn-outline-primary">Default button</button>
             </div>
             <div class="spacing-rectangle rectangle-lg">
-                <button type="button" class="btn btn-outline-primary btn-lg">LARGER BUTTON</button>
+                <button type="button" class="btn btn-outline-primary btn-lg">Large button</button>
             </div>
             <div class="spacing-rectangle rectangle-xl">
-                <button type="button" class="btn btn-outline-primary btn-xl">EXTRA-LARGE BUTTON</button>
+                <button type="button" class="btn btn-outline-primary btn-xl">Extra-large button</button>
             </div>
         </div>
         `

@@ -6,7 +6,7 @@ export const LoadersCodeBlocks = [
     },
     {
         html: `
-        <loader-table-lottie></loader-table-lottie>
+        <loader-table></loader-table>
         `
     },
     {
