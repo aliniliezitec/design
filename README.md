@@ -12,15 +12,21 @@ This is the design library of Naologic
 
 ### Add to your angular app
 
-Modify the `angular.json` file and add `@naologic/design` to the SCSS 
+Modify the `angular.json` file and add `nao-system-icon font` to the SCSS 
 
 ```json
 "styles": [
-  "node_modules/@naologic/design/src/styles.scss",
+  "node_modules/@naologic/design/src/assets/fonts/nao-system-icon/nao-system-icon.css",
   "src/styles.scss"
 ],
 ```
-*WARNING*: DO NOT use `@import` to add it directly to `styles.scss`. The size of the compiled package will be significantly larger
+
+Import the `@naologic/design` to your main styles.scss file
+```css
+@import "node_modules/@naologic/design/src/styles.scss";
+```
+
+<!-- *WARNING*: DO NOT use `@import` to add it directly to `styles.scss`. The size of the compiled package will be significantly larger -->
 
 
 ### License 

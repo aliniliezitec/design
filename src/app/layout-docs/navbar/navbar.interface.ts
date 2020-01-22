@@ -1,22 +1,22 @@
 export interface MenuInterface {
-    type: string;
-    text: string;
-    route: string;
-    active: boolean;
-    isOpen?: boolean;               // used for Dropdowns
-    items?: MenuItemInterface[];    // used for Dropdowns
+  type: string;
+  textTranslate: string;
+  route: string;
+  active: boolean;
+  isOpen?: boolean;               // used for Dropdowns
+  items?: MenuItemInterface[];    // used for Dropdowns
 }
 
 export interface MenuItemInterface {
-    type: string;
-    text: string;
-    route: string;
-    active: boolean;
+  type: string;
+  textTranslate: string;
+  route: string;
+  active: boolean;
 }
 
 export interface SideMenuInterface {
   type: string;
-  text: string;
+  textTranslate: string;
   route: string;
   icon: string;
   isOpen: boolean;
@@ -24,8 +24,8 @@ export interface SideMenuInterface {
 }
 
 export const NavbarCodeBlocks = [
-    {
-        html: `
+  {
+    html: `
         <nav class="navbar navbar-expand bg-white py-0 pl-3 pr-0">
           <a href="javascript:void(0)" class="navbar-brand py-0 mr-4">
             <img src="assets/images/crm-assets/logo-crm.svg" alt="Naologic" height="30">
@@ -76,9 +76,10 @@ export const NavbarCodeBlocks = [
             </div>
           </div>
         </nav>`
-    },
-    {
-        html: `
+  },
+  {
+    html: `
+        <div class="nao-navbar bg-white">
         <div class="content-wrapper d-flex flex-row-reverse-rtl-only justify-content-between justify-content-md-start px-md-4">
             <div class="d-none d-md-block align-self-end" [ngClass]="{'hide-navbar-scroll-buttons': !showPrevBtn}">
                 <a class="navbar-horizontal-prev" (click)="scrollPrev()">
@@ -188,8 +189,9 @@ export const NavbarCodeBlocks = [
                     <a class="navbar-horizontal-next" (click)="scrollNext()">
                 </a>
             </div>
+            </div>
         </div>`,
-        ts1: `
+    ts1: `
             @Component({
                 ...
                 animations: [
@@ -282,7 +284,7 @@ export const NavbarCodeBlocks = [
                 );
             }
         `,
-        ts2: `
+    ts2: `
         /**
          * Toggle a menu item
          */
@@ -354,7 +356,7 @@ export const NavbarCodeBlocks = [
         ngOnDestroy(): void {
             this.subs.unsubscribe();
         }`,
-        ts3: `
+    ts3: `
         export interface MenuInterface {
             type: string;
             text: string;
@@ -370,9 +372,9 @@ export const NavbarCodeBlocks = [
             route: string;
             active: boolean;
         }`
-    },
-    {
-      html: `
+  },
+  {
+    html: `
       <div class="sidenav d-none d-sm-block">
       <div class="sidenav-wrapper min-vh-100">
         <a href="javascript:void(0)" [routerLink]="['/']">
@@ -486,7 +488,7 @@ export const NavbarCodeBlocks = [
       isOpen: boolean;
       items?: MenuItemInterface[];
     }`
-    }
+  }
 
 ];
 

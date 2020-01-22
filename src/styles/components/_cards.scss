@@ -272,6 +272,19 @@
   background-color: var(--white);
   padding: 61px 50px 22px 50px;
 
+  .headshot {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+
+    img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%
+    }
+  }
+
+
   @include media-breakpoint-down(xs) {
     width: 340px;
     padding: 40px 20px 20px 20px !important;
@@ -280,6 +293,36 @@
   .forgot-pass {
     font-size: pixelToRem(16px);
     color: var(--text-primary);
+  }
+
+  .already-have-a-user {
+    font-size: pixelToRem(12px);
+    color: var(--text-primary);
+    font-weight: $font-weight-bold;
+
+    a {
+      text-decoration: underline;
+      color: var(--text-primary);
+    }
+  }
+
+  .nao-form-message {
+    position: relative;
+    font-size: pixelToRem(10px);
+    font-weight: $font-weight-bold;
+    color: var(--grey-blue);
+    min-height: 28px;
+    padding: 9px;
+    border-radius: 4px;
+    margin-bottom: 35px;
+
+    i {
+      font-size: 17px;
+      line-height: 14px;
+      position: absolute;
+      top: -9px;
+      left: -9px;
+    }
   }
 
   hr {
@@ -291,12 +334,15 @@
   font-size: pixelToRem(12px);
   font-weight: $font-weight-bold;
 
+  .simple-link {
+    text-decoration: underline;
+    color: var(--text-primary);
+  }
+
   .btn-outline-only-primary {
-    font-size: pixelToRem(12px);
     font-weight: $font-weight-bold;
     color: var(--primary);
     min-width: 74px;
-    width: 74px;
     margin-left: 10px;
   }
 }
@@ -343,7 +389,7 @@
 
     .add-another-btn {
       padding-left: 0 !important;
-      
+
       i {
         font-size: 17px;
         line-height: 13px;

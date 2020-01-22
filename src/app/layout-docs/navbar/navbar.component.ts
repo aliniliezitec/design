@@ -28,97 +28,97 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public menuItems: MenuInterface[] = [
     {
-      type: 'item', text: 'CRM', route: '/', active: false,
+      type: 'item', textTranslate: 'CRM', route: '/', active: false,
     },
     {
-      type: 'item', text: 'Business Apps', route: '/', active: false,
+      type: 'item', textTranslate: 'Business Apps', route: '/', active: false,
     },
     {
-      type: 'item', text: 'Enterprise', route: '/', active: true,
+      type: 'item', textTranslate: 'Enterprise', route: '/', active: true,
     },
     {
-      type: 'item', text: 'Pricing', route: '/', active: false,
+      type: 'item', textTranslate: 'Pricing', route: '/', active: false,
     },
     {
-      type: 'items', text: 'Dropdown', route: '/', isOpen: false, active: false,
+      type: 'items', textTranslate: 'Dropdown', route: '/', isOpen: false, active: false,
       items: [
-        { type: 'item', route: '/', text: 'Sub item 1', active: false },
-        { type: 'item', route: '/', text: 'Sub item 2', active: true },
-        { type: 'item', route: '/', text: 'Sub item 3', active: false },
+        { type: 'item', route: '/', textTranslate: 'Sub item 1', active: false },
+        { type: 'item', route: '/', textTranslate: 'Sub item 2', active: true },
+        { type: 'item', route: '/', textTranslate: 'Sub item 3', active: false },
       ]
     },
     {
-      type: 'item', text: 'Blog', route: '/', active: false,
+      type: 'item', textTranslate: 'Blog', route: '/', active: false,
     },
     {
-      type: 'item', text: 'Dashboard', route: '/', active: false,
+      type: 'item', textTranslate: 'Dashboard', route: '/', active: false,
     },
     {
-      type: 'items', text: 'Another Dropdown', route: '/', isOpen: false, active: false,
+      type: 'items', textTranslate: 'Another Dropdown', route: '/', isOpen: false, active: false,
       items: [
-        { type: 'item', route: '/', text: 'Sub item 1', active: false },
-        { type: 'item', route: '/', text: 'Sub item 2', active: true },
-        { type: 'item', route: '/', text: 'Sub item 3', active: false },
+        { type: 'item', route: '/', textTranslate: 'Sub item 1', active: false },
+        { type: 'item', route: '/', textTranslate: 'Sub item 2', active: true },
+        { type: 'item', route: '/', textTranslate: 'Sub item 3', active: false },
       ]
     },
     {
-      type: 'item', text: 'Sales', route: '/', active: false,
+      type: 'item', textTranslate: 'Sales', route: '/', active: false,
     },
     {
-      type: 'item', text: 'Leads', route: '/', active: false,
+      type: 'item', textTranslate: 'Leads', route: '/', active: false,
     },
     {
-      type: 'item', text: 'Contact', route: '/', active: false,
+      type: 'item', textTranslate: 'Contact', route: '/', active: false,
     },
   ];
 
   public sideMenuItems: SideMenuInterface[] = [
     {
-        type: 'items', text: 'Layout', route: '', icon: 'nao-icon-crm', isOpen: false,
+        type: 'items', textTranslate: 'Layout', route: '', icon: 'nao-icon-crm', isOpen: false,
         items: [
-            { type: 'item', route: '', text: 'Grid', active: false },
-            { type: 'item', route: '', text: 'Components', active: false },
-            { type: 'item', route: '', text: 'Navigation', active: false },
+            { type: 'item', route: '', textTranslate: 'Grid', active: false },
+            { type: 'item', route: '', textTranslate: 'Components', active: false },
+            { type: 'item', route: '', textTranslate: 'Navigation', active: false },
         ]
     },
     {
-        type: 'items', text: 'Components', route: '', icon: 'nao-icon-surveys', isOpen: false,
+        type: 'items', textTranslate: 'Components', route: '', icon: 'nao-icon-surveys', isOpen: false,
         items: [
-            { type: 'item', route: '', text: 'Buttons', active: false },
-            { type: 'item', route: '', text: 'Cards', active: false },
-            { type: 'item', route: '', text: 'Dropdowns', active: false },
-            { type: 'item', route: '', text: 'Forms', active: false },
-            { type: 'item', route: '', text: 'Input groups', active: false },
-            { type: 'item', route: '', text: 'Loaders', active: false },
-            { type: 'item', route: '', text: 'Modals', active: false },
-            { type: 'item', route: '', text: 'Tables', active: false },
+            { type: 'item', route: '', textTranslate: 'Buttons', active: false },
+            { type: 'item', route: '', textTranslate: 'Cards', active: false },
+            { type: 'item', route: '', textTranslate: 'Dropdowns', active: false },
+            { type: 'item', route: '', textTranslate: 'Forms', active: false },
+            { type: 'item', route: '', textTranslate: 'Input groups', active: false },
+            { type: 'item', route: '', textTranslate: 'Loaders', active: false },
+            { type: 'item', route: '', textTranslate: 'Modals', active: false },
+            { type: 'item', route: '', textTranslate: 'Tables', active: false },
         ]
     },
     {
-        type: 'items', text: 'Utilities', route: '', icon: 'nao-icon-settings', isOpen: false,
+        type: 'items', textTranslate: 'Utilities', route: '', icon: 'nao-icon-settings', isOpen: false,
         items: [
-            { type: 'item', route: '', text: 'Colors', active: false },
-            { type: 'item', route: '', text: 'Iconography', active: false },
-            { type: 'item', route: '', text: 'Illustration', active: false },
-            { type: 'item', route: '', text: 'Typography', active: false },
-            { type: 'item', route: '', text: 'Spacing', active: false },
-            { type: 'item', route: '', text: 'Sizing', active: false },
+            { type: 'item', route: '', textTranslate: 'Colors', active: false },
+            { type: 'item', route: '', textTranslate: 'Iconography', active: false },
+            { type: 'item', route: '', textTranslate: 'Illustration', active: false },
+            { type: 'item', route: '', textTranslate: 'Typography', active: false },
+            { type: 'item', route: '', textTranslate: 'Spacing', active: false },
+            { type: 'item', route: '', textTranslate: 'Sizing', active: false },
         ]
     },
     {
-        type: 'items', text: 'Photography ', route: '', icon: 'nao-icon-image-placeholder', isOpen: false,
+        type: 'items', textTranslate: 'Photography ', route: '', icon: 'nao-icon-image-placeholder', isOpen: false,
         items: [
-            { type: 'item', route: '', text: 'Overview', active: false },
-            { type: 'item', route: '', text: 'Compositions', active: false },
-            { type: 'item', route: '', text: 'Casting', active: false },
-            { type: 'item', route: '', text: 'Lighting and color', active: false },
-            { type: 'item', route: '', text: 'Locations', active: false },
+            { type: 'item', route: '', textTranslate: 'Overview', active: false },
+            { type: 'item', route: '', textTranslate: 'Compositions', active: false },
+            { type: 'item', route: '', textTranslate: 'Casting', active: false },
+            { type: 'item', route: '', textTranslate: 'Lighting and color', active: false },
+            { type: 'item', route: '', textTranslate: 'Locations', active: false },
         ]
     },
     {
-        type: 'items', text: 'Samples ', route: '', icon: 'nao-icon-multiple-choice', isOpen: false,
+        type: 'items', textTranslate: 'Samples ', route: '', icon: 'nao-icon-multiple-choice', isOpen: false,
         items: [
-            { type: 'item', route: '', text: 'Forms', active: false },
+            { type: 'item', route: '', textTranslate: 'Forms', active: false },
         ]
     },
 ];

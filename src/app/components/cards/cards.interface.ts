@@ -1,6 +1,6 @@
 export const CardsCodeBlocks = [
-    {
-        html: `
+  {
+    html: `
         <div class="card" style="max-width: 760px">
             <div class="card-header">
                 Header
@@ -14,8 +14,8 @@ export const CardsCodeBlocks = [
                 Footer
             </div>
         </div>`},
-    {
-        html: `
+  {
+    html: `
         <div class="card nao-card-1" style="max-width: 760px">
             <div class="card-header">
                 <h5 class="title">Nao card 1</h5>
@@ -29,8 +29,8 @@ export const CardsCodeBlocks = [
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>`},
-    {
-        html: `
+  {
+    html: `
         <div class="nao-card-sm-dashboard bg-white d-flex align-items-center">
           <div class="d-flex flex-column">
             <span class="nao-card-subtitle">Number of deals won</span>
@@ -40,8 +40,8 @@ export const CardsCodeBlocks = [
             </span>
           </div>
         </div>`},
-    {
-        html: `
+  {
+    html: `
         <div class="nao-dashboard-lg-card bg-white">
           <div class="d-flex justify-content-between align-items-center title-container">
             <div class="nao-card-title">Closed deals</div>
@@ -58,13 +58,13 @@ export const CardsCodeBlocks = [
             Card body
           </div>
         </div>`},
-    {
-        html: `
+  {
+    html: `
             <div class="nao-card-board">
                 <p class="m-0 align-middle text-center">Board name</p>
             </div>`},
-    {
-        html: `
+  {
+    html: `
         <div class="nao-kanban-ticket p-3">
             <div class="ticket-header">
             Ticket name
@@ -80,8 +80,8 @@ export const CardsCodeBlocks = [
                 Ticket body
             </div>
         </div>`},
-    {
-        html: `
+  {
+    html: `
         <div class="nao-kanban-ticket p-3">
           <div class="ticket-header">
             Ticket name
@@ -183,8 +183,8 @@ export const CardsCodeBlocks = [
 
           </div>
         </div>`},
-        {
-            html: `
+  {
+    html: `
             <div class="nao-kanban-lane">
                 <div class="nao-lane-header">
                     In progress
@@ -201,9 +201,9 @@ export const CardsCodeBlocks = [
                     <span class="circle-icon nao-icon-add"></span>
                 </div>
             </div>`
-        },
-        {
-            html: `
+  },
+  {
+    html: `
             <div class="nao-kanban-lane">
                 <div class="nao-lane-header">
                         In progress
@@ -323,10 +323,22 @@ export const CardsCodeBlocks = [
                         <span class="circle-icon nao-icon-add"></span>
                     </div>
                 </div>`
-        },
-    {
-        html: `
-        <div>
+  },
+  {
+    html: `
+          <div class="nao-blue-rounded-box" style="max-width: 687px; width: 100%; height: 200px">
+              <div class="box-header border-bottom">
+              Add items
+              </div>
+              <div class="box-container">
+                  <p>Add the items you want to be included in the sales order</p>
+              </div>
+          </div>`
+  },
+  {
+    html: `
+        <div class="d-flex flex-column">
+        <img class="mx-auto" src="assets/images/logo/naologic-text.svg" width="207px">
             <div class="nao-card-form-1">
             <form>
                 <div class="form-group">
@@ -338,7 +350,7 @@ export const CardsCodeBlocks = [
                     <input name="password" type="password" class="form-control">
                 </div>
                 <div class="mb-3">
-                <button type="submit" class="btn btn-primary w-100">
+                <button class="btn btn-primary w-100">
                     Login to your account
                 </button>
                 </div>
@@ -348,25 +360,73 @@ export const CardsCodeBlocks = [
                     </label>
                 <hr />
                 <a href="javascript:void(0)" class="forgot-pass">
-                Forgot password?
+                Forgot your password?
                 </a>
             </form>
             </div>
             <div class="d-flex align-items-center nao-under-card-message">
                 <div>Don’t have an account yet?</div>
-                <a class="btn btn-outline-only-primary px-0 py-1">Try for free</a>
+                <a href="javascript:void(0)" class="btn btn-outline-only-primary btn-sm">Try for free</a>
             </div>
         </div>`
-    },
-    {
-        html: `
-        <div class="nao-blue-rounded-box" style="max-width: 687px; width: 100%; height: 200px">
-            <div class="box-header border-bottom">
-            Add items
-            </div>
-            <div class="box-container">
-                <p>Add the items you want to be included in the sales order</p>
-            </div>
+  },
+  {
+    html: `
+    <div class="d-flex flex-column">
+      <img class="mx-auto" src="assets/images/logo/naologic-text.svg" width="207px">
+      <div class="nao-card-form-1 pt-5">
+        <form>
+          <div class="headshot">
+            <img src="assets/images/placeholder/default-avatar.png">
+          </div>
+          <div class="form-group">
+            <label class="nao-label-sm-3">Password</label>
+            <input name="password" type="password" class="form-control">
+          </div>
+          <div class="mb-3">
+            <button class="btn btn-primary w-100">
+              Continue working
+            </button>
+          </div>
+          <hr />
+          <a href="javascript:void(0)" class="forgot-pass">
+            Forgot your password?
+          </a>
+        </form>
+      </div>
+      <div class="d-flex align-items-center nao-under-card-message">
+        <a href="javascript:void(0)" class="simple-link">Log in with another user</a>
+      </div>
+    </div>`
+  },
+  {
+    html: `
+        <div class="d-flex flex-column">
+          <img class="mx-auto" src="assets/images/logo/naologic-text.svg" width="207px">
+          <div class="nao-card-form-1 pt-5">
+            <form>
+              <div class="bg-danger-light nao-form-message mt-1">
+                Your reset link has expired. Please request a new link to reset your password.
+                <i class="text-danger nao-icon-warning-1"></i>
+              </div>
+              <div class="bg-warning-light nao-form-message mt-1">
+                If an account is associated with the email entered, you will receive instructions on how to reset your password shortly
+                <i class="text-warning nao-icon-warning-1"></i>
+              </div>
+              <div class="mb-3">
+                <button class="btn btn-primary w-100">
+                  Send another reset email
+                </button>
+              </div>
+              <hr />
+              <span class="already-have-a-user">
+                Already have a user?
+                <a href="javascript:void(0)">
+                  Log-in
+                </a>
+              </span>
+            </form>
+          </div>
         </div>`
-    }
+  }
 ];

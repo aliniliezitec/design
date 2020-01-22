@@ -433,9 +433,9 @@
       </div>
     </div>
 
+
     <div class="elem-container">
-      <h2 class="title">Nao card form</h2>
-      <p>With added button below the card</p>
+      <h2 class="title">Nao blue rounded box</h2>
 
       <div class="nao-bd-example d-flex justify-content-center" [innerHTML]="data[9].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
@@ -449,7 +449,8 @@
     </div>
 
     <div class="elem-container">
-      <h2 class="title">Nao blue rounded box</h2>
+      <h2 class="title">Nao card form</h2>
+      <p>With button for Try for free</p>
 
       <div class="nao-bd-example d-flex justify-content-center" [innerHTML]="data[10].html | sanitizeHtml"></div>
       <div class="nao-bd-clipboard">
@@ -459,6 +460,36 @@
 
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[10].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <p>With a simple link and headshot</p>
+
+      <div class="nao-bd-example d-flex justify-content-center" [innerHTML]="data[11].html | sanitizeHtml"></div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[11].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[11].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <p>With warning box</p>
+
+      <div class="nao-bd-example d-flex justify-content-center" [innerHTML]="data[12].html | sanitizeHtml"></div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[12].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[12].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 

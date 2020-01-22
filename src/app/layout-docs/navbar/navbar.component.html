@@ -145,7 +145,7 @@
                         <div class="d-block d-md-none">
                           <a href="javascript:void(0)" (click)="toggleMenu(i)"
                             class="nav-link d-flex align-items-center justify-content-between flex-row-reverse-rtl-only">
-                            {{ elem.text }}
+                            {{ elem.textTranslate }}
                             <i class="nao-icon-arrow" [ngClass]="{'nao-icon-arrow-active': elem.isOpen}"></i>
                           </a>
 
@@ -153,7 +153,7 @@
                             <li *ngFor="let subItem of elem.items" class="nav-item">
                               <a href="javascript:void(0)" class="nav-link"
                                 (click)="isCollapsed=true; elem.isOpen=false" [ngClass]="{'active': subItem.active}">
-                                {{ subItem.text }}
+                                {{ subItem.textTranslate }}
                               </a>
                             </li>
                           </ul>
@@ -164,12 +164,12 @@
                             [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
                             <a class="nav-link dropdown-toggle" href="javascript:void(0)"
                               [ngClass]="{'active': elem.active}" ngbDropdownToggle>
-                              {{ elem.text }}
+                              {{ elem.textTranslate }}
                             </a>
                             <div class="nao-dropdown-navbar" ngbDropdownMenu>
                               <a class="dropdown-item" href="javascript:void(0)" [ngClass]="{'active': subItem.active}"
                                 *ngFor="let subItem of elem.items">
-                                {{ subItem.text }}
+                                {{ subItem.textTranslate }}
                               </a>
                             </div>
                           </div>
@@ -178,7 +178,7 @@
 
                       <div *ngIf="elem.type === 'item'" (click)="isCollapsed=true">
                         <a class="nav-link" href="javascript:void(0)"
-                          [ngClass]="{'active': elem.active}">{{ elem.text }}</a>
+                          [ngClass]="{'active': elem.active}">{{ elem.textTranslate }}</a>
                       </div>
 
                     </li>
@@ -251,11 +251,11 @@
                   <div class="d-flex align-items-center justify-content-center menu-icon">
                     <i [class]="elem.icon"></i>
                   </div>
-                  <a href="javascript:void(0)" (click)="toggleSideMenuItems(i)" class="sidenav-menu-text">{{ elem.text }}</a>
+                  <a href="javascript:void(0)" (click)="toggleSideMenuItems(i)" class="sidenav-menu-text">{{ elem.textTranslate }}</a>
                 </div>
                 <ul class="m-0" [@expandCollapse]='elem.isOpen' *ngIf="elem.isOpen">
                   <li *ngFor="let item of elem.items">
-                    <a href="javascript:void(0)">{{item.text}}</a>
+                    <a href="javascript:void(0)">{{item.textTranslate}}</a>
                   </li>
                 </ul>
               </div>
