@@ -39,6 +39,6 @@
 @import "node_modules/bootstrap/scss/utilities";
 @import "node_modules/bootstrap/scss/print";
 
-// Syntax highlighting theme
-@import "node_modules/prismjs/themes/prism";
+// Syntax highlighting theme (THIS SHOULD NOT BE INCLUDED IN THE GLOBAL CONFIGS -- IT WAS MOVED TO styles.local.scss)
+//@import "node_modules/prismjs/themes/prism";
 

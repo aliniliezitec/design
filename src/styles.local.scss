@@ -1,4 +1,6 @@
 @import "./styles.scss";
+// Syntax highlighting theme
+@import "node_modules/prismjs/themes/prism";
 
 .docs-container {
   margin-left: 285px;
