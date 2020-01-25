@@ -11,6 +11,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { ComponentsPublicFlow } from './components.flowservice';
 import { LoadersComponent } from './loaders/loaders.component';
 import { InputGroupComponent } from './input-group/input-group.component';
+import { NaoDesignModule } from '../nao-design.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { InputGroupComponent } from './input-group/input-group.component';
   imports: [
     CommonModule,
     SharedModule,
+    NaoDesignModule,
     ComponentsRouting
   ],
   providers: [

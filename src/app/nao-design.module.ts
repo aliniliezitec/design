@@ -4,7 +4,9 @@ import { LoaderInfinityDataComponent } from './shared/loader-infinity-data/loade
 import { LoaderInfinityComponent } from './shared/loader-infinity/loader-infinity.component';
 import { LoaderBarSmallComponent } from './shared/loader-bar-small/loader-bar-small.component';
 import { CommonModule } from '@angular/common';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgbModule, NgbProgressbarModule} from '@ng-bootstrap/ng-bootstrap';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {NgSelectModule} from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -15,10 +17,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     CommonModule,
-    NgbModule
+    NgbProgressbarModule
   ],
-  providers: [
-  ],
+  providers: [],
   exports: [
     LoaderTableComponent,
     LoaderInfinityDataComponent,

@@ -6,6 +6,7 @@ import { LayoutModule } from './layout/layout.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { AppService } from './app.service';
+import { NaoDesignModule } from './nao-design.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AppService } from './app.service';
     AppRoutingModule,
     LayoutModule,
     SharedModule,
+    NaoDesignModule.forRoot()
   ],
   providers: [
     AppService,
