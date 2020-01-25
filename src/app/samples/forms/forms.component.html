@@ -713,11 +713,11 @@
     </div>
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].html)" placement="top"
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].html)" placement="top"
         ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
     </div>
     <div class="nao-example-highlight">
-      <pre><div [innerHTML]="data[1].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      <pre><div [innerHTML]="data[2].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
   </div>
 

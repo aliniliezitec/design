@@ -1,6 +1,6 @@
 {
   "name": "@naologic/design",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -28,6 +28,7 @@
     "angular-cli-ghpages": "^0.6.0",
     "bootstrap": "^4.4.1",
     "iodash": "0.0.1-security",
+    "ladda": "^2.0.1",
     "lodash": "^4.17.15",
     "prismjs": "^1.17.1",
     "rxjs": "~6.4.0",

@@ -591,5 +591,120 @@ export const FormsCodeBlocks = [
   },
   {
     html: `
-  ` }
+    <div class="nao-crm-free-trial-form bg-white" style="max-width: 450px;">
+    <form [formGroup]="formGroup3">
+      <div class="form-intro">
+        Sign up now to start your free trial!
+      </div>
+      <div class="row">
+        <div class="form-group mb-0 col-md-6">
+          <label class="nao-label-sm-4" for="firstName">First name</label>
+          <input class="form-control form-control-sm mb-1" autocomplete="false" type="text"
+            formControlName="firstName" placeholder="Meg" id="firstName">
+          <span [hidden]="formGroup3.get('firstName').pristine || formGroup3.get('firstName').valid"
+            class="text-danger">
+            First name is required
+          </span>
+        </div>
+        <div class="form-group mb-0 col-md-6">
+          <label class="nao-label-sm-4" for="lastName">Last name</label>
+          <input class="form-control form-control-sm mb-1" autocomplete="false" type="text"
+            formControlName="lastName" placeholder="Griffin" id="lastName" />
+          <span [hidden]="formGroup3.get('lastName').pristine || formGroup3.get('lastName').valid"
+            class="text-danger">
+            Last name is required
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group mb-0">
+        <label class="nao-label-sm-4" for="email">Email</label>
+        <input class="form-control form-control-sm mb-1" autocomplete="false" type="text" formControlName="email"
+          placeholder="elon@musk.com" id="email" />
+        <span [hidden]="formGroup3.get('email').pristine || formGroup3.get('email').valid" class="text-danger">
+          Email is required
+        </span>
+      </div>
+
+      <div class="form-group mb-0">
+        <label class="nao-label-sm-4" for="companyName">Company</label>
+        <input class="form-control form-control-sm mb-1" autocomplete="false" type="text"
+          formControlName="companyName" placeholder="SpaceX Inc" id="companyName" />
+        <span [hidden]="formGroup3.get('companyName').pristine || formGroup3.get('companyName').valid"
+          class="text-danger">
+          Company is required
+        </span>
+      </div>
+
+      <div class="form-group mb-0">
+        <label class="nao-label-sm-4">Employees</label>
+        <br />
+        <ng-select class="nao-ng-select-sm" [searchable]="false" formControlName="employees"
+          [ngClass]="{'nao-input-danger': !formGroup3.get('employees').disabled && formGroup3.get('employees').invalid }">
+          <ng-option [value]="10">
+            10
+          </ng-option>
+          <ng-option [value]="50">
+            50
+          </ng-option>
+          <ng-option [value]="10">
+            100
+          </ng-option>
+        </ng-select>
+      </div>
+
+      <div class="form-group mb-0">
+        <label class="nao-label-sm-4" for="password">Password</label>
+        <input class="form-control form-control-sm mb-1" autocomplete="false" type="password"
+          formControlName="password" placeholder="SpaceX Inc" id="password" />
+        <span [hidden]="formGroup3.get('password').pristine || formGroup3.get('password').valid" class="text-danger">
+          Password field is required
+        </span>
+      </div>
+      <div class="form-group mb-0">
+        <label class="nao-label-sm-4" for="confirmPassword">Confirm password</label>
+        <input class="form-control form-control-sm mb-1" autocomplete="false" type="password"
+          formControlName="confirmPassword" placeholder="SpaceX Inc" id="confirmPassword" />
+        <span [hidden]="formGroup3.get('confirmPassword').pristine || formGroup3.get('confirmPassword').valid"
+          class="text-danger">
+          Password field is required
+        </span>
+      </div>
+      <div class="form-group mb-0">
+        <label class="nao-label-sm-4">Country</label>
+
+        <ng-select class="nao-ng-select-sm" bindLabel="name" bindValue="value" [multiple]="false"
+          formControlName="countryId">
+          <ng-option value="usa">
+            USA
+          </ng-option>
+          <ng-option value=de>
+            Germany
+          </ng-option>
+          <ng-option value="fr">
+            France
+          </ng-option>
+        </ng-select>
+      </div>
+      <label class="custom-control custom-checkbox mb-3 mt-3">
+        <input class="custom-control-input" type="checkbox" formControlName="agreeToNewsletters">
+        <span class="custom-control-label">
+          I want naologic to send me email updates about new products and services
+        </span>
+      </label>
+      <button type="button" data-style="expand-right" class="btn btn-primary btn-block btn-lg "
+        [disabled]="formGroup3.pristine || !formGroup3.valid">Register</button>
+
+
+      <div class="nao-terms mt-2">
+        By signing up, you agree to our <a href="https://naologic.com/legal/terms-and-conditions"
+          target="_blank">Terms of Service</a> and
+        <a href="https://naologic.com/legal/privacy-policy" target="_blank">Privacy Notice</a>
+      </div>
+      <div class="nao-separator"></div>
+      <div class="d-flex align-items-center nao-crm-back-login pl-4 pl-sm-0">
+        <div>Already have a user? <a [routerLink]="['/', 'login']">Sign in</a></div>
+      </div>
+    </form>
+  </div>` }
 ];
