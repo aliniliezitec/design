@@ -7,7 +7,6 @@
     "start": "ng serve",
     "deploy:gh": "npm run build:prod && ngh --dir=dist/design",
     "build:prod": "ng build --prod --base-href https://naologic.github.io/design/",
-    "publish:old": "npm pack && npm publish naologic-design-1.1.0.tgz --access public",
     "build:lib": "ng build nao-design --prod && cp src/styles.scss dist/nao-design && cp -R src/assets/ dist/nao-design && cp -R src/styles/ dist/nao-design",
     "publish": "rm -rf dist/nao-design && npm run build:lib && cd dist/nao-design && npm publish --access public",
     "pack": "npm pack",
