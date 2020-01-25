@@ -7,11 +7,11 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { SanitizeHtml } from './pipes/sanitize-html.pipe';
 import { TypescriptPrismPipe } from './pipes/typescript-prism.pipe';
 import { HtmlPrismPipe } from './pipes/html-prism.pipe';
-import { LoaderInfinityComponent } from './loader-infinity/loader-infinity.component';
-import { LoaderInfinityDataComponent } from './loader-infinity-data/loader-infinity-data.component';
-// import { LottieAnimationViewModule } from 'ng-lottie';
-import { LoaderBarSmallComponent } from './loader-bar-small/loader-bar-small.component';
-import { LoaderTableComponent } from './loader-table/loader-table.component';
+// import { LoaderInfinityComponent } from './loader-infinity/loader-infinity.component';
+// import { LoaderInfinityDataComponent } from './loader-infinity-data/loader-infinity-data.component';
+// import { LoaderBarSmallComponent } from './loader-bar-small/loader-bar-small.component';
+// import { LoaderTableComponent } from './loader-table/loader-table.component';
+import { NaoDesignModule } from '../nao-design.module';
 
 @NgModule({
   providers: [
@@ -21,10 +21,10 @@ import { LoaderTableComponent } from './loader-table/loader-table.component';
     SanitizeHtml,
     HtmlPrismPipe,
     TypescriptPrismPipe,
-    LoaderInfinityComponent,
-    LoaderInfinityDataComponent,
-    LoaderTableComponent,
-    LoaderBarSmallComponent
+    // LoaderInfinityComponent,
+    // LoaderInfinityDataComponent,
+    // LoaderTableComponent,
+    // LoaderBarSmallComponent
   ],
   imports: [
     CommonModule,
@@ -32,11 +32,10 @@ import { LoaderTableComponent } from './loader-table/loader-table.component';
     FormsModule,
     ReactiveFormsModule,
     NgSelectModule,
-    // LottieAnimationViewModule
-
+    NaoDesignModule.forRoot()
   ],
   exports: [
-    CommonModule,
+    // CommonModule,
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
@@ -44,10 +43,10 @@ import { LoaderTableComponent } from './loader-table/loader-table.component';
     HtmlPrismPipe,
     TypescriptPrismPipe,
     NgSelectModule,
-    LoaderInfinityComponent,
-    LoaderInfinityDataComponent,
-    LoaderTableComponent,
-    LoaderBarSmallComponent
+    // LoaderInfinityComponent,
+    // LoaderInfinityDataComponent,
+    // LoaderTableComponent,
+    // LoaderBarSmallComponent
   ],
   entryComponents: [
   ]

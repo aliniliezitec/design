@@ -3,6 +3,8 @@ import { LoaderTableComponent } from './shared/loader-table/loader-table.compone
 import { LoaderInfinityDataComponent } from './shared/loader-infinity-data/loader-infinity-data.component';
 import { LoaderInfinityComponent } from './shared/loader-infinity/loader-infinity.component';
 import { LoaderBarSmallComponent } from './shared/loader-bar-small/loader-bar-small.component';
+import { CommonModule } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { LoaderBarSmallComponent } from './shared/loader-bar-small/loader-bar-sm
     LoaderBarSmallComponent
   ],
   imports: [
-
+    CommonModule,
+    NgbModule
   ],
   providers: [
   ],
