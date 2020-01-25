@@ -5,12 +5,14 @@ import { LoaderInfinityComponent } from './shared/loader-infinity/loader-infinit
 import { LoaderBarSmallComponent } from './shared/loader-bar-small/loader-bar-small.component';
 
 @NgModule({
-  declarations: [],
-  imports: [
+  declarations: [
     LoaderTableComponent,
     LoaderInfinityDataComponent,
     LoaderInfinityComponent,
     LoaderBarSmallComponent
+  ],
+  imports: [
+
   ],
   providers: [
   ],
