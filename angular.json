@@ -128,6 +128,50 @@
           "options": {}
         }
       }
+    },
+    "nao-design": {
+      "projectType": "library",
+      "root": "projects/nao-design",
+      "sourceRoot": "projects/nao-design/src",
+      "prefix": "lib",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/nao-design/tsconfig.lib.json",
+            "project": "projects/nao-design/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/nao-design/src/test.ts",
+            "tsConfig": "projects/nao-design/tsconfig.spec.json",
+            "karmaConfig": "projects/nao-design/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/nao-design/tsconfig.lib.json",
+              "projects/nao-design/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "design"

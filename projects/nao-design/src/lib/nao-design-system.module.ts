@@ -1,12 +1,10 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NgbProgressbarModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoaderTableComponent } from './shared/loader-table/loader-table.component';
 import { LoaderInfinityDataComponent } from './shared/loader-infinity-data/loader-infinity-data.component';
 import { LoaderInfinityComponent } from './shared/loader-infinity/loader-infinity.component';
 import { LoaderBarSmallComponent } from './shared/loader-bar-small/loader-bar-small.component';
-import { CommonModule } from '@angular/common';
-import {NgbModule, NgbProgressbarModule} from '@ng-bootstrap/ng-bootstrap';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgSelectModule} from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -19,7 +17,6 @@ import {NgSelectModule} from '@ng-select/ng-select';
     CommonModule,
     NgbProgressbarModule
   ],
-  providers: [],
   exports: [
     LoaderTableComponent,
     LoaderInfinityDataComponent,
@@ -27,10 +24,10 @@ import {NgSelectModule} from '@ng-select/ng-select';
     LoaderBarSmallComponent
   ]
 })
-export class NaoDesignModule {
+export class NaoDesignSystemModule {
   static forRoot(designConfig?): ModuleWithProviders {
     return {
-      ngModule: NaoDesignModule,
+      ngModule: NaoDesignSystemModule,
       providers: [
         { provide: 'designConfig', useValue: designConfig },
       ]
@@ -38,7 +35,7 @@ export class NaoDesignModule {
   }
   static forChild(): ModuleWithProviders {
     return {
-      ngModule: NaoDesignModule
+      ngModule: NaoDesignSystemModule
     };
   }
 }

@@ -11,7 +11,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { ComponentsPublicFlow } from './components.flowservice';
 import { LoadersComponent } from './loaders/loaders.component';
 import { InputGroupComponent } from './input-group/input-group.component';
-import { NaoDesignModule } from '../nao-design.module';
+import { NaoDesignModule } from 'nao-design';
 
 @NgModule({
   declarations: [

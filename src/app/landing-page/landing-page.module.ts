@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { LandingPageRouting } from './landing-page.routing';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import {NaoDesignModule} from 'nao-design';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
   imports: [
     CommonModule,
     SharedModule,
+    NaoDesignModule,
     LandingPageRouting
   ]
 })

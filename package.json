@@ -1,18 +1,28 @@
 {
   "name": "@naologic/design",
-  "version": "1.1.0",
+  "version": "1.1.1",
+  "author": "naologic.com",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "deploy:gh": "npm run build:prod && ngh --dir=dist/design",
     "build:prod": "ng build --prod --base-href https://naologic.github.io/design/",
-    "publish": "npm pack && npm publish naologic-design-1.1.0.tgz --access public",
+    "publish:old": "npm pack && npm publish naologic-design-1.1.0.tgz --access public",
+    "publish": "rm -rf dist/nao-design && ng build nao-design --prod && cd dist/nao-design && npm publish --access public",
     "pack": "npm pack",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naologic/design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/naologic/design/issues"
+  },
+  "homepage": "https://github.com/naologic/design#readme",
   "dependencies": {
     "@angular/animations": "^8.2.14",
     "@angular/common": "~8.2.14",
@@ -37,6 +47,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.803.23",
+    "@angular-devkit/build-ng-packagr": "~0.803.20",
     "@angular/cli": "~8.3.20",
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
@@ -51,8 +62,10 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
+    "ng-packagr": "^5.4.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
+    "tsickle": "^0.37.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
   }

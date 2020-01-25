@@ -6,6 +6,7 @@ import { LayoutDocsRouting } from './layout-docs.routing';
 import { ComponentsComponent } from './components/components.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutDocsPublicFlow } from './layout-docs.flowservice';
+import {NaoDesignModule} from 'nao-design';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { LayoutDocsPublicFlow } from './layout-docs.flowservice';
   imports: [
     CommonModule,
     SharedModule,
+    NaoDesignModule,
     LayoutDocsRouting
   ],
   providers: [

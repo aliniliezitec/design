@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { SamplesRouting } from './samples.routing';
 import { FormsComponent } from './forms/forms.component';
+import {NaoDesignModule} from 'nao-design';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { FormsComponent } from './forms/forms.component';
   imports: [
     CommonModule,
     SharedModule,
+    NaoDesignModule,
     SamplesRouting
   ]
 })
