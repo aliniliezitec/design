@@ -26,8 +26,19 @@ Import the `@naologic/design` to your main styles.scss file
 @import "node_modules/@naologic/design/src/styles.scss";
 ```
 
-<!-- *WARNING*: DO NOT use `@import` to add it directly to `styles.scss`. The size of the compiled package will be significantly larger -->
+### Use our loaders
 
+Import in the app.module.ts
+```typescript
+  imports: [
+    NaoDesignSystemModule.forRoot(),
+```
+
+And then import in the every module you would like to use the loaders
+```typescript
+  imports: [
+    NaoDesignSystemModule,
+```
 
 ### License 
 

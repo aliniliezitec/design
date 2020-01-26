@@ -1,24 +1,45 @@
-# NaoDesign
+# Design [![Build Status](https://travis-ci.org/naologic/design.svg?branch=master)](https://travis-ci.org/naologic/design) [![Known Vulnerabilities](https://snyk.io/test/github/naologic/design/badge.svg?targetFile=package.json)](https://snyk.io/test/github/naologic/design?targetFile=package.json)
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.14.
+This is the design library of Naologic
 
-## Code scaffolding
 
-Run `ng generate component component-name --project nao-design` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project nao-design`.
-> Note: Don't forget to add `--project nao-design` or else it will be added to the default project in your `angular.json` file. 
+### Installation 
 
-## Build
+```npm install --save @naologic/design```
 
-Run `ng build nao-design` to build the project. The build artifacts will be stored in the `dist/` directory.
+[![NPM](https://nodei.co/npm/@naologic/design.png)](https://nodei.co/npm/@naologic/design/)
 
-## Publishing
 
-After building your library with `ng build nao-design`, go to the dist folder `cd dist/nao-design` and run `npm publish`.
+### Add to your angular app
 
-## Running unit tests
+Modify the `angular.json` file and add `nao-system-icon font` to the SCSS 
 
-Run `ng test nao-design` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```json
+"styles": [
+  "node_modules/@naologic/design/src/assets/fonts/nao-system-icon/nao-system-icon.css",
+  "src/styles.scss"
+],
+```
 
-## Further help
+Import the `@naologic/design` to your main styles.scss file
+```css
+@import "node_modules/@naologic/design/src/styles.scss";
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Use our loaders
+
+Import in the app.module.ts
+```typescript
+  imports: [
+    NaoDesignSystemModule.forRoot(),
+```
+
+And then import in the every module you would like to use the loaders
+```typescript
+  imports: [
+    NaoDesignSystemModule,
+```
+
+### License 
+
+_Made with :robot: by [Naologic](https://naologic.com)_
