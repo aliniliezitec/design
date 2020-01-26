@@ -28,7 +28,7 @@ export const NavbarCodeBlocks = [
     html: `
         <nav class="navbar navbar-expand bg-white py-0 pl-3 pr-0">
           <a href="javascript:void(0)" class="navbar-brand py-0 mr-4">
-            <img src="assets/images/crm-assets/logo-crm.svg" alt="Naologic" height="30">
+            <img src="assets-local/images/crm-assets/logo-crm.svg" alt="Naologic" height="30">
           </a>
           <div class="navbar-collapse">
             <!-- Divider -->
@@ -47,7 +47,7 @@ export const NavbarCodeBlocks = [
                 <a ngbDropdownToggle href="javascript:void(0)">
                   <span class="d-inline-flex align-items-center nao-dropdown-avatar-container">
                     <img class="d-block nao-dropdown-avatar mt-1 rounded-circle"
-                      src="assets/images/placeholder/default-avatar.png" />
+                      src="assets-local/images/placeholder/default-avatar.png" />
                     <span class="dot" [ngClass]="{ 'dot_disconnected': false, 'dot_connected': true }"></span>
                   </span>
                 </a>
@@ -55,7 +55,7 @@ export const NavbarCodeBlocks = [
                   <div class="nao-dropdown-profile">
                     <div class="d-flex">
                       <img class="d-block nao-dropdown-avatar rounded-circle mr-2"
-                        src="assets/images/placeholder/default-avatar.png" />
+                        src="assets-local/images/placeholder/default-avatar.png" />
                       <div class="d-flex flex-column">
                         <span class="font-weight-bold">Jon Doe</span>
                         <span class="nao-dropdown-small-text">jon@naologic.com</span>
@@ -90,7 +90,7 @@ export const NavbarCodeBlocks = [
                     <nav class="navbar navbar-expand-md navbar-sm-fixed-top px-3 px-md-0"
                         [ngClass]="{'b-0' : !isCollapsed}">
                         <a class="navbar-brand d-md-none" href="javascript:void(0)" (click)="isCollapsed = true">
-                        <img src="assets/images/crm-assets/logo-crm.svg" alt="Naologic" height="30">
+                        <img src="assets-local/images/crm-assets/logo-crm.svg" alt="Naologic" height="30">
                         </a>
 
                         <div class="align-items-center ml-auto d-md-none">
@@ -99,7 +99,7 @@ export const NavbarCodeBlocks = [
                             <a ngbDropdownToggle href="javascript:void(0)">
                             <span class="d-inline-flex align-items-center nao-dropdown-avatar-container">
                                 <img class="d-block nao-dropdown-avatar mt-1 rounded-circle"
-                                src="assets/images/placeholder/default-avatar.png" />
+                                src="assets-local/images/placeholder/default-avatar.png" />
                                 <span class="dot" [ngClass]="{ 'dot_disconnected': false, 'dot_connected': true }"></span>
                             </span>
                             </a>
@@ -107,7 +107,7 @@ export const NavbarCodeBlocks = [
                                 <div class="nao-dropdown-profile">
                                     <div class="d-flex">
                                         <img class="d-block nao-dropdown-avatar rounded-circle mr-2"
-                                            src="assets/images/placeholder/default-avatar.png" />
+                                            src="assets-local/images/placeholder/default-avatar.png" />
                                         <div class="d-flex flex-column">
                                             <span class="font-weight-bold">Jon Doe</span>
                                             <span class="nao-dropdown-small-text">jon@naologic.com</span>
@@ -378,7 +378,7 @@ export const NavbarCodeBlocks = [
       <div class="sidenav d-none d-sm-block">
       <div class="sidenav-wrapper min-vh-100">
         <a href="javascript:void(0)" [routerLink]="['/']">
-          <img class="nao-logo" src="assets/images/logo/logo.png" width="180">
+          <img class="nao-logo" src="assets-local/images/logo/logo.png" width="180">
         </a>
 
         <li *ngFor="let elem of sideMenuItems; let i = index">
@@ -406,6 +406,25 @@ export const NavbarCodeBlocks = [
       </div>
     </div>`,
     ts1: `
+        @Component({
+          ...
+          animations: [
+          trigger('expandCollapse', [
+              state('expandCollapseState', style({ height: '*' })),
+              transition('* => void', [
+              style({ height: '*' }),
+              animate(200, style({ height: '0' }))
+              ]),
+              transition('void => *', [
+              style({ height: '0' }),
+              animate(200, style({ height: '*' }))
+              ])
+          ])
+          ]
+      })
+
+      ...
+
     public sideMenuItems: SideMenuInterface[] = [
       {
           type: 'items', text: 'Layout', route: '', icon: 'nao-icon-crm', isOpen: false,

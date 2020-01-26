@@ -338,7 +338,7 @@ export const CardsCodeBlocks = [
   {
     html: `
         <div class="d-flex flex-column">
-        <img class="mx-auto" src="assets/images/logo/naologic-text.svg" width="207px">
+        <img class="mx-auto" src="assets-local/images/logo/naologic-text.svg" width="207px">
             <div class="nao-card-form-1">
             <form>
                 <div class="form-group">
@@ -373,11 +373,11 @@ export const CardsCodeBlocks = [
   {
     html: `
     <div class="d-flex flex-column">
-      <img class="mx-auto" src="assets/images/logo/naologic-text.svg" width="207px">
+      <img class="mx-auto" src="assets-local/images/logo/naologic-text.svg" width="207px">
       <div class="nao-card-form-1 pt-5">
         <form>
           <div class="headshot">
-            <img src="assets/images/placeholder/default-avatar.png">
+            <img src="assets-local/images/placeholder/default-avatar.png">
           </div>
           <div class="form-group">
             <label class="nao-label-sm-3">Password</label>
@@ -402,7 +402,7 @@ export const CardsCodeBlocks = [
   {
     html: `
         <div class="d-flex flex-column">
-          <img class="mx-auto" src="assets/images/logo/naologic-text.svg" width="207px">
+          <img class="mx-auto" src="assets-local/images/logo/naologic-text.svg" width="207px">
           <div class="nao-card-form-1 pt-5">
             <form>
               <div class="bg-danger-light nao-form-message mt-1">

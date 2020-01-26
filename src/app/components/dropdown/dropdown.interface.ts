@@ -31,7 +31,7 @@ export const DropdownCodeBlocks = [
           <a ngbDropdownToggle href="javascript:void(0)">
             <span class="d-inline-flex align-items-center nao-dropdown-avatar-container">
               <img class="d-block nao-dropdown-avatar rounded-circle"
-                src="assets/images/placeholder/default-avatar.png" />
+                src="assets-local/images/placeholder/default-avatar.png" />
                 <span class="dot" [ngClass]="{ 'dot_disconnected': false, 'dot_connected': true }"></span>
             </span>
           </a>
@@ -39,7 +39,7 @@ export const DropdownCodeBlocks = [
             <div class="nao-dropdown-profile">
               <div class="d-flex">
                 <img class="d-block nao-dropdown-avatar rounded-circle mr-2"
-                  src="assets/images/placeholder/default-avatar.png" />
+                  src="assets-local/images/placeholder/default-avatar.png" />
                 <div class="d-flex flex-column">
                   <span class="font-weight-bold">Jon Doe</span>
                   <span class="nao-dropdown-small-text">jon@naologic.com</span>
