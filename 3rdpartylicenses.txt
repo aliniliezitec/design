@@ -41,6 +41,8 @@ MIT
 @angular/router
 MIT
 
+@naologic/design
+
 @ng-bootstrap/ng-bootstrap
 MIT
 The MIT License (MIT)
