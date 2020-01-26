@@ -4,7 +4,6 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -22,7 +21,9 @@ jobs:
         NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
     - uses: actions/setup-node@v1
       with:
+        node-version: 12
         registry-url: 'https://npm.pkg.github.com'
+        scope: '@gp187'
     - run: npm run publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
