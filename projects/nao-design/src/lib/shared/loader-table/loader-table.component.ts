@@ -7,7 +7,7 @@ import { range } from 'lodash';
   styles: [`
     .loader-table {
       animation: fadeIn 1s infinite alternate;
-      margin: 0 15px;
+      margin: 0px;
     }
 
     .row-loading {
@@ -35,7 +35,7 @@ import { range } from 'lodash';
       min-height: 18px;
       border-radius: 3px;
       margin-right: 22px;
-      margin-left: 42px;
+      margin-left: 33px;
     }
 
     .content-loading {
