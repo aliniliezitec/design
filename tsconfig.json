@@ -19,10 +19,10 @@
       "dom"
     ],
     "paths": {
-      "nao-design": [
+      "@naologic/design": [
         "dist/nao-design"
       ],
-      "nao-design/*": [
+      "@naologic/design/*": [
         "dist/nao-design/*"
       ]
     }

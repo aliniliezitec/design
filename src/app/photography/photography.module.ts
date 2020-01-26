@@ -7,7 +7,7 @@ import { CompositionsComponent } from './compositions/compositions.component';
 import { CastingComponent } from './casting/casting.component';
 import { LocationsComponent } from './locations/locations.component';
 import { LightingAndColorComponent } from './lighting-and-color/lighting-and-color.component';
-import {NaoDesignModule} from 'nao-design';
+import {NaoDesignModule} from '@naologic/design';
 
 @NgModule({
   declarations: [

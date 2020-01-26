@@ -8,7 +8,7 @@ import { SpacingComponent } from './spacing/spacing.component';
 import { IconsComponent } from './icons/icons.component';
 import { IllustrationComponent } from './illustration/illustration.component';
 import { SizingComponent } from './sizing/sizing.component';
-import {NaoDesignModule} from 'nao-design';
+import {NaoDesignModule} from '@naologic/design';
 
 @NgModule({
   declarations: [

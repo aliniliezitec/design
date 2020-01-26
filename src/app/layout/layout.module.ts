@@ -7,7 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { NaoSidenavComponent } from './nao-sidenav/nao-sidenav.component';
 import { NaoLayoutComponent } from './nao-layout/nao-layout.component';
 import { NaoNavbarComponent } from './nao-navbar/nao-navbar.component';
-import {NaoDesignModule} from 'nao-design';
+import {NaoDesignModule} from '@naologic/design';
 
 
 @NgModule({

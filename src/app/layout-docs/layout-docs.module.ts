@@ -6,7 +6,7 @@ import { LayoutDocsRouting } from './layout-docs.routing';
 import { ComponentsComponent } from './components/components.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutDocsPublicFlow } from './layout-docs.flowservice';
-import {NaoDesignModule} from 'nao-design';
+import {NaoDesignModule} from '@naologic/design';
 
 @NgModule({
   declarations: [

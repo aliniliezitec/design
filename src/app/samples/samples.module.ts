@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { SamplesRouting } from './samples.routing';
 import { FormsComponent } from './forms/forms.component';
-import {NaoDesignModule} from 'nao-design';
+import {NaoDesignModule} from '@naologic/design';
 
 @NgModule({
   declarations: [
