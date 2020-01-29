@@ -12,12 +12,14 @@ import { ComponentsPublicFlow } from './components.flowservice';
 import { LoadersComponent } from './loaders/loaders.component';
 import { InputGroupComponent } from './input-group/input-group.component';
 import { NaoDesignModule } from '@naologic/design';
+import { DatepickerComponent } from './datepicker/datepicker.component';
 
 @NgModule({
   declarations: [
     ButtonsComponent,
     CardsComponent,
     DropdownComponent,
+    DatepickerComponent,
     FormsComponent,
     ModalComponent,
     LoadersComponent,

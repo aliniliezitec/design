@@ -21,6 +21,7 @@ export const MenuItems = [
             { type: 'item', route: '/components/buttons', text: 'Buttons' },
             { type: 'item', route: '/components/cards', text: 'Cards' },
             { type: 'item', route: '/components/dropdowns', text: 'Dropdowns' },
+            { type: 'item', route: '/components/datepicker', text: 'Datepicker' },
             { type: 'item', route: '/components/forms', text: 'Forms' },
             { type: 'item', route: '/components/input-groups', text: 'Input groups' },
             { type: 'item', route: '/components/loaders', text: 'Loaders' },

@@ -40,6 +40,8 @@
     "iodash": "0.0.1-security",
     "ladda": "^2.0.1",
     "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "ngx-bootstrap": "^4.1.1",
     "prismjs": "^1.17.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",

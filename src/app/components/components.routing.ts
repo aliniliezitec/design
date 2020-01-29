@@ -8,6 +8,7 @@ import { TableComponent } from './tables/table.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { LoadersComponent } from './loaders/loaders.component';
 import { InputGroupComponent } from './input-group/input-group.component';
+import { DatepickerComponent } from './datepicker/datepicker.component';
 
 const routes: Routes = [
   {
@@ -35,7 +36,14 @@ const routes: Routes = [
         path: 'dropdowns',
         component: DropdownComponent,
         data: {
-          title: 'Dropdownss - Naologic',
+          title: 'Dropdowns - Naologic',
+        }
+      },
+      {
+        path: 'datepicker',
+        component: DatepickerComponent,
+        data: {
+          title: 'Datepicker - Naologic',
         }
       },
       {

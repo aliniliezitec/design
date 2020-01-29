@@ -6,6 +6,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { NaoDesignModule } from '@naologic/design';
 import { TypescriptPrismPipe } from './pipes/typescript-prism.pipe';
 import { HtmlPrismPipe } from './pipes/html-prism.pipe';
+import { BsDatepickerModule } from 'ngx-bootstrap';
 
 @NgModule({
   providers: [
@@ -20,7 +21,8 @@ import { HtmlPrismPipe } from './pipes/html-prism.pipe';
     FormsModule,
     ReactiveFormsModule,
     NgSelectModule,
-    NaoDesignModule
+    NaoDesignModule,
+    BsDatepickerModule
   ],
   exports: [
     NgbModule,
@@ -28,7 +30,8 @@ import { HtmlPrismPipe } from './pipes/html-prism.pipe';
     ReactiveFormsModule,
     NgSelectModule,
     HtmlPrismPipe,
-    TypescriptPrismPipe
+    TypescriptPrismPipe,
+    BsDatepickerModule
   ],
   entryComponents: [
   ]

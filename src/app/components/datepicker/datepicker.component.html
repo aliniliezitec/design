@@ -1,0 +1,52 @@
+<div class="nao-docs-wrapper">
+  <div class="elements-container">
+    <h1 class="title">Datepicker</h1>
+
+    <div class="elem-container">
+      <h2 class="title">Date picker small</h2>
+      <p>
+        API: <i><a href="https://valor-software.com/ngx-bootstrap/#/datepicker">
+          https://valor-software.com/ngx-bootstrap/#/datepicker
+        </a></i>
+      </p>
+      <div class="nao-bd-example">
+        <div class="input-group {{ size }}">
+          <input type="text"
+                readonly
+                placeholder="Datepicker"
+                class="form-control bg-white form-control-sm nao-mw-230"
+                autocomplete="off"
+                bsDatepicker
+                [attr.maxlength]="inputOptions.maxlength"
+                [attr.size]="inputOptions.size"
+                #dp="bsDatepicker"
+                [value]="displayBsValue"
+                (bsValueChange)="bsValueChange($event)"
+                [outsideClick]="true"
+                [bsConfig]="bsConfig"
+                ng-blur="dp.toggle()"
+          />
+        </div>
+      </div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].ts1)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[0].ts1 | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+  </div>
+</div>

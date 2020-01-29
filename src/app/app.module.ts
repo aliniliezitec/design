@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { AppService } from './app.service';
 import { NaoDesignModule, NaoDesignSystemModule } from '@naologic/design';
+import { BsDatepickerModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,11 +16,12 @@ import { NaoDesignModule, NaoDesignSystemModule } from '@naologic/design';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    BsDatepickerModule.forRoot(),
     AppRoutingModule,
     LayoutModule,
     SharedModule,
     NaoDesignModule,
-    NaoDesignSystemModule.forRoot()
+    NaoDesignSystemModule.forRoot(),
   ],
   providers: [
     AppService,

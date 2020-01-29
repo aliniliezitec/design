@@ -25,7 +25,8 @@
       "@naologic/design/*": [
         "dist/nao-design/*"
       ]
-    }
+    },
+    "allowSyntheticDefaultImports": true
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
