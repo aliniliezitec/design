@@ -1,5 +1,9 @@
 // *************************************************
 // Nao Form labels
+label {
+  margin-bottom: pixelToRem(5px);
+}
+
 .nao-label-1 {
   font-size: pixelToRem(16px);
   color: var(--grey-blue);
@@ -116,4 +120,330 @@ input[type=number] {
       text-decoration: underline;
     }
   }
+}
+
+// *************************************************
+// File manager
+// todo: move to a page
+
+.nao-file-manager {
+  position: relative;
+  width: 900px;
+  min-height: 506px;
+  border-radius: 8px;
+  box-shadow: $nao-card-box-shadow;
+  overflow: hidden;
+  background-color: var(--white);
+
+  .close-modal {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    color: var(--text-primary);
+
+    i {
+      line-height: 0;
+      font-size: 16px;
+    }
+
+    &:hover {
+      color: var(--text-primary-lighter);
+    }
+  }
+
+  .nao-content-source {
+    min-width: 210px;
+    max-width: 210px;
+    min-height: 100%;
+    background-color: var(--lightest);
+
+    .source-btn {
+      height: 56px;
+      font-size: pixelToRem(14px);
+      color: var(--text-primary);
+      cursor: pointer;
+
+      .icon-container {
+        width: 26px;
+        text-align: center;
+      }
+
+      i {
+        line-height: 0;
+        font-size: 18px;
+      }
+
+      &:hover {
+        background-color: #E6EBF0;
+      }
+    }
+  }
+
+  .nao-file-manager-content {
+    padding: 28px 50px 0 50px;
+    position: relative;
+
+    .nao-breadcrumb {
+      min-height: 17px;
+      margin-bottom: 12px;
+      font-size: pixelToRem(13px);
+      color: var(--grey-blue);
+      font-weight: $font-weight-lighter;
+
+      i {
+        font-size: pixelToRem(8px);
+      }
+
+      .path-link {
+        cursor: pointer;
+
+        &:hover {
+          color: var(--text-primary);
+        }
+      }
+
+      .path-active {
+        color: var(--text-primary);
+      }
+    }
+  }
+
+  .action-menu {
+    font-size: pixelToRem(14px);
+    font-weight: $font-weight-lighter;
+    height: 20px;
+    color: var(--text-primary);
+
+    .action-item {
+      &:hover {
+        cursor: pointer;
+      }
+
+      i {
+        font-size: 12px;
+        display: inline-block;
+        transition: ease-in-out .2s;
+      }
+    }
+
+    .action-view-item {
+      i {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .cdn-content-grid {
+    height: 311px;
+    width: 100%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 125px);
+    grid-column-gap: 15px;
+    grid-row-gap: 25px;
+
+    .cdn-element {
+      cursor: pointer;
+      position: relative;
+      width: 125px;
+      height: 115px;
+      border-radius: 4px;
+      border: solid 0.5px var(--lighter);
+      overflow: hidden;
+
+      .preview-img {
+        width: 125px;
+        height: 90px;
+        object-fit: cover;
+      }
+
+      .preview-icon {
+        width: 125px;
+        height: 90px;
+        font-size: 31px;
+      }
+
+      .file-details {
+        padding: 0 3px;
+        height: 25px;
+
+        i {
+          margin-left: 10px;
+          font-size: 13px;
+        }
+
+        .file-name {
+          margin-left: 9px;
+          width: 80px;
+          font-size: pixelToRem(13px);
+          font-weight: $font-weight-lighter;
+          color: var(--text-primary);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    .cdn-element-active {
+      .file-details {
+        background-color: rgba(62, 64, 219, 0.08);
+
+        .file-name {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+
+  .cdn-content-list {
+    overflow: auto;
+    height: 311px;
+    font-size: pixelToRem(13px);
+    // font-size: 0.8125rem;
+
+    .cdn-element {
+      width: 100%;
+      height: 30px;
+      background-color: var(--white);
+      border-bottom: solid 1px #d8dceb;
+      cursor: pointer;
+
+      .preview-container {
+        width: 22px;
+        font-size: 15px;
+        line-height: 0;
+      }
+
+    }
+
+    .cdn-element-active {
+      background-color: rgba(62, 64, 219, 0.08);
+
+      .file-name {
+        color: var(--primary);
+      }
+    }
+  }
+
+  .nao-import-upload-zone {
+    margin-top: 50px;
+    cursor: pointer;
+    height: 326px;
+    border-radius: 6px;
+    border: dotted 0.5px var(--primary);
+    background-color: rgba(62, 64, 219, 0.03);
+    font-size: pixelToRem(13px);
+    // todo: 10px?
+    color: var(--text-primary);
+    font-weight: $font-weight-semibold;
+
+    .nao-icon-upload {
+      font-size: 66px;
+      color: var(--primary);
+      line-height: 0;
+    }
+
+    .nao-size-limit-txt {
+      margin-top: 2px;
+      font-size: pixelToRem(11px);
+      font-weight: $font-weight-regular;
+    }
+
+    .nao-file-blue-txt {
+      color: var(--primary);
+    }
+  }
+
+  .search-web-content {
+    height: 264px;
+    overflow: auto;
+  }
+
+  .nao-input-search-wrapper {
+    margin: 40px 0;
+    position: relative;
+
+    &:before {
+      font-family: 'nao-system-icon';
+      color: var(--text-primary);
+      position: absolute;
+      font-size: 15px;
+      position: absolute;
+      left: 24px;
+      top: 5px;
+      content: "\f999";
+    }
+
+    .nao-input-search {
+      width: 100%;
+      border-radius: 6px;
+      border: solid 1px #e6ebf0;
+      padding-left: 60px;
+    }
+  }
+
+  .search-img-results {
+    display: grid;
+    grid-template-columns: repeat(6, 75px);
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+
+    .img-result-container {
+      cursor: pointer;
+      position: relative;
+
+      .img-result {
+        width: 75px;
+        height: 75px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
+
+  }
+
+  .circle-icon {
+    padding: 0 0 0px 1px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    border: solid 2px white;
+
+    .nao-icon-checkmark {
+      color: var(--white);
+      font-size: 10px;
+      line-height: 0;
+    }
+  }
+
+  .nao-file-manager-footer {
+    position: absolute;
+    padding: 20px 50px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    .selected-files {
+      font-size: pixelToRem(12px);
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .infinity1 {
+    width: 130px
+  }
+}
+
+// todo:
+// todo:
+// todo:
+// todo:
+// create rotate function
+.rotate-180 {
+  transform: rotate(180deg);
 }

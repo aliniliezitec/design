@@ -8,11 +8,11 @@ export const IconsCodeBlocks = [
         html: `
         <span class="nao-icon-surveys"></span>
         <!-- or -->
-        <span data-icon="&#xf919;"></span>
+        <span data-icon="&#xf9a0;"></span>
 
         <span class="nao-icon-business-apps"></span>
         <!-- or -->
-        <span data-icon="&#xf8e3;"></span>
+        <span data-icon="&#xf95e;"></span>
         `},
     {
         html: `
@@ -26,7 +26,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-surveys</span>
-            <span class="second-field">&amp;#xf919;</span>
+            <span class="second-field">&amp;#xf9a0;</span>
         </div>
         </div>
 
@@ -36,7 +36,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-business-apps</span>
-            <span class="second-field">&amp;#xf8e3;</span>
+            <span class="second-field">&amp;#xf95e;</span>
         </div>
         </div>
 
@@ -46,17 +46,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-calendar</span>
-            <span class="second-field">&amp;#xf8e4;</span>
-        </div>
-        </div>
-
-        <div class="nao-box-showcase mr-6 mb-5">
-        <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="nao-icon-cancel-filled" class="nao-icon-cancel-filled icon-preview"></i>
-        </div>
-        <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">nao-icon-cancel-filled</span>
-            <span class="second-field">&amp;#xf928;</span>
+            <span class="second-field">&amp;#xf95f;</span>
         </div>
         </div>
 
@@ -66,7 +56,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-crm</span>
-            <span class="second-field">&amp;#xf904;</span>
+            <span class="second-field">&amp;#xf966;</span>
         </div>
         </div>
 
@@ -76,7 +66,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-clock</span>
-            <span class="second-field">&amp;#xf8ea;</span>
+            <span class="second-field">&amp;#xf967;</span>
         </div>
         </div>
 
@@ -86,7 +76,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-dollar</span>
-            <span class="second-field">&amp;#xf8ed;</span>
+            <span class="second-field">&amp;#xf96a;</span>
         </div>
         </div>
 
@@ -96,7 +86,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-download</span>
-            <span class="second-field">&amp;#xf8ee;</span>
+            <span class="second-field">&amp;#xf96c;</span>
         </div>
         </div>
 
@@ -106,7 +96,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-ecommerce</span>
-            <span class="second-field">&amp;#xf8ef;</span>
+            <span class="second-field">&amp;#xf96d;</span>
         </div>
         </div>
 
@@ -116,7 +106,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-employee-satisfaction</span>
-            <span class="second-field">&amp;#xf8f2;</span>
+            <span class="second-field">&amp;#xf96f;</span>
         </div>
         </div>
 
@@ -126,7 +116,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-enterprise-system</span>
-            <span class="second-field">&amp;#xf8f3;</span>
+            <span class="second-field">&amp;#xf970;</span>
         </div>
         </div>
 
@@ -136,7 +126,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-envelope-1</span>
-            <span class="second-field">&amp;#xf8f4;</span>
+            <span class="second-field">&amp;#xf965;</span>
         </div>
         </div>
 
@@ -146,7 +136,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-envelope-2</span>
-            <span class="second-field">&amp;#xf8f5;</span>
+            <span class="second-field">&amp;#xf971;</span>
         </div>
         </div>
 
@@ -156,7 +146,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-facebook</span>
-            <span class="second-field">&amp;#xf8f6;</span>
+            <span class="second-field">&amp;#xf973;</span>
         </div>
         </div>
 
@@ -166,7 +156,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-true-false</span>
-            <span class="second-field">&amp;#xf91d;</span>
+            <span class="second-field">&amp;#xf9a3;</span>
         </div>
         </div>
 
@@ -176,7 +166,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-file</span>
-            <span class="second-field">&amp;#xf8f7;</span>
+            <span class="second-field">&amp;#xf975;</span>
         </div>
         </div>
 
@@ -186,7 +176,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-filing</span>
-            <span class="second-field">&amp;#xf8f8;</span>
+            <span class="second-field">&amp;#xf977;</span>
         </div>
         </div>
 
@@ -196,7 +186,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-messaging</span>
-            <span class="second-field">&amp;#xf902;</span>
+            <span class="second-field">&amp;#xf987;</span>
         </div>
         </div>
 
@@ -206,7 +196,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-help</span>
-            <span class="second-field">&amp;#xf8f9;</span>
+            <span class="second-field">&amp;#xf9ae;</span>
         </div>
         </div>
 
@@ -216,7 +206,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-information</span>
-            <span class="second-field">&amp;#xf8fb;</span>
+            <span class="second-field">&amp;#xf97e;</span>
         </div>
         </div>
 
@@ -226,7 +216,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-camera</span>
-            <span class="second-field">&amp;#xf8e5;</span>
+            <span class="second-field">&amp;#xf960;</span>
         </div>
         </div>
 
@@ -236,17 +226,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-document</span>
-            <span class="second-field">&amp;#xf8ec;</span>
-        </div>
-        </div>
-
-        <div class="nao-box-showcase mr-6 mb-5">
-        <div class="nao-content-preview d-flex align-items-center justify-content-center">
-            <i id="nao-icon-arrow-back" class="nao-icon-arrow-back icon-preview"></i>
-        </div>
-        <div class="nao-content-usage d-flex flex-column">
-            <span class="first-field">nao-icon-arrow-back</span>
-            <span class="second-field">&amp;#xf8dd;</span>
+            <span class="second-field">&amp;#xf969;</span>
         </div>
         </div>
 
@@ -256,7 +236,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-arrow-dropdown</span>
-            <span class="second-field">&amp;#xf8de;</span>
+            <span class="second-field">&amp;#xf98d;</span>
         </div>
         </div>
 
@@ -266,7 +246,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-arrow-dropdown-filled</span>
-            <span class="second-field">&amp;#xf8df;</span>
+            <span class="second-field">&amp;#xf978;</span>
         </div>
         </div>
 
@@ -276,7 +256,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-card</span>
-            <span class="second-field">&amp;#xf8e8;</span>
+            <span class="second-field">&amp;#xf963;</span>
         </div>
         </div>
 
@@ -286,7 +266,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-checkmark</span>
-            <span class="second-field">&amp;#xf8e9;</span>
+            <span class="second-field">&amp;#xf964;</span>
         </div>
         </div>
 
@@ -296,7 +276,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-cancel</span>
-            <span class="second-field">&amp;#xf8e6;</span>
+            <span class="second-field">&amp;#xf961;</span>
         </div>
         </div>
 
@@ -306,7 +286,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-box-list</span>
-            <span class="second-field">&amp;#xf8e2;</span>
+            <span class="second-field">&amp;#xf95d;</span>
         </div>
         </div>
 
@@ -316,7 +296,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-notifications</span>
-            <span class="second-field">&amp;#xf905;</span>
+            <span class="second-field">&amp;#xf98a;</span>
         </div>
         </div>
 
@@ -326,7 +306,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-search</span>
-            <span class="second-field">&amp;#xf914;</span>
+            <span class="second-field">&amp;#xf999;</span>
         </div>
         </div>
 
@@ -336,7 +316,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-location-time</span>
-            <span class="second-field">&amp;#xf900;</span>
+            <span class="second-field">&amp;#xf984;</span>
         </div>
         </div>
 
@@ -346,7 +326,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-item-list</span>
-            <span class="second-field">&amp;#xf8fc;</span>
+            <span class="second-field">&amp;#xf97f;</span>
         </div>
         </div>
 
@@ -356,7 +336,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-kanban-board</span>
-            <span class="second-field">&amp;#xf8fd;</span>
+            <span class="second-field">&amp;#xf980;</span>
         </div>
         </div>
 
@@ -366,7 +346,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-privacy</span>
-            <span class="second-field">&amp;#xf8fe;</span>
+            <span class="second-field">&amp;#xf981;</span>
         </div>
         </div>
 
@@ -376,7 +356,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-lead-management</span>
-            <span class="second-field">&amp;#xf8ff;</span>
+            <span class="second-field">&amp;#xf982;</span>
         </div>
         </div>
 
@@ -386,7 +366,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-linkedin</span>
-            <span class="second-field">&amp;#xf901;</span>
+            <span class="second-field">&amp;#xf983;</span>
         </div>
         </div>
 
@@ -396,7 +376,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-multiple-choice</span>
-            <span class="second-field">&amp;#xf903;</span>
+            <span class="second-field">&amp;#xf989;</span>
         </div>
         </div>
 
@@ -406,7 +386,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-profile-female</span>
-            <span class="second-field">&amp;#xf90e;</span>
+            <span class="second-field">&amp;#xf974;</span>
         </div>
         </div>
 
@@ -416,7 +396,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-yes-no</span>
-            <span class="second-field">&amp;#xf925;</span>
+            <span class="second-field">&amp;#xf9ad;</span>
         </div>
         </div>
 
@@ -426,7 +406,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-number</span>
-            <span class="second-field">&amp;#xf906;</span>
+            <span class="second-field">&amp;#xf98b;</span>
         </div>
         </div>
 
@@ -436,7 +416,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-online-surveys</span>
-            <span class="second-field">&amp;#xf907;</span>
+            <span class="second-field">&amp;#xf98c;</span>
         </div>
         </div>
 
@@ -446,7 +426,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-box-2</span>
-            <span class="second-field">&amp;#xf8e1;</span>
+            <span class="second-field">&amp;#xf95c;</span>
         </div>
         </div>
 
@@ -456,7 +436,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-billing-money</span>
-            <span class="second-field">&amp;#xf8e0;</span>
+            <span class="second-field">&amp;#xf95b;</span>
         </div>
         </div>
 
@@ -466,7 +446,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-sticker</span>
-            <span class="second-field">&amp;#xf917;</span>
+            <span class="second-field">&amp;#xf99e;</span>
         </div>
         </div>
 
@@ -476,7 +456,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-image-placeholder</span>
-            <span class="second-field">&amp;#xf8fa;</span>
+            <span class="second-field">&amp;#xf97d;</span>
         </div>
         </div>
 
@@ -486,7 +466,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-settings</span>
-            <span class="second-field">&amp;#xf915;</span>
+            <span class="second-field">&amp;#xf99b;</span>
         </div>
         </div>
 
@@ -496,7 +476,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-stock-boxes</span>
-            <span class="second-field">&amp;#xf918;</span>
+            <span class="second-field">&amp;#xf99f;</span>
         </div>
         </div>
 
@@ -506,7 +486,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-upload</span>
-            <span class="second-field">&amp;#xf926;</span>
+            <span class="second-field">&amp;#xf9a6;</span>
         </div>
         </div>
 
@@ -516,7 +496,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-palette</span>
-            <span class="second-field">&amp;#xf908;</span>
+            <span class="second-field">&amp;#xf98e;</span>
         </div>
         </div>
 
@@ -526,7 +506,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-desk-basic</span>
-            <span class="second-field">&amp;#xf8eb;</span>
+            <span class="second-field">&amp;#xf968;</span>
         </div>
         </div>
 
@@ -536,7 +516,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-elearning</span>
-            <span class="second-field">&amp;#xf8f0;</span>
+            <span class="second-field">&amp;#xf96e;</span>
         </div>
         </div>
 
@@ -546,7 +526,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-email</span>
-            <span class="second-field">&amp;#xf90a;</span>
+            <span class="second-field">&amp;#xf992;</span>
         </div>
         </div>
 
@@ -556,7 +536,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-box-1</span>
-            <span class="second-field">&amp;#xf90c;</span>
+            <span class="second-field">&amp;#xf994;</span>
         </div>
         </div>
 
@@ -566,7 +546,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-purchasing</span>
-            <span class="second-field">&amp;#xf910;</span>
+            <span class="second-field">&amp;#xf995;</span>
         </div>
         </div>
 
@@ -576,7 +556,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-sales</span>
-            <span class="second-field">&amp;#xf90b;</span>
+            <span class="second-field">&amp;#xf993;</span>
         </div>
         </div>
 
@@ -586,7 +566,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-profile-male</span>
-            <span class="second-field">&amp;#xf90f;</span>
+            <span class="second-field">&amp;#xf985;</span>
         </div>
         </div>
 
@@ -596,7 +576,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-rating</span>
-            <span class="second-field">&amp;#xf911;</span>
+            <span class="second-field">&amp;#xf996;</span>
         </div>
         </div>
 
@@ -606,7 +586,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-sales-order</span>
-            <span class="second-field">&amp;#xf913;</span>
+            <span class="second-field">&amp;#xf998;</span>
         </div>
         </div>
 
@@ -616,7 +596,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-sms-marketing</span>
-            <span class="second-field">&amp;#xf916;</span>
+            <span class="second-field">&amp;#xf99c;</span>
         </div>
         </div>
 
@@ -626,7 +606,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-system</span>
-            <span class="second-field">&amp;#xf91a;</span>
+            <span class="second-field">&amp;#xf9a1;</span>
         </div>
         </div>
 
@@ -636,7 +616,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-thank-you</span>
-            <span class="second-field">&amp;#xf91b;</span>
+            <span class="second-field">&amp;#xf9a2;</span>
         </div>
         </div>
 
@@ -646,7 +626,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-thunder</span>
-            <span class="second-field">&amp;#xf91c;</span>
+            <span class="second-field">&amp;#xf954;</span>
         </div>
         </div>
 
@@ -656,7 +636,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-twitter</span>
-            <span class="second-field">&amp;#xf91e;</span>
+            <span class="second-field">&amp;#xf9a4;</span>
         </div>
         </div>
 
@@ -666,7 +646,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-vendor-management</span>
-            <span class="second-field">&amp;#xf920;</span>
+            <span class="second-field">&amp;#xf9a7;</span>
         </div>
         </div>
 
@@ -676,7 +656,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-warning-1</span>
-            <span class="second-field">&amp;#xf921;</span>
+            <span class="second-field">&amp;#xf9a8;</span>
         </div>
         </div>
 
@@ -686,7 +666,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-warning-2</span>
-            <span class="second-field">&amp;#xf922;</span>
+            <span class="second-field">&amp;#xf9a9;</span>
         </div>
         </div>
 
@@ -696,7 +676,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-welcome</span>
-            <span class="second-field">&amp;#xf923;</span>
+            <span class="second-field">&amp;#xf9aa;</span>
         </div>
         </div>
 
@@ -706,7 +686,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-whatsapp-marketing</span>
-            <span class="second-field">&amp;#xf924;</span>
+            <span class="second-field">&amp;#xf9ab;</span>
         </div>
         </div>
 
@@ -716,7 +696,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-add-filled</span>
-            <span class="second-field">&amp;#xf927;</span>
+            <span class="second-field">&amp;#xf977;</span>
         </div>
         </div>
 
@@ -736,7 +716,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-additional-options</span>
-            <span class="second-field">&amp;#xf8dc;</span>
+            <span class="second-field">&amp;#xf988;</span>
         </div>
         </div>
 
@@ -746,7 +726,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-email-reminder</span>
-            <span class="second-field">&amp;#xf8f1;</span>
+            <span class="second-field">&amp;#xf99d;</span>
         </div>
         </div>
 
@@ -756,7 +736,7 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-person</span>
-            <span class="second-field">&amp;#xf909;</span>
+            <span class="second-field">&amp;#xf986;</span>
         </div>
         </div>
 
@@ -776,7 +756,157 @@ export const IconsCodeBlocks = [
         </div>
         <div class="nao-content-usage d-flex flex-column">
             <span class="first-field">nao-icon-rocket</span>
-            <span class="second-field">&amp;#xf912;</span>
+            <span class="second-field">&amp;#xf997;</span>
+        </div>
+        </div>
+
+        <div class="nao-box-showcase mr-6 mb-5">
+        <div class="nao-content-preview d-flex align-items-center justify-content-center">
+            <i id="nao-icon-file-word" class="nao-icon-file-word icon-preview"></i>
+        </div>
+        <div class="nao-content-usage d-flex flex-column">
+            <span class="first-field">nao-icon-file-word</span>
+            <span class="second-field">&amp;#xf9ac;</span>
+        </div>
+        </div>
+
+        <div class="nao-box-showcase mr-6 mb-5">
+        <div class="nao-content-preview d-flex align-items-center justify-content-center">
+            <i id="nao-icon-file-ppt" class="nao-icon-file-ppt icon-preview"></i>
+        </div>
+        <div class="nao-content-usage d-flex flex-column">
+            <span class="first-field">nao-icon-file-ppt</span>
+            <span class="second-field">&amp;#xf991;</span>
+        </div>
+        </div>
+
+        <div class="nao-box-showcase mr-6 mb-5">
+        <div class="nao-content-preview d-flex align-items-center justify-content-center">
+            <i id="nao-icon-file-pdf" class="nao-icon-file-pdf icon-preview"></i>
+        </div>
+        <div class="nao-content-usage d-flex flex-column">
+            <span class="first-field">nao-icon-file-pdf</span>
+            <span class="second-field">&amp;#xf98f;</span>
+        </div>
+        </div>
+
+        <div class="nao-box-showcase mr-6 mb-5">
+        <div class="nao-content-preview d-flex align-items-center justify-content-center">
+            <i id="nao-icon-file-excel" class="nao-icon-file-excel icon-preview"></i>
+        </div>
+        <div class="nao-content-usage d-flex flex-column">
+            <span class="first-field">nao-icon-file-excel</span>
+            <span class="second-field">&amp;#xf972;</span>
+        </div>
+        </div>
+
+        <div class="nao-box-showcase mr-6 mb-5">
+        <div class="nao-content-preview d-flex align-items-center justify-content-center">
+            <i id="nao-icon-folder" class="nao-icon-folder icon-preview"></i>
+        </div>
+        <div class="nao-content-usage d-flex flex-column">
+            <span class="first-field">nao-icon-folder</span>
+            <span class="second-field">&amp;#xf979;</span>
+        </div>
+        </div>
+
+        <div class="nao-box-showcase mr-6 mb-5">
+        <div class="nao-content-preview d-flex align-items-center justify-content-center">
+            <i id="nao-icon-grid" class="nao-icon-grid icon-preview"></i>
+        </div>
+        <div class="nao-content-usage d-flex flex-column">
+            <span class="first-field">nao-icon-grid</span>
+            <span class="second-field">&amp;#xf97b;</span>
+        </div>
+        </div>
+
+        <div class="nao-box-showcase mr-6 mb-5">
+        <div class="nao-content-preview d-flex align-items-center justify-content-center">
+            <i id="nao-icon-send-arrow" class="nao-icon-send-arrow icon-preview"></i>
+        </div>
+        <div class="nao-content-usage d-flex flex-column">
+            <span class="first-field">nao-icon-send-arrow</span>
+            <span class="second-field">&amp;#xf99a;</span>
+        </div>
+        </div>
+
+        <div class="nao-box-showcase mr-6 mb-5">
+        <div class="nao-content-preview d-flex align-items-center justify-content-center">
+            <i id="nao-icon-arrow-back-1" class="nao-icon-arrow-back-1 icon-preview"></i>
+        </div>
+        <div class="nao-content-usage d-flex flex-column">
+            <span class="first-field">nao-icon-arrow-back-1</span>
+            <span class="second-field">&amp;#xf9af;</span>
+        </div>
+        </div>
+
+        <div class="nao-box-showcase mr-6 mb-5">
+        <div class="nao-content-preview d-flex align-items-center justify-content-center">
+            <i id="nao-icon-arrow-down-1" class="nao-icon-arrow-down-1 icon-preview"></i>
+        </div>
+        <div class="nao-content-usage d-flex flex-column">
+            <span class="first-field">nao-icon-arrow-down-1</span>
+            <span class="second-field">&amp;#xf9b1;</span>
+        </div>
+        </div>
+
+        <div class="nao-box-showcase mr-6 mb-5">
+        <div class="nao-content-preview d-flex align-items-center justify-content-center">
+            <i id="nao-icon-arrow-next-1" class="nao-icon-arrow-next-1 icon-preview"></i>
+        </div>
+        <div class="nao-content-usage d-flex flex-column">
+            <span class="first-field">nao-icon-arrow-next-1</span>
+            <span class="second-field">&amp;#xf9b4;</span>
+        </div>
+        </div>
+
+        <div class="nao-box-showcase mr-6 mb-5">
+        <div class="nao-content-preview d-flex align-items-center justify-content-center">
+            <i id="nao-icon-arrow-up-1" class="nao-icon-arrow-up-1 icon-preview"></i>
+        </div>
+        <div class="nao-content-usage d-flex flex-column">
+            <span class="first-field">nao-icon-arrow-up-1</span>
+            <span class="second-field">&amp;#xf9b5;</span>
+        </div>
+        </div>
+
+        <div class="nao-box-showcase mr-6 mb-5">
+        <div class="nao-content-preview d-flex align-items-center justify-content-center">
+            <i id="nao-icon-arrow-back-2" class="nao-icon-arrow-back-2 icon-preview"></i>
+        </div>
+        <div class="nao-content-usage d-flex flex-column">
+            <span class="first-field">nao-icon-arrow-back-2</span>
+            <span class="second-field">&amp;#xf9b0;</span>
+        </div>
+        </div>
+
+        <div class="nao-box-showcase mr-6 mb-5">
+        <div class="nao-content-preview d-flex align-items-center justify-content-center">
+            <i id="nao-icon-arrow-down-2" class="nao-icon-arrow-down-2 icon-preview"></i>
+        </div>
+        <div class="nao-content-usage d-flex flex-column">
+            <span class="first-field">nao-icon-arrow-down-2</span>
+            <span class="second-field">&amp;#xf9b2;</span>
+        </div>
+        </div>
+
+        <div class="nao-box-showcase mr-6 mb-5">
+        <div class="nao-content-preview d-flex align-items-center justify-content-center">
+            <i id="nao-icon-arrow-next-2" class="nao-icon-arrow-next-2 icon-preview"></i>
+        </div>
+        <div class="nao-content-usage d-flex flex-column">
+            <span class="first-field">nao-icon-arrow-next-2</span>
+            <span class="second-field">&amp;#xf9b3;</span>
+        </div>
+        </div>
+
+        <div class="nao-box-showcase mr-6 mb-5">
+        <div class="nao-content-preview d-flex align-items-center justify-content-center">
+            <i id="nao-icon-arrow-up-2" class="nao-icon-arrow-up-2 icon-preview"></i>
+        </div>
+        <div class="nao-content-usage d-flex flex-column">
+            <span class="first-field">nao-icon-arrow-up-2</span>
+            <span class="second-field">&amp;#xf9b6;</span>
         </div>
         </div>
 `

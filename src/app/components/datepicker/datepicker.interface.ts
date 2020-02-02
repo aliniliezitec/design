@@ -20,10 +20,19 @@ export const DatepickerCodeBlocks = [
         </div>
         `,
         ts1: `
+        @ViewChild('dp', { static: false }) public bsDatepicker: BsDatepickerDirective;
+        @Output() valueChange = new EventEmitter();
+        @Input() public options;
+        @Input() public size = ''; // sm, xs from styles
+        public readonly inputOptions = { maxlength: 4, size: 4 };
+        public formattedBsValue: string;
+        public displayBsValue = '';
+
+        // -->Config: datepicker
         public bsConfig: Partial<BsDatepickerConfig> = {
-            containerClass: 'theme-dark-blue nao-custom-datepicker',
-            showWeekNumbers: false,
-            adaptivePosition: true
-          };`
+          containerClass: 'theme-dark-blue nao-custom-datepicker',
+          showWeekNumbers: false,
+          adaptivePosition: true
+        };`
     },
 ];

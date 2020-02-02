@@ -14,7 +14,7 @@ export const ModalCodeBlocks = [
                         <p>Modal body text goes here.</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-only-dark-blue" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-outline-only-primary" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Save</button>
                     </div>
                 </div>
@@ -56,7 +56,7 @@ export const ModalCodeBlocks = [
                         <p>Modal body text goes here. After deleting this you won't be able to recover it.</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-only-dark-blue" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-outline-only-primary" data-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-dark-blue">Delete</button>
                     </div>
                 </div>
@@ -76,7 +76,7 @@ export const ModalCodeBlocks = [
                         <p>Modal body text goes here.  Modal body text goes here. Modal body text goes here. Modal body text goes here.</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-only-dark-blue" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-outline-only-primary" data-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-primary">Create</button>
                     </div>
                 </div>
