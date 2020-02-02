@@ -21,7 +21,7 @@ import { range } from 'lodash';
     }
 
     .icon-loading {
-      background-color: var(--lighter);
+      background-color: var(--bg-1);
       min-width: 28px;
       min-height: 28px;
       border-radius: 14px;
@@ -30,7 +30,7 @@ import { range } from 'lodash';
     }
 
     .checkbox-loading {
-      background-color: var(--lighter);
+      background-color: var(--bg-1);
       min-width: 18px;
       min-height: 18px;
       border-radius: 3px;
@@ -41,7 +41,7 @@ import { range } from 'lodash';
     .content-loading {
       align-self: center;
       border-radius: 4px;
-      background-color: var(--lighter);
+      background-color: var(--bg-1);
       width: 100%;
       min-height: 16px;
     }

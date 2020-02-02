@@ -171,16 +171,13 @@
     </div>
   </div>
 
-
-
-
   <div class="elem-container">
     <h2 class="title">Validation</h2>
     <p>We recommend using client side validation, but in case you require server side, you can indicate invalid and
       valid form fields with <code>.is-invalid</code> and <code>.is-valid</code>. And for showing a validation message,
       you could use a <code>span</code> with a class of <code>.text-danger</code></p>
     <div class='nao-bd-example' [innerHTML]="data[6].html | sanitizeHtml"></div>
-    
+
     <div class="nao-bd-clipboard">
       <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[6].html)" placement="top"
         ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -189,4 +186,81 @@
       <pre><div [innerHTML]="data[6].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
   </div>
+
+  <div class="elem-container">
+    <h2 class="title">Switches</h2>
+    <p>
+      A switch has the markup of a custom checkbox but uses the <code>.custom-switch</code> class to render a toggle
+      switch. Switches also support the <code>disabled</code> attribute.
+    </p>
+
+    <div class='nao-bd-example' [innerHTML]="data[7].html | sanitizeHtml"></div>
+
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[7].html)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[7].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+  </div>
+
+  <div class="elem-container">
+    <h2 class="title">Switches sizing</h2>
+
+    <div class='nao-bd-example' [innerHTML]="data[8].html | sanitizeHtml"></div>
+
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[8].html)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[8].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+  </div>
+
+  <div class="elem-container">
+    <h2 class="title">Radio buttons</h2>
+
+    <div class='nao-bd-example' [innerHTML]="data[9].html | sanitizeHtml"></div>
+
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[9].html)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[9].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+  </div>
+
+  <div class="elem-container">
+    <h2 class="title">Checkboxes</h2>
+
+    <div class='nao-bd-example' [innerHTML]="data[10].html | sanitizeHtml"></div>
+
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[10].html)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[10].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+  </div>
+
+  <div class="elem-container">
+    <h2 class="title">Tags</h2>
+
+    <div class='nao-bd-example' [innerHTML]="data[11].html | sanitizeHtml"></div>
+
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[11].html)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[11].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+  </div>
+
+
+
 </div>

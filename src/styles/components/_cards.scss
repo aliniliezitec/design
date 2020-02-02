@@ -8,7 +8,7 @@
 // Nao card 1
 .nao-card-1 {
   .card-body {
-    background-color: var(--lightest);
+    background-color: var(--bg-3);
     border-top: 1px solid #caccd7;
     border-bottom: 1px solid #caccd7;
   }
@@ -111,7 +111,7 @@
   margin: 0 16px 10px 16px;
   border-radius: 8px;
   background-color: var(--white);
-  border: solid 2px #c8cfe9;
+  border: solid 2px var(--text-7);
 
   .dropdown-item {
     font-size: pixelToRem(12px);
@@ -225,7 +225,7 @@
     padding: 17px 27px 20px 22px;
     font-size: pixelToRem(14px);
     font-weight: $font-weight-bold;
-    color: var(--grey-blue);
+    color: var(--text-primary-lightest);
   }
 
   .nao-lane-footer {
@@ -238,7 +238,7 @@
       bottom: 13px;
       left: 17px;
       font-size: pixelToRem(14px);
-      color: var(--grey-blue);
+      color: var(--text-primary-lightest);
     }
 
     .circle-icon {
@@ -310,7 +310,7 @@
     position: relative;
     font-size: pixelToRem(10px);
     font-weight: $font-weight-bold;
-    color: var(--grey-blue);
+    color: var(--text-primary-lightest);
     min-height: 28px;
     padding: 9px;
     border-radius: 4px;
@@ -326,7 +326,7 @@
   }
 
   hr {
-    color: #e6ebf0;
+    color: var(--bg-2);
   }
 }
 
@@ -350,7 +350,7 @@
 .nao-blue-rounded-box {
   border-radius: 8px;
   box-shadow: 0 2px 4px 0 var(--border-light);
-  background-color: var(--lightest);
+  background-color: var(--bg-3);
   margin: 0 10px 20px 10px;
   min-height: 28px;
 
@@ -364,7 +364,7 @@
   .box-container {
     padding: 25px 32px;
     font-size: pixelToRem(13px);
-    color: var(--grey-blue);
+    color: var(--text-primary-lightest);
     font-weight: $font-weight-semibold;
 
     // Responsive grid for 4 input groups with ng-select

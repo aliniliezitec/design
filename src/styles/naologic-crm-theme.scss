@@ -1,32 +1,35 @@
 :root {
   --primary: #3e40db;
-  --light-primary: #5659ff;
-  --light-blue: #e2e3fa;
+  --primary-light: #5659ff;
   --primary-lighter: #6869d3;
   --primary-lightest: #7880ff;
-  --secondary: #0062a5;
-  --light-secondary: #4576ff;
+  --primary-opacity: #e2e3fa;
+  --secondary: #0062A5;
+  --secondary-light: #4576ff;
   --secondary-lighter: #3297d2;
+  --tertiary: #9013FE;
+  --tertiary-light: #9747D7;
   --success: #3edb8b;
   --success-light: #d8f8e8;
   --warning: #ffa544;
   --warning-light: #ffedda;
   --danger: #db3e8e;
   --danger-light: #f8d8e8;
-  --lighter: #e3e5f0;
-  --lightest: #f6f8fb;
-  --dark: #687196;
+  --bg-1: #e3e5f0;
+  --bg-2: #e6ebf0;
+  --bg-3: #f6f8fb;
   --white: #ffffff;
   --text-primary: #030929;
-  --text-secondary: #47484c;
   --text-primary-light: #2f3059;
   --text-primary-lighter: #4e4f84;
-  --text-muted: #a3a9c0;
+  --text-primary-lightest: #687196;
+  --text-secondary: #323338;
+  --text-6: #a3a9c0;
+  --text-7: #c8cfe9;
   --border-primary: #e9eef9;
   --border-lightest: #f7f9fc;
   --border-light: #caccd7;
   --border-fill: #dde1e3;
-  --grey-blue: #687196;
   --light-bg: #f8f9fa;
   --shadow: #D8DCEB
 }
@@ -59,8 +62,7 @@ $danger-light: #f8d8e8;
 
 $dark-blue: #2f3059;
 
-$theme-colors: (
-  "primary": $primary,
+$theme-colors: ("primary": $primary,
   "primary-light": $primary-light,
   "primary-lighter": $primary-lighter,
   "primary-lightest": $primary-lightest,
@@ -76,8 +78,7 @@ $theme-colors: (
   "warning-light": $warning-light,
   "danger": $danger,
   "danger-light": $danger-light,
-  "dark-blue": $dark-blue
-);
+  "dark-blue": $dark-blue);
 
 $base-font-size: 16px;
 
@@ -103,41 +104,56 @@ $ng-select-box-shadow: $nao-input-box-shadow;
 $ng-select-selected: #e3e5f0;
 $ng-select-marked: #e9eaf0;
 $ng-select-primary-text: #030929;
-$ng-select-placeholder:var(--text-muted);
+$ng-select-placeholder:var(--text-6);
 
 // spacers
-$spacers: (
-  0: 0,
+$spacers: (0: 0,
   1: 5px,
   2: 10px,
   3: 15px,
   4: 25px,
   5: 40px,
   6: 65px,
-  7: 105px
-);
+  7: 105px);
 
 // Custom bg colors
-$custom-text-colors: (
-  primary: #030929, 
-  primary-light: #2F3059, 
-  primary-lighter: #4e4f84, 
-  primary-lightest: #687196, // grey-blue
+$custom-text-colors: (primary: #030929,
+  primary-light: #2F3059,
+  primary-lighter: #4e4f84,
+  primary-lightest: #687196,
   secondary: #323338,
-  6: #a3a9c0, // text-muted
-  7: #c8cfe9, 
+  6: #a3a9c0,
+  7: #c8cfe9,
 );
 
 // Custom text colors
-$custom-bg-colors: (
-  1: #e3e5f0,
+$custom-bg-colors: (1: #e3e5f0,
   2: #e6ebf0,
   3: #f6f8fb,
-  shadow: #D8DCEB
-);
+  shadow: #D8DCEB);
 
 //  Font
-$font-family-sans-serif: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !default;
-$font-family-serif:      Nunito, Georgia, "Times New Roman", serif;
-$font-family-monospace:  Nunito, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:       $font-family-sans-serif !default;
+$font-family-sans-serif: Nunito,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+"Oxygen",
+"Ubuntu",
+"Cantarell",
+"Fira Sans",
+"Droid Sans",
+"Helvetica Neue",
+sans-serif !default;
+$font-family-serif: Nunito,
+Georgia,
+"Times New Roman",
+serif;
+$font-family-monospace: Nunito,
+"SFMono-Regular",
+Menlo,
+Monaco,
+Consolas,
+"Liberation Mono",
+"Courier New",
+monospace !default;
+$font-family-base: $font-family-sans-serif !default;

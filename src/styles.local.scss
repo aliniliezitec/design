@@ -142,7 +142,7 @@
         display: block;
         padding: pixelToRem(4px) pixelToRem(8px);
         font-size: 75%;
-        color: var(--text-muted);
+        color: var(--text-6);
         background-color: transparent;
         border: 0;
         border-radius: .25rem;
@@ -388,7 +388,7 @@
   }
 
   .spacing-rectangle {
-    box-shadow: 0 1px 3px 0 #c8cfe9;
+    box-shadow: 0 1px 3px 0 var(--text-7);
     background-color: rgb(62, 64, 219, 0.25);
     margin-bottom: 25PX;
     display: inline-block;

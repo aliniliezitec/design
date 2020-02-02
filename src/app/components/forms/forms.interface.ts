@@ -96,4 +96,90 @@ export const FormsCodeBlocks = [
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>`},
+    {
+        html: `
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+            <label class="custom-control-label" for="customSwitch1">This is an inactive switch</label>
+        </div>
+        
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
+            <label class="custom-control-label" for="customSwitch2">This is an active switch</label>
+        </div>
+
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" disabled id="customSwitch3">
+            <label class="custom-control-label" for="customSwitch3">This is a disabled inactive switch</label>
+        </div>
+
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" disabled id="customSwitch4" checked>
+            <label class="custom-control-label" for="customSwitch4">This is a enabled inactive switch</label>
+        </div>`
+    },
+    {
+        html: `
+        <div class="custom-control custom-switch custom-switch-sm mb-2">
+            <input type="checkbox" class="custom-control-input" id="customSwitch-sm">
+            <label class="custom-control-label" for="customSwitch-sm">Switch small</label>
+        </div>
+
+        <div class="custom-control custom-switch mb-2">
+            <input type="checkbox" class="custom-control-input" id="customSwitch">
+            <label class="custom-control-label" for="customSwitch">Switch default</label>
+        </div>
+
+        <div class="custom-control custom-switch custom-switch-lg mb-2">
+            <input type="checkbox" class="custom-control-input" id="customSwitch-lg">
+            <label class="custom-control-label" for="customSwitch-lg">Switch large</label>
+        </div>`
+    },
+    {
+        html: `
+        <label class="nao-custom-radio">
+            <input type="radio" name="radio" value="option1" checked>
+            <span class="radio-label">Radio button 1</span>
+            <span class="checkmark"></span>
+        </label>
+        <label class="nao-custom-radio">
+            <input type="radio" name="radio" value="option2">
+            <span class="radio-label">Radio button 2</span>
+            <span class="checkmark"></span>
+        </label>
+        <label class="nao-custom-radio">
+            <input type="radio" name="radio" value="option3">
+            <span class="radio-label">Radio button 3</span>
+            <span class="checkmark"></span>
+        </label>
+        <label class="nao-custom-radio">
+            <input type="radio" name="radio" value="option4" disabled>
+            <span class="radio-label">Disabled radio</span>
+            <span class="checkmark"></span>
+        </label>`
+    },
+    {
+        html: `
+         <div class="d-flex custom-control custom-checkbox mb-3">
+            <input class="custom-control-input" type="checkbox" name="checkbox" id="checkbox1">
+            <label class="custom-control-label align-self-center" for="checkbox1">Check
+                me</label>
+        </div>
+
+        <div class="d-flex custom-control custom-checkbox mb-3">
+            <input class="custom-control-input" type="checkbox" name="checkbox" id="checkbox2" checked>
+            <label class="custom-control-label align-self-center" for="checkbox2">Check
+                me</label>
+        </div>
+
+        <div class="d-flex custom-control custom-checkbox mb-3">
+            <input class="custom-control-input" type="checkbox" name="checkbox" id="checkbox3" disabled>
+            <label class="custom-control-label align-self-center" for="checkbox3">Check
+                me</label>
+        </div>`
+    },
+    {
+        html: `
+        `
+    }
 ];

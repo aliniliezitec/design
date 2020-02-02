@@ -7,7 +7,7 @@
 
   thead {
     font-size: pixelToRem(14px);
-    color: var(--grey-blue);
+    color: var(--text-primary-lightest);
 
     th {
       padding: 11px 5px;
@@ -67,7 +67,7 @@
   }
 
   .card-header {
-    background-color: var(--lightest);
+    background-color: var(--bg-3);
     padding-right: 29px;
 
     .card-header-title {
@@ -85,7 +85,7 @@
   }
 
   .card-header.selected {
-    background-color: var(--light-blue);
+    background-color: var(--primary-opacity);
   }
 
   .card-body {
@@ -120,7 +120,7 @@
   }
 
   .table-header {
-    background-color: var(--lightest);
+    background-color: var(--bg-3);
 
     tr {
       height: 30px;
@@ -128,7 +128,7 @@
       th {
         font-size: pixelToRem(14px);
         font-weight: $font-weight-regular;
-        color: var(--dark);
+        color: var(--text-primary-lightest);
 
         .custom-checkbox {
           margin-left: 32px !important;
@@ -158,11 +158,11 @@
 
     .ng-placeholder {
       padding-top: 6px;
-      color: var(--text-muted) !important;
+      color: var(--text-6) !important;
     }
 
     .ng-value {
-      background-color: var(--lighter) !important;
+      background-color: var(--bg-1) !important;
       color: var(--text-primary) !important;
       font-weight: $font-weight-semibold !important;
       font-size: pixelToRem(16px) !important;
@@ -175,7 +175,7 @@
     }
 
     .ng-option-marked {
-      background-color: var(--lighter) !important;
+      background-color: var(--bg-1) !important;
       color: var(--text-primary) !important;
     }
 
@@ -213,7 +213,7 @@
       }
 
       &.selected {
-        background-color: var(--light-blue);
+        background-color: var(--primary-opacity);
       }
     }
 
@@ -250,11 +250,11 @@
 
   .cell-multiline-text {
     font-size: pixelToRem(15px);
-    color: var(--text-muted);
+    color: var(--text-6);
   }
 
   .dropdown-item:hover {
-    background-color: var(--lighter);
+    background-color: var(--bg-1);
   }
 
   .dropdown-item.danger:hover {

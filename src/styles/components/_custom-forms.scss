@@ -1,0 +1,190 @@
+// *************************************************
+// Switch
+.custom-switch {
+  padding-left: $custom-switch-width + $custom-control-gutter;
+  min-height: unset;
+  cursor: pointer;
+
+  .custom-control-label {
+    &::before {
+      top: pixelToRem(7px);
+      left: -($custom-switch-width + $custom-control-gutter);
+      width: $custom-switch-width;
+      height: 9px;
+      background-color: rgba(163, 169, 192, 0.5);
+      pointer-events: all;
+      border-radius: $custom-switch-indicator-border-radius;
+      border: none;
+      box-shadow: none;
+    }
+
+    &::after {
+      //   top: add(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2, -($custom-control-indicator-border-width * 2));
+      top: add(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2, ($custom-control-indicator-border-width * 2));
+      left: add(-($custom-switch-width + $custom-control-gutter), - ($custom-control-indicator-border-width * 2));
+      width: $custom-switch-indicator-size;
+      height: $custom-switch-indicator-size;
+      background-color: var(--white);
+      border-radius: $custom-switch-indicator-border-radius;
+      border-style: solid;
+      border-width: 0.5px;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(to bottom, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06) 20%, rgba(255, 255, 255, 0));
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24), 0 0 1px 0 rgba(0, 0, 0, 0.12);
+
+      @include transition(transform .15s ease-in-out, $custom-forms-transition);
+    }
+  }
+
+  .custom-control-input:checked~.custom-control-label {
+    &::before {
+      background-color: rgba(62, 64, 219, 0.5);
+    }
+
+    &::after {
+      background-color: var(--primary);
+      transform: translateX(($custom-switch-width / 2) + 0.125rem);
+    }
+  }
+
+  .custom-control-input:checked[disabled]~.custom-control-label,
+  .custom-control-input:checked:disabled~.custom-control-label {
+    &::before {
+      background-color: rgba(163, 169, 192, 0.5);
+    }
+  }
+
+  .custom-control-input[disabled]~.custom-control-label,
+  .custom-control-input:disabled~.custom-control-label {
+
+    &::before {
+      background-color: rgba(163, 169, 192, 0.5);
+    }
+
+    &::after {
+      background-color: var(--text-6);
+    }
+  }
+}
+
+$custom-switch-sm-top-fix: -2px;
+$custom-switch-lg-top-fix: 3px;
+
+.custom-switch-sm {
+  font-size: pixelToRem(13px);
+
+  .custom-control-label {
+    &::before {
+      top: pixelToRem(5px);
+    }
+
+    &::after {
+      top: add(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2, ($custom-control-indicator-border-width * 2 + $custom-switch-sm-top-fix));
+    }
+  }
+}
+
+.custom-switch-lg {
+  font-size: pixelToRem(20px);
+
+  .custom-control-label {
+    &::before {
+      top: pixelToRem(10px);
+    }
+
+    &::after {
+      top: add(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2, ($custom-control-indicator-border-width * 2 + $custom-switch-lg-top-fix));
+    }
+  }
+}
+
+// *************************************************
+// Radio button
+.nao-custom-radio {
+  display: block;
+  position: relative;
+  padding-left: 39px;
+  margin-bottom: 12px;
+  user-select: none;
+  cursor: pointer;
+
+  // Hide the broswers radio button
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    background-color: var(--white);
+    border: solid 1px var(--text-primary-lightest);
+    border-radius: 50%;
+    transition: all 0.15s ease-in-out;
+
+    // circle inside checkmark
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 2px;
+      left: 2px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+  }
+
+  input:checked~.checkmark {
+    background-color: var(--white);
+    border: solid 1px var(--primary);
+
+    &:after {
+      display: block;
+    }
+  }
+
+  input:checked:active~.checkmark {
+    box-shadow: 0 0 0 10px rgba(62, 64, 219, 0.19);
+  }
+
+  input:active~.checkmark {
+    box-shadow: 0 0 0 10px var(--bg-2);
+  }
+
+  input[disabled]~.checkmark {
+    box-shadow: none !important;
+    border: solid 1px var(--text-7);
+  }
+
+  input[disabled]~.radio-label {
+    color: var(--text-7);
+  }
+}
+
+// *************************************************
+// Checkbox
+.custom-checkbox {
+  .custom-control-label {
+    &::before {
+      box-shadow: none !important;
+    }
+  }
+
+  input[disabled]~.custom-control-label,
+  input:disabled~.custom-control-label {
+    color: var(--text-7);
+
+    &::before {
+      background-color: var(--white);
+      border: solid 1px var(--text-7);
+    }
+  }
+
+  //   todo: add box-shaddow circle
+}

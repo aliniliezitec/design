@@ -48,7 +48,7 @@
     padding: pixelToRem(20px) pixelToRem(52px) pixelToRem(15px) pixelToRem(52px);
     border-top: solid 1px var(--border-light);
     border-bottom: solid 1px var(--border-light);
-    background-color: var(--lightest);
+    background-color: var(--bg-3);
 
     @include media-breakpoint-down(xs) {
       padding: pixelToRem(20px) pixelToRem(20px) pixelToRem(15px) pixelToRem(20px);

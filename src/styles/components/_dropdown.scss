@@ -108,7 +108,7 @@
 // nao dropdown 3
 .nao-dropdown-3 {
   .dropdown-item-header {
-    background-color: var(--lighter);
+    background-color: var(--bg-1);
     font-weight: $font-weight-semibold;
   }
 
@@ -181,7 +181,7 @@
   .ng-select-container {
     border: 0 !important;
     color: var(--white) !important;
-    background-color: var(--text-muted) !important;
+    background-color: var(--text-6) !important;
     border-radius: $border-radius;
     box-shadow: $nao-input-box-shadow;
     padding-top: 8px;
@@ -226,13 +226,13 @@
     font-size: pixelToRem(16px) !important;
 
     &:hover {
-      background-color: var(--light-blue) !important;
+      background-color: var(--primary-opacity) !important;
     }
   }
 
   .dropdown-item.active,
   .dropdown-item:active {
-    background-color: var(--light-blue) !important;
+    background-color: var(--primary-opacity) !important;
   }
 
   @include rtl {
