@@ -24,37 +24,39 @@
   [data-icon]::before { content: attr(data-icon); }
 
   [data-icon]::before,
-  .nao-icon-add-filled::before,
-.nao-icon-add::before,
-.nao-icon-additional-options::before,
-.nao-icon-arrow-back::before,
-.nao-icon-arrow-dropdown::before,
-.nao-icon-arrow-dropdown-filled::before,
+  .nao-icon-add::before,
 .nao-icon-billing-money::before,
 .nao-icon-box-2::before,
 .nao-icon-box-list::before,
 .nao-icon-business-apps::before,
-.nao-icon-calendar:before,
+.nao-icon-calendar::before,
 .nao-icon-camera::before,
 .nao-icon-cancel::before,
+.o-cancel2-1::before,
 .nao-icon-card::before,
 .nao-icon-checkmark::before,
+.nao-icon-envelope-1::before,
+.nao-icon-crm::before,
 .nao-icon-clock::before,
-.nao-icon-cancel-filled::before,
 .nao-icon-desk-basic::before,
 .nao-icon-document::before,
 .nao-icon-dollar::before,
 .nao-icon-download::before,
 .nao-icon-ecommerce::before,
 .nao-icon-elearning::before,
-.nao-icon-email-reminder::before,
 .nao-icon-employee-satisfaction::before,
 .nao-icon-enterprise-system::before,
-.nao-icon-envelope-1::before,
 .nao-icon-envelope-2::before,
+.nao-icon-file-excel::before,
 .nao-icon-facebook::before,
+.nao-icon-profile-female::before,
 .nao-icon-file::before,
 .nao-icon-filing::before,
+.nao-icon-add-filled::before,
+.nao-icon-arrow-dropdown-filled::before,
+.nao-icon-folder::before,
+.nao-icon-grid::before,
+.o-help-1::before,
 .nao-icon-help::before,
 .nao-icon-image-placeholder::before,
 .nao-icon-information::before,
@@ -62,33 +64,45 @@
 .nao-icon-kanban-board::before,
 .nao-icon-privacy::before,
 .nao-icon-lead-management::before,
-.nao-icon-location-time::before,
 .nao-icon-linkedin::before,
+.nao-icon-location-time::before,
+.nao-icon-profile-male::before,
+.nao-icon-person::before,
 .nao-icon-messaging::before,
+.nao-icon-additional-options::before,
 .nao-icon-multiple-choice::before,
-.nao-icon-crm::before,
 .nao-icon-notifications::before,
 .nao-icon-number::before,
 .nao-icon-online-surveys::before,
+.nao-icon-arrow-dropdown::before,
 .nao-icon-palette::before,
-.nao-icon-person::before,
+.nao-icon-file-pdf::before,
+.nao-icon-profile-combined::before,
+.nao-icon-file-ppt::before,
 .nao-icon-email::before,
 .nao-icon-sales::before,
 .nao-icon-box-1::before,
-.nao-icon-profile-combined::before,
-.nao-icon-profile-female::before,
-.nao-icon-profile-male::before,
 .nao-icon-purchasing::before,
 .nao-icon-rating::before,
 .nao-icon-rocket::before,
 .nao-icon-sales-order::before,
 .nao-icon-search::before,
+.nao-icon-send-arrow::before,
 .nao-icon-settings::before,
 .nao-icon-sms-marketing::before,
+.nao-icon-email-reminder::before,
 .nao-icon-sticker::before,
 .nao-icon-stock-boxes::before,
 .nao-icon-surveys::before,
 .nao-icon-system::before,
+.nao-icon-arrow-back-1::before,
+.nao-icon-arrow-back-2::before,
+.nao-icon-arrow-down-1::before,
+.nao-icon-arrow-down-2::before,
+.nao-icon-arrow-next-2::before,
+.nao-icon-arrow-next-1::before,
+.nao-icon-arrow-up-1::before,
+.nao-icon-arrow-up-2::before,
 .nao-icon-thank-you::before,
 .nao-icon-thunder::before,
 .nao-icon-true-false::before,
@@ -99,6 +113,7 @@
 .nao-icon-warning-2::before,
 .nao-icon-welcome::before,
 .nao-icon-whatsapp-marketing::before,
+.nao-icon-file-word::before,
 .nao-icon-yes-no::before {
     display: inline-block;
   font-family: "nao-system-icon";
@@ -114,81 +129,96 @@
   font-smoothing: antialiased;
   }
 
-  .nao-icon-add-filled::before { content: "\f927"; }
-.nao-icon-add::before { content: "\f8da"; }
-.nao-icon-additional-options::before { content: "\f8dc"; }
-.nao-icon-arrow-back::before { content: "\f8dd"; }
-.nao-icon-arrow-dropdown::before { content: "\f8de"; }
-.nao-icon-arrow-dropdown-filled::before { content: "\f8df"; }
-.nao-icon-billing-money::before { content: "\f8e0"; }
-.nao-icon-box-2::before { content: "\f8e1"; }
-.nao-icon-box-list::before { content: "\f8e2"; }
-.nao-icon-business-apps::before { content: "\f8e3"; }
-.nao-icon-calendar:before { content: "\f8e4"; }
-.nao-icon-camera::before { content: "\f8e5"; }
-.nao-icon-cancel::before { content: "\f8e6"; }
-.nao-icon-card::before { content: "\f8e8"; }
-.nao-icon-checkmark::before { content: "\f8e9"; }
-.nao-icon-clock::before { content: "\f8ea"; }
-.nao-icon-cancel-filled::before { content: "\f928"; }
-.nao-icon-desk-basic::before { content: "\f8eb"; }
-.nao-icon-document::before { content: "\f8ec"; }
-.nao-icon-dollar::before { content: "\f8ed"; }
-.nao-icon-download::before { content: "\f8ee"; }
-.nao-icon-ecommerce::before { content: "\f8ef"; }
-.nao-icon-elearning::before { content: "\f8f0"; }
-.nao-icon-email-reminder::before { content: "\f8f1"; }
-.nao-icon-employee-satisfaction::before { content: "\f8f2"; }
-.nao-icon-enterprise-system::before { content: "\f8f3"; }
-.nao-icon-envelope-1::before { content: "\f8f4"; }
-.nao-icon-envelope-2::before { content: "\f8f5"; }
-.nao-icon-facebook::before { content: "\f8f6"; }
-.nao-icon-file::before { content: "\f8f7"; }
-.nao-icon-filing::before { content: "\f8f8"; }
-.nao-icon-help::before { content: "\f8f9"; }
-.nao-icon-image-placeholder::before { content: "\f8fa"; }
-.nao-icon-information::before { content: "\f8fb"; }
-.nao-icon-item-list::before { content: "\f8fc"; }
-.nao-icon-kanban-board::before { content: "\f8fd"; }
-.nao-icon-privacy::before { content: "\f8fe"; }
-.nao-icon-lead-management::before { content: "\f8ff"; }
-.nao-icon-location-time::before { content: "\f900"; }
-.nao-icon-linkedin::before { content: "\f901"; }
-.nao-icon-messaging::before { content: "\f902"; }
-.nao-icon-multiple-choice::before { content: "\f903"; }
-.nao-icon-crm::before { content: "\f904"; }
-.nao-icon-notifications::before { content: "\f905"; }
-.nao-icon-number::before { content: "\f906"; }
-.nao-icon-online-surveys::before { content: "\f907"; }
-.nao-icon-palette::before { content: "\f908"; }
-.nao-icon-person::before { content: "\f909"; }
-.nao-icon-email::before { content: "\f90a"; }
-.nao-icon-sales::before { content: "\f90b"; }
-.nao-icon-box-1::before { content: "\f90c"; }
-.nao-icon-profile-combined::before { content: "\f90d"; }
-.nao-icon-profile-female::before { content: "\f90e"; }
-.nao-icon-profile-male::before { content: "\f90f"; }
-.nao-icon-purchasing::before { content: "\f910"; }
-.nao-icon-rating::before { content: "\f911"; }
-.nao-icon-rocket::before { content: "\f912"; }
-.nao-icon-sales-order::before { content: "\f913"; }
-.nao-icon-search::before { content: "\f914"; }
-.nao-icon-settings::before { content: "\f915"; }
-.nao-icon-sms-marketing::before { content: "\f916"; }
-.nao-icon-sticker::before { content: "\f917"; }
-.nao-icon-stock-boxes::before { content: "\f918"; }
-.nao-icon-surveys::before { content: "\f919"; }
-.nao-icon-system::before { content: "\f91a"; }
-.nao-icon-thank-you::before { content: "\f91b"; }
-.nao-icon-thunder::before { content: "\f91c"; }
-.nao-icon-true-false::before { content: "\f91d"; }
-.nao-icon-twitter::before { content: "\f91e"; }
-.nao-icon-upload::before { content: "\f926"; }
-.nao-icon-vendor-management::before { content: "\f920"; }
-.nao-icon-warning-1::before { content: "\f921"; }
-.nao-icon-warning-2::before { content: "\f922"; }
-.nao-icon-welcome::before { content: "\f923"; }
-.nao-icon-whatsapp-marketing::before { content: "\f924"; }
-.nao-icon-yes-no::before { content: "\f925"; }
+  .nao-icon-add::before { content: "\f959"; }
+.nao-icon-billing-money::before { content: "\f95b"; }
+.nao-icon-box-2::before { content: "\f95c"; }
+.nao-icon-box-list::before { content: "\f95d"; }
+.nao-icon-business-apps::before { content: "\f95e"; }
+.nao-icon-calendar::before { content: "\f95f"; }
+.nao-icon-camera::before { content: "\f960"; }
+.nao-icon-cancel::before { content: "\f961"; }
+.o-cancel2-1::before { content: "\f962"; }
+.nao-icon-card::before { content: "\f963"; }
+.nao-icon-checkmark::before { content: "\f964"; }
+.nao-icon-envelope-1::before { content: "\f965"; }
+.nao-icon-crm::before { content: "\f966"; }
+.nao-icon-clock::before { content: "\f967"; }
+.nao-icon-desk-basic::before { content: "\f968"; }
+.nao-icon-document::before { content: "\f969"; }
+.nao-icon-dollar::before { content: "\f96a"; }
+.nao-icon-download::before { content: "\f96c"; }
+.nao-icon-ecommerce::before { content: "\f96d"; }
+.nao-icon-elearning::before { content: "\f96e"; }
+.nao-icon-employee-satisfaction::before { content: "\f96f"; }
+.nao-icon-enterprise-system::before { content: "\f970"; }
+.nao-icon-envelope-2::before { content: "\f971"; }
+.nao-icon-file-excel::before { content: "\f972"; } 
+.nao-icon-facebook::before { content: "\f973"; }
+.nao-icon-profile-female::before { content: "\f974"; }
+.nao-icon-file::before { content: "\f975"; }
+.nao-icon-filing::before { content: "\f976"; }
+.nao-icon-add-filled::before { content: "\f977"; }
+.nao-icon-arrow-dropdown-filled::before { content: "\f978"; }
+.nao-icon-folder::before { content: "\f979"; }
+.nao-icon-grid::before { content: "\f97b"; }
+.o-help-1::before { content: "\f97c"; }
+.nao-icon-help::before { content: "\f9ae"; }
+.nao-icon-image-placeholder::before { content: "\f97d"; }
+.nao-icon-information::before { content: "\f97e"; }
+.nao-icon-item-list::before { content: "\f97f"; }
+.nao-icon-kanban-board::before { content: "\f980"; }
+.nao-icon-privacy::before { content: "\f981"; }
+.nao-icon-lead-management::before { content: "\f982"; }
+.nao-icon-linkedin::before { content: "\f983"; }
+.nao-icon-location-time::before { content: "\f984"; }
+.nao-icon-profile-male::before { content: "\f985"; }
+.nao-icon-person::before { content: "\f986"; }
+.nao-icon-messaging::before { content: "\f987"; }
+.nao-icon-additional-options::before { content: "\f988"; }
+.nao-icon-multiple-choice::before { content: "\f989"; }
+.nao-icon-notifications::before { content: "\f98a"; }
+.nao-icon-number::before { content: "\f98b"; }
+.nao-icon-online-surveys::before { content: "\f98c"; }
+.nao-icon-arrow-dropdown::before { content: "\f98d"; }
+.nao-icon-palette::before { content: "\f98e"; }
+.nao-icon-file-pdf::before { content: "\f98f"; }
+.nao-icon-profile-combined::before { content: "\f990"; }
+.nao-icon-file-ppt::before { content: "\f991"; }
+.nao-icon-email::before { content: "\f992"; }
+.nao-icon-sales::before { content: "\f993"; }
+.nao-icon-box-1::before { content: "\f994"; }
+.nao-icon-purchasing::before { content: "\f995"; }
+.nao-icon-rating::before { content: "\f996"; }
+.nao-icon-rocket::before { content: "\f997"; }
+.nao-icon-sales-order::before { content: "\f998"; }
+.nao-icon-search::before { content: "\f999"; }
+.nao-icon-send-arrow::before { content: "\f99a"; }
+.nao-icon-settings::before { content: "\f99b"; }
+.nao-icon-sms-marketing::before { content: "\f99c"; }
+.nao-icon-email-reminder::before { content: "\f99d"; }
+.nao-icon-sticker::before { content: "\f99e"; }
+.nao-icon-stock-boxes::before { content: "\f99f"; }
+.nao-icon-surveys::before { content: "\f9a0"; }
+.nao-icon-system::before { content: "\f9a1"; }
+.nao-icon-arrow-back-1::before { content: "\f9af"; }
+.nao-icon-arrow-back-2::before { content: "\f9b0"; }
+.nao-icon-arrow-down-1::before { content: "\f9b1"; }
+.nao-icon-arrow-down-2::before { content: "\f9b2"; }
+.nao-icon-arrow-next-2::before { content: "\f9b3"; }
+.nao-icon-arrow-next-1::before { content: "\f9b4"; }
+.nao-icon-arrow-up-1::before { content: "\f9b5"; }
+.nao-icon-arrow-up-2::before { content: "\f9b6"; }
+.nao-icon-thank-you::before { content: "\f9a2"; }
+.nao-icon-thunder::before { content: "\f954"; }
+.nao-icon-true-false::before { content: "\f9a3"; }
+.nao-icon-twitter::before { content: "\f9a4"; }
+.nao-icon-upload::before { content: "\f9a6"; }
+.nao-icon-vendor-management::before { content: "\f9a7"; }
+.nao-icon-warning-1::before { content: "\f9a8"; }
+.nao-icon-warning-2::before { content: "\f9a9"; }
+.nao-icon-welcome::before { content: "\f9aa"; }
+.nao-icon-whatsapp-marketing::before { content: "\f9ab"; }
+.nao-icon-file-word::before { content: "\f9ac"; }
+.nao-icon-yes-no::before { content: "\f9ad"; }
 
   
