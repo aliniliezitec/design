@@ -92,6 +92,12 @@ $dropdown-item-padding-x: 0;
 // *************************************************
 // Switch
 $custom-switch-width: 1.375rem;
-$custom-switch-indicator-border-radius:         $custom-control-indicator-size / 2 !default;
-// $custom-switch-indicator-size: 13px;
 $custom-switch-indicator-size: 0.8125rem;
+
+// *************************************************
+// Badges
+$badge-font-size: pixelToRem(15px);
+$badge-font-weight: 500;
+$badge-padding-y: pixelToRem(4px);
+$badge-padding-x: pixelToRem(11px);
+$badge-pill-padding-x: pixelToRem(11px);

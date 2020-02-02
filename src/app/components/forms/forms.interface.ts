@@ -180,6 +180,9 @@ export const FormsCodeBlocks = [
     },
     {
         html: `
-        `
+        <span class="badge badge-pill nao-tag-1 mb-4">Type something <i class="nao-icon-cancel ml-1"></i></span>
+        <span class="badge badge-pill nao-tag-1 nao-tag-sm mb-4">Type something <i class="nao-icon-cancel ml-1"></i></span>
+        <span class="badge badge-pill nao-tag-1">Type something</span>
+        <span class="badge badge-pill nao-tag-1 nao-tag-sm">Type something</span>`
     }
 ];

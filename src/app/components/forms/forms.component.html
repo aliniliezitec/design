@@ -250,7 +250,26 @@
   <div class="elem-container">
     <h2 class="title">Tags</h2>
 
-    <div class='nao-bd-example' [innerHTML]="data[11].html | sanitizeHtml"></div>
+    <div class="nao-bd-example">
+      <div class="row" style="max-width: 450px;">
+        <!-- todo: change icons -->
+        <div class="col">
+          <span class="badge badge-pill nao-tag-1 mb-4">Type something <i class="nao-icon-cancel ml-1"></i></span>
+        </div>
+        <div class="col">
+          <!-- todo: change icons -->
+          <span class="badge badge-pill nao-tag-1 nao-tag-sm mb-4">Type something <i class="nao-icon-cancel ml-1"></i></span>
+        </div>
+        <div class="col">
+          <span class="badge badge-pill nao-tag-1">Type something</span>
+        </div>
+        <div class="col">
+          <span class="badge badge-pill nao-tag-1 nao-tag-sm">Type something</span>
+        </div>
+      </div>
+
+    </div>
+
 
     <div class="nao-bd-clipboard">
       <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[11].html)" placement="top"

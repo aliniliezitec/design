@@ -188,3 +188,20 @@ $custom-switch-lg-top-fix: 3px;
 
   //   todo: add box-shaddow circle
 }
+
+// *************************************************
+// Tags
+.nao-tag-1 {
+    background-color: var(--text-7);
+    color: var(--text-primary);
+
+    i {
+        font-size: pixelToRem(9px);
+        line-height: 0;
+    }
+}
+
+.nao-tag-sm {
+    font-weight: $font-weight-lighter;
+    font-size: pixelToRem(13px);
+}   
