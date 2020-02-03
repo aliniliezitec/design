@@ -538,7 +538,7 @@ export const FormsCodeBlocks = [
                             </div>
                           </div>
                         </div>
-                        <button type="button" class="btn-sm btn-text-only d-flex align-items-center add-another-btn">
+                        <button type="button" class="btn-sm btn-simple-primary d-flex align-items-center add-another-btn">
                           <i class="nao-icon-add-filled mr-1"></i>
                           <span>Add another</span>
                         </button>

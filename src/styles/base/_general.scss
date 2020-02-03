@@ -1,10 +1,10 @@
 body {
   direction: ltr;
+  line-height: normal;
 }
 
 // Class for RTL fixing
-.body-rtl {
-}
+.body-rtl {}
 
 // Class for skipping .mr-* .ml-* .pr=* .pl-*
 .skip-rtl {}
@@ -13,4 +13,9 @@ a {
   &:hover {
     text-decoration: none;
   }
+}
+
+// Fix margin for pagination
+.pagination {
+  margin-bottom: 0 !important;
 }

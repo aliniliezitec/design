@@ -182,8 +182,12 @@ $custom-switch-lg-top-fix: 3px;
 
     &::before {
       background-color: var(--white);
-      border: solid 1px var(--text-7);
+      border: solid 1px var(--text-primary-lightest);
     }
+  }
+
+  .custom-control-input:focus:not(:checked)~.custom-control-label::before {
+    border-color: solid 1px var(--text-7);
   }
 
   //   todo: add box-shaddow circle
@@ -192,16 +196,16 @@ $custom-switch-lg-top-fix: 3px;
 // *************************************************
 // Tags
 .nao-tag-1 {
-    background-color: var(--text-7);
-    color: var(--text-primary);
+  background-color: var(--text-7);
+  color: var(--text-primary);
 
-    i {
-        font-size: pixelToRem(9px);
-        line-height: 0;
-    }
+  i {
+    font-size: pixelToRem(9px);
+    line-height: 0;
+  }
 }
 
 .nao-tag-sm {
-    font-weight: $font-weight-lighter;
-    font-size: pixelToRem(13px);
-}   
+  font-weight: $font-weight-lighter;
+  font-size: pixelToRem(13px);
+}

@@ -24,9 +24,36 @@ export class TableComponent implements OnInit {
   public searchFormGroup;
   public searchFor = [];
   public dataTable = [
-    { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
-    { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
-    { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
+    {
+      name: { value: 'Jon Doe', status: '' },
+      email: { value: 'jon@doe.com', status: 'success' },
+      company: { value: 'DoeCompany', status: '' }, selected: false
+    },
+    {
+      name: { value: 'Jon Doe', status: ''}, 
+      email: { value: 'jon@doe.com', status: '' }, 
+      company: { value: 'DoeCompany', status: '' }, selected: false
+    },
+    {
+      name: { value: 'Jon', status: 'fail' }, 
+      email: { value: 'jon@doe.com', status: '' }, 
+      company: { value: 'DoeCompany', status: 'fail' }, selected: false
+    },
+    {
+      name: { value: 'Jon Doe', status: '' },
+      email: { value: 'jon@doe.com', status: 'success' },
+      company: { value: 'DoeCompany', status: '' }, selected: false
+    },
+    {
+      name: { value: 'Jon Doe', status: '' },
+      email: { value: 'jon@doe.com', status: '' },
+      company: { value: 'DoeCompany', status: '' }, selected: false
+    },
+    {
+      name: { value: 'Jon', status: 'fail' },
+      email: { value: 'jon@doe.com', status: '' },
+      company: { value: 'DoeCompany', status: 'fail' }, selected: false
+    },
   ];
 
   constructor(public readonly appService: AppService) { }

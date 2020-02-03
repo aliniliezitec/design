@@ -1,12 +1,11 @@
 <div class="nao-docs-wrapper">
   <div class="elements-container">
     <h1 class="title">Modal</h1>
-    <p class="description"></p>
 
     <div class="elem-container">
-      <h2 class="title">Simple modal</h2>
+      <h2 class="title">Nao modal 1</h2>
       <div class="nao-bd-example nao-modal-example" [innerHTML]="data[0].html | sanitizeHtml"></div>
-      
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -15,6 +14,26 @@
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
+      <p>You can change the header background by using a <span class="highlighter-warning">.bg-*</span> color class,
+        here are a few examples:</p>
+      <ul>
+        <li>
+          <span class="highlighter-warning">.bg-primary</span>
+        </li>
+        <li>
+          <span class="highlighter-warning">.bg-secondary</span>
+        </li>
+        <li>
+          <span class="highlighter-warning">.bg-success</span>
+        </li>
+        <li>
+          <span class="highlighter-warning">.bg-warning</span>
+        </li>
+        <li>
+          <span class="highlighter-warning">.bg-danger</span>
+        </li>
+      </ul>
+
       <p><strong>Example of modal usage and passing data:</strong></p>
 
       <div class="nao-bd-clipboard">
@@ -52,9 +71,9 @@
     </div>
 
     <div class="elem-container">
-      <h2 class="title">Nao modal 1</h2>
+      <h2 class="title">Nao modal 2</h2>
       <div class="nao-bd-example nao-modal-example" [innerHTML]="data[1].html | sanitizeHtml"></div>
-      
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -62,39 +81,6 @@
 
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[1].html | htmlPrismPipe | sanitizeHtml"></div></pre>
-      </div>
-      <p>You can change the header background by using a <span class="highlighter-warning">.bg-*</span> color class,
-        here are a few examples:</p>
-      <ul>
-        <li>
-          <span class="highlighter-warning">.bg-primary</span>
-        </li>
-        <li>
-          <span class="highlighter-warning">.bg-secondary</span>
-        </li>
-        <li>
-          <span class="highlighter-warning">.bg-success</span>
-        </li>
-        <li>
-          <span class="highlighter-warning">.bg-warning</span>
-        </li>
-        <li>
-          <span class="highlighter-warning">.bg-danger</span>
-        </li>
-      </ul>
-    </div>
-
-    <div class="elem-container">
-      <h2 class="title">Nao modal 2</h2>
-      <div class="nao-bd-example nao-modal-example" [innerHTML]="data[2].html | sanitizeHtml"></div>
-     
-      <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].html)" placement="top"
-          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
-      </div>
-
-      <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[2].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
       <p>You can change the header background by using a <span class="highlighter-warning">.bg-*</span> color class,
         here are a few examples:</p>

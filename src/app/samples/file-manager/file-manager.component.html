@@ -2,11 +2,10 @@
   <h1 class="title">File Manager</h1>
 
   <div class="elem-container">
-    <h2 class="title">Example</h2>
+    <h2 class="title">File mangare</h2>
     <p>
     </p>
 
-    <!-- <div class="nao-bd-example nao-btn-example" [innerHTML]="data[0].html | sanitizeHtml"></div> -->
 
     <div class="nao-bd-example">
 
@@ -135,7 +134,7 @@
                   <div class="selected-files align-self-end" *ngIf="selectedFiles.length > 0">
                     Selected files: {{ selectedFiles.length }}
                   </div>
-                  <button type="button" data-style="expand-right" class="btn btn-primary nao-btn-transition ml-auto"
+                  <button type="button" data-style="expand-right" class="btn btn-simple-primary ml-auto"
                     [disabled]="selectedFiles.length === 0">
                     Import files
                   </button>
@@ -199,7 +198,7 @@
                   <div class="selected-files align-self-end" *ngIf="selectedImagesUnsplash.length > 0">
                     Selected files: {{ selectedImagesUnsplash.length }}
                   </div>
-                  <button type="button" data-style="expand-right" class="btn btn-primary nao-btn-transition ml-auto"
+                  <button type="button" data-style="expand-right" class="btn btn-simple-primary ml-auto"
                     [disabled]="selectedImagesUnsplash.length === 0">
                     Upload files
                   </button>
@@ -236,7 +235,7 @@
                   <div class="selected-files align-self-end" *ngIf="selectedImagesUnsplash.length > 0">
                     Selected files: {{ selectedImagesUnsplash.length }}
                   </div>
-                  <button type="button" data-style="expand-right" class="btn btn-primary nao-btn-transition ml-auto"
+                  <button type="button" data-style="expand-right" class="btn btn-simple-primary ml-auto"
                     [disabled]="selectedImagesUnsplash.length === 0">
                     Select files
                   </button>
@@ -261,6 +260,34 @@
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
+
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].ts1)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[0].ts1 | typescriptPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].ts2)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[0].ts2 | typescriptPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].ts3)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[0].ts3 | typescriptPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+
   </div>
 
 </div>

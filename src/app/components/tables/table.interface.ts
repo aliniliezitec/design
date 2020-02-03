@@ -181,154 +181,163 @@ export const TableCodeBlocks = [
   },
   {
     html: `
-    <ng-template #rowOverlay let-item let-i="i">
-      <div class="d-flex justify-content-end align-items-center nao-row-overlay h-100">
-        <div>
-          <button class="btn btn-text-only">
-            Edit
-          </button>
-          <button class="btn btn-text-only">
-            Delete
-          </button>
+      <ng-template #rowOverlay let-item let-i="i">
+        <div class="d-flex justify-content-end align-items-center nao-row-overlay h-100">
+          <div>
+            <button class="btn btn-simple-primary">
+              Edit
+            </button>
+            <button class="btn btn-simple-primary">
+              Delete
+            </button>
+          </div>
         </div>
-      </div>
-    </ng-template>
+      </ng-template>
 
-    <div class="card nao-card-table-1 mb-5" [ngClass]="{'nao-condensed-table': paging.tableCondensed$.value}">
-      <div class="d-flex flex-row card-header selected align-items-center" *ngIf="noSelectedRows() > 0">
-        <div class="pt-2 pr-3">
-          <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
-        </div>
-        <div class="pl-3 mr-3">
-          <div class="card-header-title text-lowercase">
-            {{ noSelectedRows() }} {{ (noSelectedRows() === 1 ? 'selected contact' : 'selected contacts') }}
+      <div class="card nao-card-table-1 mb-5" [ngClass]="{'nao-condensed-table': paging.tableCondensed$.value}">
+          <div class="d-flex flex-row card-header selected align-items-center" *ngIf="noSelectedRows() > 0">
+            <div class="pr-3">
+              <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
+            </div>
+            <div class="pl-3 mr-3">
+              <div class="card-header-title text-lowercase">
+                {{ noSelectedRows() }} {{ (noSelectedRows() === 1 ? 'selected contact' : 'selected contacts') }}
+              </div>
+            </div>
+            <div class="">
+              <button class="btn btn-simple-primary">
+                Delete multiple
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="pt-2">
-          <button class="btn btn-text-only">
-            Delete multiple
-          </button>
-        </div>
-      </div>
-      <div class="d-flex flex-row card-header align-items-center" *ngIf="noSelectedRows() === 0">
-        <div class="mr-3">
-          <div class="card-header-title">
-            Contacts&nbsp;&nbsp;|
-          </div>
-        </div>
-        <div class="pt-2 pr-3">
-          <span class="smallx">
-            3 contacts
-          </span>
-        </div>
-        <div class="pt-2">
-          <button class="btn btn-text-only">
-            Add new contact
-          </button>
-          <button class="btn btn-text-only">
-            Import contacts
-          </button>
-        </div>
-        <div class="nao-condensed-btn-group pt-2">
-          <div class="nao-condensed-btn-group">
-            <button type="button" class="btn btn-flip btn-condensed" [ngClass]="paging.tableCondensed$.value ? 'flipped' : ''"
-            (click)="paging.tableCondensed$.next(true)">Condensed</button>
-            <button type="button" class="btn btn-flip btn-relaxed" [ngClass]="!paging.tableCondensed$.value ? 'flipped' : ''"
-            (click)="paging.tableCondensed$.next(false)">Relaxed</button>
-          </div>
-        </div>
-      </div>
-      <div class="card-search d-flex align-items-center justify-content-between">
-        <div class="col-7 align-middle">
-          <ng-select bindValue="query" [multiple]="true" placeholder="Add filter" [clearable]="false"
-            clearAllText="Clear">
-            <ng-template ng-label-tmp let-item="item" let-clear="clear">
-              <span class="ng-value-label">
-                {{ item.fieldName }}: <strong>'{{ item.term }}'</strong>
+          <div class="d-flex flex-row card-header align-items-center" *ngIf="noSelectedRows() === 0">
+            <div class="mr-3">
+              <div class="card-header-title">
+                Contacts&nbsp;&nbsp;|
+              </div>
+            </div>
+            <div class="pr-3">
+              <span class="nao-table-info">
+                3 contacts
               </span>
-              <span class="ng-value-icon right" aria-hidden="true">×</span>
-            </ng-template>
-            <ng-option *ngFor="let item of searchFor" [value]="item">{{ item.value }}
-            </ng-option>
-          </ng-select>
-        </div>
-        <div>
-          <button type="button" class="btn btn-transparent text-dark-blue" (click)="searchFormGroup.empty()">
-            Clear filter
-          </button>
-        </div>
-      </div>
+            </div>
+            <div class="">
+              <button class="btn btn-simple-primary">
+                Option 1
+              </button>
+              <button class="btn btn-simple-primary">
+                Option 2
+              </button>
+              <button class="btn btn-simple-primary">
+                Option 3
+              </button>
+            </div>
+            <div class="nao-condensed-btn-group">
+              <div class="nao-condensed-btn-group">
+                <button type="button" class="btn btn-flip btn-condensed"
+                  [ngClass]="paging.tableCondensed$.value ? 'flipped' : ''"
+                  (click)="paging.tableCondensed$.next(true)">Condensed</button>
+                <button type="button" class="btn btn-flip btn-relaxed"
+                  [ngClass]="!paging.tableCondensed$.value ? 'flipped' : ''"
+                  (click)="paging.tableCondensed$.next(false)">Relaxed</button>
+              </div>
+            </div>
+          </div>
+          <div class="card-search d-flex align-items-center justify-content-between">
+            <div class="col-7 align-middle">
+              <ng-select bindValue="query" [multiple]="true" placeholder="Add filter" [clearable]="false"
+                clearAllText="Clear">
+                <ng-template ng-label-tmp let-item="item" let-clear="clear">
+                  <span class="ng-value-label">
+                    {{ item.fieldName }}: <strong>'{{ item.term }}'</strong>
+                  </span>
+                  <span class="ng-value-icon right" aria-hidden="true">×</span>
+                </ng-template>
+                <ng-option *ngFor="let item of searchFor" [value]="item">{{ item.value }}
+                </ng-option>
+              </ng-select>
+            </div>
+            <div class="">
+              <button type="button" class="btn btn-transparent text-dark-blue" (click)="searchFormGroup.empty()">
+                Clear filter
+              </button>
+            </div>
+          </div>
 
-      <div class="card-body p-0 table-responsive">
-        <table class="table mb-0 table-borderless">
-          <thead class="table-header">
-            <tr>
-              <th scope="col" style="width: 60px;">
-                <label class="custom-control custom-checkbox m-0">
-                  <input type="checkbox" class="custom-control-input" (ngModelChange)="selectAllChange()"
-                    [(ngModel)]="paging.selectAll">
-                  <span class="custom-control-label"></span>
-                </label>
-              </th>
-              <th scope="col" class="pl-3" style="width: 20%">Name</th>
-              <th scope="col" class="pl-3" style="width: 20%">Email</th>
-              <th scope="col" class="pl-3" style="width: 20%">Company</th>
-              <th scope="col" class="pl-3"></th>
-            </tr>
-          </thead>
-          <tbody class="table-body">
-            <tr *ngFor="let item of dataTable; let i = index; let last = last"
-              [ngClass]="{'selected': item.selected}">
-              <td class="align-middle p-3">
-                <label class="custom-control custom-checkbox m-0">
-                  <input type="checkbox" class="custom-control-input" (ngModelChange)="selectChange($event, i)"
-                    [(ngModel)]="item.selected">
-                  <span class="custom-control-label"></span>
-                </label>
-              </td>
-              <td class="align-middle p-3">
-                <div class="d-flex align-items-center">
-                  <div class="cell-multiline-header">{{ item.name }}</div>
-                </div>
-              </td>
-              <td class="align-middle p-3">
-                <div class="d-flex align-items-center">
-                  <div class="cell-multiline-header">{{ item.email }}</div>
-                </div>
-              </td>
-              <td class="align-middle p-3">
-                <div class="d-flex align-items-center">
-                  <div class="cell-multiline-header">{{ item.company }}</div>
-                </div>
-              </td>
-              <td class="py-0" style="position: relative;">
-                <div class="nao-row-overlay-container show-on-hover mr-4" *ngIf="noSelectedRows() === 0">
-                  <ng-template *ngTemplateOutlet="rowOverlay; context: { $implicit: item, i: i }"></ng-template>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="card-footer d-flex flex-row align-items-center justify-content-between pt-4 pb-4">
-        <div>
-          Per page
-          <select (change)="paging.perPage$.next($event.target.value)" [value]="paging.perPage$.getValue()"
-            class="custom-select custom-select-sm d-inline-block w-auto">
-            <option *ngFor="let limit of [5, 10, 20, 50, 100]" [value]="limit">{{ limit }}</option>
-          </select>
-        </div>
-        <div>
-          <ngb-pagination class="pull-right" [collectionSize]="paging.totalRows"
-            [pageSize]="paging.perPage$.getValue()" [(page)]="paging.currentPage" [maxSize]="paging.maxSize"
-            [directionLinks]="true" [boundaryLinks]="true">
-            <ng-template ngbPaginationPrevious>Previous</ng-template>
-            <ng-template ngbPaginationNext>Next</ng-template>
-            <ng-template ngbPaginationEllipsis>...</ng-template>
-            <ng-template ngbPaginationNumber let-page>{{ page }}</ng-template>
-          </ngb-pagination>
-        </div>
-      </div>`,
+          <div class="card-body p-0 table-responsive">
+            <table class="table mb-0 table-borderless">
+              <thead class="table-header">
+                <tr>
+                  <th scope="col" class="nao-th-checkbox">
+                    <label class="custom-control custom-checkbox m-0">
+                      <input type="checkbox" class="custom-control-input" (ngModelChange)="selectAllChange()"
+                        [(ngModel)]="paging.selectAll">
+                      <span class="custom-control-label"></span>
+                    </label>
+                  </th>
+                  <th scope="col" class="nao-th" style="width: 20%">Name</th>
+                  <th scope="col" class="nao-th" style="width: 20%">Email</th>
+                  <th scope="col" class="nao-th" style="width: 20%">Company</th>
+                  <th scope="col" class="nao-th"></th>
+                </tr>
+              </thead>
+              <tbody class="table-body">
+                <tr *ngFor="let item of dataTable; let i = index; let last = last"
+                  [ngClass]="{'selected': item.selected}">
+                  <td class="align-middle">
+                    <label class="custom-control custom-checkbox m-0">
+                      <input type="checkbox" class="custom-control-input" (ngModelChange)="selectChange($event, i)"
+                        [(ngModel)]="item.selected">
+                      <span class="custom-control-label"></span>
+                    </label>
+                  </td>
+                  <td class="align-middle"
+                    [ngClass]="{'td-success': item.name.status === 'success', 'td-danger': item.name.status === 'fail'}">
+                    <div class="d-flex align-items-center">
+                      <div class="cell-multiline-header">{{ item.name.value }}</div>
+                    </div>
+                  </td>
+                  <td class="align-middle"
+                    [ngClass]="{'td-success': item.email.status === 'success', 'td-danger': item.email.status === 'fail'}">
+                    <div class="d-flex align-items-center">
+                      <div class="cell-multiline-header">{{ item.email.value }}</div>
+                    </div>
+                  </td>
+                  <td class="align-middle"
+                    [ngClass]="{'td-success': item.company.status === 'success', 'td-danger': item.company.status === 'fail'}">
+                    <div class="d-flex align-items-center">
+                      <div class="cell-multiline-header">{{ item.company.value }}</div>
+                    </div>
+                  </td>
+                  <td class="py-0" style="position: relative;">
+                    <div class="nao-row-overlay-container show-on-hover mr-4" *ngIf="noSelectedRows() === 0">
+                      <ng-template *ngTemplateOutlet="rowOverlay; context: { $implicit: item, i: i }"></ng-template>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer d-flex flex-row align-items-center justify-content-between">
+            <div>
+              <span class='rows-label'>Rows per page: </span>
+              <select (change)="paging.perPage$.next($event.target.value)" [value]="paging.perPage$.getValue()"
+                class="custom-select custom-select-sm d-inline-block w-auto">
+                <option *ngFor="let limit of [5, 10, 20, 50, 100]" [value]="limit">{{ limit }}</option>
+              </select>
+            </div>
+            <div>
+              <ngb-pagination class="pull-right" [collectionSize]="paging.totalRows"
+                [pageSize]="paging.perPage$.getValue()" [(page)]="paging.currentPage" [maxSize]="paging.maxSize"
+                [directionLinks]="true" [boundaryLinks]="true">
+                <ng-template ngbPaginationPrevious>Previous</ng-template>
+                <ng-template ngbPaginationNext>Next</ng-template>
+                <ng-template ngbPaginationEllipsis>...</ng-template>
+                <ng-template ngbPaginationNumber let-page>{{ page }}</ng-template>
+              </ngb-pagination>
+            </div>
+          </div>
+        </div>`,
     ts1: `
     public paging = {
       currentPage: 1, totalPages: 1, currentRows: 0, totalRows: 0, maxSize: 5,
@@ -344,9 +353,36 @@ export const TableCodeBlocks = [
     public searchFormGroup;
     public searchFor = [];
     public dataTable = [
-      { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
-      { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
-      { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
+         {
+      name: { value: 'Jon Doe', status: '' },
+      email: { value: 'jon@doe.com', status: 'success' },
+      company: { value: 'DoeCompany', status: '' }, selected: false
+    },
+    {
+      name: { value: 'Jon Doe', status: ''}, 
+      email: { value: 'jon@doe.com', status: '' }, 
+      company: { value: 'DoeCompany', status: '' }, selected: false
+    },
+    {
+      name: { value: 'Jon', status: 'fail' }, 
+      email: { value: 'jon@doe.com', status: '' }, 
+      company: { value: 'DoeCompany', status: 'fail' }, selected: false
+    },
+    {
+      name: { value: 'Jon Doe', status: '' },
+      email: { value: 'jon@doe.com', status: 'success' },
+      company: { value: 'DoeCompany', status: '' }, selected: false
+    },
+    {
+      name: { value: 'Jon Doe', status: '' },
+      email: { value: 'jon@doe.com', status: '' },
+      company: { value: 'DoeCompany', status: '' }, selected: false
+    },
+    {
+      name: { value: 'Jon', status: 'fail' },
+      email: { value: 'jon@doe.com', status: '' },
+      company: { value: 'DoeCompany', status: 'fail' }, selected: false
+    },
     ];`,
     ts2: `
     /**
@@ -393,134 +429,143 @@ export const TableCodeBlocks = [
   },
   {
     html: `
-    <ng-template #rowOverlay let-item let-i="i">
-      <div class="d-flex justify-content-end align-items-center nao-row-overlay h-100">
-        <div>
-          <button class="btn btn-text-only">
-            Edit
-          </button>
-          <button class="btn btn-text-only">
-            Delete
-          </button>
+      <ng-template #rowOverlay let-item let-i="i">
+        <div class="d-flex justify-content-end align-items-center nao-row-overlay h-100">
+          <div>
+            <button class="btn btn-simple-primary">
+              Edit
+            </button>
+            <button class="btn btn-simple-primary">
+              Delete
+            </button>
+          </div>
         </div>
-      </div>
-    </ng-template>
+      </ng-template>
 
-    <div class="card nao-card-table-1 mb-5" [ngClass]="{'nao-condensed-table': paging.tableCondensed$.value}">
-      <div class="d-flex flex-row card-header selected align-items-center" *ngIf="noSelectedRows() > 0">
-        <div class="pt-2 pr-3">
-          <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
-        </div>
-        <div class="pl-3 mr-3">
-          <div class="card-header-title text-lowercase">
-            {{ noSelectedRows() }} {{ (noSelectedRows() === 1 ? 'selected contact' : 'selected contacts') }}
+      <div class="card nao-card-table-1 mb-5" [ngClass]="{'nao-condensed-table': paging.tableCondensed$.value}">
+          <div class="d-flex flex-row card-header selected align-items-center" *ngIf="noSelectedRows() > 0">
+            <div class="pr-3">
+              <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
+            </div>
+            <div class="pl-3 mr-3">
+              <div class="card-header-title text-lowercase">
+                {{ noSelectedRows() }} {{ (noSelectedRows() === 1 ? 'selected contact' : 'selected contacts') }}
+              </div>
+            </div>
+            <div class="">
+              <button class="btn btn-simple-primary">
+                Delete multiple
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="pt-2">
-          <button class="btn btn-text-only">
-            Delete multiple
-          </button>
-        </div>
-      </div>
-      <div class="d-flex flex-row card-header align-items-center" *ngIf="noSelectedRows() === 0">
-        <div class="mr-3">
-          <div class="card-header-title">
-            Contacts&nbsp;&nbsp;|
+          <div class="d-flex flex-row card-header align-items-center" *ngIf="noSelectedRows() === 0">
+            <div class="mr-3">
+              <div class="card-header-title">
+                Contacts&nbsp;&nbsp;|
+              </div>
+            </div>
+            <div class="pr-3">
+              <span class="nao-table-info">
+                3 contacts
+              </span>
+            </div>
+            <div class="">
+              <button class="btn btn-simple-primary">
+                Option 1
+              </button>
+              <button class="btn btn-simple-primary">
+                Option 2
+              </button>
+              <button class="btn btn-simple-primary">
+                Option 3
+              </button>
+            </div>
+            <div class="nao-condensed-btn-group">
+              <div class="nao-condensed-btn-group">
+                <button type="button" class="btn btn-flip btn-condensed"
+                  [ngClass]="paging.tableCondensed$.value ? 'flipped' : ''"
+                  (click)="paging.tableCondensed$.next(true)">Condensed</button>
+                <button type="button" class="btn btn-flip btn-relaxed"
+                  [ngClass]="!paging.tableCondensed$.value ? 'flipped' : ''"
+                  (click)="paging.tableCondensed$.next(false)">Relaxed</button>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="pt-2 pr-3">
-          <span class="smallx">
-            3 contacts
-          </span>
-        </div>
-        <div class="pt-2">
-          <button class="btn btn-text-only">
-            Add new contact
-          </button>
-          <button class="btn btn-text-only">
-            Import contacts
-          </button>
-        </div>
-        <div class="nao-condensed-btn-group pt-2">
-          <div class="nao-condensed-btn-group">
-            <button type="button" class="btn btn-flip btn-condensed" [ngClass]="paging.tableCondensed$.value ? 'flipped' : ''"
-            (click)="paging.tableCondensed$.next(true)">Condensed</button>
-            <button type="button" class="btn btn-flip btn-relaxed" [ngClass]="!paging.tableCondensed$.value ? 'flipped' : ''"
-            (click)="paging.tableCondensed$.next(false)">Relaxed</button>
-          </div>
-        </div>
-      </div>
 
-      <div class="card-body p-0 table-responsive">
-        <table class="table mb-0 table-borderless">
-          <thead class="table-header">
-            <tr>
-              <th scope="col" style="width: 60px;">
-                <label class="custom-control custom-checkbox m-0">
-                  <input type="checkbox" class="custom-control-input" (ngModelChange)="selectAllChange()"
-                    [(ngModel)]="paging.selectAll">
-                  <span class="custom-control-label"></span>
-                </label>
-              </th>
-              <th scope="col" class="pl-3" style="width: 20%">Name</th>
-              <th scope="col" class="pl-3" style="width: 20%">Email</th>
-              <th scope="col" class="pl-3" style="width: 20%">Company</th>
-              <th scope="col" class="pl-3"></th>
-            </tr>
-          </thead>
-          <tbody class="table-body">
-            <tr *ngFor="let item of dataTable; let i = index; let last = last"
-              [ngClass]="{'selected': item.selected}">
-              <td class="align-middle p-3">
-                <label class="custom-control custom-checkbox m-0">
-                  <input type="checkbox" class="custom-control-input" (ngModelChange)="selectChange($event, i)"
-                    [(ngModel)]="item.selected">
-                  <span class="custom-control-label"></span>
-                </label>
-              </td>
-              <td class="align-middle p-3">
-                <div class="d-flex align-items-center">
-                  <div class="cell-multiline-header">{{ item.name }}</div>
-                </div>
-              </td>
-              <td class="align-middle p-3">
-                <div class="d-flex align-items-center">
-                  <div class="cell-multiline-header">{{ item.email }}</div>
-                </div>
-              </td>
-              <td class="align-middle p-3">
-                <div class="d-flex align-items-center">
-                  <div class="cell-multiline-header">{{ item.company }}</div>
-                </div>
-              </td>
-              <td class="py-0" style="position: relative;">
-                <div class="nao-row-overlay-container show-on-hover mr-4" *ngIf="noSelectedRows() === 0">
-                  <ng-template *ngTemplateOutlet="rowOverlay; context: { $implicit: item, i: i }"></ng-template>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="card-footer d-flex flex-row align-items-center justify-content-between pt-4 pb-4">
-        <div>
-          Per page
-          <select (change)="paging.perPage$.next($event.target.value)" [value]="paging.perPage$.getValue()"
-            class="custom-select custom-select-sm d-inline-block w-auto">
-            <option *ngFor="let limit of [5, 10, 20, 50, 100]" [value]="limit">{{ limit }}</option>
-          </select>
-        </div>
-        <div>
-          <ngb-pagination class="pull-right" [collectionSize]="paging.totalRows"
-            [pageSize]="paging.perPage$.getValue()" [(page)]="paging.currentPage" [maxSize]="paging.maxSize"
-            [directionLinks]="true" [boundaryLinks]="true">
-            <ng-template ngbPaginationPrevious>Previous</ng-template>
-            <ng-template ngbPaginationNext>Next</ng-template>
-            <ng-template ngbPaginationEllipsis>...</ng-template>
-            <ng-template ngbPaginationNumber let-page>{{ page }}</ng-template>
-          </ngb-pagination>
-        </div>
-      </div>`,
+          <div class="card-body p-0 table-responsive">
+            <table class="table mb-0 table-borderless">
+              <thead class="table-header">
+                <tr>
+                  <th scope="col" class="nao-th-checkbox">
+                    <label class="custom-control custom-checkbox m-0">
+                      <input type="checkbox" class="custom-control-input" (ngModelChange)="selectAllChange()"
+                        [(ngModel)]="paging.selectAll">
+                      <span class="custom-control-label"></span>
+                    </label>
+                  </th>
+                  <th scope="col" class="nao-th" style="width: 20%">Name</th>
+                  <th scope="col" class="nao-th" style="width: 20%">Email</th>
+                  <th scope="col" class="nao-th" style="width: 20%">Company</th>
+                  <th scope="col" class="nao-th"></th>
+                </tr>
+              </thead>
+              <tbody class="table-body">
+                <tr *ngFor="let item of dataTable; let i = index; let last = last"
+                  [ngClass]="{'selected': item.selected}">
+                  <td class="align-middle">
+                    <label class="custom-control custom-checkbox m-0">
+                      <input type="checkbox" class="custom-control-input" (ngModelChange)="selectChange($event, i)"
+                        [(ngModel)]="item.selected">
+                      <span class="custom-control-label"></span>
+                    </label>
+                  </td>
+                  <td class="align-middle"
+                    [ngClass]="{'td-success': item.name.status === 'success', 'td-danger': item.name.status === 'fail'}">
+                    <div class="d-flex align-items-center">
+                      <div class="cell-multiline-header">{{ item.name.value }}</div>
+                    </div>
+                  </td>
+                  <td class="align-middle"
+                    [ngClass]="{'td-success': item.email.status === 'success', 'td-danger': item.email.status === 'fail'}">
+                    <div class="d-flex align-items-center">
+                      <div class="cell-multiline-header">{{ item.email.value }}</div>
+                    </div>
+                  </td>
+                  <td class="align-middle"
+                    [ngClass]="{'td-success': item.company.status === 'success', 'td-danger': item.company.status === 'fail'}">
+                    <div class="d-flex align-items-center">
+                      <div class="cell-multiline-header">{{ item.company.value }}</div>
+                    </div>
+                  </td>
+                  <td class="py-0" style="position: relative;">
+                    <div class="nao-row-overlay-container show-on-hover mr-4" *ngIf="noSelectedRows() === 0">
+                      <ng-template *ngTemplateOutlet="rowOverlay; context: { $implicit: item, i: i }"></ng-template>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer d-flex flex-row align-items-center justify-content-between">
+            <div>
+              <span class='rows-label'>Rows per page: </span>
+              <select (change)="paging.perPage$.next($event.target.value)" [value]="paging.perPage$.getValue()"
+                class="custom-select custom-select-sm d-inline-block w-auto">
+                <option *ngFor="let limit of [5, 10, 20, 50, 100]" [value]="limit">{{ limit }}</option>
+              </select>
+            </div>
+            <div>
+              <ngb-pagination class="pull-right" [collectionSize]="paging.totalRows"
+                [pageSize]="paging.perPage$.getValue()" [(page)]="paging.currentPage" [maxSize]="paging.maxSize"
+                [directionLinks]="true" [boundaryLinks]="true">
+                <ng-template ngbPaginationPrevious>Previous</ng-template>
+                <ng-template ngbPaginationNext>Next</ng-template>
+                <ng-template ngbPaginationEllipsis>...</ng-template>
+                <ng-template ngbPaginationNumber let-page>{{ page }}</ng-template>
+              </ngb-pagination>
+            </div>
+          </div>
+        </div>`,
     ts1: `
     public paging = {
       currentPage: 1, totalPages: 1, currentRows: 0, totalRows: 0, maxSize: 5,
@@ -532,9 +577,36 @@ export const TableCodeBlocks = [
     public searchFormGroup;
     public searchFor = [];
     public dataTable = [
-      { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
-      { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
-      { name: 'Jon Doe', email: 'jon@doe.com', company: 'DoeCompany', selected: false },
+         {
+      name: { value: 'Jon Doe', status: '' },
+      email: { value: 'jon@doe.com', status: 'success' },
+      company: { value: 'DoeCompany', status: '' }, selected: false
+    },
+    {
+      name: { value: 'Jon Doe', status: ''}, 
+      email: { value: 'jon@doe.com', status: '' }, 
+      company: { value: 'DoeCompany', status: '' }, selected: false
+    },
+    {
+      name: { value: 'Jon', status: 'fail' }, 
+      email: { value: 'jon@doe.com', status: '' }, 
+      company: { value: 'DoeCompany', status: 'fail' }, selected: false
+    },
+    {
+      name: { value: 'Jon Doe', status: '' },
+      email: { value: 'jon@doe.com', status: 'success' },
+      company: { value: 'DoeCompany', status: '' }, selected: false
+    },
+    {
+      name: { value: 'Jon Doe', status: '' },
+      email: { value: 'jon@doe.com', status: '' },
+      company: { value: 'DoeCompany', status: '' }, selected: false
+    },
+    {
+      name: { value: 'Jon', status: 'fail' },
+      email: { value: 'jon@doe.com', status: '' },
+      company: { value: 'DoeCompany', status: 'fail' }, selected: false
+    },
     ];`,
     ts2: `
     /**

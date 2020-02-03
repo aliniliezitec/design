@@ -69,13 +69,14 @@ $card-border-width: 0;
 
 // *************************************************
 // Modals
-// todo change modal sizes
 $modal-content-border-radius: pixelToRem(8px);
 $modal-header-padding-y: pixelToRem(18px);
 
 $modal-content-box-shadow-xs: 0 2px 4px 3px #d8dceb;  
 $modal-content-box-shadow-sm-up:0 2px 4px 3px #d8dceb;
 $modal-content-border-width: 0;
+
+$modal-md: 610px;
 
 // *************************************************
 // Dropdowns
@@ -97,7 +98,7 @@ $custom-switch-indicator-size: 0.8125rem;
 // *************************************************
 // Badges
 $badge-font-size: pixelToRem(15px);
-$badge-font-weight: 500;
+$badge-font-weight: $font-weight-regular;
 $badge-padding-y: pixelToRem(4px);
 $badge-padding-x: pixelToRem(11px);
 $badge-pill-padding-x: pixelToRem(11px);
