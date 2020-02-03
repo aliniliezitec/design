@@ -202,6 +202,59 @@ $value in $theme-colors {
 }
 
 // *************************************************
+// Custom button simple
+@mixin button-simple-variant($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
+  color: $color;
+  border-color: transparent;
+  background-color: transparent;
+
+  @include hover() {
+    color: $color;
+    background-color: rgba($active-background, .2);
+    box-shadow: 0 1px 3px 0 var(--text-7);
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba($color, .4);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $color;
+    background-color: transparent;
+    box-shadow: 0 3px 3px 1px var(--text-7);
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show>&.dropdown-toggle {
+    color: $color;
+    background-color: rgba($active-background, .5);
+
+    &:focus {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      @if $enable-shadows and $btn-active-box-shadow !=none {
+        box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5);
+      }
+
+      @else {
+        box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
+      }
+    }
+  }
+}
+
+// Alternate custom buttons
+@each $color,
+$value in $theme-colors {
+  .btn-simple-#{$color} {
+    @include button-simple-variant($value);
+  }
+}
+
+
+// *************************************************
 // btn flip for condensed/relaxed
 .btn-flip {
   min-width: 60px;

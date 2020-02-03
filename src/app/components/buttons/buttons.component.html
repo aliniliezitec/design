@@ -88,12 +88,10 @@
       </div>
     </div>
 
-
     <div class="elem-container">
-      <h2 class="title">Sizes</h2>
-      <p>Fancy extra large, large or smaller buttons? Add <span class="highlighter-warning">.btn-xl</span>, <span
-          class="highlighter-warning">.btn-lg</span> or <span class="highlighter-warning">.btn-sm</span> for additional
-        sizes.
+      <h2 class="title">Custom simple buttons</h2>
+      <p>
+        Simple button <span class="highlighter-warning">.btn-simple-*</span>
       </p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[4].html | sanitizeHtml"></div>
 
@@ -104,8 +102,17 @@
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[4].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
+    </div>
 
+
+    <div class="elem-container">
+      <h2 class="title">Sizes</h2>
+      <p>Fancy extra large, large or smaller buttons? Add <span class="highlighter-warning">.btn-xl</span>, <span
+          class="highlighter-warning">.btn-lg</span> or <span class="highlighter-warning">.btn-sm</span> for additional
+        sizes.
+      </p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[5].html | sanitizeHtml"></div>
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[5].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
@@ -132,16 +139,25 @@
         <pre><div [innerHTML]="data[7].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
 
-      <p>Create block level buttons—those that span the full width of a parent—by adding <span
-          class="highlighter-warning">.btn-block</span>.</p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[8].html | sanitizeHtml"></div>
-
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[8].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[8].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+
+      <p>Create block level buttons—those that span the full width of a parent—by adding <span
+          class="highlighter-warning">.btn-block</span>.</p>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[9].html | sanitizeHtml"></div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[9].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[9].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 
@@ -153,21 +169,6 @@
           class="highlighter-warning">.active</span> (and include the <span
           class="highlighter-warning">aria-pressed="true"</span> attribute) should you
         need to replicate the state programmatically.</p>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[9].html | sanitizeHtml"></div>
-
-      <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[9].html)" placement="top"
-          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
-      </div>
-      <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[9].html | htmlPrismPipe | sanitizeHtml"></div></pre>
-      </div>
-
-      <h2 class="title">Disabled state</h2>
-      <p>
-        Make buttons look inactive by adding the disabled boolean attribute to any <span
-          class="highlighter-warning">&lt;button&gt;</span> element.
-      </p>
       <div class="nao-bd-example nao-btn-example" [innerHTML]="data[10].html | sanitizeHtml"></div>
 
       <div class="nao-bd-clipboard">
@@ -176,6 +177,21 @@
       </div>
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[10].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+
+      <h2 class="title">Disabled state</h2>
+      <p>
+        Make buttons look inactive by adding the disabled boolean attribute to any <span
+          class="highlighter-warning">&lt;button&gt;</span> element.
+      </p>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[11].html | sanitizeHtml"></div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[11].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[11].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
       <p>Disabled buttons using the <span class="highlighter-warning">&lt;a&gt;</span> element behave a bit different:
       </p>
@@ -196,14 +212,14 @@
           indicate the state of the element to assistive technologies.
         </li>
       </ul>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[11].html | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[12].html | sanitizeHtml"></div>
 
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[11].html)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[12].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[11].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[12].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 
@@ -227,20 +243,20 @@
 
       <div class="nao-bd-example">
         <div class="nao-btn-spacing d-flex justify-content-between flex-wrap"
-          [innerHTML]="data[12].html | sanitizeHtml"></div>
+          [innerHTML]="data[13].html | sanitizeHtml"></div>
       </div>
     </div>
 
     <div class="elem-container">
       <h2 class="title">Transition when hovered</h2>
-      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[13].html | sanitizeHtml"></div>
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[14].html | sanitizeHtml"></div>
 
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[13].html)" placement="top"
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[14].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
       <div class="nao-example-highlight">
-        <pre><div [innerHTML]="data[13].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+        <pre><div [innerHTML]="data[14].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
     </div>
 

@@ -65,6 +65,13 @@ export const ButtonsCodeBlocks = [
     <button type="button" class="btn btn-outline-only-danger">Danger</button>
     <button type="button" class="btn btn-outline-only-dark-blue">Dark-blue</button>
     `},
+    {
+        html: `
+    <button type="button" class="btn btn-simple-primary">Primary</button>
+    <button type="button" class="btn btn-simple-success">Success</button>
+    <button type="button" class="btn btn-simple-danger">Danger</button>
+    <button type="button" class="btn btn-simple-dark-blue">Dark-blue</button>
+    `},
     // {
     //     html: `
     // <button type="button" class="btn btn-outline-only-primary">Primary</button>
@@ -86,19 +93,23 @@ export const ButtonsCodeBlocks = [
     {
         html: `
     <button type="button" class="btn btn-primary btn-xl">Extra Large button</button>
-    <button type="button" class="btn btn-outline-primary btn-xl">Extra Large button</button>`},
+    <button type="button" class="btn btn-outline-primary btn-xl">Extra Large button</button>
+    <button type="button" class="btn btn-simple-primary btn-xl">Extra Large button</button>`},
     {
         html: `
     <button type="button" class="btn btn-primary btn-lg">Large button</button>
-    <button type="button" class="btn btn-outline-primary btn-lg">Large button</button>`},
+    <button type="button" class="btn btn-outline-primary btn-lg">Large button</button>
+    <button type="button" class="btn btn-simple-primary btn-lg">Large button</button>`},
     {
         html: `
     <button type="button" class="btn btn-primary">Default button</button>
-    <button type="button" class="btn btn-outline-primary">Default button</button>`},
+    <button type="button" class="btn btn-outline-primary">Default button</button>
+    <button type="button" class="btn btn-simple-primary">Default button</button>`},
     {
         html: `
     <button type="button" class="btn btn-primary btn-sm">Small button</button>
-    <button type="button" class="btn btn-outline-primary btn-sm">Small button</button>`},
+    <button type="button" class="btn btn-outline-primary btn-sm">Small button</button>
+    <button type="button" class="btn btn-simple-primary btn-sm">Small button</button>`},
     {
         html: `
     <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
@@ -110,7 +121,8 @@ export const ButtonsCodeBlocks = [
     {
         html: `
     <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
-    <button type="button" class="btn btn-outline-primary btn-lg" disabled>Button</button>`},
+    <button type="button" class="btn btn-outline-primary btn-lg" disabled>Button</button>
+    <button type="button" class="btn btn-simple-primary btn-lg" disabled>Simple Button</button>`},
     {
         html: `
     <a href="javascript:void(0)" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
