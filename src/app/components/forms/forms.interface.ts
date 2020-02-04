@@ -184,5 +184,25 @@ export const FormsCodeBlocks = [
         <span class="badge badge-pill nao-tag-1 nao-tag-sm mb-4">Type something <i class="nao-icon-cancel ml-1"></i></span>
         <span class="badge badge-pill nao-tag-1">Type something</span>
         <span class="badge badge-pill nao-tag-1 nao-tag-sm">Type something</span>`
+    }, {
+        html: `
+        <span class="nao-badge nao-badge-label-1 mr-3 mb-3">Something</span>
+        <span class="nao-badge nao-badge-label-2 mb-3">Something</span>`
+    },
+    {
+        html: `
+        <span class="nao-badge-pill nao-badge-outline mb-4 mr-3">
+            <i class="nao-icon-add mr-1"></i>Add a filter
+        </span>
+        <span class="nao-badge-pill nao-badge-1 mb-4 mr-3">
+            <div class="d-flex align-items-center">
+            <span class="badge-text">First name: “John” </span><i class="nao-icon-cancel ml-2"></i>
+            </div>
+        </span>
+        <span class="nao-badge-pill nao-badge-1 mb-4 mr-3">
+            <div class="d-flex align-items-center">
+            <span class="badge-text">First name: “Johnjohusu Mcgregor Mcgregor" </span><i class="nao-icon-cancel ml-2"></i>
+            </div>
+        </span>`
     }
 ];

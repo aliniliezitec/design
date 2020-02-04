@@ -209,3 +209,61 @@ $custom-switch-lg-top-fix: 3px;
   font-weight: $font-weight-lighter;
   font-size: pixelToRem(13px);
 }
+
+// *************************************************
+// Label
+
+.nao-badge {
+  padding: 2px 10px;
+  font-size: pixelToRem(15px);
+  border-radius: 18px;
+  text-align: center;
+  line-height: normal;
+  display: inline-block;
+}
+
+.nao-badge-label-1 {
+  background-color: var(--text-7);
+  border: solid 1px var(--text-7);
+  color: var(--white);
+}
+
+.nao-badge-label-2 {
+  border: solid 1px var(--primary);
+  color: var(--primary);
+}
+
+// *************************************************
+// Badges (pills in the design)
+
+.nao-badge-pill {
+  font-size: pixelToRem(16px);
+  padding: 5px 10px;
+  line-height: normal;
+  text-align: center;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+
+  i {
+    font-size: 12px;
+  }
+}
+
+.nao-badge-outline {
+  color: var(--text-primary-lightest);
+  border: dashed 1px var(--text-primary-lightest);
+}
+
+.nao-badge-1 {
+  background-color: var(--bg-1);
+  color: var(--text-primary);
+
+  .badge-text {
+    max-width: 212px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:inline-block;
+  }
+}

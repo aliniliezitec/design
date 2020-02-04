@@ -3,8 +3,8 @@
 .nao-btn-dropdown-menu-1 {
   padding: 0;
   font-size: pixelToRem(12px);
-  font-weight: $font-weight-bold;
-  line-height: 1.8;
+  font-weight: $font-weight-lighter;
+  // line-height: 1.8;
   color: var(--text-primary-lighter);
 }
 
@@ -17,6 +17,10 @@
   .dropdown-item {
     padding: .438rem 1.25rem !important;
     font-size: pixelToRem(13px) !important;
+  }
+
+  .disabled {
+    color: var(--shadow) !important;
   }
 
   @include rtl {
@@ -32,6 +36,10 @@
 
   .dropdown-item {
     padding: pixelToRem(2.2px) pixelToRem(19.2px);
+  }
+
+  .disabled {
+    color: var(--shadow) !important;
   }
 
   @include rtl {
@@ -54,6 +62,10 @@
 
   .nao-dropdown-small-text {
     font-size: pixelToRem(10px);
+  }
+
+  .disabled {
+    color: var(--shadow) !important;
   }
 }
 
@@ -102,7 +114,20 @@
   }
 }
 
+.dropdown-item-danger {
 
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: var(--danger) !important;
+    color: var(--white)
+  }
+}
+
+.dropdown-divider {
+  border-top: solid 1px #caccd7;
+  margin: 5px 0;
+}
 
 // *************************************************
 // nao dropdown 3
@@ -114,12 +139,13 @@
 
   .dropdown-item {
     padding: 6px 9px;
-    font-size: pixelToRem(14px);
+    font-size: pixelToRem(13px);
     color: var(--text-secondary);
+    // font-weight: $font-weight-lighter;
   }
 
   .disabled {
-    color: #d1d2d3 !important;
+    color: var(--shadow) !important;
   }
 
   @include rtl {
@@ -135,6 +161,17 @@
   .ng-select-container {
     min-height: pixelToRem(32px) !important;
     height: pixelToRem(32px) !important;
+  }
+}
+
+// *************************************************
+// nao ng-select sm
+.nao-ng-select-xs {
+  font-size: pixelToRem(12px);
+
+  .ng-select-container {
+    min-height: pixelToRem(22px) !important;
+    height: pixelToRem(22px) !important;
   }
 }
 

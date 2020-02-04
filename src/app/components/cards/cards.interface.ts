@@ -60,9 +60,15 @@ export const CardsCodeBlocks = [
         </div>`},
   {
     html: `
-            <div class="nao-card-board">
+            <div class="nao-card-board mr-3 mb-3">
                 <p class="m-0 align-middle text-center">Board name</p>
-            </div>`},
+            </div>
+            <div class="nao-card-board-2 mb-3">
+              <div class="nao-card-name mb-1">Card name</div>
+              <div class="nao-board-name">Board name</div>
+              <span class="nao-card-info text-right">Board info</span>
+            </div>
+            `},
   {
     html: `
         <div class="nao-kanban-ticket p-3">
@@ -97,7 +103,6 @@ export const CardsCodeBlocks = [
           <div class="ticket-body">
             <div class="ticket-field">
               <div class="ticket-label">
-                <i class="nao-icon-arrow-dropdown-filled"></i>
                 STATUS
               </div>
               <span class="nao-pill-lg bg-warning text-white">Evaluation</span>
@@ -105,7 +110,6 @@ export const CardsCodeBlocks = [
 
             <div class="ticket-field">
               <div class="ticket-label">
-                <i class="nao-icon-arrow-dropdown-filled"></i>
                 PRIORITY
               </div>
               <span class="nao-pill-lg bg-danger text-white">High</span>
@@ -113,7 +117,6 @@ export const CardsCodeBlocks = [
 
             <div class="ticket-field">
               <div class="ticket-label">
-                <i class="nao-icon-dollar"></i>
                 ESTIMATED VALUE
               </div>
               <span class="ticket-text">$12,102</span>
@@ -121,39 +124,34 @@ export const CardsCodeBlocks = [
 
             <div class="ticket-field">
               <div class="ticket-label">
-                <i class="nao-icon-item-list"></i>
                 ACCOUNT
               </div>
-              <span class="badge badge-grey">Enviromerica</span>
+              <span class="nao-pill-lg nao-pill-text-7">Enviromerica</span>
             </div>
 
             <div class="ticket-field">
               <div class="ticket-label">
-                <i class="nao-icon-item-list"></i>
                 PRIMARY CONTACT
               </div>
-              <span class="badge badge-grey">Julian Goduci</span>
+              <span class="nao-pill-lg nao-pill-text-7">Julian Goduci</span>
             </div>
 
             <div class="ticket-field">
               <div class="ticket-label">
-                <i class="nao-icon-item-list"></i>
                 INTERACTIONS
               </div>
-              <span class="badge badge-grey">Touch One - Proposal Stage</span>
+              <span class="nao-pill-lg nao-pill-text-7 text-white">Touch One - Proposal Stage</span>
             </div>
 
             <div class="ticket-field">
               <div class="ticket-label">
-                <i class="nao-icon-item-list"></i>
                 KEY DECISION MAKER
               </div>
-              <span class="badge badge-grey">Tom Joyce</span>
+              <span class="nao-pill-lg nao-pill-text-7">Tom Joyce</span>
             </div>
 
             <div class="ticket-field">
               <div class="ticket-label">
-                <i class="nao-icon-calendar"></i>
                 EXPECTED CLOSE DATE
               </div>
               <span class="ticket-text">21/12/2019</span>
@@ -161,7 +159,6 @@ export const CardsCodeBlocks = [
 
             <div class="ticket-field">
               <div class="ticket-label">
-                <i class="nao-icon-envelope-2"></i>
                 LAST CONTACT
               </div>
               <span class="ticket-text">12/6/2019</span>
@@ -169,7 +166,6 @@ export const CardsCodeBlocks = [
 
             <div class="ticket-field">
               <div class="ticket-label">
-                <i class="nao-icon-profile-male"></i>
                 Owner
               </div>
               <div class="ticket-avatar-icon">
@@ -231,7 +227,6 @@ export const CardsCodeBlocks = [
                     <div class="ticket-body">
                         <div class="ticket-field">
                             <div class="ticket-label">
-                                <i class="nao-icon-arrow-dropdown-filled"></i>
                                 STATUS
                             </div>
                             <span class="nao-pill-lg bg-warning text-white">Evaluation</span>
@@ -239,7 +234,6 @@ export const CardsCodeBlocks = [
 
                         <div class="ticket-field">
                             <div class="ticket-label">
-                                <i class="nao-icon-arrow-dropdown-filled"></i>
                                 PRIORITY
                             </div>
                             <span class="nao-pill-lg bg-danger text-white">High</span>
@@ -247,7 +241,6 @@ export const CardsCodeBlocks = [
 
                         <div class="ticket-field">
                             <div class="ticket-label">
-                                <i class="nao-icon-dollar"></i>
                                 ESTIMATED VALUE
                             </div>
                             <span class="ticket-text">$12,102</span>
@@ -255,39 +248,34 @@ export const CardsCodeBlocks = [
 
                         <div class="ticket-field">
                             <div class="ticket-label">
-                                <i class="nao-icon-item-list"></i>
                                 ACCOUNT
                             </div>
-                            <span class="badge badge-grey">Enviromerica</span>
+                            <span class="nao-pill-lg nao-pill-text-7">Enviromerica</span>
                         </div>
 
                         <div class="ticket-field">
                             <div class="ticket-label">
-                                <i class="nao-icon-item-list"></i>
                                 PRIMARY CONTACT
                             </div>
-                            <span class="badge badge-grey">Julian Goduci</span>
+                            <span class="nao-pill-lg nao-pill-text-7">Julian Goduci</span>
                         </div>
 
                         <div class="ticket-field">
                             <div class="ticket-label">
-                                <i class="nao-icon-item-list"></i>
                                 INTERACTIONS
                             </div>
-                            <span class="badge badge-grey">Touch One - Proposal Stage</span>
+                            <span class="nao-pill-lg nao-pill-text-7 text-white">Touch One - Proposal Stage</span>
                         </div>
 
                         <div class="ticket-field">
                             <div class="ticket-label">
-                                <i class="nao-icon-item-list"></i>
                                 KEY DECISION MAKER
                             </div>
-                            <span class="badge badge-grey">Tom Joyce</span>
+                            <span class="nao-pill-lg nao-pill-text-7">Tom Joyce</span>
                         </div>
 
                         <div class="ticket-field">
                             <div class="ticket-label">
-                                <i class="nao-icon-calendar"></i>
                                 EXPECTED CLOSE DATE
                             </div>
                             <span class="ticket-text">21/12/2019</span>
@@ -295,7 +283,6 @@ export const CardsCodeBlocks = [
 
                         <div class="ticket-field">
                             <div class="ticket-label">
-                                <i class="nao-icon-envelope-2"></i>
                                 LAST CONTACT
                             </div>
                             <span class="ticket-text">12/6/2019</span>
@@ -303,7 +290,6 @@ export const CardsCodeBlocks = [
 
                         <div class="ticket-field">
                             <div class="ticket-label">
-                                <i class="nao-icon-profile-male"></i>
                                 Owner
                             </div>
                             <div class="ticket-avatar-icon">

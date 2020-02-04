@@ -258,7 +258,8 @@
         </div>
         <div class="col">
           <!-- todo: change icons -->
-          <span class="badge badge-pill nao-tag-1 nao-tag-sm mb-4">Type something <i class="nao-icon-cancel ml-1"></i></span>
+          <span class="badge badge-pill nao-tag-1 nao-tag-sm mb-4">Type something <i
+              class="nao-icon-cancel ml-1"></i></span>
         </div>
         <div class="col">
           <span class="badge badge-pill nao-tag-1">Type something</span>
@@ -278,7 +279,38 @@
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[11].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
-    
+
+  </div>
+
+
+  <div class="elem-container">
+    <h2 class="title">Labels</h2>
+
+    <div class='nao-bd-example' [innerHTML]="data[12].html | sanitizeHtml"></div>
+
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[12].html)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[12].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+
+  </div>
+
+  <div class="elem-container">
+    <h2 class="title">Pills</h2>
+
+    <div class='nao-bd-example' [innerHTML]="data[13].html | sanitizeHtml"></div>
+
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[13].html)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[13].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+
   </div>
 
 

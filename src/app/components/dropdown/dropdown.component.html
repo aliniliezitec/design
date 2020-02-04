@@ -36,6 +36,7 @@
     </div>
 
     <div class="elem-container">
+      <p>For changing the dropdown item on hover to the danger one, just add <code>.dropdown-item-danger</code></p>
       <div class="nao-bd-example">
         <div class="btn-group" ngbDropdown container="body"
           [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
@@ -44,9 +45,11 @@
           </button>
           <div class="nao-dropdown-1" ngbDropdownMenu>
             <a class="dropdown-item" href="javascript:void(0)">Menu item 1</a>
+            <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="javascript:void(0)">Menu item 2</a>
             <a class="dropdown-item" href="javascript:void(0)">Menu item 3</a>
-            <a class="dropdown-item" href="javascript:void(0)">Menu item 4</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item dropdown-item-danger" href="javascript:void(0)">Menu item 4</a>
           </div>
         </div>
       </div>
@@ -78,14 +81,17 @@
             <span class="d-inline-flex align-items-center nao-dropdown-avatar-container">
               <img class="d-block nao-dropdown-avatar rounded-circle"
                 src="assets-local/images/placeholder/default-avatar.png" />
-                <span class="dot" [ngClass]="{ 'dot_disconnected': false, 'dot_connected': true }"></span>
+              <span class="dot" [ngClass]="{ 'dot_disconnected': false, 'dot_connected': true }"></span>
             </span>
           </a>
           <div ngbDropdownMenu class="nao-dropdown-1">
             <div class="nao-dropdown-profile">
               <div class="d-flex">
-                <img class="d-block nao-dropdown-avatar rounded-circle mr-2"
-                  src="assets-local/images/placeholder/default-avatar.png" />
+                <span class="d-inline-flex align-items-center nao-dropdown-avatar-container mr-2">
+                  <img class="d-block nao-dropdown-avatar rounded-circle"
+                    src="assets-local/images/placeholder/default-avatar.png" />
+                  <span class="dot" [ngClass]="{ 'dot_disconnected': false, 'dot_connected': true }"></span>
+                </span>
                 <div class="d-flex flex-column">
                   <span class="font-weight-bold">Jon Doe</span>
                   <span class="nao-dropdown-small-text">jon@naologic.com</span>
@@ -276,6 +282,12 @@
           <ng-option>Option 2</ng-option>
           <ng-option>Option 3</ng-option>
         </ng-select>
+        <!-- <label class="nao-label-1">Extra-small ng-select</label>
+        <ng-select class="nao-ng-select-xs nao-mw-210" placeholder="XS">
+          <ng-option>Option 1</ng-option>
+          <ng-option>Option 2</ng-option>
+          <ng-option>Option 3</ng-option>
+        </ng-select> -->
       </div>
 
       <div class="nao-bd-clipboard">

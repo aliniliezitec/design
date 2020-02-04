@@ -40,7 +40,7 @@ $btn-font-size-lg:  1rem;
 // *************************************************
 // Inputs
 $input-padding-y: pixelToRem(8px);
-$input-padding-x: pixelToRem(5px);
+$input-padding-x: pixelToRem(8px);
 $input-color: var(--text-secondary);
 $input-font-size: 1rem;
 $input-border-color: var(--border-primary);
@@ -51,6 +51,10 @@ $input-focus-border-color: transparent;
 $input-placeholder-color: var(--shadow);
 // sm
 $input-height-sm: pixelToRem(32px);
+$input-padding-x-sm: pixelToRem(8px);
+$input-padding-x-lg: pixelToRem(8px);
+
+$form-feedback-valid-color: #3e40db;
 
 // *************************************************
 // Checkbox
