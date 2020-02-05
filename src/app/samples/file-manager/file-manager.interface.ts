@@ -2,6 +2,7 @@ export const FileManagerCodeBlocks = [
   {
     html: `
     <div class="nao-file-manager d-flex flex-row">
+
         <a class="close-modal" href="javascript:void(0)" (click)="dismiss()">
           <i class="nao-icon-cancel"></i>
         </a>
@@ -41,7 +42,8 @@ export const FileManagerCodeBlocks = [
                   <div class="action-item" (click)="actionsCdn.sortAsc = !actionsCdn.sortAsc">
                     Name <i class="nao-icon-arrow-up-2 ml-1" [ngClass]="{'rotate-180': !actionsCdn.sortAsc}"></i>
                   </div>
-                  <div class="action-item action-view-item" (click)="actionsCdn.viewList = !actionsCdn.viewList">
+                  <div class="action-item action-view-item nao-no-user-select"
+                    (click)="actionsCdn.viewList = !actionsCdn.viewList">
                     <i [className]="actionsCdn.viewList ? 'nao-icon-crm' : 'nao-icon-grid'"></i>
                   </div>
                 </div>
@@ -50,23 +52,38 @@ export const FileManagerCodeBlocks = [
                   <loader-infinity></loader-infinity>
                 </div>
 
+                <!-- Icons for extension -->
+                <ng-template #iconForExtension let-fileExt='fileExt'>
+                  <ng-container [ngSwitch]="fileExt">
+                    <i class="nao-icon-image-placeholder text-secondary-light" *ngSwitchCase="'.jpg'"></i>
+                    <i class="nao-icon-file-word text-secondary-lighter" *ngSwitchCase="'.docx'"></i>
+                    <i class="nao-icon-file-pdf text-danger" *ngSwitchCase="'.pdf'"></i>
+                    <i class="nao-icon-file-ppt text-warning" *ngSwitchCase="'.pptx'"></i>
+                    <i class="nao-icon-file-excel text-success" *ngSwitchCase="'.xlsx'"></i>
+                    <i class="nao-icon-box-list text-primary" *ngSwitchDefault></i>
+                  </ng-container>
+                </ng-template>
+
                 <!-- CDN content grid -->
                 <div class="cdn-content-grid" *ngIf="!status.isLoading && actionsCdn.viewList">
-                  <div class="cdn-element" (click)="selectFile(file)"
-                    [ngClass]="{'cdn-element-active': isFileSelected(file)}" *ngFor="let file of fileList">
+                  <div class="file-element" (click)="selectFile(file)"
+                    [ngClass]="{'file-element-active': isFileSelected(file)}" *ngFor="let file of fileList">
 
                     <ng-container *ngIf="file.type === 'file'">
 
-                      <img class="preview-img" [src]="file.preview">
+                      <ng-container *ngIf="file.preview != ''">
+                        <img class="preview-img" [src]="file.preview">
+                      </ng-container>
+
+                      <ng-container *ngIf="file.preview === ''">
+                        <div class="preview-icon d-flex align-items-center justify-content-center">
+                          <ng-container *ngTemplateOutlet="iconForExtension; context:{fileExt: file.ext}">
+                          </ng-container>
+                        </div>
+                      </ng-container>
 
                       <div class="file-details d-flex align-items-center">
-
-                        <ng-container [ngSwitch]="file.ext">
-                          <i class="nao-icon-image-placeholder text-secondary-light" *ngSwitchCase="'.jpg'"></i>
-                          <i class="nao-icon-file-word text-secondary-lighter" *ngSwitchCase="'.docx'"></i>
-                          <i class="nao-icon-file-pdf text-danger" *ngSwitchCase="'.pdf'"></i>
-                          <i class="nao-icon-file-ppt text-warning" *ngSwitchCase="'.pptx'"></i>
-                          <i class="nao-icon-box-list text-primary" *ngSwitchDefault></i>
+                        <ng-container *ngTemplateOutlet="iconForExtension; context:{fileExt: file.ext}">
                         </ng-container>
 
                         <div class="file-name">
@@ -94,8 +111,8 @@ export const FileManagerCodeBlocks = [
                 <!-- CDN content list -->
 
                 <div class="cdn-content-list" *ngIf="!status.isLoading && !actionsCdn.viewList">
-                  <div class="cdn-element d-flex align-items-center" (click)="selectFile(file)"
-                    [ngClass]="{'cdn-element-active': isFileSelected(file)}" *ngFor="let file of fileList">
+                  <div class="file-element d-flex align-items-center" (click)="selectFile(file)"
+                    [ngClass]="{'file-element-active': isFileSelected(file)}" *ngFor="let file of fileList">
 
                     <div class="preview-container mr-2">
                       <ng-container *ngIf="file.type === 'folder'">
@@ -103,13 +120,7 @@ export const FileManagerCodeBlocks = [
                       </ng-container>
 
                       <ng-container *ngIf="file.type === 'file'">
-                        <ng-container [ngSwitch]="file.ext">
-                          <i class="nao-icon-image-placeholder text-secondary-light" *ngSwitchCase="'.jpg'"></i>
-                          <i class="nao-icon-file-word text-secondary-lighter" *ngSwitchCase="'.docx'"></i>
-                          <i class="nao-icon-file-pdf text-danger" *ngSwitchCase="'.pdf'"></i>
-                          <i class="nao-icon-file-ppt text-warning" *ngSwitchCase="'.pptx'"></i>
-                          <i class="nao-icon-file-excel text-success" *ngSwitchCase="'xlsx'"></i>
-                          <i class="nao-icon-box-list text-primary" *ngSwitchDefault></i>
+                        <ng-container *ngTemplateOutlet="iconForExtension; context:{fileExt: file.ext}">
                         </ng-container>
                       </ng-container>
                     </div>
@@ -121,8 +132,8 @@ export const FileManagerCodeBlocks = [
                   </div>
                 </div>
 
-                <div class="nao-file-manager-footer d-flex justify-content-between">
-                  <div class="selected-files align-self-end" *ngIf="selectedFiles.length > 0">
+                <div class="nao-file-manager-footer d-flex justify-content-between align-items-center">
+                  <div class="selected-files" *ngIf="selectedFiles.length > 0">
                     Selected files: {{ selectedFiles.length }}
                   </div>
                   <button type="button" data-style="expand-right" class="btn btn-simple-primary ml-auto"
@@ -150,16 +161,13 @@ export const FileManagerCodeBlocks = [
                   <input type="file" name="avatars" #fileField hidden [multiple]="maxFiles != 1">
                 </div>
 
-                <!-- Summary images for upload -->
-
                 <!-- Summary images to be uploaded -->
                 <div class="upload-summary" *ngIf="uploadFilesView">
                   <div class="file-type">Images</div>
 
                   <div class="summary-list d-flex flex-column">
 
-                    <div class="summary-item d-flex"
-                      *ngFor="let file of filesForUpload">
+                    <div class="summary-item d-flex" *ngFor="let file of filesForUpload">
                       <div class="file-thumbnail">
                         <img [src]="file.path">
                       </div>
@@ -168,8 +176,7 @@ export const FileManagerCodeBlocks = [
                         <span class="file-size"> 0 / 1.20 mb</span>
                       </div>
                       <div class="file-actions">
-                        <button type="button"
-                          class="btn btn-sm btn-without-box-shaddow p-0">
+                        <button type="button" class="btn btn-sm btn-without-box-shaddow p-0">
                           <i class="nao-icon-cancel"></i>
                         </button>
                       </div>
@@ -181,12 +188,11 @@ export const FileManagerCodeBlocks = [
                     </div>
 
                   </div>
-
                 </div>
 
-
-                <div class="nao-file-manager-footer d-flex justify-content-between" *ngIf="uploadFilesView">
-                  <div class="selected-files align-self-end" *ngIf="selectedImagesUnsplash.length > 0">
+                <div class="nao-file-manager-footer d-flex justify-content-between align-items-center"
+                  *ngIf="uploadFilesView">
+                  <div class="selected-files" *ngIf="selectedImagesUnsplash.length > 0">
                     Selected files: {{ selectedImagesUnsplash.length }}
                   </div>
                   <button type="button" data-style="expand-right" class="btn btn-simple-primary ml-auto"
@@ -211,19 +217,24 @@ export const FileManagerCodeBlocks = [
 
                 <div class="search-web-content">
                   <div class="search-img-results">
-                    <div class="img-result-container" *ngFor="let img of searchResult"
-                      (click)="selectImageUnsplash(img)">
-                      <img class="img-result" [src]="img.path">
-                      <div class="circle-icon d-flex justify-content-center align-items-center"
-                        *ngIf="isImageUnsplashSelected(img.id)">
-                        <i class="nao-icon-checkmark"></i>
+
+                    <div class="file-element" (click)="selectImageUnsplash(img)"
+                      [ngClass]="{'file-element-active': isImageUnsplashSelected(img.id)}"
+                      *ngFor="let img of searchResult">
+                      <img class="preview-img" [src]="img.path">
+                      <div class="file-details d-flex align-items-center">
+                        <i class="nao-icon-image-placeholder text-secondary-light"></i>
+                        <div class="file-name">
+                          {{ img.name }}
+                        </div>
                       </div>
                     </div>
+
                   </div>
                 </div>
 
-                <div class="nao-file-manager-footer d-flex justify-content-between">
-                  <div class="selected-files align-self-end" *ngIf="selectedImagesUnsplash.length > 0">
+                <div class="nao-file-manager-footer d-flex justify-content-between align-items-center">
+                  <div class="selected-files" *ngIf="selectedImagesUnsplash.length > 0">
                     Selected files: {{ selectedImagesUnsplash.length }}
                   </div>
                   <button type="button" data-style="expand-right" class="btn btn-simple-primary ml-auto"
@@ -285,26 +296,26 @@ export const FileManagerCodeBlocks = [
   
     // -->Unsplash
     public searchResult = [
-      { id: '1', path: 'assets-local/images/photography/1.png' },
-      { id: '2', path: 'assets-local/images/photography/2.png' },
-      { id: '3', path: 'assets-local/images/photography/3.png' },
-      { id: '4', path: 'assets-local/images/photography/4.png' },
-      { id: '5', path: 'assets-local/images/photography/5.png' },
-      { id: '6', path: 'assets-local/images/photography/6.png' },
-      { id: '7', path: 'assets-local/images/photography/7.png' },
-      { id: '8', path: 'assets-local/images/photography/8.png' },
-      { id: '9', path: 'assets-local/images/photography/9.png' },
-      { id: '10', path: 'assets-local/images/photography/1.png' },
-      { id: '11', path: 'assets-local/images/photography/2.png' },
-      { id: '12', path: 'assets-local/images/photography/3.png' },
-      { id: '13', path: 'assets-local/images/photography/4.png' },
-      { id: '14', path: 'assets-local/images/photography/5.png' },
-      { id: '15', path: 'assets-local/images/photography/6.png' },
-      { id: '16', path: 'assets-local/images/photography/7.png' },
-      { id: '17', path: 'assets-local/images/photography/8.png' },
-      { id: '18', path: 'assets-local/images/photography/9.png' },
-      { id: '19', path: 'assets-local/images/photography/10.png' },
-      { id: '20', path: 'assets-local/images/photography/1.png' },
+      { id: '1', name: 'Name image1', path: 'assets-local/images/photography/1.png' },
+      { id: '2', name: 'Name image2', path: 'assets-local/images/photography/2.png' },
+      { id: '3', name: 'Name image3', path: 'assets-local/images/photography/3.png' },
+      { id: '4', name: 'Name image4', path: 'assets-local/images/photography/4.png' },
+      { id: '5', name: 'Name image long long5', path: 'assets-local/images/photography/5.png' },
+      { id: '6', name: 'Name image6', path: 'assets-local/images/photography/6.png' },
+      { id: '7', name: 'Name image long long7', path: 'assets-local/images/photography/7.png' },
+      { id: '8', name: 'Name image8', path: 'assets-local/images/photography/8.png' },
+      { id: '9', name: 'Name image9', path: 'assets-local/images/photography/9.png' },
+      { id: '10', name: 'Name image10', path: 'assets-local/images/photography/1.png' },
+      { id: '11', name: 'Name image11', path: 'assets-local/images/photography/2.png' },
+      { id: '12', name: 'Name image long long 12', path: 'assets-local/images/photography/3.png' },
+      { id: '13', name: 'Name image13', path: 'assets-local/images/photography/4.png' },
+      { id: '14', name: 'Name image14', path: 'assets-local/images/photography/5.png' },
+      { id: '15', name: 'Name image15', path: 'assets-local/images/photography/6.png' },
+      { id: '16', name: 'Name image16', path: 'assets-local/images/photography/7.png' },
+      { id: '17', name: 'Name image17', path: 'assets-local/images/photography/8.png' },
+      { id: '18', name: 'Name image18', path: 'assets-local/images/photography/9.png' },
+      { id: '19', name: 'Name image19', path: 'assets-local/images/photography/10.png' },
+      { id: '20', name: 'Name image20', path: 'assets-local/images/photography/1.png' },
     ]
     public selectedImagesUnsplash = [];
   

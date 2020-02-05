@@ -3,10 +3,8 @@
 
   <div class="elem-container">
     <h2 class="title">File mangare</h2>
-    <p>
-    </p>
-
-
+    <p></p>
+    
     <div class="nao-bd-example">
 
       <div class="nao-file-manager d-flex flex-row">
@@ -50,7 +48,8 @@
                   <div class="action-item" (click)="actionsCdn.sortAsc = !actionsCdn.sortAsc">
                     Name <i class="nao-icon-arrow-up-2 ml-1" [ngClass]="{'rotate-180': !actionsCdn.sortAsc}"></i>
                   </div>
-                  <div class="action-item action-view-item nao-no-user-select" (click)="actionsCdn.viewList = !actionsCdn.viewList">
+                  <div class="action-item action-view-item nao-no-user-select"
+                    (click)="actionsCdn.viewList = !actionsCdn.viewList">
                     <i [className]="actionsCdn.viewList ? 'nao-icon-crm' : 'nao-icon-grid'"></i>
                   </div>
                 </div>
@@ -73,8 +72,8 @@
 
                 <!-- CDN content grid -->
                 <div class="cdn-content-grid" *ngIf="!status.isLoading && actionsCdn.viewList">
-                  <div class="cdn-element" (click)="selectFile(file)"
-                    [ngClass]="{'cdn-element-active': isFileSelected(file)}" *ngFor="let file of fileList">
+                  <div class="file-element" (click)="selectFile(file)"
+                    [ngClass]="{'file-element-active': isFileSelected(file)}" *ngFor="let file of fileList">
 
                     <ng-container *ngIf="file.type === 'file'">
 
@@ -118,8 +117,8 @@
                 <!-- CDN content list -->
 
                 <div class="cdn-content-list" *ngIf="!status.isLoading && !actionsCdn.viewList">
-                  <div class="cdn-element d-flex align-items-center" (click)="selectFile(file)"
-                    [ngClass]="{'cdn-element-active': isFileSelected(file)}" *ngFor="let file of fileList">
+                  <div class="file-element d-flex align-items-center" (click)="selectFile(file)"
+                    [ngClass]="{'file-element-active': isFileSelected(file)}" *ngFor="let file of fileList">
 
                     <div class="preview-container mr-2">
                       <ng-container *ngIf="file.type === 'folder'">
@@ -168,8 +167,6 @@
                   <input type="file" name="avatars" #fileField hidden [multiple]="maxFiles != 1">
                 </div>
 
-                <!-- Summary images for upload -->
-
                 <!-- Summary images to be uploaded -->
                 <div class="upload-summary" *ngIf="uploadFilesView">
                   <div class="file-type">Images</div>
@@ -197,11 +194,10 @@
                     </div>
 
                   </div>
-
                 </div>
 
-
-                <div class="nao-file-manager-footer d-flex justify-content-between align-items-center" *ngIf="uploadFilesView">
+                <div class="nao-file-manager-footer d-flex justify-content-between align-items-center"
+                  *ngIf="uploadFilesView">
                   <div class="selected-files" *ngIf="selectedImagesUnsplash.length > 0">
                     Selected files: {{ selectedImagesUnsplash.length }}
                   </div>
@@ -226,18 +222,21 @@
                 </div>
 
                 <div class="search-web-content">
-
                   <div class="search-img-results">
-                    <div class="img-result-container" *ngFor="let img of searchResult"
-                      (click)="selectImageUnsplash(img)">
-                      <img class="img-result" [src]="img.path">
-                      <div class="circle-icon d-flex justify-content-center align-items-center"
-                        *ngIf="isImageUnsplashSelected(img.id)">
-                        <i class="nao-icon-checkmark"></i>
+
+                    <div class="file-element" (click)="selectImageUnsplash(img)"
+                      [ngClass]="{'file-element-active': isImageUnsplashSelected(img.id)}"
+                      *ngFor="let img of searchResult">
+                      <img class="preview-img" [src]="img.path">
+                      <div class="file-details d-flex align-items-center">
+                        <i class="nao-icon-image-placeholder text-secondary-light"></i>
+                        <div class="file-name">
+                          {{ img.name }}
+                        </div>
                       </div>
                     </div>
+
                   </div>
-                  
                 </div>
 
                 <div class="nao-file-manager-footer d-flex justify-content-between align-items-center">

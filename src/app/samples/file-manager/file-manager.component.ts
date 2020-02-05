@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { AppService } from 'src/app/app.service';
-import { FormControl, FormGroup, Validators, FormArray } from '@angular/forms';
 import { FileManagerCodeBlocks } from './file-manager.interface';
 import { BehaviorSubject, Subscription } from 'rxjs';
 
@@ -55,27 +54,28 @@ export class FileManagerComponent {
 
   // -->Unsplash
   public searchResult = [
-    { id: '1', name: 'name image1', path: 'assets-local/images/photography/1.png' },
-    { id: '2', name: 'name image2', path: 'assets-local/images/photography/2.png' },
-    { id: '3', name: 'name image3', path: 'assets-local/images/photography/3.png' },
-    { id: '4', name: 'name image4', path: 'assets-local/images/photography/4.png' },
-    { id: '5', name: 'name image long long5', path: 'assets-local/images/photography/5.png' },
-    { id: '6', name: 'name image6', path: 'assets-local/images/photography/6.png' },
-    { id: '7', name: 'name image long long7', path: 'assets-local/images/photography/7.png' },
-    { id: '8', name: 'name image8', path: 'assets-local/images/photography/8.png' },
-    { id: '9', name: 'name image9', path: 'assets-local/images/photography/9.png' },
-    { id: '10', name: 'name image10', path: 'assets-local/images/photography/1.png' },
-    { id: '11', name: 'name image11', path: 'assets-local/images/photography/2.png' },
-    { id: '12', name: 'name image long long 12', path: 'assets-local/images/photography/3.png' },
-    { id: '13', name: 'name image13', path: 'assets-local/images/photography/4.png' },
-    { id: '14', name: 'name image14', path: 'assets-local/images/photography/5.png' },
-    { id: '15', name: 'name image15', path: 'assets-local/images/photography/6.png' },
-    { id: '16', name: 'name image16', path: 'assets-local/images/photography/7.png' },
-    { id: '17', name: 'name image17', path: 'assets-local/images/photography/8.png' },
-    { id: '18', name: 'name image18', path: 'assets-local/images/photography/9.png' },
-    { id: '19', name: 'name image19', path: 'assets-local/images/photography/10.png' },
-    { id: '20', name: 'name image20', path: 'assets-local/images/photography/1.png' },
-  ]
+    { id: '1', name: 'Name image1', path: 'assets-local/images/photography/1.png' },
+    { id: '2', name: 'Name image2', path: 'assets-local/images/photography/2.png' },
+    { id: '3', name: 'Name image3', path: 'assets-local/images/photography/3.png' },
+    { id: '4', name: 'Name image4', path: 'assets-local/images/photography/4.png' },
+    { id: '5', name: 'Name image long long5', path: 'assets-local/images/photography/5.png' },
+    { id: '6', name: 'Name image6', path: 'assets-local/images/photography/6.png' },
+    { id: '7', name: 'Name image long long7', path: 'assets-local/images/photography/7.png' },
+    { id: '8', name: 'Name image8', path: 'assets-local/images/photography/8.png' },
+    { id: '9', name: 'Name image9', path: 'assets-local/images/photography/9.png' },
+    { id: '10', name: 'Name image10', path: 'assets-local/images/photography/1.png' },
+    { id: '11', name: 'Name image11', path: 'assets-local/images/photography/2.png' },
+    { id: '12', name: 'Name image long long 12', path: 'assets-local/images/photography/3.png' },
+    { id: '13', name: 'Name image13', path: 'assets-local/images/photography/4.png' },
+    { id: '14', name: 'Name image14', path: 'assets-local/images/photography/5.png' },
+    { id: '15', name: 'Name image15', path: 'assets-local/images/photography/6.png' },
+    { id: '16', name: 'Name image16', path: 'assets-local/images/photography/7.png' },
+    { id: '17', name: 'Name image17', path: 'assets-local/images/photography/8.png' },
+    { id: '18', name: 'Name image18', path: 'assets-local/images/photography/9.png' },
+    { id: '19', name: 'Name image19', path: 'assets-local/images/photography/10.png' },
+    { id: '20', name: 'Name image20', path: 'assets-local/images/photography/1.png' },
+  ];
+
   public selectedImagesUnsplash = [];
 
   // -->Upload:
