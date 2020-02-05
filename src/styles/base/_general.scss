@@ -3,9 +3,11 @@ body {
   line-height: normal;
 }
 
+// todo:
 // Class for RTL fixing
 .body-rtl {}
 
+// todo:
 // Class for skipping .mr-* .ml-* .pr=* .pl-*
 .skip-rtl {}
 
@@ -18,4 +20,12 @@ a {
 // Fix margin for pagination
 .pagination {
   margin-bottom: 0 !important;
+}
+
+// todo: add this to the documentation
+// Don't let a user highlite a text
+.nao-no-user-select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

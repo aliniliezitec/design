@@ -50,7 +50,7 @@
                   <div class="action-item" (click)="actionsCdn.sortAsc = !actionsCdn.sortAsc">
                     Name <i class="nao-icon-arrow-up-2 ml-1" [ngClass]="{'rotate-180': !actionsCdn.sortAsc}"></i>
                   </div>
-                  <div class="action-item action-view-item" (click)="actionsCdn.viewList = !actionsCdn.viewList">
+                  <div class="action-item action-view-item nao-no-user-select" (click)="actionsCdn.viewList = !actionsCdn.viewList">
                     <i [className]="actionsCdn.viewList ? 'nao-icon-crm' : 'nao-icon-grid'"></i>
                   </div>
                 </div>
@@ -59,6 +59,18 @@
                   <loader-infinity></loader-infinity>
                 </div>
 
+                <!-- Icons for extension -->
+                <ng-template #iconForExtension let-fileExt='fileExt'>
+                  <ng-container [ngSwitch]="fileExt">
+                    <i class="nao-icon-image-placeholder text-secondary-light" *ngSwitchCase="'.jpg'"></i>
+                    <i class="nao-icon-file-word text-secondary-lighter" *ngSwitchCase="'.docx'"></i>
+                    <i class="nao-icon-file-pdf text-danger" *ngSwitchCase="'.pdf'"></i>
+                    <i class="nao-icon-file-ppt text-warning" *ngSwitchCase="'.pptx'"></i>
+                    <i class="nao-icon-file-excel text-success" *ngSwitchCase="'.xlsx'"></i>
+                    <i class="nao-icon-box-list text-primary" *ngSwitchDefault></i>
+                  </ng-container>
+                </ng-template>
+
                 <!-- CDN content grid -->
                 <div class="cdn-content-grid" *ngIf="!status.isLoading && actionsCdn.viewList">
                   <div class="cdn-element" (click)="selectFile(file)"
@@ -66,16 +78,19 @@
 
                     <ng-container *ngIf="file.type === 'file'">
 
-                      <img class="preview-img" [src]="file.preview">
+                      <ng-container *ngIf="file.preview != ''">
+                        <img class="preview-img" [src]="file.preview">
+                      </ng-container>
+
+                      <ng-container *ngIf="file.preview === ''">
+                        <div class="preview-icon d-flex align-items-center justify-content-center">
+                          <ng-container *ngTemplateOutlet="iconForExtension; context:{fileExt: file.ext}">
+                          </ng-container>
+                        </div>
+                      </ng-container>
 
                       <div class="file-details d-flex align-items-center">
-
-                        <ng-container [ngSwitch]="file.ext">
-                          <i class="nao-icon-image-placeholder text-secondary-light" *ngSwitchCase="'.jpg'"></i>
-                          <i class="nao-icon-file-word text-secondary-lighter" *ngSwitchCase="'.docx'"></i>
-                          <i class="nao-icon-file-pdf text-danger" *ngSwitchCase="'.pdf'"></i>
-                          <i class="nao-icon-file-ppt text-warning" *ngSwitchCase="'.pptx'"></i>
-                          <i class="nao-icon-box-list text-primary" *ngSwitchDefault></i>
+                        <ng-container *ngTemplateOutlet="iconForExtension; context:{fileExt: file.ext}">
                         </ng-container>
 
                         <div class="file-name">
@@ -112,13 +127,7 @@
                       </ng-container>
 
                       <ng-container *ngIf="file.type === 'file'">
-                        <ng-container [ngSwitch]="file.ext">
-                          <i class="nao-icon-image-placeholder text-secondary-light" *ngSwitchCase="'.jpg'"></i>
-                          <i class="nao-icon-file-word text-secondary-lighter" *ngSwitchCase="'.docx'"></i>
-                          <i class="nao-icon-file-pdf text-danger" *ngSwitchCase="'.pdf'"></i>
-                          <i class="nao-icon-file-ppt text-warning" *ngSwitchCase="'.pptx'"></i>
-                          <i class="nao-icon-file-excel text-success" *ngSwitchCase="'xlsx'"></i>
-                          <i class="nao-icon-box-list text-primary" *ngSwitchDefault></i>
+                        <ng-container *ngTemplateOutlet="iconForExtension; context:{fileExt: file.ext}">
                         </ng-container>
                       </ng-container>
                     </div>
@@ -130,8 +139,8 @@
                   </div>
                 </div>
 
-                <div class="nao-file-manager-footer d-flex justify-content-between">
-                  <div class="selected-files align-self-end" *ngIf="selectedFiles.length > 0">
+                <div class="nao-file-manager-footer d-flex justify-content-between align-items-center">
+                  <div class="selected-files" *ngIf="selectedFiles.length > 0">
                     Selected files: {{ selectedFiles.length }}
                   </div>
                   <button type="button" data-style="expand-right" class="btn btn-simple-primary ml-auto"
@@ -167,8 +176,7 @@
 
                   <div class="summary-list d-flex flex-column">
 
-                    <div class="summary-item d-flex"
-                      *ngFor="let file of filesForUpload">
+                    <div class="summary-item d-flex" *ngFor="let file of filesForUpload">
                       <div class="file-thumbnail">
                         <img [src]="file.path">
                       </div>
@@ -177,8 +185,7 @@
                         <span class="file-size"> 0 / 1.20 mb</span>
                       </div>
                       <div class="file-actions">
-                        <button type="button"
-                          class="btn btn-sm btn-without-box-shaddow p-0">
+                        <button type="button" class="btn btn-sm btn-without-box-shaddow p-0">
                           <i class="nao-icon-cancel"></i>
                         </button>
                       </div>
@@ -194,8 +201,8 @@
                 </div>
 
 
-                <div class="nao-file-manager-footer d-flex justify-content-between" *ngIf="uploadFilesView">
-                  <div class="selected-files align-self-end" *ngIf="selectedImagesUnsplash.length > 0">
+                <div class="nao-file-manager-footer d-flex justify-content-between align-items-center" *ngIf="uploadFilesView">
+                  <div class="selected-files" *ngIf="selectedImagesUnsplash.length > 0">
                     Selected files: {{ selectedImagesUnsplash.length }}
                   </div>
                   <button type="button" data-style="expand-right" class="btn btn-simple-primary ml-auto"
@@ -219,6 +226,7 @@
                 </div>
 
                 <div class="search-web-content">
+
                   <div class="search-img-results">
                     <div class="img-result-container" *ngFor="let img of searchResult"
                       (click)="selectImageUnsplash(img)">
@@ -229,10 +237,11 @@
                       </div>
                     </div>
                   </div>
+                  
                 </div>
 
-                <div class="nao-file-manager-footer d-flex justify-content-between">
-                  <div class="selected-files align-self-end" *ngIf="selectedImagesUnsplash.length > 0">
+                <div class="nao-file-manager-footer d-flex justify-content-between align-items-center">
+                  <div class="selected-files" *ngIf="selectedImagesUnsplash.length > 0">
                     Selected files: {{ selectedImagesUnsplash.length }}
                   </div>
                   <button type="button" data-style="expand-right" class="btn btn-simple-primary ml-auto"

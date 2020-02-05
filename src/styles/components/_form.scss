@@ -432,9 +432,8 @@ input[type=number] {
       color: var(--text-primary);
       position: absolute;
       font-size: 15px;
-      position: absolute;
       left: 24px;
-      top: 5px;
+      top: 9px;
       content: "\f999";
     }
 
@@ -493,7 +492,7 @@ input[type=number] {
 
     .selected-files {
       font-size: pixelToRem(12px);
-      font-weight: $font-weight-bold;
+      font-weight: $font-weight-semibold;
     }
   }
 
