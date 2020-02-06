@@ -7,10 +7,17 @@
 // *************************************************
 // Nao card 1
 .nao-card-1 {
+  .card-header {
+    padding: 15px 40px;
+  }
+
   .card-body {
+    padding: 24px 40px 15px 40px;
     background-color: var(--bg-3);
-    border-top: 1px solid #caccd7;
-    border-bottom: 1px solid #caccd7;
+  }
+
+  .card-footer {
+    padding: 15px 30px;
   }
 }
 
@@ -331,7 +338,7 @@
   .already-have-a-user {
     font-size: pixelToRem(12px);
     font-weight: $font-weight-semibold;
-    
+
     a {
       text-decoration: underline;
       color: var(--text-primary);
