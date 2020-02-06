@@ -304,7 +304,7 @@ $value in $theme-colors {
 
 
 
-// todo: add box shaddowless btn
+// todo: add box shadowless btn
 .btn-without-box-shaddow {
   &:focus {
     box-shadow: none;
@@ -318,4 +318,26 @@ $value in $theme-colors {
       box-shadow: none;
     }
   }
+}
+
+// *************************************************
+// Fix for centering butons vertically
+// todo: remove this in case it messes up other things
+.btn {
+  padding-top: pixelToRem(11px);
+  padding-bottom: pixelToRem(9px);
+  line-height: 1;
+}
+.btn-lg {
+  padding-top: pixelToRem(13px);
+  padding-bottom: pixelToRem(12px);
+}
+
+.btn-xl {
+  padding-top: pixelToRem(21px);
+  padding-bottom: pixelToRem(18px);
+}
+
+.btn-sm {
+  padding: pixelToRem(6px) pixelToRem(5px);
 }
