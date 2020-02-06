@@ -2,7 +2,7 @@ export const DropdownCodeBlocks = [
     {
         html: `
         <div class="btn-group" ngbDropdown container="body" [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
-          <button type="button" class="btn p-0" ngbDropdownToggle>
+          <button type="button" class="btn p-0 btn-without-box-shaddow" ngbDropdownToggle>
             Menu
           </button>
           <div class="nao-dropdown-1" ngbDropdownMenu>
@@ -64,7 +64,7 @@ export const DropdownCodeBlocks = [
     {
         html: `
         <div class="btn-group" ngbDropdown [placement]="$flow.isRTL() ? 'bottom-left' : 'bottom-right'">
-          <button class="btn nao-btn-dropdown-menu-1" ngbDropdownToggle>
+          <button class="btn nao-btn-dropdown-menu-1 btn-without-box-shaddow" ngbDropdownToggle>
             Currency
           </button>
           <div class="nao-dropdown-2" ngbDropdownMenu>

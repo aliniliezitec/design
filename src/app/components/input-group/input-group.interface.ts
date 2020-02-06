@@ -2,7 +2,7 @@ export const InputGroupCodeBlocks = [
     {
         html: `
         <div class="input-group nao-input-dropdown-group-1" [formGroup]="formGroupHeight">
-          <label class="nao-label-sm-2">
+          <label class="nao-label-sm-1">
             Height
           </label>
           <div class="d-flex flex-column">

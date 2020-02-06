@@ -1,23 +1,23 @@
 export const FormsCodeBlocks = [
   {
     html: `
-        <div class="modal nao-modal-2" tabindex="-1" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
+    <div class="modal nao-modal nao-modal-2" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
 
-            <div class="modal-header flex-column">
-              <h6 class="modal-title">
-                Add contact <br />
-              </h6>
-              <div>Create a new contact</div>
-            </div>
+          <div class="modal-header flex-column">
+            <h5 class="modal-title">
+              Add contact
+            </h5>
+            <div>Create a new contact</div>
+          </div>
             <div class="modal-body nao-modal-body-2">
               <form>
                 <div [formGroup]="formGroup">
                   <div formGroupName="info">
                     <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
                       <div class="col-12 col-sm-5 text-left text-sm-right ">
-                        <label class="nao-label-2">
+                        <label class="nao-label-1">
                           First name
                           <sup class="text-danger">*</sup>
                         </label>
@@ -37,7 +37,7 @@ export const FormsCodeBlocks = [
                     </div>
                     <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
                       <div class="col-12 col-sm-5 text-left text-sm-right ">
-                        <label class="nao-label-2">
+                        <label class="nao-label-1">
                           Last name
                           <sup class="text-danger">*</sup>
                         </label>
@@ -58,7 +58,7 @@ export const FormsCodeBlocks = [
                   </div>
                   <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
                     <div class="col-12 col-sm-5 text-left text-sm-right ">
-                      <label class="nao-label-2">
+                      <label class="nao-label-1">
                         Company
                       </label>
                     </div>
@@ -83,7 +83,7 @@ export const FormsCodeBlocks = [
                   </div>
                   <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
                     <div class="col-12 col-sm-5 text-left text-sm-right ">
-                      <label class="nao-label-2">
+                      <label class="nao-label-1">
                         Email
                         <sup class="text-danger">*</sup>
                       </label>
@@ -104,7 +104,7 @@ export const FormsCodeBlocks = [
                   <div></div>
                   <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
                     <div class="col-12 col-sm-5 text-left text-sm-right">
-                      <label class="nao-label-2">
+                      <label class="nao-label-1">
                         Language
                       </label>
                     </div>
@@ -134,7 +134,7 @@ export const FormsCodeBlocks = [
                   </div>
                   <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
                     <div class="col-12 col-sm-5 text-left text-sm-right ">
-                      <label class="nao-label-2">
+                      <label class="nao-label-1">
                         Country
                         <sup class="text-danger">*</sup>
                       </label>
@@ -165,7 +165,7 @@ export const FormsCodeBlocks = [
                   </div>
                   <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
                     <div class="col-12 col-sm-5 text-left text-sm-right ">
-                      <label class="nao-label-2">
+                      <label class="nao-label-1">
                         Facebook
                       </label>
                     </div>
@@ -182,7 +182,7 @@ export const FormsCodeBlocks = [
                   </div>
                   <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
                     <div class="col-12 col-sm-5 text-left text-sm-right ">
-                      <label class="nao-label-2">
+                      <label class="nao-label-1">
                         Linkedin
                       </label>
                     </div>
@@ -199,7 +199,7 @@ export const FormsCodeBlocks = [
                   </div>
                   <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
                     <div class="col-12 col-sm-5 text-left text-sm-right ">
-                      <label class="nao-label-2">
+                      <label class="nao-label-1">
                         Twitter
                       </label>
                     </div>
@@ -265,7 +265,7 @@ export const FormsCodeBlocks = [
                     <div class="box-container">
                       <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
                         <div class="col-12 col-sm-5 text-left text-sm-right">
-                          <label class="nao-label-sm-2">
+                          <label class="nao-label-sm-1">
                             Name
                             <sup class="text-danger">*</sup>
                           </label>
@@ -281,7 +281,7 @@ export const FormsCodeBlocks = [
                       </div>
                       <div class="d-flex flex-column flex-sm-row mb-3 no-gutters-xs">
                         <div class="col-12 col-sm-5 text-left text-sm-right">
-                          <label class="nao-label-sm-2 pt-1">
+                          <label class="nao-label-sm-1 pt-1">
                             Description
                           </label>
                         </div>
@@ -299,7 +299,7 @@ export const FormsCodeBlocks = [
                     <div class="box-container">
                       <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
                         <div class="col-12 col-sm-5 text-left text-sm-right">
-                          <label class="nao-label-sm-2">
+                          <label class="nao-label-sm-1">
                             Price
                             <sup class="text-danger">*</sup>
                           </label>
@@ -312,7 +312,7 @@ export const FormsCodeBlocks = [
                       </div>
                       <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
                         <div class="col-12 col-sm-5 text-left text-sm-right">
-                          <label class="nao-label-sm-2">
+                          <label class="nao-label-sm-1">
                             Cost
                           </label>
                         </div>
@@ -331,7 +331,7 @@ export const FormsCodeBlocks = [
                     <div class="box-container">
                       <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
                         <div class="col-12 col-sm-5 text-left text-sm-right">
-                          <label class="nao-label-sm-2">
+                          <label class="nao-label-sm-1">
                             SKU
                           </label>
                         </div>
@@ -343,7 +343,7 @@ export const FormsCodeBlocks = [
                       </div>
                       <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
                         <div class="col-12 col-sm-5 text-left text-sm-right">
-                          <label class="nao-label-sm-2">
+                          <label class="nao-label-sm-1">
                             Barcode
                           </label>
                         </div>
@@ -355,7 +355,7 @@ export const FormsCodeBlocks = [
                       </div>
                       <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
                         <div class="col-12 col-sm-5 text-left text-sm-right">
-                          <label class="nao-label-sm-2">
+                          <label class="nao-label-sm-1">
                             Quantity
                           </label>
                         </div>
@@ -383,7 +383,7 @@ export const FormsCodeBlocks = [
                         
                         <div class="nao-grid-4-input-dropdown">
                           <div class="input-group nao-input-dropdown-group-1 nao-shippable-input-group">
-                            <label class="nao-label-sm-2 mr-auto">
+                            <label class="nao-label-sm-1 mr-auto">
                               Weight
                             </label>
                             <div class="d-flex flex-column">
@@ -402,7 +402,7 @@ export const FormsCodeBlocks = [
                           </div>
 
                           <div class="input-group nao-input-dropdown-group-1 nao-shippable-input-group">
-                            <label class="nao-label-sm-2 mr-auto">
+                            <label class="nao-label-sm-1 mr-auto">
                               Height
                             </label>
                             <div class="d-flex flex-column">
@@ -421,7 +421,7 @@ export const FormsCodeBlocks = [
                           </div>
 
                           <div class="input-group nao-input-dropdown-group-1 nao-shippable-input-group">
-                            <label class="nao-label-sm-2 mr-auto">
+                            <label class="nao-label-sm-1 mr-auto">
                               Length
                             </label>
                             <div class="d-flex flex-column">
@@ -440,7 +440,7 @@ export const FormsCodeBlocks = [
                           </div>
 
                           <div class="input-group nao-input-dropdown-group-1 nao-shippable-input-group">
-                            <label class="nao-label-sm-2 mr-auto">
+                            <label class="nao-label-sm-1 mr-auto">
                               Width
                             </label>
                             <div class="d-flex flex-column">
@@ -496,7 +496,7 @@ export const FormsCodeBlocks = [
 
                           <div class="d-flex flex-column flex-md-row">
                             <div class="d-flex flex-column pr-2 mb-2">
-                              <label class="nao-label-sm-2">
+                              <label class="nao-label-sm-1">
                                 Ordered quantity
                               </label>
                               <input type="number" autocomplete="off"
@@ -505,7 +505,7 @@ export const FormsCodeBlocks = [
                             </div>
 
                             <div class="d-flex flex-column pr-2 mb-2">
-                              <label class="nao-label-sm-2">
+                              <label class="nao-label-sm-1">
                                 Unit price
                               </label>
                               <input type="text" autocomplete="off"
@@ -514,7 +514,7 @@ export const FormsCodeBlocks = [
                             </div>
 
                             <div class="d-flex flex-column pr-2 mb-2">
-                              <label class="nao-label-sm-2">
+                              <label class="nao-label-sm-1">
                                 Taxes
                               </label>
                               <input type="text" autocomplete="off"
@@ -523,10 +523,10 @@ export const FormsCodeBlocks = [
                             </div>
 
                             <div class="d-flex flex-column pr-2 item-mb-fix">
-                              <label class="nao-label-sm-2">
+                              <label class="nao-label-sm-1">
                                 Subtotal
                               </label>
-                              <label class="nao-label-sm-2 mt-auto mb-0">
+                              <label class="nao-label-sm-1 mt-auto mb-0">
                                 160$
                               </label>
                             </div>
@@ -538,7 +538,7 @@ export const FormsCodeBlocks = [
                             </div>
                           </div>
                         </div>
-                        <button type="button" class="btn-sm btn-simple-primary d-flex align-items-center add-another-btn">
+                        <button type="button" class="btn btn-sm btn-simple-primary d-flex align-items-center add-another-btn">
                           <i class="nao-icon-add-filled mr-1"></i>
                           <span>Add another</span>
                         </button>
@@ -598,7 +598,7 @@ export const FormsCodeBlocks = [
       </div>
       <div class="row">
         <div class="form-group mb-0 col-md-6">
-          <label class="nao-label-sm-4" for="firstName">First name</label>
+          <label class="nao-label-sm-3" for="firstName">First name</label>
           <input class="form-control form-control-sm mb-1" autocomplete="false" type="text"
             formControlName="firstName" placeholder="Meg" id="firstName">
           <span [hidden]="formGroup3.get('firstName').pristine || formGroup3.get('firstName').valid"
@@ -607,7 +607,7 @@ export const FormsCodeBlocks = [
           </span>
         </div>
         <div class="form-group mb-0 col-md-6">
-          <label class="nao-label-sm-4" for="lastName">Last name</label>
+          <label class="nao-label-sm-3" for="lastName">Last name</label>
           <input class="form-control form-control-sm mb-1" autocomplete="false" type="text"
             formControlName="lastName" placeholder="Griffin" id="lastName" />
           <span [hidden]="formGroup3.get('lastName').pristine || formGroup3.get('lastName').valid"
@@ -618,7 +618,7 @@ export const FormsCodeBlocks = [
       </div>
 
       <div class="form-group mb-0">
-        <label class="nao-label-sm-4" for="email">Email</label>
+        <label class="nao-label-sm-3" for="email">Email</label>
         <input class="form-control form-control-sm mb-1" autocomplete="false" type="text" formControlName="email"
           placeholder="elon@musk.com" id="email" />
         <span [hidden]="formGroup3.get('email').pristine || formGroup3.get('email').valid" class="text-danger">
@@ -627,7 +627,7 @@ export const FormsCodeBlocks = [
       </div>
 
       <div class="form-group mb-0">
-        <label class="nao-label-sm-4" for="companyName">Company</label>
+        <label class="nao-label-sm-3" for="companyName">Company</label>
         <input class="form-control form-control-sm mb-1" autocomplete="false" type="text"
           formControlName="companyName" placeholder="SpaceX Inc" id="companyName" />
         <span [hidden]="formGroup3.get('companyName').pristine || formGroup3.get('companyName').valid"
@@ -637,7 +637,7 @@ export const FormsCodeBlocks = [
       </div>
 
       <div class="form-group mb-0">
-        <label class="nao-label-sm-4">Employees</label>
+        <label class="nao-label-sm-3">Employees</label>
         <br />
         <ng-select class="nao-ng-select-sm" [searchable]="false" formControlName="employees"
           [ngClass]="{'nao-input-danger': !formGroup3.get('employees').disabled && formGroup3.get('employees').invalid }">
@@ -654,7 +654,7 @@ export const FormsCodeBlocks = [
       </div>
 
       <div class="form-group mb-0">
-        <label class="nao-label-sm-4" for="password">Password</label>
+        <label class="nao-label-sm-3" for="password">Password</label>
         <input class="form-control form-control-sm mb-1" autocomplete="false" type="password"
           formControlName="password" placeholder="SpaceX Inc" id="password" />
         <span [hidden]="formGroup3.get('password').pristine || formGroup3.get('password').valid" class="text-danger">
@@ -662,7 +662,7 @@ export const FormsCodeBlocks = [
         </span>
       </div>
       <div class="form-group mb-0">
-        <label class="nao-label-sm-4" for="confirmPassword">Confirm password</label>
+        <label class="nao-label-sm-3" for="confirmPassword">Confirm password</label>
         <input class="form-control form-control-sm mb-1" autocomplete="false" type="password"
           formControlName="confirmPassword" placeholder="SpaceX Inc" id="confirmPassword" />
         <span [hidden]="formGroup3.get('confirmPassword').pristine || formGroup3.get('confirmPassword').valid"
@@ -671,7 +671,7 @@ export const FormsCodeBlocks = [
         </span>
       </div>
       <div class="form-group mb-0">
-        <label class="nao-label-sm-4">Country</label>
+        <label class="nao-label-sm-3">Country</label>
 
         <ng-select class="nao-ng-select-sm" bindLabel="name" bindValue="value" [multiple]="false"
           formControlName="countryId">

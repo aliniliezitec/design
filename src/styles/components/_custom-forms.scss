@@ -213,7 +213,7 @@ $custom-switch-lg-top-fix: 3px;
 // *************************************************
 // Label
 
-.nao-badge {
+.nao-badge-pill {
   padding: 2px 10px;
   font-size: pixelToRem(15px);
   border-radius: 18px;
@@ -234,9 +234,8 @@ $custom-switch-lg-top-fix: 3px;
 }
 
 // *************************************************
-// Badges (pills in the design)
-
-.nao-badge-pill {
+// Badges
+.nao-badge {
   font-size: pixelToRem(16px);
   padding: 5px 10px;
   line-height: normal;

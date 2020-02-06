@@ -31,22 +31,33 @@ export const CardsCodeBlocks = [
         </div>`},
   {
     html: `
-        <div class="nao-card-sm-dashboard bg-white d-flex align-items-center">
+        <div class="nao-card-sm-dashboard bg-white d-flex align-items-center mr-3 mb-3">
           <div class="d-flex flex-column">
-            <span class="nao-card-subtitle">Number of deals won</span>
-            <span class="nao-card-number">631</span>
+            <span class="nao-card-subtitle">Metric name</span>
+            <span class="nao-card-number">00000</span>
             <span class="nao-card-percentage text-success">
               100%
             </span>
           </div>
-        </div>`},
+        </div>
+
+        <div class="nao-card-sm-dashboard bg-white d-flex align-items-center mr-3 mb-3">
+          <div class="d-flex flex-column align-items-center mx-auto">
+            <span class="nao-card-subtitle">Metric name</span>
+            <span class="nao-card-number font-weight-bold">00000</span>
+            <span class="nao-card-percentage text-success">
+              100%
+            </span>
+          </div>
+        </div>
+        `},
   {
     html: `
         <div class="nao-dashboard-lg-card bg-white">
           <div class="d-flex justify-content-between align-items-center title-container">
-            <div class="nao-card-title">Closed deals</div>
+            <div class="nao-card-title">Card title</div>
             <div class="btn-group" ngbDropdown [placement]="$flow.isRTL() ? 'bottom-left' : 'bottom-right'">
-              <button class="btn nao-btn-dropdown-menu-1" ngbDropdownToggle>Currency
+              <button class="btn nao-btn-dropdown-menu-1 btn-without-box-shaddow" ngbDropdownToggle>View options
               </button>
               <div class="nao-dropdown-2" ngbDropdownMenu>
                 <a class="dropdown-item" href="javascript:void(0)">Currency</a>
@@ -55,7 +66,7 @@ export const CardsCodeBlocks = [
             </div>
           </div>
           <div class="nao-dashboard-card-body">
-            Card body
+            
           </div>
         </div>`},
   {
@@ -75,7 +86,7 @@ export const CardsCodeBlocks = [
             <div class="ticket-header">
             Ticket name
                 <div class="btn-group ticket-options-btn ml-2" ngbDropdown container="body">
-                    <button type="button" class="btn ticket-btn" ngbDropdownToggle>
+                    <button type="button" class="btn ticket-btn btn-without-box-shaddow" ngbDropdownToggle>
                     </button>
                         <div ngbDropdownMenu class="nao-dropdown-1">
                         <a class="dropdown-item" href="javascript:void(0)" >Delete</a>
@@ -92,7 +103,7 @@ export const CardsCodeBlocks = [
           <div class="ticket-header">
             Ticket name
             <div class="btn-group ticket-options-btn ml-2" ngbDropdown container="body">
-              <button type="button" class="btn ticket-btn" ngbDropdownToggle>
+              <button type="button" class="btn ticket-btn btn-without-box-shaddow" ngbDropdownToggle>
 
               </button>
               <div ngbDropdownMenu class="nao-dropdown-1">
@@ -185,7 +196,7 @@ export const CardsCodeBlocks = [
                 <div class="nao-lane-header">
                     In progress
                     <div class="btn-group float-right ml-2" ngbDropdown container="body">
-                        <button type="button" class="btn ticket-btn" ngbDropdownToggle>
+                        <button type="button" class="btn ticket-btn btn-without-box-shaddow" ngbDropdownToggle>
                         </button>
                         <div ngbDropdownMenu class="nao-dropdown-1">
                         <a class="dropdown-item" href="javascript:void(0)">Delete</a>
@@ -204,7 +215,7 @@ export const CardsCodeBlocks = [
                 <div class="nao-lane-header">
                         In progress
                         <div class="btn-group float-right ml-2" ngbDropdown container="body">
-                            <button type="button" class="btn ticket-btn" ngbDropdownToggle>
+                            <button type="button" class="btn ticket-btn btn-without-box-shaddow" ngbDropdownToggle>
                             </button>
                             <div ngbDropdownMenu class="nao-dropdown-1">
                                 <a class="dropdown-item" href="javascript:void(0)">Delete</a>
@@ -217,7 +228,7 @@ export const CardsCodeBlocks = [
                     <div class="ticket-header">
                         Ticket name
                         <div class="btn-group ticket-options-btn ml-2" ngbDropdown container="body">
-                            <button type="button" class="btn ticket-btn" ngbDropdownToggle>
+                            <button type="button" class="btn ticket-btn btn-without-box-shaddow" ngbDropdownToggle>
                             </button>
                             <div ngbDropdownMenu class="nao-dropdown-1">
                                 <a class="dropdown-item" href="javascript:void(0)">Delete</a>
@@ -328,11 +339,11 @@ export const CardsCodeBlocks = [
             <div class="nao-card-form-1">
             <form>
                 <div class="form-group">
-                    <label class="nao-label-sm-3">Email</label>
+                    <label class="nao-label-sm-2">Email</label>
                     <input name="email" type="text" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label class="nao-label-sm-3">Password</label>
+                    <label class="nao-label-sm-2">Password</label>
                     <input name="password" type="password" class="form-control">
                 </div>
                 <div class="mb-3">
@@ -342,7 +353,7 @@ export const CardsCodeBlocks = [
                 </div>
                     <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" name="rememberMe" id="rememberMe">
-                    <label class="custom-control-label nao-label-sm-3 pt-1" for="rememberMe">Remember me</label>
+                    <label class="custom-control-label nao-label-sm-2 pt-1" for="rememberMe">Remember me</label>
                     </label>
                 <hr />
                 <a href="javascript:void(0)" class="forgot-pass">
@@ -366,7 +377,7 @@ export const CardsCodeBlocks = [
             <img src="assets-local/images/placeholder/default-avatar.png">
           </div>
           <div class="form-group">
-            <label class="nao-label-sm-3">Password</label>
+            <label class="nao-label-sm-2">Password</label>
             <input name="password" type="password" class="form-control">
           </div>
           <div class="mb-3">

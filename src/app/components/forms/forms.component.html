@@ -107,15 +107,15 @@
               <td>#687196</td>
             </tr>
             <tr>
-              <td><code>.nao-label-2</code></td>
+              <td><code>.nao-label-sm-1</code></td>
               <td>
-                <label class="nao-label-2">
-                  Nao label 2
+                <label class="nao-label-sm-1">
+                  Nao label sm 1
                   <sup class="text-danger">*</sup>
                 </label>
               </td>
-              <td><code>600</code></td>
-              <td><code>16px</code></td>
+              <td><code>400</code></td>
+              <td><code>13px</code></td>
               <td>#687196</td>
             </tr>
             <tr>
@@ -128,25 +128,13 @@
               </td>
               <td><code>400</code></td>
               <td><code>13px</code></td>
-              <td>#687196</td>
+              <td>#030929</td>
             </tr>
             <tr>
               <td><code>.nao-label-sm-3</code></td>
               <td>
                 <label class="nao-label-sm-3">
                   Nao label sm 3
-                  <sup class="text-danger">*</sup>
-                </label>
-              </td>
-              <td><code>400</code></td>
-              <td><code>13px</code></td>
-              <td>#030929</td>
-            </tr>
-            <tr>
-              <td><code>.nao-label-sm-4</code></td>
-              <td>
-                <label class="nao-label-sm-4">
-                  Nao label sm 4
                   <sup class="text-danger">*</sup>
                 </label>
               </td>
@@ -171,11 +159,20 @@
     </div>
   </div>
 
+
   <div class="elem-container">
-    <h2 class="title">Validation</h2>
-    <p>We recommend using client side validation, but in case you require server side, you can indicate invalid and
-      valid form fields with <code>.is-invalid</code> and <code>.is-valid</code>. And for showing a validation message,
-      you could use a <code>span</code> with a class of <code>.text-danger</code></p>
+    <h2 class="title">Labels usage example</h2>
+    <ul>
+      <li>
+        <span class="highlighter-warning">Above label</span> should have a <code>5px margin bottom</code> (the default margin bottom for <code>label</code> tag is 5px )
+      </li>
+      <li>
+        <span class="highlighter-warning">Below label</span> should have a <code>10px margin top</code>
+      </li>
+      <li>
+        <span class="highlighter-warning">Inline</span> should have a <code>15px margin right</code>
+      </li>
+    </ul>
     <div class='nao-bd-example' [innerHTML]="data[6].html | sanitizeHtml"></div>
 
     <div class="nao-bd-clipboard">
@@ -188,12 +185,10 @@
   </div>
 
   <div class="elem-container">
-    <h2 class="title">Switches</h2>
-    <p>
-      A switch has the markup of a custom checkbox but uses the <code>.custom-switch</code> class to render a toggle
-      switch. Switches also support the <code>disabled</code> attribute.
-    </p>
-
+    <h2 class="title">Validation</h2>
+    <p>We recommend using client side validation, but in case you require server side, you can indicate invalid and
+      valid form fields with <code>.is-invalid</code> and <code>.is-valid</code>. And for showing a validation message,
+      you could use a <code>span</code> with a class of <code>.text-danger</code></p>
     <div class='nao-bd-example' [innerHTML]="data[7].html | sanitizeHtml"></div>
 
     <div class="nao-bd-clipboard">
@@ -206,7 +201,11 @@
   </div>
 
   <div class="elem-container">
-    <h2 class="title">Switches sizing</h2>
+    <h2 class="title">Switches</h2>
+    <p>
+      A switch has the markup of a custom checkbox but uses the <code>.custom-switch</code> class to render a toggle
+      switch. Switches also support the <code>disabled</code> attribute.
+    </p>
 
     <div class='nao-bd-example' [innerHTML]="data[8].html | sanitizeHtml"></div>
 
@@ -220,7 +219,7 @@
   </div>
 
   <div class="elem-container">
-    <h2 class="title">Radio buttons</h2>
+    <h2 class="title">Switches sizing</h2>
 
     <div class='nao-bd-example' [innerHTML]="data[9].html | sanitizeHtml"></div>
 
@@ -234,7 +233,7 @@
   </div>
 
   <div class="elem-container">
-    <h2 class="title">Checkboxes</h2>
+    <h2 class="title">Radio buttons</h2>
 
     <div class='nao-bd-example' [innerHTML]="data[10].html | sanitizeHtml"></div>
 
@@ -244,6 +243,20 @@
     </div>
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[10].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+  </div>
+
+  <div class="elem-container">
+    <h2 class="title">Checkboxes</h2>
+
+    <div class='nao-bd-example' [innerHTML]="data[11].html | sanitizeHtml"></div>
+
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[11].html)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[11].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
   </div>
 
@@ -273,22 +286,6 @@
 
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[11].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
-    </div>
-    <div class="nao-example-highlight">
-      <pre><div [innerHTML]="data[11].html | htmlPrismPipe | sanitizeHtml"></div></pre>
-    </div>
-
-  </div>
-
-
-  <div class="elem-container">
-    <h2 class="title">Labels</h2>
-
-    <div class='nao-bd-example' [innerHTML]="data[12].html | sanitizeHtml"></div>
-
-    <div class="nao-bd-clipboard">
       <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[12].html)" placement="top"
         ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
     </div>
@@ -298,8 +295,9 @@
 
   </div>
 
+
   <div class="elem-container">
-    <h2 class="title">Pills</h2>
+    <h2 class="title">Labels</h2>
 
     <div class='nao-bd-example' [innerHTML]="data[13].html | sanitizeHtml"></div>
 
@@ -309,6 +307,21 @@
     </div>
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[13].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+
+  </div>
+
+  <div class="elem-container">
+    <h2 class="title">Badges</h2>
+
+    <div class='nao-bd-example' [innerHTML]="data[14].html | sanitizeHtml"></div>
+
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[14].html)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[14].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
 
   </div>

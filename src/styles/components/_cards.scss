@@ -25,9 +25,8 @@
   line-height: normal;
 
   .nao-card-subtitle {
-    font-size: pixelToRem(20px);
-    // font-weight: $font-weight-bold;
-    color: var(--text-primary-lighter);
+    font-size: pixelToRem(16px);
+    color: var(--text-primary);
   }
 
   .nao-card-number {
@@ -38,7 +37,6 @@
 
   .nao-card-percentage {
     font-size: pixelToRem(13px);
-    // font-weight: $font-weight-bold;
   }
 }
 
@@ -74,9 +72,7 @@
     padding: 0 20px;
 
     .nao-card-title {
-      font-size: pixelToRem(14px);
-      font-weight: $font-weight-bold;
-      line-height: 1.29;
+      font-size: pixelToRem(16px);
       color: var(--text-primary-lighter);
     }
 
@@ -145,7 +141,6 @@
   margin: 0 16px 10px 16px;
   border-radius: 8px;
   background-color: var(--white);
-  // border: solid 2px var(--text-7);
 
   .dropdown-item {
     font-size: pixelToRem(12px);
@@ -200,8 +195,7 @@
       }
 
       .ticket-text {
-        font-weight: $font-weight-bold;
-        // margin-left: 16px;
+        font-weight: $font-weight-semibold;
         font-size: pixelToRem(12px);
       }
 
@@ -264,7 +258,6 @@
     padding: 17px 27px 20px 22px;
     font-size: pixelToRem(14px);
     font-weight: $font-weight-lighter;
-    color: var(--text-primary-lightest);
   }
 
   .nao-lane-footer {
@@ -337,12 +330,12 @@
 
   .already-have-a-user {
     font-size: pixelToRem(12px);
-    color: var(--text-primary);
-    font-weight: $font-weight-bold;
-
+    font-weight: $font-weight-semibold;
+    
     a {
       text-decoration: underline;
       color: var(--text-primary);
+      font-weight: $font-weight-bold;
     }
   }
 
@@ -439,12 +432,12 @@
 }
 
 .nao-shippable-input-group {
-  .nao-label-sm-2 {
+  .nao-label-sm-1 {
     min-width: 58px;
   }
 
   .ng-select {
-    min-width: 58px;
+    min-width: 52px;
     max-width: 285px;
   }
 }

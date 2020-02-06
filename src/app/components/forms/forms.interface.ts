@@ -63,8 +63,8 @@ export const FormsCodeBlocks = [
             Nao label 1
             <sup class="text-danger">*</sup>
         </label>
-        <label class="nao-label-2">
-            Nao label 2
+        <label class="nao-label-sm-1">
+            Nao label sm 1
             <sup class="text-danger">*</sup>
         </label>
         <label class="nao-label-sm-2">
@@ -75,11 +75,20 @@ export const FormsCodeBlocks = [
             Nao label sm 3
             <sup class="text-danger">*</sup>
         </label>
-        <label class="nao-label-sm-4">
-            Nao label sm 4
-            <sup class="text-danger">*</sup>
-        </label>
       ` },
+    {
+        html: `
+            <div class="form-group">
+                <label class="nao-label-1" for="exampleLabels1">Above</label>
+                <input type="password" class="form-control nao-mw-290" id="exampleLabels1" placeholder="Password">
+                <label class="nao-label-1 mt-1">Below</label>
+            </div>
+
+            <div class="form-group d-flex flex-row align-items-center">
+                <label class="nao-label-1 text-danger mr-3 mb-0" for="exampleLabels2">Inline</label>
+                <input type="password" class="form-control is-invalid nao-mw-290" id="exampleLabels2" placeholder="Password">
+            </div>
+        `},
     {
         html: `
             <form>
@@ -186,20 +195,20 @@ export const FormsCodeBlocks = [
         <span class="badge badge-pill nao-tag-1 nao-tag-sm">Type something</span>`
     }, {
         html: `
-        <span class="nao-badge nao-badge-label-1 mr-3 mb-3">Something</span>
-        <span class="nao-badge nao-badge-label-2 mb-3">Something</span>`
+        <span class="nao-badge-pill nao-badge-label-1 mr-3 mb-3">Something</span>
+        <span class="nao-badge-pill nao-badge-label-2 mb-3">Something</span>`
     },
     {
         html: `
-        <span class="nao-badge-pill nao-badge-outline mb-4 mr-3">
+        <span class="nao-badge nao-badge-outline mb-4 mr-3">
             <i class="nao-icon-add mr-1"></i>Add a filter
         </span>
-        <span class="nao-badge-pill nao-badge-1 mb-4 mr-3">
+        <span class="nao-badge nao-badge-1 mb-4 mr-3">
             <div class="d-flex align-items-center">
             <span class="badge-text">First name: “John” </span><i class="nao-icon-cancel ml-2"></i>
             </div>
         </span>
-        <span class="nao-badge-pill nao-badge-1 mb-4 mr-3">
+        <span class="nao-badge nao-badge-1 mb-4 mr-3">
             <div class="d-flex align-items-center">
             <span class="badge-text">First name: “Johnjohusu Mcgregor Mcgregor" </span><i class="nao-icon-cancel ml-2"></i>
             </div>

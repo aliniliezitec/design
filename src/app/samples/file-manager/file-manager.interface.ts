@@ -2,11 +2,6 @@ export const FileManagerCodeBlocks = [
   {
     html: `
     <div class="nao-file-manager d-flex flex-row">
-
-        <a class="close-modal" href="javascript:void(0)" (click)="dismiss()">
-          <i class="nao-icon-cancel"></i>
-        </a>
-
         <div class="nao-content-source d-flex flex-column">
           <div class="source-btn pl-3 d-flex align-items-center" *ngFor="let cs of allowContentSources"
             (click)="dataSource$.next(cs)" [ngClass]="{'bg-white': cs === dataSource$.value}">
@@ -250,6 +245,10 @@ export const FileManagerCodeBlocks = [
           </form>
         </div>
 
+        <a class="close-modal" href="javascript:void(0)" (click)="dismiss()">
+          <i class="nao-icon-cancel"></i>
+        </a>
+        
       </div>`,
     ts1: `
     public status = {

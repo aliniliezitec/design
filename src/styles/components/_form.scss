@@ -9,14 +9,8 @@ label {
   color: var(--text-primary-lightest);
 }
 
-.nao-label-2 {
-  font-weight: $font-weight-semibold;
-  font-size: pixelToRem(16px);
-  color: var(--text-primary-lightest);
-}
-
-.nao-label-sm-2 {
-  font-weight: $font-weight-regular;
+.nao-label-sm-1 {
+  // font-weight: $font-weight-regular;
   font-size: pixelToRem(13px);
   color: var(--text-primary-lightest);
 }
@@ -26,12 +20,12 @@ label {
   color: var(--text-primary);
 }
 
-.nao-label-sm-3 {
+.nao-label-sm-2 {
   font-size: pixelToRem(13px);
   color: var(--text-primary);
 }
 
-.nao-label-sm-4 {
+.nao-label-sm-3 {
   font-size: pixelToRem(13px);
   color: var(--text-6);
 }
@@ -113,18 +107,19 @@ input[type=number] {
   .nao-crm-back-login {
     font-size: pixelToRem(12px);
     color: var(--text-primary);
-    font-weight: $font-weight-bold;
-
+    font-weight: $font-weight-semibold;
+    
     a {
       color: var(--text-primary);
       text-decoration: underline;
+      font-weight: $font-weight-bold;
     }
   }
 }
 
 // *************************************************
 // File manager
-// todo: move to a page
+// todo: move to a separate file
 
 .nao-file-manager {
   position: relative;
@@ -140,6 +135,7 @@ input[type=number] {
     top: 20px;
     right: 24px;
     color: var(--text-primary);
+    cursor: pointer;
 
     i {
       line-height: 0;
@@ -271,7 +267,7 @@ input[type=number] {
 
       i {
         margin-left: 10px;
-        font-size: 13px;
+        font-size: 16px;
         line-height: 0;
       }
 
