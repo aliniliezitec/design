@@ -1,5 +1,5 @@
 .modal-title {
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-semibold;
 }
 
 // Modal base
@@ -7,11 +7,11 @@
 
   .modal-title {
     margin-top: 3px;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-semibold;
   }
 
   .modal-header {
-    padding: pixelToRem(15px) pixelToRem(20px);
+    padding: pixelToRem(15px) pixelToRem(40px);
     font-size: pixelToRem(20px);
     min-height: 73px;
     color: var(--text-primary);
@@ -22,7 +22,13 @@
   }
 
   .modal-body {
+    padding: pixelToRem(25px) pixelToRem(40px) pixelToRem(15px) pixelToRem(40px);
     color: var(--text-primary-light);
+    font-size: pixelToRem(14px);
+
+    @include media-breakpoint-down(xs) {
+      padding: pixelToRem(15px) pixelToRem(20px) pixelToRem(15px) pixelToRem(20px);
+    }
   }
 
   .modal-footer {
@@ -38,11 +44,7 @@
 // Nao modal 1
 .nao-modal-1 {
   .modal-body {
-    padding: pixelToRem(15px) pixelToRem(50px) pixelToRem(15px) pixelToRem(20px);
-
-    @include media-breakpoint-down(xs) {
-      padding: pixelToRem(15px) pixelToRem(20px) pixelToRem(15px) pixelToRem(20px);
-    }
+    
   }
 }
 
@@ -50,25 +52,20 @@
 // Nao modal 2
 .nao-modal-2 {
   .modal-body {
-    padding: pixelToRem(15px) pixelToRem(50px) pixelToRem(15px) pixelToRem(20px);
     background-color: var(--bg-3);
 
     .nao-icon-information {
-      font-size: pixelToRem(21px);
+      font-size: pixelToRem(17px);
       line-height: 9px;
       margin-top: 2px;
     }
 
-    @include media-breakpoint-down(xs) {
-      padding: pixelToRem(15px) pixelToRem(20px) pixelToRem(15px) pixelToRem(20px);
-    }
   }
 }
 
 // *************************************************
 // Nao modal form
 .nao-modal-form {
-
 
   .modal-header {
     padding: pixelToRem(20px) pixelToRem(30px);

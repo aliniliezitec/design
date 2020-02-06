@@ -6,7 +6,7 @@ export const ModalCodeBlocks = [
                 <div class="modal-content">
                     <div class="modal-header text-white bg-primary flex-column">
                         <div>Descriptor</div>
-                        <h6 class="modal-title">Subject</h6>
+                        <h5 class="modal-title">Subject</h5>
                     </div>
                     <div class="modal-body">
                         Modal body text goes here. After deleting this you won't be able to recover it.
@@ -49,7 +49,7 @@ export const ModalCodeBlocks = [
                 <div class="modal-content">
                     <div class="modal-header flex-column">
                         <div>Descriptor</div>
-                        <h6 class="modal-title">Subject</h6>
+                        <h5 class="modal-title">Subject</h5>
                     </div>
                     <div class="modal-body">
                         <p>A few things to keep in mind when suspending users:</p>
