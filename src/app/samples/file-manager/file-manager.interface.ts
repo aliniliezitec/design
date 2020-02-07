@@ -171,7 +171,7 @@ export const FileManagerCodeBlocks = [
                         <span class="file-size"> 0 / 1.20 mb</span>
                       </div>
                       <div class="file-actions">
-                        <button type="button" class="btn btn-sm btn-without-box-shaddow p-0">
+                        <button type="button" class="btn btn-sm btn-without-box-shadow p-0">
                           <i class="nao-icon-cancel"></i>
                         </button>
                       </div>

@@ -304,8 +304,8 @@ $value in $theme-colors {
 
 
 
-// todo: add box shadowless btn
-.btn-without-box-shaddow {
+// btn without box-shadow
+.btn-without-box-shadow {
   &:focus {
     box-shadow: none;
   }
