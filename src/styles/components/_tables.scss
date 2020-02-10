@@ -56,14 +56,14 @@
     right: 0;
     width: intrinsic;
     width: -moz-max-content;
-    width: -webkit-max-content;
     width: max-content;
     display: table;
   }
 
   .nao-row-overlay {
     height: 100%;
-    background-color: var(--white);
+    background-color: var(--border-lightest);
+    padding-left: 50px;
   }
 
   .card-header {
@@ -134,7 +134,7 @@
         font-size: pixelToRem(14px);
         color: var(--text-primary-lightest);
       }
-      
+
       .nao-th-checkbox {
         padding: 3px 0 3px 13px;
         width: 94px;
@@ -211,7 +211,7 @@
         padding: 16px 5px;
         border-bottom: 1px var(--border-fill) solid;
         transition: padding .15s ease-in-out;
-        
+
         .custom-checkbox {
           margin-left: 35px !important;
         }

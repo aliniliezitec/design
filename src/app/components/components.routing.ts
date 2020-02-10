@@ -9,6 +9,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { LoadersComponent } from './loaders/loaders.component';
 import { InputGroupComponent } from './input-group/input-group.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
+import { WizardComponent } from './wizard/wizard.component';
 
 const routes: Routes = [
   {
@@ -79,6 +80,13 @@ const routes: Routes = [
         component: TableComponent,
         data: {
           title: 'Tables - Naologic',
+        }
+      },
+      {
+        path: 'wizard',
+        component: WizardComponent,
+        data: {
+          title: 'Wizard - Naologic',
         }
       },
     ]

@@ -3,6 +3,7 @@ import { TableCodeBlocks } from './table.interface';
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { every, some } from 'lodash';
 import { AppService } from '../../app.service';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-table',
@@ -30,13 +31,13 @@ export class TableComponent implements OnInit {
       company: { value: 'DoeCompany', status: '' }, selected: false
     },
     {
-      name: { value: 'Jon Doe', status: ''}, 
-      email: { value: 'jon@doe.com', status: '' }, 
+      name: { value: 'Jon Doe', status: '' },
+      email: { value: 'jon@doe.com', status: '' },
       company: { value: 'DoeCompany', status: '' }, selected: false
     },
     {
-      name: { value: 'Jon', status: 'fail' }, 
-      email: { value: 'jon@doe.com', status: '' }, 
+      name: { value: 'Jon', status: 'fail' },
+      email: { value: 'jon@doe.com', status: '' },
       company: { value: 'DoeCompany', status: 'fail' }, selected: false
     },
     {
@@ -53,6 +54,97 @@ export class TableComponent implements OnInit {
       name: { value: 'Jon', status: 'fail' },
       email: { value: 'jon@doe.com', status: '' },
       company: { value: 'DoeCompany', status: 'fail' }, selected: false
+    },
+  ];
+
+  public dataTableNested = [
+    {
+      deployment: { value: 'Demo to tech team', },
+      status: { value: ['Demo'], },
+      numberOfUsers: { value: '1', },
+      dateCreated: { value: '01 Jan 2020', },
+      selected: false
+    },
+    {
+      deployment: { value: 'Demo PR', },
+      status: { value: ['Demo'], },
+      numberOfUsers: { value: '5', },
+      dateCreated: { value: '01 Jan 2020', },
+      selected: false
+    },
+    {
+      deployment: { value: 'Exec Demo', },
+      status: { value: ['Demo', 'Staging', 'Production'], },
+      numberOfUsers: { value: '12', },
+      dateCreated: { value: '01 Jan 2020', },
+      childRows: [
+        {
+          deployment: { value: 'Exec Demo', },
+          status: { value: ['Demo'], },
+          numberOfUsers: { value: '4', },
+          dateCreated: { value: '01 Jan 2020', },
+          selected: false
+        },
+        {
+          deployment: { value: 'Exec Demo', },
+          status: { value: ['Staging'], },
+          numberOfUsers: { value: '4', },
+          dateCreated: { value: '01 Jan 2020', },
+          selected: false
+        },
+        {
+          deployment: { value: 'Exec Demo', },
+          status: { value: ['Production'], },
+          numberOfUsers: { value: '4', },
+          dateCreated: { value: '01 Jan 2020', },
+          childRows: [
+            {
+              deployment: { value: 'Exec Demo', },
+              status: { value: ['Demo'], },
+              numberOfUsers: { value: '4', },
+              dateCreated: { value: '01 Jan 2020', },
+              selected: false
+            },
+            {
+              deployment: { value: 'Exec Demo', },
+              status: { value: ['Staging'], },
+              numberOfUsers: { value: '4', },
+              dateCreated: { value: '01 Jan 2020', },
+              selected: false
+            },
+            {
+              deployment: { value: 'Exec Demo', },
+              status: { value: ['Production'], },
+              numberOfUsers: { value: '4', },
+              dateCreated: { value: '01 Jan 2020', },
+              selected: false
+            },
+          ],
+          selected: false
+        },
+      ],
+      selected: false
+    },
+    {
+      deployment: { value: 'Demo to tech team', },
+      status: { value: ['Demo'], },
+      numberOfUsers: { value: '4', },
+      dateCreated: { value: '01 Jan 2020', },
+      selected: false
+    },
+    {
+      deployment: { value: 'Marketing prod', },
+      status: { value: ['Production'], },
+      numberOfUsers: { value: '3', },
+      dateCreated: { value: '01 Jan 2020', },
+      selected: false
+    },
+    {
+      deployment: { value: 'Demo PR', },
+      status: { value: ['Demo'], },
+      numberOfUsers: { value: '12', },
+      dateCreated: { value: '01 Jan 2020', },
+      selected: false
     },
   ];
 

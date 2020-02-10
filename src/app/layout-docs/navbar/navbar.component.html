@@ -243,7 +243,7 @@
           <a href="javascript:void(0)" [routerLink]="['/']">
             <img class="nao-logo" src="assets-local/images/logo/logo.png" width="180">
           </a>
-      
+
           <li *ngFor="let elem of sideMenuItems; let i = index">
             <div [ngSwitch]="elem.type">
               <div *ngSwitchCase="'items'">
@@ -251,7 +251,8 @@
                   <div class="d-flex align-items-center justify-content-center menu-icon">
                     <i [class]="elem.icon"></i>
                   </div>
-                  <a href="javascript:void(0)" (click)="toggleSideMenuItems(i)" class="sidenav-menu-text">{{ elem.textTranslate }}</a>
+                  <a href="javascript:void(0)" (click)="toggleSideMenuItems(i)"
+                    class="sidenav-menu-text">{{ elem.textTranslate }}</a>
                 </div>
                 <ul class="m-0" [@expandCollapse]='elem.isOpen' *ngIf="elem.isOpen">
                   <li *ngFor="let item of elem.items">
@@ -261,14 +262,14 @@
               </div>
             </div>
           </li>
-      
+
           <div class="made-with">
             Made with 🤖 by Naologic
           </div>
 
         </div>
       </div>
-      
+
     </div>
 
 
@@ -299,6 +300,84 @@
       <pre><div [innerHTML]="data[2].ts2 | typescriptPrismPipe | sanitizeHtml"></div></pre>
     </div>
 
+  </div>
+
+  <div class="elem-container">
+    <h2 class="title">Sidenav V2</h2>
+    <p>The sidenav has a fixed position.</p>
+    <div class="nao-bd-example bg-3">
+
+      <div class="nao-sidenav d-block" style="position: relative;">
+        <div class="sidenav-wrapper min-vh-100">
+          <ng-container *ngFor="let elem of sideMenuV2Items; let i = index">
+            <div [ngSwitch]="elem.type">
+              <div *ngSwitchCase="'divider'">
+                <div class="sidenav-divider"></div>
+              </div>
+
+              <li class="d-flex align-items-center group-name" *ngSwitchCase="'group-name'">
+                {{ elem.textTranslate }}
+              </li>
+
+              <li class="d-flex align-items-center nav-item" *ngSwitchCase="'item'"
+                [ngClass]="{'active': elem.active === true}">
+                <div class="d-flex align-items-center justify-content-center menu-icon">
+                  <i [class]="elem.icon"></i>
+                </div>
+                <a href="javascript:void(0)">{{ elem.textTranslate }}</a>
+              </li>
+            </div>
+          </ng-container>
+
+
+          <div class="nao-sidenav-footer d-flex flex-column">
+            <div class="other-links d-flex align-items-center">
+              <a href="javascript:void(0)">Help</a>
+              <span class="oval mx-2"></span>
+              <a href="javascript:void(0)">Our blog</a>
+              <span class="oval mx-2"></span>
+              <a href="javascript:void(0)">Policies</a>
+              <span class="oval mx-2"></span>
+              <a href="javascript:void(0)">Contact</a>
+            </div>
+            <div class="made-with mt-1">
+              Made with 🤖 by Naologic
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[3].html)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[3].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[3].ts1)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[3].ts1 | typescriptPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+
+    <div class="nao-bd-clipboard">
+      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[3].ts2)" placement="top"
+        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+    </div>
+
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[3].ts2 | typescriptPrismPipe | sanitizeHtml"></div></pre>
+    </div>
 
   </div>
+
 </div>

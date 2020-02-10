@@ -423,6 +423,7 @@ input[type=number] {
     position: relative;
 
     &:before {
+      // todo: change the content when the font is updated
       font-family: 'nao-system-icon';
       color: var(--text-primary);
       position: absolute;
@@ -473,4 +474,8 @@ input[type=number] {
 // create rotate functions
 .rotate-180 {
   transform: rotate(180deg);
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
 }

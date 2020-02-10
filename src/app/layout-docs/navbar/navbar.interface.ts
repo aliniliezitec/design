@@ -23,6 +23,14 @@ export interface SideMenuInterface {
   items?: MenuItemInterface[];
 }
 
+export interface SideMenuV2Interface {
+  type: string;
+  textTranslate?: string;
+  route?: string;
+  icon?: string;
+  active?: boolean;
+}
+
 export const NavbarCodeBlocks = [
   {
     html: `
@@ -507,6 +515,77 @@ export const NavbarCodeBlocks = [
       isOpen: boolean;
       items?: MenuItemInterface[];
     }`
+  }, {
+    html: `
+    <div class="nao-sidenav d-block" style="position: relative;">
+        <div class="sidenav-wrapper min-vh-100">
+          <ng-container *ngFor="let elem of sideMenuV2Items; let i = index">
+            <div [ngSwitch]="elem.type">
+              <div *ngSwitchCase="'divider'">
+                <div class="sidenav-divider"></div>
+              </div>
+
+              <li class="d-flex align-items-center group-name" *ngSwitchCase="'group-name'">
+                {{ elem.textTranslate }}
+              </li>
+
+              <li class="d-flex align-items-center nav-item" *ngSwitchCase="'item'"
+                [ngClass]="{'active': elem.active === true}">
+                <div class="d-flex align-items-center justify-content-center menu-icon">
+                  <i [class]="elem.icon"></i>
+                </div>
+                <a href="javascript:void(0)">{{ elem.textTranslate }}</a>
+              </li>
+            </div>
+          </ng-container>
+
+
+          <div class="nao-sidenav-footer d-flex flex-column">
+            <div class="other-links d-flex align-items-center">
+              <a href="javascript:void(0)">Help</a>
+              <span class="oval mx-2"></span>
+              <a href="javascript:void(0)">Our blog</a>
+              <span class="oval mx-2"></span>
+              <a href="javascript:void(0)">Policies</a>
+              <span class="oval mx-2"></span>
+              <a href="javascript:void(0)">Contact</a>
+            </div>
+            <div class="made-with mt-1">
+              Made with 🤖 by Naologic
+            </div>
+          </div>
+
+        </div>
+      </div>`,
+      ts1: `  
+      public sideMenuV2Items: SideMenuV2Interface[] = [
+        { type: 'divider' },
+        { type: 'group-name', textTranslate: 'ACCOUNT ADMINISTRATION' },
+        { type: 'item', textTranslate: 'Profile', route: '', icon: 'nao-icon-help', active: true },
+        { type: 'item', textTranslate: 'Manage Team Members', route: '', icon: 'nao-icon-help', active: false },
+        { type: 'item', textTranslate: 'Billing Information', route: '', icon: 'nao-icon-help', active: false },
+        { type: 'item', textTranslate: 'Invoices', route: '', icon: 'nao-icon-help', active: false },
+        { type: 'item', textTranslate: 'Manage Subscription', route: '', icon: 'nao-icon-help', active: false },
+        { type: 'divider' },
+        { type: 'group-name', textTranslate: 'BUSINESS SETTINGS' },
+        { type: 'item', textTranslate: 'Account Information', route: '', icon: 'nao-icon-help', active: false },
+        { type: 'item', textTranslate: 'Tax Details', route: '', icon: 'nao-icon-help', active: false },
+        { type: 'item', textTranslate: 'Payment Methods', route: '', icon: 'nao-icon-help', active: false },
+        { type: 'item', textTranslate: 'Branding', route: '', icon: 'nao-icon-help', active: false },
+        { type: 'divider' },
+        { type: 'group-name', textTranslate: 'ADVANCED' },
+        { type: 'item', textTranslate: 'APIs', route: '', icon: 'nao-icon-help', active: false },
+        { type: 'item', textTranslate: 'Advanced Settings', route: '', icon: 'nao-icon-help', active: false },
+        { type: 'item', textTranslate: 'Payment Methods', route: '', icon: 'nao-icon-help', active: false },
+      ];`,
+      ts2: `
+      export interface SideMenuV2Interface {
+        type: string;
+        textTranslate?: string;
+        route?: string;
+        icon?: string;
+        active?: boolean;
+      }`
   }
 
 ];

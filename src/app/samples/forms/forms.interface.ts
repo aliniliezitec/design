@@ -2,21 +2,21 @@ export const FormsCodeBlocks = [
   {
     html: `
     <div class="modal nao-modal nao-modal-2" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
 
-          <div class="modal-header flex-column">
-            <h5 class="modal-title">
-              Add contact
-            </h5>
-            <div>Create a new contact</div>
-          </div>
+            <div class="modal-header flex-column">
+              <h5 class="modal-title">
+                Add contact
+              </h5>
+              <div>Create a new contact</div>
+            </div>
             <div class="modal-body nao-modal-body-2">
               <form>
                 <div [formGroup]="formGroup">
                   <div formGroupName="info">
-                    <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
-                      <div class="col-12 col-sm-5 text-left text-sm-right ">
+                    <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+                      <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                         <label class="nao-label-1">
                           First name
                           <sup class="text-danger">*</sup>
@@ -25,9 +25,8 @@ export const FormsCodeBlocks = [
                       <div class="col">
                         <input type="text" autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210"
                           formControlName="firstName" placeholder="First name" />
-                        <div class="pt-2 pb-2" [hidden]="formGroup.get('info.firstName').pristine
-                          || formGroup.get('info.firstName').disabled
-                          || formGroup.get('info.firstName').valid">
+                        <div class="pt-2 pb-2"
+                          [hidden]="formGroup.get('info.firstName').pristine || formGroup.get('info.firstName').disabled || formGroup.get('info.firstName').valid">
                           <span class="badge badge-pill badge-danger-light"><strong>!</strong></span>
                           <span *ngIf="formGroup.get('info.firstName').errors" class="text-danger">
                             First name is required.
@@ -35,8 +34,8 @@ export const FormsCodeBlocks = [
                         </div>
                       </div>
                     </div>
-                    <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
-                      <div class="col-12 col-sm-5 text-left text-sm-right ">
+                    <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+                      <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                         <label class="nao-label-1">
                           Last name
                           <sup class="text-danger">*</sup>
@@ -45,9 +44,8 @@ export const FormsCodeBlocks = [
                       <div class="col">
                         <input type="text" autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210"
                           formControlName="lastName" placeholder="Last name" />
-                        <div class="pt-2 pb-2" [hidden]="formGroup.get('info.lastName').pristine
-                          || formGroup.get('info.lastName').disabled
-                          || formGroup.get('info.lastName').valid">
+                        <div class="pt-2 pb-2"
+                          [hidden]="formGroup.get('info.lastName').pristine || formGroup.get('info.lastName').disabled || formGroup.get('info.lastName').valid">
                           <span class="badge badge-pill badge-danger-light"><strong>!</strong></span>
                           <span *ngIf="formGroup.get('info.lastName').errors" class="text-danger">
                             Last name is required.
@@ -56,13 +54,13 @@ export const FormsCodeBlocks = [
                       </div>
                     </div>
                   </div>
-                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
-                    <div class="col-12 col-sm-5 text-left text-sm-right ">
+                  <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
+                    <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                       <label class="nao-label-1">
                         Company
                       </label>
                     </div>
-                    <div class="col pb-2">
+                    <div class="col">
                       <ng-select class="nao-mw-0 nao-mw-sm-210" [searchable]="true" bindLabel="name" bindValue="value"
                         [multiple]="false" placeholder="Type to search" clearAllText="Clear" notFoundText="Not found"
                         [clearable]="false" formControlName="companyId">
@@ -76,13 +74,19 @@ export const FormsCodeBlocks = [
                           Third company
                         </ng-option>
                       </ng-select>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+                    <div class="col-12 col-sm-5">
+                    </div>
+                    <div class="col">
                       <div class="pt-2">
-                        <a href="javascript:void(0)" class="text-primary"><i class="fas fa-plus-circle"></i>Create</a>
+                        <button type="button" class="btn btn-sm btn-simple-primary"><i class="nao-icon-add-filled mr-1"></i>Create</button>
                       </div>
                     </div>
                   </div>
-                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
-                    <div class="col-12 col-sm-5 text-left text-sm-right ">
+                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+                    <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                       <label class="nao-label-1">
                         Email
                         <sup class="text-danger">*</sup>
@@ -91,9 +95,8 @@ export const FormsCodeBlocks = [
                     <div class="col">
                       <input type="text" autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210"
                         formControlName="email" placeholder="Email" />
-                      <div class="pt-2 pb-2" [hidden]="formGroup.get('email').pristine
-                        || formGroup.get('email').disabled
-                        || formGroup.get('email').valid">
+                      <div class="pt-2 pb-2"
+                        [hidden]="formGroup.get('email').pristine || formGroup.get('email').disabled || formGroup.get('email').valid">
                         <span class="badge badge-pill badge-danger-light"><strong>!</strong></span>
                         <span *ngIf="formGroup.get('email').errors" class="text-danger">
                           Email is required
@@ -102,8 +105,8 @@ export const FormsCodeBlocks = [
                     </div>
                   </div>
                   <div></div>
-                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
-                    <div class="col-12 col-sm-5 text-left text-sm-right">
+                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+                    <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                       <label class="nao-label-1">
                         Language
                       </label>
@@ -122,9 +125,8 @@ export const FormsCodeBlocks = [
                           France
                         </ng-option>
                       </ng-select>
-                      <div class="pt-2 pb-2" [hidden]="formGroup.get('languageId').pristine
-                        || formGroup.get('languageId').disabled
-                        || formGroup.get('languageId').valid">
+                      <div class="pt-2 pb-2"
+                        [hidden]="formGroup.get('languageId').pristine || formGroup.get('languageId').disabled || formGroup.get('languageId').valid">
                         <span class="badge badge-pill badge-danger-light"><strong>!</strong></span>
                         <span *ngIf="formGroup.get('languageId').errors" class="text-danger">
                           Invalid language.
@@ -132,8 +134,8 @@ export const FormsCodeBlocks = [
                       </div>
                     </div>
                   </div>
-                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
-                    <div class="col-12 col-sm-5 text-left text-sm-right ">
+                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+                    <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                       <label class="nao-label-1">
                         Country
                         <sup class="text-danger">*</sup>
@@ -143,19 +145,18 @@ export const FormsCodeBlocks = [
                       <ng-select class="nao-mw-0 nao-mw-sm-210" [searchable]="true" bindLabel="name" bindValue="value"
                         [multiple]="false" clearAllText="Clear" notFoundText="Not found" [clearable]="false"
                         formControlName="countryId">
-                        <ng-option value="1">
+                        <ng-option value="usa">
                           USA
                         </ng-option>
-                        <ng-option value="2">
+                        <ng-option value=de>
                           Germany
                         </ng-option>
-                        <ng-option value="3">
+                        <ng-option value="fr">
                           France
                         </ng-option>
                       </ng-select>
-                      <div class="pt-2 pb-2" [hidden]="formGroup.get('countryId').pristine
-                        || formGroup.get('countryId').disabled
-                        || formGroup.get('countryId').valid">
+                      <div class="pt-2 pb-2"
+                        [hidden]="formGroup.get('countryId').pristine || formGroup.get('countryId').disabled || formGroup.get('countryId').valid">
                         <span class="badge badge-pill badge-danger-light"><strong>!</strong></span>
                         <span *ngIf="formGroup.get('countryId').errors" class="text-danger">
                           Country error
@@ -163,8 +164,8 @@ export const FormsCodeBlocks = [
                       </div>
                     </div>
                   </div>
-                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
-                    <div class="col-12 col-sm-5 text-left text-sm-right ">
+                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+                    <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                       <label class="nao-label-1">
                         Facebook
                       </label>
@@ -172,16 +173,15 @@ export const FormsCodeBlocks = [
                     <div class="col">
                       <input type="text" autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210"
                         formControlName="facebook" placeholder="Facebook" />
-                      <div class="pt-2 pb-2" [hidden]="formGroup.get('facebook').pristine
-                        || formGroup.get('facebook').disabled
-                        || formGroup.get('facebook').valid">
+                      <div class="pt-2 pb-2"
+                        [hidden]="formGroup.get('facebook').pristine || formGroup.get('facebook').disabled || formGroup.get('facebook').valid">
                         <span class="badge badge-pill badge-danger-light"><strong>!</strong></span>
                         <span *ngIf="formGroup.get('facebook').errors" class="text-danger"></span>
                       </div>
                     </div>
                   </div>
-                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
-                    <div class="col-12 col-sm-5 text-left text-sm-right ">
+                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+                    <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                       <label class="nao-label-1">
                         Linkedin
                       </label>
@@ -189,16 +189,15 @@ export const FormsCodeBlocks = [
                     <div class="col">
                       <input type="text" autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210"
                         formControlName="linkedin" placeholder="Linkedin" />
-                      <div class="pt-2 pb-2" [hidden]="formGroup.get('linkedin').pristine
-                        || formGroup.get('linkedin').disabled
-                        || formGroup.get('linkedin').valid">
+                      <div class="pt-2 pb-2"
+                        [hidden]="formGroup.get('linkedin').pristine || formGroup.get('linkedin').disabled || formGroup.get('linkedin').valid">
                         <span class="badge badge-pill badge-danger-light"><strong>!</strong></span>
                         <span *ngIf="formGroup.get('linkedin').errors" class="text-danger"></span>
                       </div>
                     </div>
                   </div>
-                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
-                    <div class="col-12 col-sm-5 text-left text-sm-right ">
+                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+                    <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                       <label class="nao-label-1">
                         Twitter
                       </label>
@@ -247,15 +246,19 @@ export const FormsCodeBlocks = [
       });`},
   {
     html: `
-    <div class="modal" tabindex="-1" role="dialog">
+    <div class="modal nao-modal-form" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
-            <div class="modal-header default pb-3 pt-4">
-              <h6 class="modal-title pl-4 ml-2">
+
+            <div class="modal-header flex-column">
+              <h6 class="modal-title">
                 Add new product
               </h6>
+              <h6 class="m-0">
+                Subtitle
+              </h6>
             </div>
-            <div class="modal-body px-2 py-0">
+            <div class="modal-body p-0">
               <form>
                 <div [formGroup]="formGroup2">
                   <div class="nao-blue-rounded-box">
@@ -263,8 +266,8 @@ export const FormsCodeBlocks = [
                       Product
                     </div>
                     <div class="box-container">
-                      <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
-                        <div class="col-12 col-sm-5 text-left text-sm-right">
+                      <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
+                        <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                           <label class="nao-label-sm-1">
                             Name
                             <sup class="text-danger">*</sup>
@@ -274,13 +277,19 @@ export const FormsCodeBlocks = [
                           <input type="text" autocomplete="off"
                             class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="name"
                             placeholder="Name" />
-                            <span *ngIf="formGroup2.get('name').errors" class="text-danger">
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+                        <div class="col-12 col-sm-5">
+                         </div>
+                        <div class="col">
+                          <span *ngIf="formGroup2.get('name').errors" class="text-danger">
                               Name is required.
                             </span>
                         </div>
                       </div>
-                      <div class="d-flex flex-column flex-sm-row mb-3 no-gutters-xs">
-                        <div class="col-12 col-sm-5 text-left text-sm-right">
+                      <div class="d-flex flex-column flex-sm-row mb-1 no-gutters">
+                        <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                           <label class="nao-label-sm-1 pt-1">
                             Description
                           </label>
@@ -297,8 +306,8 @@ export const FormsCodeBlocks = [
                       Pricing
                     </div>
                     <div class="box-container">
-                      <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
-                        <div class="col-12 col-sm-5 text-left text-sm-right">
+                      <div class="d-flex flex-column flex-sm-row align-items-center mb-1 no-gutters">
+                        <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                           <label class="nao-label-sm-1">
                             Price
                             <sup class="text-danger">*</sup>
@@ -310,8 +319,8 @@ export const FormsCodeBlocks = [
                             placeholder="Price" />
                         </div>
                       </div>
-                      <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
-                        <div class="col-12 col-sm-5 text-left text-sm-right">
+                      <div class="d-flex flex-column flex-sm-row align-items-center mb-1 no-gutters">
+                        <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                           <label class="nao-label-sm-1">
                             Cost
                           </label>
@@ -329,8 +338,8 @@ export const FormsCodeBlocks = [
                       Inventory
                     </div>
                     <div class="box-container">
-                      <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
-                        <div class="col-12 col-sm-5 text-left text-sm-right">
+                      <div class="d-flex flex-column flex-sm-row align-items-center mb-1 no-gutters">
+                        <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                           <label class="nao-label-sm-1">
                             SKU
                           </label>
@@ -341,8 +350,8 @@ export const FormsCodeBlocks = [
                             placeholder="Sku" />
                         </div>
                       </div>
-                      <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
-                        <div class="col-12 col-sm-5 text-left text-sm-right">
+                      <div class="d-flex flex-column flex-sm-row align-items-center mb-1 no-gutters">
+                        <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                           <label class="nao-label-sm-1">
                             Barcode
                           </label>
@@ -353,8 +362,8 @@ export const FormsCodeBlocks = [
                             placeholder="Barcode" />
                         </div>
                       </div>
-                      <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters-xs">
-                        <div class="col-12 col-sm-5 text-left text-sm-right">
+                      <div class="d-flex flex-column flex-sm-row align-items-center mb-1 no-gutters">
+                        <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                           <label class="nao-label-sm-1">
                             Quantity
                           </label>
@@ -380,7 +389,7 @@ export const FormsCodeBlocks = [
 
                     <div class="box-container" [hidden]="!formGroup2.get('shipping.hasShipping').value">
                       <div class="d-flex justify-content-center">
-                        
+
                         <div class="nao-grid-4-input-dropdown">
                           <div class="input-group nao-input-dropdown-group-1 nao-shippable-input-group">
                             <label class="nao-label-sm-1 mr-auto">
@@ -461,11 +470,9 @@ export const FormsCodeBlocks = [
                         </div>
                       </div>
                     </div>
-
-
                   </div>
 
-                  <div class="nao-blue-rounded-box">
+                  <div class="nao-blue-rounded-box mb-0">
                     <div class="box-header border-bottom">
                       Add items
                     </div>
@@ -477,7 +484,7 @@ export const FormsCodeBlocks = [
                           *ngFor="let item of formGroup2.controls.items['controls']; let i = index; let last = last"
                           [formGroupName]="i">
                           <div class="d-flex flex-column flex-md-row align-items-md-center py-3 pr-2">
-                            <label class="nao-form-label pr-2">
+                            <label class="nao-form-label pr-3 mb-1 mb-md-0">
                               Product
                             </label>
                             <ng-select class="nao-ng-select-sm nao-mw-0 nao-mw-md-200 flex-grow-1" [searchable]="true"
@@ -532,12 +539,14 @@ export const FormsCodeBlocks = [
                             </div>
 
                             <div class="mt-auto item-mb-fix">
+                              <!-- todo: -->
                               <div class="nao-delete-text">
                                 <a href="javascript:void(0)">Delete</a>
                               </div>
                             </div>
                           </div>
                         </div>
+
                         <button type="button" class="btn btn-sm btn-simple-primary d-flex align-items-center add-another-btn">
                           <i class="nao-icon-add-filled mr-1"></i>
                           <span>Add another</span>

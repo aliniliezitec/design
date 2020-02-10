@@ -34,8 +34,8 @@ import { range } from 'lodash';
       min-width: 18px;
       min-height: 18px;
       border-radius: 3px;
-      margin-right: 22px;
-      margin-left: 33px;
+      margin-right: 28px;
+      margin-left: 28px;
     }
 
     .content-loading {

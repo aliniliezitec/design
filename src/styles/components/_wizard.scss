@@ -1,0 +1,93 @@
+// *************************************************
+// Nao wizzard
+.nao-wizzard {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 40px 0;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+    position: relative;
+
+    span {
+      position: absolute;
+      color: var(--text-primary-light);
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+
+    &:before {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--text-7);
+      content: '';
+      align-self: center;
+    }
+
+    &:after {
+      height: 2px;
+      width: calc(100% - 50px);
+      content: '';
+      background: var(--text-7);
+      position: absolute;
+      left: calc(50% + 25px);
+      top: 3px;
+    }
+
+    &:last-child {
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  .item-active {
+    &:before {
+      background-color: var(--primary);
+    }
+  }
+
+  .item-complete {
+    &:before {
+      // todo: change the content when the font is updated
+      font-family: 'nao-system-icon';
+      color: var(--primary);
+      position: absolute;
+      font-size: 19px;
+      width: unset;
+      height: unset;
+      top: -6px;
+      content: "\f964";
+      background-color: transparent;
+    }
+
+    &:after {
+      background-color: var(--primary);
+    }
+  }
+
+  .item-warning {
+    &:before {
+      // todo: change the content when the font is updated
+      font-family: 'nao-system-icon';
+      color: var(--danger);
+      position: absolute;
+      font-size: 19px;
+      top: -6px;
+      width: unset;
+      height: unset;
+      content: "\f9a8";
+      background-color: transparent;
+    }
+
+    &:after {
+      background-color: var(--primary);
+    }
+  }
+}

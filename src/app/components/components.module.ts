@@ -13,6 +13,7 @@ import { LoadersComponent } from './loaders/loaders.component';
 import { InputGroupComponent } from './input-group/input-group.component';
 import { NaoDesignModule } from '@naologic/design';
 import { DatepickerComponent } from './datepicker/datepicker.component';
+import { WizardComponent } from './wizard/wizard.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
     ModalComponent,
     LoadersComponent,
     TableComponent,
-    InputGroupComponent
+    InputGroupComponent,
+    WizardComponent
   ],
   imports: [
     CommonModule,

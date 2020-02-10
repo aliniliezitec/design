@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit, HostListener, OnDestroy } from '@angular/core';
 import { AppService } from 'src/app/app.service';
-import { NavbarCodeBlocks, MenuInterface, SideMenuInterface } from './navbar.interface';
+import { NavbarCodeBlocks, MenuInterface, SideMenuInterface, SideMenuV2Interface } from './navbar.interface';
 import { LayoutDocsPublicFlow } from '../layout-docs.flowservice';
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { trigger, state, style, transition, animate } from '@angular/animations';
@@ -74,54 +74,75 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public sideMenuItems: SideMenuInterface[] = [
     {
-        type: 'items', textTranslate: 'Layout', route: '', icon: 'nao-icon-crm', isOpen: false,
-        items: [
-            { type: 'item', route: '', textTranslate: 'Grid', active: false },
-            { type: 'item', route: '', textTranslate: 'Components', active: false },
-            { type: 'item', route: '', textTranslate: 'Navigation', active: false },
-        ]
+      type: 'items', textTranslate: 'Layout', route: '', icon: 'nao-icon-crm', isOpen: false,
+      items: [
+        { type: 'item', route: '', textTranslate: 'Grid', active: false },
+        { type: 'item', route: '', textTranslate: 'Components', active: false },
+        { type: 'item', route: '', textTranslate: 'Navigation', active: false },
+      ]
     },
     {
-        type: 'items', textTranslate: 'Components', route: '', icon: 'nao-icon-surveys', isOpen: false,
-        items: [
-            { type: 'item', route: '', textTranslate: 'Buttons', active: false },
-            { type: 'item', route: '', textTranslate: 'Cards', active: false },
-            { type: 'item', route: '', textTranslate: 'Dropdowns', active: false },
-            { type: 'item', route: '', textTranslate: 'Forms', active: false },
-            { type: 'item', route: '', textTranslate: 'Input groups', active: false },
-            { type: 'item', route: '', textTranslate: 'Loaders', active: false },
-            { type: 'item', route: '', textTranslate: 'Modals', active: false },
-            { type: 'item', route: '', textTranslate: 'Tables', active: false },
-        ]
+      type: 'items', textTranslate: 'Components', route: '', icon: 'nao-icon-surveys', isOpen: false,
+      items: [
+        { type: 'item', route: '', textTranslate: 'Buttons', active: false },
+        { type: 'item', route: '', textTranslate: 'Cards', active: false },
+        { type: 'item', route: '', textTranslate: 'Dropdowns', active: false },
+        { type: 'item', route: '', textTranslate: 'Forms', active: false },
+        { type: 'item', route: '', textTranslate: 'Input groups', active: false },
+        { type: 'item', route: '', textTranslate: 'Loaders', active: false },
+        { type: 'item', route: '', textTranslate: 'Modals', active: false },
+        { type: 'item', route: '', textTranslate: 'Tables', active: false },
+      ]
     },
     {
-        type: 'items', textTranslate: 'Utilities', route: '', icon: 'nao-icon-settings', isOpen: false,
-        items: [
-            { type: 'item', route: '', textTranslate: 'Colors', active: false },
-            { type: 'item', route: '', textTranslate: 'Iconography', active: false },
-            { type: 'item', route: '', textTranslate: 'Illustration', active: false },
-            { type: 'item', route: '', textTranslate: 'Typography', active: false },
-            { type: 'item', route: '', textTranslate: 'Spacing', active: false },
-            { type: 'item', route: '', textTranslate: 'Sizing', active: false },
-        ]
+      type: 'items', textTranslate: 'Utilities', route: '', icon: 'nao-icon-settings', isOpen: false,
+      items: [
+        { type: 'item', route: '', textTranslate: 'Colors', active: false },
+        { type: 'item', route: '', textTranslate: 'Iconography', active: false },
+        { type: 'item', route: '', textTranslate: 'Illustration', active: false },
+        { type: 'item', route: '', textTranslate: 'Typography', active: false },
+        { type: 'item', route: '', textTranslate: 'Spacing', active: false },
+        { type: 'item', route: '', textTranslate: 'Sizing', active: false },
+      ]
     },
     {
-        type: 'items', textTranslate: 'Photography ', route: '', icon: 'nao-icon-image-placeholder', isOpen: false,
-        items: [
-            { type: 'item', route: '', textTranslate: 'Overview', active: false },
-            { type: 'item', route: '', textTranslate: 'Compositions', active: false },
-            { type: 'item', route: '', textTranslate: 'Casting', active: false },
-            { type: 'item', route: '', textTranslate: 'Lighting and color', active: false },
-            { type: 'item', route: '', textTranslate: 'Locations', active: false },
-        ]
+      type: 'items', textTranslate: 'Photography ', route: '', icon: 'nao-icon-image-placeholder', isOpen: false,
+      items: [
+        { type: 'item', route: '', textTranslate: 'Overview', active: false },
+        { type: 'item', route: '', textTranslate: 'Compositions', active: false },
+        { type: 'item', route: '', textTranslate: 'Casting', active: false },
+        { type: 'item', route: '', textTranslate: 'Lighting and color', active: false },
+        { type: 'item', route: '', textTranslate: 'Locations', active: false },
+      ]
     },
     {
-        type: 'items', textTranslate: 'Samples ', route: '', icon: 'nao-icon-multiple-choice', isOpen: false,
-        items: [
-            { type: 'item', route: '', textTranslate: 'Forms', active: false },
-        ]
+      type: 'items', textTranslate: 'Samples ', route: '', icon: 'nao-icon-multiple-choice', isOpen: false,
+      items: [
+        { type: 'item', route: '', textTranslate: 'Forms', active: false },
+      ]
     },
-];
+  ];
+
+  public sideMenuV2Items: SideMenuV2Interface[] = [
+    { type: 'divider' },
+    { type: 'group-name', textTranslate: 'ACCOUNT ADMINISTRATION' },
+    { type: 'item', textTranslate: 'Profile', route: '', icon: 'nao-icon-help', active: true },
+    { type: 'item', textTranslate: 'Manage Team Members', route: '', icon: 'nao-icon-help', active: false },
+    { type: 'item', textTranslate: 'Billing Information', route: '', icon: 'nao-icon-help', active: false },
+    { type: 'item', textTranslate: 'Invoices', route: '', icon: 'nao-icon-help', active: false },
+    { type: 'item', textTranslate: 'Manage Subscription', route: '', icon: 'nao-icon-help', active: false },
+    { type: 'divider' },
+    { type: 'group-name', textTranslate: 'BUSINESS SETTINGS' },
+    { type: 'item', textTranslate: 'Account Information', route: '', icon: 'nao-icon-help', active: false },
+    { type: 'item', textTranslate: 'Tax Details', route: '', icon: 'nao-icon-help', active: false },
+    { type: 'item', textTranslate: 'Payment Methods', route: '', icon: 'nao-icon-help', active: false },
+    { type: 'item', textTranslate: 'Branding', route: '', icon: 'nao-icon-help', active: false },
+    { type: 'divider' },
+    { type: 'group-name', textTranslate: 'ADVANCED' },
+    { type: 'item', textTranslate: 'APIs', route: '', icon: 'nao-icon-help', active: false },
+    { type: 'item', textTranslate: 'Advanced Settings', route: '', icon: 'nao-icon-help', active: false },
+    { type: 'item', textTranslate: 'Payment Methods', route: '', icon: 'nao-icon-help', active: false },
+  ];
 
 
 

@@ -27,6 +27,7 @@ export const MenuItems = [
             { type: 'item', route: '/components/loaders', text: 'Loaders' },
             { type: 'item', route: '/components/modals', text: 'Modals' },
             { type: 'item', route: '/components/tables', text: 'Tables' },
+            { type: 'item', route: '/components/wizard', text: 'Wizard' },
         ]
     },
     {

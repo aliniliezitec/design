@@ -164,17 +164,6 @@
     }
   }
 
-  .nao-pill-lg {
-    border-radius: 12px;
-    padding: 2px 10px;
-    font-size: pixelToRem(12px);
-  }
-
-  .nao-pill-text-7 {
-    background-color: var(--text-7);
-  }
-
-
   .ticket-body {
     font-size: pixelToRem(13px);
     font-weight: $font-weight-regular;
@@ -250,6 +239,17 @@
     align-content: center;
   }
 }
+
+.nao-pill-lg {
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-size: pixelToRem(12px);
+}
+
+.nao-pill-text-7 {
+  background-color: var(--text-7);
+}
+
 
 .ticket-btn {
   padding: 0 3px 3px 3px;

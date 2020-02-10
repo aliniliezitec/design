@@ -233,6 +233,7 @@ $value in $theme-colors {
     background-color: rgba($active-background, .5);
 
     &:focus {
+
       // Avoid using mixin so we can pass custom focus shadow properly
       @if $enable-shadows and $btn-active-box-shadow !=none {
         box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5);
@@ -321,23 +322,38 @@ $value in $theme-colors {
 }
 
 // *************************************************
-// Fix for centering butons vertically
-// todo: remove this in case it messes up other things
+// Fix for centering butons vertically, add min-width
 .btn {
   padding-top: pixelToRem(11px);
   padding-bottom: pixelToRem(9px);
   line-height: 1;
+  min-width: 80px;
 }
+
 .btn-lg {
   padding-top: pixelToRem(13px);
   padding-bottom: pixelToRem(12px);
+  min-width: 110px;
 }
 
 .btn-xl {
   padding-top: pixelToRem(21px);
   padding-bottom: pixelToRem(18px);
+  min-width: 150px;
+}
+
+.btn-no-min-width {
+  min-width: unset !important;
 }
 
 .btn-sm {
   padding: pixelToRem(6px) pixelToRem(5px);
+  min-width: 60px;
+}
+
+
+//todo: add to the documentation
+.nao-icon-rotate {
+  display: inline-block;
+  transition: ease-in-out .2s;
 }
