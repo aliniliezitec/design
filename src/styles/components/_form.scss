@@ -15,20 +15,20 @@ label {
   color: var(--text-primary-lightest);
 }
 
-.nao-label-3 {
-  font-size: pixelToRem(16px);
-  color: var(--text-primary);
-}
-
-.nao-label-sm-2 {
-  font-size: pixelToRem(13px);
-  color: var(--text-primary);
-}
-
-.nao-label-sm-3 {
-  font-size: pixelToRem(13px);
-  color: var(--text-6);
-}
+//.nao-label-3 {
+//  font-size: pixelToRem(16px);
+//  color: var(--text-primary);
+//}
+//
+//.nao-label-sm-2 {
+//  font-size: pixelToRem(13px);
+//  color: var(--text-primary);
+//}
+//
+//.nao-label-sm-3 {
+//  font-size: pixelToRem(13px);
+//  color: var(--text-6);
+//}
 
 // *************************************************
 // Nao Form errors
@@ -108,7 +108,7 @@ input[type=number] {
     font-size: pixelToRem(12px);
     color: var(--text-primary);
     font-weight: $font-weight-semibold;
-    
+
     a {
       color: var(--text-primary);
       text-decoration: underline;

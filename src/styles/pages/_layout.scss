@@ -73,7 +73,8 @@
       color: var(--text-primary-lightest);
 
       &:hover {
-        color: var(--text-primary);
+        //color: var(--text-primary);
+        text-decoration: underline;
       }
     }
 

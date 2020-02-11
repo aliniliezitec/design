@@ -34,6 +34,10 @@
       align-self: flex-end;
     }
 
+    .nav-link {
+      padding: pixelToRem(6px) pixelToRem(8px);
+    }
+
     ul {
       padding-left: 0;
       overflow: hidden;
@@ -66,7 +70,6 @@
 
     a {
       color: var(--text-primary);
-      // color: var(--text-primary) !important;
       font-size: pixelToRem(16px);
 
       &:hover {
@@ -336,11 +339,6 @@
       border-top: solid 1px var(--text-7);
     }
 
-    .group-name {
-      font-weight: $font-weight-lighter;
-      color: var(--text-primary-lightest);
-    }
-
     i {
       width: 16px;
       font-size: 16px;
@@ -356,7 +354,6 @@
     li {
       padding-left: 21px;
       border-radius: 0 50px 50px 0;
-      height: 40px;
       list-style-type: none;
 
       @include rtl {
@@ -367,7 +364,7 @@
 
       a {
         color: var(--text-primary);
-        font-size: pixelToRem(13px);
+        font-size: pixelToRem(14px);
 
         &:hover {
           text-decoration: none;
@@ -375,7 +372,17 @@
       }
     }
 
+
+    .group-name {
+      font-weight: $font-weight-lighter;
+      color: var(--text-primary-lightest);
+      height: 40px;
+      font-size: pixelToRem(11px);
+    }
+
     .nav-item {
+      height: 46px;
+
       &:hover {
         cursor: pointer;
         background-color: rgba(200, 207, 233, .4);
@@ -419,7 +426,6 @@
     }
 
   }
-
 
 
   // .inner {

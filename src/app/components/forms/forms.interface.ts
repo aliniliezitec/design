@@ -67,14 +67,6 @@ export const FormsCodeBlocks = [
             Nao label sm 1
             <sup class="text-danger">*</sup>
         </label>
-        <label class="nao-label-sm-2">
-            Nao label sm 2
-            <sup class="text-danger">*</sup>
-        </label>
-        <label class="nao-label-sm-3">
-            Nao label sm 3
-            <sup class="text-danger">*</sup>
-        </label>
       ` },
     {
         html: `
@@ -111,7 +103,7 @@ export const FormsCodeBlocks = [
             <input type="checkbox" class="custom-control-input" id="customSwitch1">
             <label class="custom-control-label" for="customSwitch1">This is an inactive switch</label>
         </div>
-        
+
         <div class="custom-control custom-switch">
             <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
             <label class="custom-control-label" for="customSwitch2">This is an active switch</label>

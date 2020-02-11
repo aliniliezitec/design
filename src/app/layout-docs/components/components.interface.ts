@@ -39,7 +39,7 @@ export const ComponentsCodeBlocks = [
           <button type="button" class="btn btn-simple-primary mr-1">
             Edit Deployment
           </button>
-          <span class="nao-pill-lg bg-primary text-white">Demo</span>
+          <span class="nao-badge-pill bg-primary text-white">Demo</span>
         </div>`
   }
 ];

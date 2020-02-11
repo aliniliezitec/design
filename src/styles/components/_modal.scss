@@ -2,6 +2,12 @@
   font-weight: $font-weight-semibold;
 }
 
+
+.nao-modal-backdrop {
+  background-color: var(--text-7);
+  opacity: 0.25;
+}
+
 // Modal base
 .nao-modal {
 
@@ -17,7 +23,7 @@
     color: var(--text-primary);
 
     @include media-breakpoint-down(xs) {
-      padding: pixelToRem(15px) pixelToRem(15px);
+      padding: pixelToRem(15px)#c8cfe9 pixelToRem(15px);
     }
   }
 
@@ -44,7 +50,7 @@
 // Nao modal 1
 .nao-modal-1 {
   .modal-body {
-    
+
   }
 }
 
