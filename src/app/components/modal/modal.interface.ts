@@ -5,7 +5,7 @@ export const ModalCodeBlocks = [
             <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
                     <div class="modal-header text-white bg-primary flex-column">
-                        <div>Descriptor</div>
+                        <div class="font-weight-lighter">Descriptor</div>
                         <h5 class="modal-title">Subject</h5>
                     </div>
                     <div class="modal-body">
@@ -48,7 +48,7 @@ export const ModalCodeBlocks = [
             <div class="modal-dialog modal-md" role="document">
                 <div class="modal-content">
                     <div class="modal-header flex-column">
-                        <div>Descriptor</div>
+                        <div class="font-weight-lighter">Descriptor</div>
                         <h5 class="modal-title">Subject</h5>
                     </div>
                     <div class="modal-body">

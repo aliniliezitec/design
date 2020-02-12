@@ -5,7 +5,8 @@
     <h2 class="title">Add new contact form (modal)</h2>
 
     <div class="nao-bd-example nao-modal-example">
-      <div class="modal nao-modal nao-modal-2" tabindex="-1" role="dialog">
+
+      <div class="modal nao-modal nao-modal-2" role="dialog" tabindex="-1">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
 
@@ -18,8 +19,10 @@
             <div class="modal-body nao-modal-body-2">
               <form>
                 <div [formGroup]="formGroup">
+
                   <div formGroupName="info">
-                    <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+
+                    <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
                       <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                         <label class="nao-label-1">
                           First name
@@ -27,10 +30,18 @@
                         </label>
                       </div>
                       <div class="col">
-                        <input type="text" autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210"
-                          formControlName="firstName" placeholder="First name" />
-                        <div class="pt-2 pb-2"
-                          [hidden]="formGroup.get('info.firstName').pristine || formGroup.get('info.firstName').disabled || formGroup.get('info.firstName').valid">
+                        <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210"
+                               formControlName="firstName"
+                               placeholder="First name" type="text"/>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+                      <div class="col-12 col-sm-5">
+                      </div>
+                      <div class="col">
+                        <div
+                          [hidden]="formGroup.get('info.firstName').pristine || formGroup.get('info.firstName').disabled || formGroup.get('info.firstName').valid"
+                          class="pt-2 pb-2">
                           <span class="badge badge-pill badge-danger-light"><strong>!</strong></span>
                           <span *ngIf="formGroup.get('info.firstName').errors" class="text-danger">
                             First name is required.
@@ -38,7 +49,8 @@
                         </div>
                       </div>
                     </div>
-                    <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+
+                    <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
                       <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                         <label class="nao-label-1">
                           Last name
@@ -46,10 +58,17 @@
                         </label>
                       </div>
                       <div class="col">
-                        <input type="text" autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210"
-                          formControlName="lastName" placeholder="Last name" />
-                        <div class="pt-2 pb-2"
-                          [hidden]="formGroup.get('info.lastName').pristine || formGroup.get('info.lastName').disabled || formGroup.get('info.lastName').valid">
+                        <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210" formControlName="lastName"
+                               placeholder="Last name" type="text"/>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+                      <div class="col-12 col-sm-5">
+                      </div>
+                      <div class="col">
+                        <div
+                          [hidden]="formGroup.get('info.lastName').pristine || formGroup.get('info.lastName').disabled || formGroup.get('info.lastName').valid"
+                          class="pt-2 pb-2">
                           <span class="badge badge-pill badge-danger-light"><strong>!</strong></span>
                           <span *ngIf="formGroup.get('info.lastName').errors" class="text-danger">
                             Last name is required.
@@ -58,6 +77,7 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
                     <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                       <label class="nao-label-1">
@@ -65,9 +85,10 @@
                       </label>
                     </div>
                     <div class="col">
-                      <ng-select class="nao-mw-0 nao-mw-sm-210" [searchable]="true" bindLabel="name" bindValue="value"
-                        [multiple]="false" placeholder="Type to search" clearAllText="Clear" notFoundText="Not found"
-                        [clearable]="false" formControlName="companyId">
+                      <ng-select [clearable]="false" [multiple]="false" [searchable]="true" bindLabel="name"
+                                 bindValue="value" class="nao-mw-0 nao-mw-sm-210" clearAllText="Clear"
+                                 formControlName="companyId"
+                                 notFoundText="Not found" placeholder="Type to search">
                         <ng-option value="1">
                           First company
                         </ng-option>
@@ -85,11 +106,14 @@
                     </div>
                     <div class="col">
                       <div class="pt-2">
-                        <button type="button" class="btn btn-sm btn-simple-primary"><i class="nao-icon-add-filled mr-1"></i>Create</button>
+                        <button class="btn btn-sm btn-simple-primary" type="button"><i
+                          class="nao-icon-add-filled mr-1"></i>Create
+                        </button>
                       </div>
                     </div>
                   </div>
-                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+
+                  <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
                     <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                       <label class="nao-label-1">
                         Email
@@ -97,28 +121,36 @@
                       </label>
                     </div>
                     <div class="col">
-                      <input type="text" autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210"
-                        formControlName="email" placeholder="Email" />
-                      <div class="pt-2 pb-2"
-                        [hidden]="formGroup.get('email').pristine || formGroup.get('email').disabled || formGroup.get('email').valid">
+                      <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210" formControlName="email"
+                             placeholder="Email" type="text"/>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+                    <div class="col-12 col-sm-5">
+                    </div>
+                    <div class="col">
+                      <div
+                        [hidden]="formGroup.get('email').pristine || formGroup.get('email').disabled || formGroup.get('email').valid"
+                        class="pt-2 pb-2">
                         <span class="badge badge-pill badge-danger-light"><strong>!</strong></span>
                         <span *ngIf="formGroup.get('email').errors" class="text-danger">
                           Email is required
                         </span>
                       </div>
-                    </div>
                   </div>
-                  <div></div>
-                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+                </div>
+
+                  <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
                     <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                       <label class="nao-label-1">
                         Language
                       </label>
                     </div>
                     <div class="col pb-2">
-                      <ng-select class="nao-mw-0 nao-mw-sm-210" [searchable]="true" bindLabel="name" bindValue="value"
-                        [multiple]="false" clearAllText="Clear" notFoundText="Not found" [clearable]="false"
-                        formControlName="languageId">
+                      <ng-select [clearable]="false" [multiple]="false" [searchable]="true" bindLabel="name"
+                                 bindValue="value" class="nao-mw-0 nao-mw-sm-210" clearAllText="Clear"
+                                 formControlName="languageId"
+                                 notFoundText="Not found">
                         <ng-option value="1">
                           English
                         </ng-option>
@@ -129,8 +161,15 @@
                           France
                         </ng-option>
                       </ng-select>
-                      <div class="pt-2 pb-2"
-                        [hidden]="formGroup.get('languageId').pristine || formGroup.get('languageId').disabled || formGroup.get('languageId').valid">
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+                    <div class="col-12 col-sm-5">
+                    </div>
+                    <div class="col">
+                      <div
+                        [hidden]="formGroup.get('languageId').pristine || formGroup.get('languageId').disabled || formGroup.get('languageId').valid"
+                        class="pt-2 pb-2">
                         <span class="badge badge-pill badge-danger-light"><strong>!</strong></span>
                         <span *ngIf="formGroup.get('languageId').errors" class="text-danger">
                           Invalid language.
@@ -138,7 +177,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+
+                  <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
                     <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                       <label class="nao-label-1">
                         Country
@@ -146,9 +186,10 @@
                       </label>
                     </div>
                     <div class="col pb-2">
-                      <ng-select class="nao-mw-0 nao-mw-sm-210" [searchable]="true" bindLabel="name" bindValue="value"
-                        [multiple]="false" clearAllText="Clear" notFoundText="Not found" [clearable]="false"
-                        formControlName="countryId">
+                      <ng-select [clearable]="false" [multiple]="false" [searchable]="true" bindLabel="name"
+                                 bindValue="value" class="nao-mw-0 nao-mw-sm-210" clearAllText="Clear"
+                                 formControlName="countryId"
+                                 notFoundText="Not found">
                         <ng-option value="usa">
                           USA
                         </ng-option>
@@ -159,8 +200,16 @@
                           France
                         </ng-option>
                       </ng-select>
-                      <div class="pt-2 pb-2"
-                        [hidden]="formGroup.get('countryId').pristine || formGroup.get('countryId').disabled || formGroup.get('countryId').valid">
+
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
+                    <div class="col-12 col-sm-5">
+                    </div>
+                    <div class="col">
+                      <div
+                        [hidden]="formGroup.get('countryId').pristine || formGroup.get('countryId').disabled || formGroup.get('countryId').valid"
+                        class="pt-2 pb-2">
                         <span class="badge badge-pill badge-danger-light"><strong>!</strong></span>
                         <span *ngIf="formGroup.get('countryId').errors" class="text-danger">
                           Country error
@@ -168,6 +217,7 @@
                       </div>
                     </div>
                   </div>
+
                   <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
                     <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
                       <label class="nao-label-1">
@@ -175,13 +225,8 @@
                       </label>
                     </div>
                     <div class="col">
-                      <input type="text" autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210"
-                        formControlName="facebook" placeholder="Facebook" />
-                      <div class="pt-2 pb-2"
-                        [hidden]="formGroup.get('facebook').pristine || formGroup.get('facebook').disabled || formGroup.get('facebook').valid">
-                        <span class="badge badge-pill badge-danger-light"><strong>!</strong></span>
-                        <span *ngIf="formGroup.get('facebook').errors" class="text-danger"></span>
-                      </div>
+                      <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210" formControlName="facebook"
+                             placeholder="Facebook" type="text"/>
                     </div>
                   </div>
                   <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
@@ -191,13 +236,8 @@
                       </label>
                     </div>
                     <div class="col">
-                      <input type="text" autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210"
-                        formControlName="linkedin" placeholder="Linkedin" />
-                      <div class="pt-2 pb-2"
-                        [hidden]="formGroup.get('linkedin').pristine || formGroup.get('linkedin').disabled || formGroup.get('linkedin').valid">
-                        <span class="badge badge-pill badge-danger-light"><strong>!</strong></span>
-                        <span *ngIf="formGroup.get('linkedin').errors" class="text-danger"></span>
-                      </div>
+                      <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210" formControlName="linkedin"
+                             placeholder="Linkedin" type="text"/>
                     </div>
                   </div>
                   <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
@@ -207,24 +247,20 @@
                       </label>
                     </div>
                     <div class="col">
-                      <input type="text" autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210"
-                        formControlName="twitter" placeholder="Twitter" />
-                      <div class="pt-2 pb-2"
-                        [hidden]="formGroup.get('twitter').pristine || formGroup.get('twitter').disabled || formGroup.get('twitter').valid">
-                        <span class="badge badge-pill badge-danger-light"><strong>!</strong></span>
-                        <span *ngIf="formGroup.get('twitter').errors" class="text-danger"></span>
-                      </div>
+                      <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210" formControlName="twitter"
+                             placeholder="Twitter" type="text"/>
                     </div>
                   </div>
                 </div>
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-outline-only-dark-blue nao-btn-transition">
+              <button class="btn btn-outline-only-primary nao-btn-transition" type="button">
                 Cancel
               </button>
-              <button type="button" data-style="expand-right" class="btn btn-primary nao-btn-transition ml-2"
-                [disabled]="formGroup.pristine || !formGroup.valid">
+              <button [disabled]="formGroup.pristine || !formGroup.valid"
+                      class="btn btn-primary nao-btn-transition ml-2" data-style="expand-right"
+                      type="button">
                 Create
               </button>
             </div>
@@ -236,16 +272,18 @@
     </div>
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].ts1)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[0].ts1)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[0].ts1 | typescriptPrismPipe | sanitizeHtml"></div></pre>
     </div>
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[0].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
@@ -256,17 +294,17 @@
     <h2 class="title">Add new product form (modal)</h2>
 
     <div class="nao-bd-example nao-modal-example">
-      <div class="modal nao-modal-form" tabindex="-1" role="dialog">
+      <div class="modal nao-modal-form" role="dialog" tabindex="-1">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
 
             <div class="modal-header flex-column">
-              <h6 class="modal-title">
+              <h5 class="modal-title">
                 Add new product
-              </h6>
-              <h6 class="m-0">
+              </h5>
+              <div>
                 Subtitle
-              </h6>
+              </div>
             </div>
             <div class="modal-body p-0">
               <form>
@@ -284,14 +322,14 @@
                           </label>
                         </div>
                         <div class="col">
-                          <input type="text" autocomplete="off"
-                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="name"
-                            placeholder="Name" />
+                          <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210"
+                                 formControlName="name" placeholder="Name"
+                                 type="text"/>
                         </div>
                       </div>
                       <div class="d-flex flex-column flex-sm-row align-items-center mb-3 no-gutters">
                         <div class="col-12 col-sm-5">
-                         </div>
+                        </div>
                         <div class="col">
                           <span *ngIf="formGroup2.get('name').errors" class="text-danger">
                               Name is required.
@@ -306,7 +344,7 @@
                         </div>
                         <div class="col">
                           <textarea class="form-control form-control-sm nao-textarea nao-mw-0 nao-mw-sm-300"
-                            formControlName="description" placeholder="Description"></textarea>
+                                    formControlName="description" placeholder="Description"></textarea>
                         </div>
                       </div>
                     </div>
@@ -324,9 +362,9 @@
                           </label>
                         </div>
                         <div class="col">
-                          <input type="number" autocomplete="off"
-                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="priceSales"
-                            placeholder="Price" />
+                          <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210"
+                                 formControlName="priceSales" placeholder="Price"
+                                 type="number"/>
                         </div>
                       </div>
                       <div class="d-flex flex-column flex-sm-row align-items-center mb-1 no-gutters">
@@ -336,9 +374,9 @@
                           </label>
                         </div>
                         <div class="col">
-                          <input type="number" autocomplete="off"
-                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="priceCost"
-                            placeholder="Cost" />
+                          <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210"
+                                 formControlName="priceCost" placeholder="Cost"
+                                 type="number"/>
                         </div>
                       </div>
                     </div>
@@ -355,9 +393,9 @@
                           </label>
                         </div>
                         <div class="col">
-                          <input type="text" autocomplete="off"
-                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="sku"
-                            placeholder="Sku" />
+                          <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210"
+                                 formControlName="sku" placeholder="Sku"
+                                 type="text"/>
                         </div>
                       </div>
                       <div class="d-flex flex-column flex-sm-row align-items-center mb-1 no-gutters">
@@ -367,9 +405,9 @@
                           </label>
                         </div>
                         <div class="col">
-                          <input type="text" autocomplete="off"
-                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="barcode"
-                            placeholder="Barcode" />
+                          <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210"
+                                 formControlName="barcode" placeholder="Barcode"
+                                 type="text"/>
                         </div>
                       </div>
                       <div class="d-flex flex-column flex-sm-row align-items-center mb-1 no-gutters">
@@ -379,9 +417,9 @@
                           </label>
                         </div>
                         <div class="col">
-                          <input type="number" autocomplete="off"
-                            class="form-control form-control-sm nao-mw-0 nao-mw-sm-210" formControlName="quantity"
-                            placeholder="Quantity" />
+                          <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210"
+                                 formControlName="quantity" placeholder="Quantity"
+                                 type="number"/>
                         </div>
                       </div>
                     </div>
@@ -389,15 +427,16 @@
                   <div class="nao-blue-rounded-box" formGroupName="shipping">
                     <div class="box-header border-bottom">
                       <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" type="checkbox" name="checkbox" id="shipping" value="false"
-                          formControlName="hasShipping" />
+                        <input class="custom-control-input" formControlName="hasShipping" id="shipping" name="checkbox"
+                               type="checkbox"
+                               value="false"/>
                         <label class="custom-control-label pt-1" for="shipping">
                           Shippable
                         </label>
                       </div>
                     </div>
 
-                    <div class="box-container" [hidden]="!formGroup2.get('shipping.hasShipping').value">
+                    <div [hidden]="!formGroup2.get('shipping.hasShipping').value" class="box-container">
                       <div class="d-flex justify-content-center">
 
                         <div class="nao-grid-4-input-dropdown">
@@ -407,14 +446,19 @@
                             </label>
                             <div class="d-flex flex-column">
                               <div class="input-group-append">
-                                <input type="number" class="form-control form-control-sm" formControlName="weight"
-                                  placeholder="Weight" />
-                                <ng-select class="nao-ng-select-sm-2" [clearable]="false" formControlName="weightUnit"
-                                  [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.weightUnit').disabled && formGroup2.get('shipping.weightUnit').invalid }">
+                                <input class="form-control form-control-sm" formControlName="weight"
+                                       placeholder="Weight"
+                                       type="number"/>
+                                <ng-select [clearable]="false"
+                                           [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.weightUnit').disabled && formGroup2.get('shipping.weightUnit').invalid }"
+                                           class="nao-ng-select-sm-2"
+                                           formControlName="weightUnit">
                                   <ng-option value="kg">
-                                    Kg </ng-option>
+                                    Kg
+                                  </ng-option>
                                   <ng-option value="lbs">
-                                    Lbs </ng-option>
+                                    Lbs
+                                  </ng-option>
                                 </ng-select>
                               </div>
                             </div>
@@ -426,14 +470,19 @@
                             </label>
                             <div class="d-flex flex-column">
                               <div class="input-group-append">
-                                <input type="number" class="form-control form-control-sm" formControlName="height"
-                                  placeholder="height" />
-                                <ng-select class="nao-ng-select-sm-2" [clearable]="false" formControlName="heightUnit"
-                                  [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.heightUnit').disabled && formGroup2.get('shipping.heightUnit').invalid }">
+                                <input class="form-control form-control-sm" formControlName="height"
+                                       placeholder="height"
+                                       type="number"/>
+                                <ng-select [clearable]="false"
+                                           [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.heightUnit').disabled && formGroup2.get('shipping.heightUnit').invalid }"
+                                           class="nao-ng-select-sm-2"
+                                           formControlName="heightUnit">
                                   <ng-option value="cm">
-                                    Cm</ng-option>
+                                    Cm
+                                  </ng-option>
                                   <ng-option value="in">
-                                    In</ng-option>
+                                    In
+                                  </ng-option>
                                 </ng-select>
                               </div>
                             </div>
@@ -445,14 +494,19 @@
                             </label>
                             <div class="d-flex flex-column">
                               <div class="input-group-append">
-                                <input type="number" class="form-control form-control-sm" formControlName="length"
-                                  placeholder="Length" />
-                                <ng-select class="nao-ng-select-sm-2" [clearable]="false" formControlName="lengthUnit"
-                                  [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.lengthUnit').disabled && formGroup2.get('shipping.lengthUnit').invalid }">
+                                <input class="form-control form-control-sm" formControlName="length"
+                                       placeholder="Length"
+                                       type="number"/>
+                                <ng-select [clearable]="false"
+                                           [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.lengthUnit').disabled && formGroup2.get('shipping.lengthUnit').invalid }"
+                                           class="nao-ng-select-sm-2"
+                                           formControlName="lengthUnit">
                                   <ng-option value="cm">
-                                    Cm</ng-option>
+                                    Cm
+                                  </ng-option>
                                   <ng-option value="in">
-                                    In</ng-option>
+                                    In
+                                  </ng-option>
                                 </ng-select>
                               </div>
                             </div>
@@ -464,14 +518,18 @@
                             </label>
                             <div class="d-flex flex-column">
                               <div class="input-group-append">
-                                <input type="number" class="form-control form-control-sm" formControlName="width"
-                                  placeholder="Width" />
-                                <ng-select class="nao-ng-select-sm-2" [clearable]="false" formControlName="widthUnit"
-                                  [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.widthUnit').disabled && formGroup2.get('shipping.widthUnit').invalid }">
+                                <input class="form-control form-control-sm" formControlName="width" placeholder="Width"
+                                       type="number"/>
+                                <ng-select [clearable]="false"
+                                           [ngClass]="{'nao-input-danger': !formGroup2.get('shipping.widthUnit').disabled && formGroup2.get('shipping.widthUnit').invalid }"
+                                           class="nao-ng-select-sm-2"
+                                           formControlName="widthUnit">
                                   <ng-option value="cm">
-                                    Cm</ng-option>
+                                    Cm
+                                  </ng-option>
                                   <ng-option value="in">
-                                    In</ng-option>
+                                    In
+                                  </ng-option>
                                 </ng-select>
                               </div>
                             </div>
@@ -490,15 +548,16 @@
                       <p>Add the items you want to be included in the sales order</p>
 
                       <div class="nao-add-items-container ml-auto" formArrayName="items">
-                        <div class="pb-3"
-                          *ngFor="let item of formGroup2.controls.items['controls']; let i = index; let last = last"
-                          [formGroupName]="i">
+                        <div *ngFor="let item of formGroup2.controls.items['controls']; let i = index; let last = last"
+                             [formGroupName]="i"
+                             class="pb-3">
                           <div class="d-flex flex-column flex-md-row align-items-md-center py-3 pr-2">
                             <label class="nao-form-label pr-3 mb-1 mb-md-0">
                               Product
                             </label>
-                            <ng-select class="nao-ng-select-sm nao-mw-0 nao-mw-md-200 flex-grow-1" [searchable]="true"
-                              bindLabel="name" bindValue="value" [multiple]="false">
+                            <ng-select [multiple]="false" [searchable]="true"
+                                       bindLabel="name" bindValue="value"
+                                       class="nao-ng-select-sm nao-mw-0 nao-mw-md-200 flex-grow-1">
                               <ng-option value="pecans">
                                 Pecans
                               </ng-option>
@@ -516,27 +575,29 @@
                               <label class="nao-label-sm-1">
                                 Ordered quantity
                               </label>
-                              <input type="number" autocomplete="off"
-                                class="form-control form-control-sm nao-mw-0 nao-mw-md-100 mt-auto"
-                                formControlName="quantity" [max]="1000" />
+                              <input [max]="1000" autocomplete="off"
+                                     class="form-control form-control-sm nao-mw-0 nao-mw-md-100 mt-auto"
+                                     formControlName="quantity" type="number"/>
                             </div>
 
                             <div class="d-flex flex-column pr-2 mb-2">
                               <label class="nao-label-sm-1">
                                 Unit price
                               </label>
-                              <input type="text" autocomplete="off"
-                                class="form-control form-control-sm nao-mw-0 nao-mw-md-100 mt-auto"
-                                formControlName="priceSales" />
+                              <input autocomplete="off"
+                                     class="form-control form-control-sm nao-mw-0 nao-mw-md-100 mt-auto"
+                                     formControlName="priceSales"
+                                     type="text"/>
                             </div>
 
                             <div class="d-flex flex-column pr-2 mb-2">
                               <label class="nao-label-sm-1">
                                 Taxes
                               </label>
-                              <input type="text" autocomplete="off"
-                                class="form-control form-control-sm nao-mw-0 nao-mw-md-100 mt-auto"
-                                formControlName="salesTax" />
+                              <input autocomplete="off"
+                                     class="form-control form-control-sm nao-mw-0 nao-mw-md-100 mt-auto"
+                                     formControlName="salesTax"
+                                     type="text"/>
                             </div>
 
                             <div class="d-flex flex-column pr-2 item-mb-fix">
@@ -557,7 +618,8 @@
                           </div>
                         </div>
 
-                        <button type="button" class="btn btn-sm btn-simple-primary d-flex align-items-center add-another-btn">
+                        <button class="btn btn-sm btn-simple-primary d-flex align-items-center add-another-btn"
+                                type="button">
                           <i class="nao-icon-add-filled mr-1"></i>
                           <span>Add another</span>
                         </button>
@@ -570,11 +632,12 @@
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-outline-only-dark-blue nao-btn-transition">
+              <button class="btn btn-outline-only-primary nao-btn-transition" type="button">
                 Cancel
               </button>
-              <button type="button" data-style="expand-right" class="btn btn-primary nao-btn-transition ml-2"
-                [disabled]="formGroup2.pristine || !formGroup2.valid">
+              <button [disabled]="formGroup2.pristine || !formGroup2.valid"
+                      class="btn btn-primary nao-btn-transition ml-2" data-style="expand-right"
+                      type="button">
                 Create
               </button>
             </div>
@@ -585,16 +648,18 @@
     </div>
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].ts1)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[1].ts1)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[1].ts1 | typescriptPrismPipe | sanitizeHtml"></div></pre>
     </div>
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[1].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[1].html | htmlPrismPipe | sanitizeHtml"></div></pre>
@@ -614,19 +679,19 @@
           <div class="row">
             <div class="form-group mb-0 col-md-6">
               <label class="nao-label-sm-3" for="firstName">First name</label>
-              <input class="form-control form-control-sm mb-1" autocomplete="false" type="text"
-                formControlName="firstName" placeholder="Meg" id="firstName">
+              <input autocomplete="false" class="form-control form-control-sm mb-1" formControlName="firstName"
+                     id="firstName" placeholder="Meg" type="text">
               <span [hidden]="formGroup3.get('firstName').pristine || formGroup3.get('firstName').valid"
-                class="text-danger">
+                    class="text-danger">
                 First name is required
               </span>
             </div>
             <div class="form-group mb-0 col-md-6">
               <label class="nao-label-sm-3" for="lastName">Last name</label>
-              <input class="form-control form-control-sm mb-1" autocomplete="false" type="text"
-                formControlName="lastName" placeholder="Griffin" id="lastName" />
+              <input autocomplete="false" class="form-control form-control-sm mb-1" formControlName="lastName"
+                     id="lastName" placeholder="Griffin" type="text"/>
               <span [hidden]="formGroup3.get('lastName').pristine || formGroup3.get('lastName').valid"
-                class="text-danger">
+                    class="text-danger">
                 Last name is required
               </span>
             </div>
@@ -634,8 +699,8 @@
 
           <div class="form-group mb-0">
             <label class="nao-label-sm-3" for="email">Email</label>
-            <input class="form-control form-control-sm mb-1" autocomplete="false" type="text" formControlName="email"
-              placeholder="elon@musk.com" id="email" />
+            <input autocomplete="false" class="form-control form-control-sm mb-1" formControlName="email" id="email"
+                   placeholder="elon@musk.com" type="text"/>
             <span [hidden]="formGroup3.get('email').pristine || formGroup3.get('email').valid" class="text-danger">
               Email is required
             </span>
@@ -643,19 +708,21 @@
 
           <div class="form-group mb-0">
             <label class="nao-label-sm-3" for="companyName">Company</label>
-            <input class="form-control form-control-sm mb-1" autocomplete="false" type="text"
-              formControlName="companyName" placeholder="SpaceX Inc" id="companyName" />
+            <input autocomplete="false" class="form-control form-control-sm mb-1" formControlName="companyName"
+                   id="companyName" placeholder="SpaceX Inc" type="text"/>
             <span [hidden]="formGroup3.get('companyName').pristine || formGroup3.get('companyName').valid"
-              class="text-danger">
+                  class="text-danger">
               Company is required
             </span>
           </div>
 
           <div class="form-group mb-0">
             <label class="nao-label-sm-3">Employees</label>
-            <br />
-            <ng-select class="nao-ng-select-sm" [searchable]="false" formControlName="employees"
-              [ngClass]="{'nao-input-danger': !formGroup3.get('employees').disabled && formGroup3.get('employees').invalid }">
+            <br/>
+            <ng-select
+              [ngClass]="{'nao-input-danger': !formGroup3.get('employees').disabled && formGroup3.get('employees').invalid }"
+              [searchable]="false" class="nao-ng-select-sm"
+              formControlName="employees">
               <ng-option [value]="10">
                 10
               </ng-option>
@@ -670,26 +737,27 @@
 
           <div class="form-group mb-0">
             <label class="nao-label-sm-3" for="password">Password</label>
-            <input class="form-control form-control-sm mb-1" autocomplete="false" type="password"
-              formControlName="password" placeholder="SpaceX Inc" id="password" />
-            <span [hidden]="formGroup3.get('password').pristine || formGroup3.get('password').valid" class="text-danger">
+            <input autocomplete="false" class="form-control form-control-sm mb-1" formControlName="password"
+                   id="password" placeholder="SpaceX Inc" type="password"/>
+            <span [hidden]="formGroup3.get('password').pristine || formGroup3.get('password').valid"
+                  class="text-danger">
               Password field is required
             </span>
           </div>
           <div class="form-group mb-0">
             <label class="nao-label-sm-3" for="confirmPassword">Confirm password</label>
-            <input class="form-control form-control-sm mb-1" autocomplete="false" type="password"
-              formControlName="confirmPassword" placeholder="SpaceX Inc" id="confirmPassword" />
+            <input autocomplete="false" class="form-control form-control-sm mb-1" formControlName="confirmPassword"
+                   id="confirmPassword" placeholder="SpaceX Inc" type="password"/>
             <span [hidden]="formGroup3.get('confirmPassword').pristine || formGroup3.get('confirmPassword').valid"
-              class="text-danger">
+                  class="text-danger">
               Password field is required
             </span>
           </div>
           <div class="form-group mb-0">
             <label class="nao-label-sm-3">Country</label>
 
-            <ng-select class="nao-ng-select-sm" bindLabel="name" bindValue="value" [multiple]="false"
-              formControlName="countryId">
+            <ng-select [multiple]="false" bindLabel="name" bindValue="value" class="nao-ng-select-sm"
+                       formControlName="countryId">
               <ng-option value="usa">
                 USA
               </ng-option>
@@ -702,18 +770,20 @@
             </ng-select>
           </div>
           <label class="custom-control custom-checkbox mb-3 mt-3">
-            <input class="custom-control-input" type="checkbox" formControlName="agreeToNewsletters">
+            <input class="custom-control-input" formControlName="agreeToNewsletters" type="checkbox">
             <span class="custom-control-label">
               I want naologic to send me email updates about new products and services
             </span>
           </label>
-          <button type="button" data-style="expand-right" class="btn btn-primary btn-block btn-lg "
-            [disabled]="formGroup3.pristine || !formGroup3.valid">Register</button>
+          <button [disabled]="formGroup3.pristine || !formGroup3.valid" class="btn btn-primary btn-block btn-lg "
+                  data-style="expand-right"
+                  type="button">Register
+          </button>
 
 
           <div class="nao-terms mt-2">
             By signing up, you agree to our <a href="https://naologic.com/legal/terms-and-conditions"
-              target="_blank">Terms of Service</a> and
+                                               target="_blank">Terms of Service</a> and
             <a href="https://naologic.com/legal/privacy-policy" target="_blank">Privacy Notice</a>
           </div>
           <div class="nao-separator"></div>
@@ -727,8 +797,9 @@
     </div>
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[2].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[2].html | htmlPrismPipe | sanitizeHtml"></div></pre>

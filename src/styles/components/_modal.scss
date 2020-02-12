@@ -2,10 +2,33 @@
   font-weight: $font-weight-semibold;
 }
 
-
+// *************************************************
+// Modal fixes
 .nao-modal-backdrop {
   background-color: var(--text-7);
   opacity: 0.25;
+}
+
+.modal-backdrop.show {
+  opacity: 0.25 !important;
+}
+
+// Modal full screen
+.nao-full-screen-modal > .modal-dialog {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+// *******************************************************************************
+// * Modals sizes
+.modal-md {
+  .modal-content {
+    max-width: 430px;
+  }
 }
 
 // Modal base
@@ -23,7 +46,7 @@
     color: var(--text-primary);
 
     @include media-breakpoint-down(xs) {
-      padding: pixelToRem(15px)#c8cfe9 pixelToRem(15px);
+      padding: pixelToRem(15px) pixelToRem(15px);
     }
   }
 
@@ -49,6 +72,7 @@
 // *************************************************
 // Nao modal 1
 .nao-modal-1 {
+
   .modal-body {
 
   }
@@ -57,6 +81,10 @@
 // *************************************************
 // Nao modal 2
 .nao-modal-2 {
+  .modal-title {
+    margin-bottom: 3px;
+  }
+
   .modal-body {
     background-color: var(--bg-3);
 
@@ -65,19 +93,25 @@
       line-height: 9px;
       margin-top: 2px;
     }
-
   }
 }
 
 // *************************************************
 // Nao modal form
 .nao-modal-form {
-
   .modal-header {
-    padding: pixelToRem(20px) pixelToRem(30px);
+    padding: pixelToRem(15px) pixelToRem(40px);
+    font-size: pixelToRem(20px);
+    min-height: 73px;
+    color: var(--text-primary);
 
     .modal-title {
+      margin-bottom: 3px;
       font-weight: $font-weight-semibold;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: pixelToRem(15px) pixelToRem(15px);
     }
   }
 

@@ -64,6 +64,10 @@
     height: 100%;
     background-color: var(--border-lightest);
     padding-left: 50px;
+
+    .nao-icon-additional-options {
+      font-size: 5px;
+    }
   }
 
   .card-header {
@@ -181,12 +185,12 @@
     }
 
     .ng-value {
-      background-color: var(--bg-1) !important;
-      color: var(--text-primary) !important;
-      font-weight: $font-weight-semibold !important;
-      font-size: pixelToRem(16px) !important;
-      border-radius: 10px !important;
-      padding: 9px 14px 9px 14px !important;
+      //background-color: var(--bg-1) !important;
+      //color: var(--text-primary) !important;
+      //font-weight: $font-weight-semibold !important;
+      //font-size: pixelToRem(16px) !important;
+      //border-radius: 10px !important;
+      //padding: 9px 14px 9px 14px !important;
     }
 
     .ng-option {

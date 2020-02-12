@@ -312,7 +312,8 @@
 .nao-sidenav {
   position: relative;
   height: 100%;
-  width: 280px;
+  min-width: 280px;
+  max-width: 280px;
   position: fixed;
   text-align: left;
   z-index: 1;
@@ -344,6 +345,7 @@
       font-size: 16px;
       line-height: 14px;
       margin-right: 30px;
+      text-align: center;
 
       @include rtl {
         margin-right: unset;
@@ -381,7 +383,7 @@
     }
 
     .nav-item {
-      height: 46px;
+      height: 48px;
 
       &:hover {
         cursor: pointer;

@@ -1,0 +1,58 @@
+<div class="nao-docs-wrapper">
+  <div class="elements-container">
+    <h1 class="title">Announcements</h1>
+
+    <div class="elem-container">
+
+      <div class="nao-bd-example">
+        <div class="nao-ann-container d-flex align-items-center bg-danger text-white mb-5">
+          <div class="mr-auto">Annoucement copy</div>
+          <div>
+            Annoucement copy
+          </div>
+          <div class="days-container d-flex justify-content-center ml-2 mr-4">3</div>
+          <button class="btn btn-white btn-sm">Small button</button>
+        </div>
+
+        <div class="nao-ann-container d-flex align-items-center bg-text-primary text-white mb-5">
+          <div class="mr-auto">Annoucement copy</div>
+          <div>
+            Annoucement copy
+          </div>
+          <div class="days-container d-flex justify-content-center ml-2 mr-4">3</div>
+          <button class="btn btn-primary btn-sm">Small button</button>
+        </div>
+
+        <div class="nao-ann-container d-flex align-items-center bg-text-primary text-white mb-5">
+          <div class="mx-auto">Annoucement copy</div>
+          <button class="btn btn-without-box-shadow btn-no-min-width btn-sm close-btn" type="button">
+            <i class="nao-icon-cancel text-white">
+            </i>
+          </button>
+        </div>
+
+        <div class="nao-ann-container d-flex align-items-center bg-text-primary text-white mb-5">
+          <div class="cta">CTA</div>
+          <div class="mx-auto">Annoucement copy</div>
+          <button class="btn btn-simple-primary btn-sm mr-4">Simple button</button>
+          <button class="btn btn-without-box-shadow btn-no-min-width btn-sm close-btn" type="button">
+            <i class="nao-icon-cancel text-white">
+            </i>
+          </button>
+        </div>
+      </div>
+
+      <div class="nao-bd-clipboard">
+        <button (click)="copyToClipboard(data[0].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+                placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+        </button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+
+    </div>
+  </div>
+
+</div>

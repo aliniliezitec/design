@@ -3,6 +3,7 @@
 
 @import "./styles/base/global";
 
+@import "./styles/components/announcement";
 @import "./styles/components/buttons";
 @import "./styles/components/custom-forms";
 @import "./styles/components/cards";
@@ -17,6 +18,7 @@
 @import "./styles/pages/nao-navbar";
 @import "./styles/pages/layout";
 
+@import "./styles/utilities/general";
 @import "./styles/utilities/grid";
 @import "./styles/utilities/sizing";
 @import "./styles/utilities/spacing";

@@ -7,12 +7,14 @@ import { ComponentsComponent } from './components/components.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutDocsPublicFlow } from './layout-docs.flowservice';
 import {NaoDesignModule} from '@naologic/design';
+import {AnnouncementComponent} from "./announcement/announcement.component";
 
 @NgModule({
   declarations: [
     GridComponent,
     ComponentsComponent,
-    NavbarComponent
+    NavbarComponent,
+    AnnouncementComponent
   ],
   imports: [
     CommonModule,

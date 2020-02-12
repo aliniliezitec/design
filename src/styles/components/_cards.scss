@@ -1,7 +1,22 @@
 // *************************************************
-// Default Card 
+// Default Card
 .card {
   box-shadow: $nao-card-box-shadow;
+  overflow: hidden;
+
+  .card-header-title {
+    font-weight: $font-weight-semibold;
+    margin-bottom: 3px;
+  }
+
+  .card-subtitle {
+    margin-top: 0px;
+  }
+
+  .card-header-subtitle {
+    font-size: 1rem;
+  }
+
 }
 
 // *************************************************
@@ -9,6 +24,12 @@
 .nao-card-1 {
   .card-header {
     padding: 15px 40px;
+    .title {
+      margin: 0 !important;
+    }
+    .card-subtitle {
+      margin-top: 3px;
+    }
   }
 
   .card-body {

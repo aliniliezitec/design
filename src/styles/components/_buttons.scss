@@ -352,8 +352,37 @@ $value in $theme-colors {
 }
 
 
-//todo: add to the documentation
+// todo: add to the documentation
+// todo: add to the documentation
+// todo: add to the documentation
+// todo: add to the documentation
+// todo: add to the documentation
 .nao-icon-rotate {
   display: inline-block;
   transition: ease-in-out .2s;
+}
+
+.nao-field-explanation {
+  max-width: 275px;
+}
+
+.nao-field-error {
+  margin-left: 5px;
+  color: var(--danger);
+}
+
+strong {
+  font-weight: $font-weight-bold !important;
+}
+
+.btn-no-white-space {
+  white-space: nowrap;
+
+  @include media-breakpoint-down(md) {
+    white-space: unset;
+  }
+}
+
+.strengthBar {
+  margin-left: 0 !important;
 }

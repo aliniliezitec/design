@@ -8,7 +8,7 @@ export const CardsCodeBlocks = [
             <div class="card-body">
                 <h6 class="card-title">Special title treatment</h6>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="javascript:void(0)" class="btn btn-primary">Go somewhere</a>
             </div>
             <div class="card-footer">
                 Footer
@@ -19,14 +19,14 @@ export const CardsCodeBlocks = [
         <div class="card nao-card-1" style="max-width: 760px">
             <div class="card-header">
                 <h5 class="title">Nao card 1</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <h5 class="card-subtitle">Card subtitle</h5>
             </div>
             <div class="card-body py-5">
                 <h5 class="card-title">Special title treatment</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
             </div>
             <div class="card-footer text-right">
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="javascript:void(0)" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>`},
   {
@@ -66,7 +66,7 @@ export const CardsCodeBlocks = [
             </div>
           </div>
           <div class="nao-dashboard-card-body">
-            
+
           </div>
         </div>`},
   {

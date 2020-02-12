@@ -161,5 +161,5 @@ export const ButtonsCodeBlocks = [
     {
         html: `
     <button type="button" class="btn btn-primary nao-btn-transition">Hover</button>
-    <button type="button" class="btn btn-outline-only-dark-blue nao-btn-transition">Hover</button>`},
+    <button type="button" class="btn btn-outline-only-primary nao-btn-transition">Hover</button>`},
 ];

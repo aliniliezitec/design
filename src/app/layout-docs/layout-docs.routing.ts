@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { GridComponent } from './grid/grid.component';
 import { ComponentsComponent } from './components/components.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AnnouncementComponent } from './announcement/announcement.component';
 
 const routes: Routes = [
   {
@@ -13,10 +14,17 @@ const routes: Routes = [
     path: '',
     children: [
       {
+        path: 'announcement',
+        component: AnnouncementComponent,
+        data: {
+          title: 'Announcement - Naologic',
+        }
+      },
+      {
         path: 'grid',
         component: GridComponent,
         data: {
-          title: 'grid - Naologic',
+          title: 'Grid - Naologic',
         }
       },
       {
