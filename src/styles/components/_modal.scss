@@ -1,6 +1,6 @@
-.modal-title {
-  font-weight: $font-weight-semibold;
-}
+//.modal-title {
+//  font-weight: $font-weight-semibold;
+//}
 
 // *************************************************
 // Modal fixes
@@ -35,8 +35,13 @@
 .nao-modal {
 
   .modal-title {
-    margin-top: 3px;
+    //margin-top: 3px;
     font-weight: $font-weight-semibold;
+  }
+
+  .modal-subtitle {
+    margin-bottom: 0;
+    font-weight: $font-weight-lighter;
   }
 
   .modal-header {
@@ -54,6 +59,12 @@
     padding: pixelToRem(25px) pixelToRem(40px) pixelToRem(15px) pixelToRem(40px);
     color: var(--text-primary-light);
     font-size: pixelToRem(14px);
+
+    .form-control {
+      &:focus, &:active {
+        box-shadow: none;
+      }
+    }
 
     @include media-breakpoint-down(xs) {
       padding: pixelToRem(15px) pixelToRem(20px) pixelToRem(15px) pixelToRem(20px);
@@ -82,7 +93,7 @@
 // Nao modal 2
 .nao-modal-2 {
   .modal-title {
-    margin-bottom: 3px;
+    //margin-bottom: 3px;
   }
 
   .modal-body {
@@ -106,7 +117,7 @@
     color: var(--text-primary);
 
     .modal-title {
-      margin-bottom: 3px;
+      //margin-bottom: 3px;
       font-weight: $font-weight-semibold;
     }
 

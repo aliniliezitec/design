@@ -37,9 +37,7 @@
     // Avoid using mixin so we can pass custom focus shadow properly
     @if $enable-shadows {
       box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
-    }
-
-    @else {
+    } @else {
       box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
     }
   }
@@ -59,7 +57,7 @@
 
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
-  .show>&.dropdown-toggle {
+  .show > &.dropdown-toggle {
     color: color-yiq($active-background);
     background-color: $active-background;
 
@@ -74,9 +72,7 @@
       // Avoid using mixin so we can pass custom focus shadow properly
       @if $enable-shadows and $btn-active-box-shadow !=none {
         box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
-      }
-
-      @else {
+      } @else {
         box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
       }
     }
@@ -139,13 +135,13 @@ $value in $theme-colors {
 
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
-  .show>&.dropdown-toggle {
+  .show > &.dropdown-toggle {
     background-color: #a0a5ff;
   }
 
   &:not(:disabled):not(.disabled):active:focus,
   &:not(:disabled):not(.disabled).active:focus,
-  .show>&.dropdown-toggle:focus {
+  .show > &.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem #a0a5ff;
   }
 }
@@ -155,11 +151,11 @@ $value in $theme-colors {
 @mixin button-outline-only-variant($color, $color-hover: color-yiq($color), $active-background: $color, $active-border: $color) {
   color: $color;
   border-color: $color;
-  //   @include hover() {
-  //     color: $color-hover;
-  //     background-color: $active-background;
-  //     border-color: $active-border;
-  //   }
+  @include hover() {
+    color: $color;
+    //     background-color: $active-background;
+    //     border-color: $active-border;
+  }
 
   &:focus,
   &.focus {
@@ -174,19 +170,17 @@ $value in $theme-colors {
 
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
-  .show>&.dropdown-toggle {
-    color: color-yiq($active-background);
-    background-color: $active-background;
-    border-color: $active-border;
+  .show > &.dropdown-toggle {
+    //color: color-yiq($active-background);
+    //background-color: $active-background;
+    //border-color: $active-border;
 
     &:focus {
 
       // Avoid using mixin so we can pass custom focus shadow properly
       @if $enable-shadows and $btn-active-box-shadow !=none {
         box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5);
-      }
-
-      @else {
+      } @else {
         box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
       }
     }
@@ -228,7 +222,7 @@ $value in $theme-colors {
 
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
-  .show>&.dropdown-toggle {
+  .show > &.dropdown-toggle {
     color: $color;
     background-color: rgba($active-background, .5);
 
@@ -237,9 +231,7 @@ $value in $theme-colors {
       // Avoid using mixin so we can pass custom focus shadow properly
       @if $enable-shadows and $btn-active-box-shadow !=none {
         box-shadow: $btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5);
-      }
-
-      @else {
+      } @else {
         box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
       }
     }
@@ -297,12 +289,12 @@ $value in $theme-colors {
   transform: none;
 }
 
-.nao-btn-transition:focus,
-.nao-btn-transition.focus {
-  box-shadow: 0 0.5rem 0.5rem -0.4rem var(--border-lightest);
-  transform: translateY(-0.1rem);
-}
-
+//
+//.nao-btn-transition:focus,
+//.nao-btn-transition.focus {
+//  box-shadow: 0 0.5rem 0.5rem -0.4rem var(--border-lightest);
+//  transform: translateY(-0.1rem);
+//}
 
 
 // btn without box-shadow

@@ -1,7 +1,8 @@
-.font-weight-lighter {
-  font-weight: $font-weight-lighter !important;
-}
-
 .bg-text-primary {
   background-color: var(--text-primary);
+}
+
+//todo: add to docs
+.border-bottom {
+  border-bottom: 1px solid var(--bg-2) !important;
 }

@@ -10,9 +10,10 @@
     color: var(--text-primary-lightest);
 
     th {
-      padding: 11px 5px;
-      line-height: 1.6;
-      background-color: #f7f9fc;
+      padding: 7px 5px;
+      border: none;
+      background-color: var(--bg-3);
+      font-weight: $font-weight-lighter;
     }
   }
 
@@ -156,12 +157,12 @@
 
   .nao-table-info {
     font-size: pixelToRem(13px);
-    font-weight: $font-weight-lighter;
+    fonttra-weight: $font-weight-lighter;
     color: var(--text-primary-lightest);
   }
 
   .card-search {
-    height: 56px;
+    min-height: 56px;
     padding-right: 10px;
     padding-left: 19px;
 

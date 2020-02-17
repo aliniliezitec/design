@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsComponent } from './forms/forms.component';
 import { FileManagerComponent } from './file-manager/file-manager.component';
+import { ModalsComponent } from './modals/modals.component';
 
 const routes: Routes = [
   {
@@ -15,14 +16,21 @@ const routes: Routes = [
         path: 'forms',
         component: FormsComponent,
         data: {
-          title: 'Getting started - Naologic',
+          title: 'Forms - Naologic',
+        }
+      },
+      {
+        path: 'modals',
+        component: ModalsComponent,
+        data: {
+          title: 'Modals - Naologic',
         }
       },
       {
         path: 'file-manager',
         component: FileManagerComponent,
         data: {
-          title: 'Getting started - Naologic',
+          title: 'File manager - Naologic',
         }
       },
     ]
@@ -33,4 +41,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class SamplesRouting { }
+export class SamplesRouting {
+}

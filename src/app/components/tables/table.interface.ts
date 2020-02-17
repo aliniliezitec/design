@@ -187,7 +187,7 @@ export const TableCodeBlocks = [
               <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
             </div>
             <div class="pl-3 mr-3">
-              <div class="card-header-title text-lowercase">
+              <div class="card-header-title mb-0">
                 {{ noSelectedRows() }} {{ (noSelectedRows() === 1 ? 'selected contact' : 'selected contacts') }}
               </div>
             </div>
@@ -334,7 +334,7 @@ export const TableCodeBlocks = [
               <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
             </div>
             <div class="pl-3 mr-3">
-              <div class="card-header-title text-lowercase">
+              <div class="card-header-title mb-0">
                 {{ noSelectedRows() }} {{ (noSelectedRows() === 1 ? 'selected contact' : 'selected contacts') }}
               </div>
             </div>
@@ -598,7 +598,7 @@ export const TableCodeBlocks = [
               <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
             </div>
             <div class="pl-3 mr-3">
-              <div class="card-header-title text-lowercase">
+              <div class="card-header-title mb-0">
                 {{ noSelectedRows() }} {{ (noSelectedRows() === 1 ? 'selected contact' : 'selected contacts') }}
               </div>
             </div>
@@ -838,7 +838,7 @@ export const TableCodeBlocks = [
               <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
             </div>
             <div class="pl-3 mr-3">
-              <div class="card-header-title text-lowercase">
+              <div class="card-header-title mb-0">
                 {{ noSelectedRows() }} {{ (noSelectedRows() === 1 ? 'selected contact' : 'selected contacts') }}
               </div>
             </div>

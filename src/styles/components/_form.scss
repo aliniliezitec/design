@@ -10,28 +10,13 @@ label {
 }
 
 .nao-label-sm-1 {
-  // font-weight: $font-weight-regular;
-  font-size: pixelToRem(13px);
+  font-size: pixelToRem(14px);
   color: var(--text-primary-lightest);
 }
 
-//.nao-label-3 {
-//  font-size: pixelToRem(16px);
-//  color: var(--text-primary);
-//}
-//
-//.nao-label-sm-2 {
-//  font-size: pixelToRem(13px);
-//  color: var(--text-primary);
-//}
-//
-//.nao-label-sm-3 {
-//  font-size: pixelToRem(13px);
-//  color: var(--text-6);
-//}
-
 // *************************************************
 // Nao Form errors
+// todo: check this
 .nao-error-sm {
   font-size: pixelToRem(13px);
 }
@@ -48,6 +33,11 @@ label {
   height: 150px;
 }
 
+// *************************************************
+// form controls
+.form-control-sm {
+  font-weight: $font-weight-lighter;
+}
 
 // *************************************************
 // Hide Arrows From Input Number
@@ -65,7 +55,7 @@ input[type=number] {
 
 
 // todo: add this to the docs
-.nao-input-danger {
+.is-invalid {
   border: 1px var(--danger) solid;
 }
 
@@ -73,17 +63,17 @@ input[type=number] {
 // Nao crm free trial form
 .nao-crm-free-trial-form {
   border-radius: 8px;
-  box-shadow: $nao-card-box-shadow;
-  padding: 30px 60px 20px;
+  box-shadow: 0 2px 2px 2px #d8dceb;;
+  padding: 30px 50px;
+  max-width: 410px;
 
   @include media-breakpoint-down(sm) {
     padding: 25px 25px;
   }
 
   .form-intro {
-    font-weight: $font-weight-bold;
-    color: var(--text-primary-lighter);
-    margin-bottom: 20px;
+    color: var(--text-primary);
+    margin-bottom: 25px;
   }
 
   .custom-control-label {
@@ -92,9 +82,13 @@ input[type=number] {
   }
 
   .nao-terms {
-    color: var(--text-6);
+    color: var(--text-primary-lightest);
     margin-bottom: 5px;
     font-size: pixelToRem(10px);
+
+    a {
+      color: var(--primary);
+    }
   }
 
   .nao-separator {
@@ -105,14 +99,11 @@ input[type=number] {
   }
 
   .nao-crm-back-login {
-    font-size: pixelToRem(12px);
+    font-size: pixelToRem(14px);
     color: var(--text-primary);
-    font-weight: $font-weight-semibold;
 
     a {
       color: var(--text-primary);
-      text-decoration: underline;
-      font-weight: $font-weight-bold;
     }
   }
 }
@@ -194,12 +185,15 @@ input[type=number] {
         cursor: pointer;
 
         &:hover {
-          color: var(--text-primary);
+          text-decoration: underline;
         }
       }
 
       .path-active {
         color: var(--text-primary);
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }
@@ -218,7 +212,7 @@ input[type=number] {
       i {
         font-size: 12px;
         display: inline-block;
-        transition: ease-in-out .2s;
+        //transition: ease-in-out .2s;
       }
     }
 
@@ -301,6 +295,10 @@ input[type=number] {
       width: 100%;
       height: 30px;
       background-color: var(--white);
+      border-radius: 0;
+      border-top: none;
+      border-left: none;
+      border-right: none;
       border-bottom: solid 1px #d8dceb;
       cursor: pointer;
 
@@ -398,6 +396,7 @@ input[type=number] {
       }
 
       .file-size {
+        font-size: pixelToRem(12px);
         color: var(--text-6);
       }
     }
@@ -436,7 +435,6 @@ input[type=number] {
     .nao-input-search {
       width: 100%;
       border-radius: 6px;
-      border: solid 1px var(--bg-2);
       padding-left: 60px;
     }
   }
@@ -467,11 +465,11 @@ input[type=number] {
   }
 }
 
-// todo:
-// todo:
-// todo:
-// todo:
-// create rotate functions
+// todo: document
+// todo: document
+// todo: document
+// todo: document
+
 .rotate-180 {
   transform: rotate(180deg);
 }

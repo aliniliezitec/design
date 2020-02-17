@@ -5,13 +5,15 @@ import { LoaderTableComponent } from './shared/loader-table/loader-table.compone
 import { LoaderInfinityDataComponent } from './shared/loader-infinity-data/loader-infinity-data.component';
 import { LoaderInfinityComponent } from './shared/loader-infinity/loader-infinity.component';
 import { LoaderBarSmallComponent } from './shared/loader-bar-small/loader-bar-small.component';
+import { LoaderBounceComponent } from './shared/loader-bounce/loader-bounce.component';
 
 @NgModule({
   declarations: [
     LoaderTableComponent,
     LoaderInfinityDataComponent,
     LoaderInfinityComponent,
-    LoaderBarSmallComponent
+    LoaderBarSmallComponent,
+    LoaderBounceComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +23,8 @@ import { LoaderBarSmallComponent } from './shared/loader-bar-small/loader-bar-sm
     LoaderTableComponent,
     LoaderInfinityDataComponent,
     LoaderInfinityComponent,
-    LoaderBarSmallComponent
+    LoaderBarSmallComponent,
+    LoaderBounceComponent
   ]
 })
 export class NaoDesignSystemModule {

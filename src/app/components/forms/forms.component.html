@@ -12,11 +12,12 @@
     <div class="elem-container">
       <h2 class="title">Overview</h2>
 
-      <div class="nao-bd-example" [innerHTML]="data[0].html | sanitizeHtml"> </div>
+      <div [innerHTML]="data[0].html | sanitizeHtml" class="nao-bd-example"></div>
 
       <div class="nao-bd-clipboard">
-        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
-          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+        <button (click)="copyToClipboard(data[0].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+                placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+        </button>
       </div>
 
       <div class="nao-example-highlight">
@@ -27,23 +28,108 @@
 
   <div class="elem-container">
     <h2 class="title">Form controls</h2>
-    <div class="nao-bd-example" [innerHTML]="data[1].html | sanitizeHtml"></div>
+    <div [innerHTML]="data[1].html | sanitizeHtml" class="nao-bd-example"></div>
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[1].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[1].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
   </div>
-  <div class="elem-container">
-    <h2 class="title">Sizing</h2>
-    <div class='nao-bd-example' [innerHTML]="data[2].html | sanitizeHtml"></div>
 
+  <div class="elem-container">
+    <h2 class="title">States</h2>
+    <!--    <div class='nao-bd-example' [innerHTML]="data[2].html | sanitizeHtml"></div>-->
+    <div class="nao-bd-example">
+
+      <!-- This is the container for one input field-->
+      <div class="mb-3">
+        <!-- Input field-->
+        <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
+          <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
+            <label class="nao-label-1">
+              Disabled input
+            </label>
+          </div>
+          <div class="col">
+            <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-250"
+                   disabled placeholder="Placeholder" type="text"/>
+          </div>
+        </div>
+        <!-- messages -->
+        <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
+          <div class="col-12 col-sm-5">
+          </div>
+          <div class="col">
+            <span class="nao-label-sm-1">
+              Disabled input
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- This is the container for one input field-->
+      <div class="mb-3">
+        <!-- Input field-->
+        <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
+          <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
+            <label class="nao-label-1">
+              Inactive/Active input
+            </label>
+          </div>
+          <div class="col">
+            <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-250"
+                   placeholder="Placeholder" type="text"/>
+          </div>
+        </div>
+        <!-- messages -->
+        <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
+          <div class="col-12 col-sm-5">
+          </div>
+          <div class="col">
+            <span class="nao-label-sm-1">
+              Type something
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- This is the container for one input field-->
+      <div class="mb-3">
+        <!-- Input field-->
+        <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
+          <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
+            <label class="nao-label-1 text-danger">
+              Invalid input
+            </label>
+          </div>
+          <div class="col">
+            <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-250 is-invalid"
+                   placeholder="Placeholder" type="text"/>
+          </div>
+        </div>
+        <!-- error messages -->
+        <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
+          <div class="col-12 col-sm-5">
+          </div>
+          <div class="col">
+            <span class="text-danger nao-label-sm-1">
+              This input field is required is required.
+            </span>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[2].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[2].html | htmlPrismPipe | sanitizeHtml"></div></pre>
@@ -51,13 +137,13 @@
   </div>
 
   <div class="elem-container">
-    <h2 class="title">Max-width</h2>
-    <p>You can add this to textare, dropdowns and other form elements</p>
-    <div class='nao-bd-example' [innerHTML]="data[3].html | sanitizeHtml"></div>
+    <h2 class="title">Sizing</h2>
+    <div [innerHTML]="data[3].html | sanitizeHtml" class='nao-bd-example'></div>
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[3].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[3].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[3].html | htmlPrismPipe | sanitizeHtml"></div></pre>
@@ -65,16 +151,32 @@
   </div>
 
   <div class="elem-container">
-    <h2 class="title">Textarea fields</h2>
-    <p>This classes remove the resize handle and adds a fixed height.</p>
-    <div class='nao-bd-example' [innerHTML]="data[4].html | sanitizeHtml"></div>
+    <h2 class="title">Max-width</h2>
+    <p>You can add this to textare, dropdowns and other form elements</p>
+    <div [innerHTML]="data[4].html | sanitizeHtml" class='nao-bd-example'></div>
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[4].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[4].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[4].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+  </div>
+
+  <div class="elem-container">
+    <h2 class="title">Textarea fields</h2>
+    <p>This classes remove the resize handle and adds a fixed height.</p>
+    <div [innerHTML]="data[5].html | sanitizeHtml" class='nao-bd-example'></div>
+
+    <div class="nao-bd-clipboard">
+      <button (click)="copyToClipboard(data[5].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
+    </div>
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[5].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
   </div>
 
@@ -85,77 +187,54 @@
       <div class="table-container">
         <table class="table">
           <thead>
-            <tr>
-              <th>Class</th>
-              <th>Example</th>
-              <th>font-weight</th>
-              <th>font-size</th>
-              <th>color</th>
-            </tr>
+          <tr>
+            <th>Class</th>
+            <th>Example</th>
+            <th>font-weight</th>
+            <th>font-size</th>
+            <th>color</th>
+          </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><code>.nao-label-1</code></td>
-              <td>
-                <label class="nao-label-1">
-                  Nao label 1
-                  <sup class="text-danger">*</sup>
-                </label>
-              </td>
-              <td><code>400</code></td>
-              <td><code>16px</code></td>
-              <td>#687196</td>
-            </tr>
-            <tr>
-              <td><code>.nao-label-sm-1</code></td>
-              <td>
-                <label class="nao-label-sm-1">
-                  Nao label sm 1
-                  <sup class="text-danger">*</sup>
-                </label>
-              </td>
-              <td><code>400</code></td>
-              <td><code>13px</code></td>
-              <td>#687196</td>
-            </tr>
-<!--            <tr>-->
-<!--              <td><code>.nao-label-sm-2</code></td>-->
-<!--              <td>-->
-<!--                <label class="nao-label-sm-2">-->
-<!--                  Nao label sm 2-->
-<!--                  <sup class="text-danger">*</sup>-->
-<!--                </label>-->
-<!--              </td>-->
-<!--              <td><code>400</code></td>-->
-<!--              <td><code>13px</code></td>-->
-<!--              <td>#030929</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--              <td><code>.nao-label-sm-3</code></td>-->
-<!--              <td>-->
-<!--                <label class="nao-label-sm-3">-->
-<!--                  Nao label sm 3-->
-<!--                  <sup class="text-danger">*</sup>-->
-<!--                </label>-->
-<!--              </td>-->
-<!--              <td><code>400</code></td>-->
-<!--              <td><code>13px</code></td>-->
-<!--              <td>#A3A9C0</td>-->
-<!--            </tr>-->
+          <tr>
+            <td><code>.nao-label-1</code></td>
+            <td>
+              <label class="nao-label-1">
+                Nao label 1
+                <sup class="text-danger">*</sup>
+              </label>
+            </td>
+            <td><code>400</code></td>
+            <td><code>16px</code></td>
+            <td>#687196</td>
+          </tr>
+          <tr>
+            <td><code>.nao-label-sm-1</code></td>
+            <td>
+              <label class="nao-label-sm-1">
+                Nao label sm 1
+                <sup class="text-danger">*</sup>
+              </label>
+            </td>
+            <td><code>400</code></td>
+            <td><code>14px</code></td>
+            <td>#687196</td>
+          </tr>
           </tbody>
         </table>
       </div>
 
     </div>
 
-    <div class='nao-bd-example d-flex flex-column' [innerHTML]="data[5].html | sanitizeHtml"></div>
+    <div [innerHTML]="data[6].html | sanitizeHtml" class='nao-bd-example d-flex flex-column'></div>
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[5].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[6].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
-      <pre><div [innerHTML]="data[5].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      <pre><div [innerHTML]="data[6].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
   </div>
 
@@ -164,23 +243,25 @@
     <h2 class="title">Labels usage example</h2>
     <ul>
       <li>
-        <span class="highlighter-warning">Above label</span> should have a <code>5px margin bottom</code> (the default margin bottom for <code>label</code> tag is 5px )
+        <span class="highlighter-warning">Above label</span> should have a <code>5px margin bottom</code> (the default
+        margin bottom for <code>label</code> tag is 5px )
       </li>
       <li>
-        <span class="highlighter-warning">Below label</span> should have a <code>10px margin top</code>
+        <span class="highlighter-warning">Below label</span> should have a <code>5px margin top</code>
       </li>
       <li>
         <span class="highlighter-warning">Inline</span> should have a <code>15px margin right</code>
       </li>
     </ul>
-    <div class='nao-bd-example' [innerHTML]="data[6].html | sanitizeHtml"></div>
+    <div [innerHTML]="data[7].html | sanitizeHtml" class='nao-bd-example'></div>
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[6].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[7].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
-      <pre><div [innerHTML]="data[6].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      <pre><div [innerHTML]="data[7].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
   </div>
 
@@ -189,14 +270,15 @@
     <p>We recommend using client side validation, but in case you require server side, you can indicate invalid and
       valid form fields with <code>.is-invalid</code> and <code>.is-valid</code>. And for showing a validation message,
       you could use a <code>span</code> with a class of <code>.text-danger</code></p>
-    <div class='nao-bd-example' [innerHTML]="data[7].html | sanitizeHtml"></div>
+    <div [innerHTML]="data[8].html | sanitizeHtml" class='nao-bd-example'></div>
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[7].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[8].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
-      <pre><div [innerHTML]="data[7].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      <pre><div [innerHTML]="data[8].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
   </div>
 
@@ -207,25 +289,12 @@
       switch. Switches also support the <code>disabled</code> attribute.
     </p>
 
-    <div class='nao-bd-example' [innerHTML]="data[8].html | sanitizeHtml"></div>
+    <div [innerHTML]="data[9].html | sanitizeHtml" class='nao-bd-example'></div>
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[8].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
-    </div>
-    <div class="nao-example-highlight">
-      <pre><div [innerHTML]="data[8].html | htmlPrismPipe | sanitizeHtml"></div></pre>
-    </div>
-  </div>
-
-  <div class="elem-container">
-    <h2 class="title">Switches sizing</h2>
-
-    <div class='nao-bd-example' [innerHTML]="data[9].html | sanitizeHtml"></div>
-
-    <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[9].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[9].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[9].html | htmlPrismPipe | sanitizeHtml"></div></pre>
@@ -233,13 +302,14 @@
   </div>
 
   <div class="elem-container">
-    <h2 class="title">Radio buttons</h2>
+    <h2 class="title">Switches sizing</h2>
 
-    <div class='nao-bd-example' [innerHTML]="data[10].html | sanitizeHtml"></div>
+    <div [innerHTML]="data[9].html | sanitizeHtml" class='nao-bd-example'></div>
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[10].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[10].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[10].html | htmlPrismPipe | sanitizeHtml"></div></pre>
@@ -247,16 +317,32 @@
   </div>
 
   <div class="elem-container">
-    <h2 class="title">Checkboxes</h2>
+    <h2 class="title">Radio buttons</h2>
 
-    <div class='nao-bd-example' [innerHTML]="data[11].html | sanitizeHtml"></div>
+    <div [innerHTML]="data[11].html | sanitizeHtml" class='nao-bd-example'></div>
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[11].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[11].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[11].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+  </div>
+
+  <div class="elem-container">
+    <h2 class="title">Checkboxes</h2>
+
+    <div [innerHTML]="data[12].html | sanitizeHtml" class='nao-bd-example'></div>
+
+    <div class="nao-bd-clipboard">
+      <button (click)="copyToClipboard(data[12].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
+    </div>
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[12].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
   </div>
 
@@ -272,7 +358,7 @@
         <div class="col">
           <!-- todo: change icons -->
           <span class="badge badge-pill nao-tag-1 nao-tag-sm mb-4">Type something <i
-              class="nao-icon-cancel ml-1"></i></span>
+            class="nao-icon-cancel ml-1"></i></span>
         </div>
         <div class="col">
           <span class="badge badge-pill nao-tag-1">Type something</span>
@@ -286,11 +372,12 @@
 
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[12].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[13].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
-      <pre><div [innerHTML]="data[12].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      <pre><div [innerHTML]="data[13].html | htmlPrismPipe | sanitizeHtml"></div></pre>
     </div>
 
   </div>
@@ -299,26 +386,12 @@
   <div class="elem-container">
     <h2 class="title">Labels</h2>
 
-    <div class='nao-bd-example' [innerHTML]="data[13].html | sanitizeHtml"></div>
+    <div [innerHTML]="data[14].html | sanitizeHtml" class='nao-bd-example'></div>
 
     <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[13].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
-    </div>
-    <div class="nao-example-highlight">
-      <pre><div [innerHTML]="data[13].html | htmlPrismPipe | sanitizeHtml"></div></pre>
-    </div>
-
-  </div>
-
-  <div class="elem-container">
-    <h2 class="title">Badges</h2>
-
-    <div class='nao-bd-example' [innerHTML]="data[14].html | sanitizeHtml"></div>
-
-    <div class="nao-bd-clipboard">
-      <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[14].html)" placement="top"
-        ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      <button (click)="copyToClipboard(data[14].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
     </div>
     <div class="nao-example-highlight">
       <pre><div [innerHTML]="data[14].html | htmlPrismPipe | sanitizeHtml"></div></pre>
@@ -326,6 +399,21 @@
 
   </div>
 
+  <div class="elem-container">
+    <h2 class="title">Badges</h2>
+
+    <div [innerHTML]="data[15].html | sanitizeHtml" class='nao-bd-example'></div>
+
+    <div class="nao-bd-clipboard">
+      <button (click)="copyToClipboard(data[15].html)" autoClose="false" class="btn-clipboard" ngbTooltip="Copied!"
+              placement="top" tooltipClass="nao-copy-tooltip" triggers="click" type="button">Copy
+      </button>
+    </div>
+    <div class="nao-example-highlight">
+      <pre><div [innerHTML]="data[15].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+    </div>
+
+  </div>
 
 
 </div>

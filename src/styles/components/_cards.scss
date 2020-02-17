@@ -6,7 +6,7 @@
 
   .card-header-title {
     font-weight: $font-weight-semibold;
-    margin-bottom: 3px;
+    //margin-bottom: 3px;
   }
 
   .card-subtitle {
@@ -14,7 +14,7 @@
   }
 
   .card-header-subtitle {
-    font-size: 1rem;
+    font-weight: $font-weight-lighter;
   }
 
 }
@@ -24,11 +24,13 @@
 .nao-card-1 {
   .card-header {
     padding: 15px 40px;
+
     .title {
       margin: 0 !important;
     }
-    .card-subtitle {
-      margin-top: 3px;
+
+    .card-header-subtitle {
+      margin-bottom: 0;
     }
   }
 
@@ -417,8 +419,8 @@
 
   .box-header {
     padding: 5px 32px;
-    font-size: pixelToRem(13px);
-    font-weight: $font-weight-bold;
+    font-size: pixelToRem(15px);
+    font-weight: $font-weight-regular;
     color: var(--text-secondary);
   }
 
@@ -426,7 +428,7 @@
     padding: 30px 32px 20px 32px;
     font-size: pixelToRem(13px);
     color: var(--text-primary-lightest);
-    font-weight: $font-weight-semibold;
+    font-weight: $font-weight-lighter;
 
     // Responsive grid for 4 input groups with ng-select
     .nao-grid-4-input-dropdown {

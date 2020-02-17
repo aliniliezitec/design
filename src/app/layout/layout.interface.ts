@@ -56,6 +56,7 @@ export const MenuItems = [
     type: 'items', text: 'Samples ', route: '/samples', icon: 'nao-icon-multiple-choice', isOpen: false,
     items: [
       {type: 'item', route: '/samples/forms', text: 'Forms'},
+      {type: 'item', route: '/samples/modals', text: 'Modals'},
       {type: 'item', route: '/samples/file-manager', text: 'File manager'},
     ]
   },

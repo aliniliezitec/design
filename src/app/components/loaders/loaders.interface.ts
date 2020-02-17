@@ -25,5 +25,10 @@ export const LoadersCodeBlocks = [
         html: `
         <loader-bar-small progress="60" type="primary" height="10px" [showValue]="true"></loader-bar-small>
         `
+    },
+  {
+        html: `
+        <loader-bounce></loader-bounce>
+        `
     }
 ];

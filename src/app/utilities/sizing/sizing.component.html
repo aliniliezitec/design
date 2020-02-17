@@ -18,7 +18,7 @@
       <p>Where size is one of:</p>
       <ul>
         <li><code>0</code> - for classes that set the <code>max-width</code> to <code>unset</code>.</li>
-        <li><code>100</code> - (by default) for classes that set the <code>max-width</code> to <code>1px</code>.</li>
+        <li><code>100</code> - (by default) for classes that set the <code>max-width</code> to <code>100px</code>.</li>
         <li><code>140</code> - (by default) for classes that set the <code>max-width</code> to <code>140px</code>.</li>
         <li><code>150</code> - (by default) for classes that set the <code>max-width</code> to <code>150px</code>.</li>
         <li><code>190</code> - (by default) for classes that set the <code>max-width</code> to <code>190px</code>.</li>
@@ -26,6 +26,7 @@
         <li><code>210</code> - (by default) for classes that set the <code>max-width</code> to <code>210px</code>.</li>
         <li><code>220</code> - (by default) for classes that set the <code>max-width</code> to <code>220px</code>.</li>
         <li><code>230</code> - (by default) for classes that set the <code>max-width</code> to <code>230px</code>.</li>
+        <li><code>250</code> - (by default) for classes that set the <code>max-width</code> to <code>250px</code>.</li>
         <li><code>290</code> - (by default) for classes that set the <code>max-width</code> to <code>290px</code>.</li>
         <li><code>300</code> - (by default) for classes that set the <code>max-width</code> to <code>300px</code>.</li>
         <li><code>310</code> - (by default) for classes that set the <code>max-width</code> to <code>310px</code>.</li>
@@ -39,7 +40,7 @@
       <h2 class="title">Max-width:</h2>
       <p>You can use this class on all components.</p>
       <div class="nao-bd-example" [innerHTML]="data[0].html | sanitizeHtml"></div>
-      
+
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[0].html)" placement="top"
           ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>

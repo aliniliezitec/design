@@ -5,11 +5,14 @@ import { SamplesRouting } from './samples.routing';
 import { FormsComponent } from './forms/forms.component';
 import { NaoDesignModule } from '@naologic/design';
 import { FileManagerComponent } from './file-manager/file-manager.component';
+import { ModalsComponent } from './modals/modals.component';
 
 @NgModule({
   declarations: [
     FormsComponent,
-    FileManagerComponent
+    FileManagerComponent,
+    ModalsComponent
+
   ],
   imports: [
     CommonModule,

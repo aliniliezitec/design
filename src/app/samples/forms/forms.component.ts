@@ -10,73 +10,30 @@ import { FormsCodeBlocks } from './forms.interface';
 export class FormsComponent {
   public data = FormsCodeBlocks;
 
-  public formGroup = new FormGroup({
-    companyId: new FormControl(''),
-    countryId: new FormControl('', { validators: [Validators.required] }),
-    email: new FormControl('', { validators: [Validators.required, Validators.email] }),
-    gender: new FormControl(''),
-    info: new FormGroup({
-      firstName: new FormControl('', { validators: [Validators.required] }),
-      lastName: new FormControl('', { validators: [Validators.required] }),
-    }),
-    languageId: new FormControl(''),
-    linkedin: new FormControl(''),
-    facebook: new FormControl(''),
-    twitter: new FormControl(''),
-    website: new FormControl(''),
-  });
 
-  public formGroup2 = new FormGroup({
-    categoryId: new FormControl(''),
-    description: new FormControl(''),
-    hasShipping: new FormControl(false),
-    images: new FormArray([]),
-    inventory: new FormGroup({
-      barcode: new FormControl(''),
-      quantity: new FormControl(0),
-      sku: new FormControl(''),
-    }),
-    name: new FormControl('', { validators: [Validators.required] }),
-    items: new FormArray([
-      new FormGroup({
-        quantity: new FormControl(''),
-        priceSales: new FormControl(''),
-        salesTax: new FormControl(''),
-      }),
-      new FormGroup({
-        quantity: new FormControl(''),
-        priceSales: new FormControl(''),
-        salesTax: new FormControl(''),
-      })
-    ]),
-    priceCost: new FormControl(0),
-    priceSales: new FormControl(0),
-    shipping: new FormGroup({
-      hasShipping: new FormControl(false),
-      height: new FormControl(0),
-      heightUnit: new FormControl('cm'),
-      length: new FormControl(0),
-      lengthUnit: new FormControl('cm'),
-      weight: new FormControl(0),
-      weightUnit: new FormControl('kg'),
-      width: new FormControl(0),
-      widthUnit: new FormControl('cm'),
-    }),
-  });
+  public formGroup1 = new FormGroup(({
+    legalName: new FormControl('', {validators: [Validators.required]}),
+    address_line_1: new FormControl('', {validators: [Validators.required]}),
+    address_line_2: new FormControl(''),
+    phone: new FormControl(''),
+    languageId: new FormControl('', {validators: [Validators.required]}),
+    languageId_2: new FormControl('',),
+  }))
 
   public formGroup3 = new FormGroup({
-    firstName: new FormControl('', { validators: [Validators.required] }),
-    lastName: new FormControl('', { validators: [Validators.required] }),
-    email: new FormControl('', { validators: [Validators.required, Validators.email] }),
+    firstName: new FormControl('', {validators: [Validators.required]}),
+    lastName: new FormControl('', {validators: [Validators.required]}),
+    email: new FormControl('', {validators: [Validators.required, Validators.email]}),
     employees: new FormControl('10'),
-    password: new FormControl('', { validators: [Validators.required] }),
-    confirmPassword: new FormControl('', { validators: [Validators.required] }),
+    password: new FormControl('', {validators: [Validators.required]}),
+    confirmPassword: new FormControl('', {validators: [Validators.required]}),
     countryId: new FormControl('usa'),
     companyName: new FormControl(''),
     agreeToNewsletters: new FormControl(true),
   });
 
-  constructor(public readonly appService: AppService) { }
+  constructor(public readonly appService: AppService) {
+  }
 
   /**
    * Copy to clipboard

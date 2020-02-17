@@ -44,11 +44,12 @@ $input-padding-x: pixelToRem(8px);
 $input-color: var(--text-secondary);
 $input-font-size: 1rem;
 $input-border-color: var(--border-primary);
-$input-box-shadow: $nao-input-box-shadow;
+$input-box-shadow: none;
 $input-focus-width: 0;
-$input-focus-box-shadow: 0 0 10px var(--border-light);
-$input-focus-border-color: transparent;
+$input-focus-box-shadow: none;
+$input-focus-border-color: var(--text-primary-lightest);
 $input-placeholder-color: var(--shadow);
+$input-disabled-bg: var(--bg-3);
 // sm
 $input-height-sm: pixelToRem(32px);
 $input-padding-x-sm: pixelToRem(8px);
@@ -76,7 +77,7 @@ $card-border-width: 0;
 $modal-content-border-radius: pixelToRem(8px);
 $modal-header-padding-y: pixelToRem(18px);
 
-$modal-content-box-shadow-xs: 0 2px 4px 3px #d8dceb;  
+$modal-content-box-shadow-xs: 0 2px 4px 3px #d8dceb;
 $modal-content-box-shadow-sm-up:0 2px 4px 3px #d8dceb;
 $modal-content-border-width: 0;
 

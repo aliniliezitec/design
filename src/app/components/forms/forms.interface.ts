@@ -1,6 +1,6 @@
 export const FormsCodeBlocks = [
-    {
-        html: `
+  {
+    html: `
         <form>
             <div class="form-group">
                 <label class="nao-label-1" for="exampleInputEmail1">Email address</label>
@@ -18,9 +18,10 @@ export const FormsCodeBlocks = [
                     me</label>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-        </form>`},
-    {
-        html: `
+        </form>`
+  },
+  {
+    html: `
         <form>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Email address</label>
@@ -30,14 +31,20 @@ export const FormsCodeBlocks = [
                 <label for="exampleFormControlTextarea1">Example textarea</label>
                 <textarea class="form-control nao-mw-290" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
-        </form>`},
-    {
-        html: `
+        </form>`
+  },
+  {
+    html: `
+        Statesss`
+  },
+  {
+    html: `
         <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
         <input class="form-control" type="text" placeholder="Default input">
-        <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">`},
-    {
-        html: `
+        <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">`
+  },
+  {
+    html: `
         <input class="form-control nao-mw-140" type="text" placeholder="nao-mw-140">
         <input class="form-control nao-mw-150" type="text" placeholder=".nao-mw-150">
         <input class="form-control nao-mw-190" type="text" placeholder=".nao-mw-190">
@@ -49,16 +56,18 @@ export const FormsCodeBlocks = [
         <input class="form-control nao-mw-310" type="text" placeholder=".nao-mw-310">
         <input class="form-control nao-mw-320" type="text" placeholder=".nao-mw-320">
         <input class="form-control nao-mw-380" type="text" placeholder=".nao-mw-380">
-        <input class="form-control nao-mw-560" type="text" placeholder=".nao-mw-560">`},
-    {
-        html: `
+        <input class="form-control nao-mw-560" type="text" placeholder=".nao-mw-560">`
+  },
+  {
+    html: `
         <label class="nao-label-1">Example of small textarea</label>
         <textarea class="form-control form-control-sm nao-textarea nao-mw-300 mb-3" placeholder="Description"></textarea>
         <label class="nao-label-1">Example of large textarea</label>
         <textarea class="form-control nao-textarea-lg nao-mw-380" placeholder="Description"></textarea>
-            ` },
-    {
-        html: `
+            `
+  },
+  {
+    html: `
         <label class="nao-label-1">
             Nao label 1
             <sup class="text-danger">*</sup>
@@ -67,9 +76,10 @@ export const FormsCodeBlocks = [
             Nao label sm 1
             <sup class="text-danger">*</sup>
         </label>
-      ` },
-    {
-        html: `
+      `
+  },
+  {
+    html: `
             <div class="form-group">
                 <label class="nao-label-1" for="exampleLabels1">Above</label>
                 <input type="password" class="form-control nao-mw-290" id="exampleLabels1" placeholder="Password">
@@ -80,9 +90,10 @@ export const FormsCodeBlocks = [
                 <label class="nao-label-1 text-danger mr-3 mb-0" for="exampleLabels2">Inline</label>
                 <input type="password" class="form-control is-invalid nao-mw-290" id="exampleLabels2" placeholder="Password">
             </div>
-        `},
-    {
-        html: `
+        `
+  },
+  {
+    html: `
             <form>
                 <div class="form-group">
                     <label class="nao-label-1" for="exampleInputEmail1">Email address</label>
@@ -96,9 +107,10 @@ export const FormsCodeBlocks = [
                     <span class="text-danger">This field is required.</span>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
-            </form>`},
-    {
-        html: `
+            </form>`
+  },
+  {
+    html: `
         <div class="custom-control custom-switch">
             <input type="checkbox" class="custom-control-input" id="customSwitch1">
             <label class="custom-control-label" for="customSwitch1">This is an inactive switch</label>
@@ -118,9 +130,9 @@ export const FormsCodeBlocks = [
             <input type="checkbox" class="custom-control-input" disabled id="customSwitch4" checked>
             <label class="custom-control-label" for="customSwitch4">This is a enabled inactive switch</label>
         </div>`
-    },
-    {
-        html: `
+  },
+  {
+    html: `
         <div class="custom-control custom-switch custom-switch-sm mb-2">
             <input type="checkbox" class="custom-control-input" id="customSwitch-sm">
             <label class="custom-control-label" for="customSwitch-sm">Switch small</label>
@@ -135,9 +147,9 @@ export const FormsCodeBlocks = [
             <input type="checkbox" class="custom-control-input" id="customSwitch-lg">
             <label class="custom-control-label" for="customSwitch-lg">Switch large</label>
         </div>`
-    },
-    {
-        html: `
+  },
+  {
+    html: `
         <label class="nao-custom-radio">
             <input type="radio" name="radio" value="option1" checked>
             <span class="radio-label">Radio button 1</span>
@@ -158,9 +170,9 @@ export const FormsCodeBlocks = [
             <span class="radio-label">Disabled radio</span>
             <span class="checkmark"></span>
         </label>`
-    },
-    {
-        html: `
+  },
+  {
+    html: `
          <div class="d-flex custom-control custom-checkbox mb-3">
             <input class="custom-control-input" type="checkbox" name="checkbox" id="checkbox1">
             <label class="custom-control-label align-self-center" for="checkbox1">Check
@@ -178,20 +190,20 @@ export const FormsCodeBlocks = [
             <label class="custom-control-label align-self-center" for="checkbox3">Check
                 me</label>
         </div>`
-    },
-    {
-        html: `
+  },
+  {
+    html: `
         <span class="badge badge-pill nao-tag-1 mb-4">Type something <i class="nao-icon-cancel ml-1"></i></span>
         <span class="badge badge-pill nao-tag-1 nao-tag-sm mb-4">Type something <i class="nao-icon-cancel ml-1"></i></span>
         <span class="badge badge-pill nao-tag-1">Type something</span>
         <span class="badge badge-pill nao-tag-1 nao-tag-sm">Type something</span>`
-    }, {
-        html: `
+  }, {
+    html: `
         <span class="nao-badge-pill nao-badge-label-1 mr-3 mb-3">Something</span>
         <span class="nao-badge-pill nao-badge-label-2 mb-3">Something</span>`
-    },
-    {
-        html: `
+  },
+  {
+    html: `
         <span class="nao-badge nao-badge-outline mb-4 mr-3">
             <i class="nao-icon-add mr-1"></i>Add a filter
         </span>
@@ -205,5 +217,5 @@ export const FormsCodeBlocks = [
             <span class="badge-text">First name: “Johnjohusu Mcgregor Mcgregor" </span><i class="nao-icon-cancel ml-2"></i>
             </div>
         </span>`
-    }
+  }
 ];

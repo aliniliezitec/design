@@ -154,6 +154,17 @@
 }
 
 // *************************************************
+// ng-select
+.ng-select.ng-select-opened > .ng-select-container {
+  border: solid 1px var(--text-primary-lightest) !important;
+}
+
+//todo: add this to docs
+.ng-select-invalid .ng-select-container {
+    border: solid 1px var(--danger) !important;
+}
+
+// *************************************************
 // nao ng-select sm
 .nao-ng-select-sm {
   font-size: pixelToRem(12px);
@@ -179,8 +190,6 @@
 .ng-option-disabled {
   color: $ng-select-primary-text !important;
 }
-
-
 
 
 // *************************************************
@@ -210,12 +219,10 @@
   font-size: pixelToRem(13px);
   height: 32px;
 
+
   .ng-select-container {
     min-height: 32px !important;
     height: 32px !important;
-  }
-
-  .ng-select-container {
     border: 0 !important;
     color: var(--white) !important;
     background-color: var(--text-6) !important;
@@ -227,6 +234,10 @@
     &:hover {
       box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
     }
+  }
+
+  &.ng-select-opened > .ng-select-container {
+    border: none !important;
   }
 
   &.ng-select {

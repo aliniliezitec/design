@@ -2,9 +2,18 @@
   <h1 class="title">File Manager</h1>
 
   <div class="elem-container">
-    <h2 class="title">File mangare</h2>
-    <p></p>
-    
+    <h2 class="title">File manager</h2>
+
+    <div class="custom-control custom-switch mb-4 mt-3">
+      <input type="checkbox" class="custom-control-input" id="loadingSwitch2" (change)="status.firstLoading = !status.firstLoading">
+      <label class="custom-control-label" for="loadingSwitch2">Start first loading</label>
+    </div>
+    <div class="custom-control custom-switch mb-4 mt-3">
+      <input type="checkbox" class="custom-control-input" id="loadingSwitch" (change)="status.isLoading = !status.isLoading">
+      <label class="custom-control-label" for="loadingSwitch">Start loading local files</label>
+    </div>
+
+
     <div class="nao-bd-example">
 
       <div class="nao-file-manager d-flex flex-row">
@@ -22,7 +31,7 @@
         <div class="nao-file-manager-content w-100">
           <form class="h-100" #dataForm="ngForm">
             <div class="d-flex align-items-center justify-content-center h-100" *ngIf="status.firstLoading">
-              <loader-infinity></loader-infinity>
+              <loader-bounce></loader-bounce>
             </div>
 
             <ng-container [ngSwitch]="dataSource$.value" *ngIf="!status.firstLoading">
@@ -33,7 +42,7 @@
                   Choose from files you’ve already uploaded to Naologic
                 </div>
 
-                <div class="nao-breadcrumb mt-1">
+                <div class="nao-breadcrumb mt-1 d-flex align-items-center">
                   <span class="path-link">Folders</span>
                   <i class="nao-icon-arrow-next-1 mx-2"></i>
                   <span class="path-link" [ngClass]="{'path-active': true }">Ibiza</span>
@@ -51,7 +60,7 @@
                 </div>
 
                 <div class="cdn-content-grid d-flex align-items-center justify-content-center" *ngIf="status.isLoading">
-                  <loader-infinity></loader-infinity>
+                  <loader-bounce></loader-bounce>
                 </div>
 
                 <!-- Icons for extension -->
