@@ -341,7 +341,7 @@ export const FormsCodeBlocks = [
               <h5 class="modal-title mb-1">
                 Add new product
               </h5>
-              <h5 class="font-weight-lighter">
+              <h5 class="modal-subtitle mb-0">
                 Subtitle
               </h5>
             </div>
