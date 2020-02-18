@@ -29,7 +29,7 @@
                   </label>
                 </div>
                 <div class="col">
-                  <input [ngClass]="{'is-invalid': !(formGroup1.get('legalName').pristine || formGroup1.get('legalName').disabled || formGroup1.get('legalName').valid)}" autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-250"
+                  <input [ngClass]="{'is-invalid': !(formGroup1.get('legalName').pristine || formGroup1.get('legalName').disabled || formGroup1.get('legalName').valid)}" autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-250 mb-1"
                          formControlName="legalName" placeholder="Business name"
                          type="text"/>
                 </div>
@@ -67,7 +67,7 @@
                   </label>
                 </div>
                 <div class="col">
-                  <input [ngClass]="{'is-invalid': !(formGroup1.get('address_line_1').pristine || formGroup1.get('address_line_1').disabled || formGroup1.get('address_line_1').valid)}" autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-250"
+                  <input [ngClass]="{'is-invalid': !(formGroup1.get('address_line_1').pristine || formGroup1.get('address_line_1').disabled || formGroup1.get('address_line_1').valid)}" autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-250 mb-1"
                          formControlName="address_line_1" placeholder="Address"
                          type="text"/>
                 </div>
@@ -99,7 +99,7 @@
                   </label>
                 </div>
                 <div class="col">
-                  <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-250" formControlName="address_line_2"
+                  <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-250 mb-1" formControlName="address_line_2"
                          placeholder="Address" type="text"/>
                 </div>
               </div>
@@ -126,7 +126,7 @@
                   </label>
                 </div>
                 <div class="col">
-                  <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-250" formControlName="phone"
+                  <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-250 mb-1" formControlName="phone"
                          placeholder="Address" type="text"/>
                 </div>
               </div>
@@ -275,7 +275,7 @@
             <label class="nao-label-sm-1" for="email">Email</label>
             <input autocomplete="false" class="form-control form-control-sm mb-1" formControlName="email" id="email"
                    placeholder="elon@musk.com" type="text"/>
-            <span [hidden]="formGroup3.get('email').pristine || formGroup3.get('email').valid" class="text-danger">
+            <span [hidden]="formGroup3.get('email').pristine || formGroup3.get('email').valid" class="text-danger nao-label-sm-1">
               Email is required
             </span>
           </div>

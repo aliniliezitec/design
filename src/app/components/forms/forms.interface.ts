@@ -4,13 +4,13 @@ export const FormsCodeBlocks = [
         <form>
             <div class="form-group">
                 <label class="nao-label-1" for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control nao-mw-290" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input type="email" class="form-control mb-1 nao-mw-290" id="exampleInputEmail1" aria-describedby="emailHelp"
                     placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <span id="emailHelp" class="form-text nao-label-sm-1">We'll never share your email with anyone else.</span>
             </div>
             <div class="form-group">
                 <label class="nao-label-1" for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control nao-mw-290" id="exampleInputPassword1" placeholder="Password">
+                <input type="password" class="form-control mb-1 nao-mw-290" id="exampleInputPassword1" placeholder="Password">
             </div>
             <div class="d-flex custom-control custom-checkbox mb-3">
                 <input class="custom-control-input" type="checkbox" name="checkbox" id="exampleCheck1">
@@ -35,13 +35,90 @@ export const FormsCodeBlocks = [
   },
   {
     html: `
-        Statesss`
+              <!-- This is the container for one input field-->
+      <div class="mb-3">
+        <!-- Input field-->
+        <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
+          <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
+            <label class="nao-label-1">
+              Disabled input
+            </label>
+          </div>
+          <div class="col">
+            <input autocomplete="off" class="form-control mb-1 nao-mw-0 nao-mw-sm-250"
+                   disabled placeholder="Placeholder" type="text"/>
+          </div>
+        </div>
+        <!-- messages -->
+        <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
+          <div class="col-12 col-sm-5">
+          </div>
+          <div class="col">
+            <span class="nao-label-sm-1">
+              Disabled input
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- This is the container for one input field-->
+      <div class="mb-3">
+        <!-- Input field-->
+        <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
+          <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
+            <label class="nao-label-1">
+              Inactive/Active input
+            </label>
+          </div>
+          <div class="col">
+            <input autocomplete="off" class="form-control mb-1 nao-mw-0 nao-mw-sm-250"
+                   placeholder="Placeholder" type="text"/>
+          </div>
+        </div>
+        <!-- messages -->
+        <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
+          <div class="col-12 col-sm-5">
+          </div>
+          <div class="col">
+            <span class="nao-label-sm-1">
+              Type something
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- This is the container for one input field-->
+      <div class="mb-3">
+        <!-- Input field-->
+        <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
+          <div class="col-12 col-sm-5 text-left text-sm-right pr-3">
+            <label class="nao-label-1 text-danger">
+              Invalid input
+            </label>
+          </div>
+          <div class="col">
+            <input autocomplete="off" class="form-control mb-1 nao-mw-0 nao-mw-sm-250 is-invalid"
+                   placeholder="Placeholder" type="text"/>
+          </div>
+        </div>
+        <!-- error messages -->
+        <div class="d-flex flex-column flex-sm-row align-items-center no-gutters">
+          <div class="col-12 col-sm-5">
+          </div>
+          <div class="col">
+            <span class="text-danger nao-label-sm-1">
+              This input field is required is required.
+            </span>
+          </div>
+        </div>
+      </div>`
   },
   {
     html: `
-        <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
-        <input class="form-control" type="text" placeholder="Default input">
-        <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">`
+        <input class="form-control mb-1 form-control-lg" type="text" placeholder=".form-control-lg">
+        <input class="form-control mb-1" type="text" placeholder="Default input">
+        <input class="form-control mb-1 form-control-sm" type="text" placeholder=".form-control-sm">`
   },
   {
     html: `
@@ -97,13 +174,13 @@ export const FormsCodeBlocks = [
             <form>
                 <div class="form-group">
                     <label class="nao-label-1" for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control is-valid nao-mw-290" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    <input type="email" class="form-control mb-1 is-valid nao-mw-290" id="exampleInputEmail1" aria-describedby="emailHelp"
                         placeholder="Enter email" value="test@doe.com">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
                     <label class="nao-label-1" for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control is-invalid nao-mw-290" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" class="form-control mb-1 is-invalid nao-mw-290" id="exampleInputPassword1" placeholder="Password">
                     <span class="text-danger">This field is required.</span>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>

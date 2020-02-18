@@ -29,7 +29,7 @@ export const FormsCodeBlocks = [
                           <input
                             [ngClass]="{'is-invalid': !(formGroup.get('info.firstName').pristine || formGroup.get('info.firstName').disabled || formGroup.get('info.firstName').valid)}"
                             autocomplete="off"
-                            class="form-control nao-mw-0 nao-mw-sm-210"
+                            class="form-control nao-mw-0 nao-mw-sm-210 mb-1"
                             formControlName="firstName" placeholder="First name"
                             type="text"/>
                         </div>
@@ -41,7 +41,7 @@ export const FormsCodeBlocks = [
                         <div class="col">
                           <div
                             [hidden]="formGroup.get('info.firstName').pristine || formGroup.get('info.firstName').disabled || formGroup.get('info.firstName').valid"
-                            class="pb-1">
+                            class="">
                           <span *ngIf="formGroup.get('info.firstName').errors" class="nao-label-sm-1 text-danger">
                             First name is required.
                           </span>
@@ -64,7 +64,7 @@ export const FormsCodeBlocks = [
                           <input
                             [ngClass]="{'is-invalid': !(formGroup.get('info.lastName').pristine || formGroup.get('info.lastName').disabled || formGroup.get('info.lastName').valid)}"
                             autocomplete="off"
-                            class="form-control nao-mw-0 nao-mw-sm-210"
+                            class="form-control nao-mw-0 nao-mw-sm-210 mb-1"
                             formControlName="lastName" placeholder="Last name"
                             type="text"/>
                         </div>
@@ -76,7 +76,7 @@ export const FormsCodeBlocks = [
                         <div class="col">
                           <div
                             [hidden]="formGroup.get('info.lastName').pristine || formGroup.get('info.lastName').disabled || formGroup.get('info.lastName').valid"
-                            class="pb-1">
+                            class="">
                           <span *ngIf="formGroup.get('info.lastName').errors" class="nao-label-sm-1 text-danger">
                             Last name is required.
                           </span>
@@ -140,7 +140,7 @@ export const FormsCodeBlocks = [
                       <div class="col">
                         <input
                           [ngClass]="{'is-invalid': !(formGroup.get('email').pristine || formGroup.get('email').disabled || formGroup.get('email').valid)}"
-                          autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210"
+                          autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210 mb-1"
                           formControlName="email" placeholder="Email"
                           type="text"/>
                       </div>
@@ -195,7 +195,7 @@ export const FormsCodeBlocks = [
                       <div class="col">
                         <div
                           [hidden]="formGroup.get('languageId').pristine || formGroup.get('languageId').disabled || formGroup.get('languageId').valid"
-                          class="pb-1">
+                          class="">
                         <span *ngIf="formGroup.get('languageId').errors" class="nao-label-sm-1 text-danger">
                           Invalid language.
                         </span>
@@ -241,7 +241,7 @@ export const FormsCodeBlocks = [
                       <div class="col">
                         <div
                           [hidden]="formGroup.get('countryId').pristine || formGroup.get('countryId').disabled || formGroup.get('countryId').valid"
-                          class="pb-1">
+                          class="">
                         <span *ngIf="formGroup.get('countryId').errors" class="nao-label-sm-1 text-danger">
                           Country error
                         </span>
@@ -260,7 +260,7 @@ export const FormsCodeBlocks = [
                         </label>
                       </div>
                       <div class="col">
-                        <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210" formControlName="facebook"
+                        <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210 mb-1" formControlName="facebook"
                                placeholder="Facebook" type="text"/>
                       </div>
                     </div>
@@ -276,7 +276,7 @@ export const FormsCodeBlocks = [
                         </label>
                       </div>
                       <div class="col">
-                        <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210" formControlName="linkedin"
+                        <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210 mb-1" formControlName="linkedin"
                                placeholder="Linkedin" type="text"/>
                       </div>
                     </div>
@@ -292,7 +292,7 @@ export const FormsCodeBlocks = [
                         </label>
                       </div>
                       <div class="col">
-                        <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210" formControlName="twitter"
+                        <input autocomplete="off" class="form-control nao-mw-0 nao-mw-sm-210 mb-1" formControlName="twitter"
                                placeholder="Twitter" type="text"/>
                       </div>
                     </div>
@@ -365,7 +365,7 @@ export const FormsCodeBlocks = [
                             </label>
                           </div>
                           <div class="col">
-                            <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210"
+                            <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210 mb-1"
                                    formControlName="name" placeholder="Name"
                                    type="text"/>
                           </div>
@@ -415,7 +415,7 @@ export const FormsCodeBlocks = [
                             </label>
                           </div>
                           <div class="col">
-                            <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210"
+                            <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210 mb-1"
                                    formControlName="priceSales" placeholder="Price"
                                    type="number"/>
                           </div>
@@ -444,7 +444,7 @@ export const FormsCodeBlocks = [
                             </label>
                           </div>
                           <div class="col">
-                            <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210"
+                            <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210 mb-1"
                                    formControlName="priceCost" placeholder="Cost"
                                    type="number"/>
                           </div>
@@ -480,7 +480,7 @@ export const FormsCodeBlocks = [
                             </label>
                           </div>
                           <div class="col">
-                            <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210"
+                            <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210 mb-1"
                                    formControlName="sku" placeholder="Sku"
                                    type="text"/>
                           </div>
@@ -496,7 +496,7 @@ export const FormsCodeBlocks = [
                             </label>
                           </div>
                           <div class="col">
-                            <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210"
+                            <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210 mb-1"
                                    formControlName="barcode" placeholder="Barcode"
                                    type="text"/>
                           </div>
@@ -512,7 +512,7 @@ export const FormsCodeBlocks = [
                             </label>
                           </div>
                           <div class="col">
-                            <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210"
+                            <input autocomplete="off" class="form-control form-control-sm nao-mw-0 nao-mw-sm-210 mb-1"
                                    formControlName="quantity" placeholder="Quantity"
                                    type="number"/>
                           </div>
