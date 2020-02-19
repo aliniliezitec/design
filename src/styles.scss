@@ -3,6 +3,8 @@
 
 @import "./styles/base/global";
 
+@import "~@ng-select/ng-select/scss/default.theme.scss";
+
 @import "./styles/components/announcement";
 @import "./styles/components/buttons";
 @import "./styles/components/custom-forms";
@@ -23,5 +25,3 @@
 @import "./styles/utilities/sizing";
 @import "./styles/utilities/spacing";
 @import "./styles/utilities/colors";
-
-@import "~@ng-select/ng-select/scss/default.theme.scss";

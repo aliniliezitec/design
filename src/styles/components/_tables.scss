@@ -76,6 +76,7 @@
     padding-right: 29px;
     padding-top: pixelToRem(12px);
     padding-bottom: pixelToRem(12px);
+    min-height: 60px;
 
     .card-header-title {
       font-size: pixelToRem(20px);
@@ -130,6 +131,7 @@
 
   .table-header {
     background-color: var(--bg-3);
+    text-transform: uppercase;
 
     tr {
       height: 30px;
@@ -166,6 +168,14 @@
     padding-right: 10px;
     padding-left: 19px;
 
+    .ng-value {
+      background-color: unset !important;
+    }
+
+    .nao-icon-arrow-up-2 {
+      font-size: pixelToRem(12px);
+    }
+
     .ng-select-focused {
       border: 0 !important;
       box-shadow: none !important;
@@ -185,15 +195,6 @@
       color: var(--text-6) !important;
     }
 
-    .ng-value {
-      //background-color: var(--bg-1) !important;
-      //color: var(--text-primary) !important;
-      //font-weight: $font-weight-semibold !important;
-      //font-size: pixelToRem(16px) !important;
-      //border-radius: 10px !important;
-      //padding: 9px 14px 9px 14px !important;
-    }
-
     .ng-option {
       color: var(--text-primary) !important;
     }
@@ -201,10 +202,6 @@
     .ng-option-marked {
       background-color: var(--bg-1) !important;
       color: var(--text-primary) !important;
-    }
-
-    .ng-select-focused {
-      border: 0 !important;
     }
   }
 
@@ -295,6 +292,10 @@
     background-color: var(--danger);
     color: var(--white);
   }
+}
+
+.nao-th-btn {
+  cursor: pointer;
 }
 
 // *************************************************

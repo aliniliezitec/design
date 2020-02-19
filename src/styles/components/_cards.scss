@@ -354,16 +354,20 @@
   }
 
   .forgot-pass {
-    font-size: pixelToRem(13px);
+    font-size: pixelToRem(16px);
     color: var(--text-primary);
+  }
+
+  .nao-form-message {
+    margin-bottom: 20px
   }
 
   .already-have-a-user {
     font-size: pixelToRem(12px);
-    font-weight: $font-weight-semibold;
+    font-weight: $font-weight-regular;
 
     a {
-      text-decoration: underline;
+      text-decoration: none;
       color: var(--text-primary);
       font-weight: $font-weight-bold;
     }
@@ -389,13 +393,14 @@
   }
 
   hr {
+    margin: 20px 0;
     color: var(--bg-2);
   }
 }
 
 .nao-under-card-message {
   font-size: pixelToRem(12px);
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-regular;
 
   .simple-link {
     text-decoration: underline;

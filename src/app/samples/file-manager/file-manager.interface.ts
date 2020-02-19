@@ -2,6 +2,7 @@ export const FileManagerCodeBlocks = [
   {
     html: `
     <div class="nao-file-manager d-flex flex-row">
+
         <div class="nao-content-source d-flex flex-column">
           <div class="source-btn pl-3 d-flex align-items-center" *ngFor="let cs of allowContentSources"
             (click)="dataSource$.next(cs)" [ngClass]="{'bg-white': cs === dataSource$.value}">
@@ -15,7 +16,7 @@ export const FileManagerCodeBlocks = [
         <div class="nao-file-manager-content w-100">
           <form class="h-100" #dataForm="ngForm">
             <div class="d-flex align-items-center justify-content-center h-100" *ngIf="status.firstLoading">
-              <loader-infinity></loader-infinity>
+              <loader-bounce></loader-bounce>
             </div>
 
             <ng-container [ngSwitch]="dataSource$.value" *ngIf="!status.firstLoading">
@@ -26,7 +27,7 @@ export const FileManagerCodeBlocks = [
                   Choose from files you’ve already uploaded to Naologic
                 </div>
 
-                <div class="nao-breadcrumb mt-1">
+                <div class="nao-breadcrumb mt-1 d-flex align-items-center">
                   <span class="path-link">Folders</span>
                   <i class="nao-icon-arrow-next-1 mx-2"></i>
                   <span class="path-link" [ngClass]="{'path-active': true }">Ibiza</span>
@@ -44,7 +45,7 @@ export const FileManagerCodeBlocks = [
                 </div>
 
                 <div class="cdn-content-grid d-flex align-items-center justify-content-center" *ngIf="status.isLoading">
-                  <loader-infinity></loader-infinity>
+                  <loader-bounce></loader-bounce>
                 </div>
 
                 <!-- Icons for extension -->
@@ -248,14 +249,14 @@ export const FileManagerCodeBlocks = [
         <a class="close-modal" href="javascript:void(0)" (click)="dismiss()">
           <i class="nao-icon-cancel"></i>
         </a>
-        
+
       </div>`,
     ts1: `
     public status = {
       firstLoading: false,
       isLoading: false
     }
-  
+
     public multiple = true;
     public maxFiles = 10;
     private subsSource = new Subscription();
@@ -266,12 +267,12 @@ export const FileManagerCodeBlocks = [
       'cdn': { name: 'Local files', icon: 'nao-icon-item-list' },
       'search-web': { name: 'Search web', icon: 'nao-icon-image-placeholder' },
     };
-  
+
     public actionsCdn = {
       viewList: true,
       sortAsc: true
     };
-  
+
     public fileList = [
       { path: 'IMG_390324-123453125', preview: 'assets-local/images/file-manager/img_view.jpg', ext: '.jpg', type: 'file' },
       { path: 'IMG_390324-123488768678', preview: 'assets-local/images/file-manager/img_view.jpg', ext: '.jpg', type: 'file' },
@@ -290,9 +291,9 @@ export const FileManagerCodeBlocks = [
       { path: 'Folder images2', preview: '', ext: '', type: 'folder' },
       { path: 'prospectus2.pdf', preview: 'assets-local/images/file-manager/word.png', ext: '.pdf', type: 'file' },
     ];
-  
+
     public selectedFiles = [];
-  
+
     // -->Unsplash
     public searchResult = [
       { id: '1', name: 'Name image1', path: 'assets-local/images/photography/1.png' },
@@ -317,7 +318,7 @@ export const FileManagerCodeBlocks = [
       { id: '20', name: 'Name image20', path: 'assets-local/images/photography/1.png' },
     ]
     public selectedImagesUnsplash = [];
-  
+
     // -->Upload:
     public uploadFilesView = false;
     public filesForUpload = [
@@ -371,7 +372,7 @@ export const FileManagerCodeBlocks = [
         }
       }
     }
-  
+
     /**
      * Check if file is selected
      * @param file
@@ -379,7 +380,7 @@ export const FileManagerCodeBlocks = [
     public isFileSelected(file): boolean {
       return Array.isArray(this.selectedFiles) && this.selectedFiles.indexOf(file.path) > -1;
     }
-  
+
     /**
      * Select an image from unsplash
      * @param file
@@ -390,7 +391,7 @@ export const FileManagerCodeBlocks = [
       }
       // -->Index: file
       const indexImage = this.selectedImagesUnsplash.indexOf(img.id);
-  
+
       if (this.multiple) {
         // -->Check: file
         if (indexImage > -1) {
@@ -411,7 +412,7 @@ export const FileManagerCodeBlocks = [
         }
       }
     }
-  
+
     /**
      * Check if image is selected
      * @param imgId

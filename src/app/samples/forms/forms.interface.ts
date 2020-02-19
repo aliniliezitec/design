@@ -1,7 +1,7 @@
 export const FormsCodeBlocks = [
   {
     html: `
-<div class="card nao-card-1 mb-5">
+    <div class="card nao-card-1 mb-5">
         <div class="card-header">
           <h5 class="card-header-title mb-1">Public business information</h5>
           <h5 class="card-header-subtitle">This information helps customers recognize your business and understand your
@@ -237,7 +237,7 @@ export const FormsCodeBlocks = [
       });`},
   {
     html: `
-    <div class="nao-crm-free-trial-form bg-white">
+     <div class="nao-crm-free-trial-form bg-white">
         <form [formGroup]="formGroup3">
           <div class="form-intro">
             Sign up now to start your free trial!

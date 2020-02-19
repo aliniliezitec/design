@@ -1,6 +1,6 @@
 {
   "name": "@naologic/design",
-  "version": "1.3.8",
+  "version": "1.3.9",
   "author": "naologic.com",
   "scripts": {
     "ng": "ng",
@@ -8,7 +8,7 @@
     "deploy:gh": "npm run build:prod && ngh --dir=dist/design",
     "build:prod": "ng build --prod --base-href https://naologic.github.io/design/",
     "build:lib": "ng build nao-design --prod && cp src/styles.scss dist/nao-design && cp -R src/assets/ dist/nao-design && cp -R src/styles/ dist/nao-design",
-    "publish": "rm -rf dist/nao-design && npm run build:lib && cd dist/nao-design && npm pack && npm publish naologic-design-1.3.8.tgz --access public",
+    "publish": "rm -rf dist/nao-design && npm run build:lib && cd dist/nao-design && npm pack && npm publish naologic-design-1.3.9.tgz --access public",
     "pack": "npm pack",
     "build": "ng build",
     "test": "ng test",
