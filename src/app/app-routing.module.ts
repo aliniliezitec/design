@@ -20,7 +20,7 @@ const routes: Routes = [
         loadChildren: () => import('./components/components.module').then(m => m.ComponentsModule),
       },
       {
-        path: 'utilities',
+        path: 'utility',
         loadChildren: () => import('./utilities/utilities.module').then(m => m.UtilitiesModule),
       },
       {

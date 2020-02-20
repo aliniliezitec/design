@@ -16,10 +16,7 @@ label {
 
 // *************************************************
 // Nao Form errors
-// todo: check this
-.nao-error-sm {
-  font-size: pixelToRem(13px);
-}
+
 
 // *************************************************
 // Nao Textare fields
@@ -35,6 +32,10 @@ label {
 
 // *************************************************
 // form controls
+.form-control:focus {
+  border-color: var(--text-primary-lightest) !important;
+}
+
 .form-control-sm {
   font-weight: $font-weight-lighter;
 }

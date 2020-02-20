@@ -15,7 +15,7 @@ export const InputGroupCodeBlocks = [
                   In</ng-option>
               </ng-select>
             </div>
-            <span class="text-danger nao-error-sm nao-mw-210">This field is required.</span>
+            <span class="nao-label-sm-1 text-danger nao-mw-210">This field is required.</span>
           </div>
         </div>`,
         ts1: `

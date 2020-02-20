@@ -6,6 +6,7 @@ import { SpacingComponent } from './spacing/spacing.component';
 import { IconsComponent } from './icons/icons.component';
 import { IllustrationComponent } from './illustration/illustration.component';
 import { SizingComponent } from './sizing/sizing.component';
+import { UtilityComponent } from './utility/utility.component';
 
 const routes: Routes = [
   {
@@ -57,6 +58,13 @@ const routes: Routes = [
           title: 'Sizing - Naologic',
         }
       },
+      {
+        path: 'utility',
+        component: UtilityComponent,
+        data: {
+          title: 'Utilities - Naologic',
+        }
+      }
     ]
   }
 ];

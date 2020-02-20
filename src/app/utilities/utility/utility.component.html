@@ -1,0 +1,38 @@
+<div class="nao-docs-wrapper">
+  <div class="elements-container">
+    <h1 class="title">Utility classes</h1>
+    <p class="description">
+      Utility classes are CSS class names that serve one particular purpose, and are names as such,
+    </p>
+
+    <div class="elem-container">
+      <h2 class="title"><code>.nao-no-user-select</code></h2>
+      <p>
+        The <code>.nao-no-user-select</code> class makes the text of the element and its sub-elements not selectable.
+      </p>
+      <p>Best used on html elements that have <code>(click)</code> event and are pressed multiple times rapidly.</p>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[0].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Borders</h2>
+      <p>
+        For section separators we are using <code>.border-top</code>  <code>.border-bottom</code>.
+      </p>
+
+      <div class="nao-bd-example nao-btn-example" [innerHTML]="data[1].html | sanitizeHtml"></div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].html)" placement="top"
+                ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[1].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+  </div>
+</div>

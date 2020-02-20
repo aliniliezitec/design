@@ -32,14 +32,15 @@ export const MenuItems = [
     ]
   },
   {
-    type: 'items', text: 'Utilities', route: '/utilities', icon: 'nao-icon-settings', isOpen: false,
+    type: 'items', text: 'Utilities', route: '/utility', icon: 'nao-icon-settings', isOpen: false,
     items: [
-      {type: 'item', route: '/utilities/colors', text: 'Colors'},
-      {type: 'item', route: '/utilities/iconography', text: 'Iconography'},
-      {type: 'item', route: '/utilities/illustration', text: 'Illustration'},
-      {type: 'item', route: '/utilities/typography', text: 'Typography'},
-      {type: 'item', route: '/utilities/spacing', text: 'Spacing'},
-      {type: 'item', route: '/utilities/sizing', text: 'Sizing'},
+      {type: 'item', route: '/utility/colors', text: 'Colors'},
+      {type: 'item', route: '/utility/iconography', text: 'Iconography'},
+      {type: 'item', route: '/utility/illustration', text: 'Illustration'},
+      {type: 'item', route: '/utility/typography', text: 'Typography'},
+      {type: 'item', route: '/utility/spacing', text: 'Spacing'},
+      {type: 'item', route: '/utility/sizing', text: 'Sizing'},
+      {type: 'item', route: '/utility/utility', text: 'Utility'},
     ]
   },
   {
