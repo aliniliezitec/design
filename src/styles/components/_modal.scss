@@ -1,6 +1,6 @@
-//.modal-title {
-//  font-weight: $font-weight-semibold;
-//}
+.modal-title {
+  line-height: 1.2;
+}
 
 // *************************************************
 // Modal fixes
@@ -26,6 +26,8 @@
 // *******************************************************************************
 // * Modals sizes
 .modal-md {
+  max-width: 430px !important;
+
   .modal-content {
     max-width: 430px;
   }
@@ -45,7 +47,8 @@
   }
 
   .modal-header {
-    padding: pixelToRem(15px) pixelToRem(40px);
+    padding: pixelToRem(15px) pixelToRem(20px);
+    //padding: pixelToRem(15px) pixelToRem(40px);
     font-size: pixelToRem(20px);
     min-height: 73px;
     color: var(--text-primary);
@@ -56,7 +59,8 @@
   }
 
   .modal-body {
-    padding: pixelToRem(25px) pixelToRem(40px) pixelToRem(15px) pixelToRem(40px);
+    padding: pixelToRem(15px) pixelToRem(20px);
+    //padding: pixelToRem(25px) pixelToRem(40px) pixelToRem(15px) pixelToRem(40px);
     color: var(--text-primary-light);
     font-size: pixelToRem(14px);
 

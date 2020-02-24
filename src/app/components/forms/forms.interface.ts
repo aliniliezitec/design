@@ -146,12 +146,16 @@ export const FormsCodeBlocks = [
   {
     html: `
         <label class="nao-label-1">
-            Nao label 1
-            <sup class="text-danger">*</sup>
+            Nao label default 1
+            <sup>*</sup>
         </label>
         <label class="nao-label-sm-1">
             Nao label sm 1
-            <sup class="text-danger">*</sup>
+            <sup>*</sup>
+        </label>
+        <label class="nao-label-xs-1">
+            Nao label xs 1
+            <sup>*</sup>
         </label>
       `
   },

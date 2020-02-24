@@ -10,6 +10,7 @@ export const FileManagerCodeBlocks = [
               <i [class]="contentSources[cs].icon"></i>
             </div>
             <span>{{ contentSources[cs].name}}</span>
+            <div class="badge-selected"> 1 </div>
           </div>
         </div>
 
@@ -23,7 +24,7 @@ export const FileManagerCodeBlocks = [
 
               <!-- CDN Source -->
               <div *ngSwitchCase="'cdn'">
-                <div class="h5 text-primary">
+                <div class="file-manager-title">
                   Choose from files you’ve already uploaded to Naologic
                 </div>
 
@@ -142,7 +143,7 @@ export const FileManagerCodeBlocks = [
 
               <!-- Upload Source -->
               <div *ngSwitchCase="'upload'">
-                <div class="h5 text-primary">
+                <div class="file-manager-title">
                   Choose a file locally
                 </div>
 
@@ -202,7 +203,7 @@ export const FileManagerCodeBlocks = [
               <!-- Search web Source -->
               <div *ngSwitchCase="'search-web'">
 
-                <div class="h5 text-primary">
+                <div class="file-manager-title">
                   Search and find images on the web
                 </div>
 

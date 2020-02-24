@@ -71,16 +71,30 @@
     </div>
 
     <div class="elem-container">
-      <h2 class="title">Nao modal 2</h2>
+      <h2 class="title">Nao modal 1 with input fields</h2>
       <div class="nao-bd-example nao-modal-example" [innerHTML]="data[1].html | sanitizeHtml"></div>
 
       <div class="nao-bd-clipboard">
         <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[1].html)" placement="top"
-          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+                ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
       </div>
 
       <div class="nao-example-highlight">
         <pre><div [innerHTML]="data[1].html | htmlPrismPipe | sanitizeHtml"></div></pre>
+      </div>
+    </div>
+
+    <div class="elem-container">
+      <h2 class="title">Nao modal 2</h2>
+      <div class="nao-bd-example nao-modal-example" [innerHTML]="data[2].html | sanitizeHtml"></div>
+
+      <div class="nao-bd-clipboard">
+        <button type="button" class="btn-clipboard" (click)="copyToClipboard(data[2].html)" placement="top"
+          ngbTooltip="Copied!" tooltipClass="nao-copy-tooltip" triggers="click" autoClose="false">Copy</button>
+      </div>
+
+      <div class="nao-example-highlight">
+        <pre><div [innerHTML]="data[2].html | htmlPrismPipe | sanitizeHtml"></div></pre>
       </div>
       <p>You can change the header background by using a <span class="highlighter-warning">.bg-*</span> color class,
         here are a few examples:</p>
