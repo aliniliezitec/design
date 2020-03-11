@@ -288,3 +288,31 @@
     text-align: right;
   }
 }
+
+
+// *************************************************
+// Nao helper tool
+.nao-helper-tool {
+  width: 445px;
+  min-height: 70px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px 1px var(--shadow);
+  background-color: var(--white);
+  padding: 20px 20px 20px 15px;
+  line-height: normal;
+  font-size: pixelToRem(12px);
+
+  .title {
+    color: var(--text-primary-lightest);
+  }
+
+  i {
+    color: var(--primary);
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  .d-flex:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

@@ -62,10 +62,11 @@
   list-style: none;
   border-bottom: solid 1px var(--bg-2);
   padding-left: 30px;
+  margin: 0;
 
   li {
     display: inline;
-    font-size: pixelToRem(14px);
+    font-size: pixelToRem(12px);
     font-weight: $font-weight-lighter;
     color: var(--text-primary);
 

@@ -23,7 +23,7 @@
 // Nao card 1
 .nao-card-1 {
   .card-header {
-    padding: 15px 40px;
+    padding: 20px 30px;
 
     .title {
       margin: 0 !important;
@@ -35,12 +35,12 @@
   }
 
   .card-body {
-    padding: 24px 40px 15px 40px;
+    padding: 25px 30px 15px 30px;
     background-color: var(--bg-3);
   }
 
   .card-footer {
-    padding: 15px 30px;
+    padding: 20px 40px;
   }
 }
 
@@ -474,5 +474,141 @@
   .ng-select {
     min-width: 52px;
     max-width: 285px;
+  }
+}
+
+// *************************************************
+// Responsive grid for cards
+
+// todo: document this
+// todo: document this
+// todo: document this
+// todo: document this
+// todo: document this
+.nao-cards-grid-1 {
+
+  .nao-cards-container-1 {
+    .nao-card-sm-dashboard {
+      &:nth-child(1) {
+        margin-right: 25px;
+      }
+
+      &:nth-child(2) {
+        margin-right: 25px;
+      }
+
+      @media only screen and (max-width: 1259px) {
+        &:nth-child(2) {
+          margin-right: unset;
+        }
+      }
+
+      @media only screen and (max-width: 675px) {
+        &:nth-child(1) {
+          margin-right: unset;
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+
+  .nao-cards-container-2 {
+    .nao-card-sm-dashboard {
+      &:nth-child(1) {
+        margin-right: 25px;
+      }
+
+      @media only screen and (max-width: 675px) {
+        &:nth-child(1) {
+          margin-right: unset;
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+
+  .nao-card-sm-dashboard {
+    min-width: 276px;
+
+    @media only screen and (max-width: 1259px) {
+      min-width: 292px;
+    }
+
+    @media only screen and (max-width: 1234px) {
+      min-width: 276px;
+    }
+
+    @media only screen and (max-width: 675px) {
+      min-width: 299px;
+    }
+
+    @media only screen and (max-width: 645px) {
+      min-width: 276px;
+    }
+
+  }
+}
+
+.nao-cards-grid-2 {
+
+  .nao-cards-container-1 {
+    .nao-card-sm-dashboard {
+      &:nth-child(1) {
+        margin-right: 15px;
+      }
+
+      &:nth-child(2) {
+        margin-right: 15px;
+      }
+
+      @media only screen and (max-width: 1526px) {
+        &:nth-child(2) {
+          margin-right: unset;
+        }
+      }
+
+      @media only screen and (max-width: 950px) {
+        &:nth-child(1) {
+          margin-right: unset;
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+
+  .nao-cards-container-2 {
+    .nao-card-sm-dashboard {
+      &:nth-child(1) {
+        margin-right: 15px;
+      }
+
+      @media only screen and (max-width: 950px) {
+        &:nth-child(1) {
+          margin-right: unset;
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+  }
+
+  .nao-card-sm-dashboard {
+    min-width: 250px;
+
+    @media only screen and (max-width: 1526px) {
+      min-width: 290px;
+    }
+
+    @media only screen and (max-width: 1480px) {
+      min-width: 250px;
+    }
+
+    @media only screen and (max-width: 950px) {
+      min-width: 310px;
+    }
+
+    @media only screen and (max-width: 910px) {
+      min-width: 250px;
+    }
   }
 }

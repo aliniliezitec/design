@@ -50,6 +50,9 @@
 // Nao card table 1
 .nao-card-table-1 {
   border-radius: 8px;
+  // todo: change the layout so you won't need bottom border radius
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   box-shadow: $nao-card-box-shadow;
   background-color: var(--white);
 
@@ -84,6 +87,7 @@
       font-size: pixelToRem(20px);
       font-weight: $font-weight-regular;
       color: var(--text-secondary);
+      line-height: 1;
     }
 
     .card-header-subtitle {

@@ -21,10 +21,18 @@ export const ComponentsCodeBlocks = [
   {
     html: `
       <ul class="nao-nav-breadcrumb">
-        <li><a href="javascript:void(0)">Home</a></li>
-        <li><a href="javascript:void(0)">Category</a></li>
-        <li><a href="javascript:void(0)">Sub-category</a></li>
-        <li>Current page</li>
+        <li>
+        <a href="javascript:void(0)">Home</a>
+        </li>
+        <li>
+        <a href="javascript:void(0)">Category</a>
+        </li>
+        <li>
+        <a href="javascript:void(0)">Sub-category</a>
+        </li>
+        <li>
+        Current page
+        </li>
       </ul>`
   },
   {
