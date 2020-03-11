@@ -2,7 +2,7 @@ export const DropdownCodeBlocks = [
     {
         html: `
         <div class="btn-group" ngbDropdown container="body" [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
-          <button type="button" class="btn p-0 btn-without-box-shadow" ngbDropdownToggle>
+          <button type="button" class="btn p-0 btn-no-box-shadow" ngbDropdownToggle>
             Menu
           </button>
           <div class="nao-dropdown-1" ngbDropdownMenu>
@@ -64,7 +64,7 @@ export const DropdownCodeBlocks = [
     {
         html: `
         <div class="btn-group" ngbDropdown [placement]="$flow.isRTL() ? 'bottom-left' : 'bottom-right'">
-          <button class="btn nao-btn-dropdown-menu-1 btn-without-box-shadow" ngbDropdownToggle>
+          <button class="btn nao-btn-dropdown-menu-1 btn-no-box-shadow" ngbDropdownToggle>
             Currency
           </button>
           <div class="nao-dropdown-2" ngbDropdownMenu>
@@ -161,5 +161,26 @@ export const DropdownCodeBlocks = [
           <ng-option value="in">
             In</ng-option>
         </ng-select>`
-    }
+    },
+  {
+    html: `
+    <div class="btn-group dropdown-remove-arrow" container="body" ngbDropdown placement="bottom">
+          <button class="btn btn-no-box-shadow btn-no-min-width btn-sm p-1" ngbDropdownToggle type="button">
+            <i class="nao-icon-help text-primary-lightest"></i> Helper tool
+          </button>
+          <div class="nao-helper-tool" ngbDropdownMenu>
+            <div class="title mb-3 text-uppercase">Helper tool</div>
+            <div class="d-flex">
+              <i class="nao-icon-information"></i>
+              <div>PiedPiper Deployment 1 currently has 8 active business apps. You can add or remove apps from the
+                deployment right here and take the changes live immediately
+              </div>
+            </div>
+            <div class="d-flex">
+              <i class="nao-icon-information"></i>
+              <div>It might take 10-15 minutes for the new functionality to be live in some cases.</div>
+            </div>
+          </div>
+        </div>`
+  }
 ];

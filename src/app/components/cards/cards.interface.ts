@@ -57,7 +57,7 @@ export const CardsCodeBlocks = [
           <div class="d-flex justify-content-between align-items-center title-container">
             <div class="nao-card-title">Card title</div>
             <div class="btn-group" ngbDropdown [placement]="$flow.isRTL() ? 'bottom-left' : 'bottom-right'">
-              <button class="btn nao-btn-dropdown-menu-1 btn-without-box-shadow" ngbDropdownToggle>View options
+              <button class="btn nao-btn-dropdown-menu-1 btn-no-box-shadow" ngbDropdownToggle>View options
               </button>
               <div class="nao-dropdown-2" ngbDropdownMenu>
                 <a class="dropdown-item" href="javascript:void(0)">Currency</a>
@@ -86,7 +86,7 @@ export const CardsCodeBlocks = [
             <div class="ticket-header">
             Ticket name
                 <div class="btn-group ticket-options-btn ml-2" ngbDropdown container="body">
-                    <button type="button" class="btn ticket-btn btn-without-box-shadow btn-no-min-width" ngbDropdownToggle>
+                    <button type="button" class="btn ticket-btn btn-no-box-shadow btn-no-min-width" ngbDropdownToggle>
                     </button>
                         <div ngbDropdownMenu class="nao-dropdown-1">
                         <a class="dropdown-item" href="javascript:void(0)" >Delete</a>
@@ -103,7 +103,7 @@ export const CardsCodeBlocks = [
           <div class="ticket-header">
             Ticket name
             <div class="btn-group ticket-options-btn ml-2" ngbDropdown container="body">
-              <button type="button" class="btn ticket-btn btn-without-box-shadow btn-no-min-width" ngbDropdownToggle>
+              <button type="button" class="btn ticket-btn btn-no-box-shadow btn-no-min-width" ngbDropdownToggle>
 
               </button>
               <div ngbDropdownMenu class="nao-dropdown-1">
@@ -196,7 +196,7 @@ export const CardsCodeBlocks = [
                 <div class="nao-lane-header">
                     In progress
                     <div class="btn-group float-right ml-2" ngbDropdown container="body">
-                        <button type="button" class="btn ticket-btn btn-without-box-shadow btn-no-min-width" ngbDropdownToggle>
+                        <button type="button" class="btn ticket-btn btn-no-box-shadow btn-no-min-width" ngbDropdownToggle>
                         </button>
                         <div ngbDropdownMenu class="nao-dropdown-1">
                         <a class="dropdown-item" href="javascript:void(0)">Delete</a>
@@ -215,7 +215,7 @@ export const CardsCodeBlocks = [
                 <div class="nao-lane-header">
                         In progress
                         <div class="btn-group float-right ml-2" ngbDropdown container="body">
-                            <button type="button" class="btn ticket-btn btn-without-box-shadow btn-no-min-width" ngbDropdownToggle>
+                            <button type="button" class="btn ticket-btn btn-no-box-shadow btn-no-min-width" ngbDropdownToggle>
                             </button>
                             <div ngbDropdownMenu class="nao-dropdown-1">
                                 <a class="dropdown-item" href="javascript:void(0)">Delete</a>
@@ -228,7 +228,7 @@ export const CardsCodeBlocks = [
                     <div class="ticket-header">
                         Ticket name
                         <div class="btn-group ticket-options-btn ml-2" ngbDropdown container="body">
-                            <button type="button" class="btn ticket-btn btn-without-box-shadow btn-no-min-width" ngbDropdownToggle>
+                            <button type="button" class="btn ticket-btn btn-no-box-shadow btn-no-min-width" ngbDropdownToggle>
                             </button>
                             <div ngbDropdownMenu class="nao-dropdown-1">
                                 <a class="dropdown-item" href="javascript:void(0)">Delete</a>

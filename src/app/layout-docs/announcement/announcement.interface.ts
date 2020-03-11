@@ -21,7 +21,7 @@ export const GridCodeBlocks = [
 
         <div class="nao-ann-container d-flex align-items-center bg-text-primary text-white">
           <div class="mx-auto">Annoucement copy</div>
-          <button class="btn btn-without-box-shadow btn-no-min-width btn-sm close-btn" type="button">
+          <button class="btn btn-no-box-shadow btn-no-min-width btn-sm close-btn" type="button">
             <i class="nao-icon-cancel text-white">
             </i>
           </button>
@@ -31,7 +31,7 @@ export const GridCodeBlocks = [
           <div class="cta">CTA</div>
           <div class="mx-auto">Annoucement copy</div>
           <button class="btn btn-simple-primary btn-sm mr-4">Simple button</button>
-          <button class="btn btn-without-box-shadow btn-no-min-width btn-sm close-btn" type="button">
+          <button class="btn btn-no-box-shadow btn-no-min-width btn-sm close-btn" type="button">
             <i class="nao-icon-cancel text-white">
             </i>
           </button>

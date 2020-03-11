@@ -298,7 +298,8 @@ $value in $theme-colors {
 
 
 // btn without box-shadow
-.btn-without-box-shadow {
+// todo: document this
+.btn-no-box-shadow {
   &:focus {
     box-shadow: none;
   }

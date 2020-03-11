@@ -184,7 +184,7 @@ export const TableCodeBlocks = [
     <div class="card nao-card-table-1 mb-5" [ngClass]="{'nao-condensed-table': paging.tableCondensed$.value}">
           <div class="d-flex flex-row card-header selected align-items-center" *ngIf="noSelectedRows() > 0">
             <div class="pr-3">
-              <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
+              <a href="javascript:void(0)" class="btn btn-transparent btn-no-min-width btn-no-box-shadow" (click)="deselectAll()">X</a>
             </div>
             <div class="pl-3 mr-3">
               <div class="card-header-title mb-0">
@@ -192,7 +192,7 @@ export const TableCodeBlocks = [
               </div>
             </div>
             <div class="">
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
                 Delete multiple
               </button>
             </div>
@@ -209,13 +209,13 @@ export const TableCodeBlocks = [
               </span>
             </div>
             <div class="">
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
                 Option 1
               </button>
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
                 Option 2
               </button>
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
                 Option 3
               </button>
             </div>
@@ -245,7 +245,7 @@ export const TableCodeBlocks = [
               </ng-select>
             </div>
             <div class="">
-              <button type="button" class="btn btn-transparent text-dark-blue" (click)="searchFormGroup.empty()">
+              <button type="button" class="btn btn-transparent text-dark-blue btn-no-box-shadow" (click)="searchFormGroup.empty()">
                 Clear filter
               </button>
             </div>
@@ -309,7 +309,7 @@ export const TableCodeBlocks = [
                 Delete
               </button>
               <div ngbDropdown class="d-inline-block btn-group dropdown-remove-arrow" container="body">
-                <button class="btn btn-without-box-shadow btn-sm" ngbDropdownToggle>
+                <button class="btn btn-no-box-shadow btn-sm" ngbDropdownToggle>
                   <i class="nao-icon-additional-options"></i>
                 </button>
                 <div ngbDropdownMenu class="nao-dropdown-1">
@@ -331,7 +331,7 @@ export const TableCodeBlocks = [
       <div class="card nao-card-table-1 mb-5" [ngClass]="{'nao-condensed-table': paging.tableCondensed$.value}">
           <div class="d-flex flex-row card-header selected align-items-center" *ngIf="noSelectedRows() > 0">
             <div class="pr-3">
-              <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
+              <a href="javascript:void(0)" class="btn btn-transparent btn-no-min-width btn-no-box-shadow" (click)="deselectAll()">X</a>
             </div>
             <div class="pl-3 mr-3">
               <div class="card-header-title mb-0">
@@ -339,7 +339,7 @@ export const TableCodeBlocks = [
               </div>
             </div>
             <div class="">
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
                 Delete multiple
               </button>
             </div>
@@ -356,13 +356,13 @@ export const TableCodeBlocks = [
               </span>
             </div>
             <div class="">
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
                 Option 1
               </button>
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
                 Option 2
               </button>
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
                 Option 3
               </button>
             </div>
@@ -392,7 +392,7 @@ export const TableCodeBlocks = [
               </ng-select>
             </div>
             <div class="">
-              <button type="button" class="btn btn-transparent text-dark-blue" (click)="searchFormGroup.empty()">
+              <button type="button" class="btn btn-transparent text-dark-blue btn-no-box-shadow" (click)="searchFormGroup.empty()">
                 Clear filter
               </button>
             </div>
@@ -573,7 +573,7 @@ export const TableCodeBlocks = [
                 Delete
               </button>
               <div ngbDropdown class="d-inline-block btn-group dropdown-remove-arrow" container="body">
-                <button class="btn btn-without-box-shadow btn-sm" ngbDropdownToggle>
+                <button class="btn btn-no-box-shadow btn-sm" ngbDropdownToggle>
                   <i class="nao-icon-additional-options"></i>
                 </button>
                 <div ngbDropdownMenu class="nao-dropdown-1">
@@ -595,7 +595,7 @@ export const TableCodeBlocks = [
       <div class="card nao-card-table-1 mb-5" [ngClass]="{'nao-condensed-table': paging.tableCondensed$.value}">
           <div class="d-flex flex-row card-header selected align-items-center" *ngIf="noSelectedRows() > 0">
             <div class="pr-3">
-              <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
+              <a href="javascript:void(0)" class="btn btn-transparent btn-no-min-width btn-no-box-shadow" (click)="deselectAll()">X</a>
             </div>
             <div class="pl-3 mr-3">
               <div class="card-header-title mb-0">
@@ -603,7 +603,7 @@ export const TableCodeBlocks = [
               </div>
             </div>
             <div class="">
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
                 Delete multiple
               </button>
             </div>
@@ -620,13 +620,13 @@ export const TableCodeBlocks = [
               </span>
             </div>
             <div class="">
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
                 Option 1
               </button>
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
                 Option 2
               </button>
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
                 Option 3
               </button>
             </div>
@@ -813,7 +813,7 @@ export const TableCodeBlocks = [
                 Delete
               </button>
               <div ngbDropdown class="d-inline-block btn-group dropdown-remove-arrow" container="body">
-                <button class="btn btn-without-box-shadow btn-sm" ngbDropdownToggle>
+                <button class="btn btn-no-box-shadow btn-sm" ngbDropdownToggle>
                   <i class="nao-icon-additional-options"></i>
                 </button>
                 <div ngbDropdownMenu class="nao-dropdown-1">
@@ -835,7 +835,7 @@ export const TableCodeBlocks = [
         <div class="card nao-card-table-1 mb-5">
           <div class="d-flex flex-row card-header selected align-items-center" *ngIf="noSelectedRows() > 0">
             <div class="pr-3">
-              <a href="javascript:void(0)" class="btn btn-transparent" (click)="deselectAll()">X</a>
+              <a href="javascript:void(0)" class="btn btn-transparent btn-no-min-width btn-no-box-shadow" (click)="deselectAll()">X</a>
             </div>
             <div class="pl-3 mr-3">
               <div class="card-header-title mb-0">
@@ -843,7 +843,7 @@ export const TableCodeBlocks = [
               </div>
             </div>
             <div class="">
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
                 Delete multiple
               </button>
             </div>
@@ -876,7 +876,7 @@ export const TableCodeBlocks = [
               </ng-select>
             </div>
             <div class="">
-              <button type="button" class="btn btn-transparent text-dark-blue" (click)="searchFormGroup.empty()">
+              <button type="button" class="btn btn-transparent text-dark-blue btn-no-box-shadow" (click)="searchFormGroup.empty()">
                 Clear filter
               </button>
             </div>
@@ -914,7 +914,7 @@ export const TableCodeBlocks = [
                     <td class="align-middle">
                       <div class="d-flex align-items-center">
                         <div class="cell-multiline-header" [ngStyle]="{'padding-left': 30*level+'px'}">
-                          <button class="btn btn-sm btn-without-box-shadow pl-0 btn-no-min-width"
+                          <button class="btn btn-sm btn-no-box-shadow pl-0 btn-no-min-width"
                             *ngIf="item.childRows?.length>0"
                             (click)="item.expandChildren ? item.expandChildren = !item.expandChildren : item.expandChildren = true">
                             <i class="nao-icon-arrow-next-1 nao-icon-rotate" [ngClass]="{'rotate-90': item.expandChildren}"></i></button>
