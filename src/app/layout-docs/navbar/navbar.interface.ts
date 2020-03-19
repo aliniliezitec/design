@@ -1,10 +1,18 @@
 export interface MenuInterface {
   type: string;
-  textTranslate: string;
+  text: string;
   route: string;
+  href?: string;
   active: boolean;
   isOpen?: boolean;               // used for Dropdowns
-  items?: MenuItemInterface[];    // used for Dropdowns
+  items?: DropdownItemInterface[];    // used for Dropdowns
+}
+
+export interface DropdownItemInterface {
+  type: string;
+  text: string;
+  route: string;
+  active: boolean;
 }
 
 export interface MenuItemInterface {
@@ -34,171 +42,148 @@ export interface SideMenuV2Interface {
 export const NavbarCodeBlocks = [
   {
     html: `
-        <nav class="navbar navbar-expand bg-white py-0 pl-3 pr-0">
-          <a href="javascript:void(0)" class="navbar-brand py-0 mr-4">
-            <img src="assets-local/images/crm-assets/logo-crm.svg" alt="Naologic" height="30">
-          </a>
-          <div class="navbar-collapse">
-            <!-- Divider -->
-            <hr class="d-lg-none w-100">
-            <div class="navbar-nav align-items-lg-center ml-auto">
+      <header>
+          <div class="top-header d-none d-md-flex">
+            <a [routerLink]="['/']" class="mr-auto" href="javascript:void(0)">
+              <img alt="Naologic logo" src="assets-local/images/crm-assets/logo-crm.svg" width="35"/>
+            </a>
+            <div class="d-flex align-items-center ml-auto">
               <!-- Show help -->
-              <div class="navbar-text mr-2">
+              <div class="top-header-help mr-2">
                 <a class="d-flex align-items-center" href="javascript:void(0)">
-                  <span class="text-dark font-weight-bold mr-1 ml-4">HELP</span>
-                  <i class="nao-icon-help nao-help ml-1"></i>
+                  <span class="font-weight-bold mr-1 ml-4">HELP</span>
+                  <i class="nao-icon-help ml-1"></i>
                 </a>
               </div>
 
-              <div ngbDropdown display="dynamic" class="btn-group dropdown-remove-arrow"
-                [placement]="$flow.isRTL() ? 'bottom-left' : 'bottom-right'">
-                <a ngbDropdownToggle href="javascript:void(0)">
+              <div class="btn-group dropdown-remove-arrow" display="dynamic" ngbDropdown>
+                <a href="javascript:void(0)" ngbDropdownToggle>
                   <span class="d-inline-flex align-items-center nao-dropdown-avatar-container">
-                    <img class="d-block nao-dropdown-avatar mt-1 rounded-circle"
-                      src="assets-local/images/placeholder/default-avatar.png" />
-                    <span class="dot" [ngClass]="{ 'dot_disconnected': false, 'dot_connected': true }"></span>
+                    <img class="d-block nao-dropdown-avatar rounded-circle"
+                         src="assets-local/images/placeholder/default-avatar.png"/>
+                    <span [ngClass]="{ 'dot_disconnected': false, 'dot_connected': true }" class="dot"></span>
                   </span>
                 </a>
-                <div ngbDropdownMenu class="nao-dropdown-1">
+                <div class="nao-dropdown-1" ngbDropdownMenu>
                   <div class="nao-dropdown-profile">
                     <div class="d-flex">
                       <img class="d-block nao-dropdown-avatar rounded-circle mr-2"
-                        src="assets-local/images/placeholder/default-avatar.png" />
+                           src="assets-local/images/placeholder/default-avatar.png"/>
                       <div class="d-flex flex-column">
                         <span class="font-weight-bold">Jon Doe</span>
                         <span class="nao-dropdown-small-text">jon@naologic.com</span>
                       </div>
                     </div>
                   </div>
-                  <a href="javascript:void(0)" class="dropdown-item">
+                  <a class="dropdown-item" href="javascript:void(0)">
                     Your account
                   </a>
-                  <a href="javascript:void(0)" class="dropdown-item">
+                  <a class="dropdown-item" href="javascript:void(0)">
                     Invite People
                   </a>
-                  <a href="javascript:void(0)" class="dropdown-item">
+                  <a class="dropdown-item" href="javascript:void(0)">
                     Log Out
                   </a>
                 </div>
               </div>
             </div>
           </div>
-        </nav>`
-  },
-  {
-    html: `
-        <div class="nao-navbar bg-white">
-        <div class="content-wrapper d-flex flex-row-reverse-rtl-only justify-content-between justify-content-md-start px-md-4">
-            <div class="d-none d-md-block align-self-end" [ngClass]="{'hide-navbar-scroll-buttons': !showPrevBtn}">
-                <a class="navbar-horizontal-prev" (click)="scrollPrev()">
+
+          <div class="navbar-container-nao bg-white">
+            <div
+              class="content-wrapper d-flex align-items-end flex-row-reverse-rtl-only px-md-4">
+              <div [ngClass]="{'hide-navbar-scroll-buttons': !showPrevBtn}" class="d-none d-md-block align-self-end">
+                <a (click)="scrollPrev()" class="navbar-horizontal-prev">
                 </a>
-                </div>
+              </div>
 
-                <div #navbarContent class="nao-navbar-container">
-                    <nav class="navbar navbar-expand-md navbar-sm-fixed-top px-3 px-md-0"
-                        [ngClass]="{'b-0' : !isCollapsed}">
-                        <a class="navbar-brand d-md-none" href="javascript:void(0)" (click)="isCollapsed = true">
-                        <img src="assets-local/images/crm-assets/logo-crm.svg" alt="Naologic" height="30">
-                        </a>
+              <!--remove buttons for website-->
+              <div #navbarContent class="navbar-content w-100 nao-navbar-content">
 
-                        <div class="align-items-center ml-auto d-md-none">
-                        <div ngbDropdown display="dynamic" class="btn-group dropdown-remove-arrow"
-                            [placement]="$flow.isRTL() ? 'bottom-left' : 'bottom-right'">
-                            <a ngbDropdownToggle href="javascript:void(0)">
-                            <span class="d-inline-flex align-items-center nao-dropdown-avatar-container">
-                                <img class="d-block nao-dropdown-avatar mt-1 rounded-circle"
-                                src="assets-local/images/placeholder/default-avatar.png" />
-                                <span class="dot" [ngClass]="{ 'dot_disconnected': false, 'dot_connected': true }"></span>
-                            </span>
+                <nav [ngClass]="{'b-0' : !isCollapsed}" class="navbar navbar-expand-md navbar-sm-fixed-top px-3 px-md-0">
+                  <!--Collapsed view-->
+                  <a (click)="isCollapsed = true" [routerLink]="'/'" class="navbar-brand d-md-none" href="javascript:void(0)">
+                    <img alt="Naologic" src="assets-local/images/crm-assets/logo-crm.svg" width="35">
+                  </a>
+
+                  <div class="d-md-none mx-auto">
+                    <a class="btn btn-sm btn-primary" href="https://crm.naologic.com/subscription/crm-free-trial">Try NAO CRM
+                      for
+                      free</a>
+                  </div>
+
+                  <div class="align-items-center d-md-none">
+
+                    <button (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="naoNavbar"
+                            aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler custom-toggler border-0"
+                            data-target="#naoNavbar" data-toggle="collapse" type="button">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  </div>
+
+                  <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse" id="navbarNaoContent">
+                    <ul class="navbar-nav mr-auto">
+                      <!--Iterate over the links-->
+                      <li *ngFor="let elem of menuItems; let i = index" class="nav-item">
+                        <!--single item-->
+                        <a (click)="isCollapsed=true" *ngIf="elem.type === 'item'" [ngClass]="{'active': elem.active}"
+                           [routerLink]="elem.route" [title]="elem.text" class="nav-link"
+                           href="javascript:void(0)">{{ elem.text }}</a>
+                        <!--href link blank-->
+                        <a (click)="isCollapsed=true" *ngIf="elem.type === 'blank'" [href]="elem.href" class="nav-link" rel="noopener"
+                           target="_blank">{{ elem.text }}</a>
+
+                        <!--Dropdown-->
+                        <ng-container *ngIf="elem.type ==='items'">
+
+                          <div class="d-block d-md-none">
+                            <a (click)="toggleMenu(i)" class="nav-link d-flex align-items-center justify-content-between flex-row-reverse-rtl-only"
+                               href="javascript:void(0)">
+                              {{ elem.text }}
+                              <i [ngClass]="{'nao-icon-arrow-active': elem.isOpen}" class="nao-icon-arrow"></i>
                             </a>
-                            <div ngbDropdownMenu class="nao-dropdown-1">
-                                <div class="nao-dropdown-profile">
-                                    <div class="d-flex">
-                                        <img class="d-block nao-dropdown-avatar rounded-circle mr-2"
-                                            src="assets-local/images/placeholder/default-avatar.png" />
-                                        <div class="d-flex flex-column">
-                                            <span class="font-weight-bold">Jon Doe</span>
-                                            <span class="nao-dropdown-small-text">jon@naologic.com</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="javascript:void(0)" class="dropdown-item">
-                                Your account
-                            </a>
-                            <a href="javascript:void(0)" class="dropdown-item">
-                                Invite People
-                            </a>
-                            <a href="javascript:void(0)" class="dropdown-item">
-                                Log Out
-                            </a>
-                            </div>
-                        </div>
 
-                        <button class="navbar-toggler custom-toggler border-0" type="button" data-toggle="collapse"
-                            data-target="#naoNavbar" aria-expanded="false" aria-label="Toggle navigation"
-                            (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="naoNavbar">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        </div>
-
-                        <div class="collapse navbar-collapse nao-navbar-collapse" id="naoNavbar" [ngbCollapse]="isCollapsed">
-
-                        <ul class="navbar-nav border-bottom-0">
-
-                            <li *ngFor="let elem of menuItems; let i = index" class="nav-item">
-
-                            <div *ngIf="elem.type ==='items'">
-
-                                <div class="d-block d-md-none">
-                                <a href="javascript:void(0)" (click)="toggleMenu(i)"
-                                    class="nav-link d-flex align-items-center justify-content-between flex-row-reverse-rtl-only">
-                                    {{ elem.text }}
-                                    <i class="nao-icon-arrow" [ngClass]="{'nao-icon-arrow-active': elem.isOpen}"></i>
+                            <ul *ngIf="elem.isOpen" [@expandCollapse]='elem.isOpen' class="m-0">
+                              <li *ngFor="let subitem of elem.items" class="nav-item">
+                                <a (click)="isCollapsed=true; elem.isOpen=false" [ngClass]="{'active': subitem.active}" [routerLink]="subitem.route"
+                                   class="nav-link" href="javascript:void(0)">
+                                  {{ subitem.text }}
                                 </a>
-
-                                <ul class="m-0" [@expandCollapse]='elem.isOpen' *ngIf="elem.isOpen">
-                                    <li *ngFor="let subitem of elem.items" class="nav-item">
-                                    <a href="javascript:void(0)" [routerLink]="subitem.route" class="nav-link"
-                                        (click)="isCollapsed=true; elem.isOpen=false" [ngClass]="{'active': subitem.active}">
-                                        {{ subitem.text }}
-                                        </a>
-                                    </li>
-                                </ul>
-                                </div>
-                                <div class="d-none d-md-block">
-                                <div class="dropdown" ngbDropdown container="body" display="dynamic"
-                                    [placement]="$flow.isRTL() ? 'bottom-right' : 'bottom-left'">
-                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                    [ngClass]="{'active': elem.active}" ngbDropdownToggle>
-                                    {{ elem.text }}
-                                    </a>
-                                    <div class="nao-dropdown-navbar" ngbDropdownMenu>
-                                    <a class="dropdown-item" href="javascript:void(0)" [routerLink]="subitem.route"
-                                        [ngClass]="{'active': subitem.active}" *ngFor="let subitem of elem.items">
-                                        {{ subitem.text }}
-                                    </a>
-                                    </div>
-                                </div>
-                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="d-none d-md-block">
+                            <div class="dropdown" container="body" display="dynamic" ngbDropdown>
+                              <a [ngClass]="{'active': elem.active}" class="nav-link dropdown-toggle" href="javascript:void(0)"
+                                 ngbDropdownToggle>
+                                {{ elem.text }}
+                              </a>
+                              <div class="nao-dropdown-navbar" ngbDropdownMenu>
+                                <a *ngFor="let subitem of elem.items" [ngClass]="{'active': subitem.active}" [routerLink]="subitem.route"
+                                   class="dropdown-item" href="javascript:void(0)">
+                                  {{ subitem.text }}
+                                </a>
+                              </div>
                             </div>
+                          </div>
+                        </ng-container>
 
-                            <div *ngIf="elem.type === 'item'" (click)="isCollapsed=true">
-                                <a class="nav-link" href="javascript:void(0)" [routerLink]="elem.route"
-                                [ngClass]="{'active': elem.active}">{{ elem.text }}</a>
-                            </div>
-                            </li>
-                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
 
-                        </div>
-                    </nav>
-                </div>
+              </div>
 
-                <div class="d-none d-md-block align-self-end" [ngClass]="{'hide-navbar-scroll-buttons': !showNextBtn}">
-                    <a class="navbar-horizontal-next" (click)="scrollNext()">
+              <div [ngClass]="{'hide-navbar-scroll-buttons': !showNextBtn}" class="d-none d-md-block align-self-end">
+                <a (click)="scrollNext()" class="navbar-horizontal-next">
                 </a>
+              </div>
+
             </div>
-            </div>
-        </div>`,
+          </div>
+        </header>
+        `,
     ts1: `
             @Component({
                 ...
@@ -557,7 +542,7 @@ export const NavbarCodeBlocks = [
 
         </div>
       </div>`,
-      ts1: `  
+      ts1: `
       public sideMenuV2Items: SideMenuV2Interface[] = [
         { type: 'divider' },
         { type: 'group-name', textTranslate: 'ACCOUNT ADMINISTRATION' },

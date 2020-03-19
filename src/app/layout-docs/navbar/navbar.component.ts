@@ -28,47 +28,50 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public menuItems: MenuInterface[] = [
     {
-      type: 'item', textTranslate: 'CRM', route: '/', active: false,
+      type: 'item', text: 'CRM', route: '/', active: false,
     },
     {
-      type: 'item', textTranslate: 'Business Apps', route: '/', active: false,
+      type: 'item', text: 'Business Apps', route: '/', active: false,
     },
     {
-      type: 'item', textTranslate: 'Enterprise', route: '/', active: true,
+      type: 'item', text: 'Enterprise', route: '/', active: true,
     },
     {
-      type: 'item', textTranslate: 'Pricing', route: '/', active: false,
+      type: 'item', text: 'Pricing', route: '/', active: false,
     },
     {
-      type: 'items', textTranslate: 'Dropdown', route: '/', isOpen: false, active: false,
+      type: 'items', text: 'Dropdown', route: '/', isOpen: false, active: false,
       items: [
-        { type: 'item', route: '/', textTranslate: 'Sub item 1', active: false },
-        { type: 'item', route: '/', textTranslate: 'Sub item 2', active: true },
-        { type: 'item', route: '/', textTranslate: 'Sub item 3', active: false },
+        { type: 'item', route: '/', text: 'Sub item 1', active: false },
+        { type: 'item', route: '/', text: 'Sub item 2', active: true },
+        { type: 'item', route: '/', text: 'Sub item 3', active: false },
       ]
     },
     {
-      type: 'item', textTranslate: 'Blog', route: '/', active: false,
+      type: 'item', text: 'Blog', route: '/', active: false,
     },
     {
-      type: 'item', textTranslate: 'Dashboard', route: '/', active: false,
+      type: 'item', text: 'Dashboard', route: '/', active: false,
     },
     {
-      type: 'items', textTranslate: 'Another Dropdown', route: '/', isOpen: false, active: false,
+      type: 'items', text: 'Another Dropdown', route: '/', isOpen: false, active: false,
       items: [
-        { type: 'item', route: '/', textTranslate: 'Sub item 1', active: false },
-        { type: 'item', route: '/', textTranslate: 'Sub item 2', active: true },
-        { type: 'item', route: '/', textTranslate: 'Sub item 3', active: false },
+        { type: 'item', route: '/', text: 'Sub item 1', active: false },
+        { type: 'item', route: '/', text: 'Sub item 2', active: true },
+        { type: 'item', route: '/', text: 'Sub item 3', active: false },
       ]
     },
     {
-      type: 'item', textTranslate: 'Sales', route: '/', active: false,
+      type: 'blank', text: 'Blog', href: 'javacript:void(0)', route: '', active: false,
     },
     {
-      type: 'item', textTranslate: 'Leads', route: '/', active: false,
+      type: 'item', text: 'Sales', route: '/', active: false,
     },
     {
-      type: 'item', textTranslate: 'Contact', route: '/', active: false,
+      type: 'item', text: 'Leads', route: '/', active: false,
+    },
+    {
+      type: 'item', text: 'Contact', route: '/', active: false,
     },
   ];
 
@@ -229,6 +232,13 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
     this.showNextBtn = true;
     // -->Refresh: prev button
     this.refreshScrollPrevBtn();
+  }
+
+  /**
+   * Check if an url is active
+   */
+  public isActive(url) {
+    // return this.router.isActive(url, false);
   }
 
 

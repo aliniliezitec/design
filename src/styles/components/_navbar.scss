@@ -12,17 +12,40 @@
 
 // *************************************************
 // nao main top navbar
-.nao-navbar-container {
+.nao-navbar-content {
   overflow: hidden;
   white-space: nowrap;
 }
 
-.nao-navbar {
+.top-header {
+  background-color: var(--white);
+  padding: 5px 15px 2px 15px;
+
+  .top-header-help {
+    margin-bottom: 3px;
+
+    a {
+      color: var(--text-primary);
+
+      &:hover, &:focus {
+        text-decoration: none;
+        color: var(--text-primary);
+      }
+    }
+    .nao-icon-help {
+      font-size: 20px;
+      line-height: 0;
+    }
+  }
+}
+
+.navbar-container-nao {
   border-bottom: solid 2px var(--primary);
   z-index: 1030;
 
   .navbar {
     padding-bottom: 0;
+    padding-top: 0;
 
     @include media-breakpoint-down(sm) {
       padding-bottom: 8px;
@@ -47,6 +70,15 @@
         padding-left: 45px !important;
       }
     }
+
+    a {
+      color: var(--text-primary);
+      font-size: pixelToRem(16px);
+
+      &:hover {
+        background-color: rgba(62, 64, 219, 0.1);
+      }
+    }
   }
 
   @include rtl {
@@ -55,7 +87,7 @@
     }
   }
 
-  .nao-navbar-collapse {
+  .navbar-collapse {
     @include media-breakpoint-down(sm) {
       background-color: var(--bg-3);
 
@@ -96,9 +128,10 @@
 
 }
 
+
 .navbar-horizontal-prev,
 .navbar-horizontal-next {
-  height: 42px;
+  height: 36px;
   position: relative;
   display: block;
   flex: 0 0 auto;
@@ -135,7 +168,7 @@
 }
 
 .hide-navbar-scroll-buttons {
-  height: 42px;
+  height: 36px;
   min-width: 36px;
 
   .navbar-horizontal-prev,
@@ -173,7 +206,7 @@
     right: 0;
     left: 0;
     z-index: 1030;
-    border-bottom: solid 2px var(--primary);
+    //border-bottom: solid 2px var(--primary);
 
     &.b-0 {
       border: 0;
