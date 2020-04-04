@@ -302,10 +302,10 @@ export const TableCodeBlocks = [
       <ng-template #rowOverlay let-item let-i="i">
           <div class="d-flex justify-content-end align-items-center nao-row-overlay">
             <div>
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary">
                 Edit
               </button>
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary">
                 Delete
               </button>
               <div ngbDropdown class="d-inline-block btn-group dropdown-remove-arrow" container="body">
@@ -566,10 +566,10 @@ export const TableCodeBlocks = [
       <ng-template #rowOverlay let-item let-i="i">
           <div class="d-flex justify-content-end align-items-center nao-row-overlay">
             <div>
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary">
                 Edit
               </button>
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary">
                 Delete
               </button>
               <div ngbDropdown class="d-inline-block btn-group dropdown-remove-arrow" container="body">
@@ -806,10 +806,10 @@ export const TableCodeBlocks = [
     <ng-template #rowOverlay let-item let-i="i">
           <div class="d-flex justify-content-end align-items-center nao-row-overlay">
             <div>
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary">
                 Edit
               </button>
-              <button class="btn btn-simple-primary">
+              <button class="btn btn-sm btn-simple-primary">
                 Delete
               </button>
               <div ngbDropdown class="d-inline-block btn-group dropdown-remove-arrow" container="body">

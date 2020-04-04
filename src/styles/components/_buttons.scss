@@ -250,9 +250,7 @@ $value in $theme-colors {
 // *************************************************
 // btn flip for condensed/relaxed
 .btn-flip {
-  min-width: 60px;
   color: var(--text-primary-light);
-  padding: 4px 7px;
   font-size: pixelToRem(10px);
   background-color: var(--white);
   box-shadow: 0 1px 3px 0 var(--text-7);

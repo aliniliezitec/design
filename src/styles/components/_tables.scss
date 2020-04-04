@@ -118,11 +118,13 @@
       border: 0;
       color: var(--text-secondary);
       font-size: pixelToRem(14px);
+      outline: none;
+      box-shadow: none;
     }
 
     .page-item.active {
       .page-link {
-        font-weight: $font-weight-bolder;
+        font-weight: $font-weight-bold;
         background-color: transparent;
         color: var(--text-secondary);
       }
@@ -325,6 +327,14 @@
 .nao-condensed-btn-group {
   margin-left: auto;
 
+  .btn {
+    padding-left: pixelToRem(7px);
+    padding-right: pixelToRem(7px);
+    padding-top: pixelToRem(7px);
+    padding-bottom: pixelToRem(5px);
+    min-width: 60px;
+  }
+
   @include rtl {
     margin-left: unset;
     margin-right: auto;
@@ -353,17 +363,34 @@
 }
 
 // *************************************************
+// Nao empty table container
+.nao-empty-table-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-secondary);
+
+  .title {
+    font-size: pixelToRem(16px);
+    font-weight: $font-weight-semibold;
+  }
+
+  .subtitle {
+    font-size: pixelToRem(12px)
+  }
+}
+
+
+// *************************************************
 // Nao condensed table
 .nao-condensed-table {
   .table-body {
     td {
       padding-top: 6px !important;
       padding-bottom: 6px !important;
-
-      .btn-simple-primary {
-        padding-top: 0;
-        padding-bottom: 0;
-      }
     }
   }
 
