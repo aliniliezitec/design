@@ -192,7 +192,7 @@ export const TableCodeBlocks = [
               </div>
             </div>
             <div class="">
-              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
+              <button class="btn btn-simple-primary nao-btn-transition">
                 Delete multiple
               </button>
             </div>
@@ -209,13 +209,13 @@ export const TableCodeBlocks = [
               </span>
             </div>
             <div class="">
-              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
+              <button class="btn btn-simple-primary nao-btn-transition">
                 Option 1
               </button>
-              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
+              <button class="btn btn-simple-primary nao-btn-transition">
                 Option 2
               </button>
-              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
+              <button class="btn btn-simple-primary nao-btn-transition">
                 Option 3
               </button>
             </div>
@@ -339,7 +339,7 @@ export const TableCodeBlocks = [
               </div>
             </div>
             <div class="">
-              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
+              <button class="btn btn-simple-primary nao-btn-transition">
                 Delete multiple
               </button>
             </div>
@@ -356,13 +356,13 @@ export const TableCodeBlocks = [
               </span>
             </div>
             <div class="">
-              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
+              <button class="btn btn-simple-primary nao-btn-transition">
                 Option 1
               </button>
-              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
+              <button class="btn btn-simple-primary nao-btn-transition">
                 Option 2
               </button>
-              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
+              <button class="btn btn-simple-primary nao-btn-transition">
                 Option 3
               </button>
             </div>
@@ -603,7 +603,7 @@ export const TableCodeBlocks = [
               </div>
             </div>
             <div class="">
-              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
+              <button class="btn btn-simple-primary nao-btn-transition">
                 Delete multiple
               </button>
             </div>
@@ -620,13 +620,13 @@ export const TableCodeBlocks = [
               </span>
             </div>
             <div class="">
-              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
+              <button class="btn btn-simple-primary nao-btn-transition">
                 Option 1
               </button>
-              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
+              <button class="btn btn-simple-primary nao-btn-transition">
                 Option 2
               </button>
-              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
+              <button class="btn btn-simple-primary nao-btn-transition">
                 Option 3
               </button>
             </div>
@@ -843,7 +843,7 @@ export const TableCodeBlocks = [
               </div>
             </div>
             <div class="">
-              <button class="btn btn-sm btn-simple-primary nao-btn-transition">
+              <button class="btn btn-simple-primary nao-btn-transition">
                 Delete multiple
               </button>
             </div>
