@@ -39,8 +39,8 @@ export class LoaderBarSmallComponent implements OnInit, OnChanges {
 
       // -->Check: type
       switch (changes.state.currentValue) {
+        // case NaoCrud.State.processing:
         case NaoCrud.State.loading:
-        case NaoCrud.State.processing:
           // -->Start: a new progress
           this.startProgress();
           break;

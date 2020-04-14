@@ -3,6 +3,16 @@
 This is the design library of Naologic
 
 
+### Installation prerequisites
+
+```
+npm install @ng-bootstrap/ng-bootstrap
+npm install @ng-select/ng-select
+npm install ngx-bootstrap
+npm install bootstrap
+npm install ladda
+```
+
 ### Installation 
 
 ```npm install --save @naologic/design```
@@ -12,18 +22,22 @@ This is the design library of Naologic
 
 ### Add to your angular app
 
-Modify the `angular.json` file and add `nao-system-icon font` to the SCSS 
+Modify the `angular.json` file and add `nao-system-icon` font to `styles` 
 
 ```json
 "styles": [
-  "node_modules/@naologic/design/src/assets/fonts/nao-system-icon/nao-system-icon.css",
+  "node_modules/@naologic/design/assets/fonts/nao-system-icon/nao-system-icon.css",
   "src/styles.scss"
 ],
 ```
 
 Import the `@naologic/design` to your main styles.scss file
 ```css
-@import "node_modules/@naologic/design/src/styles.scss";
+@import "node_modules/@naologic/design/styles/naologic-crm-theme";
+@import "~@ng-select/ng-select/scss/default.theme.scss";
+@import "node_modules/@naologic/design/styles.scss";
+@import "node_modules/ladda/css/ladda";
+
 ```
 
 ### Use our loaders

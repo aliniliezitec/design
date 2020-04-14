@@ -86,7 +86,7 @@
     .card-header-title {
       font-size: pixelToRem(20px);
       font-weight: $font-weight-regular;
-      color: var(--text-secondary);
+      color: var(--text-primary);
       line-height: 1;
     }
 
@@ -371,18 +371,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--text-secondary);
 
   .title {
     font-size: pixelToRem(16px);
     font-weight: $font-weight-semibold;
+    color: var(--text-primary);
   }
 
   .subtitle {
-    font-size: pixelToRem(12px)
+    font-size: pixelToRem(13px);
+    color: var(--text-primary-lightest);
   }
 }
-
 
 // *************************************************
 // Nao condensed table

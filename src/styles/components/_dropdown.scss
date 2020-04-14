@@ -260,6 +260,54 @@
   }
 }
 
+// TODO: test and check this:
+// TODO: test and check this:
+// TODO: test and check this:
+// TODO: test and check this:
+.ng-select.ng-select-opened > .ng-select-container .ng-arrow {
+  border-color: transparent transparent var(--text-primary) !important;
+}
+
+.ng-select {
+  .ng-select-container {
+    .ng-placeholder {
+      color: var(--shadow) !important;
+    }
+  }
+
+  .ng-select-opened > .ng-select-container {
+    color: var(--text-primary);
+
+    .ng-value-container .ng-input>input {
+      color: var(--text-primary);
+    }
+  }
+
+
+  .ng-clear-wrapper {
+    color: var(--text-primary-lightest);
+
+    &:hover .ng-clear {
+      color: var(--text-primary);
+    }
+  }
+  .ng-arrow-wrapper {
+    padding-top: 3px;
+
+    .ng-arrow {
+      border-color: var(--text-primary-lightest) transparent transparent;
+    }
+    &:hover {
+      .ng-arrow {
+        border-top-color: var(--text-primary);
+      }
+    }
+  }
+}
+
+
+
+
 // *************************************************
 // nao dropdown for navigation bar
 .nao-dropdown-navbar {

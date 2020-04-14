@@ -37,6 +37,12 @@ label {
 
 // *************************************************
 // form controls
+
+// TODO: Add this to variables
+.form-control {
+  color: var(--text-primary) !important;
+}
+
 .form-control:focus {
   border-color: var(--text-primary-lightest) !important;
 }
