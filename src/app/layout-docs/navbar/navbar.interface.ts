@@ -42,148 +42,190 @@ export interface SideMenuV2Interface {
 export const NavbarCodeBlocks = [
   {
     html: `
-      <header>
-          <div class="top-header d-none d-md-flex">
-            <a [routerLink]="['/']" class="mr-auto" href="javascript:void(0)">
-              <img alt="Naologic logo" src="assets-local/images/crm-assets/logo-crm.svg" width="35"/>
-            </a>
-            <div class="d-flex align-items-center ml-auto">
-              <!-- Show help -->
-              <div class="top-header-help mr-2">
-                <a class="d-flex align-items-center" href="javascript:void(0)">
-                  <span class="font-weight-bold mr-1 ml-4">HELP</span>
-                  <i class="nao-icon-help ml-1"></i>
-                </a>
-              </div>
+    <header>
+      <div class="nao-navbar-container d-flex align-items-center mx-auto">
+        <!--LOGO-->
+        <a [routerLink]="['/']" class="navbar-logo d-none d-lg-block" href="javascript:void(0)">
+          <div class="mr-auto">
+            <img alt="Naologic" src="assets/images/nav/logo.svg" width="125">
+          </div>
+        </a>
 
-              <div class="btn-group dropdown-remove-arrow" display="dynamic" ngbDropdown>
-                <a href="javascript:void(0)" ngbDropdownToggle>
-                  <span class="d-inline-flex align-items-center nao-dropdown-avatar-container">
-                    <img class="d-block nao-dropdown-avatar rounded-circle"
-                         src="assets-local/images/placeholder/default-avatar.png"/>
-                    <span [ngClass]="{ 'dot_disconnected': false, 'dot_connected': true }" class="dot"></span>
-                  </span>
-                </a>
-                <div class="nao-dropdown-1" ngbDropdownMenu>
-                  <div class="nao-dropdown-profile">
-                    <div class="d-flex">
-                      <img class="d-block nao-dropdown-avatar rounded-circle mr-2"
-                           src="assets-local/images/placeholder/default-avatar.png"/>
-                      <div class="d-flex flex-column">
-                        <span class="font-weight-bold">Jon Doe</span>
-                        <span class="nao-dropdown-small-text">jon@naologic.com</span>
-                      </div>
-                    </div>
-                  </div>
-                  <a class="dropdown-item" href="javascript:void(0)">
-                    Your account
-                  </a>
-                  <a class="dropdown-item" href="javascript:void(0)">
-                    Invite People
-                  </a>
-                  <a class="dropdown-item" href="javascript:void(0)">
-                    Log Out
-                  </a>
-                </div>
-              </div>
-            </div>
+        <!--Menu items-->
+        <div class="content-wrapper d-flex align-items-center flex-row-reverse-rtl-only px-lg-4 overflow-auto w-100">
+
+          <!--Left arrow for horizontal scroll inside the navigation-->
+          <div [ngClass]="{'hide-navbar-scroll-buttons': !showPrevBtn}" class="d-none d-lg-block">
+            <a (click)="scrollPrev()" class="navbar-horizontal-prev">
+              <i class="nao-icon-arrow-back-1"></i>
+            </a>
           </div>
 
-          <div class="navbar-container-nao bg-white">
-            <div
-              class="content-wrapper d-flex align-items-end flex-row-reverse-rtl-only px-md-4">
-              <div [ngClass]="{'hide-navbar-scroll-buttons': !showPrevBtn}" class="d-none d-md-block align-self-end">
-                <a (click)="scrollPrev()" class="navbar-horizontal-prev">
-                </a>
+          <div #navbarContent class="navbar-content w-100 nao-navbar-content">
+            <nav class="navbar navbar-expand-lg px-3 px-lg-0 position-unset">
+
+              <!--Cart mobile button-->
+              <div class="d-lg-none pt-1">
+                <button class="btn btn-primary d-flex align-items-center btn-cart">
+                  <img class="mr-3" height="12" src="assets/images/nav/cart.svg">
+                  <span>8</span>
+                </button>
               </div>
 
-              <!--remove buttons for website-->
-              <div #navbarContent class="navbar-content w-100 nao-navbar-content">
+              <!--Collapsed view-->
+              <a (click)="isCollapsed = true" [routerLink]="'/'" class="navbar-brand mx-auto d-lg-none"
+                 href="javascript:void(0)">
+                <img alt="Naologic" src="assets/images/nav/logo.svg" width="125">
+              </a>
 
-                <nav [ngClass]="{'b-0' : !isCollapsed}" class="navbar navbar-expand-md navbar-sm-fixed-top px-3 px-md-0">
-                  <!--Collapsed view-->
-                  <a (click)="isCollapsed = true" [routerLink]="'/'" class="navbar-brand d-md-none" href="javascript:void(0)">
-                    <img alt="Naologic" src="assets-local/images/crm-assets/logo-crm.svg" width="35">
-                  </a>
+              <!--Burger menu-->
+              <div class="align-items-center d-lg-none pt-1">
+                <button (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="naoNavbar"
+                        aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler custom-toggler border-0"
+                        data-target="#naoNavbar" data-toggle="collapse" type="button">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
 
-                  <div class="d-md-none mx-auto">
-                    <a class="btn btn-sm btn-primary" href="https://crm.naologic.com/subscription/crm-free-trial">Try NAO CRM
-                      for
-                      free</a>
-                  </div>
+              <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse" id="navbarNaoContent">
+                <ul #navbarItems class="navbar-nav mr-auto position-unset">
+                  <!--Iterate over the links-->
+                  <li *ngFor="let elem of menuItems; let i = index" class="nav-item">
 
-                  <div class="align-items-center d-md-none">
+                    <!--Single item link-->
+                    <a (click)="isCollapsed=true" *ngIf="elem.type === 'item'"
+                       [ngClass]="{'active': isActive(elem.isActiveUrl)}"
+                       [routerLink]="elem.route" [title]="elem.text" class="nav-link"
+                       href="javascript:void(0)">{{ elem.text }}</a>
 
-                    <button (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="naoNavbar"
-                            aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler custom-toggler border-0"
-                            data-target="#naoNavbar" data-toggle="collapse" type="button">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                  </div>
+                    <!--href link blank-->
+                    <a (click)="isCollapsed=true" *ngIf="elem.type === 'blank'" [href]="elem.href" [title]="elem.text"
+                       class="nav-link"
+                       rel="noopener" target="_blank">{{ elem.text }}</a>
 
-                  <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse" id="navbarNaoContent">
-                    <ul class="navbar-nav mr-auto">
-                      <!--Iterate over the links-->
-                      <li *ngFor="let elem of menuItems; let i = index" class="nav-item">
-                        <!--single item-->
-                        <a (click)="isCollapsed=true" *ngIf="elem.type === 'item'" [ngClass]="{'active': elem.active}"
-                           [routerLink]="elem.route" [title]="elem.text" class="nav-link"
-                           href="javascript:void(0)">{{ elem.text }}</a>
-                        <!--href link blank-->
-                        <a (click)="isCollapsed=true" *ngIf="elem.type === 'blank'" [href]="elem.href" class="nav-link" rel="noopener"
-                           target="_blank">{{ elem.text }}</a>
-
-                        <!--Dropdown-->
-                        <ng-container *ngIf="elem.type ==='items'">
-
-                          <div class="d-block d-md-none">
-                            <a (click)="toggleMenu(i)" class="nav-link d-flex align-items-center justify-content-between flex-row-reverse-rtl-only"
-                               href="javascript:void(0)">
-                              {{ elem.text }}
-                              <i [ngClass]="{'nao-icon-arrow-active': elem.isOpen}" class="nao-icon-arrow"></i>
-                            </a>
-
-                            <ul *ngIf="elem.isOpen" [@expandCollapse]='elem.isOpen' class="m-0">
-                              <li *ngFor="let subitem of elem.items" class="nav-item">
-                                <a (click)="isCollapsed=true; elem.isOpen=false" [ngClass]="{'active': subitem.active}" [routerLink]="subitem.route"
-                                   class="nav-link" href="javascript:void(0)">
-                                  {{ subitem.text }}
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                          <div class="d-none d-md-block">
-                            <div class="dropdown" container="body" display="dynamic" ngbDropdown>
-                              <a [ngClass]="{'active': elem.active}" class="nav-link dropdown-toggle" href="javascript:void(0)"
-                                 ngbDropdownToggle>
-                                {{ elem.text }}
+                    <!--Dropdown-->
+                    <div (mouseenter)="$event.stopPropagation(); myDrop.open();"
+                         (mouseleave)="$event.stopPropagation(); myDrop.close();"
+                         *ngIf="elem.type ==='items'">
+                      <!--Desktop-->
+                      <div class="d-none d-lg-block">
+                        <div #myDrop="ngbDropdown" (openChange)="onDropdownOpen($event, i)"
+                             class="dropdown dropdown-remove-arrow position-unset"
+                             ngbDropdown>
+                          <a [ngClass]="{'active': isActive(elem.isActiveUrl)}" class="nav-link dropdown-toggle"
+                             href="javascript:void(0)"
+                             ngbDropdownToggle>
+                            {{ elem.text }}
+                          </a>
+                          <div [style.left]="leftPositionForDropdown + 'px'" class="nao-dropdown-navigation-container"
+                               ngbDropdownMenu>
+                            <div class="nao-dropdown-navigation">
+                              <a *ngFor="let subitem of elem.items"
+                                 [ngClass]="{'active-dropdown-item': isActive(subitem.route)}" [routerLink]="subitem.route"
+                                 class="dropdown-item d-flex align-items-center" href="javascript:void(0)">
+                                <img [src]="subitem.icon"> <span>{{ subitem.text }}</span>
                               </a>
-                              <div class="nao-dropdown-navbar" ngbDropdownMenu>
-                                <a *ngFor="let subitem of elem.items" [ngClass]="{'active': subitem.active}" [routerLink]="subitem.route"
-                                   class="dropdown-item" href="javascript:void(0)">
-                                  {{ subitem.text }}
-                                </a>
-                              </div>
                             </div>
                           </div>
-                        </ng-container>
+                        </div>
+                      </div>
+                      <!--MOBILE-->
+                      <div class="d-block d-lg-none">
+                        <a (click)="toggleMenu(i)"
+                           class="nav-link d-flex align-items-center justify-content-between flex-row-reverse-rtl-only"
+                           href="javascript:void(0)">
+                          {{ elem.text  }}
+                          <i [ngClass]="{'nao-icon-arrow-active': elem.isOpen}" class="nao-icon-arrow"></i>
+                        </a>
 
-                      </li>
-                    </ul>
-                  </div>
-                </nav>
+                        <ul *ngIf="elem.isOpen" [@expandCollapse]='elem.isOpen' class="m-0">
+                          <li *ngFor="let subitem of elem.items" class="nav-item">
+                            <a (click)="isCollapsed=true; elem.isOpen=false" [ngClass]="{'active': isActive(subitem.route)}"
+                               [routerLink]="subitem.route"
+                               class="nav-link" href="javascript:void(0)">
+                              {{ subitem.text  }}
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
 
+                    <!--Mega menu-->
+                    <div (mouseenter)="$event.stopPropagation(); myMegaMenu.open();"
+                         (mouseleave)="$event.stopPropagation(); myMegaMenu.close();"
+                         *ngIf="elem.type === 'mega-menu'">
+                      <!--On large devices-->
+                      <div #myMegaMenu="ngbDropdown"
+                           class="position-static nao-no-user-select mega-menu-btn d-none d-lg-block dropdown-remove-arrow"
+                           ngbDropdown>
+                        <a (click)="isCollapsed=true;" [ngClass]="{'active': isActive(elem.isActiveUrl)}" class="nav-link"
+                           ngbDropdownToggle>
+                          {{ elem.text }}
+                        </a>
+
+                        <div class="mega-menu" ngbDropdownMenu>
+                          <ul class="d-flex flex-wrap">
+                            <li *ngFor="let app of elem.items">
+                              <a [routerLink]="app.route" [title]="app.title" class="mega-menu-item d-flex flex-row"
+                                 href="javascript:void(0)">
+                                <i [ngClass]="app.iconClass" class="menu-item-icon"></i>
+                                <div class="d-flex flex-column">
+                                  <div class="menu-item-title pb-2">{{ app.title }}</div>
+                                  <div class="menu-item-description">{{ app.description }}</div>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <!--On small/medium devices-->
+                      <div class="d-block d-lg-none">
+                        <a (click)="toggleMenu(i)"
+                           class="nav-link d-flex align-items-center justify-content-between flex-row-reverse-rtl-only"
+                           href="javascript:void(0)">
+                          {{ elem.text }}
+                          <i [ngClass]="{'nao-icon-arrow-active': elem.isOpen}" class="nao-icon-arrow"></i>
+                        </a>
+
+                        <ul *ngIf="elem.isOpen" [@expandCollapse]='elem.isOpen' class="m-0">
+                          <li *ngFor="let subitem of elem.items" class="nav-item">
+                            <a (click)="isCollapsed=true; elem.isOpen=false" [ngClass]="{'active': subitem.active}"
+                               [routerLink]="subitem.route"
+                               class="nav-link" href="javascript:void(0)">
+                              {{ subitem.title }}
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+
+                    </div>
+                  </li>
+                </ul>
               </div>
+            </nav>
 
-              <div [ngClass]="{'hide-navbar-scroll-buttons': !showNextBtn}" class="d-none d-md-block align-self-end">
-                <a (click)="scrollNext()" class="navbar-horizontal-next">
-                </a>
-              </div>
-
-            </div>
           </div>
-        </header>
-        `,
+
+          <!--Right arrow for horizontal scroll inside the navigation-->
+          <div [ngClass]="{'hide-navbar-scroll-buttons': !showNextBtn}" class="d-none d-lg-block">
+            <a (click)="scrollNext()" class="navbar-horizontal-next">
+              <i class="nao-icon-arrow-next-1"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!--Secondary links-->
+        <a class="secondary-link align-self-center d-none d-lg-block ml-auto mr-4" href="javascript:void(0)">Support</a>
+        <!--Cart button-->
+        <button class="btn btn-primary d-none d-lg-flex align-items-center btn-cart">
+          <img class="mr-3" height="16" src="assets/images/nav/cart.svg">
+          <span>8</span>
+        </button>
+
+      </div>
+    </header>`,
     ts1: `
             @Component({
                 ...
@@ -202,65 +244,111 @@ export const NavbarCodeBlocks = [
                 ]
             })
 
-            ...
-            public menuItems: MenuInterface[] = [
-                {
-                  type: 'item', text: 'CRM', route: '/', active: false,
-                },
-                {
-                  type: 'item', text: 'Business Apps', route: '/', active: false,
-                },
-                {
-                  type: 'item', text: 'Enterprise', route: '/', active: true,
-                },
-                {
-                  type: 'item', text: 'Pricing', route: '/', active: false,
-                },
-                {
-                  type: 'items', text: 'Dropdown', route: '/', isOpen: false, active: false,
-                  items: [
-                    { type: 'item', route: '/', text: 'Sub item 1', active: false },
-                    { type: 'item', route: '/', text: 'Sub item 2', active: true },
-                    { type: 'item', route: '/', text: 'Sub item 3', active: false },
-                  ]
-                },
-                {
-                  type: 'item', text: 'Blog', route: '/', active: false,
-                },
-                {
-                  type: 'item', text: 'Dashboard', route: '/', active: false,
-                },
-                {
-                  type: 'items', text: 'Another Dropdown', route: '/', isOpen: false, active: false,
-                  items: [
-                    { type: 'item', route: '/', text: 'Sub item 1', active: false },
-                    { type: 'item', route: '/', text: 'Sub item 2', active: true },
-                    { type: 'item', route: '/', text: 'Sub item 3', active: false },
-                  ]
-                },
-                {
-                  type: 'item', text: 'Sales', route: '/', active: false,
-                },
-                {
-                  type: 'item', text: 'Leads', route: '/', active: false,
-                },
-                {
-                  type: 'item', text: 'Contact', route: '/', active: false,
-                },
-              ];
-            public isCollapsed = true;
-            public sizeChanged$ = new BehaviorSubject<boolean>(null);
-            public showPrevBtn = false;
-            public showNextBtn = false;
-            public scrollValue = 150; // How much do you want to scroll
+            public appList = [
+                    {
+                      iconClass: 'nao-icon-surveys',
+                      title: 'Vendor management',
+                      description: 'Improve your supply chain and inventory performance with automated workflows',
+                      route: '/business-app/apps'
+                    },
+                    {
+                      iconClass: 'nao-icon-surveys',
+                      title: 'Vendor management',
+                      description: 'Improve your supply chain and inventory performance with automated workflows',
+                      route: '/business-app/apps'
+                    },
+                    {
+                      iconClass: 'nao-icon-surveys',
+                      title: 'Vendor management very long title  very long title',
+                      description: 'Improve your supply chain and inventory performance with automated workflows very long descriptionvery long descriptionvery long descriptionvery long descriptionvery long descriptionvery long descriptionvery long descriptionvery long description',
+                      route: '/business-app/apps'
+                    },
+                    {
+                      iconClass: 'nao-icon-surveys',
+                      title: 'Vendor management',
+                      description: 'Improve your supply chain and inventory performance with automated workflows',
+                      route: '/business-app/apps'
+                    },
+                    {
+                      iconClass: 'nao-icon-surveys',
+                      title: 'Vendor management',
+                      description: 'Improve your supply chain and inventory performance with automated workflows',
+                      route: '/business-app/apps'
+                    },
+                    {
+                      iconClass: 'nao-icon-surveys',
+                      title: 'Vendor management',
+                      description: 'Improve your supply chain and inventory performance with automated workflows',
+                      route: '/business-app/apps'
+                    },
+                    {
+                      iconClass: 'nao-icon-surveys',
+                      title: 'Vendor management',
+                      description: 'Improve your supply chain and inventory performance with automated workflows',
+                      route: '/business-app/apps'
+                    },
+                    {
+                      iconClass: 'nao-icon-surveys',
+                      title: 'Vendor management',
+                      description: 'Improve your supply chain and inventory performance with automated workflows',
+                      route: '/business-app/apps'
+                    },
+                  ];
 
-            @ViewChild('navbarContent', { static: false }) public navbarContent: ElementRef<any>;
-            @HostListener('window:resize')
-            onResize() {
-                // -->Refresh: scroll buttons on size change
-                this.sizeChanged$.next(true);
-            }
+                  public menuItems = [
+                    {
+                      type: 'item', text: 'Business App Store', route: '/business-app/apps', isActiveUrl: 'business-app',
+                    },
+                    {
+                      type: 'item', text: 'Industries', route: '/industries-landing', isActiveUrl: 'industries-landing',
+                    },
+                    {
+                      type: 'item', text: 'Enterprise', route: '/enterprise', isActiveUrl: 'enterprise',
+                    },
+                    {
+                      type: 'item', text: 'Pricing', route: '/pricing', isActiveUrl: 'pricing',
+                    },
+                    {
+                      type: 'items', text: 'Dropdown', isActiveUrl: 'sales-order',
+                      items: [
+                        {type: 'item', route: '/enterprise', text: 'Enterprise', isActiveUrl: 'enterprise', icon: 'assets/images/nav/card.svg'},
+                        {type: 'item', route: '/pricing', text: 'Sales order', icon: 'assets/images/nav/card.svg'},
+                        {type: 'item', route: '/industries-landing', text: 'Invoices', icon: 'assets/images/nav/card.svg'},
+                      ]
+                    },
+                    {
+                      type: 'items', text: 'Dropdown 2', isActiveUrl: 'sales-order',
+                      items: [
+                        {type: 'item', route: '/enterprise', text: 'Enterprise', isActiveUrl: 'enterprise', icon: 'assets/images/nav/card.svg'},
+                        {type: 'item', route: '/pricing', text: 'Sales order', icon: 'assets/images/nav/card.svg'},
+                        {type: 'item', route: '/enterprise', text: 'Enterprise', icon: 'assets/images/nav/card.svg'},
+                      ]
+                    },
+                    {
+                      type: 'item', text: 'Contact', route: '/company/contact', isActiveUrl: 'company/contact',
+                    },
+                    {
+                      type: 'mega-menu', text: 'Mega menu', isActiveUrl: 'pricing', isOpen: false, items: this.appList,
+                    },
+                  ];
 
+                  public isCollapsed = true;
+                  public sizeChanged$ = new BehaviorSubject<boolean>(null);
+                  public showPrevBtn = false;
+                  public showNextBtn = false;
+                  public scrollValue = 150; // How much do you want to scroll
+                  public subs = new Subscription();
+                  public leftPositionForDropdown = 0; // Position fix for the dropdowns inside navigation bar
+
+
+                  @ViewChild('navbarItems', {static: false}) public navbarItems: ElementRef<any>;
+                  @ViewChild('navbarContent', {static: false}) public navbarContent: ElementRef<any>;
+
+                  @HostListener('window:resize')
+                  onResize() {
+                    // -->Refresh: scroll buttons on size change
+                    this.sizeChanged$.next(true);
+                  }
             ...
 
             ngAfterViewInit() {
@@ -278,73 +366,108 @@ export const NavbarCodeBlocks = [
             }
         `,
     ts2: `
+       /**
+         * Set the left position for the dropdown menu
+         */
+        public onDropdownOpen(isOpen: boolean, indexMenuItem: number): void {
+          if (indexMenuItem > -1 && this.navbarItems.nativeElement && this.navbarItems.nativeElement.children[indexMenuItem]) {
+            // -->Get: offSet left for the dropdown
+            let offSetLeft;
+            if (this.navbarContent.nativeElement.scrollLeft && this.navbarContent.nativeElement.scrollLeft > 0) {
+              offSetLeft = this.navbarItems.nativeElement.children[indexMenuItem].offsetLeft - this.navbarContent.nativeElement.scrollLeft;
+            } else {
+              offSetLeft = this.navbarItems.nativeElement.children[indexMenuItem].offsetLeft;
+            }
+            this.leftPositionForDropdown = offSetLeft;
+          }
+        }
+
         /**
          * Toggle a menu item
          */
         public toggleMenu(index): void {
-            if (index >= 0) {
+          if (index >= 0) {
             // If the current menu item is closed, close other items
             if (!this.menuItems[index].isOpen) {
-                this.menuItems.map((el, i) => {
+              this.menuItems.map((el, i) => {
                 if (i !== index) {
-                    el.isOpen = false;
+                  el.isOpen = false;
                 }
-                });
+              });
             }
             this.menuItems[index].isOpen = !this.menuItems[index].isOpen;
-            }
+          }
         }
 
-        public refreshScrollPrevBtn(isResized: boolean = false): void {
-            const scrollLeft = this.navbarContent.nativeElement.scrollLeft;
-            // -->Set: the scroll value
-            const scrollingValue = isResized ? 0 : this.scrollValue;
+        /**
+         * Check if an url is active
+         */
+        public isActive(url) {
+          return this.router.isActive(url, false);
+        }
 
-            if (scrollLeft > scrollingValue) {
+
+        /**
+         * Refresh scroll for the previous button
+         */
+        public refreshScrollPrevBtn(isResized: boolean = false): void {
+          const scrollLeft = this.navbarContent.nativeElement.scrollLeft;
+          // -->Set: the scroll value
+          const scrollingValue = isResized ? 0 : this.scrollValue;
+
+          if (scrollLeft > scrollingValue) {
             // -->Show: Prev button
             this.showPrevBtn = true;
-            } else {
+          } else {
             // -->Hide: Prev button
             this.showPrevBtn = false;
-            }
+          }
         }
-        public refreshScrollNextBtn(isResized: boolean = false): void {
-            const scrollLeft = this.navbarContent.nativeElement.scrollLeft;
-            const offsetWidth = this.navbarContent.nativeElement.offsetWidth;
-            const scrollWidth = this.navbarContent.nativeElement.scrollWidth;
-            // -->Set: the scroll value
-            const scrollingValue = isResized ? 0 : this.scrollValue;
 
-            if (scrollLeft + offsetWidth < scrollWidth - scrollingValue) {
+        /**
+         * Refresh scroll for the next button
+         */
+        public refreshScrollNextBtn(isResized: boolean = false): void {
+          const scrollLeft = this.navbarContent.nativeElement.scrollLeft;
+          const offsetWidth = this.navbarContent.nativeElement.offsetWidth;
+          const scrollWidth = this.navbarContent.nativeElement.scrollWidth;
+          // -->Set: the scroll value
+          const scrollingValue = isResized ? 0 : this.scrollValue;
+
+          if (scrollLeft + offsetWidth < scrollWidth - scrollingValue) {
             // -->Show: next button
             this.showNextBtn = true;
-            } else {
+          } else {
             // -->Hide: next button
             this.showNextBtn = false;
-            }
+          }
         }
 
 
+        /**
+         * Scroll next inside the navigation container
+         */
         public scrollNext(): void {
-            this.navbarContent.nativeElement
-            .scrollTo({ left: (this.navbarContent.nativeElement.scrollLeft + this.scrollValue), behavior: 'smooth' });
-            // -->Show: Prev button
-            this.showPrevBtn = true;
-            // -->Refresh: next button
-            this.refreshScrollNextBtn();
+          this.navbarContent.nativeElement
+            .scrollTo({left: (this.navbarContent.nativeElement.scrollLeft + this.scrollValue), behavior: 'smooth'});
+          // -->Show: Prev button
+          this.showPrevBtn = true;
+          // -->Refresh: next button
+          this.refreshScrollNextBtn();
 
         }
 
+        /**
+         * Scroll previous inside the navigation container
+         */
         public scrollPrev(): void {
-            this.navbarContent.nativeElement
-            .scrollTo({ left: (this.navbarContent.nativeElement.scrollLeft - this.scrollValue), behavior: 'smooth' });
-            // -->Show: Next button
-            this.showNextBtn = true;
-            // -->Refresh: prev button
-            this.refreshScrollPrevBtn();
+          this.navbarContent.nativeElement
+            .scrollTo({left: (this.navbarContent.nativeElement.scrollLeft - this.scrollValue), behavior: 'smooth'});
+          // -->Show: Next button
+          this.showNextBtn = true;
+          // -->Refresh: prev button
+          this.refreshScrollPrevBtn();
         }
-
-        ...
 
         ngOnDestroy(): void {
             this.subs.unsubscribe();
@@ -542,7 +665,7 @@ export const NavbarCodeBlocks = [
 
         </div>
       </div>`,
-      ts1: `
+    ts1: `
       public sideMenuV2Items: SideMenuV2Interface[] = [
         { type: 'divider' },
         { type: 'group-name', textTranslate: 'ACCOUNT ADMINISTRATION' },
@@ -563,7 +686,7 @@ export const NavbarCodeBlocks = [
         { type: 'item', textTranslate: 'Advanced Settings', route: '', icon: 'nao-icon-help', active: false },
         { type: 'item', textTranslate: 'Payment Methods', route: '', icon: 'nao-icon-help', active: false },
       ];`,
-      ts2: `
+    ts2: `
       export interface SideMenuV2Interface {
         type: string;
         textTranslate?: string;

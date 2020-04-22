@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="13px" viewBox="0 0 17 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>icon/card</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="37.3577849%" y1="76.3883316%" x2="62.6426125%" y2="23.6116211%" id="linearGradient-1">
+            <stop stop-color="#808080" stop-opacity="0.25" offset="0%"></stop>
+            <stop stop-color="#808080" stop-opacity="0.12" offset="53.514%"></stop>
+            <stop stop-color="#808080" stop-opacity="0.1" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="49.9999993%" y1="100%" x2="49.9999993%" y2="0%" id="linearGradient-2">
+            <stop stop-color="#808080" stop-opacity="0.25" offset="0%"></stop>
+            <stop stop-color="#808080" stop-opacity="0.12" offset="53.514%"></stop>
+            <stop stop-color="#808080" stop-opacity="0.1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Navigation" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-468.000000, -500.000000)" fill-rule="nonzero" id="icon/card">
+            <g transform="translate(467.000000, 500.000000)">
+                <g id="Rectangle">
+                    <path d="M6.13599901,1.86147233 L11.2166971,1.83219866 C13.489177,1.81910522 15.3420003,3.65069984 15.3550938,5.92317974 C15.3551841,5.93885459 15.3551848,5.95452982 15.355096,5.97020468 C15.3420269,8.27646028 13.4757811,10.1428832 11.1695268,10.1561712 L6.08882865,10.1854449 C3.81634875,10.1985384 1.96352547,8.36694374 1.95043203,6.09446384 C1.95034171,6.07878899 1.95034097,6.06311376 1.9504298,6.0474389 C1.96349891,3.7411833 3.82974467,1.87476037 6.13599901,1.86147233 Z" fill="url(#linearGradient-1)" transform="translate(8.652763, 6.008822) rotate(-17.261500) translate(-8.652763, -6.008822) "></path>
+                    <path d="M3.1248097,1.95423691 L14.255883,1.89010255 C14.8081586,1.88692048 15.2584459,2.33204872 15.261628,2.8843243 C15.26165,2.88813373 15.2616501,2.89194324 15.2616286,2.89575267 L15.2274619,8.92501634 C15.2243575,9.47283448 14.7810574,9.91617664 14.2332396,9.91933302 L3.1021663,9.98346739 C2.54989072,9.98664946 2.09960332,9.54152121 2.09642125,8.98924563 C2.09639931,8.98543621 2.09639913,8.98162669 2.09642071,8.97781727 L2.1305874,2.9485536 C2.13369178,2.40073546 2.57699185,1.9573933 3.1248097,1.95423691 Z" fill="#C8CFE9" transform="translate(8.679025, 5.936785) rotate(-17.261500) translate(-8.679025, -5.936785) "></path>
+                    <polygon fill="#6C63FF" transform="translate(7.985446, 3.659213) rotate(-17.261500) translate(-7.985446, -3.659213) " points="1.42312339 3.12129299 14.5542941 3.04563458 14.5477688 4.1971323 1.41659807 4.2727907"></polygon>
+                    <polygon fill="#BDBDBD" transform="translate(5.809524, 9.752144) rotate(-17.261500) translate(-5.809524, -9.752144) " points="4.14275541 9.51278299 7.47911343 9.49355976 7.47629167 9.99150475 4.13993365 10.010728"></polygon>
+                    <polygon fill="#E0E0E0" transform="translate(6.731845, 8.578252) rotate(-17.261500) translate(-6.731845, -8.578252) " points="3.84072545 8.34594575 9.62578668 8.31261372 9.62296493 8.81055871 3.83790369 8.84389074"></polygon>
+                    <rect fill="url(#linearGradient-2)" x="4.52923977" y="4.51072125" width="13.4707602" height="8.3625731" rx="4.18128655"></rect>
+                    <rect fill="#C8CFE9" x="4.67836257" y="4.61208577" width="13.122807" height="8.05847953" rx="1"></rect>
+                    <rect fill="#E0E0E0" x="7.80994152" y="8.51461988" width="1" height="1.11500975"></rect>
+                    <rect fill="#E0E0E0" x="8.30701754" y="8.51461988" width="1" height="1.11500975"></rect>
+                    <rect fill="#E0E0E0" x="8.75438596" y="8.51461988" width="1" height="1.11500975"></rect>
+                    <rect fill="#E0E0E0" x="9.64912281" y="8.51461988" width="1" height="1.11500975"></rect>
+                    <rect fill="#E0E0E0" x="10.1461988" y="8.51461988" width="1" height="1.11500975"></rect>
+                    <rect fill="#E0E0E0" x="10.5935673" y="8.51461988" width="1" height="1.11500975"></rect>
+                    <rect fill="#E0E0E0" x="11.4883041" y="8.51461988" width="1" height="1.11500975"></rect>
+                    <rect fill="#E0E0E0" x="11.9356725" y="8.51461988" width="1" height="1.11500975"></rect>
+                    <rect fill="#E0E0E0" x="12.4327485" y="8.51461988" width="1" height="1.11500975"></rect>
+                    <rect fill="#E0E0E0" x="13.2777778" y="8.51461988" width="1" height="1.11500975"></rect>
+                    <rect fill="#E0E0E0" x="13.7748538" y="8.51461988" width="1" height="1.11500975"></rect>
+                    <rect fill="#E0E0E0" x="14.2719298" y="8.51461988" width="1" height="1.11500975"></rect>
+                    <rect fill="#6C63FF" x="5.52339181" y="6.69005848" width="2.28654971" height="1.26705653"></rect>
+                    <rect fill="#6C63FF" opacity="0.1" x="14.371345" y="10.8966862" width="1.39181287" height="1.41910331"></rect>
+                    <rect fill="#6C63FF" opacity="0.1" x="15.0672515" y="10.8966862" width="1.39181287" height="1.41910331"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

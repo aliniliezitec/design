@@ -11,152 +11,10 @@
 }
 
 // *************************************************
-// nao main top navbar
+// Nao navbar content
 .nao-navbar-content {
   overflow: hidden;
   white-space: nowrap;
-}
-
-.top-header {
-  background-color: var(--white);
-  padding: 5px 15px 2px 15px;
-
-  .top-header-help {
-    margin-bottom: 3px;
-
-    a {
-      color: var(--text-primary);
-
-      &:hover, &:focus {
-        text-decoration: none;
-        color: var(--text-primary);
-      }
-    }
-    .nao-icon-help {
-      font-size: 20px;
-      line-height: 0;
-    }
-  }
-}
-
-.navbar-container-nao {
-  border-bottom: solid 2px var(--primary);
-  z-index: 1030;
-
-  .navbar {
-    padding-bottom: 0;
-    padding-top: 0;
-
-    @include media-breakpoint-down(sm) {
-      padding-bottom: 8px;
-    }
-  }
-
-  .nav-item {
-    @include media-breakpoint-up(md) {
-      align-self: flex-end;
-    }
-
-    .nav-link {
-      padding: pixelToRem(6px) pixelToRem(8px);
-    }
-
-    ul {
-      padding-left: 0;
-      overflow: hidden;
-      list-style-type: none;
-
-      .nav-link {
-        padding-left: 45px !important;
-      }
-    }
-
-    a {
-      color: var(--text-primary);
-      font-size: pixelToRem(16px);
-
-      &:hover {
-        background-color: rgba(62, 64, 219, 0.1);
-      }
-    }
-  }
-
-  @include rtl {
-    .navbar-nav {
-      padding-right: 0 !important;
-    }
-  }
-
-  .navbar-collapse {
-    @include media-breakpoint-down(sm) {
-      background-color: var(--bg-3);
-
-      .nav-item a {
-        padding: 1rem 1.7rem 1rem 1.4rem;
-        text-align: left;
-        border-bottom: 1px solid var(--border-primary);
-        font-size: pixelToRem(16px);
-        font-weight: $font-weight-semibold;
-      }
-    }
-
-    a {
-      color: var(--text-primary);
-      font-size: pixelToRem(16px);
-
-      &:hover {
-        background-color: rgba(62, 64, 219, 0.1);
-      }
-    }
-  }
-
-  .custom-toggler {
-    &:focus {
-      outline: none;
-    }
-
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(62,64,219, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-    }
-  }
-
-  .active {
-    color: var(--primary) !important;
-    border-top: 2px var(--primary) solid !important;
-    background-color: rgba(62, 64, 219, 0.1) !important;
-  }
-
-}
-
-
-.navbar-horizontal-prev,
-.navbar-horizontal-next {
-  height: 36px;
-  position: relative;
-  display: block;
-  flex: 0 0 auto;
-  width: 36px;
-  cursor: pointer;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: block;
-    width: .5rem;
-    height: .5rem;
-    border: 1px solid;
-    border-top: 0;
-  }
-
-  &.disabled {
-    cursor: default !important;
-  }
-
-  &:hover {
-    border-color: var(--border-light);
-  }
 }
 
 // *************************************************
@@ -165,26 +23,6 @@
   @include rtl {
     flex-direction: row-reverse;
   }
-}
-
-.hide-navbar-scroll-buttons {
-  height: 36px;
-  min-width: 36px;
-
-  .navbar-horizontal-prev,
-  .navbar-horizontal-next {
-    display: none !important;
-  }
-}
-
-.navbar-horizontal-prev::after {
-  border-right: 0;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.navbar-horizontal-next::after {
-  border-left: 0;
-  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .nao-icon-arrow {
@@ -198,46 +36,310 @@
   transform: rotate(90deg);
 }
 
-.navbar-sm-fixed-top {
-  @include media-breakpoint-down(sm) {
-    background: var(--white);
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-    border-bottom: solid 2px var(--primary);
 
-    &.b-0 {
-      border: 0;
-    }
+// *************************************************
+// Naologic top navigation
 
-    .dropdown-toggle::after {
-      display: none;
+// Nao dropdown navigation container
+.nao-dropdown-navigation-container {
+  margin-top: -30px;
+  padding-top: 15px;
+  background-color: unset;
+  border-radius: unset;
+  border: unset;
+  box-shadow: unset;
+
+  .nao-dropdown-navigation {
+    border-radius: 4px;
+    box-shadow: 0 1px 3px -1px var(--bg-2), 0 2px 5px -1px var(--text-6);
+    background-color: var(--white);
+    min-width: 270px;
+    padding: 20px 0px;
+    border: none;
+
+    .dropdown-item {
+      font-size: pixelToRem(16px);
+      color: var(--text-primary);
+      padding: 5px 25px;
+      text-transform: capitalize;
+
+      img {
+        margin-right: 10px;
+        width: 17px;
+      }
+
+      &:hover {
+        background-color: unset;
+      }
+
+      &:not(.active-dropdown-item):hover {
+        span {
+          color: var(--text-primary-lightest);
+        }
+      }
+
+      &.active-dropdown-item span {
+        color: var(--primary);
+      }
     }
   }
 }
 
-.navbar-sm-absolute-container {
-  @include media-breakpoint-down(sm) {
-    background: var(--white);
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-    border-bottom: solid 2px var(--primary);
+// Navigation mega-menu
+.mega-menu {
+  width: 100%;
+  background-color: unset;
+  border-radius: unset;
+  border: unset;
+  box-shadow: unset;
+  margin: -30px 0 0 0;
+  padding: 15px 0 0 0;
+  white-space: normal;
 
-    &.b-0 {
-      border: 0;
+  ul {
+    padding: 23px 40px;
+    max-width: 1530px;
+    margin: 0 auto;
+    padding-left: 46px !important;
+    background-color: var(--white);
+    border-radius: unset;
+    border: unset;
+    box-shadow: 0 1px 3px -1px var(--bg-2), 0 2px 5px -1px var(--text-6);
+
+    @media screen and (max-width: 1560px) {
+      max-width: 1170px;
+      li {
+        width: 33%;
+
+        .mega-menu-item {
+          width: 100%;
+          max-width: 360px;
+        }
+      }
     }
 
-    .dropdown-toggle::after {
-      display: none;
+    @media screen and (max-width: 1150px) {
+      li {
+        .mega-menu-item {
+          .menu-item-title, .menu-item-description {
+            max-width: 230px;
+          }
+        }
+      }
+    }
+  }
+
+
+  .mega-menu-item {
+    width: 360px;
+    height: 140px;
+    padding: 25px 15px;
+    transition: background-color 200ms ease 0s;
+    color: var(--text-primary);
+    cursor: pointer;
+
+    .menu-item-icon {
+      margin-right: 20px;
+      color: var(--primary);
+    }
+
+    .menu-item-title {
+      font-size: pixelToRem(16px);
+      font-weight: $font-weight-semibold;
+      width: 100%;
+      max-width: 276px;
+      min-height: 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .menu-item-description {
+      font-size: pixelToRem(13px);
+      max-height: 53px;
+      min-height: 53px;
+      width: 100%;
+      max-width: 276px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      // create ellipsis effect for multiline
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+
+    &:hover {
+      background-color: var(--bg-3) !important;
+      text-decoration: unset;
+
     }
   }
 }
 
+.mega-menu-btn {
+  cursor: pointer;
+}
+
+// *************************************************
+// nao main top navbar
+.nao-navbar-content {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.nao-navbar-container {
+  z-index: 1030;
+  position: relative;
+  background-color: var(--white);
+  padding: 20px 120px;
+  max-width: 1570px;
+
+  @media screen and (max-width: 1540px) {
+    padding: 20px 60px;
+  }
+
+  @media screen and (max-width: 1350px) {
+    padding: 20px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 0;
+  }
+
+  .navbar-logo {
+    max-width: 200px;
+  }
+
+  .btn-cart {
+    font-size: 15px;
+    min-width: 70px;
+    padding: 10px 15px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 13px;
+      min-width: 50px;
+      padding: 8px 10px;
+    }
+  }
+
+  .navbar {
+    padding-bottom: 0;
+    padding-top: 0;
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: 8px;
+    }
+  }
+
+  .nav-item {
+    @include media-breakpoint-up(lg) {
+      align-self: flex-end;
+    }
+
+    .nav-link {
+      padding: pixelToRem(5px) pixelToRem(15px);
+      position: relative;
+      color: var(--text-primary);
+      font-size: pixelToRem(16px);
+      transition: .2s;
+
+      &:hover {
+        color: var(--text-primary-lightest);
+      }
+    }
+
+    ul {
+      padding-left: 0;
+      overflow: hidden;
+      list-style-type: none;
+    }
+  }
+
+  @include rtl {
+
+  }
+
+  .navbar-collapse {
+    @include media-breakpoint-down(lg) {
+      position: unset !important
+    }
+
+    @include media-breakpoint-down(md) {
+      background-color: var(--bg-3);
+      position: absolute !important;
+      left: 0;
+      right: 0;
+      top: 50px;
+
+      .nav-item a {
+        padding: 1rem 1.7rem 1rem 1.4rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border-primary);
+        font-size: pixelToRem(16px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    a {
+      color: var(--text-primary);
+      font-size: pixelToRem(16px);
+    }
+  }
+
+  .custom-toggler {
+    &:focus {
+      outline: none;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(62,64,219, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+  }
+
+  .secondary-link {
+    color: var(--text-primary);
+    font-size: pixelToRem(16px);
+    transition: .2s;
+
+    &:hover {
+      color: var(--text-primary-lightest);
+    }
+  }
+
+  .active {
+    color: var(--primary) !important;
+  }
+}
+
+.navbar-horizontal-prev,
+.navbar-horizontal-next {
+  height: 32px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  cursor: pointer;
+  font-size: pixelToRem(12px);
+
+  &.disabled {
+    cursor: default !important;
+  }
+
+  &:hover {
+    border-color: var(--border-light);
+  }
+}
+
+.hide-navbar-scroll-buttons {
+  height: 32px;
+
+  i {
+    display: none;
+  }
+}
 
 // *************************************************
 // Side bar menu navigation
