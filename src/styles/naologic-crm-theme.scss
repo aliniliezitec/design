@@ -96,6 +96,16 @@ $nao-card-box-shadow: 0 2px 4px 3px $shadow;
 $nao-input-box-shadow: 0 2px 4px 0 rgba(231, 231, 231, 0.5);
 $nao-card-border-radius: 0.5rem;
 
+// Box shadows
+$nao-card-box-shadow-1: 0 13px 27px -5px var(--text-7), 0 0 16px -8px var(--bg-2);
+$nao-card-box-shadow-2: 0 3px 10px -2px var(--shadow);
+$nao-card-box-shadow-3: 0 13px 27px -5px var(--text-6), 0 2px 15px -5px var(--light-bg);
+
+$nao-form-box-shadow-1: 0 1px 3px -1px var(--bg-2), 0 2px 5px -1px var(--text-6);
+$nao-form-box-shadow-2:  0 2px 16px -8px var(--bg-2), 0 13px 27px -5px var(--text-7);
+
+$nao-table-box-shadow-1: 2px 13px 27px -5px var(--text-7), -13px 2px 16px -8px var(--bg-2);
+
 // <ng-select>
 $ng-select-value-font-size: .95rem;
 $ng-select-border: #e9eef9;

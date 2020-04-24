@@ -33,6 +33,7 @@ $theme-list: ('dark-blue': $theme-dark-blue,
 // *************************************************
 // nao custom datepicker class
 .nao-custom-datepicker {
+  box-shadow: 0 0 16px -8px var(--bg-2), 0 13px 27px -5px var(--text-7);;
   .bs-datepicker-head {
     background-color: var(--white);
   }

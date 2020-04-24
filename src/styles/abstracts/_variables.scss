@@ -77,15 +77,15 @@ $card-border-width: 0;
 $modal-content-border-radius: pixelToRem(8px);
 $modal-header-padding-y: pixelToRem(18px);
 
-$modal-content-box-shadow-xs: 0 2px 4px 3px #d8dceb;
-$modal-content-box-shadow-sm-up:0 2px 4px 3px #d8dceb;
+$modal-content-box-shadow-xs: 0 13px 27px -8px var(--text-6), 0 2px 15px -5px var(--light-bg);
+$modal-content-box-shadow-sm-up: 0 13px 27px -8px var(--text-6), 0 2px 15px -5px var(--light-bg);
 $modal-content-border-width: 0;
 
 $modal-md: 470px;
 
 // *************************************************
 // Dropdowns
-$dropdown-box-shadow: 0 1px 6px rgba(0,0,0,.09);;
+$dropdown-box-shadow:0 1px 3px -1px var(--bg-2), 0 2px 5px -1px var(--text-6);
 $dropdown-link-hover-color: #4e5155;
 $dropdown-link-hover-bg: #e3e5f0;
 
@@ -94,6 +94,9 @@ $dropdown-link-active-bg: #e3e5f0;
 
 $dropdown-item-padding-y: .125rem;
 $dropdown-item-padding-x: 0;
+
+$dropdown-border-width: 0;
+$dropdown-border-color: none;
 
 // *************************************************
 // Switch

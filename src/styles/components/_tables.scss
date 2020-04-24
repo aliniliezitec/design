@@ -53,8 +53,8 @@
   // todo: change the layout so you won't need bottom border radius
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  box-shadow: $nao-card-box-shadow;
   background-color: var(--white);
+  box-shadow: $nao-table-box-shadow-1;
 
   .nao-row-overlay-container {
     height: 100%;
