@@ -39,7 +39,7 @@
     "bootstrap": "^4.4.1",
     "iodash": "0.0.1-security",
     "ladda": "^2.0.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.16",
     "moment": "^2.24.0",
     "ngx-bootstrap": "^4.1.1",
     "prismjs": "^1.17.1",
